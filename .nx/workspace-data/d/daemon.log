@@ -1,0 +1,906 @@
+[NX Daemon Server] - 2024-08-04T09:09:34.385Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-08-04T09:09:34.389Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-08-04T09:09:34.393Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:09:34.394Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-04T09:09:34.395Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:09:34.396Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:09:34.589Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:09:34.589Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:09:34.589Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:09:34.597Z - Time taken for 'loadNxPlugins' 191.22475000000003ms
+[NX Daemon Server] - 2024-08-04T09:09:35.204Z - Time taken for 'build-project-configs' 608.1700000000001ms
+[NX Daemon Server] - 2024-08-04T09:09:35.236Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:09:35.237Z - Time taken for 'total for creating and serializing project graph' 839.953125ms
+[NX Daemon Server] - 2024-08-04T09:09:35.238Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:09:35.239Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 840. Response time: 3.
+[NX Daemon Server] - 2024-08-04T09:09:35.242Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:09:35.242Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:09:35.242Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:09:35.269Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:09:35.269Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:09:35.270Z - Time taken for 'total for creating and serializing project graph' 0.20483300000000781ms
+[NX Daemon Server] - 2024-08-04T09:09:35.271Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:09:35.271Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-08-04T09:09:35.288Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:09:35.288Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:09:35.288Z - Handled HASH_TASKS. Handling time: 9. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:09:36.892Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:09:36.892Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:09:36.892Z - Handled RECORD_OUTPUTS_HASH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:09:36.896Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:09:36.896Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:09:36.896Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:09:36.897Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:09:36.897Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:09:36.897Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:09:36.904Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:10:05.021Z - [WATCHER]: otp-input/src/components/otp-input.vue was modified
+[NX Daemon Server] - 2024-08-04T09:10:05.023Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:10:05.126Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:10:05.126Z - [REQUEST]: otp-input/src/components/otp-input.vue
+[NX Daemon Server] - 2024-08-04T09:10:05.126Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:10:05.129Z - Time taken for 'hash changed files from watcher' 0.25366700000085984ms
+[NX Daemon Server] - 2024-08-04T09:10:05.145Z - Time taken for 'build-project-configs' 14.399999999997817ms
+[NX Daemon Server] - 2024-08-04T09:10:05.168Z - Time taken for 'total execution time for createProjectGraph()' 17.284041999999317ms
+[NX Daemon Server] - 2024-08-04T09:10:37.148Z - [WATCHER]: otp-input/src/components/otp-input.vue was modified
+[NX Daemon Server] - 2024-08-04T09:10:37.149Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:10:37.351Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:10:37.351Z - [REQUEST]: otp-input/src/components/otp-input.vue
+[NX Daemon Server] - 2024-08-04T09:10:37.351Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:10:37.353Z - Time taken for 'hash changed files from watcher' 0.22595800000271993ms
+[NX Daemon Server] - 2024-08-04T09:10:37.376Z - Time taken for 'build-project-configs' 19.089083999999275ms
+[NX Daemon Server] - 2024-08-04T09:10:37.396Z - Time taken for 'total execution time for createProjectGraph()' 17.708917000003566ms
+[NX Daemon Server] - 2024-08-04T09:10:42.779Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:10:42.779Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-04T09:10:42.780Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:10:42.781Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:10:42.781Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:10:42.783Z - Time taken for 'total for creating and serializing project graph' 0.4713749999937136ms
+[NX Daemon Server] - 2024-08-04T09:10:42.785Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:10:42.785Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-08-04T09:10:42.792Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:10:42.792Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:10:42.792Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:10:42.820Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:10:42.821Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:10:42.822Z - Time taken for 'total for creating and serializing project graph' 0.2651670000050217ms
+[NX Daemon Server] - 2024-08-04T09:10:42.822Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:10:42.822Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:10:42.839Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:10:42.839Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:10:42.839Z - Handled HASH_TASKS. Handling time: 8. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:10:44.685Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:10:44.685Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:10:44.686Z - Handled RECORD_OUTPUTS_HASH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:10:44.689Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:10:44.689Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:10:44.689Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:10:44.689Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:10:44.689Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:10:44.689Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:10:44.695Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:10:48.104Z - [WATCHER]: otp-input/src/components/otp-input.vue was modified
+[NX Daemon Server] - 2024-08-04T09:10:48.104Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:10:48.205Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:10:48.205Z - [REQUEST]: otp-input/src/components/otp-input.vue
+[NX Daemon Server] - 2024-08-04T09:10:48.205Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:10:48.208Z - Time taken for 'hash changed files from watcher' 0.2097079999948619ms
+[NX Daemon Server] - 2024-08-04T09:10:48.228Z - Time taken for 'build-project-configs' 18.983958000011626ms
+[NX Daemon Server] - 2024-08-04T09:10:48.245Z - Time taken for 'total execution time for createProjectGraph()' 14.063584000003175ms
+[NX Daemon Server] - 2024-08-04T09:10:53.776Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:10:53.776Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:10:53.777Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:10:53.778Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:10:53.778Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:10:53.779Z - Time taken for 'total for creating and serializing project graph' 0.16604199999710545ms
+[NX Daemon Server] - 2024-08-04T09:10:53.781Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:10:53.781Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2024-08-04T09:10:53.785Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:10:53.785Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:10:53.785Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:10:53.811Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:10:53.811Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:10:53.812Z - Time taken for 'total for creating and serializing project graph' 0.21995800000149757ms
+[NX Daemon Server] - 2024-08-04T09:10:53.813Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:10:53.813Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-08-04T09:10:53.827Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:10:53.828Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:10:53.828Z - Handled HASH_TASKS. Handling time: 6. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:10:55.508Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:10:55.508Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:10:55.508Z - Handled RECORD_OUTPUTS_HASH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:10:55.511Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:10:55.511Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:10:55.511Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:10:55.512Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:10:55.512Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:10:55.512Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:10:55.517Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:11:13.430Z - [WATCHER]: otp-input/src/components/otp-input.vue was modified
+[NX Daemon Server] - 2024-08-04T09:11:13.430Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:11:13.532Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:11:13.533Z - [REQUEST]: otp-input/src/components/otp-input.vue
+[NX Daemon Server] - 2024-08-04T09:11:13.533Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:11:13.535Z - Time taken for 'hash changed files from watcher' 0.2801249999902211ms
+[NX Daemon Server] - 2024-08-04T09:11:13.549Z - Time taken for 'build-project-configs' 13.017624999993131ms
+[NX Daemon Server] - 2024-08-04T09:11:13.569Z - Time taken for 'total execution time for createProjectGraph()' 15.515666000006604ms
+[NX Daemon Server] - 2024-08-04T09:11:51.946Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:11:51.947Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:11:52.021Z - [WATCHER]: otp-input/dist docs/assets/chunks/theme.Ndckdqdj.js was modified
+[NX Daemon Server] - 2024-08-04T09:11:52.021Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:11:52.149Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:11:52.149Z - [REQUEST]: otp-input/docs/.vitepress/dist/assets/chunks/theme.Ndckdqdj.js,otp-input/docs/.vitepress/dist/assets/chunks/framework.B2kD9-Le.js,otp-input/dist docs/assets/chunks/theme.Ndckdqdj.js
+[NX Daemon Server] - 2024-08-04T09:11:52.149Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:11:52.152Z - Time taken for 'hash changed files from watcher' 0.4506669999973383ms
+[NX Daemon Server] - 2024-08-04T09:11:52.155Z - [WATCHER]: otp-input/dist docs/assets/chunks/framework.B2kD9-Le.js was modified
+[NX Daemon Server] - 2024-08-04T09:11:52.155Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:11:52.178Z - Time taken for 'build-project-configs' 25.012249999999767ms
+[NX Daemon Server] - 2024-08-04T09:11:52.195Z - Time taken for 'total execution time for createProjectGraph()' 14.58804100000998ms
+[NX Daemon Server] - 2024-08-04T09:11:52.557Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:11:52.557Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:11:52.557Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:11:52.558Z - Time taken for 'hash changed files from watcher' 0.10308299999451265ms
+[NX Daemon Server] - 2024-08-04T09:11:52.568Z - Time taken for 'build-project-configs' 8.560666000004858ms
+[NX Daemon Server] - 2024-08-04T09:11:52.582Z - Time taken for 'total execution time for createProjectGraph()' 11.229458999994677ms
+[NX Daemon Server] - 2024-08-04T09:11:55.629Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:11:55.630Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-04T09:11:55.630Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:11:55.631Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:11:55.632Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:11:55.634Z - Time taken for 'total for creating and serializing project graph' 0.6540000000095461ms
+[NX Daemon Server] - 2024-08-04T09:11:55.636Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:11:55.636Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 4.
+[NX Daemon Server] - 2024-08-04T09:11:55.639Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:11:55.639Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:11:55.640Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:11:55.666Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:11:55.666Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:11:55.667Z - Time taken for 'total for creating and serializing project graph' 0.21362500000395812ms
+[NX Daemon Server] - 2024-08-04T09:11:55.668Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:11:55.668Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-08-04T09:11:55.683Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:11:55.684Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:11:55.684Z - Handled HASH_TASKS. Handling time: 7. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:11:57.456Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:11:57.456Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:11:57.456Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:11:57.459Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:11:57.459Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:11:57.459Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:11:57.460Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:11:57.460Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:11:57.460Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:11:57.466Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:12:30.238Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:12:30.240Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-04T09:12:30.240Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:12:30.242Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:12:30.242Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:12:30.244Z - Time taken for 'total for creating and serializing project graph' 0.6760000000067521ms
+[NX Daemon Server] - 2024-08-04T09:12:30.245Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:12:30.246Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-08-04T09:12:30.249Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:12:30.249Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:12:30.249Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:30.278Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:12:30.278Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:12:30.279Z - Time taken for 'total for creating and serializing project graph' 0.2867499999993015ms
+[NX Daemon Server] - 2024-08-04T09:12:30.281Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:12:30.281Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2024-08-04T09:12:30.292Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:12:30.292Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:12:30.292Z - Handled HASH_TASKS. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:32.060Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:12:32.060Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:12:32.061Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:12:32.064Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:12:32.064Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:12:32.064Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:32.065Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:12:32.065Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:12:32.065Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:32.072Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:12:54.846Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:12:54.847Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-04T09:12:54.848Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:12:54.849Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:12:54.849Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:12:54.850Z - Time taken for 'total for creating and serializing project graph' 0.3063749999855645ms
+[NX Daemon Server] - 2024-08-04T09:12:54.852Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:12:54.852Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2024-08-04T09:12:54.856Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:12:54.856Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:12:54.856Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:54.882Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:12:54.882Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:12:54.883Z - Time taken for 'total for creating and serializing project graph' 0.20979199997964315ms
+[NX Daemon Server] - 2024-08-04T09:12:54.884Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:12:54.884Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2024-08-04T09:12:54.895Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:12:54.895Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:12:54.895Z - Handled HASH_TASKS. Handling time: 4. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:56.790Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:12:56.790Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:12:56.790Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:56.794Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:12:56.794Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:12:56.794Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:56.795Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:12:56.795Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:12:56.795Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:12:56.801Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:13:16.627Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:13:16.628Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-04T09:13:16.628Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:13:16.629Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:13:16.629Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:13:16.631Z - Time taken for 'total for creating and serializing project graph' 0.2690419999998994ms
+[NX Daemon Server] - 2024-08-04T09:13:16.633Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:13:16.633Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-08-04T09:13:16.636Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:13:16.637Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:13:16.637Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:13:16.662Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:13:16.663Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:13:16.664Z - Time taken for 'total for creating and serializing project graph' 0.21566600000369363ms
+[NX Daemon Server] - 2024-08-04T09:13:16.664Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:13:16.664Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2024-08-04T09:13:16.675Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:13:16.675Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:13:16.675Z - Handled HASH_TASKS. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:18.377Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:13:18.377Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:13:18.377Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:18.380Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:13:18.380Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:13:18.380Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:18.381Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:13:18.381Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:13:18.381Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:18.386Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:13:40.367Z - [WATCHER]: otp-input/src/components/otp-input.vue was modified
+[NX Daemon Server] - 2024-08-04T09:13:40.368Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:13:40.471Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:13:40.471Z - [REQUEST]: otp-input/src/components/otp-input.vue
+[NX Daemon Server] - 2024-08-04T09:13:40.471Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:13:40.474Z - Time taken for 'hash changed files from watcher' 0.31116700000711717ms
+[NX Daemon Server] - 2024-08-04T09:13:40.504Z - Time taken for 'build-project-configs' 27.130750000011176ms
+[NX Daemon Server] - 2024-08-04T09:13:40.524Z - Time taken for 'total execution time for createProjectGraph()' 17.847666999994544ms
+[NX Daemon Server] - 2024-08-04T09:13:41.795Z - [WATCHER]: otp-input/src/components/otp-input.vue was modified
+[NX Daemon Server] - 2024-08-04T09:13:41.795Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:13:41.997Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:13:41.997Z - [REQUEST]: otp-input/src/components/otp-input.vue
+[NX Daemon Server] - 2024-08-04T09:13:41.997Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:13:41.999Z - Time taken for 'hash changed files from watcher' 0.14508300001034513ms
+[NX Daemon Server] - 2024-08-04T09:13:42.011Z - Time taken for 'build-project-configs' 10.712916999997105ms
+[NX Daemon Server] - 2024-08-04T09:13:42.031Z - Time taken for 'total execution time for createProjectGraph()' 16.99979100000928ms
+[NX Daemon Server] - 2024-08-04T09:13:46.249Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:13:46.250Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-04T09:13:46.250Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T09:13:46.251Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:13:46.251Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:13:46.253Z - Time taken for 'total for creating and serializing project graph' 0.6016249999811407ms
+[NX Daemon Server] - 2024-08-04T09:13:46.255Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:13:46.255Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-08-04T09:13:46.261Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:13:46.261Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T09:13:46.261Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:46.297Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T09:13:46.297Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T09:13:46.298Z - Time taken for 'total for creating and serializing project graph' 0.23070799998822622ms
+[NX Daemon Server] - 2024-08-04T09:13:46.299Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T09:13:46.299Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-08-04T09:13:46.318Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:13:46.318Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T09:13:46.318Z - Handled HASH_TASKS. Handling time: 9. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:48.666Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:13:48.667Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:13:48.689Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:13:48.689Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T09:13:48.689Z - Handled RECORD_OUTPUTS_HASH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:48.728Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:13:48.728Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T09:13:48.728Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:48.728Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:13:48.728Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T09:13:48.728Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T09:13:48.734Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T09:13:48.744Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:13:48.745Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:13:48.769Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:13:48.769Z - [REQUEST]: otp-input/dist/lib/style.css,otp-input/dist/es/index.mjs,otp-input/dist/es/src/components/otp-input.vue2.mjs,otp-input/dist/lib/src/index.js,otp-input/dist/lib/src/components/otp-input.vue.js,otp-input/dist/es/src/index.mjs,otp-input/dist/es/style.css,otp-input/dist/es/src/components/otp-input.vue.mjs,otp-input/dist/lib/index.js,otp-input/dist/lib/src/components/otp-input.vue2.js
+[NX Daemon Server] - 2024-08-04T09:13:48.769Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:13:48.771Z - Time taken for 'hash changed files from watcher' 0.4227909999899566ms
+[NX Daemon Server] - 2024-08-04T09:13:48.785Z - Time taken for 'build-project-configs' 12.548666999995476ms
+[NX Daemon Server] - 2024-08-04T09:13:48.806Z - Time taken for 'total execution time for createProjectGraph()' 18.839208000019426ms
+[NX Daemon Server] - 2024-08-04T09:14:04.882Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-08-04T09:14:04.883Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:14:05.085Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:14:05.085Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-08-04T09:14:05.085Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:14:05.088Z - Time taken for 'hash changed files from watcher' 0.3705839999602176ms
+[NX Daemon Server] - 2024-08-04T09:14:05.100Z - Time taken for 'build-project-configs' 11.215999999956694ms
+[NX Daemon Server] - 2024-08-04T09:14:05.114Z - Time taken for 'total execution time for createProjectGraph()' 11.163332999974955ms
+[NX Daemon Server] - 2024-08-04T09:15:56.064Z - [WATCHER]: eslint.config.mjs was modified
+[NX Daemon Server] - 2024-08-04T09:15:56.065Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:15:56.466Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:15:56.466Z - [REQUEST]: eslint.config.mjs
+[NX Daemon Server] - 2024-08-04T09:15:56.466Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:15:56.470Z - Time taken for 'hash changed files from watcher' 0.2231669999891892ms
+[NX Daemon Server] - 2024-08-04T09:15:56.484Z - Time taken for 'build-project-configs' 14.46812500001397ms
+[NX Daemon Server] - 2024-08-04T09:15:56.503Z - Time taken for 'total execution time for createProjectGraph()' 14.888083999976516ms
+[NX Daemon Server] - 2024-08-04T09:16:36.138Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2024-08-04T09:16:36.138Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:16:36.940Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:16:36.942Z - [REQUEST]: package.json
+[NX Daemon Server] - 2024-08-04T09:16:36.942Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:16:36.947Z - Time taken for 'hash changed files from watcher' 0.28675000002840534ms
+[NX Daemon Server] - 2024-08-04T09:16:36.967Z - Time taken for 'build-project-configs' 20.36124999995809ms
+[NX Daemon Server] - 2024-08-04T09:16:36.994Z - Time taken for 'total execution time for createProjectGraph()' 21.881957999954466ms
+[NX Daemon Server] - 2024-08-04T09:17:36.757Z - [WATCHER]: otp-input/src/components/otp-input.vue was modified
+[NX Daemon Server] - 2024-08-04T09:17:36.758Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:17:38.362Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:17:38.363Z - [REQUEST]: otp-input/src/components/otp-input.vue
+[NX Daemon Server] - 2024-08-04T09:17:38.363Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:17:38.369Z - Time taken for 'hash changed files from watcher' 0.7350420000148006ms
+[NX Daemon Server] - 2024-08-04T09:17:38.383Z - Time taken for 'build-project-configs' 16.12650000001304ms
+[NX Daemon Server] - 2024-08-04T09:17:38.400Z - Time taken for 'total execution time for createProjectGraph()' 12.922208999982104ms
+[NX Daemon Server] - 2024-08-04T09:20:01.447Z - [WATCHER]: otp-input/dist docs/events.html was modified
+[NX Daemon Server] - 2024-08-04T09:20:01.449Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:20:04.655Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:20:04.656Z - [REQUEST]: otp-input/dist docs/events.html
+[NX Daemon Server] - 2024-08-04T09:20:04.656Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:20:04.664Z - Time taken for 'hash changed files from watcher' 2.52033400000073ms
+[NX Daemon Server] - 2024-08-04T09:20:04.680Z - Time taken for 'build-project-configs' 15.43874999997206ms
+[NX Daemon Server] - 2024-08-04T09:20:04.701Z - Time taken for 'total execution time for createProjectGraph()' 15.79120800003875ms
+[NX Daemon Server] - 2024-08-04T09:31:22.008Z - [WATCHER]: otp-input/docs was deleted
+[NX Daemon Server] - 2024-08-04T09:31:22.020Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:31:28.430Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:31:28.430Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:31:28.430Z - [REQUEST]: otp-input/docs
+[NX Daemon Server] - 2024-08-04T09:31:28.442Z - Time taken for 'hash changed files from watcher' 2.5706670000217855ms
+[NX Daemon Server] - 2024-08-04T09:31:28.461Z - Time taken for 'build-project-configs' 20.375625000102445ms
+[NX Daemon Server] - 2024-08-04T09:31:28.481Z - Time taken for 'total execution time for createProjectGraph()' 14.841750000137836ms
+[NX Daemon Server] - 2024-08-04T09:31:34.816Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:31:34.816Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:31:34.920Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:31:34.920Z - [REQUEST]: otp-input/docs/api-examples.md,otp-input/docs/markdown-examples.md,otp-input/docs/index.md,otp-input/docs/.vitepress/config.ts
+[NX Daemon Server] - 2024-08-04T09:31:34.920Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:31:34.922Z - Time taken for 'hash changed files from watcher' 1.1292089999187738ms
+[NX Daemon Server] - 2024-08-04T09:31:34.934Z - Time taken for 'build-project-configs' 10.997457999968901ms
+[NX Daemon Server] - 2024-08-04T09:31:34.956Z - Time taken for 'total execution time for createProjectGraph()' 18.865125000011176ms
+[NX Daemon Server] - 2024-08-04T09:32:23.739Z - [WATCHER]: otp-input/docs-/.vitepress was deleted
+[NX Daemon Server] - 2024-08-04T09:32:23.740Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:32:23.950Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:32:23.951Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:32:23.951Z - [REQUEST]: otp-input/docs-/.vitepress
+[NX Daemon Server] - 2024-08-04T09:32:23.954Z - Time taken for 'hash changed files from watcher' 0.28433299995958805ms
+[NX Daemon Server] - 2024-08-04T09:32:24.041Z - Time taken for 'build-project-configs' 84.13204199983738ms
+[NX Daemon Server] - 2024-08-04T09:32:24.086Z - Time taken for 'total execution time for createProjectGraph()' 39.932792000006884ms
+[NX Daemon Server] - 2024-08-04T09:32:35.314Z - [WATCHER]: otp-input/docs/.vitepress/config.ts.timestamp-1722763955248-71099c1c01ad1.mjs was deleted
+[NX Daemon Server] - 2024-08-04T09:32:35.314Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:32:35.717Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:32:35.717Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:32:35.717Z - [REQUEST]: otp-input/docs/.vitepress/config.ts.timestamp-1722763955248-71099c1c01ad1.mjs
+[NX Daemon Server] - 2024-08-04T09:32:35.719Z - Time taken for 'hash changed files from watcher' 0.17670800001360476ms
+[NX Daemon Server] - 2024-08-04T09:32:35.733Z - Time taken for 'build-project-configs' 12.877208000048995ms
+[NX Daemon Server] - 2024-08-04T09:32:35.752Z - Time taken for 'total execution time for createProjectGraph()' 14.705583000089973ms
+[NX Daemon Server] - 2024-08-04T09:32:35.918Z - [WATCHER]: otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/package.json was created or restored
+[NX Daemon Server] - 2024-08-04T09:32:35.918Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:32:36.019Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:32:36.019Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/package.json
+[NX Daemon Server] - 2024-08-04T09:32:36.019Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:32:36.021Z - Time taken for 'hash changed files from watcher' 0.12566599994897842ms
+[NX Daemon Server] - 2024-08-04T09:32:36.030Z - Time taken for 'build-project-configs' 8.48050000006333ms
+[NX Daemon Server] - 2024-08-04T09:32:36.030Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:32:36.031Z - [WATCHER]: 8 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:32:36.048Z - Time taken for 'total execution time for createProjectGraph()' 14.473750000121072ms
+[NX Daemon Server] - 2024-08-04T09:32:36.133Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:32:36.133Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vue.js,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vitepress___@vue_devtools-api.js,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vitepress___@vueuse_core.js
+[NX Daemon Server] - 2024-08-04T09:32:36.133Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:32:36.136Z - Time taken for 'hash changed files from watcher' 0.549792000092566ms
+[NX Daemon Server] - 2024-08-04T09:32:36.145Z - Time taken for 'build-project-configs' 9.226540999952704ms
+[NX Daemon Server] - 2024-08-04T09:32:36.165Z - Time taken for 'total execution time for createProjectGraph()' 16.48220800003037ms
+[NX Daemon Server] - 2024-08-04T09:32:40.937Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 18 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:32:40.938Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:32:40.989Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:32:40.990Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 7 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:32:41.140Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:32:41.140Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:32:41.140Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vue.js,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_dda94985/chunk-6BXYM32H.js.map,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/package.json,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vitepress___@vueuse_core.js,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vitepress___@vue_devtools-api.js,otp-input/docs/.vitepress/cache/deps_temp_dda94985/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_dda94985/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_dda94985/chunk-6BXYM32H.js,otp-input/docs/.vitepress/cache/deps_temp_dda94985/vitepress___@vueuse_core.js,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps_temp_dda94985/package.json,otp-input/docs/.vitepress/cache/deps_temp_dda94985/vitepress___@vue_devtools-api.js,otp-input/docs/.vitepress/cache/deps_temp_dda94985/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_dda94985/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_fc18bde8/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_dda94985/@theme_index.js,otp-input/docs/.vitepress/cache/deps_temp_dda94985/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_dda94985,otp-input/docs/.vitepress/cache/deps_temp_dda94985/_metadata.json,otp-input/docs/.vitepress/cache/deps_temp_dda94985/@theme_index.js.map,otp-input/docs/.vitepress/cache/deps_temp_dda94985/vue.js
+[NX Daemon Server] - 2024-08-04T09:32:41.143Z - Time taken for 'hash changed files from watcher' 0.3902920000255108ms
+[NX Daemon Server] - 2024-08-04T09:32:41.164Z - Time taken for 'build-project-configs' 20.207832999993116ms
+[NX Daemon Server] - 2024-08-04T09:32:41.180Z - Time taken for 'total execution time for createProjectGraph()' 12.743874999927357ms
+[NX Daemon Server] - 2024-08-04T09:33:04.434Z - [WATCHER]: otp-input/docs/.vitepress/config.ts was modified
+[NX Daemon Server] - 2024-08-04T09:33:04.435Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:33:04.838Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:33:04.838Z - [REQUEST]: otp-input/docs/.vitepress/config.ts
+[NX Daemon Server] - 2024-08-04T09:33:04.838Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:33:04.897Z - Time taken for 'hash changed files from watcher' 0.4154580000322312ms
+[NX Daemon Server] - 2024-08-04T09:33:04.995Z - Time taken for 'build-project-configs' 132.52049999986775ms
+[NX Daemon Server] - 2024-08-04T09:33:05.147Z - Time taken for 'total execution time for createProjectGraph()' 153.86616600002162ms
+[NX Daemon Server] - 2024-08-04T09:33:05.148Z - [WATCHER]: otp-input/docs/.vitepress/config.ts.timestamp-1722763985049-7296d9387b6a3.mjs was deleted
+[NX Daemon Server] - 2024-08-04T09:33:05.148Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:33:05.195Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:33:05.199Z - [WATCHER]: otp-input/docs/.vitepress/config.ts.timestamp-1722763985129-d47302e70b0ef.mjs was deleted
+[NX Daemon Server] - 2024-08-04T09:33:05.949Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:33:05.949Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:33:05.949Z - [REQUEST]: otp-input/docs/.vitepress/config.ts.timestamp-1722763985049-7296d9387b6a3.mjs,otp-input/docs/.vitepress/config.ts.timestamp-1722763985129-d47302e70b0ef.mjs
+[NX Daemon Server] - 2024-08-04T09:33:05.951Z - Time taken for 'hash changed files from watcher' 0.1823750000912696ms
+[NX Daemon Server] - 2024-08-04T09:33:05.961Z - Time taken for 'build-project-configs' 9.704791999887675ms
+[NX Daemon Server] - 2024-08-04T09:33:05.977Z - Time taken for 'total execution time for createProjectGraph()' 12.343084000051022ms
+[NX Daemon Server] - 2024-08-04T09:33:12.677Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:33:12.690Z - [WATCHER]: otp-input/docs/events.md was created or restored
+[NX Daemon Server] - 2024-08-04T09:33:12.798Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:33:12.798Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:33:12.798Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:33:12.817Z - Time taken for 'hash changed files from watcher' 5.301124999998137ms
+[NX Daemon Server] - 2024-08-04T09:33:12.854Z - Time taken for 'build-project-configs' 34.92304200003855ms
+[NX Daemon Server] - 2024-08-04T09:33:12.880Z - Time taken for 'total execution time for createProjectGraph()' 26.33187499991618ms
+[NX Daemon Server] - 2024-08-04T09:33:13.307Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:33:13.312Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:33:13.595Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:33:13.598Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:33:13.598Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:33:13.626Z - Time taken for 'hash changed files from watcher' 1.251541999867186ms
+[NX Daemon Server] - 2024-08-04T09:33:13.656Z - Time taken for 'build-project-configs' 48.83487500017509ms
+[NX Daemon Server] - 2024-08-04T09:33:13.714Z - Time taken for 'total execution time for createProjectGraph()' 50.954082999844104ms
+[NX Daemon Server] - 2024-08-04T09:33:40.340Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:33:40.344Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:33:40.751Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:33:40.751Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:33:40.751Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:33:40.761Z - Time taken for 'hash changed files from watcher' 1.7448339997790754ms
+[NX Daemon Server] - 2024-08-04T09:33:40.800Z - Time taken for 'build-project-configs' 38.797624999890104ms
+[NX Daemon Server] - 2024-08-04T09:33:40.826Z - Time taken for 'total execution time for createProjectGraph()' 23.124792000046ms
+[NX Daemon Server] - 2024-08-04T09:34:15.760Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:34:15.761Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:34:16.565Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:34:16.566Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:34:16.566Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:34:16.573Z - Time taken for 'hash changed files from watcher' 0.9112909999676049ms
+[NX Daemon Server] - 2024-08-04T09:34:16.593Z - Time taken for 'build-project-configs' 21.314665999962017ms
+[NX Daemon Server] - 2024-08-04T09:34:16.620Z - Time taken for 'total execution time for createProjectGraph()' 23.165874999947846ms
+[NX Daemon Server] - 2024-08-04T09:34:38.122Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:34:38.127Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:34:39.734Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:34:39.734Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:34:39.734Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:34:39.744Z - Time taken for 'hash changed files from watcher' 2.915333000011742ms
+[NX Daemon Server] - 2024-08-04T09:34:39.764Z - Time taken for 'build-project-configs' 19.83129100012593ms
+[NX Daemon Server] - 2024-08-04T09:34:39.784Z - Time taken for 'total execution time for createProjectGraph()' 16.251082999864593ms
+[NX Daemon Server] - 2024-08-04T09:34:52.414Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:34:52.415Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:34:55.622Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:34:55.623Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:34:55.623Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:34:55.627Z - Time taken for 'hash changed files from watcher' 0.7994170000310987ms
+[NX Daemon Server] - 2024-08-04T09:34:55.649Z - Time taken for 'build-project-configs' 20.86599999992177ms
+[NX Daemon Server] - 2024-08-04T09:34:55.671Z - Time taken for 'total execution time for createProjectGraph()' 20.804999999934807ms
+[NX Daemon Server] - 2024-08-04T09:35:00.814Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:35:00.815Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:35:07.221Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:35:07.221Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:35:07.221Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:35:07.228Z - Time taken for 'hash changed files from watcher' 0.6244999999180436ms
+[NX Daemon Server] - 2024-08-04T09:35:07.249Z - Time taken for 'build-project-configs' 21.600334000075236ms
+[NX Daemon Server] - 2024-08-04T09:35:07.272Z - Time taken for 'total execution time for createProjectGraph()' 18.81941600004211ms
+[NX Daemon Server] - 2024-08-04T09:35:19.843Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:35:19.844Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:35:26.247Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:35:26.247Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:35:26.248Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:35:26.251Z - Time taken for 'hash changed files from watcher' 0.41266700020059943ms
+[NX Daemon Server] - 2024-08-04T09:35:26.268Z - Time taken for 'build-project-configs' 16.496999999973923ms
+[NX Daemon Server] - 2024-08-04T09:35:26.287Z - Time taken for 'total execution time for createProjectGraph()' 14.137832999927923ms
+[NX Daemon Server] - 2024-08-04T09:35:28.501Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:35:28.501Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:35:34.908Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:35:34.909Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:35:34.910Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:35:34.913Z - Time taken for 'hash changed files from watcher' 1.0229169998783618ms
+[NX Daemon Server] - 2024-08-04T09:35:34.935Z - Time taken for 'build-project-configs' 20.59808299993165ms
+[NX Daemon Server] - 2024-08-04T09:35:34.959Z - Time taken for 'total execution time for createProjectGraph()' 19.886458999942988ms
+[NX Daemon Server] - 2024-08-04T09:35:57.279Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:35:57.288Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:36:03.693Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:36:03.693Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:36:03.694Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:36:03.701Z - Time taken for 'hash changed files from watcher' 2.7720830000471324ms
+[NX Daemon Server] - 2024-08-04T09:36:03.714Z - Time taken for 'build-project-configs' 12.802917000139132ms
+[NX Daemon Server] - 2024-08-04T09:36:03.734Z - Time taken for 'total execution time for createProjectGraph()' 17.041666000150144ms
+[NX Daemon Server] - 2024-08-04T09:36:14.070Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:36:14.071Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:36:20.474Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:36:20.475Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:36:20.475Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:36:20.478Z - Time taken for 'hash changed files from watcher' 0.6763750000391155ms
+[NX Daemon Server] - 2024-08-04T09:36:20.499Z - Time taken for 'build-project-configs' 19.855333999963477ms
+[NX Daemon Server] - 2024-08-04T09:36:20.519Z - Time taken for 'total execution time for createProjectGraph()' 17.343124999897555ms
+[NX Daemon Server] - 2024-08-04T09:36:27.122Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:36:27.124Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:36:33.527Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:36:33.528Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:36:33.528Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:36:33.534Z - Time taken for 'hash changed files from watcher' 0.9336659999098629ms
+[NX Daemon Server] - 2024-08-04T09:36:33.551Z - Time taken for 'build-project-configs' 15.619375000009313ms
+[NX Daemon Server] - 2024-08-04T09:36:33.579Z - Time taken for 'total execution time for createProjectGraph()' 28.93383300001733ms
+[NX Daemon Server] - 2024-08-04T09:36:54.178Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:36:54.186Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:36:58.829Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:36:58.830Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:37:00.583Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:37:00.584Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:37:00.584Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:37:00.587Z - Time taken for 'hash changed files from watcher' 0.5493330000899732ms
+[NX Daemon Server] - 2024-08-04T09:37:00.619Z - Time taken for 'build-project-configs' 31.790290999924764ms
+[NX Daemon Server] - 2024-08-04T09:37:00.638Z - Time taken for 'total execution time for createProjectGraph()' 15.006457999814302ms
+[NX Daemon Server] - 2024-08-04T09:37:07.369Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:37:07.370Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:37:13.485Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:37:13.487Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:37:13.771Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:37:13.771Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:37:13.771Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:37:13.773Z - Time taken for 'hash changed files from watcher' 0.19745900016278028ms
+[NX Daemon Server] - 2024-08-04T09:37:13.786Z - Time taken for 'build-project-configs' 12.373833999969065ms
+[NX Daemon Server] - 2024-08-04T09:37:13.819Z - Time taken for 'total execution time for createProjectGraph()' 29.318250000011176ms
+[NX Daemon Server] - 2024-08-04T09:37:18.471Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:37:18.481Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:37:24.884Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:37:24.885Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:37:24.885Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:37:24.888Z - Time taken for 'hash changed files from watcher' 0.37033399986103177ms
+[NX Daemon Server] - 2024-08-04T09:37:24.907Z - Time taken for 'build-project-configs' 17.3398749998305ms
+[NX Daemon Server] - 2024-08-04T09:37:24.927Z - Time taken for 'total execution time for createProjectGraph()' 19.165749999927357ms
+[NX Daemon Server] - 2024-08-04T09:37:38.323Z - [WATCHER]: otp-input/docs- was deleted
+[NX Daemon Server] - 2024-08-04T09:37:38.324Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:37:44.732Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:37:44.733Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:37:44.733Z - [REQUEST]: otp-input/docs-
+[NX Daemon Server] - 2024-08-04T09:37:44.739Z - Time taken for 'hash changed files from watcher' 0.7375000000465661ms
+[NX Daemon Server] - 2024-08-04T09:37:44.760Z - Time taken for 'build-project-configs' 20.726709000067785ms
+[NX Daemon Server] - 2024-08-04T09:37:44.779Z - Time taken for 'total execution time for createProjectGraph()' 14.779249999905005ms
+[NX Daemon Server] - 2024-08-04T09:38:00.024Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:38:00.055Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:38:06.464Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:38:06.465Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:38:06.465Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:38:06.468Z - Time taken for 'hash changed files from watcher' 0.8673329998273402ms
+[NX Daemon Server] - 2024-08-04T09:38:06.491Z - Time taken for 'build-project-configs' 21.164791999850422ms
+[NX Daemon Server] - 2024-08-04T09:38:06.511Z - Time taken for 'total execution time for createProjectGraph()' 16.797250000061467ms
+[NX Daemon Server] - 2024-08-04T09:39:22.953Z - [WATCHER]: otp-input/docs/.vitepress/theme/index.js was created or restored
+[NX Daemon Server] - 2024-08-04T09:39:22.959Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:23.115Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:23.115Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.js
+[NX Daemon Server] - 2024-08-04T09:39:23.115Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:23.144Z - Time taken for 'hash changed files from watcher' 1.8568750000558794ms
+[NX Daemon Server] - 2024-08-04T09:39:23.187Z - Time taken for 'build-project-configs' 60.921333000063896ms
+[NX Daemon Server] - 2024-08-04T09:39:23.244Z - Time taken for 'total execution time for createProjectGraph()' 55.47887499979697ms
+[NX Daemon Server] - 2024-08-04T09:39:23.306Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:23.306Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:23.528Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:23.529Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:23.529Z - [REQUEST]: otp-input/docs/.vitepress/config.ts.timestamp-1722764363262-8e71bdbe49a9f.mjs,otp-input/docs/.vitepress/config.ts.timestamp-1722764363246-e160fc8f0ae82.mjs
+[NX Daemon Server] - 2024-08-04T09:39:23.533Z - Time taken for 'hash changed files from watcher' 0.5037909999955446ms
+[NX Daemon Server] - 2024-08-04T09:39:23.574Z - Time taken for 'build-project-configs' 42.39670899999328ms
+[NX Daemon Server] - 2024-08-04T09:39:23.599Z - Time taken for 'total execution time for createProjectGraph()' 20.405958000104874ms
+[NX Daemon Server] - 2024-08-04T09:39:23.905Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 15 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:23.911Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:24.324Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:24.325Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:24.326Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps/@theme_index.js.map,otp-input/docs/.vitepress/cache/deps/package.json,otp-input/docs/.vitepress/cache/deps/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps/@theme_index.js,otp-input/docs/.vitepress/cache/deps/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps/chunk-6BXYM32H.js,otp-input/docs/.vitepress/cache/deps/chunk-6BXYM32H.js.map,otp-input/docs/.vitepress/cache/deps/_metadata.json,otp-input/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js,otp-input/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps,otp-input/docs/.vitepress/cache/deps/vue.js.map,otp-input/docs/.vitepress/cache/deps/vue.js,otp-input/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js
+[NX Daemon Server] - 2024-08-04T09:39:24.355Z - Time taken for 'hash changed files from watcher' 1.0375830000266433ms
+[NX Daemon Server] - 2024-08-04T09:39:24.482Z - Time taken for 'build-project-configs' 131.17341700010002ms
+[NX Daemon Server] - 2024-08-04T09:39:24.540Z - Time taken for 'total execution time for createProjectGraph()' 44.36474999994971ms
+[NX Daemon Server] - 2024-08-04T09:39:24.543Z - [WATCHER]: otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/package.json was created or restored
+[NX Daemon Server] - 2024-08-04T09:39:24.543Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:24.646Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:24.646Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/package.json
+[NX Daemon Server] - 2024-08-04T09:39:24.646Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:24.653Z - Time taken for 'hash changed files from watcher' 0.450916999951005ms
+[NX Daemon Server] - 2024-08-04T09:39:24.702Z - Time taken for 'build-project-configs' 48.83058300008997ms
+[NX Daemon Server] - 2024-08-04T09:39:24.714Z - [WATCHER]: 8 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:24.715Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:24.842Z - Time taken for 'total execution time for createProjectGraph()' 119.83062499994412ms
+[NX Daemon Server] - 2024-08-04T09:39:24.847Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:24.847Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vitepress___@vueuse_core.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vue.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vitepress___@vue_devtools-api.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vitepress___@vue_devtools-api.js.map
+[NX Daemon Server] - 2024-08-04T09:39:24.847Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:24.850Z - Time taken for 'hash changed files from watcher' 4.056041999952868ms
+[NX Daemon Server] - 2024-08-04T09:39:24.907Z - Time taken for 'build-project-configs' 49.92716699978337ms
+[NX Daemon Server] - 2024-08-04T09:39:25.051Z - Time taken for 'total execution time for createProjectGraph()' 134.88316700002179ms
+[NX Daemon Server] - 2024-08-04T09:39:25.433Z - [WATCHER]: otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/package.json was created or restored
+[NX Daemon Server] - 2024-08-04T09:39:25.433Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:25.535Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:25.535Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/package.json
+[NX Daemon Server] - 2024-08-04T09:39:25.535Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:25.538Z - Time taken for 'hash changed files from watcher' 0.2747910001780838ms
+[NX Daemon Server] - 2024-08-04T09:39:25.555Z - Time taken for 'build-project-configs' 15.042542000068352ms
+[NX Daemon Server] - 2024-08-04T09:39:25.571Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:25.572Z - [WATCHER]: 8 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:25.594Z - Time taken for 'total execution time for createProjectGraph()' 28.0183749999851ms
+[NX Daemon Server] - 2024-08-04T09:39:25.675Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:25.675Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vitepress___@vueuse_core.js,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vitepress___@vue_devtools-api.js,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vue.js
+[NX Daemon Server] - 2024-08-04T09:39:25.676Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:25.680Z - Time taken for 'hash changed files from watcher' 2.0337920000310987ms
+[NX Daemon Server] - 2024-08-04T09:39:25.697Z - Time taken for 'build-project-configs' 15.831499999854714ms
+[NX Daemon Server] - 2024-08-04T09:39:25.722Z - Time taken for 'total execution time for createProjectGraph()' 19.965874999994412ms
+[NX Daemon Server] - 2024-08-04T09:39:32.543Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:32.545Z - [WATCHER]: otp-input/docs/.vitepress/theme/index.js was modified
+[NX Daemon Server] - 2024-08-04T09:39:32.747Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:32.747Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.js
+[NX Daemon Server] - 2024-08-04T09:39:32.747Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:32.749Z - Time taken for 'hash changed files from watcher' 0.38175000017508864ms
+[NX Daemon Server] - 2024-08-04T09:39:32.763Z - Time taken for 'build-project-configs' 12.38662500004284ms
+[NX Daemon Server] - 2024-08-04T09:39:32.779Z - Time taken for 'total execution time for createProjectGraph()' 13.520375000080094ms
+[NX Daemon Server] - 2024-08-04T09:39:44.338Z - [WATCHER]: 0 file(s) created or restored, 1 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:44.339Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:44.617Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:44.627Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 18 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:44.812Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:44.812Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.ts
+[NX Daemon Server] - 2024-08-04T09:39:44.813Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vitepress___@vue_devtools-api.js,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vitepress___@vue_devtools-api.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vue.js,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vue.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/package.json,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_8b6e1fbf/vitepress___@vueuse_core.js,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/package.json,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps_temp_08bd2b41/vitepress___@vueuse_core.js
+[NX Daemon Server] - 2024-08-04T09:39:44.822Z - Time taken for 'hash changed files from watcher' 0.8470000000670552ms
+[NX Daemon Server] - 2024-08-04T09:39:44.903Z - Time taken for 'build-project-configs' 79.22545799985528ms
+[NX Daemon Server] - 2024-08-04T09:39:44.927Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:44.932Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:45.044Z - Time taken for 'total execution time for createProjectGraph()' 134.2312080000993ms
+[NX Daemon Server] - 2024-08-04T09:39:45.423Z - [WATCHER]: otp-input/docs/.vitepress/theme/index.ts was modified
+[NX Daemon Server] - 2024-08-04T09:39:45.423Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:45.526Z - [WATCHER]: 1 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:45.526Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:45.687Z - [WATCHER]: otp-input/docs/.vitepress/cache/deps_temp_b52275c8/package.json was created or restored
+[NX Daemon Server] - 2024-08-04T09:39:45.688Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:45.736Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:45.736Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.ts,otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/package.json,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/package.json
+[NX Daemon Server] - 2024-08-04T09:39:45.736Z - [REQUEST]: otp-input/docs/.vitepress/config.ts.timestamp-1722764384867-c62fbb266cdc7.mjs,otp-input/docs/.vitepress/config.ts.timestamp-1722764384842-0c4ee7f8543a1.mjs
+[NX Daemon Server] - 2024-08-04T09:39:45.743Z - Time taken for 'hash changed files from watcher' 4.614249999867752ms
+[NX Daemon Server] - 2024-08-04T09:39:45.767Z - Time taken for 'build-project-configs' 25.41033299989067ms
+[NX Daemon Server] - 2024-08-04T09:39:45.812Z - Time taken for 'total execution time for createProjectGraph()' 38.91345899994485ms
+[NX Daemon Server] - 2024-08-04T09:39:45.827Z - [WATCHER]: 8 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:45.828Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:45.882Z - [WATCHER]: 8 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:39:45.883Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:45.930Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:45.930Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vitepress___@vue_devtools-api.js,otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vue.js,otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vitepress___@vueuse_core.js,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/chunk-VOX3WZT7.js.map,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/vitepress___@vue_devtools-api.js.map,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/chunk-VOX3WZT7.js,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/vue.js.map,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/vitepress___@vueuse_core.js,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/vitepress___@vueuse_core.js.map,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/vue.js,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/vitepress___@vue_devtools-api.js
+[NX Daemon Server] - 2024-08-04T09:39:45.930Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:45.933Z - Time taken for 'hash changed files from watcher' 1.1667920001782477ms
+[NX Daemon Server] - 2024-08-04T09:39:45.947Z - Time taken for 'build-project-configs' 12.90099999983795ms
+[NX Daemon Server] - 2024-08-04T09:39:45.969Z - Time taken for 'total execution time for createProjectGraph()' 18.62091700010933ms
+[NX Daemon Server] - 2024-08-04T09:39:58.550Z - [WATCHER]: otp-input/docs/.vitepress/theme/index.ts was modified
+[NX Daemon Server] - 2024-08-04T09:39:58.551Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:39:58.751Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:39:58.751Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.ts
+[NX Daemon Server] - 2024-08-04T09:39:58.751Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:39:58.755Z - Time taken for 'hash changed files from watcher' 0.2868329999037087ms
+[NX Daemon Server] - 2024-08-04T09:39:58.767Z - Time taken for 'build-project-configs' 12.321375000057742ms
+[NX Daemon Server] - 2024-08-04T09:39:58.785Z - Time taken for 'total execution time for createProjectGraph()' 14.41662500007078ms
+[NX Daemon Server] - 2024-08-04T09:40:03.396Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:40:03.397Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:40:03.799Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:40:03.799Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:40:03.799Z - [REQUEST]: otp-input/docs/.vitepress/cache/deps_temp_b52275c8,otp-input/docs/.vitepress/cache/deps_temp_b52275c8/_metadata.json
+[NX Daemon Server] - 2024-08-04T09:40:03.807Z - Time taken for 'hash changed files from watcher' 0.5593330000992864ms
+[NX Daemon Server] - 2024-08-04T09:40:03.831Z - Time taken for 'build-project-configs' 24.98950000014156ms
+[NX Daemon Server] - 2024-08-04T09:40:03.867Z - Time taken for 'total execution time for createProjectGraph()' 32.59370800014585ms
+[NX Daemon Server] - 2024-08-04T09:40:11.757Z - [WATCHER]: otp-input/docs/.vitepress/theme/index.ts was modified
+[NX Daemon Server] - 2024-08-04T09:40:11.759Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:40:12.562Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:40:12.562Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.ts
+[NX Daemon Server] - 2024-08-04T09:40:12.562Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:40:12.569Z - Time taken for 'hash changed files from watcher' 0.9269999999087304ms
+[NX Daemon Server] - 2024-08-04T09:40:12.588Z - Time taken for 'build-project-configs' 22.283499999903142ms
+[NX Daemon Server] - 2024-08-04T09:40:12.606Z - Time taken for 'total execution time for createProjectGraph()' 14.910374999977648ms
+[NX Daemon Server] - 2024-08-04T09:41:02.190Z - [WATCHER]: otp-input/docs/.vitepress/theme/index.ts was modified
+[NX Daemon Server] - 2024-08-04T09:41:02.190Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:41:03.804Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:41:03.804Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.ts
+[NX Daemon Server] - 2024-08-04T09:41:03.805Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:41:03.870Z - Time taken for 'hash changed files from watcher' 6.130624999990687ms
+[NX Daemon Server] - 2024-08-04T09:41:03.924Z - Time taken for 'build-project-configs' 106.1836249998305ms
+[NX Daemon Server] - 2024-08-04T09:41:03.985Z - Time taken for 'total execution time for createProjectGraph()' 43.9933749998454ms
+[NX Daemon Server] - 2024-08-04T09:41:04.543Z - [WATCHER]: otp-input/docs/.vitepress/theme/index.ts was modified
+[NX Daemon Server] - 2024-08-04T09:41:04.543Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:41:07.748Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:41:07.749Z - [REQUEST]: otp-input/docs/.vitepress/theme/index.ts
+[NX Daemon Server] - 2024-08-04T09:41:07.749Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:41:07.752Z - Time taken for 'hash changed files from watcher' 0.8395000000018626ms
+[NX Daemon Server] - 2024-08-04T09:41:07.767Z - Time taken for 'build-project-configs' 13.185749999945983ms
+[NX Daemon Server] - 2024-08-04T09:41:07.793Z - Time taken for 'total execution time for createProjectGraph()' 23.137209000065923ms
+[NX Daemon Server] - 2024-08-04T09:41:51.495Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:41:51.496Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:41:57.899Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:41:57.900Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:41:57.900Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:41:57.904Z - Time taken for 'hash changed files from watcher' 0.6802910000551492ms
+[NX Daemon Server] - 2024-08-04T09:41:57.931Z - Time taken for 'build-project-configs' 27.324416999937966ms
+[NX Daemon Server] - 2024-08-04T09:41:57.952Z - Time taken for 'total execution time for createProjectGraph()' 16.11429199995473ms
+[NX Daemon Server] - 2024-08-04T09:42:04.962Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:42:04.963Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:42:11.370Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:42:11.371Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:42:11.371Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:42:11.376Z - Time taken for 'hash changed files from watcher' 1.156916999956593ms
+[NX Daemon Server] - 2024-08-04T09:42:11.395Z - Time taken for 'build-project-configs' 19.380750000011176ms
+[NX Daemon Server] - 2024-08-04T09:42:11.416Z - Time taken for 'total execution time for createProjectGraph()' 17.122291000094265ms
+[NX Daemon Server] - 2024-08-04T09:42:33.409Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:42:33.410Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:42:39.353Z - [WATCHER]: otp-input/docs/events.md was modified
+[NX Daemon Server] - 2024-08-04T09:42:39.362Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:42:39.812Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:42:39.812Z - [REQUEST]: otp-input/docs/events.md
+[NX Daemon Server] - 2024-08-04T09:42:39.812Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:42:39.818Z - Time taken for 'hash changed files from watcher' 0.6355409999378026ms
+[NX Daemon Server] - 2024-08-04T09:42:39.834Z - Time taken for 'build-project-configs' 16.850958000170067ms
+[NX Daemon Server] - 2024-08-04T09:42:39.860Z - Time taken for 'total execution time for createProjectGraph()' 19.29679199983366ms
+[NX Daemon Server] - 2024-08-04T09:43:37.015Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T09:43:37.016Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:43:37.119Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:43:37.119Z - [REQUEST]: otp-input/dist/es/src/components/otp-input.vue2.mjs,otp-input/dist/lib/src/components/otp-input.vue2.js,otp-input/dist/lib/src/components/otp-input.vue.js,otp-input/dist/es/index.mjs,otp-input/dist/es/style.css,otp-input/dist/es/src/index.mjs,otp-input/dist/lib/src/index.js,otp-input/dist/lib/style.css,otp-input/dist/es/src/components/otp-input.vue.mjs,otp-input/dist/lib/index.js
+[NX Daemon Server] - 2024-08-04T09:43:37.119Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:43:37.122Z - Time taken for 'hash changed files from watcher' 1.22241699998267ms
+[NX Daemon Server] - 2024-08-04T09:43:37.137Z - Time taken for 'build-project-configs' 13.888374999864027ms
+[NX Daemon Server] - 2024-08-04T09:43:37.154Z - Time taken for 'total execution time for createProjectGraph()' 12.846833999967203ms
+[NX Daemon Server] - 2024-08-04T09:44:08.320Z - [WATCHER]: otp-input/src/components/otp-input.vue was modified
+[NX Daemon Server] - 2024-08-04T09:44:08.321Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:44:08.524Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:44:08.524Z - [REQUEST]: otp-input/src/components/otp-input.vue
+[NX Daemon Server] - 2024-08-04T09:44:08.524Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:44:08.527Z - Time taken for 'hash changed files from watcher' 0.3459579998161644ms
+[NX Daemon Server] - 2024-08-04T09:44:08.542Z - Time taken for 'build-project-configs' 13.753292000154033ms
+[NX Daemon Server] - 2024-08-04T09:44:08.566Z - Time taken for 'total execution time for createProjectGraph()' 20.936625000089407ms
+[NX Daemon Server] - 2024-08-04T09:46:03.378Z - [WATCHER]: otp-input/package.json was modified
+[NX Daemon Server] - 2024-08-04T09:46:03.379Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:46:03.781Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T09:46:03.782Z - [REQUEST]: otp-input/package.json
+[NX Daemon Server] - 2024-08-04T09:46:03.782Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T09:46:03.785Z - Time taken for 'hash changed files from watcher' 0.36595800006762147ms
+[NX Daemon Server] - 2024-08-04T09:46:03.809Z - Time taken for 'build-project-configs' 22.155499999877065ms
+[NX Daemon Server] - 2024-08-04T09:46:03.839Z - Time taken for 'total execution time for createProjectGraph()' 23.724915999919176ms
+[NX Daemon Server] - 2024-08-04T09:46:10.203Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T09:46:10.204Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-08-04T09:46:10.204Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-08-04T09:46:10.204Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX Daemon Server] - 2024-08-04T19:07:55.913Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-08-04T19:07:55.917Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-08-04T19:07:55.918Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T19:07:55.920Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-04T19:07:55.922Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-04T19:07:55.923Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T19:07:56.129Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:07:56.129Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:07:56.129Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:07:56.137Z - Time taken for 'loadNxPlugins' 204.45029100000002ms
+[NX Daemon Server] - 2024-08-04T19:07:56.700Z - Time taken for 'build-project-configs' 564.506291ms
+[NX Daemon Server] - 2024-08-04T19:07:56.728Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T19:07:56.729Z - Time taken for 'total for creating and serializing project graph' 805.095458ms
+[NX Daemon Server] - 2024-08-04T19:07:56.730Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T19:07:56.731Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 805. Response time: 3.
+[NX Daemon Server] - 2024-08-04T19:07:56.734Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-04T19:07:56.735Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-04T19:07:56.735Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-08-04T19:07:56.763Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-04T19:07:56.763Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-04T19:07:56.764Z - Time taken for 'total for creating and serializing project graph' 0.24287500000002638ms
+[NX Daemon Server] - 2024-08-04T19:07:56.765Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-04T19:07:56.765Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-08-04T19:07:56.782Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-04T19:07:56.782Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-04T19:07:56.782Z - Handled HASH_TASKS. Handling time: 9. Response time: 0.
+[NX Daemon Server] - 2024-08-04T19:07:59.063Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:07:59.064Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:07:59.110Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-04T19:07:59.110Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-04T19:07:59.110Z - Handled RECORD_OUTPUTS_HASH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T19:07:59.115Z - [WATCHER]: 2 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:07:59.115Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:07:59.145Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T19:07:59.145Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-04T19:07:59.145Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-04T19:07:59.145Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T19:07:59.145Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-04T19:07:59.145Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-04T19:07:59.151Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-04T19:07:59.165Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:07:59.165Z - [REQUEST]: otp-input/dist/es/index.mjs,otp-input/dist/es/style.css,otp-input/dist/lib/style.css,otp-input/dist/lib/src/index.js,otp-input/dist/lib/src/components/otp-input.vue.js,otp-input/dist/lib/src/components/otp-input.vue2.js,otp-input/dist/lib/index.js,otp-input/dist/es/src/index.mjs,otp-input/dist/es/src/components/otp-input.vue.mjs,otp-input/dist/es/src/components/otp-input.vue2.mjs
+[NX Daemon Server] - 2024-08-04T19:07:59.165Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:07:59.168Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:07:59.170Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:07:59.170Z - Time taken for 'hash changed files from watcher' 0.4930420000000595ms
+[NX Daemon Server] - 2024-08-04T19:07:59.180Z - Time taken for 'build-project-configs' 11.43770799999993ms
+[NX Daemon Server] - 2024-08-04T19:07:59.204Z - Time taken for 'total execution time for createProjectGraph()' 19.18362500000012ms
+[NX Daemon Server] - 2024-08-04T19:07:59.271Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:07:59.271Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:07:59.271Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:07:59.273Z - Time taken for 'hash changed files from watcher' 0.10454200000003766ms
+[NX Daemon Server] - 2024-08-04T19:07:59.282Z - Time taken for 'build-project-configs' 7.608582999999726ms
+[NX Daemon Server] - 2024-08-04T19:07:59.301Z - Time taken for 'total execution time for createProjectGraph()' 14.697165999999925ms
+[NX Daemon Server] - 2024-08-04T19:08:02.501Z - [WATCHER]: otp-input/dist docs was deleted
+[NX Daemon Server] - 2024-08-04T19:08:02.501Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:08:02.703Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:08:02.703Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:08:02.703Z - [REQUEST]: otp-input/dist docs
+[NX Daemon Server] - 2024-08-04T19:08:02.705Z - Time taken for 'hash changed files from watcher' 0.1257500000001528ms
+[NX Daemon Server] - 2024-08-04T19:08:02.714Z - Time taken for 'build-project-configs' 8.361917000000176ms
+[NX Daemon Server] - 2024-08-04T19:08:02.729Z - Time taken for 'total execution time for createProjectGraph()' 11.343541999999616ms
+[NX Daemon Server] - 2024-08-04T19:09:54.561Z - [WATCHER]: deploy.sh was modified
+[NX Daemon Server] - 2024-08-04T19:09:54.562Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:09:54.966Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:09:54.966Z - [REQUEST]: deploy.sh
+[NX Daemon Server] - 2024-08-04T19:09:54.967Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:09:54.973Z - Time taken for 'hash changed files from watcher' 0.5943330000009155ms
+[NX Daemon Server] - 2024-08-04T19:09:54.995Z - Time taken for 'build-project-configs' 24.34549999999581ms
+[NX Daemon Server] - 2024-08-04T19:09:55.016Z - Time taken for 'total execution time for createProjectGraph()' 15.505666999990353ms
+[NX Daemon Server] - 2024-08-04T19:10:01.560Z - [WATCHER]: otp-input/docs/.vitepress/config.ts.timestamp-1722798601495-2ac830f78e0f7.mjs was deleted
+[NX Daemon Server] - 2024-08-04T19:10:01.560Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:10:02.363Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:10:02.363Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:10:02.363Z - [REQUEST]: otp-input/docs/.vitepress/config.ts.timestamp-1722798601495-2ac830f78e0f7.mjs
+[NX Daemon Server] - 2024-08-04T19:10:02.367Z - Time taken for 'hash changed files from watcher' 0.27358300000196323ms
+[NX Daemon Server] - 2024-08-04T19:10:02.379Z - Time taken for 'build-project-configs' 11.713541999997688ms
+[NX Daemon Server] - 2024-08-04T19:10:02.394Z - Time taken for 'total execution time for createProjectGraph()' 12.829457999992883ms
+[NX Daemon Server] - 2024-08-04T19:10:04.301Z - [WATCHER]: 28 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:10:04.301Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:10:04.403Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:10:04.403Z - [REQUEST]: otp-input/docs/.vitepress/dist/assets/demo.md.-ogQvKpS.js,otp-input/docs/.vitepress/dist/assets/inter-roman-vietnamese.BjW4sHH5.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-latin.Di8DUHzh.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-latin-ext.4ZJIpNVo.woff2,otp-input/docs/.vitepress/dist/assets/events.md.CEkqGiRV.lean.js,otp-input/docs/.vitepress/dist/assets/inter-roman-greek-ext.CqjqNYQ-.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-cyrillic.C5lxZ8CY.woff2,otp-input/docs/.vitepress/dist/assets/inter-italic-vietnamese.BSbpV94h.woff2,otp-input/docs/.vitepress/dist/assets/inter-italic-latin.C2AdPX0b.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2,otp-input/docs/.vitepress/dist/assets/inter-italic-cyrillic.By2_1cv3.woff2,otp-input/docs/.vitepress/dist/assets/get-started.md.BQO9Jv8N.lean.js,otp-input/docs/.vitepress/dist/assets/index.md.CPYy5-li.lean.js,otp-input/docs/.vitepress/dist/assets/chunks/theme.Dekq9Kd_.js,otp-input/docs/.vitepress/dist/assets/props.md.BydSg6Zz.lean.js,otp-input/docs/.vitepress/dist/assets/demo.md.-ogQvKpS.lean.js,otp-input/docs/.vitepress/dist/assets/chunks/framework.B2kD9-Le.js,otp-input/docs/.vitepress/dist/assets/index.md.CPYy5-li.js,otp-input/docs/.vitepress/dist/assets/props.md.BydSg6Zz.js,otp-input/docs/.vitepress/dist/assets/get-started.md.BQO9Jv8N.js,otp-input/docs/.vitepress/dist/assets/style.BCyq9ZyU.css,otp-input/docs/.vitepress/dist/assets/inter-roman-greek.BBVDIX6e.woff2,otp-input/docs/.vitepress/dist/assets/inter-italic-greek.DJ8dCoTZ.woff2,otp-input/docs/.vitepress/dist/assets/inter-italic-cyrillic-ext.r48I6akx.woff2,otp-input/docs/.vitepress/dist/assets/events.md.CEkqGiRV.js,otp-input/docs/.vitepress/dist/assets/app.z2IaZFxs.js,otp-input/docs/.vitepress/dist/assets/inter-italic-latin-ext.CN1xVJS-.woff2,otp-input/docs/.vitepress/dist/assets/inter-italic-greek-ext.1u6EdAuj.woff2
+[NX Daemon Server] - 2024-08-04T19:10:04.404Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:10:04.406Z - Time taken for 'hash changed files from watcher' 0.7840419999993173ms
+[NX Daemon Server] - 2024-08-04T19:10:04.415Z - Time taken for 'build-project-configs' 7.838458999991417ms
+[NX Daemon Server] - 2024-08-04T19:10:04.431Z - Time taken for 'total execution time for createProjectGraph()' 13.230916999993497ms
+[NX Daemon Server] - 2024-08-04T19:10:04.998Z - [WATCHER]: 9 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:10:04.998Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:10:05.082Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:10:05.082Z - [WATCHER]: 7 file(s) created or restored, 0 file(s) modified, 9 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:10:05.100Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:10:05.101Z - [REQUEST]: otp-input/docs/.vitepress/dist/props.html,otp-input/docs/.vitepress/dist/events.html,otp-input/docs/.vitepress/dist/hashmap.json,otp-input/docs/.vitepress/dist/404.html,otp-input/docs/.vitepress/dist/index.html,otp-input/docs/.vitepress/dist/get-started.html,otp-input/docs/.vitepress/dist/demo.html
+[NX Daemon Server] - 2024-08-04T19:10:05.101Z - [REQUEST]: otp-input/docs/.vitepress/.temp/demo.md.js,otp-input/docs/.vitepress/.temp/events.md.js,otp-input/docs/.vitepress/.temp/app.js,otp-input/docs/.vitepress/.temp/props.md.js,otp-input/docs/.vitepress/.temp/plugin-vue_export-helper.1tPrXgE0.js,otp-input/docs/.vitepress/.temp/get-started.md.js,otp-input/docs/.vitepress/.temp/index.md.js,otp-input/docs/.vitepress/.temp/package.json,otp-input/docs/.vitepress/.temp/assets/style.rC10fAYP.css
+[NX Daemon Server] - 2024-08-04T19:10:05.103Z - Time taken for 'hash changed files from watcher' 0.7028750000026776ms
+[NX Daemon Server] - 2024-08-04T19:10:05.116Z - Time taken for 'build-project-configs' 11.644375000003492ms
+[NX Daemon Server] - 2024-08-04T19:10:05.133Z - Time taken for 'total execution time for createProjectGraph()' 14.893416000006255ms
+[NX Daemon Server] - 2024-08-04T19:11:17.437Z - [WATCHER]: deploy.sh was modified
+[NX Daemon Server] - 2024-08-04T19:11:17.438Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:11:17.641Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:11:17.641Z - [REQUEST]: deploy.sh
+[NX Daemon Server] - 2024-08-04T19:11:17.641Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:11:17.643Z - Time taken for 'hash changed files from watcher' 0.22262499999487773ms
+[NX Daemon Server] - 2024-08-04T19:11:17.658Z - Time taken for 'build-project-configs' 12.628458000021055ms
+[NX Daemon Server] - 2024-08-04T19:11:17.677Z - Time taken for 'total execution time for createProjectGraph()' 16.790500000002794ms
+[NX Daemon Server] - 2024-08-04T19:11:20.920Z - [WATCHER]: otp-input/docs/.vitepress/config.ts.timestamp-1722798680855-fd9e852a0574.mjs was deleted
+[NX Daemon Server] - 2024-08-04T19:11:20.920Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:11:21.320Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:11:21.321Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:11:21.321Z - [REQUEST]: otp-input/docs/.vitepress/config.ts.timestamp-1722798680855-fd9e852a0574.mjs
+[NX Daemon Server] - 2024-08-04T19:11:21.323Z - Time taken for 'hash changed files from watcher' 0.15795900000375696ms
+[NX Daemon Server] - 2024-08-04T19:11:21.332Z - Time taken for 'build-project-configs' 8.155958999996074ms
+[NX Daemon Server] - 2024-08-04T19:11:21.349Z - Time taken for 'total execution time for createProjectGraph()' 12.75104200001806ms
+[NX Daemon Server] - 2024-08-04T19:11:23.746Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 35 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:11:23.747Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:11:23.904Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:11:23.905Z - [WATCHER]: 28 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:11:24.550Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:11:24.550Z - [REQUEST]: otp-input/docs/.vitepress/dist/assets/inter-italic-cyrillic-ext.r48I6akx.woff2,otp-input/docs/.vitepress/dist/assets/chunks/theme.Dekq9Kd_.js,otp-input/docs/.vitepress/dist/assets/demo.md.-ogQvKpS.lean.js,otp-input/docs/.vitepress/dist/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-greek-ext.CqjqNYQ-.woff2,otp-input/docs/.vitepress/dist/assets/events.md.CEkqGiRV.js,otp-input/docs/.vitepress/dist/assets/inter-italic-greek.DJ8dCoTZ.woff2,otp-input/docs/.vitepress/dist/assets/index.md.CPYy5-li.lean.js,otp-input/docs/.vitepress/dist/assets/inter-italic-cyrillic.By2_1cv3.woff2,otp-input/docs/.vitepress/dist/assets/props.md.BydSg6Zz.js,otp-input/docs/.vitepress/dist/assets/index.md.CPYy5-li.js,otp-input/docs/.vitepress/dist/assets/inter-italic-greek-ext.1u6EdAuj.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-latin.Di8DUHzh.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-greek.BBVDIX6e.woff2,otp-input/docs/.vitepress/dist/assets/props.md.BydSg6Zz.lean.js,otp-input/docs/.vitepress/dist/assets/style.DgLxgSJl.css,otp-input/docs/.vitepress/dist/assets/inter-roman-cyrillic.C5lxZ8CY.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-vietnamese.BjW4sHH5.woff2,otp-input/docs/.vitepress/dist/assets/inter-roman-latin-ext.4ZJIpNVo.woff2,otp-input/docs/.vitepress/dist/assets/inter-italic-latin.C2AdPX0b.woff2,otp-input/docs/.vitepress/dist/assets/get-started.md.DDZl6DKG.js,otp-input/docs/.vitepress/dist/assets/inter-italic-latin-ext.CN1xVJS-.woff2,otp-input/docs/.vitepress/dist/assets/demo.md.-ogQvKpS.js,otp-input/docs/.vitepress/dist/assets/get-started.md.DDZl6DKG.lean.js,otp-input/docs/.vitepress/dist/assets/app.z2IaZFxs.js,otp-input/docs/.vitepress/dist/assets/events.md.CEkqGiRV.lean.js,otp-input/docs/.vitepress/dist/assets/chunks/framework.B2kD9-Le.js,otp-input/docs/.vitepress/dist/assets/inter-italic-vietnamese.BSbpV94h.woff2
+[NX Daemon Server] - 2024-08-04T19:11:24.550Z - [REQUEST]: otp-input/docs/.vitepress/dist/hashmap.json,otp-input/docs/.vitepress/dist/events.html,otp-input/docs/.vitepress/dist/404.html,otp-input/docs/.vitepress/dist/assets/style.BCyq9ZyU.css,otp-input/docs/.vitepress/dist/assets/get-started.md.BQO9Jv8N.js,otp-input/docs/.vitepress/dist/props.html,otp-input/docs/.vitepress/dist/assets/get-started.md.BQO9Jv8N.lean.js,otp-input/docs/.vitepress/dist/get-started.html,otp-input/docs/.vitepress/dist/index.html,otp-input/docs/.vitepress/dist/demo.html
+[NX Daemon Server] - 2024-08-04T19:11:24.554Z - Time taken for 'hash changed files from watcher' 0.8910000000032596ms
+[NX Daemon Server] - 2024-08-04T19:11:24.577Z - Time taken for 'build-project-configs' 20.949625000008382ms
+[NX Daemon Server] - 2024-08-04T19:11:24.608Z - Time taken for 'total execution time for createProjectGraph()' 25.32458299997961ms
+[NX Daemon Server] - 2024-08-04T19:11:24.736Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:11:24.736Z - [WATCHER]: 9 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:11:24.838Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:11:24.838Z - [REQUEST]: otp-input/docs/.vitepress/.temp/events.md.js,otp-input/docs/.vitepress/.temp/props.md.js,otp-input/docs/.vitepress/.temp/app.js,otp-input/docs/.vitepress/.temp/assets/style.rC10fAYP.css,otp-input/docs/.vitepress/.temp/get-started.md.js,otp-input/docs/.vitepress/.temp/index.md.js,otp-input/docs/.vitepress/.temp/plugin-vue_export-helper.1tPrXgE0.js,otp-input/docs/.vitepress/.temp/demo.md.js,otp-input/docs/.vitepress/.temp/package.json
+[NX Daemon Server] - 2024-08-04T19:11:24.838Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:11:24.841Z - [WATCHER]: 7 file(s) created or restored, 0 file(s) modified, 9 file(s) deleted
+[NX Daemon Server] - 2024-08-04T19:11:24.841Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:11:24.841Z - Time taken for 'hash changed files from watcher' 0.22095799999078736ms
+[NX Daemon Server] - 2024-08-04T19:11:24.852Z - Time taken for 'build-project-configs' 10.168375000008382ms
+[NX Daemon Server] - 2024-08-04T19:11:24.875Z - Time taken for 'total execution time for createProjectGraph()' 18.282417000009445ms
+[NX Daemon Server] - 2024-08-04T19:11:24.942Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-04T19:11:24.942Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:11:24.942Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-04T19:11:24.944Z - Time taken for 'hash changed files from watcher' 0.10320900002261624ms
+[NX Daemon Server] - 2024-08-04T19:11:24.953Z - Time taken for 'build-project-configs' 8.079041999997571ms
+[NX Daemon Server] - 2024-08-04T19:11:24.968Z - Time taken for 'total execution time for createProjectGraph()' 11.333333999995375ms
+[NX Daemon Server] - 2024-08-04T19:15:51.479Z - [WATCHER]: .gitignore was modified
+[NX Daemon Server] - 2024-08-04T19:15:51.482Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-04T19:15:51.482Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-08-04T19:15:51.482Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-08-04T19:15:51.483Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"

@@ -1,0 +1,549 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.5.6",
+  "deps": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.8.0",
+    "@types/node": "18.18.6",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.0",
+    "lerna": "^8.1.7",
+    "prettier": "~2.3.0",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.4",
+    "vue": "^3.1"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "yarn.lock",
+        "hash": "12523930432161282228"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "57687306886349896"
+      },
+      {
+        "file": "nx.json",
+        "hash": "15833547922043738392"
+      },
+      {
+        "file": "deploy.sh",
+        "hash": "6735514020272260989"
+      },
+      {
+        "file": "package.json",
+        "hash": "4243030915046085897"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "15874548741128610461"
+      },
+      {
+        "file": ".yarn/install-state.gz",
+        "hash": "11427376032163355850"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "15589390176124568250"
+      }
+    ],
+    "projectFileMap": {
+      "runner": [
+        {
+          "file": "runner/.vite/deps_temp_15df9823/package.json",
+          "hash": "8630294688235076505"
+        },
+        {
+          "file": "runner/.vite/deps_temp_22928f08/package.json",
+          "hash": "8630294688235076505"
+        },
+        {
+          "file": "runner/app.vue",
+          "hash": "3157129349058311614"
+        },
+        {
+          "file": "runner/index.html",
+          "hash": "12929971471844005987"
+        },
+        {
+          "file": "runner/main.ts",
+          "hash": "8665911182137032062"
+        },
+        {
+          "file": "runner/package.json",
+          "hash": "15668709038346973340",
+          "deps": [
+            "npm:@vitejs/plugin-vue",
+            "npm:vite",
+            "@toneflix/otp-input",
+            "npm:vue"
+          ]
+        },
+        {
+          "file": "runner/vite.config.ts",
+          "hash": "1623503550044344319"
+        }
+      ],
+      "@toneflix/otp-input": [
+        {
+          "file": "otp-input/dist docs/404.html",
+          "hash": "17777906943239262053"
+        },
+        {
+          "file": "otp-input/dist docs/assets/app.nXi8ndTA.js",
+          "hash": "5959293205682490007"
+        },
+        {
+          "file": "otp-input/dist docs/assets/chunks/framework.B2kD9-Le.js",
+          "hash": "7355725103563814500"
+        },
+        {
+          "file": "otp-input/dist docs/assets/chunks/theme.Ndckdqdj.js",
+          "hash": "10791176510185502499"
+        },
+        {
+          "file": "otp-input/dist docs/assets/events.md.DLKdDTeA.js",
+          "hash": "3695149714255980599"
+        },
+        {
+          "file": "otp-input/dist docs/assets/events.md.DLKdDTeA.lean.js",
+          "hash": "3695149714255980599"
+        },
+        {
+          "file": "otp-input/dist docs/assets/get-started.md.B3RwU76U.js",
+          "hash": "1427233939072095817"
+        },
+        {
+          "file": "otp-input/dist docs/assets/get-started.md.B3RwU76U.lean.js",
+          "hash": "968170042725870758"
+        },
+        {
+          "file": "otp-input/dist docs/assets/index.md.LVL2z_Dm.js",
+          "hash": "15532582378970649728"
+        },
+        {
+          "file": "otp-input/dist docs/assets/index.md.LVL2z_Dm.lean.js",
+          "hash": "15532582378970649728"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
+          "hash": "8241952812200813355"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-italic-cyrillic.By2_1cv3.woff2",
+          "hash": "17518006115323730802"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
+          "hash": "17927959312439819061"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-italic-greek.DJ8dCoTZ.woff2",
+          "hash": "15478754605072970185"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
+          "hash": "2268099297404114829"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-italic-latin.C2AdPX0b.woff2",
+          "hash": "10829668166839501238"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-italic-vietnamese.BSbpV94h.woff2",
+          "hash": "5439243213935570514"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
+          "hash": "7674416464885726785"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
+          "hash": "4147970328684304313"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
+          "hash": "15877694762730622634"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-roman-greek.BBVDIX6e.woff2",
+          "hash": "12225282773869548609"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
+          "hash": "10886706858615268408"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-roman-latin.Di8DUHzh.woff2",
+          "hash": "6650714724347801826"
+        },
+        {
+          "file": "otp-input/dist docs/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
+          "hash": "9802537721033087843"
+        },
+        {
+          "file": "otp-input/dist docs/assets/props.md.Ce2ARyR-.js",
+          "hash": "12659130636804304365"
+        },
+        {
+          "file": "otp-input/dist docs/assets/props.md.Ce2ARyR-.lean.js",
+          "hash": "15116877183412070324"
+        },
+        {
+          "file": "otp-input/dist docs/assets/style.DekbihnR.css",
+          "hash": "585258826603804473"
+        },
+        {
+          "file": "otp-input/dist docs/events.html",
+          "hash": "7309646919647568784"
+        },
+        {
+          "file": "otp-input/dist docs/get-started.html",
+          "hash": "13532773507043391000"
+        },
+        {
+          "file": "otp-input/dist docs/hashmap.json",
+          "hash": "2541563566860392239"
+        },
+        {
+          "file": "otp-input/dist docs/index.html",
+          "hash": "12410216784895225360"
+        },
+        {
+          "file": "otp-input/dist docs/props.html",
+          "hash": "17379839722570505568"
+        },
+        {
+          "file": "otp-input/dist/es/index.mjs",
+          "hash": "16538124907700024740"
+        },
+        {
+          "file": "otp-input/dist/es/src/components/otp-input.vue.mjs",
+          "hash": "459888678971584531"
+        },
+        {
+          "file": "otp-input/dist/es/src/components/otp-input.vue2.mjs",
+          "hash": "8186906440362137237"
+        },
+        {
+          "file": "otp-input/dist/es/src/index.mjs",
+          "hash": "14930878639859058779"
+        },
+        {
+          "file": "otp-input/dist/es/style.css",
+          "hash": "13704211965394506026"
+        },
+        {
+          "file": "otp-input/dist/lib/index.js",
+          "hash": "5013913335806317620"
+        },
+        {
+          "file": "otp-input/dist/lib/src/components/otp-input.vue.js",
+          "hash": "5756902154096127719"
+        },
+        {
+          "file": "otp-input/dist/lib/src/components/otp-input.vue2.js",
+          "hash": "5089101019242738075"
+        },
+        {
+          "file": "otp-input/dist/lib/src/index.js",
+          "hash": "7548626374783606157"
+        },
+        {
+          "file": "otp-input/dist/lib/style.css",
+          "hash": "13704211965394506026"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/_metadata.json",
+          "hash": "16743068092330449654"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/chunk-VOX3WZT7.js",
+          "hash": "16369856806028127419"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/chunk-VOX3WZT7.js.map",
+          "hash": "6829666199802053060"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/package.json",
+          "hash": "8630294688235076505"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js",
+          "hash": "14274983720336523528"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js.map",
+          "hash": "11209437070460255877"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js",
+          "hash": "17387841941677093687"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js.map",
+          "hash": "14000889898275993104"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/vue.js",
+          "hash": "3471122411510852352"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps/vue.js.map",
+          "hash": "9947606979680686569"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/chunk-VOX3WZT7.js",
+          "hash": "16369856806028127419"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/chunk-VOX3WZT7.js.map",
+          "hash": "6829666199802053060"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/package.json",
+          "hash": "8630294688235076505"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vitepress___@vue_devtools-api.js",
+          "hash": "14274983720336523528"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vitepress___@vue_devtools-api.js.map",
+          "hash": "11209437070460255877"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vitepress___@vueuse_core.js",
+          "hash": "17387841941677093687"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vitepress___@vueuse_core.js.map",
+          "hash": "14000889898275993104"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vue.js",
+          "hash": "3471122411510852352"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/cache/deps_temp_8bc7fe0d/vue.js.map",
+          "hash": "9947606979680686569"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/config.ts",
+          "hash": "2043639045628421197"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/theme/index.ts",
+          "hash": "10699817114439258865"
+        },
+        {
+          "file": "otp-input/docs/banner.png",
+          "hash": "6203059496166803201"
+        },
+        {
+          "file": "otp-input/docs/demo.md",
+          "hash": "4363019363516486020"
+        },
+        {
+          "file": "otp-input/docs/events.md",
+          "hash": "1310701180264772440"
+        },
+        {
+          "file": "otp-input/docs/get-started.md",
+          "hash": "2355811357316990953"
+        },
+        {
+          "file": "otp-input/docs/index.md",
+          "hash": "898991364540216261"
+        },
+        {
+          "file": "otp-input/docs/layer-solid-dark.png",
+          "hash": "14960698455115702100"
+        },
+        {
+          "file": "otp-input/docs/layer-solid.png",
+          "hash": "17096011977933028059"
+        },
+        {
+          "file": "otp-input/docs/props.md",
+          "hash": "4392020635691337450"
+        },
+        {
+          "file": "otp-input/docs/recycle-dark.png",
+          "hash": "12800247716495140001"
+        },
+        {
+          "file": "otp-input/docs/recycle.png",
+          "hash": "10221039839496206773"
+        },
+        {
+          "file": "otp-input/docs/typescript-logo-dark.png",
+          "hash": "6327957380991664515"
+        },
+        {
+          "file": "otp-input/docs/typescript-logo.png",
+          "hash": "16202868179513312433"
+        },
+        {
+          "file": "otp-input/index.d.ts",
+          "hash": "6277828669190598786"
+        },
+        {
+          "file": "otp-input/index.ts",
+          "hash": "11122223744839201688"
+        },
+        {
+          "file": "otp-input/package.json",
+          "hash": "17863066901107623804",
+          "deps": [
+            "npm:vue",
+            "npm:@vitejs/plugin-vue",
+            "npm:@vue/runtime-core",
+            "npm:vite",
+            "npm:vitepress"
+          ]
+        },
+        {
+          "file": "otp-input/src/components/otp-input.vue",
+          "hash": "17968957753989055363"
+        },
+        {
+          "file": "otp-input/src/index.ts",
+          "hash": "15123728618065384754"
+        },
+        {
+          "file": "otp-input/src/styles/main.scss",
+          "hash": "11949867120967596230"
+        },
+        {
+          "file": "otp-input/types.ts",
+          "hash": "4998139029763253553"
+        },
+        {
+          "file": "otp-input/vite.config.ts",
+          "hash": "9000839623386052226"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/chunks/framework.B2kD9-Le.js",
+          "hash": "3941591684883416934"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/chunks/theme.Dekq9Kd_.js",
+          "hash": "2837260934471575468"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/demo.md.-ogQvKpS.lean.js",
+          "hash": "9668928828430551445"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
+          "hash": "2268099297404114829"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/props.md.BydSg6Zz.js",
+          "hash": "10774045848441371686"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
+          "hash": "15877694762730622634"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-roman-greek.BBVDIX6e.woff2",
+          "hash": "12225282773869548609"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/index.md.CPYy5-li.js",
+          "hash": "666544961850605951"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/events.md.CEkqGiRV.js",
+          "hash": "9822048972435809634"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
+          "hash": "8241952812200813355"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-italic-latin.C2AdPX0b.woff2",
+          "hash": "10829668166839501238"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-italic-cyrillic.By2_1cv3.woff2",
+          "hash": "17518006115323730802"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/index.md.CPYy5-li.lean.js",
+          "hash": "666544961850605951"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
+          "hash": "17927959312439819061"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-italic-greek.DJ8dCoTZ.woff2",
+          "hash": "15478754605072970185"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/props.md.BydSg6Zz.lean.js",
+          "hash": "10774045848441371686"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
+          "hash": "10886706858615268408"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
+          "hash": "4147970328684304313"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-italic-vietnamese.BSbpV94h.woff2",
+          "hash": "5439243213935570514"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/app.z2IaZFxs.js",
+          "hash": "12468074399166739197"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-roman-latin.Di8DUHzh.woff2",
+          "hash": "6650714724347801826"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
+          "hash": "7674416464885726785"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/demo.md.-ogQvKpS.js",
+          "hash": "9668928828430551445"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/events.md.CEkqGiRV.lean.js",
+          "hash": "9822048972435809634"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
+          "hash": "9802537721033087843"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/style.DgLxgSJl.css",
+          "hash": "10409315337690951648"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/get-started.md.DDZl6DKG.js",
+          "hash": "5432285780018580462"
+        },
+        {
+          "file": "otp-input/docs/.vitepress/dist/assets/get-started.md.DDZl6DKG.lean.js",
+          "hash": "8989127881226532001"
+        }
+      ]
+    }
+  }
+}

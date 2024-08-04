@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/index.js"),u={install:t=>{t.use(e.OtpInput)}};exports.OtpInput=e.OtpInput;exports.default=u;

@@ -1,0 +1,55 @@
+{
+  "targetDefaults": {
+    "test": {
+      "cache": true,
+      "dependsOn": [
+        "^test"
+      ],
+      "outputs": [
+        "{projectRoot}/build"
+      ]
+    },
+    "build": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    },
+    "docs:dev": {
+      "cache": true,
+      "dependsOn": [
+        "^docs:dev"
+      ]
+    },
+    "docs:build": {
+      "cache": true,
+      "dependsOn": [
+        "^docs:build"
+      ],
+      "outputs": [
+        "{projectRoot}/docs/dist"
+      ]
+    },
+    "docs:preview": {
+      "cache": true,
+      "dependsOn": [
+        "^docs:preview"
+      ]
+    },
+    "deploy": {
+      "cache": true,
+      "dependsOn": [
+        "^deploy"
+      ]
+    },
+    "dev": {
+      "cache": true,
+      "dependsOn": [
+        "^dev"
+      ]
+    }
+  }
+}
