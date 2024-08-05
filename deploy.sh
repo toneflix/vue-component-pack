@@ -48,17 +48,17 @@ cp -r "./" "$SCRIPT_DIR/docs/$package"
 cd "$SCRIPT_DIR/docs"
 cp "../.gitignore" "$SCRIPT_DIR/docs/.gitignore"
 
-# git init
-# git add -A
-# git commit -m "deploy $package docs"
+git init
+git add -A
+git commit -m "Deploy docs for $package"
 
-# git push -f git@github.com:toneflix/vue-component-pack main:gh-pages
-# git push -f git@github.com:toneflix/toneflix.github.io.git main:toneflix-vue-docs
+git push -f git@github.com:toneflix/vue-component-pack main:gh-pages
+rm -rf .git
 
 # cd -
 
-cd "$SCRIPT_DIR"
-git add .
-git status
-git commit -m "Deploy docs for $package"
-git push -f git@github.com:toneflix/vue-component-pack main:gh-pages
+# cd "$SCRIPT_DIR"
+# git add .
+# git status
+# git commit -m "Deploy docs for $package"
+# git push -f git@github.com:toneflix/vue-component-pack main:gh-pages

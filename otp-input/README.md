@@ -1,30 +1,16 @@
----
-outline: deep
----
+# Vue OTP Input
 
-# Get Started
-
-Setting up OTP Input is pretty simple and straightforward.
+## Simple customizable OTP input for Vue 3.
 
 ## Installation
 
-Install using your preferred package manager.
-
-::: code-group
-
-```bash [npm]
+```bash
 npm install @toneflix/otp-input
-```
-
-```bash [yarn]
+#or
 yarn add @toneflix/otp-input
-```
-
-```bash [pnpm]
+#or
 pnpm add @toneflix/otp-input
 ```
-
-:::
 
 ## Usage
 
@@ -34,7 +20,7 @@ You can make OTP Input available throughout your Vue project.
 
 **main.js or main.ts**
 
-```js:line-numbers{1,4}
+```js
 import '@toneflix/otp-input/dist/lib/style.css';
 import { createApp } from 'vue';
 import App from './app.vue';
@@ -51,7 +37,7 @@ You can also import the component in your Vue component.
 
 **SomeComponent.vue**
 
-```vue:line-numbers{2,3}
+```vue
 <script setup>
 import '@toneflix/otp-input/dist/lib/style.css';
 import { OtpInput } from '@toneflix/otp-input';
@@ -62,7 +48,7 @@ import { OtpInput } from '@toneflix/otp-input';
 
 **SomeComponent.vue**
 
-```vue:line-numbers{2,3}
+```vue
 <script setup lang="ts">
 import '@toneflix/otp-input/dist/lib/style.css';
 import { OtpInput } from '@toneflix/otp-input';
