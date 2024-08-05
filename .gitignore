@@ -5,3 +5,5 @@ node_modules/
 .yarn
 yarn.lock
 .DS_Store
+*/**/.vitepress/dist
+*/**/.vitepress/cache
