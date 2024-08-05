@@ -1458,3 +1458,11 @@
 [NX Daemon Server] - 2024-08-05T02:18:31.130Z - Time taken for 'hash changed files from watcher' 0.6465839999727905ms
 [NX Daemon Server] - 2024-08-05T02:18:31.135Z - Time taken for 'build-project-configs' 6.287499999627471ms
 [NX Daemon Server] - 2024-08-05T02:18:31.137Z - Time taken for 'total execution time for createProjectGraph()' 1.3565000002272427ms
+[NX Daemon Server] - 2024-08-05T02:20:15.479Z - [WATCHER]: .github/workflow was deleted
+[NX Daemon Server] - 2024-08-05T02:20:15.480Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-05T02:20:18.684Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-05T02:20:18.684Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-05T02:20:18.684Z - [REQUEST]: .github/workflow
+[NX Daemon Server] - 2024-08-05T02:20:18.686Z - Time taken for 'hash changed files from watcher' 0.49495899956673384ms
+[NX Daemon Server] - 2024-08-05T02:20:18.692Z - Time taken for 'build-project-configs' 5.521000000182539ms
+[NX Daemon Server] - 2024-08-05T02:20:18.693Z - Time taken for 'total execution time for createProjectGraph()' 1.332707999739796ms
