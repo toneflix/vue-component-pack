@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Vue OTP Input",
+  base: "/vue-component-pack/otp-input",
   description: "Vue OTP Input documentation",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

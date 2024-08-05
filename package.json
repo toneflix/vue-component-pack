@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": [
     "otp-input",
-    "runner"
+    "runner",
+    "docs"
   ],
   "scripts": {
     "build": "npx lerna run build",

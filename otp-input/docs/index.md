@@ -6,7 +6,7 @@ hero:
   name: 'Vue OTP Input'
   text: ''
   image:
-    src: /banner.png
+    src: /images/banner.png
     alt: Vue OTP Input
   tagline: Simple customizable OTP input for Vue 3.
   actions:
@@ -20,17 +20,17 @@ hero:
 features:
   - title: Multipurpose
     icon:
-      dark: /layer-solid-dark.png
-      light: /layer-solid.png
+      dark: /images/layer-solid-dark.png
+      light: /images/layer-solid.png
     details: Vue OTP input is intended for use with OTPs, transaction pins, and passwords.
   - title: Composition API and Typescript
     icon:
-      dark: /typescript-logo-dark.png
-      light: /typescript-logo.png
+      dark: /images/typescript-logo-dark.png
+      light: /images/typescript-logo.png
     details: Built on top of Vue composition API with full support for Typescript.
   - title: Reuseable
     icon:
-      dark: /recycle-dark.png
-      light: /recycle.png
+      dark: /images/recycle-dark.png
+      light: /images/recycle.png
     details: The component can be reused multiple times without problems on the same page.
 ---
