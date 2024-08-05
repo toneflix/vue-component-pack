@@ -60,6 +60,6 @@ rm -rf "$SCRIPT_DIR/docs/.git"
 # cd -
 
 cd "$SCRIPT_DIR"
-git add -A
+git add .
 git commit -m "deploy $package docs"
 git push -f git@github.com:toneflix/toneflix.github.io.git main:toneflix-vue-docs
