@@ -58,7 +58,7 @@ cp "../.gitignore" "$SCRIPT_DIR/docs/.gitignore"
 # cd -
 
 cd "$SCRIPT_DIR"
-# git add .
-# git status
-# git commit -m "deploy $package docs"
-# git push -f git@github.com:toneflix/vue-component-pack main:gh-pages
+git add .
+git status
+git commit -m "Deploy docs for $package"
+git push -f git@github.com:toneflix/vue-component-pack main:gh-pages
