@@ -1,6 +1,10 @@
 # Vue OTP Input
 
-## Simple customizable OTP input for Vue 3.
+Simple customizable OTP input for Vue 3.
+
+## Documentation
+
+Read the full documentation here: [https://toneflix.github.io/vue-component-pack/otp-input](https://toneflix.github.io/vue-component-pack/otp-input/)
 
 ## Installation
 

@@ -1,0 +1,100 @@
+0 silly argv {
+0 silly argv   _: [ 'version' ],
+0 silly argv   'conventional-commits': true,
+0 silly argv   conventionalCommits: true,
+0 silly argv   'force-publish': true,
+0 silly argv   forcePublish: true,
+0 silly argv   yes: true,
+0 silly argv   y: true,
+0 silly argv   lernaVersion: '8.1.7',
+0 silly argv   '$0': '/Users/ralph/Documents/Marx/Toneflix/vue-component-pack/node_modules/.bin/lerna'
+0 silly argv }
+1 notice cli v8.1.7
+2 verbose packageConfigs Resolving packages based on package.json "workspaces" configuration.
+3 verbose rootPath /Users/ralph/Documents/Marx/Toneflix/vue-component-pack
+4 silly createGitHubClient
+5 info current version 1.0.0
+6 silly isAnythingCommitted
+7 verbose isAnythingCommitted 1
+8 silly getCurrentBranch
+9 verbose currentBranch main
+10 silly remoteBranchExists
+11 silly isBehindUpstream
+12 silly isBehindUpstream main is behind origin/main by 0 commit(s) and ahead by 0
+13 silly hasTags
+14 verbose hasTags true
+15 silly git-describe.sync "1.0.2-0-g1665e07-dirty" => {"lastTagName":"1.0.2","lastVersion":"1.0.2","refCount":"0","sha":"1665e07","isDirty":true}
+16 warn force-publish all packages
+17 info Assuming all packages changed
+18 verbose updated @toneflix/otp-input
+19 verbose updated runner
+20 silly fixed for @toneflix/otp-input at /Users/ralph/Documents/Marx/Toneflix/vue-component-pack/otp-input
+21 verbose getChangelogConfig using preset "conventional-changelog-angular"
+22 silly npa Result {
+22 silly npa   type: 'range',
+22 silly npa   registry: true,
+22 silly npa   where: undefined,
+22 silly npa   raw: 'conventional-changelog-angular',
+22 silly npa   name: 'conventional-changelog-angular',
+22 silly npa   escapedName: 'conventional-changelog-angular',
+22 silly npa   scope: undefined,
+22 silly npa   rawSpec: '*',
+22 silly npa   saveSpec: null,
+22 silly npa   fetchSpec: '*',
+22 silly npa   gitRange: undefined,
+22 silly npa   gitCommittish: undefined,
+22 silly npa   gitSubdir: undefined,
+22 silly npa   hosted: undefined
+22 silly npa }
+23 verbose getChangelogConfig Attempting to resolve preset "conventional-changelog-angular"
+24 info getChangelogConfig Successfully resolved preset "conventional-changelog-angular"
+25 verbose fixed increment 1.0.2 by patch
+26 silly fixed for runner at /Users/ralph/Documents/Marx/Toneflix/vue-component-pack/runner
+27 verbose fixed increment 1.0.2 by patch
+28 info auto-confirmed
+29 info execute Creating releases...
+30 silly lifecycle No script for "preversion" in "toneflix", continuing
+31 silly lifecycle No script for "preversion" in "@toneflix/otp-input", continuing
+32 verbose version @toneflix/otp-input has no lockfile. Skipping lockfile update.
+33 silly lifecycle No script for "version" in "@toneflix/otp-input", continuing
+34 silly fixed for @toneflix/otp-input at /Users/ralph/Documents/Marx/Toneflix/vue-component-pack/otp-input
+35 silly fixed writing new entry: "## [1.0.3](https://github.com/toneflix/vue-component-pack/compare/1.0.2...1.0.3) (2024-08-05)\n\n**Note:** Version bump only for package @toneflix/otp-input\n\n\n\n"
+36 verbose fixed wrote /Users/ralph/Documents/Marx/Toneflix/vue-component-pack/otp-input/CHANGELOG.md
+37 silly lifecycle No script for "preversion" in "runner", continuing
+38 verbose version runner has no lockfile. Skipping lockfile update.
+39 silly lifecycle No script for "version" in "runner", continuing
+40 silly fixed for runner at /Users/ralph/Documents/Marx/Toneflix/vue-component-pack/runner
+41 silly fixed writing new entry: "## [1.0.3](https://github.com/toneflix/vue-component-pack/compare/1.0.2...1.0.3) (2024-08-05)\n\n**Note:** Version bump only for package runner\n\n\n\n"
+42 verbose fixed wrote /Users/ralph/Documents/Marx/Toneflix/vue-component-pack/runner/CHANGELOG.md
+43 silly root for toneflix at /Users/ralph/Documents/Marx/Toneflix/vue-component-pack
+44 silly root writing new entry: "## [1.0.3](https://github.com/toneflix/vue-component-pack/compare/1.0.2...1.0.3) (2024-08-05)\n\n**Note:** Version bump only for package toneflix\n\n\n\n"
+45 verbose root wrote /Users/ralph/Documents/Marx/Toneflix/vue-component-pack/CHANGELOG.md
+46 silly lifecycle No script for "version" in "toneflix", continuing
+47 silly version Successfully applied prettier to updated file: otp-input/package.json
+48 silly version Successfully applied prettier to updated file: otp-input/CHANGELOG.md
+49 silly version Successfully applied prettier to updated file: runner/package.json
+50 silly version Successfully applied prettier to updated file: runner/CHANGELOG.md
+51 silly version Successfully applied prettier to updated file: CHANGELOG.md
+52 silly version Successfully applied prettier to updated file: lerna.json
+53 silly gitAdd [
+53 silly gitAdd   'otp-input/package.json',
+53 silly gitAdd   'otp-input/CHANGELOG.md',
+53 silly gitAdd   'runner/package.json',
+53 silly gitAdd   'runner/CHANGELOG.md',
+53 silly gitAdd   'CHANGELOG.md',
+53 silly gitAdd   'lerna.json'
+53 silly gitAdd ]
+54 silly gitCommit Release 1.0.3
+55 verbose git [ 'commit', '-m', 'Release 1.0.3' ]
+56 silly gitTag 1.0.3 git tag %s -m %s
+57 verbose git [ 'tag', '1.0.3', '-m', '1.0.3' ]
+58 silly lifecycle No script for "postversion" in "@toneflix/otp-input", continuing
+59 silly lifecycle No script for "postversion" in "runner", continuing
+60 silly lifecycle No script for "postversion" in "toneflix", continuing
+61 info git Pushing tags...
+62 silly gitPush origin main
+63 silly parseGitRepo
+64 verbose git [ 'config', '--get', 'remote.origin.url' ]
+65 error HttpError: Resource not accessible by personal access token
+65 error     at /Users/ralph/Documents/Marx/Toneflix/vue-component-pack/node_modules/@octokit/request/dist-node/index.js:122:21
+65 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

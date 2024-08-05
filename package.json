@@ -12,7 +12,8 @@
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
     "fmt": "yarn eslint -- && yarn prettier -- --write --fix",
     "prettier": "prettier \"**/*.{css,html,vue,js,mjs,ts}\"",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "ci:publish:latest": "lerna version --conventional-commits --force-publish --yes && lerna exec -- npm publish --tag latest --provenance;"
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
