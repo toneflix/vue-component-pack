@@ -1,0 +1,7 @@
+node_modules/
+.nx/cache
+
+.nx/cache/
+.yarn
+yarn.lock
+.DS_Store
