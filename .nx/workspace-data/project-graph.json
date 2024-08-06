@@ -21,7 +21,7 @@
               "deploy"
             ]
           },
-          "description": ""
+          "description": "Simple customizable OTP input for Vue 3."
         },
         "targets": {
           "test": {

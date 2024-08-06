@@ -1,13 +1,13 @@
 <template>
   <div>
-    <OtpInput rounded v-model="otp" />
+    <OtpInput v-model="otp" rounded />
   </div>
 </template>
 
 <script setup lang="ts">
-import '@toneflix/otp-input/dist/lib/style.css';
-import { OtpInput } from '@toneflix/otp-input';
-import { ref } from 'vue';
+import '@toneflix/otp-input/dist/lib/style.css'
+import { OtpInput } from '@toneflix/otp-input'
+import { ref } from 'vue'
 
-const otp = ref('');
+const otp = ref('')
 </script>

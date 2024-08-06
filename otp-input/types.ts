@@ -4,48 +4,63 @@ type PublicProps = VNodeProps &
     AllowedComponentProps &
     ComponentCustomProps;
 
-export type GlobalComponentConstructor<Props = {}, Slots = {}> = {
-    new(): {
-        $props: PublicProps & Props;
-        $slots: Slots;
-    };
+
+export type HtmlInput = HTMLInputElement
+
+export type BorderLetter = 'b' | 't' | 'l' | 'r'
+
+export type CustomInputEvent = Event & {
+    target: HTMLInputElement
 }
 
-type VueClassObjectProp = {
-    [value: string]: any;
+export type CustomFocusEvent = FocusEvent & {
+    target: HTMLInputElement
+}
+
+export type CustomKeyboardEvent = KeyboardEvent & {
+    target: HTMLInputElement
+}
+
+export type GlobalComponentConstructor<Props = {}, Slots = {}> = new () => {
+    $props: PublicProps & Props;
+    $slots: Slots;
 };
 
-type VueClassProp = string | Array<VueClassProp> | VueClassObjectProp;
 
-export type OtpInputType = {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+type VueClassObjectProp = Record<string, any>;
+
+type VueClassProp = string | VueClassProp[] | VueClassObjectProp;
+
+export interface OtpInputType {
     /**
      * Title/Label on the input
      */
-    label?: string | undefined,
+    label?: string | undefined;
     /**
      * Class definitions to be applied to the label
      */
-    labelClass?: string | undefined,
+    labelClass?: string | undefined;
     /**
      * You can add extra class for the component root
      */
-    className?: VueClassProp | undefined,
+    className?: VueClassProp | undefined;
     /**
      * Class definitions to be attributed to the underlying inputs
      */
-    inputClass?: VueClassProp | undefined,
+    inputClass?: VueClassProp | undefined;
     /**
      * The primary color for the input boxes
      * 
      * @default #3880ff
      */
-    primaryColor?: string | undefined,
+    primaryColor?: string | undefined;
     /**
      * The secondary color for the input boxes, used when a box is focused
      * 
      * @default #3dc2ff
      */
-    secondaryColor?: string | undefined,
+    secondaryColor?: string | undefined;
     /**
      * The position of the component
      * [
@@ -57,13 +72,13 @@ export type OtpInputType = {
      * 
      * @default center
      */
-    position?: 'center' | 'justify' | 'left' | 'right' | undefined,
+    position?: 'center' | 'justify' | 'left' | 'right' | undefined;
     /**
      * Font size in CSS units, including unit name
      * 
      * @example 2px
      */
-    fontSize?: string | undefined,
+    fontSize?: string | undefined;
     /**
      * Visible component borders definition
      * [Top: t,
@@ -74,57 +89,57 @@ export type OtpInputType = {
      * @example bt
      * @default btlr
      */
-    borders?: 'b' | 't' | 'l' | 'r' | 'bt' | 'lr' | 'bl' | 'br' | 'tl' | 'tr' | 'btlr' | undefined,
+    borders?: 'b' | 't' | 'l' | 'r' | 'bt' | 'lr' | 'bl' | 'br' | 'tl' | 'tr' | 'btlr' | undefined;
     /**
      * Font Family that will be used by the component
      */
-    fontFamily?: string | undefined,
+    fontFamily?: string | undefined;
     /**
      * Gap between the boxes in CSS units, including unit name
      * 
      * @example 10px
      */
-    gap?: string | undefined,
+    gap?: string | undefined;
     /**
      * Number of input boxes to show
      * 
      * @example 6
      */
-    inputsCount?: number | undefined,
+    inputsCount?: number | undefined;
     /**
      * Width of the input borders in CSS units, including unit name
      * 
      * @example 2px
      */
-    borderSize?: string | undefined,
+    borderSize?: string | undefined;
     /**
      * Width of the input boxes
      * 
      * @example 56
      */
-    fieldWidth?: number | undefined,
+    fieldWidth?: number | undefined;
     /**
      * Height of the input boxes
      * 
      * @example 56
      */
-    fieldHeight?: number | undefined,
+    fieldHeight?: number | undefined;
     /**
      * Wether the component should be put in disabled state
      */
-    disabled?: boolean | null | undefined,
+    disabled?: boolean | null | undefined;
     /**
      * Wether the component should require completion
      */
-    required?: boolean | null | undefined,
+    required?: boolean | null | undefined;
     /**
      * Adds rounded borders to the component input boxes
      */
-    rounded?: boolean | null | undefined,
+    rounded?: boolean | null | undefined;
     /**
      * Indicates if the component should be put in error state
      */
-    hasError?: boolean | null | undefined,
+    hasError?: boolean | null | undefined;
     /**
      * Validation error message (gets displayed only if 'hasError' is set to 'true')
      */

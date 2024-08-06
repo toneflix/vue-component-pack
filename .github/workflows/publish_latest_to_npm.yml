@@ -25,12 +25,12 @@ jobs:
           token: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
           registry-url: https://registry.npmjs.org/
-          cache: npm
+          cache: yarn
           cache-dependency-path: '**/package.json'
       - run: |
-          npm install
+          yarn
       - name: Version & Publish
         env:
           GH_TOKEN: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}

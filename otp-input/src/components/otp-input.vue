@@ -9,16 +9,13 @@
       '--ci-border-width': borderSize,
       '--ci-border-radius': rounded ? '5px' : undefined,
       '--ci-color-primary': primaryColor,
-      '--ci-color-secondary': secondaryColor,
+      '--ci-color-secondary': secondaryColor
     }"
   >
     <slot>
       <p class="label" :class="labelClass" v-if="label">{{ label }}</p>
     </slot>
-    <div
-      class="code-input font-alatsi no-border"
-      :class="[parseBorders(), 'position-' + position]"
-    >
+    <div class="code-input font-alatsi no-border" :class="[parseBorders(), 'position-' + position]">
       <template v-for="(v, index) in inputValues">
         <input
           class="
@@ -37,7 +34,7 @@
           :class="inputClass"
           :style="{
             width: `${fieldWidth}px`,
-            height: `${fieldHeight}px`,
+            height: `${fieldHeight}px`
           }"
           :autoFocus="autoFocus && index === autoFocusIndex && !disabled"
           :value="v"
@@ -65,32 +62,23 @@
 </template>
 
 <script setup lang="ts">
-import type { OtpInputType } from '../../types';
-import '../styles/main.scss';
-import { watch } from 'vue';
-import { ref, onBeforeUpdate } from 'vue';
-
-type HtmlInput = HTMLInputElement;
-
-type BorderLetter = 'b' | 't' | 'l' | 'r';
-
-type CustomInputEvent = Event & {
-  target: HTMLInputElement;
-};
-
-type CustomFocusEvent = FocusEvent & {
-  target: HTMLInputElement;
-};
-
-type CustomKeyboardEvent = KeyboardEvent & {
-  target: HTMLInputElement;
-};
+import {
+  OtpInputType,
+  HtmlInput,
+  BorderLetter,
+  CustomInputEvent,
+  CustomFocusEvent,
+  CustomKeyboardEvent
+} from '../../types'
+import '../styles/main.scss'
+import { watch } from 'vue'
+import { ref, onBeforeUpdate } from 'vue'
 
 defineOptions({
-  name: 'otp-input',
-});
+  name: 'otp-input'
+})
 
-const emit = defineEmits(['change', 'complete', 'update:modelValue']);
+const emit = defineEmits(['change', 'complete', 'update:modelValue'])
 
 const props = withDefaults(defineProps<OtpInputType>(), {
   position: 'center',
@@ -100,8 +88,8 @@ const props = withDefaults(defineProps<OtpInputType>(), {
   fieldWidth: 56,
   fieldHeight: 56,
   primaryColor: '#3880ff',
-  secondaryColor: '#3dc2ff',
-});
+  secondaryColor: '#3dc2ff'
+})
 
 const KEY_CODE = {
   backspace: 'Backspace',
@@ -109,188 +97,184 @@ const KEY_CODE = {
   left: 'ArrowLeft',
   up: 'ArrowUp',
   right: 'ArrowRight',
-  down: 'ArrowDown',
-};
+  down: 'ArrowDown'
+}
 
-const iRefs = ref<number[]>([]);
-const inputValues = ref<string[]>([]);
-const inputsRef = ref<HtmlInput[]>([]);
-const autoFocusIndex = ref(0);
-const autoFocus = true;
+const iRefs = ref<number[]>([])
+const inputValues = ref<string[]>([])
+const inputsRef = ref<HtmlInput[]>([])
+const autoFocusIndex = ref(0)
+const autoFocus = true
 
 const initVals = () => {
-  let vals;
+  let vals: string[]
   if (inputValues.value && inputValues.value.length) {
-    vals = [];
+    vals = []
     for (let i = 0; i < props.inputsCount; i++) {
-      vals.push(inputValues.value[i] || '');
+      vals.push(inputValues.value[i] || '')
     }
     autoFocusIndex.value =
-      inputValues.value.length >= props.inputsCount
-        ? 0
-        : inputValues.value.length;
+      inputValues.value.length >= props.inputsCount ? 0 : inputValues.value.length
   } else {
-    vals = Array(props.inputsCount).fill('');
+    vals = Array(props.inputsCount).fill('')
   }
-  iRefs.value = [];
+  iRefs.value = []
   for (let i = 0; i < props.inputsCount; i++) {
-    iRefs.value.push(i + 1);
+    iRefs.value.push(i + 1)
   }
-  inputValues.value = vals;
-};
+  inputValues.value = vals
+}
 
 const onFocus = (e: CustomFocusEvent, prevIndex: number) => {
-  const prev = inputsRef.value[prevIndex];
+  const prev = inputsRef.value[prevIndex]
   if (prev && prev.value === '') {
-    prev.focus();
+    prev.focus()
   } else {
-    e.target.select();
+    e.target.select()
   }
-};
+}
 
 const onValueChange = (e: CustomInputEvent, index: number) => {
-  e.target.value = e.target.value.replace(/[^\d]/gi, '');
-  // this.handleKeys[index] = false;
+  e.target.value = e.target.value.replace(/[^\d]/gi, '')
   if (e.target.value === '' || !e.target.validity.valid) {
-    return;
+    return
   }
-  let next;
-  const value = e.target.value;
-  inputValues.value = Object.assign([], inputValues.value);
+  let next: number
+  const value = e.target.value
+  inputValues.value = Object.assign([], inputValues.value)
   if (value.length > 1) {
-    let nextIndex = value.length + index - 1;
+    let nextIndex = value.length + index - 1
     if (nextIndex >= props.inputsCount) {
-      nextIndex = props.inputsCount - 1;
+      nextIndex = props.inputsCount - 1
     }
-    next = iRefs.value[nextIndex];
-    const split = value.split('');
+
+    next = iRefs.value[nextIndex]
+
+    const split = value.split('')
     split.forEach((item, i) => {
-      const cursor = index + i;
+      const cursor = index + i
       if (cursor < props.inputsCount) {
-        inputValues.value[cursor] = item;
+        inputValues.value[cursor] = item
       }
-    });
+    })
   } else {
-    next = iRefs.value[index + 1];
-    inputValues.value[index] = value;
+    next = iRefs.value[index + 1]
+    inputValues.value[index] = value
   }
   if (next) {
-    const element = inputsRef.value[next];
-    element.focus();
-    element.select();
+    const element = inputsRef.value[next]
+    element.focus()
+    element.select()
   }
-  triggerChange(inputValues.value);
-};
+  triggerChange(inputValues.value)
+}
 
 const onKeyDown = (e: CustomKeyboardEvent, index: number) => {
-  const prevIndex = index - 1;
-  const nextIndex = index + 1;
-  const prev = iRefs.value[prevIndex];
-  const next = iRefs.value[nextIndex];
+  const prevIndex = index - 1
+  const nextIndex = index + 1
+  const prev = iRefs.value[prevIndex]
+  const next = iRefs.value[nextIndex]
 
   const deleteKeyHandler = (e: CustomKeyboardEvent) => {
-    e.preventDefault();
-    const vals = [...inputValues.value];
+    e.preventDefault()
+    const vals = [...inputValues.value]
     if (inputValues.value[index]) {
-      vals[index] = '';
-      inputValues.value = vals;
-      triggerChange(vals);
+      vals[index] = ''
+      inputValues.value = vals
+      triggerChange(vals)
     } else if (next) {
-      vals[nextIndex] = '';
-      inputsRef.value[next].focus();
-      inputValues.value = vals;
-      triggerChange(vals);
+      vals[nextIndex] = ''
+      inputsRef.value[next].focus()
+      inputValues.value = vals
+      triggerChange(vals)
     }
-  };
+  }
 
   switch (e.key) {
     case KEY_CODE.backspace: {
-      e.preventDefault();
-      const vals = [...inputValues.value];
+      e.preventDefault()
+      const vals = [...inputValues.value]
       if (inputValues.value[index]) {
-        vals[index] = '';
-        inputValues.value = vals;
-        triggerChange(vals);
+        vals[index] = ''
+        inputValues.value = vals
+        triggerChange(vals)
       } else if (prev) {
-        vals[prevIndex] = '';
-        inputsRef.value[prev].focus();
-        inputValues.value = vals;
-        triggerChange(vals);
+        vals[prevIndex] = ''
+        inputsRef.value[prev].focus()
+        inputValues.value = vals
+        triggerChange(vals)
       }
-      break;
+      break
     }
     case KEY_CODE.delete: {
-      deleteKeyHandler(e);
-      break;
+      deleteKeyHandler(e)
+      break
     }
     case KEY_CODE.left:
-      e.preventDefault();
+      e.preventDefault()
       if (prev) {
-        inputsRef.value[prev].focus();
+        inputsRef.value[prev].focus()
       }
-      break;
+      break
     case KEY_CODE.right:
-      e.preventDefault();
+      e.preventDefault()
       if (next) {
-        inputsRef.value[next].focus();
+        inputsRef.value[next].focus()
       }
-      break;
+      break
     case KEY_CODE.up:
     case KEY_CODE.down:
-      e.preventDefault();
-      break;
+      e.preventDefault()
+      break
     default:
-      // this.handleKeys[index] = true;
-      break;
+      break
   }
-};
+}
 
 const triggerChange = (values: string[]) => {
-  const value = values.join('');
+  const value = values.join('')
 
-  emit('change', value);
-  emit('update:modelValue', value);
+  emit('change', value)
+  emit('update:modelValue', value)
 
   if (value.length >= props.inputsCount) {
-    emit('complete', value);
-    inputsRef.value[value.length]?.blur();
+    emit('complete', value)
+    inputsRef.value[value.length]?.blur()
   }
-};
+}
 
 const parseBorders = () => {
   const defaultBorders: Record<BorderLetter, string> = {
     b: 'border-b',
     t: 'border-t',
     l: 'border-l',
-    r: 'border-r',
-  };
+    r: 'border-r'
+  }
 
   // Split each the letters in the string
-  const letters: BorderLetter[] = props.borders.split(
-    ''
-  ) as unknown as BorderLetter[];
+  const letters: BorderLetter[] = props.borders.split('') as unknown as BorderLetter[]
 
   // Map the letters to the actual borders
-  const mapped = letters.map((letter) => defaultBorders[letter]);
+  const mapped = letters.map((letter) => defaultBorders[letter])
 
   // Join the mapped borders with a space
-  return mapped.join(' ');
-};
+  return mapped.join(' ')
+}
 watch(
   () => props.modelValue,
   (v) => {
     for (let i = 0; i < props.inputsCount; i++) {
-      inputValues.value[i] = v[i] || '';
+      inputValues.value[i] = v[i] || ''
     }
   },
   {
-    immediate: true,
+    immediate: true
   }
-);
+)
 
-initVals();
+initVals()
 
 onBeforeUpdate(() => {
-  inputsRef.value = [];
-});
+  inputsRef.value = []
+})
 </script>
