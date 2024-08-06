@@ -28,7 +28,7 @@ export type GlobalComponentConstructor<Props = {}, Slots = {}> = new () => {
 
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-type VueClassObjectProp = Record<string, any>;
+type VueClassObjectProp = Record<string, any>
 
 type VueClassProp = string | VueClassProp[] | VueClassObjectProp;
 
@@ -148,4 +148,4 @@ export interface OtpInputType {
      * Model of the component; Must be a string; Either use this property (along with a listener for 'update:modelValue' event) OR use v-model directive
      */
     modelValue: string;
-};
+}
