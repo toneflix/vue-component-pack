@@ -1819,3 +1819,16 @@
 [NX Daemon Server] - 2024-08-05T03:32:25.379Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
 [NX Daemon Server] - 2024-08-05T03:32:25.379Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
 [NX Daemon Server] - 2024-08-05T03:32:25.379Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX Daemon Server] - 2024-08-06T20:45:21.299Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-08-06T20:45:21.307Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-08-06T20:45:21.308Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-06T20:45:21.309Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-06T20:45:21.311Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-06T20:45:21.312Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2024-08-06T20:45:21.313Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2024-08-06T20:45:21.313Z - Handled GLOB. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2024-08-06T20:45:21.936Z - [REQUEST]: Responding to the client. handleNxWorkspaceFiles
+[NX Daemon Server] - 2024-08-06T20:45:21.936Z - Done responding to the client handleNxWorkspaceFiles
+[NX Daemon Server] - 2024-08-06T20:45:21.936Z - Handled GET_NX_WORKSPACE_FILES. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-08-06T20:45:21.954Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-06T20:45:22.102Z - [WATCHER]: Processing file changes in outputs
