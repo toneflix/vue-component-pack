@@ -32,9 +32,8 @@ jobs:
           scope: '@toneflix'
       - name: Create NPMRC
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.TONEFLIX_RELEASE_TOKEN }}" >> ~/.npmrc
-          echo "@toneflix:registry=https://npm.pkg.github.com" >> ~/.npmrc
-          echo 'registry "https://registry.yarnpkg.com"' >> ~/.yarnrc
+          echo "npmAuthToken: ${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+          echo "npmPublishRegistry: https://registry.npmjs.org" >> ~/.npmrc
       - run: |
           corepack enable
       - name: Run install
@@ -48,11 +47,11 @@ jobs:
         with:
           cmd: build # will run `yarn build:prod` command
       - name: Version & Publish
-        env:
-          GH_TOKEN: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config user.name "Github Workflow (on behalf of ${{ github.actor }})"
           git config user.email "users.noreply.github.com"
           yarn npm whoami
           yarn run ci:publish:latest
+        env:
+          GH_TOKEN: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

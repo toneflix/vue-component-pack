@@ -1,6 +1,5 @@
 {
   "name": "toneflix",
-  "private": false,
   "workspaces": [
     "otp-input",
     "runner",
