@@ -1,4 +1,4 @@
-name: Publish Latest to NPM
+name: Publish Latest to NPM via Yarn
 
 on:
   workflow_call:
