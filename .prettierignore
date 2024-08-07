@@ -7,4 +7,6 @@ yarn.lock
 .DS_Store
 */**/.vitepress
 */**/dist
+*.mjs
+.pnp.loader.mjs
 /docs
