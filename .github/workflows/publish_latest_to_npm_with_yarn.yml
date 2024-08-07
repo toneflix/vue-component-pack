@@ -27,6 +27,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+      - run: |
+          corepack enable
+          pnpm --vedd rsion
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
