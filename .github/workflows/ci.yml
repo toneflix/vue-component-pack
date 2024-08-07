@@ -21,11 +21,17 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Set Node.js 22.x
+        uses: actions/setup-node@v4
         with:
           node-version: 22
       - run: |
-          npm install
-      - name: Version & Publish
-        run: |
-          yarn lint
+          corepack enable
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Lint
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint # will run `yarn lint` command
