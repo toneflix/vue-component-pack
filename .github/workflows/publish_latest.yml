@@ -1,0 +1,15 @@
+name: Publish Latest
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+  id-token: write
+  packages: write
+
+jobs:
+  publish-npm-latest:
+    uses: ./.github/workflows/publish_latest_to_npm_with_yarn.yml
+    secrets:
+      TONEFLIX_RELEASE_TOKEN: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
