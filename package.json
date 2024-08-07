@@ -1,6 +1,6 @@
 {
   "name": "toneflix",
-  "private": true,
+  "private": false,
   "workspaces": [
     "otp-input",
     "runner",
@@ -13,7 +13,7 @@
     "fmt": "yarn eslint && yarn prettier --write",
     "prettier": "prettier \"**/*.{css,html,vue,js,mjs,ts}\"",
     "eslint": "eslint . --ignore-pattern \"**/docs\"",
-    "ci:publish:latest": "lerna version --conventional-commits --force-publish --yes && lerna exec -- npm publish --tag latest --provenance;"
+    "ci:publish:latest": "lerna version --conventional-commits --force-publish --yes && lerna exec -- yarn npm publish --tag latest --provenance;"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
