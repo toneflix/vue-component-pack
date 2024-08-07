@@ -32,7 +32,7 @@ jobs:
           scope: '@toneflix'
       - name: Create NPMRC
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGES_TOKEN }}" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.TONEFLIX_RELEASE_TOKEN }}" >> ~/.npmrc
           echo "@toneflix:registry=https://npm.pkg.github.com" >> ~/.npmrc
           echo 'registry "https://registry.yarnpkg.com"' >> ~/.yarnrc
       - run: |
