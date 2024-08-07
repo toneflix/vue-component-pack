@@ -23,7 +23,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
-      - name: Set Node.js 16.x
+      - name: Set Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22
