@@ -27,13 +27,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: https://npm.pkg.github.com
+          registry-url: https://npm.pkg.github.com/
           always-auth: true
           scope: '@toneflix'
+      - name: Create YARNRC
+        run: |
+          echo "npmAuthToken: ${{ secrets.NPM_TOKEN }}" >> ~/.yarnrc.yml
+          echo "npmPublishRegistry: https://npm.pkg.github.com" >> ~/.yarnrc.yml
       - name: Create NPMRC
         run: |
-          echo "npmAuthToken: ${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-          echo "npmPublishRegistry: https://npm.pkg.github.com" >> ~/.npmrc
+          echo "registry=https://registry.yarnpkg.com/" >> ~/.npmrc
+          echo "@<toneflix>:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.TONEFLIX_RELEASE_TOKEN }}" >> ~/.npmrc
+          echo "always-auth=true" >> ~/.npmrc
       - run: |
           corepack enable
       - name: Run install

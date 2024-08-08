@@ -1927,3 +1927,9 @@
 [NX Daemon Server] - 2024-08-07T07:24:05.648Z - Time taken for 'hash changed files from watcher' 0.5521250000456348ms
 [NX Daemon Server] - 2024-08-07T07:24:05.655Z - Time taken for 'build-project-configs' 9.53816699993331ms
 [NX Daemon Server] - 2024-08-07T07:24:05.669Z - Time taken for 'total execution time for createProjectGraph()' 10.898417000076734ms
+[NX Daemon Server] - 2024-08-07T10:44:37.717Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-08-07T10:44:37.723Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-08-07T10:44:37.723Z - Server stopped because: "10800000ms of inactivity"
+
+> NX runtime error err=cannot send event from fs watcher: sending into a closed channel
+
