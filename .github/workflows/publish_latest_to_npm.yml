@@ -23,12 +23,20 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
-      - uses: actions/setup-node@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+
+      - name: Set Node.js 22.x
+        uses: actions/setup-node@v4
         with:
-          node-version: 22
           registry-url: https://registry.npmjs.org/
-      - run: |
-          pnpm install
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Version & Publish
         env:
           GH_TOKEN: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
