@@ -37,6 +37,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Add token to NPMRC
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.TONEFLIX_RELEASE_TOKEN }}" >> ~/.npmrc
+
       - name: Version & Publish
         env:
           GH_TOKEN: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
