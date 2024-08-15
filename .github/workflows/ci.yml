@@ -26,12 +26,7 @@ jobs:
         with:
           node-version: 22
       - run: |
-          corepack enable
-      - name: Run install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
+          pnpm install
       - name: Lint
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: lint # will run `yarn lint` command
+        run: |
+          pnpm run install
