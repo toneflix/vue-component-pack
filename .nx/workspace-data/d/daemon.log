@@ -2200,3 +2200,19 @@
 [NX Daemon Server] - 2024-08-15T11:01:40.200Z - Time taken for 'hash changed files from watcher' 0.5091659999452531ms
 [NX Daemon Server] - 2024-08-15T11:01:40.214Z - Time taken for 'build-project-configs' 13.291207999922335ms
 [NX Daemon Server] - 2024-08-15T11:01:40.231Z - Time taken for 'total execution time for createProjectGraph()' 13.734750000294298ms
+[NX Daemon Server] - 2024-08-15T11:09:53.094Z - [WATCHER]: .npmrc was created or restored
+[NX Daemon Server] - 2024-08-15T11:09:53.107Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T11:09:53.212Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T11:09:53.213Z - [REQUEST]: .npmrc
+[NX Daemon Server] - 2024-08-15T11:09:53.213Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T11:09:53.239Z - Time taken for 'hash changed files from watcher' 3.01845799991861ms
+[NX Daemon Server] - 2024-08-15T11:09:53.291Z - Time taken for 'build-project-configs' 56.410957999993116ms
+[NX Daemon Server] - 2024-08-15T11:09:53.323Z - Time taken for 'total execution time for createProjectGraph()' 28.110208000056446ms
+[NX Daemon Server] - 2024-08-15T11:10:01.779Z - [WATCHER]: .npmrc was modified
+[NX Daemon Server] - 2024-08-15T11:10:01.779Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T11:10:01.981Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T11:10:01.981Z - [REQUEST]: .npmrc
+[NX Daemon Server] - 2024-08-15T11:10:01.981Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T11:10:01.985Z - Time taken for 'hash changed files from watcher' 0.2539579998701811ms
+[NX Daemon Server] - 2024-08-15T11:10:01.994Z - Time taken for 'build-project-configs' 8.880708999931812ms
+[NX Daemon Server] - 2024-08-15T11:10:02.008Z - Time taken for 'total execution time for createProjectGraph()' 10.459334000013769ms
