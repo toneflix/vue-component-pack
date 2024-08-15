@@ -56,22 +56,6 @@ importers:
         specifier: ^3.1
         version: 3.4.38(typescript@5.5.4)
 
-  runner:
-    dependencies:
-      '@toneflix/otp-input':
-        specifier: workspace:^
-        version: link:../packages/otp-input
-      vue:
-        specifier: ^3.1
-        version: 3.4.38(typescript@5.5.4)
-    devDependencies:
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.2
-        version: 5.1.2(vite@5.4.0(sass@1.77.8))(vue@3.4.38(typescript@5.5.4))
-      vite:
-        specifier: ^5.3.5
-        version: 5.4.0(sass@1.77.8)
-
 packages:
   '@algolia/autocomplete-core@1.9.3':
     resolution:
