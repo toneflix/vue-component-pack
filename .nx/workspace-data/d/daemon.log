@@ -2110,3 +2110,29 @@
 [NX Daemon Server] - 2024-08-15T10:45:51.336Z - Time taken for 'hash changed files from watcher' 0.14733299985527992ms
 [NX Daemon Server] - 2024-08-15T10:45:51.345Z - Time taken for 'build-project-configs' 7.163417000090703ms
 [NX Daemon Server] - 2024-08-15T10:45:51.356Z - Time taken for 'total execution time for createProjectGraph()' 8.650209000101313ms
+[NX Daemon Server] - 2024-08-15T10:47:57.598Z - [WATCHER]: _tmp_4357_39135a1134681e2a146259fb952b0648 was deleted
+[NX Daemon Server] - 2024-08-15T10:47:57.599Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:48:04.003Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:48:04.003Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:48:04.004Z - [REQUEST]: _tmp_4357_39135a1134681e2a146259fb952b0648
+[NX Daemon Server] - 2024-08-15T10:48:04.007Z - Time taken for 'hash changed files from watcher' 0.413082999875769ms
+[NX Daemon Server] - 2024-08-15T10:48:04.027Z - Time taken for 'build-project-configs' 18.50866699987091ms
+[NX Daemon Server] - 2024-08-15T10:48:04.045Z - Time taken for 'total execution time for createProjectGraph()' 14.402416999917477ms
+[NX Daemon Server] - 2024-08-15T10:49:04.657Z - [WATCHER]: .github/workflows/ci.yml was modified
+[NX Daemon Server] - 2024-08-15T10:49:04.657Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:49:11.061Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:49:11.061Z - [REQUEST]: .github/workflows/ci.yml
+[NX Daemon Server] - 2024-08-15T10:49:11.061Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:49:11.063Z - Time taken for 'hash changed files from watcher' 0.44099999964237213ms
+[NX Daemon Server] - 2024-08-15T10:49:11.079Z - Time taken for 'build-project-configs' 13.187791999895126ms
+[NX Daemon Server] - 2024-08-15T10:49:11.097Z - Time taken for 'total execution time for createProjectGraph()' 14.679250000044703ms
+[NX Daemon Server] - 2024-08-15T10:49:41.004Z - [WATCHER]: .github/workflows/ci.yml was modified
+[NX Daemon Server] - 2024-08-15T10:49:41.004Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:49:46.981Z - [WATCHER]: .github/workflows/ci.yml was modified
+[NX Daemon Server] - 2024-08-15T10:49:46.981Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:49:47.407Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:49:47.408Z - [REQUEST]: .github/workflows/ci.yml
+[NX Daemon Server] - 2024-08-15T10:49:47.408Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:49:47.410Z - Time taken for 'hash changed files from watcher' 0.5010410002432764ms
+[NX Daemon Server] - 2024-08-15T10:49:47.427Z - Time taken for 'build-project-configs' 14.751959000248462ms
+[NX Daemon Server] - 2024-08-15T10:49:47.444Z - Time taken for 'total execution time for createProjectGraph()' 13.967416000086814ms
