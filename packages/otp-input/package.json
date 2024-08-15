@@ -7,7 +7,7 @@
   "module": "dist/es/index.mjs",
   "type": "module",
   "repository": {
-    "url": "https://github.com/toneflix/vue-component-pack",
+    "url": "https://github.com/toneflix/vue-component-pack"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
