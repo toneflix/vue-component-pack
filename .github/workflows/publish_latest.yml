@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   publish-npm-latest:
-    uses: ./.github/workflows/publish_latest_to_npm_with_yarn.yml
+    uses: ./.github/workflows/publish_latest_to_npm.yml
     secrets:
       TONEFLIX_RELEASE_TOKEN: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
