@@ -2136,3 +2136,19 @@
 [NX Daemon Server] - 2024-08-15T10:49:47.410Z - Time taken for 'hash changed files from watcher' 0.5010410002432764ms
 [NX Daemon Server] - 2024-08-15T10:49:47.427Z - Time taken for 'build-project-configs' 14.751959000248462ms
 [NX Daemon Server] - 2024-08-15T10:49:47.444Z - Time taken for 'total execution time for createProjectGraph()' 13.967416000086814ms
+[NX Daemon Server] - 2024-08-15T10:51:07.934Z - [WATCHER]: .github/workflows/ci.yml was modified
+[NX Daemon Server] - 2024-08-15T10:51:07.935Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:51:14.338Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:51:14.338Z - [REQUEST]: .github/workflows/ci.yml
+[NX Daemon Server] - 2024-08-15T10:51:14.338Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:51:14.341Z - Time taken for 'hash changed files from watcher' 0.43679200019687414ms
+[NX Daemon Server] - 2024-08-15T10:51:14.358Z - Time taken for 'build-project-configs' 14.43016600003466ms
+[NX Daemon Server] - 2024-08-15T10:51:14.378Z - Time taken for 'total execution time for createProjectGraph()' 16.61337499972433ms
+[NX Daemon Server] - 2024-08-15T10:51:18.165Z - [WATCHER]: .github/workflows/ci.yml was modified
+[NX Daemon Server] - 2024-08-15T10:51:18.166Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:51:24.568Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:51:24.569Z - [REQUEST]: .github/workflows/ci.yml
+[NX Daemon Server] - 2024-08-15T10:51:24.569Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:51:24.572Z - Time taken for 'hash changed files from watcher' 0.6462079999037087ms
+[NX Daemon Server] - 2024-08-15T10:51:24.587Z - Time taken for 'build-project-configs' 13.185666999779642ms
+[NX Daemon Server] - 2024-08-15T10:51:24.608Z - Time taken for 'total execution time for createProjectGraph()' 15.485415999777615ms
