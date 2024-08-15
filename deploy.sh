@@ -14,6 +14,22 @@ check() {
     fi
 }
 
+help() {
+    echo ""
+    echo "Usage: $0 [<package>]"
+    echo ""
+    exit
+}
+
+# Loop through the arguments and perform a related action
+for opt in "$@"; do
+    case $opt in
+    -h)
+        help
+        ;;
+    esac
+done
+
 if [ $1 ]; then
     package="$1"
     check
@@ -39,9 +55,9 @@ fi
 
 set -e
 
-cd "$SCRIPT_DIR/$package"
-yarn docs:build
-cp -r "$SCRIPT_DIR/$package/docs/images" "$SCRIPT_DIR/$package/docs/.vitepress/dist/images"
+cd "$SCRIPT_DIR/packages/$package"
+pnpm run docs:build
+cp -r "$SCRIPT_DIR/packages/$package/docs/images" "$SCRIPT_DIR/packages/$package/docs/.vitepress/dist/images"
 cd "docs/.vitepress/dist"
 rm -rf "$SCRIPT_DIR/docs/$package"
 cp -r "./" "$SCRIPT_DIR/docs/$package"
