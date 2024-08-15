@@ -2216,3 +2216,7 @@
 [NX Daemon Server] - 2024-08-15T11:10:01.985Z - Time taken for 'hash changed files from watcher' 0.2539579998701811ms
 [NX Daemon Server] - 2024-08-15T11:10:01.994Z - Time taken for 'build-project-configs' 8.880708999931812ms
 [NX Daemon Server] - 2024-08-15T11:10:02.008Z - Time taken for 'total execution time for createProjectGraph()' 10.459334000013769ms
+[NX Daemon Server] - 2024-08-15T11:12:50.820Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T11:12:50.820Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-08-15T11:12:50.820Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-08-15T11:12:50.820Z - Server stopped because: "LOCK_FILES_CHANGED"
