@@ -1,18 +1,19 @@
 {
-  "name": "toneflix",
-  "workspaces": [
-    "otp-input",
-    "runner",
-    "docs"
-  ],
+  "name": "@toneflix/vue-components",
+  "description": "Collection of essential Vue Components",
+  "author": "Legacy<https://github.com/3m1n3nc3>",
+  "license": "MIT",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.7.1",
   "scripts": {
     "build": "lerna run build",
     "preview": "lerna run dev --scope=runner --",
-    "lint": "yarn eslint && yarn prettier --check",
-    "fmt": "yarn eslint && yarn prettier --write",
+    "lint": "pnpm run eslint && pnpm run prettier --check",
+    "fmt": "pnpm run eslint && pnpm run prettier --write",
     "prettier": "prettier \"**/*.{css,html,vue,js,mjs,ts}\"",
     "eslint": "eslint . --ignore-pattern \"**/docs\"",
-    "ci:publish:latest": "lerna version --conventional-commits --force-publish --yes && lerna exec -- yarn npm publish --tag latest --provenance;"
+    "ci:publish:latest": "lerna version --conventional-commits --force-publish --yes && lerna exec -- pnpm publish --tag latest --provenance;"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
@@ -25,6 +26,5 @@
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1",
     "vue": "^3.1"
-  },
-  "packageManager": "yarn@4.4.0"
+  }
 }

@@ -1933,3 +1933,64 @@
 
 > NX runtime error err=cannot send event from fs watcher: sending into a closed channel
 
+[NX Daemon Server] - 2024-08-15T10:14:06.074Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-08-15T10:14:06.077Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-08-15T10:14:06.082Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-15T10:14:06.083Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-15T10:14:06.084Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-15T10:14:06.084Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-15T10:14:06.209Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:14:06.209Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:14:06.209Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:14:06.213Z - Time taken for 'loadNxPlugins' 123.649708ms
+ WARN  The "workspaces" field in package.json is not supported by pnpm. Create a "pnpm-workspace.yaml" file instead.
+[NX Daemon Server] - 2024-08-15T10:14:06.483Z - Time taken for 'build-project-configs' 270.29312500000003ms
+[NX Daemon Server] - 2024-08-15T10:14:06.505Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-15T10:14:06.505Z - Time taken for 'total for creating and serializing project graph' 420.40820800000006ms
+[NX Daemon Server] - 2024-08-15T10:14:06.508Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-15T10:14:06.508Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 420. Response time: 4.
+[NX Daemon Server] - 2024-08-15T10:14:06.511Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-08-15T10:14:06.511Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-08-15T10:14:06.511Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-08-15T10:14:06.524Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-15T10:14:06.524Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-15T10:14:06.524Z - Time taken for 'total for creating and serializing project graph' 0.16020800000001145ms
+[NX Daemon Server] - 2024-08-15T10:14:06.525Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-15T10:14:06.525Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-08-15T10:14:06.535Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-08-15T10:14:06.535Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-08-15T10:14:06.535Z - Handled HASH_TASKS. Handling time: 5. Response time: 0.
+[NX Daemon Server] - 2024-08-15T10:14:19.713Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2024-08-15T10:14:19.714Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:14:19.818Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:14:19.818Z - [REQUEST]: package.json
+[NX Daemon Server] - 2024-08-15T10:14:19.818Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:14:19.822Z - Time taken for 'hash changed files from watcher' 0.37879199999952107ms
+[NX Daemon Server] - 2024-08-15T10:14:19.838Z - Time taken for 'build-project-configs' 14.70233300000109ms
+[NX Daemon Server] - 2024-08-15T10:14:19.856Z - Time taken for 'total execution time for createProjectGraph()' 16.82025000000067ms
+[NX Daemon Server] - 2024-08-15T10:15:27.900Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-08-15T10:15:27.900Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-08-15T10:15:27.900Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-15T10:15:27.904Z - [REQUEST]: Responding to the client. handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-15T10:15:27.904Z - Done responding to the client handleWriteTaskRunsToHistory
+[NX Daemon Server] - 2024-08-15T10:15:27.905Z - Handled WRITE_TASK_RUNS_TO_HISTORY. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-08-15T10:15:27.905Z - [REQUEST]: Responding to the client. handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-15T10:15:27.905Z - Done responding to the client handleGetTaskHistoryForHashes
+[NX Daemon Server] - 2024-08-15T10:15:27.905Z - Handled GET_TASK_HISTORY_FOR_HASHES. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-15T10:15:27.914Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-15T10:17:09.307Z - [WATCHER]: lerna.json was modified
+[NX Daemon Server] - 2024-08-15T10:17:09.307Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:17:09.511Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:17:09.511Z - [REQUEST]: lerna.json
+[NX Daemon Server] - 2024-08-15T10:17:09.511Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:17:09.515Z - Time taken for 'hash changed files from watcher' 0.6355829999956768ms
+[NX Daemon Server] - 2024-08-15T10:17:09.534Z - Time taken for 'build-project-configs' 17.561083000007784ms
+[NX Daemon Server] - 2024-08-15T10:17:09.551Z - Time taken for 'total execution time for createProjectGraph()' 13.662834000017028ms
+[NX Daemon Server] - 2024-08-15T10:17:31.266Z - [WATCHER]: .yarnrc.yml was deleted
+[NX Daemon Server] - 2024-08-15T10:17:31.267Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-15T10:17:31.669Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-15T10:17:31.669Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-15T10:17:31.669Z - [REQUEST]: .yarnrc.yml
+[NX Daemon Server] - 2024-08-15T10:17:31.670Z - Time taken for 'hash changed files from watcher' 0.08070799999404699ms
+[NX Daemon Server] - 2024-08-15T10:17:31.676Z - Time taken for 'build-project-configs' 4.675583000003826ms
+[NX Daemon Server] - 2024-08-15T10:17:31.685Z - Time taken for 'total execution time for createProjectGraph()' 7.882249999995111ms
