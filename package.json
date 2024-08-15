@@ -3,7 +3,7 @@
   "description": "Collection of essential Vue Components",
   "author": "Legacy<https://github.com/3m1n3nc3>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "packageManager": "pnpm@9.7.1",
   "scripts": {
