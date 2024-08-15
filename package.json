@@ -13,7 +13,7 @@
     "fmt": "pnpm run eslint && pnpm run prettier --write",
     "prettier": "prettier \"**/*.{css,html,vue,js,mjs,ts}\"",
     "eslint": "eslint . --ignore-pattern \"**/docs\"",
-    "ci:publish:latest": "lerna version --conventional-commits --force-publish --yes && lerna exec -- pnpm publish --tag latest --provenance;"
+    "ci:publish:latest": "lerna version --conventional-commits --force-publish --yes && lerna exec -- pnpm publish --access public --tag latest --provenance;"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
