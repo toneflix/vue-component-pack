@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div>
     <PaystackInline
       dont-verify
       :amount="1000"
@@ -47,13 +48,17 @@
       </code>
     </pre>
 
-    <input v-model="pKey" placeholder="Public Key" />
+    <div>
+      <label>Public Key</label>
+      <input v-model="pKey" placeholder="Public Key" />
+    </div>
   </div>
+</div>
 </template>
 <script setup lang="ts">
-import { PaystackInline } from '@toneflix/paystack-inline'
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '../../../dist/lib/style.css'
 import { ref, watch } from 'vue'
+import PaystackInline from '../../../src/components/paystack-inline.vue';
 
 const pKey = ref(localStorage.getItem('pKey') || 'pk_test_TYooMQauvdEDq54NiTphI7jx')
 const reference = ref<string>()
@@ -82,16 +87,30 @@ watch(pKey, (pKey) => {
 </script>
 
 <style lang="scss" scoped>
-input {
+input { 
+  padding: 5px;
   margin-top: 10px;
+  border-radius: 4px;
+  border: solid 1px rgb(113, 113, 113);
+}
+label {
+  margin-right: 3px;
+}
+
+.pay-button {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90vh;
+  border-radius: 14px;
+  background-color: rgb(247, 247, 247);
 }
 
 .state {

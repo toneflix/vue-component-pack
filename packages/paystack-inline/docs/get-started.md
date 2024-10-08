@@ -1,38 +1,48 @@
-# Vue Paystack Inline
+---
+outline: deep
+---
 
-Simple Paystack Inline component for Vue 3
+# Get Started
 
-## Documentation
-
-Read the full documentation here: [https://toneflix.github.io/vue-component-pack/paystack-inline](https://toneflix.github.io/vue-component-pack/paystack-inline/)
+Setting up Vue Paystack Inline is pretty simple and straightforward.
 
 ## Installation
 
-```bash
+Install using your preferred package manager.
+
+::: code-group
+
+```bash [npm]
 npm install @toneflix/paystack-inline
-#or
+```
+
+```bash [yarn]
 yarn add @toneflix/paystack-inline
-#or
+```
+
+```bash [pnpm]
 pnpm add @toneflix/paystack-inline
 ```
+
+:::
 
 ## Usage
 
 ### Global Registration
 
-You can make Paystack Inline available throughout your Vue project.
+You can make OTP Input available throughout your Vue project.
 
 **main.js or main.ts**
 
-```js
-import '@toneflix/paystack-inline/dist/lib/style.css'
-import { createApp } from 'vue'
-import App from './app.vue'
-import PaystackInline from '@toneflix/paystack-inline'
+```js:line-numbers{1,4}
+import '@toneflix/paystack-inline/dist/lib/style.css';
+import { createApp } from 'vue';
+import App from './app.vue';
+import PaystackInline from '@toneflix/paystack-inline';
 
-const app = createApp(App)
-app.use(PaystackInline)
-app.mount('#app')
+const app = createApp(App);
+app.use(PaystackInline);
+app.mount('#app');
 ```
 
 ### Local Registration
@@ -41,10 +51,10 @@ You can also import the component in your Vue component.
 
 **SomeComponent.vue**
 
-```vue
+```vue:line-numbers{2,3}
 <script setup>
-import '@toneflix/paystack-inline/dist/lib/style.css'
-import { PaystackInline } from '@toneflix/paystack-inline'
+import '@toneflix/paystack-inline/dist/lib/style.css';
+import { PaystackInline } from '@toneflix/paystack-inline';
 </script>
 ```
 
@@ -52,7 +62,7 @@ import { PaystackInline } from '@toneflix/paystack-inline'
 
 **SomeComponent.vue**
 
-```vue
+```vue:line-numbers{2,3}
 <script setup lang="ts">
 import '@toneflix/paystack-inline/dist/lib/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
@@ -81,7 +91,7 @@ To verify a payment, simply set the value of the `reference` model attribute and
 
 **VerifyComponent.vue**
 
-```vue
+```vue:line-numbers{2,3}
 <script setup lang="ts">
 import '@toneflix/paystack-inline/dist/lib/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
@@ -123,7 +133,7 @@ const verify = () => {
 
 **SlutComponent.vue**
 
-```vue
+```vue:line-numbers{2,3}
 <script setup lang="ts">
 import '@toneflix/paystack-inline/dist/lib/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'

@@ -1,6 +1,6 @@
 import type { App, Plugin } from 'vue'
 
-import _OtpInput from './components/paystack-inline.vue'
+import _PaystackInline from './components/paystack-inline.vue'
 
 type SFCWithInstall<T> = T & Plugin
 
@@ -14,5 +14,5 @@ const withInstall = <T> (comp: T) => {
   return comp as SFCWithInstall<T>
 }
 
-export const PaystackInline = withInstall(_OtpInput)
+export const PaystackInline = withInstall(_PaystackInline)
 export default PaystackInline

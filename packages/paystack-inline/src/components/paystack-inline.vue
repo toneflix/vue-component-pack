@@ -8,7 +8,8 @@
       v-show="!hidden"
     >
       <slot :loading="loading" name="button">
-        {{ btnLabel }}
+        {{ !loading ? btnLabel : '' }}
+        <div class="spinner" v-if="loading"></div>
       </slot>
     </button>
   </slot>
@@ -18,7 +19,7 @@
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import PaystackPop from '@paystack/inline-js'
-import { PaystackInlineProps } from '../../types'
+import { PaystackInlineProps } from '../../types/types'
 import '../styles/main.scss'
 
 const emit = defineEmits<{
@@ -33,6 +34,8 @@ const emit = defineEmits<{
     data: { reference: string; authorization_url?: string; message?: string }
   ): void
 }>()
+
+const reference = defineModel<string>()
 
 const props = withDefaults(defineProps<PaystackInlineProps>(), {
   btnLabel: 'Pay Now',
@@ -60,18 +63,19 @@ const route = useRoute()
 const router = useRouter()
 const loading = ref(false)
 
-const verifyPayment = (reference: string) => {
+const verifyPayment = (ref: string) => {
   loading.value = true
   try {
-    props.verifyCallback(reference).then(({ status, message }) => {
+    props.verifyCallback(ref).then(({ status, message }) => {
       loading.value = false
       emit('verified', { status, message })
+      reference.value = undefined
       if (props.redirectRoute) {
         router.push(props.redirectRoute)
       }
     })
   } catch (error) {
-    emit('error', error as { message: string }, reference)
+    emit('error', error as { message: string }, ref)
   }
 }
 
@@ -134,10 +138,11 @@ const paystackInline = (reference: string = '') => {
 }
 
 watch(
-  () => <string>route.query.reference,
-  (ref) => {
-    if (ref && !props.dontVerify) {
-      verifyPayment(ref)
+  [reference, () => <string | undefined>route?.query?.reference],
+  ([ref, reference]) => {
+    reference ||= ref
+    if (reference && !props.dontVerify) {
+      verifyPayment(reference)
     }
   },
   { immediate: true }

@@ -7,11 +7,6 @@ declare module '@vue/runtime-core' {
     PaystackInline: GlobalComponentConstructor<
       PaystackInlineProps & {
         /**
-         * Emitted when the component needs to change the model; Is also used by v-model
-         * @param value New model value
-         */
-        'onUpdate:modelValue'?: (value: any) => void
-        /**
          * Emitted when the component is ready
          */
         onReady?: () => void
@@ -19,6 +14,10 @@ declare module '@vue/runtime-core' {
          * Emitted when the payment has been verified successfully
          */
         onVerified?: (response: { message?: string; status: boolean }) => void
+        /**
+         * Emitted when the payment was successfull
+         */
+        onSuccess?: (response: { message?: string; status: boolean }) => void
         /**
          * Emitted when the payment is canceled
          */
@@ -28,7 +27,7 @@ declare module '@vue/runtime-core' {
          */
         onDestroyed?: () => void
         /**
-         * Emitted when an error occurs during request
+         * Emitted when there is an error with the payment
          */
         onError?: (error: { message: string }, reference?: string) => void
         /**

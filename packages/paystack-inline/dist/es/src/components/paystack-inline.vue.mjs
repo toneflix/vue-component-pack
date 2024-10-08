@@ -1,10 +1,13 @@
-import { defineComponent as y, ref as v, watch as b, onMounted as h, onBeforeUnmount as N, renderSlot as u, withDirectives as P, createElementVNode as k, mergeProps as w, createTextVNode as g, toDisplayString as C, vShow as R } from "vue";
-import { useRoute as V, useRouter as z } from "vue-router";
-import B from "@paystack/inline-js";
+import { defineComponent as b, mergeModels as m, useModel as h, ref as k, watch as N, onMounted as P, onBeforeUnmount as g, renderSlot as c, withDirectives as w, createElementVNode as V, mergeProps as C, createTextVNode as B, toDisplayString as R, openBlock as z, createElementBlock as M, createCommentVNode as S, vShow as T } from "vue";
+import { useRoute as _, useRouter as $ } from "vue-router";
+import E from "@paystack/inline-js";
 /* empty css                   */
-const S = ["disabled"], E = /* @__PURE__ */ y({
+const D = ["disabled"], F = {
+  key: 0,
+  class: "spinner"
+}, U = /* @__PURE__ */ b({
   __name: "paystack-inline",
-  props: {
+  props: /* @__PURE__ */ m({
     amount: {},
     inline: { type: Boolean },
     hidden: { type: Boolean },
@@ -14,6 +17,7 @@ const S = ["disabled"], E = /* @__PURE__ */ y({
     publicKey: {},
     dontVerify: { type: Boolean },
     tooltipIcon: {},
+    redirectRoute: {},
     verifyCallback: { type: Function, default() {
       return new Promise(
         (n) => n({
@@ -30,91 +34,94 @@ const S = ["disabled"], E = /* @__PURE__ */ y({
           authorization_url: ""
         })
       );
-    } },
-    redirectRoute: {}
-  },
-  emits: ["ready", "success", "verified", "canceled", "destroyed", "error", "initialized"],
-  setup(n, { expose: m, emit: c }) {
-    const i = c, t = n, d = V(), p = z(), o = v(!1), l = (e) => {
-      o.value = !0;
+    } }
+  }, {
+    modelValue: {},
+    modelModifiers: {}
+  }),
+  emits: /* @__PURE__ */ m(["ready", "success", "verified", "canceled", "destroyed", "error", "initialized"], ["update:modelValue"]),
+  setup(n, { expose: d, emit: f }) {
+    const r = f, l = h(n, "modelValue"), o = n, p = _(), y = $(), a = k(!1), s = (t) => {
+      a.value = !0;
       try {
-        t.verifyCallback(e).then(({ status: a, message: r }) => {
-          o.value = !1, i("verified", { status: a, message: r }), t.redirectRoute && p.push(t.redirectRoute);
-        });
-      } catch (a) {
-        i("error", a, e);
-      }
-    }, s = () => {
-      o.value = !0;
-      try {
-        t.initializeCallback().then(({ reference: e, authorization_url: a, message: r }) => {
-          i("initialized", { reference: e, authorization_url: a, message: r }), t.inline || !a ? f(e) : a && setTimeout(() => {
-            globalThis.location.href = a;
-          }, 3e3);
+        o.verifyCallback(t).then(({ status: e, message: i }) => {
+          a.value = !1, r("verified", { status: e, message: i }), l.value = void 0, o.redirectRoute && y.push(o.redirectRoute);
         });
       } catch (e) {
-        i("error", e);
+        r("error", e, t);
       }
-    }, f = (e = "") => new B().newTransaction({
-      key: t.publicKey,
-      email: t.customer.email,
-      amount: t.amount * 100,
-      reference: e,
-      firstName: (t.customer.name || t.customer.email).split(" ")[0],
-      lastName: (t.customer.name || t.customer.email).split(" ")[1] || "",
+    }, u = () => {
+      a.value = !0;
+      try {
+        o.initializeCallback().then(({ reference: t, authorization_url: e, message: i }) => {
+          r("initialized", { reference: t, authorization_url: e, message: i }), o.inline || !e ? v(t) : e && setTimeout(() => {
+            globalThis.location.href = e;
+          }, 3e3);
+        });
+      } catch (t) {
+        r("error", t);
+      }
+    }, v = (t = "") => new E().newTransaction({
+      key: o.publicKey,
+      email: o.customer.email,
+      amount: o.amount * 100,
+      reference: t,
+      firstName: (o.customer.name || o.customer.email).split(" ")[0],
+      lastName: (o.customer.name || o.customer.email).split(" ")[1] || "",
       metadata: {
         custom_fields: [
           {
             display_name: "Name",
             variable_name: "Name",
-            value: t.customer.name
+            value: o.customer.name
           },
           {
             display_name: "Phone Number",
             variable_name: "Phone Number",
-            value: t.customer.phone
+            value: o.customer.phone
           }
         ]
       },
-      onSuccess(a) {
-        o.value = !1, i("success", a), t.dontVerify || l(a.reference);
+      onSuccess(e) {
+        a.value = !1, r("success", e), o.dontVerify || s(e.reference);
       },
       onCancel() {
-        o.value = !1, i("canceled", { reference: e });
+        a.value = !1, r("canceled", { reference: t });
       },
-      onError: (a) => {
-        o.value = !1, i("error", a, e);
+      onError: (e) => {
+        a.value = !1, r("error", e, t);
       }
     });
-    return b(
-      () => d.query.reference,
-      (e) => {
-        e && !t.dontVerify && l(e);
+    return N(
+      [l, () => p.query.reference],
+      ([t, e]) => {
+        e || (e = t), e && !o.dontVerify && s(e);
       },
       { immediate: !0 }
-    ), h(() => {
-      i("ready");
-    }), N(() => {
-      i("destroyed");
-    }), m({
-      loading: o
-    }), (e, a) => u(e.$slots, "default", {
-      initialize: () => s(),
-      loading: o.value
+    ), P(() => {
+      r("ready");
+    }), g(() => {
+      r("destroyed");
+    }), d({
+      loading: a
+    }), (t, e) => c(t.$slots, "default", {
+      initialize: () => u(),
+      loading: a.value
     }, () => [
-      P(k("button", w({ class: "pay-button" }, e.$attrs, {
-        disabled: o.value,
-        onClick: a[0] || (a[0] = (r) => s())
+      w(V("button", C({ class: "pay-button" }, t.$attrs, {
+        disabled: a.value,
+        onClick: e[0] || (e[0] = (i) => u())
       }), [
-        u(e.$slots, "button", { loading: o.value }, () => [
-          g(C(e.btnLabel), 1)
+        c(t.$slots, "button", { loading: a.value }, () => [
+          B(R(a.value ? "" : t.btnLabel) + " ", 1),
+          a.value ? (z(), M("div", F)) : S("", !0)
         ])
-      ], 16, S), [
-        [R, !e.hidden]
+      ], 16, D), [
+        [T, !t.hidden]
       ])
     ]);
   }
 });
 export {
-  E as default
+  U as default
 };
