@@ -2220,3 +2220,1136 @@
 [NX Daemon Server] - 2024-08-15T11:12:50.820Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
 [NX Daemon Server] - 2024-08-15T11:12:50.820Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
 [NX Daemon Server] - 2024-08-15T11:12:50.820Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX Daemon Server] - 2024-10-08T08:47:06.272Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-10-08T08:47:06.278Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-10-08T08:47:06.280Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T08:47:06.281Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T08:47:06.282Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T08:47:06.283Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T08:47:06.432Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T08:47:06.432Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:47:06.432Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:47:06.439Z - Time taken for 'loadNxPlugins' 147.702917ms
+[NX Daemon Server] - 2024-10-08T08:47:06.845Z - Time taken for 'build-project-configs' 396.08799999999997ms
+[NX Daemon Server] - 2024-10-08T08:47:06.874Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T08:47:06.875Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T08:47:06.875Z - Time taken for 'total for creating and serializing project graph' 591.670625ms
+[NX Daemon Server] - 2024-10-08T08:47:06.877Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T08:47:06.877Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 592. Response time: 2.
+[NX Daemon Server] - 2024-10-08T08:47:06.880Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T08:47:06.881Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T08:47:06.881Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-10-08T08:47:06.900Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-08T08:47:39.520Z - [WATCHER]: runner was deleted
+[NX Daemon Server] - 2024-10-08T08:47:39.522Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T08:47:39.624Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T08:47:39.624Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:47:39.624Z - [REQUEST]: runner
+[NX Daemon Server] - 2024-10-08T08:47:39.633Z - Time taken for 'hash changed files from watcher' 0.14179200000216952ms
+[NX Daemon Server] - 2024-10-08T08:47:39.653Z - Time taken for 'build-project-configs' 23.81708400000207ms
+[NX Daemon Server] - 2024-10-08T08:47:39.701Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T08:47:39.701Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T08:47:39.701Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T08:47:39.702Z - Time taken for 'total execution time for createProjectGraph()' 42.90983299999789ms
+[NX Daemon Server] - 2024-10-08T08:48:54.979Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T08:48:54.980Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T08:48:54.980Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T08:48:54.981Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T08:48:54.982Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T08:48:54.982Z - Time taken for 'total for creating and serializing project graph' 0.29370799999742303ms
+[NX Daemon Server] - 2024-10-08T08:48:54.984Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T08:48:54.984Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2024-10-08T08:48:54.988Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T08:48:54.988Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T08:48:54.988Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-10-08T08:48:55.006Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-08T08:50:52.723Z - [WATCHER]: packages/runner was deleted
+[NX Daemon Server] - 2024-10-08T08:50:52.742Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T08:50:52.847Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T08:50:52.847Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:50:52.847Z - [REQUEST]: packages/runner
+[NX Daemon Server] - 2024-10-08T08:50:52.865Z - Time taken for 'hash changed files from watcher' 2.273665999993682ms
+[NX Daemon Server] - 2024-10-08T08:50:52.940Z - Time taken for 'build-project-configs' 73.94029200001387ms
+[NX Daemon Server] - 2024-10-08T08:50:53.017Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T08:50:53.017Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T08:50:53.019Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T08:50:53.019Z - Time taken for 'total execution time for createProjectGraph()' 67.82533299998613ms
+[NX Daemon Server] - 2024-10-08T08:51:25.886Z - [WATCHER]: pnpm-workspace.yaml was modified
+[NX Daemon Server] - 2024-10-08T08:51:25.886Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T08:51:26.089Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T08:51:26.089Z - [REQUEST]: pnpm-workspace.yaml
+[NX Daemon Server] - 2024-10-08T08:51:26.089Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:51:26.092Z - Time taken for 'hash changed files from watcher' 1.1946670000033919ms
+[NX Daemon Server] - 2024-10-08T08:51:26.107Z - Time taken for 'build-project-configs' 12.521291999990353ms
+[NX Daemon Server] - 2024-10-08T08:51:26.121Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T08:51:26.122Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T08:51:26.122Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T08:51:26.122Z - Time taken for 'total execution time for createProjectGraph()' 13.68391699998756ms
+[NX Daemon Server] - 2024-10-08T08:51:31.532Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T08:51:31.533Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-08T08:51:31.533Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T08:51:31.534Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T08:51:31.535Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T08:51:31.535Z - Time taken for 'total for creating and serializing project graph' 0.15237500000512227ms
+[NX Daemon Server] - 2024-10-08T08:51:31.537Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T08:51:31.537Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2024-10-08T08:51:31.541Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T08:51:31.541Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T08:51:31.541Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-10-08T08:51:31.559Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-08T08:56:24.231Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T08:56:24.231Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-10-08T08:56:24.231Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-10-08T08:56:24.232Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX Daemon Server] - 2024-10-08T08:57:12.667Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-10-08T08:57:12.670Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-10-08T08:57:12.675Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T08:57:12.675Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T08:57:12.677Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T08:57:12.677Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T08:57:12.848Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T08:57:12.848Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:57:12.848Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:57:12.855Z - Time taken for 'loadNxPlugins' 169.47108300000002ms
+[NX Daemon Server] - 2024-10-08T08:57:13.264Z - Time taken for 'build-project-configs' 398.398834ms
+[NX Daemon Server] - 2024-10-08T08:57:13.290Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T08:57:13.290Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T08:57:13.291Z - Time taken for 'total for creating and serializing project graph' 612.8618749999999ms
+[NX Daemon Server] - 2024-10-08T08:57:13.292Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T08:57:13.293Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 613. Response time: 3.
+[NX Daemon Server] - 2024-10-08T08:57:13.297Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T08:57:13.297Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T08:57:13.297Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-10-08T08:57:13.322Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T08:57:13.323Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T08:57:13.323Z - Time taken for 'total for creating and serializing project graph' 0.2051250000000664ms
+[NX Daemon Server] - 2024-10-08T08:57:13.323Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T08:57:13.324Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-10-08T08:57:13.373Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T08:57:13.373Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T08:57:13.373Z - Handled HASH_TASKS. Handling time: 7. Response time: 0.
+[NX Daemon Server] - 2024-10-08T08:57:58.537Z - [WATCHER]: packages/paystack-inline/index.ts was modified
+[NX Daemon Server] - 2024-10-08T08:57:58.539Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T08:57:58.642Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T08:57:58.642Z - [REQUEST]: packages/paystack-inline/index.ts
+[NX Daemon Server] - 2024-10-08T08:57:58.642Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:57:58.644Z - Time taken for 'hash changed files from watcher' 0.26095799999893643ms
+[NX Daemon Server] - 2024-10-08T08:57:58.656Z - Time taken for 'build-project-configs' 10.466832999998587ms
+[NX Daemon Server] - 2024-10-08T08:57:58.681Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T08:57:58.681Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T08:57:58.681Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T08:57:58.681Z - Time taken for 'total execution time for createProjectGraph()' 22.356457999994745ms
+[NX Daemon Server] - 2024-10-08T08:58:33.478Z - [WATCHER]: packages/paystack-inline/types/types.ts was modified
+[NX Daemon Server] - 2024-10-08T08:58:33.479Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T08:58:33.682Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T08:58:33.683Z - [REQUEST]: packages/paystack-inline/types/types.ts
+[NX Daemon Server] - 2024-10-08T08:58:33.683Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:58:33.686Z - Time taken for 'hash changed files from watcher' 0.4157090000080643ms
+[NX Daemon Server] - 2024-10-08T08:58:33.703Z - Time taken for 'build-project-configs' 16.473707999990438ms
+[NX Daemon Server] - 2024-10-08T08:58:33.718Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T08:58:33.718Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T08:58:33.719Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T08:58:33.719Z - Time taken for 'total execution time for createProjectGraph()' 12.894415999995545ms
+[NX Daemon Server] - 2024-10-08T08:58:56.782Z - [WATCHER]: packages/paystack-inline/types/types.ts was modified
+[NX Daemon Server] - 2024-10-08T08:58:56.783Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T08:58:57.185Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T08:58:57.186Z - [REQUEST]: packages/paystack-inline/types/types.ts
+[NX Daemon Server] - 2024-10-08T08:58:57.186Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T08:58:57.187Z - Time taken for 'hash changed files from watcher' 0.19220900000073016ms
+[NX Daemon Server] - 2024-10-08T08:58:57.196Z - Time taken for 'build-project-configs' 7.967374999992899ms
+[NX Daemon Server] - 2024-10-08T08:58:57.209Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T08:58:57.209Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T08:58:57.210Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T08:58:57.210Z - Time taken for 'total execution time for createProjectGraph()' 10.020707999996375ms
+[NX Daemon Server] - 2024-10-08T09:01:17.699Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:01:17.704Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-10-08T09:01:17.808Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:01:17.808Z - [REQUEST]: packages/paystack-inline/paystack__inline-js.d.ts
+[NX Daemon Server] - 2024-10-08T09:01:17.808Z - [REQUEST]: packages/paystack-inline/types/paystack__inline-js.d.ts
+[NX Daemon Server] - 2024-10-08T09:01:17.814Z - Time taken for 'hash changed files from watcher' 0.8577909999876283ms
+[NX Daemon Server] - 2024-10-08T09:01:17.865Z - Time taken for 'build-project-configs' 41.89433399998234ms
+[NX Daemon Server] - 2024-10-08T09:01:17.934Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:01:17.935Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:01:17.935Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:01:17.935Z - Time taken for 'total execution time for createProjectGraph()' 70.29516699997475ms
+[NX Daemon Server] - 2024-10-08T09:01:35.615Z - [WATCHER]: packages/paystack-inline/tsconfig.json was modified
+[NX Daemon Server] - 2024-10-08T09:01:35.619Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:01:35.822Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:01:35.822Z - [REQUEST]: packages/paystack-inline/tsconfig.json
+[NX Daemon Server] - 2024-10-08T09:01:35.822Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:01:35.825Z - Time taken for 'hash changed files from watcher' 2.26624999998603ms
+[NX Daemon Server] - 2024-10-08T09:01:35.837Z - Time taken for 'build-project-configs' 11.035541000019293ms
+[NX Daemon Server] - 2024-10-08T09:01:35.850Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:01:35.850Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:01:35.850Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:01:35.850Z - Time taken for 'total execution time for createProjectGraph()' 10.928749999962747ms
+[NX Daemon Server] - 2024-10-08T09:04:42.039Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-10-08T09:04:42.040Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:04:42.443Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:04:42.443Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-10-08T09:04:42.443Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:04:42.445Z - Time taken for 'hash changed files from watcher' 0.2561670000432059ms
+[NX Daemon Server] - 2024-10-08T09:04:42.456Z - Time taken for 'build-project-configs' 10.584124999993946ms
+[NX Daemon Server] - 2024-10-08T09:04:42.476Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:04:42.476Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:04:42.476Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:04:42.476Z - Time taken for 'total execution time for createProjectGraph()' 15.649375000037253ms
+[NX Daemon Server] - 2024-10-08T09:04:43.698Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-10-08T09:04:43.698Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:04:44.500Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:04:44.500Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-10-08T09:04:44.500Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:04:44.504Z - Time taken for 'hash changed files from watcher' 0.25191700004506856ms
+[NX Daemon Server] - 2024-10-08T09:04:44.514Z - Time taken for 'build-project-configs' 9.749500000034459ms
+[NX Daemon Server] - 2024-10-08T09:04:44.529Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:04:44.530Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:04:44.530Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:04:44.530Z - Time taken for 'total execution time for createProjectGraph()' 13.177416999998968ms
+[NX Daemon Server] - 2024-10-08T09:04:54.268Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-10-08T09:04:54.272Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:04:55.874Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:04:55.874Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-10-08T09:04:55.874Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:04:55.878Z - Time taken for 'hash changed files from watcher' 0.4375ms
+[NX Daemon Server] - 2024-10-08T09:04:55.899Z - Time taken for 'build-project-configs' 19.055999999982305ms
+[NX Daemon Server] - 2024-10-08T09:04:55.913Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:04:55.913Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:04:55.913Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:04:55.913Z - Time taken for 'total execution time for createProjectGraph()' 13.038957999960985ms
+[NX Daemon Server] - 2024-10-08T09:05:11.998Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-10-08T09:05:11.998Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:05:15.202Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:05:15.202Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-10-08T09:05:15.202Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:05:15.205Z - Time taken for 'hash changed files from watcher' 0.5575829999870621ms
+[NX Daemon Server] - 2024-10-08T09:05:15.219Z - Time taken for 'build-project-configs' 13.313417000055779ms
+[NX Daemon Server] - 2024-10-08T09:05:15.234Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:05:15.234Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:05:15.234Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:05:15.234Z - Time taken for 'total execution time for createProjectGraph()' 12.28770899999654ms
+[NX Daemon Server] - 2024-10-08T09:05:27.366Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-10-08T09:05:27.367Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:05:33.769Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:05:33.769Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-10-08T09:05:33.769Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:05:33.774Z - Time taken for 'hash changed files from watcher' 0.5714170000283048ms
+[NX Daemon Server] - 2024-10-08T09:05:33.793Z - Time taken for 'build-project-configs' 17.836416999984067ms
+[NX Daemon Server] - 2024-10-08T09:05:33.814Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:05:33.814Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:05:33.814Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:05:33.814Z - Time taken for 'total execution time for createProjectGraph()' 17.805707999970764ms
+[NX Daemon Server] - 2024-10-08T09:05:52.881Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-10-08T09:05:52.883Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:05:59.286Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:05:59.287Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-10-08T09:05:59.287Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:05:59.289Z - Time taken for 'hash changed files from watcher' 0.3346669999882579ms
+[NX Daemon Server] - 2024-10-08T09:05:59.303Z - Time taken for 'build-project-configs' 12.976499999989755ms
+[NX Daemon Server] - 2024-10-08T09:05:59.318Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:05:59.318Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:05:59.318Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:05:59.318Z - Time taken for 'total execution time for createProjectGraph()' 12.144834000035189ms
+[NX Daemon Server] - 2024-10-08T09:06:16.942Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-10-08T09:06:16.943Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:06:23.348Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:06:23.349Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-10-08T09:06:23.349Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:06:23.353Z - Time taken for 'hash changed files from watcher' 0.519791999948211ms
+[NX Daemon Server] - 2024-10-08T09:06:23.374Z - Time taken for 'build-project-configs' 20.191457999986596ms
+[NX Daemon Server] - 2024-10-08T09:06:23.394Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:06:23.395Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:06:23.395Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:06:23.395Z - Time taken for 'total execution time for createProjectGraph()' 17.222375000012107ms
+[NX Daemon Server] - 2024-10-08T09:06:31.688Z - [WATCHER]: runner/app.vue was modified
+[NX Daemon Server] - 2024-10-08T09:06:31.689Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:06:38.094Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:06:38.094Z - [REQUEST]: runner/app.vue
+[NX Daemon Server] - 2024-10-08T09:06:38.094Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:06:38.098Z - Time taken for 'hash changed files from watcher' 0.909250000026077ms
+[NX Daemon Server] - 2024-10-08T09:06:38.122Z - Time taken for 'build-project-configs' 18.639709000010043ms
+[NX Daemon Server] - 2024-10-08T09:06:38.143Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:06:38.144Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:06:38.144Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:06:38.144Z - Time taken for 'total execution time for createProjectGraph()' 22.509791999938898ms
+[NX Daemon Server] - 2024-10-08T09:07:13.448Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T09:07:13.450Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:07:19.857Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:07:19.858Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T09:07:19.858Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:07:19.862Z - Time taken for 'hash changed files from watcher' 0.9759159999666736ms
+[NX Daemon Server] - 2024-10-08T09:07:19.881Z - Time taken for 'build-project-configs' 17.96737500000745ms
+[NX Daemon Server] - 2024-10-08T09:07:19.899Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:07:19.899Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:07:19.899Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:07:19.900Z - Time taken for 'total execution time for createProjectGraph()' 13.894083000021055ms
+[NX Daemon Server] - 2024-10-08T09:07:55.242Z - [WATCHER]: packages/paystack-inline/package.json was modified
+[NX Daemon Server] - 2024-10-08T09:07:55.243Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:08:01.648Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:08:01.648Z - [REQUEST]: packages/paystack-inline/package.json
+[NX Daemon Server] - 2024-10-08T09:08:01.648Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:08:01.653Z - Time taken for 'hash changed files from watcher' 0.8520000000717118ms
+[NX Daemon Server] - 2024-10-08T09:08:01.674Z - Time taken for 'build-project-configs' 20.804542000056244ms
+[NX Daemon Server] - 2024-10-08T09:08:01.700Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:08:01.700Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:08:01.700Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:08:01.700Z - Time taken for 'total execution time for createProjectGraph()' 23.583040999947116ms
+[NX Daemon Server] - 2024-10-08T09:08:04.147Z - [WATCHER]: _tmp_36137_49a80521cf4affc8ea6d130cb544cda4 was deleted
+[NX Daemon Server] - 2024-10-08T09:08:04.148Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:08:10.549Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T09:08:10.550Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T09:08:10.550Z - [REQUEST]: _tmp_36137_49a80521cf4affc8ea6d130cb544cda4
+[NX Daemon Server] - 2024-10-08T09:08:10.555Z - Time taken for 'hash changed files from watcher' 0.5672079999931157ms
+[NX Daemon Server] - 2024-10-08T09:08:10.570Z - Time taken for 'build-project-configs' 15.079333000001498ms
+[NX Daemon Server] - 2024-10-08T09:08:10.588Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T09:08:10.589Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T09:08:10.589Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T09:08:10.589Z - Time taken for 'total execution time for createProjectGraph()' 15.835791999939829ms
+[NX Daemon Server] - 2024-10-08T09:08:15.847Z - [WATCHER]: _tmp_36169_c2cbfd2f75451a398215aaca72bb7478 was deleted
+[NX Daemon Server] - 2024-10-08T09:08:15.847Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:08:17.915Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T09:08:17.916Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-08T09:08:17.916Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-10-08T09:08:17.916Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-10-08T09:08:17.917Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX Daemon Server] - 2024-10-08T10:03:57.623Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-10-08T10:03:57.631Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-10-08T10:03:57.635Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T10:03:57.636Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:03:57.639Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T10:03:57.640Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:03:57.922Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:03:57.922Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:03:57.922Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:03:57.935Z - Time taken for 'loadNxPlugins' 279.014458ms
+[NX Daemon Server] - 2024-10-08T10:03:58.467Z - Time taken for 'build-project-configs' 526.5384169999999ms
+[NX Daemon Server] - 2024-10-08T10:03:58.500Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:03:58.501Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:03:58.501Z - Time taken for 'total for creating and serializing project graph' 860.6958750000001ms
+[NX Daemon Server] - 2024-10-08T10:03:58.503Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:03:58.503Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 861. Response time: 2.
+[NX Daemon Server] - 2024-10-08T10:03:58.507Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:03:58.507Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:03:58.507Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:03:58.535Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:03:58.535Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:03:58.535Z - Time taken for 'total for creating and serializing project graph' 0.2132920000001377ms
+[NX Daemon Server] - 2024-10-08T10:03:58.536Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:03:58.536Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:03:58.578Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:03:58.579Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:03:58.579Z - Handled HASH_TASKS. Handling time: 8. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:04:50.330Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:04:50.331Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:04:50.435Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:04:50.435Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:04:50.435Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:04:50.442Z - Time taken for 'hash changed files from watcher' 1.6326249999983702ms
+[NX Daemon Server] - 2024-10-08T10:04:50.472Z - Time taken for 'build-project-configs' 28.686000000001513ms
+[NX Daemon Server] - 2024-10-08T10:04:50.505Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:04:50.506Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:04:50.506Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:04:50.506Z - Time taken for 'total execution time for createProjectGraph()' 18.011958000002778ms
+[NX Daemon Server] - 2024-10-08T10:04:55.510Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:04:55.511Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:04:55.713Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:04:55.713Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:04:55.713Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:04:55.715Z - Time taken for 'hash changed files from watcher' 0.19904200000019046ms
+[NX Daemon Server] - 2024-10-08T10:04:55.727Z - Time taken for 'build-project-configs' 11.813167000000249ms
+[NX Daemon Server] - 2024-10-08T10:04:55.742Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:04:55.742Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:04:55.742Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:04:55.743Z - Time taken for 'total execution time for createProjectGraph()' 12.363375000000815ms
+[NX Daemon Server] - 2024-10-08T10:05:06.019Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:05:06.019Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:05:06.421Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:05:06.421Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:05:06.421Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:05:06.423Z - Time taken for 'hash changed files from watcher' 0.20200000000477303ms
+[NX Daemon Server] - 2024-10-08T10:05:06.437Z - Time taken for 'build-project-configs' 10.615166000003228ms
+[NX Daemon Server] - 2024-10-08T10:05:06.455Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:05:06.455Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:05:06.455Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:05:06.455Z - Time taken for 'total execution time for createProjectGraph()' 15.574290999997174ms
+[NX Daemon Server] - 2024-10-08T10:06:10.844Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:06:10.845Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:06:11.648Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:06:11.648Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:06:11.648Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:06:11.650Z - Time taken for 'hash changed files from watcher' 0.22966700000688434ms
+[NX Daemon Server] - 2024-10-08T10:06:11.663Z - Time taken for 'build-project-configs' 11.52329200002714ms
+[NX Daemon Server] - 2024-10-08T10:06:11.681Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:06:11.682Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:06:11.682Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:06:11.682Z - Time taken for 'total execution time for createProjectGraph()' 15.29558299999917ms
+[NX Daemon Server] - 2024-10-08T10:06:25.294Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:06:25.295Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:06:26.899Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:06:26.900Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:06:26.900Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:06:26.902Z - Time taken for 'hash changed files from watcher' 0.3467090000049211ms
+[NX Daemon Server] - 2024-10-08T10:06:26.914Z - Time taken for 'build-project-configs' 10.86637500001234ms
+[NX Daemon Server] - 2024-10-08T10:06:26.928Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:06:26.929Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:06:26.929Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:06:26.929Z - Time taken for 'total execution time for createProjectGraph()' 12.433500000013737ms
+[NX Daemon Server] - 2024-10-08T10:07:01.725Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:07:01.726Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:07:04.929Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:07:04.929Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:07:04.929Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:07:04.931Z - Time taken for 'hash changed files from watcher' 0.35458300000755116ms
+[NX Daemon Server] - 2024-10-08T10:07:04.945Z - Time taken for 'build-project-configs' 11.952707999997074ms
+[NX Daemon Server] - 2024-10-08T10:07:04.959Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:07:04.959Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:07:04.959Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:07:04.959Z - Time taken for 'total execution time for createProjectGraph()' 10.973541999992449ms
+[NX Daemon Server] - 2024-10-08T10:07:36.939Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:07:36.944Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:07:43.221Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:07:43.222Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:07:43.354Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:07:43.354Z - [REQUEST]: runner/PaystackPage.vue,packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:07:43.354Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:07:43.367Z - Time taken for 'hash changed files from watcher' 4.925832999986596ms
+[NX Daemon Server] - 2024-10-08T10:07:43.392Z - Time taken for 'build-project-configs' 25.9169160000165ms
+[NX Daemon Server] - 2024-10-08T10:07:43.407Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:07:43.408Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:07:43.408Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:07:43.408Z - Time taken for 'total execution time for createProjectGraph()' 12.576958999998169ms
+[NX Daemon Server] - 2024-10-08T10:08:00.862Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:08:00.863Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:08:07.267Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:08:07.268Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:08:07.268Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:08:07.269Z - Time taken for 'hash changed files from watcher' 0.45074999998905696ms
+[NX Daemon Server] - 2024-10-08T10:08:07.283Z - Time taken for 'build-project-configs' 11.41487499998766ms
+[NX Daemon Server] - 2024-10-08T10:08:07.318Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:08:07.318Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:08:07.318Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:08:07.318Z - Time taken for 'total execution time for createProjectGraph()' 31.467041999974754ms
+[NX Daemon Server] - 2024-10-08T10:08:12.361Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:08:12.361Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:08:18.768Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:08:18.768Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:08:18.768Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:08:18.771Z - Time taken for 'hash changed files from watcher' 0.6020830000052229ms
+[NX Daemon Server] - 2024-10-08T10:08:18.782Z - Time taken for 'build-project-configs' 10.167458999989321ms
+[NX Daemon Server] - 2024-10-08T10:08:18.797Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:08:18.797Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:08:18.797Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:08:18.797Z - Time taken for 'total execution time for createProjectGraph()' 12.873166999983368ms
+[NX Daemon Server] - 2024-10-08T10:08:22.321Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:08:22.323Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:08:28.726Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:08:28.726Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:08:28.726Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:08:28.729Z - Time taken for 'hash changed files from watcher' 0.284083999984432ms
+[NX Daemon Server] - 2024-10-08T10:08:28.740Z - Time taken for 'build-project-configs' 11.223082999989856ms
+[NX Daemon Server] - 2024-10-08T10:08:28.754Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:08:28.754Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:08:28.754Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:08:28.754Z - Time taken for 'total execution time for createProjectGraph()' 10.59375ms
+[NX Daemon Server] - 2024-10-08T10:09:24.947Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:09:24.950Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:09:31.352Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:09:31.352Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:09:31.352Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:09:31.354Z - Time taken for 'hash changed files from watcher' 0.20645800000056624ms
+[NX Daemon Server] - 2024-10-08T10:09:31.367Z - Time taken for 'build-project-configs' 11.43241599999601ms
+[NX Daemon Server] - 2024-10-08T10:09:31.384Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:09:31.384Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:09:31.384Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:09:31.384Z - Time taken for 'total execution time for createProjectGraph()' 13.62295799999265ms
+[NX Daemon Server] - 2024-10-08T10:09:39.602Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:09:39.603Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:09:46.004Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:09:46.004Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:09:46.004Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:09:46.005Z - Time taken for 'hash changed files from watcher' 0.2549579999758862ms
+[NX Daemon Server] - 2024-10-08T10:09:46.016Z - Time taken for 'build-project-configs' 8.703291999991052ms
+[NX Daemon Server] - 2024-10-08T10:09:46.035Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:09:46.035Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:09:46.035Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:09:46.035Z - Time taken for 'total execution time for createProjectGraph()' 15.07650000002468ms
+[NX Daemon Server] - 2024-10-08T10:11:28.732Z - [WATCHER]: packages/paystack-inline/src/styles/main.scss was modified
+[NX Daemon Server] - 2024-10-08T10:11:28.736Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:11:35.140Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:11:35.140Z - [REQUEST]: packages/paystack-inline/src/styles/main.scss
+[NX Daemon Server] - 2024-10-08T10:11:35.140Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:11:35.148Z - Time taken for 'hash changed files from watcher' 1.7753750000265427ms
+[NX Daemon Server] - 2024-10-08T10:11:35.166Z - Time taken for 'build-project-configs' 16.598125000018626ms
+[NX Daemon Server] - 2024-10-08T10:11:35.182Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:11:35.182Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:11:35.182Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:11:35.182Z - Time taken for 'total execution time for createProjectGraph()' 13.717666999960784ms
+[NX Daemon Server] - 2024-10-08T10:11:35.412Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:11:35.413Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:11:41.816Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:11:41.817Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:11:41.817Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:11:41.819Z - Time taken for 'hash changed files from watcher' 0.3967089999932796ms
+[NX Daemon Server] - 2024-10-08T10:11:41.832Z - Time taken for 'build-project-configs' 11.649749999982305ms
+[NX Daemon Server] - 2024-10-08T10:11:41.847Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:11:41.848Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:11:41.848Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:11:41.848Z - Time taken for 'total execution time for createProjectGraph()' 12.07541599997785ms
+[NX Daemon Server] - 2024-10-08T10:11:54.922Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:11:54.923Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:12:01.357Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:12:01.358Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:12:01.358Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:12:01.360Z - Time taken for 'hash changed files from watcher' 0.4924999999930151ms
+[NX Daemon Server] - 2024-10-08T10:12:01.415Z - Time taken for 'build-project-configs' 49.01779199996963ms
+[NX Daemon Server] - 2024-10-08T10:12:01.440Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:12:01.440Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:12:01.470Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:12:01.471Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:12:01.471Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:12:01.472Z - Time taken for 'total execution time for createProjectGraph()' 52.45650000002934ms
+[NX Daemon Server] - 2024-10-08T10:12:03.824Z - [WATCHER]: packages/paystack-inline/src/components/paystack-inline.vue was modified
+[NX Daemon Server] - 2024-10-08T10:12:03.826Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:12:07.842Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:12:07.842Z - [REQUEST]: packages/paystack-inline/src/components/paystack-inline.vue
+[NX Daemon Server] - 2024-10-08T10:12:07.842Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:12:07.844Z - Time taken for 'hash changed files from watcher' 0.26987499999813735ms
+[NX Daemon Server] - 2024-10-08T10:12:07.861Z - Time taken for 'build-project-configs' 10.478125000023283ms
+[NX Daemon Server] - 2024-10-08T10:12:07.881Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:12:07.882Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:12:07.882Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:12:07.882Z - Time taken for 'total execution time for createProjectGraph()' 22.846833999967203ms
+[NX Daemon Server] - 2024-10-08T10:12:16.038Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:12:16.038Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:12:22.441Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:12:22.441Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:12:22.441Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:12:22.442Z - Time taken for 'hash changed files from watcher' 0.2639590000035241ms
+[NX Daemon Server] - 2024-10-08T10:12:22.454Z - Time taken for 'build-project-configs' 9.92491699999664ms
+[NX Daemon Server] - 2024-10-08T10:12:22.469Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:12:22.469Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:12:22.469Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:12:22.469Z - Time taken for 'total execution time for createProjectGraph()' 12.831666000012774ms
+[NX Daemon Server] - 2024-10-08T10:12:28.234Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:12:28.235Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:12:34.638Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:12:34.639Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:12:34.639Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:12:34.641Z - Time taken for 'hash changed files from watcher' 0.3492090000072494ms
+[NX Daemon Server] - 2024-10-08T10:12:34.650Z - Time taken for 'build-project-configs' 7.994791999983136ms
+[NX Daemon Server] - 2024-10-08T10:12:34.663Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:12:34.663Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:12:34.663Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:12:34.664Z - Time taken for 'total execution time for createProjectGraph()' 10.584207999985665ms
+[NX Daemon Server] - 2024-10-08T10:12:43.089Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:12:43.090Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:12:49.493Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:12:49.494Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:12:49.494Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:12:49.495Z - Time taken for 'hash changed files from watcher' 0.31545799993909895ms
+[NX Daemon Server] - 2024-10-08T10:12:49.506Z - Time taken for 'build-project-configs' 8.766209000023082ms
+[NX Daemon Server] - 2024-10-08T10:12:49.522Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:12:49.522Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:12:49.522Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:12:49.522Z - Time taken for 'total execution time for createProjectGraph()' 13.050625000032596ms
+[NX Daemon Server] - 2024-10-08T10:13:08.837Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:13:08.838Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:13:15.241Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:13:15.242Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:13:15.242Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:13:15.243Z - Time taken for 'hash changed files from watcher' 0.38962500006891787ms
+[NX Daemon Server] - 2024-10-08T10:13:15.256Z - Time taken for 'build-project-configs' 11.129667000030167ms
+[NX Daemon Server] - 2024-10-08T10:13:15.276Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:13:15.277Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:13:15.277Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:13:15.277Z - Time taken for 'total execution time for createProjectGraph()' 17.66933400009293ms
+[NX Daemon Server] - 2024-10-08T10:13:26.281Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:13:26.282Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:13:26.282Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:13:26.284Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:13:26.284Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:13:26.285Z - Time taken for 'total for creating and serializing project graph' 0.40225000004284084ms
+[NX Daemon Server] - 2024-10-08T10:13:26.288Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:13:26.288Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-10-08T10:13:26.294Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:13:26.294Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:13:26.294Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:13:26.325Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:13:26.326Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:13:26.326Z - Time taken for 'total for creating and serializing project graph' 0.26837500010151416ms
+[NX Daemon Server] - 2024-10-08T10:13:26.327Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:13:26.327Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:13:26.391Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:13:26.392Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:13:26.392Z - Handled HASH_TASKS. Handling time: 12. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:13:58.921Z - [WATCHER]: _tmp_44378_fd7120a73565110b3c6ed34c7fb67643 was deleted
+[NX Daemon Server] - 2024-10-08T10:13:58.922Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:13:59.024Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:13:59.024Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:13:59.024Z - [REQUEST]: _tmp_44378_fd7120a73565110b3c6ed34c7fb67643
+[NX Daemon Server] - 2024-10-08T10:13:59.027Z - Time taken for 'hash changed files from watcher' 0.31383400002960116ms
+[NX Daemon Server] - 2024-10-08T10:13:59.057Z - Time taken for 'build-project-configs' 26.287417000043206ms
+[NX Daemon Server] - 2024-10-08T10:13:59.085Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:13:59.085Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:13:59.085Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:13:59.085Z - Time taken for 'total execution time for createProjectGraph()' 21.645000000018626ms
+[NX Daemon Server] - 2024-10-08T10:14:02.236Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:14:02.236Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T10:14:02.237Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-08T10:14:02.243Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-10-08T10:14:02.243Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-10-08T10:14:02.245Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX Daemon Server] - 2024-10-08T10:14:17.256Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-10-08T10:14:17.259Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-10-08T10:14:17.262Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T10:14:17.263Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:14:17.265Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-08T10:14:17.266Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:14:17.492Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:14:17.493Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:14:17.493Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:14:17.502Z - Time taken for 'loadNxPlugins' 224.34625ms
+[NX Daemon Server] - 2024-10-08T10:14:18.022Z - Time taken for 'build-project-configs' 508.99387499999995ms
+[NX Daemon Server] - 2024-10-08T10:14:18.050Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:14:18.050Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:14:18.051Z - Time taken for 'total for creating and serializing project graph' 784.005167ms
+[NX Daemon Server] - 2024-10-08T10:14:18.058Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:14:18.058Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 784. Response time: 8.
+[NX Daemon Server] - 2024-10-08T10:14:18.064Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:14:18.064Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:14:18.064Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:14:18.101Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:14:18.102Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:14:18.102Z - Time taken for 'total for creating and serializing project graph' 0.2950829999999769ms
+[NX Daemon Server] - 2024-10-08T10:14:18.104Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:14:18.104Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2024-10-08T10:14:18.163Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:14:18.163Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:14:18.164Z - Handled HASH_TASKS. Handling time: 10. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:15:00.971Z - [WATCHER]: packages/paystack-inline/tsconfig.json was deleted
+[NX Daemon Server] - 2024-10-08T10:15:00.973Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:15:01.095Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:15:01.095Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:15:01.095Z - [REQUEST]: packages/paystack-inline/tsconfig.json
+[NX Daemon Server] - 2024-10-08T10:15:01.116Z - Time taken for 'hash changed files from watcher' 0.3760839999958989ms
+[NX Daemon Server] - 2024-10-08T10:15:01.182Z - Time taken for 'build-project-configs' 69.1921250000014ms
+[NX Daemon Server] - 2024-10-08T10:15:01.233Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:15:01.233Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:15:01.233Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:15:01.233Z - Time taken for 'total execution time for createProjectGraph()' 45.85766699999658ms
+[NX Daemon Server] - 2024-10-08T10:15:02.547Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:15:02.548Z - [WATCHER]: packages/paystack-inline/vite.config.ts was modified
+[NX Daemon Server] - 2024-10-08T10:15:02.750Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:15:02.751Z - [REQUEST]: packages/paystack-inline/vite.config.ts
+[NX Daemon Server] - 2024-10-08T10:15:02.751Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:15:02.753Z - Time taken for 'hash changed files from watcher' 0.3025420000049053ms
+[NX Daemon Server] - 2024-10-08T10:15:02.764Z - Time taken for 'build-project-configs' 9.891292000000249ms
+[NX Daemon Server] - 2024-10-08T10:15:02.784Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:15:02.784Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:15:02.784Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:15:02.784Z - Time taken for 'total execution time for createProjectGraph()' 14.297582999999577ms
+[NX Daemon Server] - 2024-10-08T10:15:48.860Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:15:48.862Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:15:48.931Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:15:48.932Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:15:48.965Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:15:48.965Z - [REQUEST]: packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/index.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/index.mjs,packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue2.js,packages/paystack-inline/dist/lib/packages/paystack-inline/index.js,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue.js,packages/paystack-inline/dist/lib/packages/paystack-inline/src/index.js
+[NX Daemon Server] - 2024-10-08T10:15:48.965Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:15:48.968Z - Time taken for 'hash changed files from watcher' 0.8425420000130543ms
+[NX Daemon Server] - 2024-10-08T10:15:48.989Z - Time taken for 'build-project-configs' 19.059957999998005ms
+[NX Daemon Server] - 2024-10-08T10:15:49.016Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:15:49.016Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:15:49.017Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:15:49.017Z - Time taken for 'total execution time for createProjectGraph()' 22.705458999989787ms
+[NX Daemon Server] - 2024-10-08T10:16:41.536Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:16:41.538Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:16:41.740Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:16:41.740Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:16:41.740Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:16:41.748Z - Time taken for 'hash changed files from watcher' 0.4617079999879934ms
+[NX Daemon Server] - 2024-10-08T10:16:41.767Z - Time taken for 'build-project-configs' 20.1569170000148ms
+[NX Daemon Server] - 2024-10-08T10:16:41.803Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:16:41.803Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:16:41.803Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:16:41.803Z - Time taken for 'total execution time for createProjectGraph()' 31.980707999988226ms
+[NX Daemon Server] - 2024-10-08T10:16:50.893Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:16:50.895Z - [WATCHER]: runner/PaystackPage.vue was modified
+[NX Daemon Server] - 2024-10-08T10:16:51.296Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:16:51.297Z - [REQUEST]: runner/PaystackPage.vue
+[NX Daemon Server] - 2024-10-08T10:16:51.297Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:16:51.300Z - Time taken for 'hash changed files from watcher' 0.424457999994047ms
+[NX Daemon Server] - 2024-10-08T10:16:51.346Z - Time taken for 'build-project-configs' 42.37204200000269ms
+[NX Daemon Server] - 2024-10-08T10:16:51.379Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:16:51.380Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:16:51.380Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:16:51.380Z - Time taken for 'total execution time for createProjectGraph()' 27.75150000001304ms
+[NX Daemon Server] - 2024-10-08T10:17:07.723Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:17:07.724Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:17:07.724Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:17:07.726Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:17:07.727Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:17:07.727Z - Time taken for 'total for creating and serializing project graph' 0.6851250000181608ms
+[NX Daemon Server] - 2024-10-08T10:17:07.731Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:17:07.731Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 4.
+[NX Daemon Server] - 2024-10-08T10:17:07.738Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:17:07.738Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:17:07.738Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:17:07.785Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:17:07.787Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:17:07.787Z - Time taken for 'total for creating and serializing project graph' 1.4764589999977034ms
+[NX Daemon Server] - 2024-10-08T10:17:07.789Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:17:07.789Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 2.
+[NX Daemon Server] - 2024-10-08T10:17:07.860Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:17:07.861Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:17:07.861Z - Handled HASH_TASKS. Handling time: 14. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:21:18.330Z - [WATCHER]: packages/paystack-inline/dist/lib/packages/paystack-inline was deleted
+[NX Daemon Server] - 2024-10-08T10:21:18.333Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:21:18.449Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:21:18.449Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:21:18.449Z - [REQUEST]: packages/paystack-inline/dist/lib/packages/paystack-inline
+[NX Daemon Server] - 2024-10-08T10:21:18.464Z - Time taken for 'hash changed files from watcher' 0.681624999968335ms
+[NX Daemon Server] - 2024-10-08T10:21:18.529Z - Time taken for 'build-project-configs' 62.287624999997206ms
+[NX Daemon Server] - 2024-10-08T10:21:18.597Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:21:18.597Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:21:18.597Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:21:18.597Z - Time taken for 'total execution time for createProjectGraph()' 70.15116599999601ms
+[NX Daemon Server] - 2024-10-08T10:21:25.941Z - [WATCHER]: packages/paystack-inline/dist/es/packages/paystack-inline was deleted
+[NX Daemon Server] - 2024-10-08T10:21:25.941Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:21:26.143Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:21:26.143Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:21:26.143Z - [REQUEST]: packages/paystack-inline/dist/es/packages/paystack-inline
+[NX Daemon Server] - 2024-10-08T10:21:26.145Z - Time taken for 'hash changed files from watcher' 0.21329200000036508ms
+[NX Daemon Server] - 2024-10-08T10:21:26.160Z - Time taken for 'build-project-configs' 12.277750000008382ms
+[NX Daemon Server] - 2024-10-08T10:21:26.183Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:21:26.184Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:21:26.184Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:21:26.184Z - Time taken for 'total execution time for createProjectGraph()' 18.661332999996375ms
+[NX Daemon Server] - 2024-10-08T10:21:33.744Z - [WATCHER]: packages/paystack-inline/dist/lib/paystack-inline/src/components/paystack-inline.vue.js was modified
+[NX Daemon Server] - 2024-10-08T10:21:33.745Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:21:34.234Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:21:34.235Z - [REQUEST]: packages/paystack-inline/dist/lib/paystack-inline/src/components/paystack-inline.vue.js
+[NX Daemon Server] - 2024-10-08T10:21:34.235Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:21:34.262Z - Time taken for 'hash changed files from watcher' 27.397790999966674ms
+[NX Daemon Server] - 2024-10-08T10:21:34.404Z - Time taken for 'build-project-configs' 147.8482499999809ms
+[NX Daemon Server] - 2024-10-08T10:21:34.473Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:21:34.473Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:21:34.473Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:21:34.474Z - Time taken for 'total execution time for createProjectGraph()' 64.70879200001946ms
+[NX Daemon Server] - 2024-10-08T10:22:33.900Z - [WATCHER]: deploy.sh was modified
+[NX Daemon Server] - 2024-10-08T10:22:33.901Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:22:34.705Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:22:34.705Z - [REQUEST]: deploy.sh
+[NX Daemon Server] - 2024-10-08T10:22:34.705Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:22:34.710Z - Time taken for 'hash changed files from watcher' 0.4102500000153668ms
+[NX Daemon Server] - 2024-10-08T10:22:34.729Z - Time taken for 'build-project-configs' 18.09204099996714ms
+[NX Daemon Server] - 2024-10-08T10:22:34.758Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:22:34.758Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:22:34.758Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:22:34.759Z - Time taken for 'total execution time for createProjectGraph()' 24.740749999997206ms
+[NX Daemon Server] - 2024-10-08T10:22:51.962Z - [WATCHER]: deploy.sh was modified
+[NX Daemon Server] - 2024-10-08T10:22:51.963Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:22:53.565Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:22:53.565Z - [REQUEST]: deploy.sh
+[NX Daemon Server] - 2024-10-08T10:22:53.565Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:22:53.568Z - Time taken for 'hash changed files from watcher' 0.21487500000512227ms
+[NX Daemon Server] - 2024-10-08T10:22:53.581Z - Time taken for 'build-project-configs' 9.929750000010245ms
+[NX Daemon Server] - 2024-10-08T10:22:53.607Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:22:53.607Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:22:53.607Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:22:53.607Z - Time taken for 'total execution time for createProjectGraph()' 18.547083999961615ms
+[NX Daemon Server] - 2024-10-08T10:23:48.344Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:23:48.346Z - Established a connection. Number of open connections: 4
+[NX Daemon Server] - 2024-10-08T10:23:48.346Z - Closed a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:23:48.348Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:23:48.349Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:23:48.350Z - Time taken for 'total for creating and serializing project graph' 0.7101249999832362ms
+[NX Daemon Server] - 2024-10-08T10:23:48.353Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:23:48.353Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 4.
+[NX Daemon Server] - 2024-10-08T10:23:48.359Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:23:48.360Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:23:48.360Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:23:48.406Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:23:48.407Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:23:48.407Z - Time taken for 'total for creating and serializing project graph' 0.6052079999353737ms
+[NX Daemon Server] - 2024-10-08T10:23:48.409Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:23:48.409Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2024-10-08T10:23:48.489Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:23:48.489Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:23:48.489Z - Handled HASH_TASKS. Handling time: 15. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:23:51.921Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:51.924Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 10 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:52.246Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:23:52.249Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:23:52.250Z - [REQUEST]: packages/paystack-inline/dist/lib/paystack-inline/src/index.js,packages/paystack-inline/dist/es/paystack-inline/index.mjs,packages/paystack-inline/dist/es/paystack-inline/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/paystack-inline/src/components/paystack-inline.vue.js,packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/lib/paystack-inline/src/components/paystack-inline.vue2.js,packages/paystack-inline/dist/es/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/lib/paystack-inline/index.js,packages/paystack-inline/dist/es/paystack-inline/src/index.mjs
+[NX Daemon Server] - 2024-10-08T10:23:52.267Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:52.268Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:52.270Z - Time taken for 'hash changed files from watcher' 6.24654099997133ms
+[NX Daemon Server] - 2024-10-08T10:23:52.521Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:52.522Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:52.538Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:23:52.538Z - [REQUEST]: packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/es/packages/paystack-inline/index.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/index.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue.mjs
+[NX Daemon Server] - 2024-10-08T10:23:52.538Z - [REQUEST]: packages/paystack-inline/dist/lib/paystack-inline/src/index.js,packages/paystack-inline/dist/es/paystack-inline/index.mjs,packages/paystack-inline/dist/es/paystack-inline/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/paystack-inline/src/components/paystack-inline.vue.js,packages/paystack-inline/dist/lib/paystack-inline/src/components/paystack-inline.vue2.js,packages/paystack-inline/dist/es/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/lib/paystack-inline/index.js,packages/paystack-inline/dist/es/paystack-inline/src/index.mjs
+[NX Daemon Server] - 2024-10-08T10:23:52.660Z - Time taken for 'hash changed files from watcher' 15.315166999935172ms
+[NX Daemon Server] - 2024-10-08T10:23:52.879Z - Time taken for 'build-project-configs' 196.78529200004414ms
+[NX Daemon Server] - 2024-10-08T10:23:52.966Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:23:52.967Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:23:52.967Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:23:52.967Z - Time taken for 'total execution time for createProjectGraph()' 83.73704199993517ms
+[NX Daemon Server] - 2024-10-08T10:23:52.994Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:23:52.995Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:23:52.995Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:23:52.995Z - Time taken for 'total execution time for createProjectGraph()' 117.47495900001377ms
+[NX Daemon Server] - 2024-10-08T10:23:53.038Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:53.039Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:53.148Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:23:53.148Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:23:53.148Z - Handled RECORD_OUTPUTS_HASH. Handling time: 8. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:23:53.151Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:23:53.151Z - [REQUEST]: packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/packages/paystack-inline/src/index.js,packages/paystack-inline/dist/lib/packages/paystack-inline/index.js,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue.js,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue2.js
+[NX Daemon Server] - 2024-10-08T10:23:53.151Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:23:53.171Z - Time taken for 'hash changed files from watcher' 2.3568330000853166ms
+[NX Daemon Server] - 2024-10-08T10:23:53.199Z - Time taken for 'build-project-configs' 37.53279099997599ms
+[NX Daemon Server] - 2024-10-08T10:23:53.232Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:23:53.232Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:23:53.232Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:23:53.232Z - Time taken for 'total execution time for createProjectGraph()' 29.74829200003296ms
+[NX Daemon Server] - 2024-10-08T10:23:53.233Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:53.233Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:53.341Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:23:53.341Z - [REQUEST]: packages/paystack-inline/dist/es/packages/paystack-inline/index.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/index.mjs,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/packages/paystack-inline/index.js,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue.js,packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/lib/packages/paystack-inline/src/index.js,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue2.js
+[NX Daemon Server] - 2024-10-08T10:23:53.341Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:23:53.351Z - Time taken for 'hash changed files from watcher' 2.8573750000214204ms
+[NX Daemon Server] - 2024-10-08T10:23:53.370Z - Time taken for 'build-project-configs' 16.05608300003223ms
+[NX Daemon Server] - 2024-10-08T10:23:53.418Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:23:53.418Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:23:53.418Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:23:53.418Z - Time taken for 'total execution time for createProjectGraph()' 36.71241699997336ms
+[NX Daemon Server] - 2024-10-08T10:23:53.799Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 10 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:53.803Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:53.925Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:53.925Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:53.990Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:53.991Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:53.996Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:23:53.997Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:23:53.997Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:23:54.006Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:23:54.006Z - [REQUEST]: packages/otp-input/dist/es/src/components/otp-input.vue.mjs,packages/otp-input/dist/es/src/index.mjs,packages/otp-input/dist/es/style.css,packages/otp-input/dist/es/src/components/otp-input.vue2.mjs,packages/otp-input/dist/es/index.mjs,packages/otp-input/dist/lib/style.css,packages/otp-input/dist/lib/src/components/otp-input.vue.js,packages/otp-input/dist/lib/index.js,packages/otp-input/dist/lib/src/index.js,packages/otp-input/dist/lib/src/components/otp-input.vue2.js
+[NX Daemon Server] - 2024-10-08T10:23:54.006Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:23:54.010Z - Time taken for 'hash changed files from watcher' 0.7738749999552965ms
+[NX Daemon Server] - 2024-10-08T10:23:54.040Z - Time taken for 'build-project-configs' 28.30012499995064ms
+[NX Daemon Server] - 2024-10-08T10:23:54.063Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:23:54.063Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:23:54.063Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:23:54.063Z - Time taken for 'total execution time for createProjectGraph()' 17.671000000089407ms
+[NX Daemon Server] - 2024-10-08T10:23:54.064Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:23:54.064Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:23:54.165Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:23:54.165Z - [REQUEST]: packages/otp-input/dist/lib/index.js,packages/otp-input/dist/es/style.css,packages/otp-input/dist/lib/src/components/otp-input.vue.js,packages/otp-input/dist/lib/src/components/otp-input.vue2.js,packages/otp-input/dist/lib/src/index.js,packages/otp-input/dist/es/src/components/otp-input.vue2.mjs,packages/otp-input/dist/lib/style.css,packages/otp-input/dist/es/src/components/otp-input.vue.mjs,packages/otp-input/dist/es/src/index.mjs,packages/otp-input/dist/es/index.mjs
+[NX Daemon Server] - 2024-10-08T10:23:54.165Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:23:54.169Z - Time taken for 'hash changed files from watcher' 1.0297499999869615ms
+[NX Daemon Server] - 2024-10-08T10:23:54.186Z - Time taken for 'build-project-configs' 16.21999999997206ms
+[NX Daemon Server] - 2024-10-08T10:23:54.264Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:23:54.265Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:23:54.265Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:23:54.265Z - Time taken for 'total execution time for createProjectGraph()' 66.59191600000486ms
+[NX Daemon Server] - 2024-10-08T10:23:54.738Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:24:18.598Z - [WATCHER]: packages/paystack-inline/dist was deleted
+[NX Daemon Server] - 2024-10-08T10:24:18.600Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:24:18.804Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:24:18.804Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:24:18.804Z - [REQUEST]: packages/paystack-inline/dist
+[NX Daemon Server] - 2024-10-08T10:24:18.812Z - Time taken for 'hash changed files from watcher' 0.33554200001526624ms
+[NX Daemon Server] - 2024-10-08T10:24:18.829Z - Time taken for 'build-project-configs' 18.703499999945052ms
+[NX Daemon Server] - 2024-10-08T10:24:18.850Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:24:18.850Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:24:18.850Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:24:18.851Z - Time taken for 'total execution time for createProjectGraph()' 15.218958000070415ms
+[NX Daemon Server] - 2024-10-08T10:24:22.767Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:24:22.768Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:24:22.768Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:24:22.770Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:24:22.770Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:24:22.771Z - Time taken for 'total for creating and serializing project graph' 0.2957089999690652ms
+[NX Daemon Server] - 2024-10-08T10:24:22.775Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:24:22.775Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 5.
+[NX Daemon Server] - 2024-10-08T10:24:22.781Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:24:22.782Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:24:22.782Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:24:22.827Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:24:22.828Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:24:22.828Z - Time taken for 'total for creating and serializing project graph' 0.3331250000046566ms
+[NX Daemon Server] - 2024-10-08T10:24:22.830Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:24:22.830Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2024-10-08T10:24:22.890Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:24:22.890Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:24:22.890Z - Handled HASH_TASKS. Handling time: 11. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:24:26.044Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:24:26.049Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 10 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:24:26.117Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:24:26.118Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:24:26.147Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:24:26.148Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:24:26.148Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:24:26.152Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:24:26.152Z - [REQUEST]: packages/otp-input/dist/es/src/components/otp-input.vue2.mjs,packages/otp-input/dist/lib/src/components/otp-input.vue.js,packages/otp-input/dist/lib/index.js,packages/otp-input/dist/es/src/components/otp-input.vue.mjs,packages/otp-input/dist/lib/style.css,packages/otp-input/dist/es/style.css,packages/otp-input/dist/es/index.mjs,packages/otp-input/dist/lib/src/index.js,packages/otp-input/dist/es/src/index.mjs,packages/otp-input/dist/lib/src/components/otp-input.vue2.js
+[NX Daemon Server] - 2024-10-08T10:24:26.152Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:24:26.157Z - Time taken for 'hash changed files from watcher' 1.8909579999744892ms
+[NX Daemon Server] - 2024-10-08T10:24:26.177Z - Time taken for 'build-project-configs' 19.850416000001132ms
+[NX Daemon Server] - 2024-10-08T10:24:26.202Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.202Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.202Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.202Z - Time taken for 'total execution time for createProjectGraph()' 19.509874999988824ms
+[NX Daemon Server] - 2024-10-08T10:24:26.215Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:24:26.217Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:24:26.321Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:24:26.321Z - [REQUEST]: packages/otp-input/dist/es/index.mjs,packages/otp-input/dist/lib/index.js,packages/otp-input/dist/lib/src/components/otp-input.vue2.js,packages/otp-input/dist/lib/src/index.js,packages/otp-input/dist/lib/style.css,packages/otp-input/dist/es/style.css,packages/otp-input/dist/es/src/index.mjs,packages/otp-input/dist/es/src/components/otp-input.vue.mjs,packages/otp-input/dist/es/src/components/otp-input.vue2.mjs,packages/otp-input/dist/lib/src/components/otp-input.vue.js
+[NX Daemon Server] - 2024-10-08T10:24:26.321Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:24:26.326Z - Time taken for 'hash changed files from watcher' 2.0487079999875277ms
+[NX Daemon Server] - 2024-10-08T10:24:26.338Z - Time taken for 'build-project-configs' 11.81008299998939ms
+[NX Daemon Server] - 2024-10-08T10:24:26.361Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.361Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.361Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.361Z - Time taken for 'total execution time for createProjectGraph()' 19.27845800004434ms
+[NX Daemon Server] - 2024-10-08T10:24:26.362Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:24:26.362Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:24:26.446Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:24:26.447Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:24:26.473Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:24:26.473Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:24:26.473Z - Handled RECORD_OUTPUTS_HASH. Handling time: 11. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:24:26.490Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:24:26.490Z - [REQUEST]: packages/paystack-inline/dist/es/packages/paystack-inline/index.mjs,packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/es/packages/paystack-inline/src/index.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/lib/packages/paystack-inline/index.js,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue2.js,packages/paystack-inline/dist/lib/packages/paystack-inline/src/index.js,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue.js
+[NX Daemon Server] - 2024-10-08T10:24:26.490Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:24:26.519Z - Time taken for 'hash changed files from watcher' 15.876875000074506ms
+[NX Daemon Server] - 2024-10-08T10:24:26.657Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:24:26.658Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:24:26.679Z - Time taken for 'build-project-configs' 175.325916999951ms
+[NX Daemon Server] - 2024-10-08T10:24:26.772Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:24:26.772Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:24:26.772Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:24:26.831Z - Time taken for 'hash changed files from watcher' 0.2097910000011325ms
+[NX Daemon Server] - 2024-10-08T10:24:26.912Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.913Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.913Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.913Z - Time taken for 'build project graph' 186.00191600003745ms
+[NX Daemon Server] - 2024-10-08T10:24:26.991Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.992Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.992Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:24:26.992Z - Time taken for 'total execution time for createProjectGraph()' 116.14533299999312ms
+[NX Daemon Server] - 2024-10-08T10:24:27.717Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:25:02.840Z - [WATCHER]: packages/paystack-inline/dist/es/packages/paystack-inline was deleted
+[NX Daemon Server] - 2024-10-08T10:25:02.840Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:25:03.042Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:25:03.042Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:25:03.042Z - [REQUEST]: packages/paystack-inline/dist/es/packages/paystack-inline
+[NX Daemon Server] - 2024-10-08T10:25:03.065Z - Time taken for 'hash changed files from watcher' 0.21329200000036508ms
+[NX Daemon Server] - 2024-10-08T10:25:03.077Z - Time taken for 'build-project-configs' 11.46308300003875ms
+[NX Daemon Server] - 2024-10-08T10:25:03.096Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:25:03.097Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:25:03.097Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:25:03.097Z - Time taken for 'total execution time for createProjectGraph()' 13.77937500004191ms
+[NX Daemon Server] - 2024-10-08T10:25:23.055Z - [WATCHER]: packages/paystack-inline/dist/es/paystack-inline/src was deleted
+[NX Daemon Server] - 2024-10-08T10:25:23.056Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:25:23.457Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:25:23.457Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:25:23.457Z - [REQUEST]: packages/paystack-inline/dist/es/paystack-inline/src
+[NX Daemon Server] - 2024-10-08T10:25:23.472Z - Time taken for 'hash changed files from watcher' 0.23958299995865673ms
+[NX Daemon Server] - 2024-10-08T10:25:23.486Z - Time taken for 'build-project-configs' 11.297458000015467ms
+[NX Daemon Server] - 2024-10-08T10:25:23.509Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:25:23.509Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:25:23.509Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:25:23.509Z - Time taken for 'total execution time for createProjectGraph()' 16.23362499999348ms
+[NX Daemon Server] - 2024-10-08T10:25:37.992Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:25:37.992Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:25:38.094Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:25:38.094Z - [REQUEST]: packages/paystack-inline/dist/es/index.mjs
+[NX Daemon Server] - 2024-10-08T10:25:38.094Z - [REQUEST]: packages/paystack-inline/dist/es/paystack-inline/index.mjs
+[NX Daemon Server] - 2024-10-08T10:25:38.097Z - Time taken for 'hash changed files from watcher' 0.3778330000350252ms
+[NX Daemon Server] - 2024-10-08T10:25:38.119Z - Time taken for 'build-project-configs' 16.009791999938898ms
+[NX Daemon Server] - 2024-10-08T10:25:38.152Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:25:38.152Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:25:38.152Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:25:38.152Z - Time taken for 'total execution time for createProjectGraph()' 31.59837499994319ms
+[NX Daemon Server] - 2024-10-08T10:25:53.439Z - [WATCHER]: packages/paystack-inline/dist/lib/packages/paystack-inline/src was deleted
+[NX Daemon Server] - 2024-10-08T10:25:53.440Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:25:53.642Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:25:53.642Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:25:53.642Z - [REQUEST]: packages/paystack-inline/dist/lib/packages/paystack-inline/src
+[NX Daemon Server] - 2024-10-08T10:25:53.647Z - Time taken for 'hash changed files from watcher' 0.20879100007005036ms
+[NX Daemon Server] - 2024-10-08T10:25:53.661Z - Time taken for 'build-project-configs' 11.443874999997206ms
+[NX Daemon Server] - 2024-10-08T10:25:53.683Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:25:53.684Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:25:53.684Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:25:53.684Z - Time taken for 'total execution time for createProjectGraph()' 16.542416999931447ms
+[NX Daemon Server] - 2024-10-08T10:25:56.675Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:25:56.675Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:25:56.776Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:25:56.776Z - [REQUEST]: packages/paystack-inline/dist/lib/index.js
+[NX Daemon Server] - 2024-10-08T10:25:56.776Z - [REQUEST]: packages/paystack-inline/dist/lib/packages/paystack-inline/index.js
+[NX Daemon Server] - 2024-10-08T10:25:56.785Z - Time taken for 'hash changed files from watcher' 0.23479199991561472ms
+[NX Daemon Server] - 2024-10-08T10:25:56.802Z - Time taken for 'build-project-configs' 14.90487500000745ms
+[NX Daemon Server] - 2024-10-08T10:25:56.837Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:25:56.838Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:25:56.838Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:25:56.838Z - Time taken for 'total execution time for createProjectGraph()' 29.09175000002142ms
+[NX Daemon Server] - 2024-10-08T10:25:59.648Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:25:59.653Z - [WATCHER]: packages/paystack-inline/dist/lib/src/components/paystack-inline.vue.js was modified
+[NX Daemon Server] - 2024-10-08T10:25:59.868Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:25:59.868Z - [REQUEST]: packages/paystack-inline/dist/lib/src/components/paystack-inline.vue.js
+[NX Daemon Server] - 2024-10-08T10:25:59.868Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:25:59.881Z - Time taken for 'hash changed files from watcher' 5.782166999997571ms
+[NX Daemon Server] - 2024-10-08T10:25:59.921Z - Time taken for 'build-project-configs' 38.65549999999348ms
+[NX Daemon Server] - 2024-10-08T10:25:59.960Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:25:59.960Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:25:59.960Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:25:59.960Z - Time taken for 'total execution time for createProjectGraph()' 34.87595900008455ms
+[NX Daemon Server] - 2024-10-08T10:26:14.949Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:26:14.950Z - Established a connection. Number of open connections: 4
+[NX Daemon Server] - 2024-10-08T10:26:14.950Z - Closed a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:26:14.953Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:26:14.954Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:26:14.955Z - Time taken for 'total for creating and serializing project graph' 0.8236249999608845ms
+[NX Daemon Server] - 2024-10-08T10:26:14.960Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:26:14.960Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 6.
+[NX Daemon Server] - 2024-10-08T10:26:14.966Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:26:14.967Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:26:14.967Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:26:15.017Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:26:15.017Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:26:15.018Z - Time taken for 'total for creating and serializing project graph' 0.2784580000443384ms
+[NX Daemon Server] - 2024-10-08T10:26:15.019Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:26:15.019Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-10-08T10:26:15.079Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:26:15.080Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:26:15.080Z - Handled HASH_TASKS. Handling time: 11. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:26:15.155Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX Daemon Server] - 2024-10-08T10:26:15.155Z - Done responding to the client outputsHashesMatch
+[NX Daemon Server] - 2024-10-08T10:26:15.155Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:26:15.158Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:26:15.158Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:26:15.159Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:26:18.090Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 10 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:26:18.091Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:18.187Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:26:18.187Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:18.191Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:26:18.192Z - [REQUEST]: packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/index.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/index.mjs
+[NX Daemon Server] - 2024-10-08T10:26:18.192Z - [REQUEST]: packages/paystack-inline/dist/es/index.mjs,packages/paystack-inline/dist/es/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/lib/index.js,packages/paystack-inline/dist/es/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/lib/src/components/paystack-inline.vue.js,packages/paystack-inline/dist/es/src/index.mjs,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/src/components/paystack-inline.vue2.js,packages/paystack-inline/dist/lib/src/index.js
+[NX Daemon Server] - 2024-10-08T10:26:18.195Z - Time taken for 'hash changed files from watcher' 1.1022499999962747ms
+[NX Daemon Server] - 2024-10-08T10:26:18.262Z - Time taken for 'build-project-configs' 59.647875000024214ms
+[NX Daemon Server] - 2024-10-08T10:26:18.381Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.386Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.387Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.387Z - Time taken for 'total execution time for createProjectGraph()' 92.81820800004061ms
+[NX Daemon Server] - 2024-10-08T10:26:18.408Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:26:18.410Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:18.511Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:26:18.511Z - [REQUEST]: packages/paystack-inline/dist/lib/packages/paystack-inline/src/index.js,packages/paystack-inline/dist/lib/packages/paystack-inline/index.js,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue2.js,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue.js
+[NX Daemon Server] - 2024-10-08T10:26:18.511Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:26:18.568Z - Time taken for 'hash changed files from watcher' 1.064291000016965ms
+[NX Daemon Server] - 2024-10-08T10:26:18.619Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:26:18.619Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:26:18.619Z - Handled RECORD_OUTPUTS_HASH. Handling time: 16. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:26:18.640Z - Time taken for 'build-project-configs' 78.41433299996424ms
+[NX Daemon Server] - 2024-10-08T10:26:18.705Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:18.707Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:26:18.730Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.730Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.730Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.730Z - Time taken for 'total execution time for createProjectGraph()' 85.22387500002515ms
+[NX Daemon Server] - 2024-10-08T10:26:18.820Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:26:18.820Z - [REQUEST]: packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue.js,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/lib/packages/paystack-inline/src/index.js,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/lib/packages/paystack-inline/index.js,packages/paystack-inline/dist/es/packages/paystack-inline/index.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue2.js,packages/paystack-inline/dist/es/packages/paystack-inline/src/index.mjs
+[NX Daemon Server] - 2024-10-08T10:26:18.820Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:26:18.834Z - Time taken for 'hash changed files from watcher' 4.083958999952301ms
+[NX Daemon Server] - 2024-10-08T10:26:18.860Z - Time taken for 'build-project-configs' 34.41708299994934ms
+[NX Daemon Server] - 2024-10-08T10:26:18.901Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.901Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.902Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:26:18.902Z - Time taken for 'total execution time for createProjectGraph()' 35.36791699996684ms
+[NX Daemon Server] - 2024-10-08T10:26:19.465Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:26:29.290Z - [WATCHER]: pnpm-workspace.yaml was modified
+[NX Daemon Server] - 2024-10-08T10:26:29.291Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:29.493Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:26:29.493Z - [REQUEST]: pnpm-workspace.yaml
+[NX Daemon Server] - 2024-10-08T10:26:29.493Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:26:29.498Z - Time taken for 'hash changed files from watcher' 0.4412500000325963ms
+[NX Daemon Server] - 2024-10-08T10:26:29.516Z - Time taken for 'build-project-configs' 14.673833000008017ms
+[NX Daemon Server] - 2024-10-08T10:26:29.579Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:26:29.579Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:26:29.580Z - Time taken for 'total execution time for createProjectGraph()' 50.57366699993145ms
+[NX Daemon Server] - 2024-10-08T10:26:34.058Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:26:34.059Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:26:34.060Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-10-08T10:26:34.062Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:26:34.062Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:26:34.063Z - Time taken for 'total for creating and serializing project graph' 0.8420410000253469ms
+[NX Daemon Server] - 2024-10-08T10:26:34.067Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:26:34.067Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 5.
+[NX Daemon Server] - 2024-10-08T10:26:34.073Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:26:34.073Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-10-08T10:26:34.073Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:26:34.123Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-10-08T10:26:34.123Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-10-08T10:26:34.124Z - Time taken for 'total for creating and serializing project graph' 0.40779199998360127ms
+[NX Daemon Server] - 2024-10-08T10:26:34.126Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-10-08T10:26:34.126Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2024-10-08T10:26:34.192Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:26:34.193Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-10-08T10:26:34.193Z - Handled HASH_TASKS. Handling time: 10. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:26:34.274Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX Daemon Server] - 2024-10-08T10:26:34.274Z - Done responding to the client outputsHashesMatch
+[NX Daemon Server] - 2024-10-08T10:26:34.274Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 4. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:26:34.302Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:26:34.302Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:26:34.302Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2024-10-08T10:26:34.338Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:26:34.339Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:34.442Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:26:34.442Z - [REQUEST]: packages/paystack-inline/dist/lib/packages/paystack-inline/index.js,packages/paystack-inline/dist/es/packages/paystack-inline/src/index.mjs,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue2.mjs,packages/paystack-inline/dist/lib/packages/paystack-inline/src/index.js,packages/paystack-inline/dist/es/packages/paystack-inline/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/lib/style.css,packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/es/packages/paystack-inline/index.mjs,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue.js,packages/paystack-inline/dist/lib/packages/paystack-inline/src/components/paystack-inline.vue2.js
+[NX Daemon Server] - 2024-10-08T10:26:34.442Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:26:34.449Z - Time taken for 'hash changed files from watcher' 2.3552500000223517ms
+[NX Daemon Server] - 2024-10-08T10:26:34.478Z - Time taken for 'build-project-configs' 24.803959000040777ms
+[NX Daemon Server] - 2024-10-08T10:26:34.502Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:26:34.502Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:26:34.502Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:26:34.502Z - Time taken for 'total execution time for createProjectGraph()' 21.385374999954365ms
+[NX Daemon Server] - 2024-10-08T10:26:38.103Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 10 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:26:38.104Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:38.180Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:38.181Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:26:38.211Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:26:38.211Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-10-08T10:26:38.211Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 1.
+[NX Daemon Server] - 2024-10-08T10:26:38.273Z - [WATCHER]: 10 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-08T10:26:38.273Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:26:38.307Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:26:38.307Z - [REQUEST]: packages/otp-input/dist/es/style.css,packages/otp-input/dist/lib/src/components/otp-input.vue2.js,packages/otp-input/dist/es/src/index.mjs,packages/otp-input/dist/es/src/components/otp-input.vue2.mjs,packages/otp-input/dist/lib/style.css,packages/otp-input/dist/lib/index.js,packages/otp-input/dist/lib/src/components/otp-input.vue.js,packages/otp-input/dist/es/src/components/otp-input.vue.mjs,packages/otp-input/dist/lib/src/index.js,packages/otp-input/dist/es/index.mjs
+[NX Daemon Server] - 2024-10-08T10:26:38.308Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:26:38.311Z - Time taken for 'hash changed files from watcher' 1.3208330000052229ms
+[NX Daemon Server] - 2024-10-08T10:26:38.330Z - Time taken for 'build-project-configs' 18.19204200000968ms
+[NX Daemon Server] - 2024-10-08T10:26:38.353Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:26:38.353Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:26:38.353Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:26:38.353Z - Time taken for 'total execution time for createProjectGraph()' 16.87887499993667ms
+[NX Daemon Server] - 2024-10-08T10:26:39.073Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-08T10:27:24.245Z - [WATCHER]: packages/paystack-inline/dist was deleted
+[NX Daemon Server] - 2024-10-08T10:27:24.246Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:27:24.457Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:27:24.458Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:27:24.459Z - [REQUEST]: packages/paystack-inline/dist
+[NX Daemon Server] - 2024-10-08T10:27:24.467Z - Time taken for 'hash changed files from watcher' 0.3955419999547303ms
+[NX Daemon Server] - 2024-10-08T10:27:24.516Z - Time taken for 'build-project-configs' 50.97845799999777ms
+[NX Daemon Server] - 2024-10-08T10:27:24.552Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:27:24.553Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-08T10:27:24.553Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:27:24.553Z - Time taken for 'total execution time for createProjectGraph()' 25.19650000007823ms
+[NX Daemon Server] - 2024-10-08T10:29:09.162Z - [WATCHER]: pnpm-workspace.yaml was modified
+[NX Daemon Server] - 2024-10-08T10:29:09.164Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-08T10:29:09.568Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-08T10:29:09.568Z - [REQUEST]: pnpm-workspace.yaml
+[NX Daemon Server] - 2024-10-08T10:29:09.568Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-08T10:29:09.579Z - Time taken for 'hash changed files from watcher' 1.328499999945052ms
+[NX Daemon Server] - 2024-10-08T10:29:09.616Z - Time taken for 'build-project-configs' 35.828166000079364ms
+[NX Daemon Server] - 2024-10-08T10:29:09.752Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-08T10:29:09.759Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-08T10:29:09.762Z - Time taken for 'total execution time for createProjectGraph()' 129.80200000002515ms

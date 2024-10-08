@@ -1,0 +1,41 @@
+{
+  "name": "@toneflix/paystack-inline",
+  "version": "1.0.0",
+  "description": "Paystack Inline component for Vue 3.",
+  "style": "dist/lib/style.css",
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.mjs",
+  "type": "module",
+  "homepage": "https://toneflix.github.io/vue-component-pack/paystack-inline",
+  "repository": {
+    "url": "https://github.com/toneflix/vue-component-pack"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "deploy": "../deploy.sh paystack-inline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@paystack/inline-js": "^2.22.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.1",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/runtime-core": "^3.5.11",
+    "vite": "^5.4.8",
+    "vitepress": "^1.4.0",
+    "vue": "^3.5.11"
+  }
+}

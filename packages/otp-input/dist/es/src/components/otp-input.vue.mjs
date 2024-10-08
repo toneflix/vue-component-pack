@@ -111,9 +111,7 @@ const R = ["autoFocus", "value", "required", "readonly", "disabled", "onInput", 
         l: "border-l",
         r: "border-r"
       };
-      return n.borders.split(
-        ""
-      ).map((o) => e[o]).join(" ");
+      return n.borders.split("").map((o) => e[o]).join(" ");
     };
     return q(
       () => n.modelValue,

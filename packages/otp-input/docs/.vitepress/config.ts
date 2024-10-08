@@ -24,7 +24,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/toneflix/vue-component-pack/tree/main/packages/otp-input' }
     ]
   }
 })

@@ -4,11 +4,12 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 packages=(
     "otp-input"
     "flickity-vue"
+    "paystack-inline"
     "Quit"
 )
 
 check() {
-    if [ "$package" != "otp-input" ] && [ "$package" != "flickity-vue" ]; then
+    if [ "$package" != "otp-input" ] && [ "$package" != "flickity-vue" ] && [ "$package" != "paystack-inline" ]; then
         echo "Invalid package selected."
         exit
     fi
