@@ -12,258 +12,396 @@
     "typescript": "^5.6.2",
     "typescript-eslint": "^8.8.1",
     "vue": "^3.5.11",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "@paystack/inline-js": "^2.22.0"
   },
   "pathMappings": {},
   "nxJsonPlugins": [],
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".github/workflows/publish_latest.yml",
-        "hash": "292815055604179558"
-      },
-      {
-        "file": "docs/.gitignore",
-        "hash": "11224303400915972830"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
-        "hash": "15877694762730622634"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-cyrillic.By2_1cv3.woff2",
-        "hash": "17518006115323730802"
-      },
-      {
-        "file": "docs/otp-input/images/recycle-dark.png",
-        "hash": "12800247716495140001"
-      },
-      {
-        "file": "README.md",
-        "hash": "7109253519241110676"
-      },
-      {
-        "file": "deploy.sh",
-        "hash": "6646223856045635869"
-      },
-      {
-        "file": "docs/otp-input/assets/index.md.DTUK7R-n.js",
-        "hash": "1276828937690239591"
-      },
-      {
-        "file": ".prettierrc.json",
-        "hash": "15117339747707975127"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "11224303400915972830"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "8602161890475449243"
-      },
-      {
-        "file": "docs/otp-input/hashmap.json",
-        "hash": "135957557418567724"
-      },
-      {
-        "file": "lerna.json",
-        "hash": "6030759835484959417"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "11647998749394453204"
-      },
-      {
-        "file": "docs/otp-input/assets/props.md.B4y5Z2n8.js",
-        "hash": "6237259921819001702"
-      },
-      {
-        "file": "docs/otp-input/images/recycle.png",
-        "hash": "10221039839496206773"
-      },
-      {
-        "file": "nx.json",
-        "hash": "15833547922043738392"
-      },
-      {
-        "file": "docs/otp-input/images/typescript-logo.png",
-        "hash": "16202868179513312433"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "6904001187784468710"
-      },
-      {
-        "file": "docs/otp-input/assets/index.md.DTUK7R-n.lean.js",
-        "hash": "1276828937690239591"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-greek.DJ8dCoTZ.woff2",
-        "hash": "15478754605072970185"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-greek.BBVDIX6e.woff2",
-        "hash": "12225282773869548609"
-      },
-      {
-        "file": "docs/otp-input/demo.html",
-        "hash": "1989909354633262739"
-      },
-      {
-        "file": "docs/otp-input/images/layer-solid-dark.png",
-        "hash": "14960698455115702100"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "14387115173691903413"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
-        "hash": "7674416464885726785"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
-        "hash": "9802537721033087843"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-latin.C2AdPX0b.woff2",
-        "hash": "10829668166839501238"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "6662140265844477394"
-      },
-      {
-        "file": ".github/issues-bot.yml",
-        "hash": "9545911637985008890"
-      },
-      {
-        "file": "docs/otp-input/images/typescript-logo-dark.png",
-        "hash": "6327957380991664515"
-      },
-      {
-        "file": "docs/otp-input/assets/style.fSqvLokJ.css",
-        "hash": "528401798255036959"
-      },
-      {
-        "file": "docs/otp-input/assets/events.md.Bjuujt2F.js",
-        "hash": "9994194091408718134"
-      },
-      {
-        "file": "docs/otp-input/props.html",
-        "hash": "16035715426992767861"
-      },
-      {
-        "file": "docs/otp-input/404.html",
-        "hash": "11739736049096346072"
-      },
-      {
-        "file": "docs/otp-input/index.html",
-        "hash": "11510894137716050479"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
-        "hash": "10886706858615268408"
-      },
-      {
-        "file": "docs/otp-input/assets/get-started.md.v-1vpJ_0.lean.js",
-        "hash": "5733857892724121872"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-latin.Di8DUHzh.woff2",
-        "hash": "6650714724347801826"
-      },
-      {
-        "file": "docs/otp-input/assets/chunks/framework.EcI72IWR.js",
-        "hash": "16009747547784797832"
-      },
-      {
-        "file": "docs/otp-input/assets/get-started.md.v-1vpJ_0.js",
-        "hash": "9561456090777098618"
-      },
-      {
-        "file": "package.json",
-        "hash": "7163552510733662816"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
-        "hash": "4147970328684304313"
-      },
-      {
-        "file": "docs/otp-input/assets/props.md.B4y5Z2n8.lean.js",
-        "hash": "6237259921819001702"
-      },
-      {
-        "file": "docs/otp-input/assets/demo.md.B99sZLwj.js",
-        "hash": "17186121967849597136"
+        "file": "docs/otp-input/assets/inter-italic-vietnamese.BSbpV94h.woff2",
+        "hash": "5439243213935570514"
       },
       {
         "file": "docs/otp-input/get-started.html",
         "hash": "5502273333979399253"
       },
       {
-        "file": "pnpm-workspace.yaml",
-        "hash": "17210788548465150864"
+        "file": ".npmrc",
+        "hash": "8602161890475449243"
       },
       {
-        "file": "docs/otp-input/assets/chunks/theme.H0wAIs0M.js",
-        "hash": "2460207769921048422"
+        "file": "docs/otp-input/404.html",
+        "hash": "11739736049096346072"
       },
       {
-        "file": "docs/otp-input/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
-        "hash": "17927959312439819061"
+        "file": "docs/otp-input/assets/demo.md.B99sZLwj.js",
+        "hash": "17186121967849597136"
+      },
+      {
+        "file": "docs/otp-input/assets/events.md.Bjuujt2F.js",
+        "hash": "9994194091408718134"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-cyrillic.By2_1cv3.woff2",
+        "hash": "17518006115323730802"
       },
       {
         "file": "docs/otp-input/events.html",
         "hash": "12670355215842124518"
       },
       {
-        "file": "docs/otp-input/images/layer-solid.png",
-        "hash": "17096011977933028059"
+        "file": ".github/issues-bot.yml",
+        "hash": "9545911637985008890"
       },
       {
-        "file": "docs/otp-input/assets/app.Cv_9DPAK.js",
-        "hash": "13459680081007888098"
+        "file": "docs/otp-input/images/typescript-logo.png",
+        "hash": "16202868179513312433"
+      },
+      {
+        "file": "docs/otp-input/index.html",
+        "hash": "11510894137716050479"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-latin.Di8DUHzh.woff2",
+        "hash": "6650714724347801826"
+      },
+      {
+        "file": "docs/otp-input/assets/style.fSqvLokJ.css",
+        "hash": "528401798255036959"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
+        "hash": "15877694762730622634"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
+        "hash": "10886706858615268408"
+      },
+      {
+        "file": "nx.json",
+        "hash": "15833547922043738392"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-greek.BBVDIX6e.woff2",
+        "hash": "12225282773869548609"
       },
       {
         "file": "docs/otp-input/assets/demo.md.B99sZLwj.lean.js",
         "hash": "17186121967849597136"
       },
       {
-        "file": "lerna-debug.log",
-        "hash": "15408215426429787799"
+        "file": "package.json",
+        "hash": "11891558368990585006"
       },
       {
-        "file": "docs/otp-input/assets/inter-italic-vietnamese.BSbpV94h.woff2",
-        "hash": "5439243213935570514"
+        "file": "docs/otp-input/hashmap.json",
+        "hash": "135957557418567724"
       },
       {
-        "file": "docs/otp-input/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
-        "hash": "2268099297404114829"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
-        "hash": "8241952812200813355"
+        "file": "docs/otp-input/assets/index.md.DTUK7R-n.js",
+        "hash": "1276828937690239591"
       },
       {
         "file": "docs/otp-input/images/banner.png",
         "hash": "6203059496166803201"
       },
       {
-        "file": ".github/workflows/publish_latest_to_npm.yml",
-        "hash": "9318746510165123096"
+        "file": "docs/otp-input/assets/inter-italic-greek.DJ8dCoTZ.woff2",
+        "hash": "15478754605072970185"
+      },
+      {
+        "file": "docs/otp-input/images/layer-solid-dark.png",
+        "hash": "14960698455115702100"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "6030759835484959417"
+      },
+      {
+        "file": "docs/otp-input/images/recycle-dark.png",
+        "hash": "12800247716495140001"
+      },
+      {
+        "file": "docs/otp-input/demo.html",
+        "hash": "1989909354633262739"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "9528850957059324109"
+      },
+      {
+        "file": "docs/otp-input/images/typescript-logo-dark.png",
+        "hash": "6327957380991664515"
+      },
+      {
+        "file": "docs/otp-input/images/layer-solid.png",
+        "hash": "17096011977933028059"
       },
       {
         "file": "CHANGELOG.md",
         "hash": "9354069382014108879"
       },
       {
+        "file": "pnpm-lock.yaml",
+        "hash": "5355996652910880145"
+      },
+      {
+        "file": ".github/workflows/publish_latest_to_npm.yml",
+        "hash": "9318746510165123096"
+      },
+      {
+        "file": "docs/otp-input/assets/app.Cv_9DPAK.js",
+        "hash": "13459680081007888098"
+      },
+      {
+        "file": "docs/otp-input/assets/chunks/theme.H0wAIs0M.js",
+        "hash": "2460207769921048422"
+      },
+      {
+        "file": "docs/otp-input/assets/chunks/framework.EcI72IWR.js",
+        "hash": "16009747547784797832"
+      },
+      {
+        "file": "README.md",
+        "hash": "7109253519241110676"
+      },
+      {
+        "file": ".prettierrc.json",
+        "hash": "15117339747707975127"
+      },
+      {
+        "file": ".github/workflows/publish_latest.yml",
+        "hash": "292815055604179558"
+      },
+      {
+        "file": "docs/otp-input/assets/get-started.md.v-1vpJ_0.js",
+        "hash": "9561456090777098618"
+      },
+      {
+        "file": "lerna-debug.log",
+        "hash": "15408215426429787799"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-latin.C2AdPX0b.woff2",
+        "hash": "10829668166839501238"
+      },
+      {
+        "file": "docs/otp-input/assets/get-started.md.v-1vpJ_0.lean.js",
+        "hash": "5733857892724121872"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
+        "hash": "8241952812200813355"
+      },
+      {
+        "file": "docs/otp-input/props.html",
+        "hash": "16035715426992767861"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
+        "hash": "2268099297404114829"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "17210788548465150864"
+      },
+      {
+        "file": "deploy.sh",
+        "hash": "6646223856045635869"
+      },
+      {
+        "file": "docs/otp-input/images/recycle.png",
+        "hash": "10221039839496206773"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "6662140265844477394"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
+        "hash": "17927959312439819061"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "6904001187784468710"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2594765934000419506"
+      },
+      {
         "file": "docs/otp-input/assets/events.md.Bjuujt2F.lean.js",
         "hash": "9994194091408718134"
+      },
+      {
+        "file": "docs/otp-input/assets/props.md.B4y5Z2n8.js",
+        "hash": "6237259921819001702"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
+        "hash": "7674416464885726785"
+      },
+      {
+        "file": "docs/.gitignore",
+        "hash": "11224303400915972830"
+      },
+      {
+        "file": "docs/otp-input/assets/props.md.B4y5Z2n8.lean.js",
+        "hash": "6237259921819001702"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
+        "hash": "9802537721033087843"
+      },
+      {
+        "file": "docs/otp-input/assets/index.md.DTUK7R-n.lean.js",
+        "hash": "1276828937690239591"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
+        "hash": "4147970328684304313"
       }
     ],
     "projectFileMap": {
+      "@toneflix/paystack-inline": [
+        {
+          "file": "packages/paystack-inline/CHANGELOG.md",
+          "hash": "4197121715945477682"
+        },
+        {
+          "file": "packages/paystack-inline/README.md",
+          "hash": "17007674421258113990"
+        },
+        {
+          "file": "packages/paystack-inline/components.d.ts",
+          "hash": "7952413265568784172"
+        },
+        {
+          "file": "packages/paystack-inline/dist/es/index.mjs",
+          "hash": "3022108303743444977"
+        },
+        {
+          "file": "packages/paystack-inline/dist/es/src/components/paystack-inline.vue.mjs",
+          "hash": "15379292074600519167"
+        },
+        {
+          "file": "packages/paystack-inline/dist/es/src/components/paystack-inline.vue2.mjs",
+          "hash": "7342199086261934131"
+        },
+        {
+          "file": "packages/paystack-inline/dist/es/src/index.mjs",
+          "hash": "11696213662720570971"
+        },
+        {
+          "file": "packages/paystack-inline/dist/es/style.css",
+          "hash": "9815179614358468564"
+        },
+        {
+          "file": "packages/paystack-inline/dist/lib/index.js",
+          "hash": "4811415688541307934"
+        },
+        {
+          "file": "packages/paystack-inline/dist/lib/src/components/paystack-inline.vue.js",
+          "hash": "12166564352308043155"
+        },
+        {
+          "file": "packages/paystack-inline/dist/lib/src/components/paystack-inline.vue2.js",
+          "hash": "5766495573455225343"
+        },
+        {
+          "file": "packages/paystack-inline/dist/lib/src/index.js",
+          "hash": "16047907759339728969"
+        },
+        {
+          "file": "packages/paystack-inline/dist/lib/style.css",
+          "hash": "9815179614358468564"
+        },
+        {
+          "file": "packages/paystack-inline/index.ts",
+          "hash": "17088119726641386692"
+        },
+        {
+          "file": "packages/paystack-inline/package.json",
+          "hash": "523067947689688102",
+          "deps": [
+            "npm:vue",
+            "npm:@vitejs/plugin-vue",
+            "npm:@vue/runtime-core",
+            "npm:vite",
+            "npm:vitepress",
+            "npm:vue-router",
+            "npm:@paystack/inline-js"
+          ]
+        },
+        {
+          "file": "packages/paystack-inline/paystack__inline-js.d.ts",
+          "hash": "741088583737817904"
+        },
+        {
+          "file": "packages/paystack-inline/src/components/paystack-inline.vue",
+          "hash": "1372256994215765732"
+        },
+        {
+          "file": "packages/paystack-inline/src/index.ts",
+          "hash": "121187687619580891"
+        },
+        {
+          "file": "packages/paystack-inline/src/styles/main.scss",
+          "hash": "3497810834431174522"
+        },
+        {
+          "file": "packages/paystack-inline/types.ts",
+          "hash": "15738357922290750558"
+        },
+        {
+          "file": "packages/paystack-inline/vite.config.ts",
+          "hash": "1013029228183043410"
+        }
+      ],
+      "runner": [
+        {
+          "file": "runner/CHANGELOG.md",
+          "hash": "16761828145682505647"
+        },
+        {
+          "file": "runner/OtpPage.vue",
+          "hash": "2004219836411061025"
+        },
+        {
+          "file": "runner/PaystackPage.vue",
+          "hash": "7300671081335717748"
+        },
+        {
+          "file": "runner/app.vue",
+          "hash": "9665770265783038516"
+        },
+        {
+          "file": "runner/index.html",
+          "hash": "9104751042375151987"
+        },
+        {
+          "file": "runner/main.ts",
+          "hash": "8255469075327871955"
+        },
+        {
+          "file": "runner/package.json",
+          "hash": "7718986846857369222",
+          "deps": [
+            "npm:@vitejs/plugin-vue",
+            "npm:vite",
+            "@toneflix/otp-input",
+            "@toneflix/paystack-inline",
+            "npm:vue",
+            "npm:vue-router"
+          ]
+        },
+        {
+          "file": "runner/vite.config.ts",
+          "hash": "7916431920579637021"
+        }
+      ],
       "@toneflix/otp-input": [
         {
           "file": "packages/otp-input/CHANGELOG.md",
@@ -379,13 +517,13 @@
         },
         {
           "file": "packages/otp-input/package.json",
-          "hash": "10176850415303279269",
+          "hash": "10701187236628991825",
           "deps": [
-            "npm:vue@3.4.38",
-            "npm:@vitejs/plugin-vue@5.1.2",
-            "npm:@vue/runtime-core@3.4.38",
-            "npm:vite@5.4.0",
-            "npm:vitepress@1.3.2"
+            "npm:vue",
+            "npm:@vitejs/plugin-vue",
+            "npm:@vue/runtime-core",
+            "npm:vite",
+            "npm:vitepress"
           ]
         },
         {
@@ -407,103 +545,6 @@
         {
           "file": "packages/otp-input/vite.config.ts",
           "hash": "6959330457900647353"
-        }
-      ],
-      "@toneflix/paystack-inline": [
-        {
-          "file": "packages/paystack-inline/CHANGELOG.md",
-          "hash": "4197121715945477682"
-        },
-        {
-          "file": "packages/paystack-inline/README.md",
-          "hash": "17007674421258113990"
-        },
-        {
-          "file": "packages/paystack-inline/index.ts",
-          "hash": "17088119726641386692"
-        },
-        {
-          "file": "packages/paystack-inline/package.json",
-          "hash": "15968983864893568055",
-          "deps": [
-            "npm:vue",
-            "npm:vue-router",
-            "npm:@vitejs/plugin-vue@5.1.4",
-            "npm:@vue/runtime-core@3.5.11",
-            "npm:vite@5.4.8",
-            "npm:vitepress@1.4.0",
-            "npm:@paystack/inline-js"
-          ]
-        },
-        {
-          "file": "packages/paystack-inline/paystack__inline-js.d.ts",
-          "hash": "741088583737817904"
-        },
-        {
-          "file": "packages/paystack-inline/src/components/paystack-inline.vue",
-          "hash": "4926636272920777177"
-        },
-        {
-          "file": "packages/paystack-inline/src/index.ts",
-          "hash": "2587434487686298046"
-        },
-        {
-          "file": "packages/paystack-inline/src/styles/main.scss",
-          "hash": "2346501818979891188"
-        },
-        {
-          "file": "packages/paystack-inline/types/components.d.ts",
-          "hash": "7952413265568784172"
-        },
-        {
-          "file": "packages/paystack-inline/types/types.ts",
-          "hash": "16544338608894606759"
-        },
-        {
-          "file": "packages/paystack-inline/vite.config.ts",
-          "hash": "6959330457900647353"
-        }
-      ],
-      "runner": [
-        {
-          "file": "runner/CHANGELOG.md",
-          "hash": "16761828145682505647"
-        },
-        {
-          "file": "runner/OtpPage.vue",
-          "hash": "2004219836411061025"
-        },
-        {
-          "file": "runner/PaystackPage.vue",
-          "hash": "16386003133461371499"
-        },
-        {
-          "file": "runner/app.vue",
-          "hash": "9665770265783038516"
-        },
-        {
-          "file": "runner/index.html",
-          "hash": "9104751042375151987"
-        },
-        {
-          "file": "runner/main.ts",
-          "hash": "8255469075327871955"
-        },
-        {
-          "file": "runner/package.json",
-          "hash": "541350829954241450",
-          "deps": [
-            "npm:@vitejs/plugin-vue@5.1.4",
-            "npm:vite@5.4.8",
-            "@toneflix/otp-input",
-            "@toneflix/paystack-inline",
-            "npm:vue",
-            "npm:vue-router"
-          ]
-        },
-        {
-          "file": "runner/vite.config.ts",
-          "hash": "7916431920579637021"
         }
       ]
     }

@@ -48,6 +48,11 @@ export type PaystackInlineProps = {
    */
   tooltipIcon?: string;
   /**
+   * User will be redirected to this route after payment has been verified
+   * Ignored when verifyCallback is not provided
+   */
+  redirectRoute?: RouteLocationRaw;
+  /**
    * Will be called to verify the transaction
    *
    * @param reference
@@ -61,9 +66,4 @@ export type PaystackInlineProps = {
     reference: string
     authorization_url?: string
   }>;
-  /**
-   * User will be redirected to this route after payment has been verified
-   * Ignored when verifyCallback is not provided
-   */
-  redirectRoute?: RouteLocationRaw;
 }

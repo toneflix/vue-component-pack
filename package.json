@@ -26,6 +26,7 @@
     "typescript": "^5.6.2",
     "typescript-eslint": "^8.8.1",
     "vue": "^3.5.11",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "@paystack/inline-js": "^2.22.0"
   }
 }

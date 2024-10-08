@@ -7,7 +7,7 @@ export default defineConfig({
     minify: true,
     emptyOutDir: true,
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vue-router', '@paystack/inline-js'],
       input: ['index.ts'],
       output: [
         {

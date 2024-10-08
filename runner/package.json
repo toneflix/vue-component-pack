@@ -19,5 +19,6 @@
     "@toneflix/paystack-inline": "workspace:^",
     "vue": "^3.5.11",
     "vue-router": "^4.4.5"
-  }
+  },
+  "nx": {}
 }
