@@ -20,196 +20,76 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "pnpm-workspace.yaml",
-        "hash": "17210788548465150864"
-      },
-      {
-        "file": ".github/workflows/publish_latest.yml",
-        "hash": "292815055604179558"
-      },
-      {
-        "file": "docs/otp-input/images/recycle.png",
-        "hash": "10221039839496206773"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "6662140265844477394"
-      },
-      {
-        "file": "docs/otp-input/assets/props.md.B4y5Z2n8.lean.js",
-        "hash": "6237259921819001702"
-      },
-      {
-        "file": "package.json",
-        "hash": "11891558368990585006"
-      },
-      {
-        "file": "docs/otp-input/assets/index.md.DTUK7R-n.js",
-        "hash": "1276828937690239591"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
-        "hash": "10886706858615268408"
-      },
-      {
-        "file": "docs/otp-input/index.html",
-        "hash": "11510894137716050479"
-      },
-      {
-        "file": "docs/otp-input/assets/index.md.DTUK7R-n.lean.js",
-        "hash": "1276828937690239591"
-      },
-      {
-        "file": "docs/otp-input/assets/demo.md.B99sZLwj.js",
-        "hash": "17186121967849597136"
-      },
-      {
-        "file": "docs/otp-input/hashmap.json",
-        "hash": "135957557418567724"
-      },
-      {
-        "file": "lerna.json",
-        "hash": "6030759835484959417"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "8602161890475449243"
-      },
-      {
-        "file": "docs/otp-input/demo.html",
-        "hash": "1989909354633262739"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-latin.C2AdPX0b.woff2",
-        "hash": "10829668166839501238"
-      },
-      {
-        "file": "docs/otp-input/get-started.html",
-        "hash": "5502273333979399253"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
-        "hash": "15877694762730622634"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-cyrillic.By2_1cv3.woff2",
-        "hash": "17518006115323730802"
-      },
-      {
-        "file": "deploy.sh",
-        "hash": "6646223856045635869"
-      },
-      {
-        "file": "docs/otp-input/images/typescript-logo-dark.png",
-        "hash": "6327957380991664515"
-      },
-      {
-        "file": "docs/otp-input/assets/demo.md.B99sZLwj.lean.js",
-        "hash": "17186121967849597136"
-      },
-      {
-        "file": "docs/otp-input/assets/chunks/theme.H0wAIs0M.js",
-        "hash": "2460207769921048422"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
-        "hash": "17927959312439819061"
-      },
-      {
-        "file": "docs/otp-input/images/recycle-dark.png",
-        "hash": "12800247716495140001"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
-        "hash": "9802537721033087843"
-      },
-      {
-        "file": "README.md",
-        "hash": "7109253519241110676"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-vietnamese.BSbpV94h.woff2",
-        "hash": "5439243213935570514"
-      },
-      {
-        "file": "docs/otp-input/props.html",
-        "hash": "16035715426992767861"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
-        "hash": "8241952812200813355"
-      },
-      {
-        "file": "docs/otp-input/images/layer-solid.png",
-        "hash": "17096011977933028059"
-      },
-      {
-        "file": "CHANGELOG.md",
-        "hash": "9354069382014108879"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "6904001187784468710"
-      },
-      {
-        "file": "docs/otp-input/images/banner.png",
-        "hash": "6203059496166803201"
+        "file": ".prettierrc.json",
+        "hash": "15117339747707975127"
       },
       {
         "file": ".vscode/settings.template.json",
         "hash": "11586511439438813548"
       },
       {
-        "file": "nx.json",
-        "hash": "15833547922043738392"
+        "file": "docs/otp-input/demo.html",
+        "hash": "1989909354633262739"
+      },
+      {
+        "file": "docs/otp-input/assets/demo.md.B99sZLwj.lean.js",
+        "hash": "17186121967849597136"
       },
       {
         "file": "docs/otp-input/events.html",
         "hash": "12670355215842124518"
       },
       {
-        "file": "docs/otp-input/assets/events.md.Bjuujt2F.lean.js",
-        "hash": "9994194091408718134"
+        "file": "docs/otp-input/get-started.html",
+        "hash": "5502273333979399253"
       },
       {
-        "file": "docs/otp-input/images/layer-solid-dark.png",
-        "hash": "14960698455115702100"
+        "file": "docs/otp-input/assets/inter-italic-vietnamese.BSbpV94h.woff2",
+        "hash": "5439243213935570514"
       },
       {
-        "file": "pnpm-lock.yaml",
-        "hash": "5355996652910880145"
+        "file": "docs/otp-input/assets/props.md.B4y5Z2n8.js",
+        "hash": "6237259921819001702"
       },
       {
-        "file": "docs/otp-input/assets/chunks/framework.EcI72IWR.js",
-        "hash": "16009747547784797832"
+        "file": "docs/otp-input/images/recycle-dark.png",
+        "hash": "12800247716495140001"
       },
       {
-        "file": "docs/otp-input/assets/events.md.Bjuujt2F.js",
-        "hash": "9994194091408718134"
+        "file": "docs/otp-input/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
+        "hash": "4147970328684304313"
       },
       {
-        "file": "docs/otp-input/assets/get-started.md.v-1vpJ_0.lean.js",
-        "hash": "5733857892724121872"
+        "file": "docs/otp-input/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
+        "hash": "15877694762730622634"
       },
       {
         "file": "docs/otp-input/assets/app.Cv_9DPAK.js",
         "hash": "13459680081007888098"
       },
       {
-        "file": ".github/workflows/publish_latest_to_npm.yml",
-        "hash": "9318746510165123096"
+        "file": "docs/otp-input/assets/get-started.md.v-1vpJ_0.js",
+        "hash": "9561456090777098618"
       },
       {
-        "file": "docs/otp-input/assets/inter-italic-greek.DJ8dCoTZ.woff2",
-        "hash": "15478754605072970185"
+        "file": "README.md",
+        "hash": "7109253519241110676"
       },
       {
-        "file": "docs/otp-input/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
-        "hash": "7674416464885726785"
+        "file": "lerna.json",
+        "hash": "6030759835484959417"
       },
       {
-        "file": "docs/otp-input/assets/inter-roman-latin.Di8DUHzh.woff2",
-        "hash": "6650714724347801826"
+        "file": "lerna-debug.log",
+        "hash": "15408215426429787799"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "5355996652910880145"
+      },
+      {
+        "file": "docs/otp-input/assets/events.md.Bjuujt2F.js",
+        "hash": "9994194091408718134"
       },
       {
         "file": ".github/issues-bot.yml",
@@ -220,52 +100,172 @@
         "hash": "11224303400915972830"
       },
       {
-        "file": "docs/otp-input/404.html",
-        "hash": "11739736049096346072"
+        "file": "package.json",
+        "hash": "11891558368990585006"
       },
       {
-        "file": ".prettierrc.json",
-        "hash": "15117339747707975127"
+        "file": "docs/otp-input/images/typescript-logo-dark.png",
+        "hash": "6327957380991664515"
       },
       {
-        "file": "docs/otp-input/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
-        "hash": "4147970328684304313"
-      },
-      {
-        "file": "docs/otp-input/images/typescript-logo.png",
-        "hash": "16202868179513312433"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "9528850957059324109"
+        "file": ".github/workflows/publish_latest_to_npm.yml",
+        "hash": "9318746510165123096"
       },
       {
         "file": ".gitignore",
         "hash": "2594765934000419506"
       },
       {
-        "file": "docs/otp-input/assets/inter-roman-greek.BBVDIX6e.woff2",
-        "hash": "12225282773869548609"
+        "file": "docs/otp-input/assets/index.md.DTUK7R-n.js",
+        "hash": "1276828937690239591"
       },
       {
-        "file": "lerna-debug.log",
-        "hash": "15408215426429787799"
-      },
-      {
-        "file": "docs/otp-input/assets/get-started.md.v-1vpJ_0.js",
-        "hash": "9561456090777098618"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
-        "hash": "2268099297404114829"
+        "file": "docs/otp-input/images/layer-solid.png",
+        "hash": "17096011977933028059"
       },
       {
         "file": "docs/otp-input/assets/style.fSqvLokJ.css",
         "hash": "528401798255036959"
       },
       {
-        "file": "docs/otp-input/assets/props.md.B4y5Z2n8.js",
+        "file": "deploy.sh",
+        "hash": "6646223856045635869"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
+        "hash": "17927959312439819061"
+      },
+      {
+        "file": "docs/otp-input/assets/props.md.B4y5Z2n8.lean.js",
         "hash": "6237259921819001702"
+      },
+      {
+        "file": "docs/otp-input/hashmap.json",
+        "hash": "135957557418567724"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-cyrillic.By2_1cv3.woff2",
+        "hash": "17518006115323730802"
+      },
+      {
+        "file": "docs/otp-input/assets/events.md.Bjuujt2F.lean.js",
+        "hash": "9994194091408718134"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-latin.Di8DUHzh.woff2",
+        "hash": "6650714724347801826"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
+        "hash": "9802537721033087843"
+      },
+      {
+        "file": "docs/otp-input/404.html",
+        "hash": "11739736049096346072"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "8602161890475449243"
+      },
+      {
+        "file": "docs/otp-input/index.html",
+        "hash": "11510894137716050479"
+      },
+      {
+        "file": "docs/otp-input/images/layer-solid-dark.png",
+        "hash": "14960698455115702100"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-greek.DJ8dCoTZ.woff2",
+        "hash": "15478754605072970185"
+      },
+      {
+        "file": "docs/otp-input/images/banner.png",
+        "hash": "6203059496166803201"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-greek.BBVDIX6e.woff2",
+        "hash": "12225282773869548609"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "6904001187784468710"
+      },
+      {
+        "file": "docs/otp-input/assets/get-started.md.v-1vpJ_0.lean.js",
+        "hash": "5733857892724121872"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
+        "hash": "2268099297404114829"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "6662140265844477394"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "17210788548465150864"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
+        "hash": "8241952812200813355"
+      },
+      {
+        "file": "docs/otp-input/assets/demo.md.B99sZLwj.js",
+        "hash": "17186121967849597136"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
+        "hash": "10886706858615268408"
+      },
+      {
+        "file": ".github/workflows/publish_latest.yml",
+        "hash": "292815055604179558"
+      },
+      {
+        "file": "docs/otp-input/props.html",
+        "hash": "16035715426992767861"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "9528850957059324109"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
+        "hash": "7674416464885726785"
+      },
+      {
+        "file": "docs/otp-input/images/recycle.png",
+        "hash": "10221039839496206773"
+      },
+      {
+        "file": "docs/otp-input/assets/chunks/theme.H0wAIs0M.js",
+        "hash": "2460207769921048422"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-latin.C2AdPX0b.woff2",
+        "hash": "10829668166839501238"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "hash": "9354069382014108879"
+      },
+      {
+        "file": "docs/otp-input/assets/index.md.DTUK7R-n.lean.js",
+        "hash": "1276828937690239591"
+      },
+      {
+        "file": "docs/otp-input/images/typescript-logo.png",
+        "hash": "16202868179513312433"
+      },
+      {
+        "file": "nx.json",
+        "hash": "15833547922043738392"
+      },
+      {
+        "file": "docs/otp-input/assets/chunks/framework.EcI72IWR.js",
+        "hash": "16009747547784797832"
       }
     ],
     "projectFileMap": {
@@ -319,8 +319,44 @@
           "hash": "9815179614358468564"
         },
         {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/app.js",
+          "hash": "13122913102258831690"
+        },
+        {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/assets/style.MpdlLaai.css",
+          "hash": "9627755273608865036"
+        },
+        {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/demo.md.js",
+          "hash": "13118145465886017532"
+        },
+        {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/events.md.js",
+          "hash": "11683623851525075554"
+        },
+        {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/get-started.md.js",
+          "hash": "11739517361323738203"
+        },
+        {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/index.md.js",
+          "hash": "11393845215357699452"
+        },
+        {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/package.json",
+          "hash": "12239476031996390172"
+        },
+        {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/plugin-vue_export-helper.1tPrXgE0.js",
+          "hash": "2835760866106112820"
+        },
+        {
+          "file": "packages/paystack-inline/docs/.vitepress/.temp/props.md.js",
+          "hash": "15274518504423984759"
+        },
+        {
           "file": "packages/paystack-inline/docs/.vitepress/config.ts",
-          "hash": "8030872990834175074"
+          "hash": "10286041323236910856"
         },
         {
           "file": "packages/paystack-inline/docs/.vitepress/theme/PaystackPage.vue",
@@ -332,11 +368,11 @@
         },
         {
           "file": "packages/paystack-inline/docs/.vitepress/theme/index.ts",
-          "hash": "2127755201863590257"
+          "hash": "11551985705571303733"
         },
         {
           "file": "packages/paystack-inline/docs/demo.md",
-          "hash": "8135526922890962573"
+          "hash": "5658523967649030896"
         },
         {
           "file": "packages/paystack-inline/docs/events.md",
@@ -388,7 +424,7 @@
         },
         {
           "file": "packages/paystack-inline/package.json",
-          "hash": "523067947689688102",
+          "hash": "8910392899377748076",
           "deps": [
             "npm:vue",
             "npm:@vitejs/plugin-vue",

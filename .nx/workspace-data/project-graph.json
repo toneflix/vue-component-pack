@@ -18,7 +18,7 @@
               "docs:dev",
               "docs:build",
               "docs:preview",
-              "deploy"
+              "docs:deploy"
             ]
           },
           "description": "Paystack Inline component for Vue 3."
@@ -113,21 +113,17 @@
               "^docs:preview"
             ]
           },
-          "deploy": {
+          "docs:deploy": {
             "executor": "nx:run-script",
             "options": {
-              "script": "deploy"
+              "script": "docs:deploy"
             },
             "metadata": {
-              "scriptContent": "../deploy.sh paystack-inline",
-              "runCommand": "pnpm run deploy"
+              "scriptContent": "../../deploy.sh paystack-inline",
+              "runCommand": "pnpm run docs:deploy"
             },
             "configurations": {},
-            "parallelism": true,
-            "cache": true,
-            "dependsOn": [
-              "^deploy"
-            ]
+            "parallelism": true
           },
           "nx-release-publish": {
             "executor": "@nx/js:release-publish",

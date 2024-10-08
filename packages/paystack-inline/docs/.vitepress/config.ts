@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Vue Paystack Inline",
-  base: import.meta.env.DEV ? undefined : "/vue-component-pack/paystack-inline",
+  base: "/vue-component-pack/paystack-inline",
   description: "Vue Paystack Inline documentation",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

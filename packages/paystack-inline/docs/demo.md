@@ -7,7 +7,9 @@ hero:
 ---
 
 <div :class="$style['my-md']">
-    <paystack-inline :amount="5000"/>
+    <ClientOnly>
+        <paystack-inline :amount="5000"/>
+    </ClientOnly>
 </div>
 
 Visit the [Props](/props) page to see usage examples.
