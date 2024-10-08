@@ -1,125 +1,124 @@
-
 declare module '@paystack/inline-js' {
   interface PopupTransaction {
     /**
      * Transaction id, if loaded
      */
-    id: string;
+    id: string
     /**
      * Status of the transaction
      */
-    status: null | 'error' | 'abandoned' | 'auth' | 'failed' | 'success' | 'pending';
+    status: null | 'error' | 'abandoned' | 'auth' | 'failed' | 'success' | 'pending'
     /**
      * List of transaction errors, if any
      */
-    errors: string[];
+    errors: string[]
     /**
      * API response from last charge attempt
      */
-    response: Record<string, string>;
+    response: Record<string, string>
     /**
      * Checkout url if transaction is loaded
      */
-    checkoutUrl: string;
+    checkoutUrl: string
   }
 
   interface NewTransactionOptions {
     /**
      * Your Paystack public key. You can find this on your dashboard in Settings > API Keys & Webhooks
      */
-    key: string;
+    key: string
     /**
      * The amount of the transaction in kobo
      */
-    amount: number;
+    amount: number
     /**
      * The currency of the transaction. Available options in PaystackPop.CURRENCIES object
      */
-    currency?: string;
+    currency?: string
     /**
      * The email address of the customer
      */
-    email: string;
+    email: string
     /**
      * The first name of the customer
      */
-    firstName?: string;
+    firstName?: string
     /**
      * The last name of the customer
      */
-    lastName?: string;
+    lastName?: string
     /**
      * The phone number of the customer
      */
-    phone?: string;
+    phone?: string
     /**
      * A valid Paystack customer code. If provided, this overrides all the customer information above
      */
-    customerCode?: string;
+    customerCode?: string
     /**
      * An array of payment channels to use. By default, all options available in in PaystackPop.CHANNELS are used
      */
-    channels?: string[];
+    channels?: string[]
     /**
      * A valid Paystack payment request id
      */
-    paymentRequest?: string;
+    paymentRequest?: string
     /**
      * A valid Paystack payment page id
      */
-    paymentPage?: string;
+    paymentPage?: string
     /**
      * A valid object of extra information that you want to be saved to the transaction. To show this on the dashboard, see https://www.npmjs.com/package/@paystack/inline-js#tip-seeing-your-metadata-on-the-dashboard
      */
     metadata?: {
       custom_fields?: {
-        display_name: string,
-        variable_name: string,
-        value?: string | number,
-      }[];
-    };
+        display_name: string
+        variable_name: string
+        value?: string | number
+      }[]
+    }
     /**
      * Unique case sensitive transaction reference. Only -,., = and alphanumeric characters allowed.
      */
-    reference?: string;
+    reference?: string
     /**
      * A valid Paystack split code e.g. SPL_qQsdYLXddd
      */
-    split_code?: string;
+    split_code?: string
     /**
      *
      * A valid Paystack subaccount code e.g. ACCT_8f4s1eq7ml6rlzj
      */
-    subaccountCode?: string;
+    subaccountCode?: string
     /**
      * Who bears Paystack charges? account or subaccount (defaults to account).
      */
-    bearer?: number;
+    bearer?: number
     /**
      * A flat fee (in kobo) to charge the subaccount for this transaction.
      * This overrides the split percentage set when the subaccount was created.
      */
-    transactionCharge?: string;
+    transactionCharge?: string
     /**
      * A valid Paystack plan code e.g. PLN_cujsmvoyq2209ws
      */
-    planCode?: string;
+    planCode?: string
     /**
      * The number of subscriptions to create for this plan
      */
-    subscriptionCount?: number;
+    subscriptionCount?: number
     /**
      * Interval for the plan. Valid intervals are hourly, daily, weekly, monthly, annually
      */
-    planInterval?: string;
+    planInterval?: string
     /**
      * The number of times to charge for this subscription
      */
-    subscriptionLimit?: number;
+    subscriptionLimit?: number
     /**
      * The start date for the subscription (after the first charge)
      */
-    subscriptionStartDate?: string;
+    subscriptionStartDate?: string
     /**
      * Called when the customer successfully completes a transaction
      *
@@ -130,36 +129,36 @@ declare module '@paystack/inline-js' {
       /**
        * transaction id from API
        */
-      id: string;
+      id: string
       /**
        * transaction reference
        */
-      reference: string;
+      reference: string
       /**
        * message from API
        */
-      message: string;
+      message: string
       /**
        * The redirect URL configured on you paystach dashboard along with the transaction reference
        */
-      redirecturl: string;
+      redirecturl: string
       /**
        * The status of the transaction
        */
-      status: 'success';
+      status: 'success'
       /**
        * The transaction ID
        */
-      trans: string;
+      trans: string
       /**
        * The transaction ID
        */
-      transaction: string;
+      transaction: string
       /**
        * transaction reference
        */
-      trxref: string;
-    }) => void;
+      trxref: string
+    }) => void
     /**
      * Called when the transaction is successful loaded and the customer can see the checkout form
      *
@@ -170,18 +169,18 @@ declare module '@paystack/inline-js' {
       /**
        * customer object from API
        */
-      customer: Record<string, string>;
+      customer: Record<string, string>
       /**
        * transaction access code
        */
-      accessCode: string;
-    }) => void;
+      accessCode: string
+    }) => void
     /**
      * Called when the customer cancels the transaction
      *
      * @returns
      */
-    onCancel?: () => void;
+    onCancel?: () => void
     /**
      * Called when the transaction was not successfully loaded
      *
@@ -192,10 +191,10 @@ declare module '@paystack/inline-js' {
        * error response from API
        */
       error: {
-        type: 'setup';
-        message: string;
+        type: 'setup'
+        message: string
       }
-    ) => void;
+    ) => void
   }
 
   class PaystackInline {
@@ -204,7 +203,7 @@ declare module '@paystack/inline-js' {
      * This method starts a new transaction on the checkout form.
      * @param options
      */
-    newTransaction (options: NewTransactionOptions): {
+    newTransaction(options: NewTransactionOptions): {
       /**
        * This method returns all available transaction information.
        * This is populated throughout the lifecycle of the transaction.
@@ -212,26 +211,26 @@ declare module '@paystack/inline-js' {
        * @returns
        */
       getStatus: () => PopupTransaction
-    };
+    }
 
-    isLoaded (): boolean;
+    isLoaded(): boolean
 
-    resumeTransaction (options: {
+    resumeTransaction(options: {
       /**
        * Access code created on the API via the https://paystack.com/docs/#initialize-a-transaction endpoint
        */
-      accessCode: string;
-    }): PopupTransaction;
+      accessCode: string
+    }): PopupTransaction
 
     /**
      * Use this to cancel a transaction and hide the checkout iFrame.
      */
-    cancelTransaction (
+    cancelTransaction(
       /**
        * ID or transaction to cancel
        */
       transaction: string | PopupTransaction
-    ): void;
+    ): void
 
     /**
      * This method loads a transaction on the checkout form without opening it.
@@ -239,92 +238,92 @@ declare module '@paystack/inline-js' {
      *
      * @param options
      */
-    preloadTransaction (options: NewTransactionOptions): () => void;
+    preloadTransaction(options: NewTransactionOptions): () => void
 
     /**
      * This method loads a transaction on the checkout form but shows a pre
      * checkout modal before loading the form if a wallet payment e.g Apple Pay is supported.
      */
-    checkout (options: NewTransactionOptions): Promise<PopupTransaction>;
+    checkout(options: NewTransactionOptions): Promise<PopupTransaction>
 
     /**
      * This method mounts a wallet payment button e.g Apple pay on a provided div
      * and also provides the option to allow a provided button open the checkout form.
      */
-    paymentRequest (
+    paymentRequest(
       options: NewTransactionOptions & {
         /**
          * ID of div to mount the payment request button
          */
-        container: string;
+        container: string
         /**
          * ID of button to open checkout form
          */
-        loadPaystackCheckoutButton?: string;
+        loadPaystackCheckoutButton?: string
         styles: {
-          theme: { [key: string]: string },
+          theme: { [key: string]: string }
           applePay: { [key: string]: string }
-        };
+        }
         /**
          * Called when the payment request button has been mounted
          *
          * @returns
          */
-        onElementsMount: (options?: { applePay: boolean } | null) => void;
+        onElementsMount: (options?: { applePay: boolean } | null) => void
       }
-    ): Promise<PopupTransaction>;
+    ): Promise<PopupTransaction>
 
     /**
      * Autogenerated id for the Popup instance
      */
-    id: string;
+    id: string
 
     parameters: {
-      key: string;
-      email: string;
-      amount: number;
-    };
+      key: string
+      email: string
+      amount: number
+    }
 
     urlParameters: {
-      key: string;
-      email: string;
-      amount: number;
-      metadata: string;
-      mode: 'popup';
-    };
+      key: string
+      email: string
+      amount: number
+      metadata: string
+      mode: 'popup'
+    }
 
-    status: string | null;
+    status: string | null
 
-    authorizationUrl: string;
+    authorizationUrl: string
 
     errors: {
-      type: 'setup';
-      message: string;
-    }[];
+      type: 'setup'
+      message: string
+    }[]
 
-    response: null;
+    response: null
 
-    isActive: boolean;
+    isActive: boolean
 
     /**
      * A placeholder div that shows a loading indicator when the main checkout iFrame is loading
      */
-    backgroundDiv: HTMLDivElement;
+    backgroundDiv: HTMLDivElement
 
     /**
      * The iframe where the payment happens
      */
-    checkoutIframe: HTMLIFrameElement;
+    checkoutIframe: HTMLIFrameElement
 
     /**
      * A div for an wallet payments i.e Apple pay pre checkout experience
      */
-    preCheckoutModal: HTMLDivElement;
+    preCheckoutModal: HTMLDivElement
 
     /**
      * The div container for wallet payment buttons i.e Apple Pay
      */
-    paymentRequestContainer: HTMLDivElement;
+    paymentRequestContainer: HTMLDivElement
   }
-  export default PaystackInline;
+  export default PaystackInline
 }

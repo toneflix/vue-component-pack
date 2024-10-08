@@ -1,7 +1,5 @@
 import type { GlobalComponentConstructor, PaystackInlineProps } from './types'
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     PaystackInline: GlobalComponentConstructor<
@@ -33,7 +31,11 @@ declare module '@vue/runtime-core' {
         /**
          * Emitted when the payment initialization is successfull
          */
-        onInitialized?: (data: { reference: string; authorization_url?: string; message?: string }) => void
+        onInitialized?: (data: {
+          reference: string
+          authorization_url?: string
+          message?: string
+        }) => void
       },
       {
         /**
@@ -44,4 +46,4 @@ declare module '@vue/runtime-core' {
     >
   }
 }
-export { }
+export {}
