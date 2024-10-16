@@ -35,7 +35,7 @@ const emit = defineEmits<{
   ): void
 }>()
 
-const reference = defineModel<string>()
+const reference = defineModel<string>('reference')
 
 const props = withDefaults(defineProps<PaystackInlineProps>(), {
   btnLabel: 'Pay Now',
