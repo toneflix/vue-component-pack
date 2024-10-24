@@ -115,43 +115,6 @@ importers:
         specifier: ^3.5.12
         version: 3.5.12(typescript@5.6.3)
 
-  runner:
-    dependencies:
-      '@toneflix/otp-input':
-        specifier: workspace:^
-        version: link:../packages/otp-input
-      '@toneflix/paystack-inline':
-        specifier: workspace:^
-        version: link:../packages/paystack-inline
-      '@toneflix/vue-auth':
-        specifier: workspace:^
-        version: link:../packages/vue-auth
-      axios:
-        specifier: ^1.7.7
-        version: 1.7.7
-      miragejs:
-        specifier: 0.2.0-alpha.3
-        version: 0.2.0-alpha.3
-      pinia:
-        specifier: ^2.2.4
-        version: 2.2.4(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
-      vue:
-        specifier: ^3.5.12
-        version: 3.5.12(typescript@5.6.3)
-      vue-router:
-        specifier: ^4.4.5
-        version: 4.4.5(vue@3.5.12(typescript@5.6.3))
-    devDependencies:
-      '@faker-js/faker':
-        specifier: ^9.0.3
-        version: 9.0.3
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.4
-        version: 5.1.4(vite@5.4.10(sass@1.80.3))(vue@3.5.12(typescript@5.6.3))
-      vite:
-        specifier: ^5.4.10
-        version: 5.4.10(sass@1.80.3)
-
 packages:
   '@algolia/autocomplete-core@1.9.3':
     resolution:
@@ -669,13 +632,6 @@ packages:
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
-  '@faker-js/faker@9.0.3':
-    resolution:
-      {
-        integrity: sha512-lWrrK4QNlFSU+13PL9jMbMKLJYXDFu3tQfayBsMXX7KL/GiQeqfB1CzHkqD5UHBUtPAuPo6XwGbMFNdVMZObRA==
-      }
-    engines: { node: '>=18.0.0', npm: '>=9.0.0' }
-
   '@humanfs/core@0.19.0':
     resolution:
       {
@@ -743,12 +699,6 @@ packages:
         integrity: sha512-wi72R01tgjBjzG2kjRyTHl4yCTKDfDMIXRyKz9E/FBa9SkFvUOAE4bdyY9MhEsRZmSWL7+CYE8Flv/HScRpBbA==
       }
     engines: { node: '>=18.0.0' }
-
-  '@miragejs/pretender-node-polyfill@0.1.2':
-    resolution:
-      {
-        integrity: sha512-M/BexG/p05C5lFfMunxo/QcgIJnMT2vDVCd00wNqK2ImZONIlEETZwWJu1QtLxtmYlSHlCFl3JNzp0tLe7OJ5g==
-      }
 
   '@napi-rs/wasm-runtime@0.2.4':
     resolution:
@@ -2883,12 +2833,6 @@ packages:
       }
     engines: { node: '>=4' }
 
-  fake-xml-http-request@2.1.2:
-    resolution:
-      {
-        integrity: sha512-HaFMBi7r+oEC9iJNpc3bvcW7Z7iLmM26hPDmlb0mFwyANSsOQAtJxbdWsXITKOzZUyMYK0zYCv3h5yDj9TsiXg==
-      }
-
   fast-deep-equal@3.1.3:
     resolution:
       {
@@ -3392,12 +3336,6 @@ packages:
         integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==
       }
     engines: { node: '>=8' }
-
-  inflected@2.1.0:
-    resolution:
-      {
-        integrity: sha512-hAEKNxvHf2Iq3H60oMBHkB4wl5jn3TPF3+fXek/sRwAB5gP9xWs4r7aweSF95f99HFoz69pnZTcu8f0SIHV18w==
-      }
 
   inherits@2.0.4:
     resolution:
@@ -4146,12 +4084,6 @@ packages:
       }
     engines: { node: '>= 8' }
 
-  miragejs@0.2.0-alpha.3:
-    resolution:
-      {
-        integrity: sha512-rcfnEUoOj5NP9xgUTctazWQIyN3ZpB/Wm/pEewLtPOhpDfl4M1kdE9R12IywxJkTtvt0qbx3GrMrF9SncWz0VA==
-      }
-
   mitt@3.0.1:
     resolution:
       {
@@ -4733,12 +4665,6 @@ packages:
       }
     engines: { node: '>= 0.8.0' }
 
-  pretender@3.4.7:
-    resolution:
-      {
-        integrity: sha512-jkPAvt1BfRi0RKamweJdEcnjkeu7Es8yix3bJ+KgBC5VpG/Ln4JE3hYN6vJym4qprm8Xo5adhWpm3HCoft1dOw==
-      }
-
   prettier@2.3.2:
     resolution:
       {
@@ -5014,12 +4940,6 @@ packages:
       }
     engines: { node: '>=18.0.0', npm: '>=8.0.0' }
     hasBin: true
-
-  route-recognizer@0.3.4:
-    resolution:
-      {
-        integrity: sha512-2+MhsfPhvauN1O8KaXpXAOfR/fwe8dnUXVM+xw7yt40lJRfPVQxV6yryZm0cgRvAj5fMF/mdRZbL2ptwbs5i2g==
-      }
 
   run-async@2.4.1:
     resolution:
@@ -6323,8 +6243,6 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@faker-js/faker@9.0.3': {}
-
   '@humanfs/core@0.19.0': {}
 
   '@humanfs/node@0.16.5':
@@ -6437,8 +6355,6 @@ snapshots:
       - encoding
       - supports-color
       - typescript
-
-  '@miragejs/pretender-node-polyfill@0.1.2': {}
 
   '@napi-rs/wasm-runtime@0.2.4':
     dependencies:
@@ -7862,8 +7778,6 @@ snapshots:
       iconv-lite: 0.4.24
       tmp: 0.0.33
 
-  fake-xml-http-request@2.1.2: {}
-
   fast-deep-equal@3.1.3: {}
 
   fast-glob@3.3.2:
@@ -8155,8 +8069,6 @@ snapshots:
   imurmurhash@0.1.4: {}
 
   indent-string@4.0.0: {}
-
-  inflected@2.1.0: {}
 
   inherits@2.0.4: {}
 
@@ -8674,13 +8586,6 @@ snapshots:
       minipass: 3.3.6
       yallist: 4.0.0
 
-  miragejs@0.2.0-alpha.3:
-    dependencies:
-      '@miragejs/pretender-node-polyfill': 0.1.2
-      inflected: 2.1.0
-      lodash: 4.17.21
-      pretender: 3.4.7
-
   mitt@3.0.1: {}
 
   mkdirp@1.0.4: {}
@@ -9079,11 +8984,6 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  pretender@3.4.7:
-    dependencies:
-      fake-xml-http-request: 2.1.2
-      route-recognizer: 0.3.4
-
   prettier@2.3.2: {}
 
   pretty-format@29.7.0:
@@ -9239,8 +9139,6 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.24.0
       '@rollup/rollup-win32-x64-msvc': 4.24.0
       fsevents: 2.3.3
-
-  route-recognizer@0.3.4: {}
 
   run-async@2.4.1: {}
 
