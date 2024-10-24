@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/otp-input",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Simple customizable OTP input for Vue 3.",
   "style": "dist/lib/style.css",
   "main": "dist/lib/index.js",
