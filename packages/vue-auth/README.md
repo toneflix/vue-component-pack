@@ -75,13 +75,17 @@ const handleLogin = async () => {
 <template>
   <div class="column-container">
     <input v-model="form.email" placeholder="Email Address" />
+
     <p class="error" v-if="data.error?.email">
       {{ data.error.errors.email }}
     </p>
+
     <input v-model="form.password" placeholder="Password" type="password" />
+
     <p class="error" v-if="data.error?.password">
       {{ data.error.errors.password }}
     </p>
+
     <button @click="handleLogin">Login</button>
   </div>
 </template>
