@@ -1,106 +1,97 @@
-import { AuthOptions, AuthUser, LoginCredentials, RegisterCredentials } from '../types';
+import { AuthOptions, AuthUser, LoginCredentials, RegisterCredentials } from '../types'
 
-import { createAuthStore } from '../stores/auth';
-import { getAuthConfig } from '../config';
+import { createAuthStore } from '../stores/auth'
+import { getAuthConfig } from '../config'
 
 export const useAuth = () => {
-    const useAuthStore = createAuthStore()
-    const store = useAuthStore();
+  const useAuthStore = createAuthStore()
+  const store = useAuthStore()
 
-    /**
-     * Attempt to do a login
-     * 
-     * @param credentials 
-     * @param options 
-     * @returns 
-     */
-    const login = <U = AuthUser, T = LoginCredentials> (
-        credentials: T,
-        options: AuthOptions = getAuthConfig()
-    ) => {
-        return store.login<U, T>(credentials, options);
-    };
+  /**
+   * Attempt to do a login
+   *
+   * @param credentials
+   * @param options
+   * @returns
+   */
+  const login = <U = AuthUser, T = LoginCredentials>(
+    credentials: T,
+    options: AuthOptions = getAuthConfig()
+  ) => {
+    return store.login<U, T>(credentials, options)
+  }
 
-    /**
-     * Attempt to create a new user account
-     * 
-     * @param credentials 
-     * @param options 
-     * @returns 
-     */
-    const register = <U = AuthUser, T = RegisterCredentials> (
-        credentials: T,
-        options: AuthOptions = getAuthConfig()
-    ) => {
-        return store.register<U, T>(credentials, options);
-    };
+  /**
+   * Attempt to create a new user account
+   *
+   * @param credentials
+   * @param options
+   * @returns
+   */
+  const register = <U = AuthUser, T = RegisterCredentials>(
+    credentials: T,
+    options: AuthOptions = getAuthConfig()
+  ) => {
+    return store.register<U, T>(credentials, options)
+  }
 
-    /**
-     * Attempt to log the user out
-     * 
-     * @param options 
-     * @param credentials 
-     * @returns 
-     */
-    const logout = <T = unknown> (
-        options: AuthOptions = getAuthConfig(),
-        credentials?: T,
-    ) => {
-        return store.logout(options, credentials);
-    };
+  /**
+   * Attempt to log the user out
+   *
+   * @param options
+   * @param credentials
+   * @returns
+   */
+  const logout = <T = unknown>(options: AuthOptions = getAuthConfig(), credentials?: T) => {
+    return store.logout(options, credentials)
+  }
 
-    /**
-     * Request for a password reset token
-     * 
-     * @param options 
-     * @param credentials 
-     * @returns 
-     */
-    const forgot = <T = unknown> (
-        credentials?: T,
-        options: AuthOptions = getAuthConfig(),
-    ) => {
-        return store.forgot(credentials, options);
-    };
+  /**
+   * Request for a password reset token
+   *
+   * @param options
+   * @param credentials
+   * @returns
+   */
+  const forgot = <T = unknown>(credentials?: T, options: AuthOptions = getAuthConfig()) => {
+    return store.forgot(credentials, options)
+  }
 
-    /**
-     * Attempt to reset the user's password
-     * 
-     * @param options 
-     * @param credentials 
-     * @returns 
-     */
-    const reset = <T = unknown> (
-        credentials?: T,
-        options: AuthOptions = getAuthConfig(),
-    ) => {
-        return store.reset(credentials, options);
-    };
+  /**
+   * Attempt to reset the user's password
+   *
+   * @param options
+   * @param credentials
+   * @returns
+   */
+  const reset = <T = unknown>(credentials?: T, options: AuthOptions = getAuthConfig()) => {
+    return store.reset(credentials, options)
+  }
 
-    /**
-     * Get the token from storage and populate the store
-     * If the token is available, also get the user from the API
-     * 
-     * @param options 
-     * @param credentials 
-     * @returns 
-     */
-    const loadUserFromStorage = <U = AuthUser, T = unknown> (
-        options: AuthOptions = getAuthConfig(),
-        credentials?: T,
-    ) => {
-        return store.loadUserFromStorage<U, T>(options, credentials);
-    };
+  /**
+   * Get the token from storage and populate the store
+   * If the token is available, also get the user from the API
+   *
+   * @param options
+   * @param credentials
+   * @returns
+   */
+  const loadUserFromStorage = <U = AuthUser, T = unknown>(
+    options: AuthOptions = getAuthConfig(),
+    credentials?: T
+  ) => {
+    return store.loadUserFromStorage<U, T>(options, credentials)
+  }
 
-    return {
-        user: store.user,
-        isAuthenticated: store.isAuthenticated,
+  return {
+    user: store.user,
+    isAuthenticated: store.isAuthenticated,
 
-        reset,
-        login,
-        logout,
-        forgot,
-        register,
-        loadUserFromStorage
-    };
+    reset,
+    login,
+    logout,
+    forgot,
+    register,
+    loadUserFromStorage
+  }
 }

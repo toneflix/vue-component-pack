@@ -1,12 +1,12 @@
-import "./style.css"
+import './style.css'
 
-import { AuthUser, authPlugin } from '@toneflix/vue-auth';
+import { AuthUser, authPlugin } from '@toneflix/vue-auth'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import App from './app.vue'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { makeServer } from './server/index';
+import { makeServer } from './server/index'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,13 +16,13 @@ const router = createRouter({
     {
       path: '/auth/profile',
       component: () => import('./Pages/vue-auth/UserPage.vue'),
-      meta: { requiresAuth: true },
+      meta: { requiresAuth: true }
     },
     {
       path: '/auth/login',
       name: 'login',
       meta: { requiresGuest: true },
-      component: () => import('./Pages/vue-auth/LoginPage.vue'),
+      component: () => import('./Pages/vue-auth/LoginPage.vue')
     },
     {
       path: '/auth/register',
@@ -41,7 +41,7 @@ const router = createRouter({
       name: 'reset',
       component: () => import('./Pages/vue-auth/ResetPage.vue'),
       meta: { requiresGuest: true }
-    },
+    }
   ]
 })
 
@@ -59,24 +59,24 @@ const auth = authPlugin({
     logout: '/logout',
     profile: '/profile',
     forgot: '/forgot',
-    reset: '/reset',
+    reset: '/reset'
   },
   loginRouteName: '/auth/login',
   defaultAuthRouteName: '/auth/profile',
   getAuthHeaders: () => {
-    const token = localStorage.getItem('my_auth_token');
+    const token = localStorage.getItem('my_auth_token')
     return {
       Authorization: `Bearer ${token}`
-    };
+    }
   },
-  transformResponse (resp: { data: AuthUser, token?: string, timeout?: number, message?: string }) {
-    return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message };
-  },
+  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+    return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
+  }
 })
 
 app.use(pinia)
 app.use(router)
-app.use(auth);
+app.use(auth)
 
 makeServer()
 
