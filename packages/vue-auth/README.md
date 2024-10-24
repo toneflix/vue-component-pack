@@ -18,123 +18,73 @@ pnpm add @toneflix/vue-auth
 
 ## Usage
 
-### Global Registration
+### Registration
 
-You can make Vue Auth available throughout your Vue project.
+To initialize the library, you need to install it on your base vue instance.
 
 **main.js or main.ts**
 
 ```js
 import { createApp } from 'vue'
 import App from './app.vue'
-import VueAuth from '@toneflix/vue-auth'
+import { authPlugin } from '@toneflix/vue-auth'
 
 const app = createApp(App)
+const pinia = createPinia()
 
-app.use(VueAuth, {
-  baseUrl: 'https://example.com/api/v1'
+const auth = authPlugin({
+  baseUrl: 'http://example.com/api/v1',
+  storageKey: 'my_auth_token',
   endpoints: {
     login: '/login',
-    logout: '/logout'
-    profile: '/profile',
     register: '/register',
-    refreshToken: '/refresh-token'
-  },
-  storageKey: 'my_auth_token'
+    logout: '/logout'
+  }
 })
+
+app.use(pinia)
+app.use(auth)
 
 app.mount('#app')
 ```
 
-### Local Registration
+### Usage
 
-You can also import the plugin in your Vue component.
+Once registered, vue-auth is now ready for use.
 
 **SomeComponent.vue**
 
 ```vue
 <script setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { useAuth } from '@toneflix/vue-auth'
+import { useRouter } from 'vue-router'
 
-const { login, logout, isAuthenticated } = useAuth()
+const router = useRouter()
+const { login } = useAuth()
 
-const form = reactive({ email: '', password: '' })
+const form = reactive({ email: 'test@example.com', password: 'password' })
+const data = ref({ user: {}, token: null, error: null })
 
 const handleLogin = async () => {
-  try {
-    await login(
-      { email: form.email, password: form.password },
-      {
-        baseUrl: 'https://example.com/api/v1'
-        endpoints: {
-          login: '/login',
-        },
-        storageKey: 'my_auth_token'
-      }
-    )
-  } catch (err) {
-    console.error(err)
-  }
+  data.value = await login(form)
+  if (!data.value.error) router.replace('/auth/profile')
 }
 </script>
 
 <template>
-  <template>
-    <div
-      style="
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 300px;
-    "
-    >
-      <input v-model="form.email" placeholder="Email Address" />
-      <input v-model="form.password" placeholder="Password" />
-      <button @click="handleLogin">Login</button>
-    </div>
-  </template>
-</template>
-```
-
-### Normal use of the registered plugin in your components
-
-**SomeComponent.vue**
-
-```vue
-<script setup lang="ts">
-import { reactive } from 'vue'
-import { useAuth } from '@toneflix/vue-auth'
-
-const { login, logout, isAuthenticated } = useAuth()
-
-const form = reactive({ email: '', password: '' })
-
-const handleLogin = async () => {
-  try {
-    await login({ email: form.email, password: form.password })
-  } catch (err) {
-    console.error(err)
-  }
-}
-</script>
-
-<template>
-  <div
-    style="
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 300px;
-    "
-  >
+  <div class="column-container">
     <input v-model="form.email" placeholder="Email Address" />
-    <input v-model="form.password" placeholder="Password" />
+    <p class="error" v-if="data.error?.email">
+      {{ data.error.errors.email }}
+    </p>
+    <input v-model="form.password" placeholder="Password" type="password" />
+    <p class="error" v-if="data.error?.password">
+      {{ data.error.errors.password }}
+    </p>
     <button @click="handleLogin">Login</button>
   </div>
 </template>
 ```
+
+For full usage and implementation details [visit the documentation page](https://toneflix.github.io/vue-component-pack/vue-auth/)
