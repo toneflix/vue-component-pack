@@ -1,6 +1,6 @@
 import { App, Plugin } from 'vue';
-import { AuthOptions } from './src/types';
 
+import { AuthOptions } from './src/types';
 import { createPinia } from 'pinia';
 import { setAuthConfig } from './src/config';
 import { useAuthStore } from './src/stores/auth';
@@ -59,7 +59,7 @@ export const authPlugin = (options: AuthOptions) => {
       store.loadUserFromStorage(options);
       app.config.globalProperties.$user = store.user;
     }
-  } satisfies Plugin;
+  };
 
   return vueAuth
 }
