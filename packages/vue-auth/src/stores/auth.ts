@@ -1,9 +1,9 @@
 import { AuthOptions, AuthResponse, AuthUser, LoginCredentials, RegisterCredentials } from '../types';
+import { Ref, ref, toValue } from 'vue';
 import { getAuthConfig, url } from '../config';
 
 import axios from 'axios';
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
 
 axios.defaults.headers.common["Content-Type"] = "application/json; charset=utf-8";
 axios.defaults.headers.common["Accept"] = "application/json";
@@ -30,22 +30,29 @@ export function createAuthStore<U = unknown> () {
             user: AuthUser | U;
             token?: string;
             error?: undefined;
+            message?: string;
         }> => {
-            try {
-                const { data } = await axios.post<AuthResponse<U>>(url('login'), credentials, options.axiosConfig);
 
-                const { user: usr, token: tkn } = options.transformResponse
+            const endpoint = url('login')
+            try {
+                const { data } = await axios.post<AuthResponse<U>>(
+                    endpoint,
+                    toValue(credentials),
+                    options.axiosConfig
+                );
+
+                const { user: usr, token: tkn, message } = options.transformResponse
                     ? options.transformResponse(data)
-                    : { user: data.user, token: data.token };
+                    : { user: data.user, token: data.token, message: data.message };
 
                 user.value = usr;
                 token.value = tkn;
                 isAuthenticated.value = true;
                 localStorage.setItem(options.storageKey || 'auth_token', data.token);
 
-                return { user: usr, token: tkn };
+                return { user: usr, token: tkn, message };
             } catch ({ response }) {
-                return { user: {} as AuthUser, error: response?.data || {} };
+                return { user: {} as U, error: response?.data || {}, message: response?.data?.message };
             }
         }
 
@@ -63,26 +70,29 @@ export function createAuthStore<U = unknown> () {
             user: AuthUser | U;
             token?: string;
             error?: undefined;
+            message?: string;
         }> => {
+
+            const endpoint = url('register')
             try {
                 const { data } = await axios.post<AuthResponse<U>>(
-                    url('register'),
-                    credentials,
+                    endpoint,
+                    toValue(credentials),
                     options.axiosConfig
                 );
 
-                const { user: usr, token: tkn } = options.transformResponse
+                const { user: usr, token: tkn, message } = options.transformResponse
                     ? options.transformResponse(data)
-                    : { user: data.user, token: data.token };
+                    : { user: data.user, token: data.token, message: data.message };
 
                 user.value = usr;
                 token.value = tkn;
                 isAuthenticated.value = true;
                 localStorage.setItem(options.storageKey || 'auth_token', data.token);
 
-                return { user: usr, token: tkn };
+                return { user: usr, token: tkn, message };
             } catch ({ response }) {
-                return { user: {} as AuthUser, error: response?.data || {} };
+                return { user: {} as U, error: response?.data || {}, message: response?.data?.message };
             }
         }
 
@@ -98,19 +108,15 @@ export function createAuthStore<U = unknown> () {
             credentials?: T,
         ): Promise<{
             error?: undefined;
+            message?: string;
         } | undefined> => {
             const headers = options.getAuthHeaders ? await options.getAuthHeaders() : {};
 
+            const endpoint = url('logout')
             try {
                 await axios.post(
-                    url('logout'),
-                    credentials,
-                    {
-                        headers: {
-                            ...headers
-                        },
-                        ...options.axiosConfig
-                    }
+                    endpoint,
+                    toValue(credentials), { headers: { ...headers }, ...options.axiosConfig }
                 );
 
                 user.value = {} as AuthUser;
@@ -118,7 +124,90 @@ export function createAuthStore<U = unknown> () {
                 isAuthenticated.value = false;
                 localStorage.removeItem(options.storageKey || 'auth_token');
             } catch ({ response }) {
-                return { error: response?.data || {} };
+                return { error: response?.data || {}, message: response?.data?.message };
+            }
+        }
+
+        type ForgotResponse = { timeout?: number, message?: string }
+
+        /**
+         * Request for a password reset token
+         * 
+         * @param options 
+         * @param credentials 
+         * @returns 
+         */
+        const forgot = async <T = unknown, M extends ForgotResponse = ForgotResponse> (
+            credentials?: T,
+            options: AuthOptions = getAuthConfig(),
+        ): Promise<{
+            countdown: Ref<number>;
+            timeout?: number;
+            error?: undefined;
+            message?: string;
+        }> => {
+            const headers = options.getAuthHeaders ? await options.getAuthHeaders() : {};
+
+            const endpoint = url('forgot')
+            try {
+                const { data } = await axios.post<M>(
+                    endpoint,
+                    toValue(credentials), { headers: { ...headers }, ...options.axiosConfig }
+                );
+
+                const { timeout, message } = options.transformResponse
+                    ? options.transformResponse(data)
+                    : { timeout: data.timeout, message: data.message };
+
+                const countdown = ref<number>(0);
+
+                if (timeout && timeout > 0) {
+                    countdown.value = timeout
+                    const intval = setInterval(() => {
+                        countdown.value -= 1000
+                        if (countdown.value <= 0) {
+                            clearInterval(intval);
+                        }
+                    }, 1000);
+                }
+
+                return { timeout, countdown, message };
+            } catch ({ response }) {
+                return { error: response?.data || {}, countdown: ref(0), message: response?.data?.message };
+            }
+        }
+
+        /**
+         * Attempt to reset the user's password
+         * 
+         * @param credentials 
+         * @param options 
+         * @returns 
+         */
+        const reset = async <U = AuthUser, T = RegisterCredentials> (
+            credentials: T,
+            options: AuthOptions = getAuthConfig()
+        ): Promise<{
+            user: AuthUser | U;
+            error?: undefined;
+            message?: string;
+        }> => {
+
+            const endpoint = url('reset')
+            try {
+                const { data } = await axios.post<AuthResponse<U>>(
+                    endpoint,
+                    toValue(credentials),
+                    options.axiosConfig
+                );
+
+                const { user, message } = options.transformResponse
+                    ? options.transformResponse(data)
+                    : { user: data.user, message: data.message };
+
+                return { user, message };
+            } catch ({ response }) {
+                return { user: {} as U, error: response?.data || {}, message: response?.data?.message };
             }
         }
 
@@ -136,6 +225,7 @@ export function createAuthStore<U = unknown> () {
         ): Promise<{
             user: AuthUser | U;
             error?: undefined;
+            message?: string;
         }> => {
             const tkn = localStorage.getItem(options.storageKey || 'auth_token');
             const headers = options.getAuthHeaders ? await options.getAuthHeaders() : {};
@@ -145,34 +235,28 @@ export function createAuthStore<U = unknown> () {
                 isAuthenticated.value = true;
 
                 if (options.endpoints.profile) {
+
+                    const endpoint = url('profile')
                     try {
                         const { data } = await axios.get<AuthResponse<U>>(
-                            url('profile'),
-                            {
-                                headers: {
-                                    ...headers
-                                },
-                                params: {
-                                    ...credentials
-                                },
-                                ...options.axiosConfig
-                            }
+                            endpoint,
+                            { headers: { ...headers }, params: { ...toValue(credentials) }, ...options.axiosConfig }
                         );
 
-                        const { user: usr } = options.transformResponse
+                        const { user: usr, message } = options.transformResponse
                             ? options.transformResponse(data)
-                            : { user: data.user };
+                            : { user: data.user, message: data.message };
 
                         user.value = usr
 
-                        return { user: usr };
+                        return { user: usr, message };
                     } catch ({ response }) {
-                        return { user: {} as AuthUser, error: response?.data || {} };
+                        return { user: {} as U, error: response?.data || {}, message: response?.data?.message };
                     }
                 }
             }
 
-            return { user: {} as AuthUser };
+            return { user: {} as U };
         }
 
         return {
@@ -181,7 +265,9 @@ export function createAuthStore<U = unknown> () {
             isAuthenticated,
 
             login,
+            reset,
             logout,
+            forgot,
             register,
             loadUserFromStorage,
         }

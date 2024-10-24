@@ -30,6 +30,18 @@ const router = createRouter({
       component: () => import('./Pages/vue-auth/RegisterPage.vue'),
       meta: { requiresGuest: true }
     },
+    {
+      path: '/auth/forgot',
+      name: 'forgot',
+      component: () => import('./Pages/vue-auth/ForgotPage.vue'),
+      meta: { requiresGuest: true }
+    },
+    {
+      path: '/auth/reset',
+      name: 'reset',
+      component: () => import('./Pages/vue-auth/ResetPage.vue'),
+      meta: { requiresGuest: true }
+    },
   ]
 })
 
@@ -45,7 +57,9 @@ const auth = authPlugin({
     login: '/login',
     register: '/register',
     logout: '/logout',
-    profile: '/profile'
+    profile: '/profile',
+    forgot: '/forgot',
+    reset: '/reset',
   },
   loginRouteName: '/auth/login',
   defaultAuthRouteName: '/auth/profile',
@@ -55,8 +69,8 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     };
   },
-  transformResponse (resp: { data: AuthUser, token?: string }) {
-    return { user: resp.data, token: resp.token };
+  transformResponse (resp: { data: AuthUser, token?: string, timeout?: number, message?: string }) {
+    return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message };
   },
 })
 

@@ -50,6 +50,34 @@ export const useAuth = () => {
     };
 
     /**
+     * Request for a password reset token
+     * 
+     * @param options 
+     * @param credentials 
+     * @returns 
+     */
+    const forgot = <T = unknown> (
+        credentials?: T,
+        options: AuthOptions = getAuthConfig(),
+    ) => {
+        return store.forgot(credentials, options);
+    };
+
+    /**
+     * Attempt to reset the user's password
+     * 
+     * @param options 
+     * @param credentials 
+     * @returns 
+     */
+    const reset = <T = unknown> (
+        credentials?: T,
+        options: AuthOptions = getAuthConfig(),
+    ) => {
+        return store.reset(credentials, options);
+    };
+
+    /**
      * Get the token from storage and populate the store
      * If the token is available, also get the user from the API
      * 
@@ -67,9 +95,12 @@ export const useAuth = () => {
     return {
         user: store.user,
         isAuthenticated: store.isAuthenticated,
+
+        reset,
         login,
-        register,
         logout,
+        forgot,
+        register,
         loadUserFromStorage
     };
 }

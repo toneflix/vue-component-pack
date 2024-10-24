@@ -31,7 +31,7 @@ const handleLogin = async () => {
     <p class="error" v-if="data.error?.errors?.email">
       {{ data.error?.errors?.email }}
     </p>
-    <input v-model="form.password" placeholder="Password" />
+    <input v-model="form.password" placeholder="Password" type="password" />
     <p class="error" v-if="data.error?.errors?.password">
       {{ data.error.errors.password }}
     </p>

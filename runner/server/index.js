@@ -1,4 +1,4 @@
-import { Factory, Model, Response, createServer } from "miragejs"
+import { Model, Response, createServer } from "miragejs"
 import { testUser, userFactory } from "./factories";
 
 export function makeServer ({ environment = "development" } = {}) {
@@ -32,12 +32,9 @@ export function makeServer ({ environment = "development" } = {}) {
 
         const data = schema.findBy('user', { email: params.email, password: params.password })
 
-        if (!data) return new Response(422, {}, { errors: { email: 'User Not Found' } })
+        if (!data) return new Response(422, {}, { errors: { email: 'Invalid password or user not found' } })
 
-        return {
-          data,
-          token: data.token,
-        }
+        return new Response(202, {}, { data, token: data.token, message: 'Accepted' })
       })
 
       this.post("register", (schema, request) => {
@@ -54,12 +51,31 @@ export function makeServer ({ environment = "development" } = {}) {
 
         const data = schema.create('user', params)
 
-        return {
-          data,
-          token: data.token,
-        }
+        return new Response(201, {}, { data, token: data.token, message: 'Created' })
       })
 
+      this.post("forgot", () => {
+        return new Response(201, {}, { timeout: 30000, message: 'Created' })
+      })
+
+      this.post("reset", (schema, request) => {
+        const params = JSON.parse(request.requestBody)
+        const errors = {}
+
+        const data = schema.findBy('user', { resetToken: params.token })
+
+        if (!data) errors.token = 'Invalid reset token'
+        if (!params.password) errors.password = 'Password is required'
+        if (!params.password_confirmation) errors.password_confirmation = 'Password Confirmation is required'
+        if (params.password !== params.password_confirmation) errors.password = 'Password does not match Confirmation'
+
+        if (Object.entries(errors).length > 0) return new Response(422, {}, { errors, message: 'Error Occured' })
+
+        data.password = params.password
+        data.save()
+
+        return new Response(202, {}, { data, message: 'Password Reset Successfull' })
+      })
 
       this.post("logout", (schema, request) => {
         const params = request.requestHeaders
@@ -78,9 +94,7 @@ export function makeServer ({ environment = "development" } = {}) {
 
         if (!data) return new Response(401, {}, { message: 'Unauthorized' })
 
-        return {
-          data,
-        }
+        return new Response(200, {}, { data, message: 'OK' })
       })
 
       this.passthrough()

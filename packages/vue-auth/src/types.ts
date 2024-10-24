@@ -8,9 +8,10 @@ export interface AuthUser {
   token: string;
 }
 
-export interface AuthResponse<T = unknown> {
-  user: T;
+export interface AuthResponse<U = unknown> {
+  user: U;
   token: string;
+  message?: string;
 }
 
 export interface AuthEndpoints {
@@ -30,6 +31,14 @@ export interface AuthEndpoints {
    * Registration requests will be sent to this endpoint
    */
   register: string;
+  /**
+   * When a user request a password token, we will send a request to this endpoint to send the token
+   */
+  forgot?: string;
+  /**
+   * When a user is reseting thier password, we will send a request to this endpoint to complete the request
+   */
+  reset?: string;
   /**
    * Refresh Token requests will be sent to this endpoint
    */
@@ -76,7 +85,12 @@ export interface AuthOptions<U = AuthUser> {
    * @returns 
   */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  transformResponse?: (response: any) => { user: U; token?: string };
+  transformResponse?: (response: any) => {
+    user: U;
+    token?: string;
+    timeout?: number;
+    message?: string;
+  };
   /**
    * The route name to your app's post login page, if provided users will be redirected here
    *  as soon as they do a successfull login attempt.
