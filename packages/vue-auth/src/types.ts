@@ -8,7 +8,7 @@ export interface AuthUser {
   token: string
 }
 
-export interface AuthResponse<U = unknown> {
+export interface AuthResponse<U = AuthUser> {
   user: U
   token: string
   message?: string

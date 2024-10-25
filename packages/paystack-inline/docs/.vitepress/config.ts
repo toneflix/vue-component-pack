@@ -5,7 +5,15 @@ export default defineConfig({
   title: "Vue Paystack Inline",
   base: "/vue-component-pack/paystack-inline",
   description: "Vue Paystack Inline documentation",
+  head: [
+    ['link', { rel: 'icon', href: '/vue-component-pack/paystack-inline/images/banner.png' }],
+    ['meta', {
+      name: 'auto',
+      content: 'Toneflix Code.',
+    }],
+  ],
   themeConfig: {
+    logo: '/images/banner.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },

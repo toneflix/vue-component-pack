@@ -20,7 +20,11 @@ function R() {
             n,
             m(s),
             a.axiosConfig
-          ), { user: t, token: r, message: c } = a.transformResponse ? a.transformResponse(e) : { user: e.user, token: e.token, message: e.message };
+          ), {
+            user: t,
+            token: r,
+            message: c
+          } = a.transformResponse ? a.transformResponse(e) : { user: e.user, token: e.token, message: e.message };
           return f.value = t, i.value = r, h.value = !0, localStorage.setItem(a.storageKey || "auth_token", e.token), { user: t, token: r, message: c };
         } catch ({ response: e }) {
           return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
@@ -44,11 +48,10 @@ function R() {
         var e;
         const n = s.getAuthHeaders ? await s.getAuthHeaders() : {}, o = d("logout");
         try {
-          await u.post(
-            o,
-            m(a),
-            { headers: { ...n }, ...s.axiosConfig }
-          ), f.value = {}, i.value = void 0, h.value = !1, localStorage.removeItem(s.storageKey || "auth_token");
+          await u.post(o, m(a), {
+            headers: { ...n },
+            ...s.axiosConfig
+          }), f.value = {}, i.value = void 0, h.value = !1, localStorage.removeItem(s.storageKey || "auth_token");
         } catch ({ response: t }) {
           return { error: (t == null ? void 0 : t.data) || {}, message: (e = t == null ? void 0 : t.data) == null ? void 0 : e.message };
         }
@@ -57,11 +60,10 @@ function R() {
         var e;
         const n = a.getAuthHeaders ? await a.getAuthHeaders() : {}, o = d("forgot");
         try {
-          const { data: t } = await u.post(
-            o,
-            m(s),
-            { headers: { ...n }, ...a.axiosConfig }
-          ), { timeout: r, message: c } = a.transformResponse ? a.transformResponse(t) : { timeout: t.timeout, message: t.message }, g = v(0);
+          const { data: t } = await u.post(o, m(s), {
+            headers: { ...n },
+            ...a.axiosConfig
+          }), { timeout: r, message: c } = a.transformResponse ? a.transformResponse(t) : { timeout: t.timeout, message: t.message }, g = v(0);
           if (r && r > 0) {
             g.value = r;
             const k = setInterval(() => {
@@ -81,7 +83,11 @@ function R() {
             n,
             m(s),
             a.axiosConfig
-          ), { user: t, token: r, message: c } = a.transformResponse ? a.transformResponse(e) : { user: e.user, token: e.token, message: e.message };
+          ), {
+            user: t,
+            token: r,
+            message: c
+          } = a.transformResponse ? a.transformResponse(e) : { user: e.user, token: e.token, message: e.message };
           return f.value = t, i.value = r, h.value = !0, localStorage.setItem(a.storageKey || "auth_token", e.token), { user: t, token: r, message: c };
         } catch ({ response: e }) {
           return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
@@ -93,10 +99,11 @@ function R() {
         if (n && (i.value = n, h.value = !0, s.endpoints.profile)) {
           const t = d("profile");
           try {
-            const { data: r } = await u.get(
-              t,
-              { headers: { ...o }, params: { ...m(a) }, ...s.axiosConfig }
-            ), { user: c, message: g } = s.transformResponse ? s.transformResponse(r) : { user: r.user, message: r.message };
+            const { data: r } = await u.get(t, {
+              headers: { ...o },
+              params: { ...m(a) },
+              ...s.axiosConfig
+            }), { user: c, message: g } = s.transformResponse ? s.transformResponse(r) : { user: r.user, message: r.message };
             return f.value = c, { user: c, message: g };
           } catch ({ response: r }) {
             return { user: {}, error: (r == null ? void 0 : r.data) || {}, message: (e = r == null ? void 0 : r.data) == null ? void 0 : e.message };

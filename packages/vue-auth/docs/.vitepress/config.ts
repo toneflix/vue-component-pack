@@ -2,29 +2,38 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Vue Paystack Inline",
-  base: "/vue-component-pack/paystack-inline",
-  description: "Vue Paystack Inline documentation",
+  title: "Vue Authenticator",
+  base: "/vue-component-pack/vue-auth",
+  description: "Advanced authentication plugin for Vue 3.",
+  head: [
+    ['link', { rel: 'icon', href: '/vue-component-pack/vue-auth/images/banner.png' }],
+    ['meta', {
+      name: 'auto',
+      content: 'Toneflix Code.',
+    }],
+  ],
   themeConfig: {
+    logo: '/images/banner.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
       { text: 'Get Started', link: '/get-started' },
-      { text: 'Demo', link: '/demo' }
+      { text: 'API', link: '/api' }
     ],
 
     sidebar: [
       {
         text: 'Documentation',
         items: [
-          { text: 'Props', link: '/props' },
-          { text: 'Events', link: '/events' }
+          { text: 'Usage', link: '/usage' },
+          { text: 'Setup', link: '/setup' },
+          { text: 'API', link: '/api' },
+          { text: 'Typescript', link: '/typescript' },
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/toneflix/vue-component-pack/tree/main/packages/paystack-inline' }
+      { icon: 'github', link: 'https://github.com/toneflix/vue-component-pack/tree/main/packages/vue-auth' }
     ],
 
   }

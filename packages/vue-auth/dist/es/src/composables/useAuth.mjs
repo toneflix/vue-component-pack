@@ -1,18 +1,19 @@
 import { createAuthStore as a } from "../stores/auth.mjs";
-import { getAuthConfig as o } from "../config.mjs";
-const m = () => {
-  const e = a()(), s = (t, r = o()) => e.login(t, r), n = (t, r = o()) => e.register(t, r), u = (t = o(), r) => e.logout(t, r), c = (t, r = o()) => e.forgot(t, r), g = (t, r = o()) => e.reset(t, r), i = (t = o(), r) => e.loadUserFromStorage(t, r);
+import { getAuthConfig as e } from "../config.mjs";
+import { storeToRefs as s } from "pinia";
+const S = () => {
+  const o = a()(), n = (t, r = e()) => o.login(t, r), u = (t, r = e()) => o.register(t, r), c = (t = e(), r) => o.logout(t, r), g = (t, r = e()) => o.forgot(t, r), i = (t, r = e()) => o.reset(t, r), m = (t = e(), r) => o.loadUserFromStorage(t, r);
   return {
-    user: e.user,
-    isAuthenticated: e.isAuthenticated,
-    reset: g,
-    login: s,
-    logout: u,
-    forgot: c,
-    register: n,
-    loadUserFromStorage: i
+    user: s(o).user,
+    isAuthenticated: s(o).isAuthenticated,
+    reset: i,
+    login: n,
+    logout: c,
+    forgot: g,
+    register: u,
+    loadUserFromStorage: m
   };
 };
 export {
-  m as useAuth
+  S as useAuth
 };

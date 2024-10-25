@@ -5,7 +5,15 @@ export default defineConfig({
   title: "Vue OTP Input",
   base: "/vue-component-pack/otp-input",
   description: "Vue OTP Input documentation",
+  head: [
+    ['link', { rel: 'icon', href: '/vue-component-pack/otp-input/images/banner.png' }],
+    ['meta', {
+      name: 'auto',
+      content: 'Toneflix Code.',
+    }],
+  ],
   themeConfig: {
+    logo: '/images/banner.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },

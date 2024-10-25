@@ -1,9 +1,11 @@
 import { AuthOptions, AuthUser, LoginCredentials, RegisterCredentials } from '../types'
 
+import { Ref } from 'vue'
 import { createAuthStore } from '../stores/auth'
 import { getAuthConfig } from '../config'
+import { storeToRefs } from 'pinia'
 
-export const useAuth = () => {
+export const useAuth = <AU = AuthUser> () => {
   const useAuthStore = createAuthStore()
   const store = useAuthStore()
 
@@ -14,10 +16,15 @@ export const useAuth = () => {
    * @param options
    * @returns
    */
-  const login = <U = AuthUser, T = LoginCredentials>(
+  const login = <U = AuthUser, T = LoginCredentials> (
     credentials: T,
     options: AuthOptions = getAuthConfig()
-  ) => {
+  ): Promise<{
+    user: AuthUser | U;
+    token?: string;
+    error?: undefined;
+    message?: string;
+  }> => {
     return store.login<U, T>(credentials, options)
   }
 
@@ -28,10 +35,15 @@ export const useAuth = () => {
    * @param options
    * @returns
    */
-  const register = <U = AuthUser, T = RegisterCredentials>(
+  const register = <U = AuthUser, T = RegisterCredentials> (
     credentials: T,
     options: AuthOptions = getAuthConfig()
-  ) => {
+  ): Promise<{
+    user: AuthUser | U;
+    token?: string;
+    error?: undefined;
+    message?: string;
+  }> => {
     return store.register<U, T>(credentials, options)
   }
 
@@ -42,7 +54,10 @@ export const useAuth = () => {
    * @param credentials
    * @returns
    */
-  const logout = <T = unknown>(options: AuthOptions = getAuthConfig(), credentials?: T) => {
+  const logout = <T = unknown> (options: AuthOptions = getAuthConfig(), credentials?: T): Promise<{
+    error?: undefined;
+    message?: string;
+  } | undefined> => {
     return store.logout(options, credentials)
   }
 
@@ -53,7 +68,12 @@ export const useAuth = () => {
    * @param credentials
    * @returns
    */
-  const forgot = <T = unknown>(credentials?: T, options: AuthOptions = getAuthConfig()) => {
+  const forgot = <T = unknown> (credentials?: T, options: AuthOptions = getAuthConfig()): Promise<{
+    countdown: Ref<number>;
+    timeout?: number;
+    error?: undefined;
+    message?: string;
+  }> => {
     return store.forgot(credentials, options)
   }
 
@@ -64,7 +84,11 @@ export const useAuth = () => {
    * @param credentials
    * @returns
    */
-  const reset = <T = unknown>(credentials?: T, options: AuthOptions = getAuthConfig()) => {
+  const reset = <T = unknown> (credentials?: T, options: AuthOptions = getAuthConfig()): Promise<{
+    user: AuthUser;
+    error?: undefined;
+    message?: string;
+  }> => {
     return store.reset(credentials, options)
   }
 
@@ -76,16 +100,21 @@ export const useAuth = () => {
    * @param credentials
    * @returns
    */
-  const loadUserFromStorage = <U = AuthUser, T = unknown>(
+  const loadUserFromStorage = <U = AuthUser, T = unknown> (
     options: AuthOptions = getAuthConfig(),
     credentials?: T
-  ) => {
+  ): Promise<{
+    user: AuthUser | U;
+    error?: undefined;
+    message?: string;
+  }> => {
     return store.loadUserFromStorage<U, T>(options, credentials)
   }
 
+
   return {
-    user: store.user,
-    isAuthenticated: store.isAuthenticated,
+    user: storeToRefs(store).user as Ref<AU>,
+    isAuthenticated: storeToRefs(store).isAuthenticated,
 
     reset,
     login,

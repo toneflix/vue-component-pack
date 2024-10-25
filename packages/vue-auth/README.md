@@ -1,6 +1,6 @@
-# Vue Auth
+# Vue Authenticator
 
-Vue 3 authentication plugin
+Advanced authentication plugin for Vue 3
 
 ## Documentation
 
@@ -20,31 +20,37 @@ pnpm add @toneflix/vue-auth
 
 ### Registration
 
-To initialize the library, you need to install it on your base vue instance.
+To get started with Vue Authenticator, you’ll first need to register the library with your Vue app. This step ensures that authentication methods are available across your application. Here’s how to initialize the library:
 
 **main.js or main.ts**
 
 ```js
 import { createApp } from 'vue'
-import App from './app.vue'
+import App from './App.vue'
+import { createPinia } from 'pinia'
 import { authPlugin } from '@toneflix/vue-auth'
 
+// Create your app instance
 const app = createApp(App)
-const pinia = createPinia()
 
-const auth = authPlugin({
-  baseUrl: 'http://example.com/api/v1',
-  storageKey: 'my_auth_token',
+// Initialize Pinia for state management
+app.use(createPinia())
+
+// Register Vue Authenticator with custom configuration
+const authenticator = authPlugin({
+  baseUrl: 'https://your-api.com',
   endpoints: {
-    login: '/login',
-    register: '/register',
-    logout: '/logout'
-  }
+    login: '/auth/login',
+    register: '/auth/register',
+    logout: '/auth/logout'
+  },
+  storageKey: 'auth_token', // The key used to store the token in localStorage
+  transformResponse: (data) => ({ user: data.data, token: data.token }) // Customize the response handling
 })
 
-app.use(pinia)
-app.use(auth)
+app.use(authenticator)
 
+// Mount the app
 app.mount('#app')
 ```
 

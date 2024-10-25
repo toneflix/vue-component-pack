@@ -2,9 +2,9 @@
 outline: deep
 ---
 
-# Get Started
+# Getting Started with Vue Authenticator
 
-Setting up Vue Paystack Inline is pretty simple and straightforward.
+Vue Authenticator makes integrating authentication into your Vue.js applications simple and flexible. With its highly customizable setup, you can easily connect to your own authentication API while maintaining full control over request handling, token management, and error responses. Whether you’re working with bearer tokens or any custom authentication method, Vue Authenticator is designed to adapt seamlessly to your specific needs—no extra code required. This guide will walk you through the basic setup and show you how to leverage the plugin’s flexibility to streamline your authentication processes. Let’s get started!
 
 ## Installation
 
@@ -13,152 +13,103 @@ Install using your preferred package manager.
 ::: code-group
 
 ```bash [npm]
-npm install @toneflix/paystack-inline
+npm install @toneflix/vue-auth
 ```
 
 ```bash [yarn]
-yarn add @toneflix/paystack-inline
+yarn add @toneflix/vue-auth
 ```
 
 ```bash [pnpm]
-pnpm add @toneflix/paystack-inline
+pnpm add @toneflix/vue-auth
 ```
 
 :::
 
 ## Usage
 
-### Global Registration
+### Registration
 
-You can make OTP Input available throughout your Vue project.
+To get started with Vue Authenticator, you’ll first need to register the library with your Vue app. This step ensures that authentication methods are available across your application. Here’s how to initialize the library:
 
-**main.js or main.ts**
+```js:line-numbers{4,13-22,24}
+import { createApp } from 'vue'
+import App from './App.vue'
+import { createPinia } from 'pinia'
+import { authPlugin } from '@toneflix/vue-auth'
 
-```js:line-numbers{1,4}
-import '@toneflix/paystack-inline/dist/lib/style.css';
-import { createApp } from 'vue';
-import App from './app.vue';
-import PaystackInline from '@toneflix/paystack-inline';
+// Create your app instance
+const app = createApp(App)
 
-const app = createApp(App);
-app.use(PaystackInline);
-app.mount('#app');
+// Initialize Pinia for state management
+app.use(createPinia())
+
+// Register Vue Authenticator with custom configuration
+const authenticator = authPlugin({
+  baseUrl: 'https://your-api.com',
+  endpoints: {
+    login: '/auth/login',
+    register: '/auth/register',
+    logout: '/auth/logout'
+  },
+  storageKey: 'auth_token', // The key used to store the token in localStorage
+  transformResponse: (data) => ({ user: data.data, token: data.token }) // Customize the response handling
+})
+
+app.use(authenticator)
+
+// Mount the app
+app.mount('#app')
 ```
 
-### Local Registration
+In this example:
 
-You can also import the component in your Vue component.
+- The baseUrl is your API base URL.
+- The endpoints are the routes where your API handles authentication (login, register, logout, profile).
+- The storageKey is where the token will be saved in localStorage.
+- The transformResponse function lets you control how the response from the API is handled, offering flexibility in the structure of the API response.
 
-**SomeComponent.vue**
+Once registered, Vue Authenticator will automatically handle token storage, user data, and authentication checks throughout your app.
 
-```vue:line-numbers{2,3}
+Now you’re ready to use Vue Authenticator’s features such as login, register, and logout in your components!
+
+### Login Example
+
+Inside a vue component you can attempt login in the following way
+
+```vue:line-numbers{3,6,13}
 <script setup>
-import '@toneflix/paystack-inline/dist/lib/style.css';
-import { PaystackInline } from '@toneflix/paystack-inline';
-</script>
-```
+import { reactive, ref } from 'vue'
+import { useAuth } from '@toneflix/vue-auth'
+import { useRouter } from 'vue-router'
 
-### Use the Registered Component in Your Vue Template
+const router = useRouter()
+const { login } = useAuth()
 
-**SomeComponent.vue**
+const form = reactive({ email: 'test@example.com', password: 'password' })
+const data = ref({ user: {}, token: null, error: null })
 
-```vue:line-numbers{2,3}
-<script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
-import { PaystackInline } from '@toneflix/paystack-inline'
-import { ref } from 'vue'
-
-const pKey = ref('pk_test_TYooMQauvdEDq54NiTphI7jx')
-</script>
-
-<template>
-  <div style="display: flex; flex-direction: row;">
-    <PaystackInline
-      dont-verify
-      :amount="1000"
-      :customer="{
-        email: 'john@example.com'
-      }"
-      :public-key="pKey"
-    />
-  </div>
-</template>
-```
-
-### Verify Payment
-
-To verify a payment, simply set the value of the `reference` model attribute and provide the `verify-callback` attribute which is a function that returns a promise that resolves to an object of `{status: boolean, message: string}`. Also set the `hidden` attribute if you do not want to display the payment button.
-
-**VerifyComponent.vue**
-
-```vue:line-numbers{2,3}
-<script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
-import { PaystackInline } from '@toneflix/paystack-inline'
-import { ref } from 'vue'
-
-const pKey = ref('pk_test_TYooMQauvdEDq54NiTphI7jx')
-const reference = ref()
-
-const verify = () => {
-  reference = 'sdsdsdsd'
+const handleLogin = async () => {
+  data.value = await login(form)
+  if (!data.value.error) router.replace('/auth/profile')
 }
 </script>
 
 <template>
-  <div style="display: flex; flex-direction: row;">
-    <PaystackInline
-      hidden
-      :amount="1000"
-      :customer="{
-        email: 'john@example.com'
-      }"
-      v-model:reference="reference"
-      :verify-callback="
-        () => {
-          return new Promise((resolve) =>
-            resolve({
-              status: true,
-              message: 'Verified'
-            })
-          )
-        }
-      "
-    />
-  </div>
-</template>
-```
+  <div class="column-container">
+    <input v-model="form.email" placeholder="Email Address" />
 
-### Default Slot
+    <p class="error" v-if="data.error?.email">
+      {{ data.error.errors.email }}
+    </p>
 
-**SlutComponent.vue**
+    <input v-model="form.password" placeholder="Password" type="password" />
 
-```vue:line-numbers{2,3}
-<script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
-import { PaystackInline } from '@toneflix/paystack-inline'
-import { ref } from 'vue'
+    <p class="error" v-if="data.error?.password">
+      {{ data.error.errors.password }}
+    </p>
 
-const pKey = ref('pk_test_TYooMQauvdEDq54NiTphI7jx')
-</script>
-
-<template>
-  <div style="display: flex; flex-direction: row;">
-    <PaystackInline
-      dont-verify
-      :amount="1000"
-      :customer="{
-        email: 'john@example.com'
-      }"
-      :public-key="pKey"
-    >
-      <template #default="{ initialize, loading }">
-        <button class="pay-button" :disabled="loading" @click="initialize()">
-          {{ !loading ? 'Pay Now' : '' }}
-          <div class="spinner" v-if="loading"></div>
-        </button>
-      </template>
-    </PaystackInline>
+    <button @click="handleLogin">Login</button>
   </div>
 </template>
 ```
