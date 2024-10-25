@@ -124,11 +124,11 @@ Here’s a breakdown of how the generics are used in the useAuth composable:
 ### `login<U = AuthUser, T = LoginCredentials>`
 
 ```ts:line-numbers
-const login = <U = AuthUser, T = LoginCredentials>(
+const login = <U = AuthUser, T = LoginCredentials> (
   credentials: T,
-  options: AuthOptions = getAuthConfig()
+  options: AuthOptions<U> = getAuthConfig()
 ): Promise<{
-  user: AuthUser | U
+  user: U;
   token?: string;
   error?: undefined;
   message?: string;
@@ -150,9 +150,9 @@ const login = <U = AuthUser, T = LoginCredentials>(
 ### `register<U = AuthUser, T = RegisterCredentials>`
 
 ```ts:line-numbers
-const register = <U = AuthUser, T = RegisterCredentials>(
+const register = <U = AuthUser, T = RegisterCredentials> (
   credentials: T,
-  options: AuthOptions = getAuthConfig()
+  options: AuthOptions<U> = getAuthConfig()
 ): Promise<{
   user: AuthUser | U;
   token?: string;
@@ -217,18 +217,18 @@ const forgot = <T = unknown>(
 - `error`: Indicates if there was an error, can be an object holding error data..
 - `message`: An optional message.
 
-### `reset<T = unknown>`
+### `reset<U = AuthUser, T = unknown>`
 
 ```ts:line-numbers
-const reset = <T = unknown>(
-  credentials?: T,
-  options: AuthOptions = getAuthConfig()
+const reset = <U = AuthUser, T = unknown> (
+  credentials: T,
+  options: AuthOptions<U> = getAuthConfig()
 ): Promise<{
-  user: AuthUser;
+  user: U;
   error?: undefined;
   message?: string;
 }> => {
-  return store.reset(credentials, options)
+  return store.reset<U>(credentials, options)
 }
 ```
 
@@ -243,11 +243,11 @@ const reset = <T = unknown>(
 ### `loadUserFromStorage<U = AuthUser, T = unknown>`
 
 ```ts:line-numbers
-const loadUserFromStorage = <U = AuthUser, T = unknown>(
-  options: AuthOptions = getAuthConfig(),
+const loadUserFromStorage = <U = AuthUser, T = unknown> (
+  options: AuthOptions<U> = getAuthConfig(),
   credentials?: T
 ): Promise<{
-  user: AuthUser | U;
+  user: U;
   error?: undefined;
   message?: string;
 }> => {

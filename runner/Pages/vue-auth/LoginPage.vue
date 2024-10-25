@@ -3,20 +3,26 @@ import { reactive, ref } from 'vue'
 import { AuthUser, useAuth } from '@toneflix/vue-auth'
 import { useRouter } from 'vue-router'
 
+interface CustomUser extends AuthUser {
+  name: string
+  role: string
+}
+
 const router = useRouter()
 const { login } = useAuth()
 
 const form = reactive({ email: 'test@example.com', password: 'password' })
 const data = ref(
   {} as {
-    user: AuthUser
+    user: CustomUser
     token?: string
     error?: { errors: { [key: string]: string } }
   }
 )
 
 const handleLogin = async () => {
-  data.value = await login(form)
+  data.value = await login<CustomUser>(form)
+
   if (!data.value.error) router.replace('/auth/profile')
 }
 </script>

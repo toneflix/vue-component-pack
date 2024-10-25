@@ -16,11 +16,11 @@ export const useAuth = <AU = AuthUser> () => {
    * @param options
    * @returns
    */
-  const login = <U = AuthUser, T = LoginCredentials> (
+  const login = <U = AU, T = LoginCredentials> (
     credentials: T,
-    options: AuthOptions = getAuthConfig()
+    options: AuthOptions<U> = getAuthConfig()
   ): Promise<{
-    user: AuthUser | U;
+    user: U;
     token?: string;
     error?: undefined;
     message?: string;
@@ -35,11 +35,11 @@ export const useAuth = <AU = AuthUser> () => {
    * @param options
    * @returns
    */
-  const register = <U = AuthUser, T = RegisterCredentials> (
+  const register = <U = AU, T = RegisterCredentials> (
     credentials: T,
-    options: AuthOptions = getAuthConfig()
+    options: AuthOptions<U> = getAuthConfig()
   ): Promise<{
-    user: AuthUser | U;
+    user: U;
     token?: string;
     error?: undefined;
     message?: string;
@@ -84,12 +84,15 @@ export const useAuth = <AU = AuthUser> () => {
    * @param credentials
    * @returns
    */
-  const reset = <T = unknown> (credentials?: T, options: AuthOptions = getAuthConfig()): Promise<{
-    user: AuthUser;
+  const reset = <U = AU, T = unknown> (
+    credentials: T,
+    options: AuthOptions<U> = getAuthConfig()
+  ): Promise<{
+    user: U;
     error?: undefined;
     message?: string;
   }> => {
-    return store.reset(credentials, options)
+    return store.reset<U>(credentials, options)
   }
 
   /**
@@ -100,11 +103,11 @@ export const useAuth = <AU = AuthUser> () => {
    * @param credentials
    * @returns
    */
-  const loadUserFromStorage = <U = AuthUser, T = unknown> (
-    options: AuthOptions = getAuthConfig(),
+  const loadUserFromStorage = <U = AU, T = unknown> (
+    options: AuthOptions<U> = getAuthConfig(),
     credentials?: T
   ): Promise<{
-    user: AuthUser | U;
+    user: U;
     error?: undefined;
     message?: string;
   }> => {

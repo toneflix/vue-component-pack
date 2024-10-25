@@ -42,9 +42,9 @@ Attempts to log in the user by sending their credentials to the login endpoint.
 ```ts:line-numbers
 login<U = AuthUser, T = LoginCredentials>(
   credentials: T,
-  options?: AuthOptions
+  options: AuthOptions<U>
 ): Promise<{
-  user: AuthUser | U
+  user: U
   token?: string;
   error?: undefined;
   message?: string;
@@ -71,9 +71,9 @@ Attempts to create a new user account by sending the registration details to the
 ```ts:line-numbers
 register<U = AuthUser, T = RegisterCredentials>(
   credentials: T,
-  options?: AuthOptions
+  options?: AuthOptions<U>
 ): Promise<{
-  user: AuthUser | U;
+  user: U;
   token?: string;
   error?: undefined;
   message?: string;
@@ -152,11 +152,11 @@ forgot<T = unknown>(
 Attempts to reset the user’s password by sending the new password and the reset token to the reset endpoint.
 
 ```ts:line-numbers
-reset<T = unknown>(
+reset<U = AuthUser, T = unknown>(
   credentials?: T,
-  options?: AuthOptions
+  options?: AuthOptions<U>
 ): Promise<{
-  user: AuthUser;
+  user: U;
   error?: undefined;
   message?: string;
 }>
@@ -180,10 +180,10 @@ Retrieves the token from local storage and loads the authenticated user from the
 
 ```ts:line-numbers
 loadUserFromStorage<U = AuthUser, T = unknown>(
-  options?: AuthOptions,
+  options?: AuthOptions<U>,
   credentials?: T
 ): Promise<{
-  user: AuthUser | U;
+  user:  U;
   error?: undefined;
   message?: string;
 }>

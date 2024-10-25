@@ -1,7 +1,8 @@
 // src/config.ts
-import { AuthOptions } from './types'
+import { AuthOptions, AuthUser } from './types'
 
-export let authConfig: AuthOptions
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export let authConfig: AuthOptions<any>
 
 export const url = (endpoint?: string) => {
   if (!endpoint || !authConfig.endpoints[endpoint]) {
@@ -17,11 +18,11 @@ export const url = (endpoint?: string) => {
   return ''
 }
 
-export function setAuthConfig(options: AuthOptions) {
+export const setAuthConfig = <U = AuthUser> (options: AuthOptions<U>) => {
   authConfig = options
 }
 
-export function getAuthConfig(): AuthOptions {
+export const getAuthConfig = <U = AuthUser> (): AuthOptions<U> => {
   if (!authConfig) {
     throw new Error('Auth plugin not initialized properly.')
   }
