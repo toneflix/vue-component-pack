@@ -268,7 +268,7 @@ const loadUserFromStorage = <U = AuthUser, T = unknown> (
 
 Here’s an example of how you could use a custom user type by extending `AuthUser`:
 
-Composable type inheritance:
+**_Composable type inheritance_**:
 
 ```ts:line-numbers
 interface CustomUser extends AuthUser {
@@ -279,7 +279,9 @@ interface CustomUser extends AuthUser {
 const { user } = useAuth<CustomUser>()
 ```
 
-Method type inheritance:
+Now, `user` will have the additional name and role properties in addition to the base properties of `AuthUser` (`id`, `email`, and `token`).
+
+**_Method type inheritance_**:
 
 ```ts:line-numbers
 interface CustomUser {
@@ -298,6 +300,6 @@ const handleLogin = async () => {
 }
 ```
 
-Now, user will have the additional name and role properties in addition to the base properties of AuthUser (id, email, and token).
+This time, `user` is of a completely new interface that does not extend the base `AuthUser` interface.
 
 With these types and generics, the `@toneflix/vue-auth` package provides a flexible, fully-typed authentication system that can be adapted to your project’s specific needs while offering strong TypeScript support.
