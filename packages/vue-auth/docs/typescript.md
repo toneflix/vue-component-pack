@@ -268,6 +268,8 @@ const loadUserFromStorage = <U = AuthUser, T = unknown> (
 
 Here’s an example of how you could use a custom user type by extending `AuthUser`:
 
+Composable type inheritance:
+
 ```ts:line-numbers
 interface CustomUser extends AuthUser {
   name: string;
@@ -275,6 +277,25 @@ interface CustomUser extends AuthUser {
 }
 
 const { user } = useAuth<CustomUser>()
+```
+
+Method type inheritance:
+
+```ts:line-numbers
+interface CustomUser {
+  id: string;
+  name: string;
+  role: string;
+  token: string;
+}
+
+const { login } = useAuth()
+
+const handleLogin = async () => {
+  const { user } = await login<CustomUser>(form)
+
+  if (!data.value.error) router.replace('/auth/profile')
+}
 ```
 
 Now, user will have the additional name and role properties in addition to the base properties of AuthUser (id, email, and token).
