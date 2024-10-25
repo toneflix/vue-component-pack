@@ -124,7 +124,7 @@ Here’s a breakdown of how the generics are used in the useAuth composable:
 ### `login<U = AuthUser, T = LoginCredentials>`
 
 ```ts:line-numbers
-const login = <U = AuthUser, T = LoginCredentials> (
+login<U = AuthUser, T = LoginCredentials>(
   credentials: T,
   options: AuthOptions<U> = getAuthConfig()
 ): Promise<{
@@ -132,9 +132,7 @@ const login = <U = AuthUser, T = LoginCredentials> (
   token?: string;
   error?: undefined;
   message?: string;
-}> => {
-  return store.login<U, T>(credentials, options)
-}
+}>
 ```
 
 - `U`: The type of the user returned from the login operation.
@@ -150,7 +148,7 @@ const login = <U = AuthUser, T = LoginCredentials> (
 ### `register<U = AuthUser, T = RegisterCredentials>`
 
 ```ts:line-numbers
-const register = <U = AuthUser, T = RegisterCredentials> (
+register<U = AuthUser, T = RegisterCredentials>(
   credentials: T,
   options: AuthOptions<U> = getAuthConfig()
 ): Promise<{
@@ -158,9 +156,7 @@ const register = <U = AuthUser, T = RegisterCredentials> (
   token?: string;
   error?: undefined;
   message?: string;
-}> => {
-  return store.register<U, T>(credentials, options)
-}
+}>
 ```
 
 - `U`: The type of the user returned from the registration operation.
@@ -176,15 +172,13 @@ const register = <U = AuthUser, T = RegisterCredentials> (
 ### `logout<T = unknown>`
 
 ```ts:line-numbers
-const logout = <T = unknown>(
+logout<T = unknown>(
   options: AuthOptions = getAuthConfig(),
   credentials?: T
 ): Promise<{
   error?: undefined;
   message?: string;
-} | undefined> => {
-  return store.logout(options, credentials)
-}
+} | undefined>
 ```
 
 **Return Type**:
@@ -195,7 +189,7 @@ const logout = <T = unknown>(
 ### `forgot<T = unknown>`
 
 ```ts:line-numbers
-const forgot = <T = unknown>(
+forgot<T = unknown>(
   credentials?: T,
   options: AuthOptions = getAuthConfig()
 ): Promise<{
@@ -203,9 +197,7 @@ const forgot = <T = unknown>(
   timeout?: number;
   error?: undefined;
   message?: string;
-}> => {
-  return store.forgot(credentials, options)
-}
+}>
 ```
 
 - `T`: The type of additional credentials that may be passed to the forgot password operation.
@@ -220,16 +212,14 @@ const forgot = <T = unknown>(
 ### `reset<U = AuthUser, T = unknown>`
 
 ```ts:line-numbers
-const reset = <U = AuthUser, T = unknown> (
+reset<U = AuthUser, T = unknown> (
   credentials: T,
   options: AuthOptions<U> = getAuthConfig()
 ): Promise<{
   user: U;
   error?: undefined;
   message?: string;
-}> => {
-  return store.reset<U>(credentials, options)
-}
+}>
 ```
 
 - `T`: The type of additional credentials that may be passed to the reset password operation.
@@ -243,16 +233,14 @@ const reset = <U = AuthUser, T = unknown> (
 ### `loadUserFromStorage<U = AuthUser, T = unknown>`
 
 ```ts:line-numbers
-const loadUserFromStorage = <U = AuthUser, T = unknown> (
+loadUserFromStorage<U = AuthUser, T = unknown>(
   options: AuthOptions<U> = getAuthConfig(),
   credentials?: T
 ): Promise<{
   user: U;
   error?: undefined;
   message?: string;
-}> => {
-  return store.loadUserFromStorage<U, T>(options, credentials)
-}
+}>
 ```
 
 - `U`: The type of the user loaded from storage.

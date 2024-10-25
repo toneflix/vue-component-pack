@@ -55,7 +55,8 @@ login<U = AuthUser, T = LoginCredentials>(
 
 - `credentials` (Required): The login credentials (email and password).
 - `options` (Optional): Custom options to override the default authentication configuration.
-- Returns: A Promise that resolves with the authentication response containing the user and token.
+
+**Returns**: A Promise that resolves with the authentication response containing the user and token.
 
 **Return Type**:
 
@@ -84,7 +85,8 @@ register<U = AuthUser, T = RegisterCredentials>(
 
 - `credentials` (Required): The registration details (email, password, and other custom fields).
 - `options` (Optional): Custom options to override the default authentication configuration.
-- Returns: A Promise that resolves with the registration response containing the user and token.
+
+**Returns**: A Promise that resolves with the registration response containing the user and token.
 
 **Return Type**:
 
@@ -111,7 +113,8 @@ logout<T = unknown>(
 
 - `options` (Optional): Custom options to override the default authentication configuration.
 - `credentials` (Optional): Optional credentials or additional data to pass with the logout request.
-- Returns: A Promise that resolves when the logout is complete.
+
+**Returns**: A Promise that resolves when the logout is complete.
 
 **Return Type**:
 
@@ -138,7 +141,8 @@ forgot<T = unknown>(
 
 - `credentials` (Optional): Data to send with the forgot password request, usually the user’s email.
 - `options` (Optional): Custom options to override the default authentication configuration.
-- Returns: A Promise that resolves when the forgot password request is complete.
+
+**Returns**: A Promise that resolves when the forgot password request is complete.
 
 **Return Type**:
 
@@ -166,7 +170,8 @@ reset<U = AuthUser, T = unknown>(
 
 - `credentials` (Optional): Data to send with the reset password request, including the new password and reset token.
 - `options` (Optional): Custom options to override the default authentication configuration.
-- Returns: A Promise that resolves when the password reset is complete.
+
+**Returns**: A Promise that resolves when the password reset is complete.
 
 **Return Type**:
 
@@ -193,7 +198,8 @@ loadUserFromStorage<U = AuthUser, T = unknown>(
 
 - `options` (optional): Overrides the default authentication options.
 - `credentials` (optional): Additional data for fetching the user profile.
-- Returns: A Promise that resolves when the user is loaded from storage.
+
+**Returns**: A Promise that resolves when the user is loaded from storage.
 
 **Return Type**:
 
@@ -211,7 +217,7 @@ A reactive reference to the currently authenticated user.
 user: Ref<AU>
 ```
 
-- Returns: A reactive reference to the user object, or null if no user is logged in.
+- **Returns**: A reactive reference to the user object, or null if no user is logged in.
 
 #### `isAuthenticated`
 
@@ -219,7 +225,7 @@ user: Ref<AU>
 isAuthenticated: Ref<boolean>
 ```
 
-- Returns: `true` if the user is authenticated, `false` otherwise.
+- **Returns**: `true` if the user is authenticated, `false` otherwise.
 
 ### Example Usage in a Vue Component
 
