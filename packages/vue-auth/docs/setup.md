@@ -132,11 +132,10 @@ Example:
 ```ts
 middlewares: [
   (to, from, next, state) => {
-    if (!state.isAuthenticated) {
-      // return next({ name: 'login' })
+    if (!state.isAuthenticated && to.name !== 'login') {
+      return next({ name: 'login' })
     }
-
-    return next()
+    next()
   }
 ]
 ```
