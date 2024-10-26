@@ -2,7 +2,7 @@ import { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
 
 export interface AuthUser {
-  id: string
+  id: number
   email: string
   token?: string
 }
