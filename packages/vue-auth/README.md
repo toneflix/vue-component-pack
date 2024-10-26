@@ -56,9 +56,9 @@ app.mount('#app')
 
 ### Usage
 
-Once registered, vue-auth is now ready for use.
+Once registered, Vue Authenticator is now ready to handle authentication across your application.
 
-**SomeComponent.vue**
+**SomeLoginPage.vue**
 
 ```vue
 <script setup>
@@ -98,5 +98,44 @@ const handleLogin = async () => {
 ```
 
 ### Inline Mode Usage
+
+The `useInlineAuth` composable extends and shares all methods that are available from the `useAuth` composable.
+
+**SomeLoginPage.vue**
+
+```vue
+<script setup lang="ts">
+import { reactive } from 'vue'
+import { useInlineAuth } from '@toneflix/vue-auth'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const { login } = useInlineAuth()
+
+const form = reactive({ email: '', password: '' })
+
+const { error, send, onSuccess, onError } = login(form)
+
+onSuccess(() => {
+  router.replace('/auth/profile')
+})
+
+onError((error) => {
+  console.log(error)
+})
+</script>
+
+<template>
+  <div class="login-container">
+    <input v-model="form.email" placeholder="Email Address" />
+    <p class="error" v-if="error?.errors?.email">{{ error.errors.email }}</p>
+
+    <input v-model="form.password" placeholder="Password" type="password" />
+    <p class="error" v-if="error?.errors?.password">{{ error.errors.password }}</p>
+
+    <button @click="send">Login</button>
+  </div>
+</template>
+```
 
 For full usage and implementation details [visit the documentation page](https://toneflix.github.io/vue-component-pack/vue-auth/)
