@@ -1,6 +1,6 @@
 # Inline Mode
 
-The Inline Mode of Vue Authenticator extends all methods available from the [`useAuth`](./usage) composable, allowing you to manage authentication in a concise and efficient manner while providing a streamlined approach to authentication within your Vue components. By utilizing the `useInlineAuth` composable, you can easily access all authentication methods from the `useAuth` composable while maintaining a concise and efficient code structure. With Inline Mode, integrating authentication into your application becomes a seamless and straightforward process, enabling you to focus more on building your app’s features and user experience.
+The Inline Mode of Vue Authenticator extends all methods available from the [`useAuth`](./usage) composable, allowing you to manage authentication in a concise and efficient manner while providing a streamlined approach to authentication within your Vue components and is the recommended way to use the plugin. By utilizing the `useInlineAuth` composable, you can easily access all authentication methods from the `useAuth` composable while maintaining a concise and efficient code structure. With Inline Mode, integrating authentication into your application becomes a seamless and straightforward process, enabling you to focus more on building your app’s features and user experience.
 
 ## Login
 

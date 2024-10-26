@@ -99,7 +99,7 @@ const handleLogin = async () => {
 
 ### Inline Mode Usage
 
-The `useInlineAuth` composable extends and shares all methods that are available from the `useAuth` composable.
+The `useInlineAuth` composable extends and shares all methods that are available from the `useAuth` composable and is the recommended way to use the plugin.
 
 **SomeLoginPage.vue**
 
