@@ -4,7 +4,7 @@ import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router
 export interface AuthUser {
   id: string
   email: string
-  token: string
+  token?: string
 }
 
 export interface AuthResponse<U = AuthUser> {
