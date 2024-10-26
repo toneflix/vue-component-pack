@@ -99,7 +99,10 @@ export interface AuthOptions<U = AuthUser> {
    *  Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
    * @returns
    */
-  getAuthHeaders?: (user: U, token?: string) => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
+  getAuthHeaders?: (context: {
+    user: U
+    token?: string
+  }) => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
   /**
    * Transforms the user object returned from the auth endpoint
    * @param response
