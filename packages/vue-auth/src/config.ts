@@ -6,7 +6,7 @@ import { Ref, ref, toValue } from 'vue'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export let authConfig: AuthOptions<any>
 
-export const url = (endpoint?: string) => {
+export const url = (endpoint?: keyof typeof authConfig.endpoints) => {
   if (!endpoint || !authConfig.endpoints[endpoint]) {
     throw new Error(`You have not defined a ${endpoint} endpoint.`)
   }
@@ -20,11 +20,11 @@ export const url = (endpoint?: string) => {
   return ''
 }
 
-export const setAuthConfig = <U = AuthUser>(options: AuthOptions<U>) => {
+export const setAuthConfig = <U = AuthUser> (options: AuthOptions<U>) => {
   authConfig = options
 }
 
-export const getAuthConfig = <U = AuthUser>(): AuthOptions<U> => {
+export const getAuthConfig = <U = AuthUser> (): AuthOptions<U> => {
   if (!authConfig) {
     throw new Error('Auth plugin not initialized properly.')
   }
@@ -63,7 +63,7 @@ export const createCountdown = (
  * @param next
  * @param context
  */
-export function runMiddlewares<U = AuthUser>(
+export function runMiddlewares<U = AuthUser> (
   middlewares: AuthOptions<U>['middlewares'],
   to: RouteLocationNormalized,
   from: RouteLocationNormalized,

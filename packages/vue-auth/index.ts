@@ -68,7 +68,7 @@ export const authPlugin = (options: AuthOptions) => {
       }
 
       store.loadUserFromStorage(options)
-      app.config.globalProperties.$user = store.user
+      app.config.globalProperties.$user = store.user as never
       app.config.globalProperties.$isAuthenticated = store.isAuthenticated
     }
   }

@@ -26,6 +26,13 @@ export interface BaseError extends Error {
   [key: string]: unknown
 }
 
+export interface ResponseError {
+  response: {
+    data: BaseError
+    [key: string]: unknown
+  }
+}
+
 export interface AuthEndpoints {
   /**
    * Login requests will be sent to this endpoint
