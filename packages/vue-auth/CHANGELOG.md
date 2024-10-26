@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.34](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.0.33...@toneflix/vue-auth@1.0.34) (2024-10-26)
+
+**Note:** Version bump only for package @toneflix/vue-auth
+
 ## [1.0.33](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.0.32...@toneflix/vue-auth@1.0.33) (2024-10-26)
 
 **Note:** Version bump only for package @toneflix/vue-auth
