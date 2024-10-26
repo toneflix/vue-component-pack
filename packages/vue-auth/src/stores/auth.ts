@@ -17,7 +17,7 @@ axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8
 axios.defaults.headers.common['Accept'] = 'application/json'
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
-export function createAuthStore<U = unknown> () {
+export function createAuthStore<U = unknown>() {
   return defineStore('vue-auth', () => {
     const user = ref<U>({} as U)
     const token = ref<string>()
@@ -30,7 +30,7 @@ export function createAuthStore<U = unknown> () {
      * @param options
      * @returns
      */
-    const login = async <U = AuthUser, T = LoginCredentials> (
+    const login = async <U = AuthUser, T = LoginCredentials>(
       credentials: T,
       options: AuthOptions<U> = getAuthConfig()
     ): Promise<DefinitelyAuthResponse<U>> => {
@@ -47,8 +47,8 @@ export function createAuthStore<U = unknown> () {
           token: tkn,
           message
         } = options.transformResponse
-            ? options.transformResponse(data)
-            : { user: data.user, token: data.token, message: data.message }
+          ? options.transformResponse(data)
+          : { user: data.user, token: data.token, message: data.message }
 
         user.value = usr
         token.value = tkn
@@ -68,7 +68,7 @@ export function createAuthStore<U = unknown> () {
      * @param options
      * @returns
      */
-    const register = async <U = AuthUser, T = RegisterCredentials> (
+    const register = async <U = AuthUser, T = RegisterCredentials>(
       credentials: T,
       options: AuthOptions<U> = getAuthConfig()
     ): Promise<DefinitelyAuthResponse<U>> => {
@@ -85,8 +85,8 @@ export function createAuthStore<U = unknown> () {
           token: tkn,
           message
         } = options.transformResponse
-            ? options.transformResponse(data)
-            : { user: data.user, token: data.token, message: data.message }
+          ? options.transformResponse(data)
+          : { user: data.user, token: data.token, message: data.message }
 
         user.value = usr
         token.value = tkn
@@ -106,14 +106,14 @@ export function createAuthStore<U = unknown> () {
      * @param credentials
      * @returns
      */
-    const logout = async <T = unknown> (
+    const logout = async <T = unknown>(
       options: AuthOptions = getAuthConfig(),
       credentials?: T
     ): Promise<
       | {
-        error?: BaseError
-        message?: string
-      }
+          error?: BaseError
+          message?: string
+        }
       | undefined
     > => {
       const headers = options.getAuthHeaders ? await options.getAuthHeaders() : {}
@@ -143,14 +143,14 @@ export function createAuthStore<U = unknown> () {
      * @param credentials
      * @returns
      */
-    const forgot = async <T = unknown, M extends ForgotResponse = ForgotResponse> (
+    const forgot = async <T = unknown, M extends ForgotResponse = ForgotResponse>(
       credentials?: T,
       options: AuthOptions = getAuthConfig()
     ): Promise<{
       countdown: Ref<number>
-      timeout?: number;
-      error?: BaseError;
-      message?: string;
+      timeout?: number
+      error?: BaseError
+      message?: string
     }> => {
       const headers = options.getAuthHeaders ? await options.getAuthHeaders() : {}
 
@@ -180,13 +180,13 @@ export function createAuthStore<U = unknown> () {
      * @param options
      * @returns
      */
-    const reset = async <U = AuthUser, T = unknown> (
+    const reset = async <U = AuthUser, T = unknown>(
       credentials: T,
       options: AuthOptions<U> = getAuthConfig()
     ): Promise<{
-      user: U;
-      error?: BaseError;
-      message?: string;
+      user: U
+      error?: BaseError
+      message?: string
     }> => {
       const endpoint = url('reset')
       try {
@@ -214,13 +214,13 @@ export function createAuthStore<U = unknown> () {
      * @param credentials
      * @returns
      */
-    const loadUserFromStorage = async <U = AuthUser, T = unknown> (
+    const loadUserFromStorage = async <U = AuthUser, T = unknown>(
       options: AuthOptions<U> = getAuthConfig(),
       credentials?: T
     ): Promise<{
-      user: U;
-      error?: BaseError;
-      message?: string;
+      user: U
+      error?: BaseError
+      message?: string
     }> => {
       const tkn = localStorage.getItem(options.storageKey || 'auth_token')
       const headers = options.getAuthHeaders ? await options.getAuthHeaders() : {}

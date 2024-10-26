@@ -19,18 +19,21 @@ export const url = (endpoint?: string) => {
   return ''
 }
 
-export const setAuthConfig = <U = AuthUser> (options: AuthOptions<U>) => {
+export const setAuthConfig = <U = AuthUser>(options: AuthOptions<U>) => {
   authConfig = options
 }
 
-export const getAuthConfig = <U = AuthUser> (): AuthOptions<U> => {
+export const getAuthConfig = <U = AuthUser>(): AuthOptions<U> => {
   if (!authConfig) {
     throw new Error('Auth plugin not initialized properly.')
   }
   return authConfig
 }
 
-export const createCountdown = (timeout?: number | Ref<number | undefined>, callback?: (val: number) => void) => {
+export const createCountdown = (
+  timeout?: number | Ref<number | undefined>,
+  callback?: (val: number) => void
+) => {
   const countdown = ref<number>(0)
   const timeoutValue = toValue(timeout)
 
