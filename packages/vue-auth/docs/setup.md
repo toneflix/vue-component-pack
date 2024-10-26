@@ -123,6 +123,24 @@ Example:
 defaultAuthRouteName: '/auth/profile'
 ```
 
+### `middlewares`
+
+The `middlewares` is an array of functions that will be called and used to validate user actions across your application's routes.
+
+Example:
+
+```ts
+middlewares: [
+  (to, from, next, state) => {
+    if (!state.isAuthenticated) {
+      // return next({ name: 'login' })
+    }
+
+    return next()
+  }
+]
+```
+
 When an authenticated user tries to access a route that requires guest, they will be redirected to this route.
 
 ## 5. Transforming Responses

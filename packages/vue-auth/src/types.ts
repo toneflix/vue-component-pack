@@ -1,7 +1,9 @@
 import { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
+import { NavigationGuardNext, RouteLocationNormalizedGeneric, Router } from 'vue-router'
 
-import { Router } from 'vue-router'
+import { createAuthStore } from './stores/auth'
 
+const stores = createAuthStore()
 export interface AuthUser {
   id: string
   email: string
@@ -110,7 +112,19 @@ export interface AuthOptions<U = AuthUser> {
    * The route name to your app's post login page, if provided users will be redirected here
    *  as soon as they do a successfull login attempt.
    */
-  defaultAuthRouteName?: string
+  defaultAuthRouteName?: string;
+  /**
+   * An array of functions that will be called and used to validate user actions across your application's routes
+   * 
+   * @param response 
+   * @returns 
+   */
+  middlewares?: (<U = AuthUser>(
+    to: RouteLocationNormalizedGeneric,
+    from: RouteLocationNormalizedGeneric,
+    next: NavigationGuardNext,
+    state: { user: U, token?: string, isAuthenticated: boolean }
+  ) => void | boolean | object)[]
 }
 
 export interface LoginCredentials {

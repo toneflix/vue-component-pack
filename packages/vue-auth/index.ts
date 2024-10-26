@@ -1,8 +1,8 @@
 import { App, Plugin } from 'vue'
+import { runMiddlewares, setAuthConfig } from './src/config'
 
 import { AuthOptions } from './src/types'
 import { createPinia } from 'pinia'
-import { setAuthConfig } from './src/config'
 import { useAuthStore } from './src/stores/auth'
 
 // Define the plugin with the correct signature
@@ -52,7 +52,19 @@ export const authPlugin = (options: AuthOptions) => {
             })
           }
 
-          next()
+          /**
+           * Run the route middlewares
+           */
+          if (options.middlewares) {
+            runMiddlewares(options.middlewares, to, from, next, {
+              user: store.user,
+              token: store.token,
+              isAuthenticated: store.isAuthenticated,
+            });
+          } else {
+            next()
+          }
+
         })
       }
 

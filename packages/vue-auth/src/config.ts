@@ -1,4 +1,5 @@
 import { AuthOptions, AuthUser } from './types'
+import { NavigationGuardNext, RouteLocationNormalized, RouteLocationNormalizedGeneric } from 'vue-router'
 // src/config.ts
 import { Ref, ref, toValue } from 'vue'
 
@@ -19,11 +20,11 @@ export const url = (endpoint?: string) => {
   return ''
 }
 
-export const setAuthConfig = <U = AuthUser>(options: AuthOptions<U>) => {
+export const setAuthConfig = <U = AuthUser> (options: AuthOptions<U>) => {
   authConfig = options
 }
 
-export const getAuthConfig = <U = AuthUser>(): AuthOptions<U> => {
+export const getAuthConfig = <U = AuthUser> (): AuthOptions<U> => {
   if (!authConfig) {
     throw new Error('Auth plugin not initialized properly.')
   }
@@ -51,4 +52,57 @@ export const createCountdown = (
   }
 
   return countdown
+}
+
+/**
+ * Runs all the define middlewares for the application
+ * 
+ * @param middlewares 
+ * @param to 
+ * @param from 
+ * @param next 
+ * @param context 
+ */
+export function runMiddlewares<U = AuthUser> (
+  middlewares: AuthOptions['routeMiddlewares'],
+  to: RouteLocationNormalized,
+  from: RouteLocationNormalized,
+  next: NavigationGuardNext,
+  context: { user: U, token?: string, isAuthenticated: boolean },
+) {
+  // Flag to track if next() has been called
+  const nextCalled = ref(false);
+
+  const executeMiddleware = (index: number) => {
+    if (!middlewares) {
+      return;
+    }
+
+    if (index < middlewares.length) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const callNext: any = (nextArg: RouteLocationNormalized) => {
+        // Mark as true as next() has been called
+        nextCalled.value = index + 1 === middlewares.length;
+
+        if (nextArg) {
+          // If a middleware calls next with an argument (e.g., redirect), stop the chain.
+          return next(nextArg);
+        }
+        // Otherwise, continue to the next middleware.
+        executeMiddleware(index + 1);
+      }
+
+      middlewares[index](to, from, callNext, context);
+    } else {
+      // If we've reached the end of the middlewares, call the final next() to proceed with navigation.
+      next();
+    }
+
+    if (!nextCalled.value) {
+      throw new Error("next() was not called on some middleware. You must call next() on every middleware you define.");
+    }
+  };
+
+  // Start running middlewares from the first one in the array.
+  executeMiddleware(0);
 }

@@ -15,6 +15,7 @@ const router = createRouter({
     { path: '/paystack', component: () => import('./Pages/paystack-inline/PaystackPage.vue') },
     {
       path: '/auth/profile',
+      name: 'profile',
       component: () => import('./Pages/vue-auth/UserPage.vue'),
       meta: { requiresAuth: true }
     },
@@ -26,7 +27,7 @@ const router = createRouter({
     },
     {
       path: '/auth/register',
-      name: 'profile',
+      name: 'register',
       component: () => import('./Pages/vue-auth/RegisterPage.vue'),
       meta: { requiresGuest: true }
     },
@@ -61,17 +62,24 @@ const auth = authPlugin({
     forgot: '/forgot',
     reset: '/reset'
   },
-  loginRouteName: '/auth/login',
-  defaultAuthRouteName: '/auth/profile',
+  // loginRouteName: '/auth/login',
+  // defaultAuthRouteName: '/auth/profile',
   getAuthHeaders: () => {
     const token = localStorage.getItem('my_auth_token')
     return {
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
-  }
+  },
+  middlewares: [(to, from, next, state) => {
+    if (!state.isAuthenticated && to.name !== 'login') {
+      return next({ name: 'login' })
+    }
+
+    next()
+  }]
 })
 
 app.use(pinia)

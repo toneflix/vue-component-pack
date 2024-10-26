@@ -51,5 +51,5 @@ features:
     icon:
       dark: /images/user-star-dark.png
       light: /images/user-star.png
-    details: Keep track of user authentication states and roles with reactive and global state management.
+    details: Keep track of user authentication states and roles with reactive and global state management and middlewares.
 ---

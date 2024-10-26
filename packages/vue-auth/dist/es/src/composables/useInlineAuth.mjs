@@ -21,7 +21,11 @@ const R = () => {
     const s = n(), c = n(), u = n(), a = n(), t = async () => {
       const e = await i.login(m, l);
       s.value = e.user, c.value = e.error, u.value = e.token, a.value = e.message;
-      const f = { user: e.user, message: e.message, token: e.token };
+      const f = {
+        user: e.user,
+        message: e.message,
+        token: e.token
+      };
       return e.error && (f.error = e.error), f;
     }, { send: g, onError: o, onSuccess: r } = v(t);
     return {
@@ -64,7 +68,12 @@ const R = () => {
       const e = await i.forgot(m, l);
       return s.value = e == null ? void 0 : e.error, c.value = e == null ? void 0 : e.message, u.value = e.timeout, C(u, (f) => {
         a.value = f;
-      }), { error: e.error, message: e.message, timeout: e.timeout, countdown: a.value };
+      }), {
+        error: e.error,
+        message: e.message,
+        timeout: e.timeout,
+        countdown: a.value
+      };
     }, { send: g, onError: o, onSuccess: r } = v(t);
     return {
       send: g,
