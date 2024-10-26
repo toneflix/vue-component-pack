@@ -20,603 +20,475 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "docs/otp-input/props.html",
-        "hash": "1094653252009163693"
-      },
-      {
-        "file": "docs/otp-input/get-started.html",
-        "hash": "6501749766778053228"
-      },
-      {
-        "file": "docs/vue-auth/images/logout-circle-dark.png",
-        "hash": "9173765670698542902"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-italic-vietnamese.BSbpV94h.woff2",
-        "hash": "5439243213935570514"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
-        "hash": "2268099297404114829"
-      },
-      {
-        "file": "docs/otp-input/images/banner.png",
-        "hash": "6203059496166803201"
-      },
-      {
-        "file": "docs/vue-auth/usage.html",
-        "hash": "7767082488754279606"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
-        "hash": "7674416464885726785"
-      },
-      {
-        "file": "docs/otp-input/404.html",
-        "hash": "10065103145034394878"
-      },
-      {
-        "file": "README.md",
-        "hash": "3530928418380641308"
-      },
-      {
-        "file": "docs/vue-auth/assets/style.reHVfgcu.css",
-        "hash": "2416931903536610988"
-      },
-      {
-        "file": "docs/otp-input/assets/get-started.md.bYCLH7GC.js",
-        "hash": "17927289659374282508"
-      },
-      {
-        "file": "lerna.json",
-        "hash": "4169324519833395793"
-      },
-      {
-        "file": ".vscode/settings.template.json",
-        "hash": "11586511439438813548"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
-        "hash": "4147970328684304313"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
-        "hash": "8241952812200813355"
-      },
-      {
-        "file": "docs/otp-input/images/recycle-dark.png",
-        "hash": "12800247716495140001"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
-        "hash": "10886706858615268408"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-roman-greek.BBVDIX6e.woff2",
-        "hash": "12225282773869548609"
-      },
-      {
-        "file": "docs/vue-auth/get-started.html",
-        "hash": "366659271244288433"
-      },
-      {
-        "file": "docs/vue-auth/assets/typescript.md.fbRkoMFq.lean.js",
-        "hash": "11056633757739730203"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
-        "hash": "9802537721033087843"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
-        "hash": "15877694762730622634"
-      },
-      {
-        "file": "docs/otp-input/assets/style.Dwvg82iD.css",
-        "hash": "174851521141260016"
-      },
-      {
-        "file": "docs/vue-auth/setup.html",
-        "hash": "15164986716067518129"
-      },
-      {
-        "file": "docs/otp-input/hashmap.json",
-        "hash": "11360057412558985721"
-      },
-      {
-        "file": "docs/paystack-inline/assets/events.md.KPL4Rx4C.js",
-        "hash": "15527894517350668731"
-      },
-      {
-        "file": "docs/otp-input/index.html",
-        "hash": "3299614347373394699"
-      },
-      {
-        "file": "docs/otp-input/assets/events.md.0g6Ip7hk.js",
-        "hash": "17888382374251572693"
-      },
-      {
-        "file": "docs/vue-auth/assets/typescript.md.fbRkoMFq.js",
-        "hash": "11056633757739730203"
-      },
-      {
-        "file": "docs/vue-auth/images/login-circle-dark.png",
-        "hash": "12396571355280936779"
-      },
-      {
-        "file": "docs/vue-auth/images/logout-circle.png",
-        "hash": "10724955799324087798"
-      },
-      {
-        "file": "docs/vue-auth/assets/api.md.DSyMDXHR.lean.js",
-        "hash": "18034039002700933422"
-      },
-      {
-        "file": "docs/paystack-inline/images/typescript-logo.png",
-        "hash": "16202868179513312433"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
-        "hash": "8241952812200813355"
-      },
-      {
-        "file": "docs/vue-auth/images/user-community-dark.png",
-        "hash": "5137718679284179092"
-      },
-      {
-        "file": "docs/paystack-inline/assets/events.md.KPL4Rx4C.lean.js",
-        "hash": "15527894517350668731"
-      },
-      {
-        "file": "docs/vue-auth/assets/index.md.Cg1EBLL0.js",
-        "hash": "6393183367724075937"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "12476869173812924853"
-      },
-      {
-        "file": "docs/vue-auth/typescript.html",
-        "hash": "17255457387324625629"
-      },
-      {
-        "file": "docs/otp-input/assets/chunks/theme.B4srBebA.js",
-        "hash": "12087360468850972408"
-      },
-      {
-        "file": "docs/vue-auth/assets/setup.md.CTwN3Uga.lean.js",
-        "hash": "14588012286661616617"
-      },
-      {
-        "file": ".npmignore",
-        "hash": "14893169033837929716"
-      },
-      {
-        "file": "docs/otp-input/assets/events.md.0g6Ip7hk.lean.js",
-        "hash": "17888382374251572693"
-      },
-      {
-        "file": "docs/otp-input/assets/index.md.cxQoVX-z.js",
-        "hash": "13321072012633084162"
-      },
-      {
-        "file": "docs/paystack-inline/images/banner.png",
-        "hash": "7874110694037531959"
-      },
-      {
-        "file": "docs/paystack-inline/demo.html",
-        "hash": "11757719867347267364"
-      },
-      {
-        "file": "docs/vue-auth/assets/usage.md.3PVqdnfX.lean.js",
-        "hash": "415270366160274088"
-      },
-      {
-        "file": "docs/otp-input/assets/demo.md.Bu9166pe.lean.js",
-        "hash": "17749538473241540929"
-      },
-      {
-        "file": "nx.json",
-        "hash": "15833547922043738392"
-      },
-      {
-        "file": "docs/otp-input/assets/props.md.CQcEOzIR.lean.js",
-        "hash": "6107307811847265581"
-      },
-      {
-        "file": "docs/paystack-inline/assets/props.md.DJag38cB.lean.js",
-        "hash": "6233065034615452966"
-      },
-      {
-        "file": "docs/paystack-inline/assets/chunks/framework.D0nH-vwB.js",
-        "hash": "10375846852697402201"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-cyrillic.By2_1cv3.woff2",
-        "hash": "17518006115323730802"
-      },
-      {
-        "file": "docs/vue-auth/images/user-star.png",
-        "hash": "16919855557327794224"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
-        "hash": "15877694762730622634"
-      },
-      {
-        "file": "docs/otp-input/images/typescript-logo.png",
-        "hash": "16202868179513312433"
-      },
-      {
-        "file": "docs/otp-input/images/layer-solid.png",
-        "hash": "17096011977933028059"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-italic-latin.C2AdPX0b.woff2",
-        "hash": "10829668166839501238"
-      },
-      {
-        "file": "docs/vue-auth/assets/index.md.Cg1EBLL0.lean.js",
-        "hash": "6393183367724075937"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "9528850957059324109"
-      },
-      {
-        "file": "docs/paystack-inline/props.html",
-        "hash": "4754501153404294536"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
-        "hash": "17927959312439819061"
-      },
-      {
-        "file": "docs/vue-auth/api.html",
-        "hash": "16565506821973900853"
-      },
-      {
-        "file": "docs/paystack-inline/404.html",
-        "hash": "7536733138637501190"
-      },
-      {
-        "file": "docs/paystack-inline/assets/demo.md.CsScmeZi.js",
-        "hash": "6389807531552890595"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-roman-latin.Di8DUHzh.woff2",
-        "hash": "6650714724347801826"
-      },
-      {
-        "file": "docs/otp-input/assets/index.md.cxQoVX-z.lean.js",
-        "hash": "13321072012633084162"
-      },
-      {
-        "file": "docs/paystack-inline/assets/get-started.md.Cbg0J7HI.js",
-        "hash": "9291866233938643347"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
-        "hash": "15877694762730622634"
-      },
-      {
-        "file": "docs/paystack-inline/assets/index.md.0Qa4mS41.js",
-        "hash": "16154258561180907978"
-      },
-      {
-        "file": "docs/paystack-inline/assets/style.B5towsua.css",
-        "hash": "9296176994604332665"
-      },
-      {
-        "file": "docs/paystack-inline/get-started.html",
-        "hash": "18298564905465156523"
-      },
-      {
-        "file": "docs/vue-auth/assets/chunks/framework.DNMCOxJz.js",
-        "hash": "13558407712554624342"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
-        "hash": "2268099297404114829"
-      },
-      {
-        "file": "docs/paystack-inline/images/layer-solid-dark.png",
-        "hash": "14960698455115702100"
-      },
-      {
-        "file": ".github/workflows/publish_latest_to_npm.yml",
-        "hash": "9318746510165123096"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "17210788548465150864"
-      },
-      {
-        "file": "docs/vue-auth/images/external-link.png",
-        "hash": "11204462617654713746"
-      },
-      {
-        "file": "docs/otp-input/assets/demo.md.Bu9166pe.js",
-        "hash": "17749538473241540929"
-      },
-      {
-        "file": "package.json",
-        "hash": "6508883405971829810"
-      },
-      {
-        "file": "docs/paystack-inline/images/recycle-dark.png",
-        "hash": "12800247716495140001"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
-        "hash": "4147970328684304313"
-      },
-      {
-        "file": "docs/paystack-inline/images/recycle.png",
-        "hash": "10221039839496206773"
-      },
-      {
-        "file": "docs/.gitignore",
-        "hash": "2594765934000419506"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
-        "hash": "10886706858615268408"
-      },
-      {
-        "file": "docs/vue-auth/assets/get-started.md.CLctmA02.js",
-        "hash": "11175649583701159519"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-italic-cyrillic.By2_1cv3.woff2",
-        "hash": "17518006115323730802"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
-        "hash": "10886706858615268408"
-      },
-      {
-        "file": "deploy.sh",
-        "hash": "18182380790950861831"
-      },
-      {
-        "file": "docs/paystack-inline/assets/demo.md.CsScmeZi.lean.js",
-        "hash": "6389807531552890595"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-italic-cyrillic.By2_1cv3.woff2",
-        "hash": "17518006115323730802"
-      },
-      {
-        "file": "docs/otp-input/images/typescript-logo-dark.png",
+        "file": "docs/paystack-inline/images/typescript-logo-dark.png",
         "hash": "6327957380991664515"
-      },
-      {
-        "file": "docs/otp-input/assets/props.md.CQcEOzIR.js",
-        "hash": "6107307811847265581"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "12534292389619838197"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "8602161890475449243"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-italic-greek.DJ8dCoTZ.woff2",
-        "hash": "15478754605072970185"
-      },
-      {
-        "file": "docs/paystack-inline/assets/chunks/theme.DlYfEXO5.js",
-        "hash": "4246867729434399464"
-      },
-      {
-        "file": "docs/vue-auth/assets/setup.md.CTwN3Uga.js",
-        "hash": "14588012286661616617"
-      },
-      {
-        "file": "docs/vue-auth/assets/get-started.md.CLctmA02.lean.js",
-        "hash": "11175649583701159519"
-      },
-      {
-        "file": "docs/vue-auth/images/user-community.png",
-        "hash": "11123987137707978316"
-      },
-      {
-        "file": "docs/paystack-inline/index.html",
-        "hash": "12429530187758436165"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
-        "hash": "9802537721033087843"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
-        "hash": "17927959312439819061"
-      },
-      {
-        "file": "docs/vue-auth/assets/usage.md.3PVqdnfX.js",
-        "hash": "415270366160274088"
-      },
-      {
-        "file": "docs/vue-auth/images/banner.png",
-        "hash": "17816421865806139644"
-      },
-      {
-        "file": "docs/vue-auth/images/lock-unlock.png",
-        "hash": "17957766810913882221"
-      },
-      {
-        "file": "docs/paystack-inline/assets/get-started.md.Cbg0J7HI.lean.js",
-        "hash": "9291866233938643347"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "6904001187784468710"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-vietnamese.BSbpV94h.woff2",
-        "hash": "5439243213935570514"
-      },
-      {
-        "file": "docs/vue-auth/index.html",
-        "hash": "1873347589075330658"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-italic-greek.DJ8dCoTZ.woff2",
-        "hash": "15478754605072970185"
-      },
-      {
-        "file": "docs/vue-auth/images/lock-unlock-dark.png",
-        "hash": "9367137962912862642"
       },
       {
         "file": "docs/vue-auth/assets/app.dkSNnmqx.js",
         "hash": "18084221450337742733"
       },
       {
-        "file": "docs/vue-auth/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
+        "file": "docs/paystack-inline/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
         "hash": "4147970328684304313"
       },
       {
-        "file": "eslint.config.mjs",
-        "hash": "3247692525263875962"
+        "file": "docs/vue-auth/images/user-community.png",
+        "hash": "11123987137707978316"
       },
       {
-        "file": "docs/otp-input/images/layer-solid-dark.png",
-        "hash": "14960698455115702100"
+        "file": "docs/otp-input/get-started.html",
+        "hash": "6501749766778053228"
       },
       {
-        "file": "docs/paystack-inline/assets/index.md.0Qa4mS41.lean.js",
-        "hash": "16154258561180907978"
+        "file": "docs/otp-input/assets/inter-italic-cyrillic.By2_1cv3.woff2",
+        "hash": "17518006115323730802"
       },
       {
-        "file": "docs/otp-input/images/recycle.png",
-        "hash": "10221039839496206773"
+        "file": "docs/vue-auth/typescript.html",
+        "hash": "17255457387324625629"
       },
       {
-        "file": "docs/paystack-inline/events.html",
-        "hash": "15447105100704951450"
-      },
-      {
-        "file": "docs/paystack-inline/images/layer-solid.png",
-        "hash": "17096011977933028059"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-roman-latin.Di8DUHzh.woff2",
-        "hash": "6650714724347801826"
-      },
-      {
-        "file": "docs/vue-auth/404.html",
-        "hash": "5051894083511252798"
-      },
-      {
-        "file": "docs/vue-auth/images/login-circle.png",
-        "hash": "8850224165574781725"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
-        "hash": "7674416464885726785"
-      },
-      {
-        "file": "docs/vue-auth/images/user-star-dark.png",
-        "hash": "12390371748537502826"
+        "file": "docs/vue-auth/assets/style.reHVfgcu.css",
+        "hash": "2416931903536610988"
       },
       {
         "file": "docs/paystack-inline/assets/app.DlmUfmsZ.js",
         "hash": "5717506392772171694"
       },
       {
-        "file": ".github/workflows/publish_latest.yml",
-        "hash": "292815055604179558"
+        "file": "docs/paystack-inline/assets/demo.md.CsScmeZi.lean.js",
+        "hash": "6389807531552890595"
       },
       {
-        "file": ".prettierrc.json",
-        "hash": "15117339747707975127"
-      },
-      {
-        "file": "docs/otp-input/events.html",
-        "hash": "5609588932667197429"
-      },
-      {
-        "file": "docs/paystack-inline/assets/props.md.DJag38cB.js",
-        "hash": "6233065034615452966"
-      },
-      {
-        "file": "docs/vue-auth/assets/inter-italic-vietnamese.BSbpV94h.woff2",
-        "hash": "5439243213935570514"
-      },
-      {
-        "file": "docs/otp-input/demo.html",
-        "hash": "6210423029901159155"
-      },
-      {
-        "file": "docs/paystack-inline/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
-        "hash": "9802537721033087843"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
-        "hash": "8241952812200813355"
-      },
-      {
-        "file": "docs/vue-auth/assets/chunks/theme.D181Xc3Z.js",
-        "hash": "17215433529593758411"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-roman-latin.Di8DUHzh.woff2",
-        "hash": "6650714724347801826"
-      },
-      {
-        "file": "docs/vue-auth/hashmap.json",
-        "hash": "13975925335291237698"
-      },
-      {
-        "file": "docs/paystack-inline/images/typescript-logo-dark.png",
-        "hash": "6327957380991664515"
-      },
-      {
-        "file": "docs/paystack-inline/assets/chunks/PaystackPage.BwvtCAIE.js",
-        "hash": "15118130414555931330"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
-        "hash": "2268099297404114829"
-      },
-      {
-        "file": "docs/otp-input/assets/app.AmUWIqfw.js",
-        "hash": "6850364669289456606"
-      },
-      {
-        "file": "docs/otp-input/assets/get-started.md.bYCLH7GC.lean.js",
-        "hash": "17927289659374282508"
-      },
-      {
-        "file": "CHANGELOG.md",
-        "hash": "11238786352845504801"
-      },
-      {
-        "file": "docs/vue-auth/images/external-link-dark.png",
-        "hash": "9606923098724950351"
-      },
-      {
-        "file": "docs/vue-auth/assets/api.md.DSyMDXHR.js",
-        "hash": "18034039002700933422"
-      },
-      {
-        "file": "docs/otp-input/assets/inter-italic-greek.DJ8dCoTZ.woff2",
-        "hash": "15478754605072970185"
+        "file": "docs/paystack-inline/events.html",
+        "hash": "15447105100704951450"
       },
       {
         "file": "docs/paystack-inline/assets/inter-italic-latin.C2AdPX0b.woff2",
         "hash": "10829668166839501238"
       },
       {
+        "file": "docs/otp-input/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
+        "hash": "4147970328684304313"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-italic-latin.C2AdPX0b.woff2",
+        "hash": "10829668166839501238"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
+        "hash": "2268099297404114829"
+      },
+      {
+        "file": "docs/vue-auth/assets/typescript.md.fbRkoMFq.js",
+        "hash": "11056633757739730203"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
+        "hash": "15877694762730622634"
+      },
+      {
+        "file": "docs/otp-input/assets/events.md.0g6Ip7hk.lean.js",
+        "hash": "17888382374251572693"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-italic-cyrillic.By2_1cv3.woff2",
+        "hash": "17518006115323730802"
+      },
+      {
+        "file": "docs/vue-auth/images/login-circle-dark.png",
+        "hash": "12396571355280936779"
+      },
+      {
+        "file": "docs/otp-input/assets/chunks/theme.B4srBebA.js",
+        "hash": "12087360468850972408"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
+        "hash": "7674416464885726785"
+      },
+      {
+        "file": "docs/otp-input/demo.html",
+        "hash": "6210423029901159155"
+      },
+      {
+        "file": "docs/otp-input/events.html",
+        "hash": "5609588932667197429"
+      },
+      {
+        "file": "docs/vue-auth/images/user-star.png",
+        "hash": "16919855557327794224"
+      },
+      {
+        "file": "docs/otp-input/images/layer-solid-dark.png",
+        "hash": "14960698455115702100"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "9528850957059324109"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
+        "hash": "10886706858615268408"
+      },
+      {
+        "file": "docs/paystack-inline/assets/events.md.KPL4Rx4C.lean.js",
+        "hash": "15527894517350668731"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
+        "hash": "7674416464885726785"
+      },
+      {
         "file": "lerna-debug.log",
         "hash": "15408215426429787799"
       },
       {
+        "file": "docs/otp-input/index.html",
+        "hash": "3299614347373394699"
+      },
+      {
+        "file": "docs/vue-auth/get-started.html",
+        "hash": "366659271244288433"
+      },
+      {
+        "file": "docs/paystack-inline/get-started.html",
+        "hash": "18298564905465156523"
+      },
+      {
+        "file": "docs/otp-input/assets/props.md.CQcEOzIR.js",
+        "hash": "6107307811847265581"
+      },
+      {
+        "file": ".prettierrc.json",
+        "hash": "15117339747707975127"
+      },
+      {
+        "file": "docs/otp-input/images/typescript-logo-dark.png",
+        "hash": "6327957380991664515"
+      },
+      {
+        "file": "docs/vue-auth/assets/setup.md.CTwN3Uga.js",
+        "hash": "14588012286661616617"
+      },
+      {
+        "file": "docs/otp-input/assets/get-started.md.bYCLH7GC.js",
+        "hash": "17927289659374282508"
+      },
+      {
+        "file": "docs/paystack-inline/images/recycle.png",
+        "hash": "10221039839496206773"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "12476869173812924853"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
+        "hash": "7674416464885726785"
+      },
+      {
+        "file": "docs/vue-auth/usage.html",
+        "hash": "7767082488754279606"
+      },
+      {
+        "file": "docs/paystack-inline/assets/chunks/theme.DlYfEXO5.js",
+        "hash": "4246867729434399464"
+      },
+      {
+        "file": "docs/otp-input/images/layer-solid.png",
+        "hash": "17096011977933028059"
+      },
+      {
+        "file": "docs/vue-auth/hashmap.json",
+        "hash": "13975925335291237698"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "12534292389619838197"
+      },
+      {
+        "file": "docs/otp-input/assets/props.md.CQcEOzIR.lean.js",
+        "hash": "6107307811847265581"
+      },
+      {
+        "file": "docs/vue-auth/assets/usage.md.3PVqdnfX.js",
+        "hash": "415270366160274088"
+      },
+      {
+        "file": "docs/vue-auth/assets/setup.md.CTwN3Uga.lean.js",
+        "hash": "14588012286661616617"
+      },
+      {
+        "file": "docs/paystack-inline/demo.html",
+        "hash": "11757719867347267364"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
+        "hash": "10886706858615268408"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
+        "hash": "17927959312439819061"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "17210788548465150864"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "6904001187784468710"
+      },
+      {
+        "file": "docs/vue-auth/assets/chunks/framework.DNMCOxJz.js",
+        "hash": "13558407712554624342"
+      },
+      {
+        "file": "nx.json",
+        "hash": "15833547922043738392"
+      },
+      {
+        "file": "docs/otp-input/assets/index.md.cxQoVX-z.lean.js",
+        "hash": "13321072012633084162"
+      },
+      {
+        "file": "README.md",
+        "hash": "3530928418380641308"
+      },
+      {
+        "file": "package.json",
+        "hash": "6508883405971829810"
+      },
+      {
+        "file": "docs/paystack-inline/images/layer-solid.png",
+        "hash": "17096011977933028059"
+      },
+      {
+        "file": "docs/vue-auth/images/lock-unlock-dark.png",
+        "hash": "9367137962912862642"
+      },
+      {
+        "file": "deploy.sh",
+        "hash": "18182380790950861831"
+      },
+      {
+        "file": "docs/otp-input/assets/app.AmUWIqfw.js",
+        "hash": "6850364669289456606"
+      },
+      {
+        "file": "docs/vue-auth/assets/usage.md.3PVqdnfX.lean.js",
+        "hash": "415270366160274088"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "4169324519833395793"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-italic-greek.DJ8dCoTZ.woff2",
+        "hash": "15478754605072970185"
+      },
+      {
+        "file": "docs/paystack-inline/404.html",
+        "hash": "7536733138637501190"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
+        "hash": "8241952812200813355"
+      },
+      {
+        "file": "docs/vue-auth/setup.html",
+        "hash": "15164986716067518129"
+      },
+      {
+        "file": "docs/vue-auth/assets/get-started.md.CLctmA02.lean.js",
+        "hash": "11175649583701159519"
+      },
+      {
+        "file": "docs/vue-auth/index.html",
+        "hash": "1873347589075330658"
+      },
+      {
+        "file": "docs/vue-auth/assets/api.md.DSyMDXHR.js",
+        "hash": "18034039002700933422"
+      },
+      {
+        "file": "docs/paystack-inline/assets/get-started.md.Cbg0J7HI.lean.js",
+        "hash": "9291866233938643347"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
+        "hash": "2268099297404114829"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-latin-ext.CN1xVJS-.woff2",
+        "hash": "2268099297404114829"
+      },
+      {
+        "file": "docs/paystack-inline/assets/demo.md.CsScmeZi.js",
+        "hash": "6389807531552890595"
+      },
+      {
+        "file": "docs/vue-auth/images/banner.png",
+        "hash": "17816421865806139644"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
+        "hash": "15877694762730622634"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-greek.DJ8dCoTZ.woff2",
+        "hash": "15478754605072970185"
+      },
+      {
+        "file": "docs/otp-input/assets/events.md.0g6Ip7hk.js",
+        "hash": "17888382374251572693"
+      },
+      {
+        "file": "docs/vue-auth/images/lock-unlock.png",
+        "hash": "17957766810913882221"
+      },
+      {
+        "file": "docs/otp-input/props.html",
+        "hash": "1094653252009163693"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-latin.Di8DUHzh.woff2",
+        "hash": "6650714724347801826"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-latin.C2AdPX0b.woff2",
+        "hash": "10829668166839501238"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-italic-greek.DJ8dCoTZ.woff2",
+        "hash": "15478754605072970185"
+      },
+      {
+        "file": "docs/paystack-inline/assets/events.md.KPL4Rx4C.js",
+        "hash": "15527894517350668731"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "3247692525263875962"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
+        "hash": "8241952812200813355"
+      },
+      {
+        "file": "docs/paystack-inline/assets/chunks/PaystackPage.BwvtCAIE.js",
+        "hash": "15118130414555931330"
+      },
+      {
+        "file": "docs/otp-input/images/recycle-dark.png",
+        "hash": "12800247716495140001"
+      },
+      {
+        "file": "docs/paystack-inline/assets/props.md.DJag38cB.js",
+        "hash": "6233065034615452966"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-roman-latin.Di8DUHzh.woff2",
+        "hash": "6650714724347801826"
+      },
+      {
+        "file": "docs/vue-auth/api.html",
+        "hash": "16565506821973900853"
+      },
+      {
+        "file": "docs/vue-auth/assets/chunks/theme.D181Xc3Z.js",
+        "hash": "17215433529593758411"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
+        "hash": "9802537721033087843"
+      },
+      {
+        "file": "docs/vue-auth/assets/index.md.Cg1EBLL0.lean.js",
+        "hash": "6393183367724075937"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-italic-vietnamese.BSbpV94h.woff2",
+        "hash": "5439243213935570514"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
+        "hash": "17927959312439819061"
+      },
+      {
+        "file": "docs/paystack-inline/assets/index.md.0Qa4mS41.js",
+        "hash": "16154258561180907978"
+      },
+      {
+        "file": "docs/paystack-inline/images/layer-solid-dark.png",
+        "hash": "14960698455115702100"
+      },
+      {
+        "file": "docs/otp-input/404.html",
+        "hash": "10065103145034394878"
+      },
+      {
         "file": "docs/paystack-inline/assets/inter-roman-greek.BBVDIX6e.woff2",
+        "hash": "12225282773869548609"
+      },
+      {
+        "file": "docs/paystack-inline/props.html",
+        "hash": "4754501153404294536"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-roman-cyrillic.C5lxZ8CY.woff2",
+        "hash": "4147970328684304313"
+      },
+      {
+        "file": "docs/paystack-inline/assets/get-started.md.Cbg0J7HI.js",
+        "hash": "9291866233938643347"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-roman-latin.Di8DUHzh.woff2",
+        "hash": "6650714724347801826"
+      },
+      {
+        "file": ".github/workflows/publish_latest_to_npm.yml",
+        "hash": "9318746510165123096"
+      },
+      {
+        "file": ".npmignore",
+        "hash": "14893169033837929716"
+      },
+      {
+        "file": "docs/paystack-inline/assets/chunks/framework.D0nH-vwB.js",
+        "hash": "10375846852697402201"
+      },
+      {
+        "file": "docs/vue-auth/assets/get-started.md.CLctmA02.js",
+        "hash": "11175649583701159519"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-latin-ext.4ZJIpNVo.woff2",
+        "hash": "10886706858615268408"
+      },
+      {
+        "file": "docs/paystack-inline/images/recycle-dark.png",
+        "hash": "12800247716495140001"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-roman-greek.BBVDIX6e.woff2",
+        "hash": "12225282773869548609"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "hash": "11238786352845504801"
+      },
+      {
+        "file": "docs/vue-auth/assets/inter-italic-vietnamese.BSbpV94h.woff2",
+        "hash": "5439243213935570514"
+      },
+      {
+        "file": "docs/paystack-inline/images/typescript-logo.png",
+        "hash": "16202868179513312433"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-greek.BBVDIX6e.woff2",
         "hash": "12225282773869548609"
       },
       {
@@ -624,39 +496,167 @@
         "hash": "3883933894642343894"
       },
       {
-        "file": "docs/otp-input/assets/inter-italic-latin.C2AdPX0b.woff2",
-        "hash": "10829668166839501238"
+        "file": "docs/otp-input/assets/inter-roman-greek-ext.CqjqNYQ-.woff2",
+        "hash": "15877694762730622634"
       },
       {
-        "file": ".github/issues-bot.yml",
-        "hash": "9545911637985008890"
+        "file": "docs/paystack-inline/index.html",
+        "hash": "12429530187758436165"
       },
       {
         "file": "docs/paystack-inline/assets/inter-italic-greek-ext.1u6EdAuj.woff2",
         "hash": "17927959312439819061"
       },
       {
+        "file": ".npmrc",
+        "hash": "8602161890475449243"
+      },
+      {
+        "file": "docs/otp-input/assets/demo.md.Bu9166pe.lean.js",
+        "hash": "17749538473241540929"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-italic-cyrillic.By2_1cv3.woff2",
+        "hash": "17518006115323730802"
+      },
+      {
+        "file": "docs/vue-auth/images/external-link.png",
+        "hash": "11204462617654713746"
+      },
+      {
+        "file": "docs/vue-auth/assets/index.md.Cg1EBLL0.js",
+        "hash": "6393183367724075937"
+      },
+      {
+        "file": "docs/paystack-inline/assets/style.B5towsua.css",
+        "hash": "9296176994604332665"
+      },
+      {
         "file": "docs/otp-input/assets/chunks/framework.BKVU_ezM.js",
         "hash": "3655938417814873091"
       },
       {
-        "file": "docs/paystack-inline/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2",
-        "hash": "7674416464885726785"
+        "file": "docs/vue-auth/images/user-star-dark.png",
+        "hash": "12390371748537502826"
+      },
+      {
+        "file": "docs/otp-input/assets/demo.md.Bu9166pe.js",
+        "hash": "17749538473241540929"
+      },
+      {
+        "file": "docs/paystack-inline/images/banner.png",
+        "hash": "7874110694037531959"
+      },
+      {
+        "file": "docs/vue-auth/images/login-circle.png",
+        "hash": "8850224165574781725"
+      },
+      {
+        "file": "docs/vue-auth/images/logout-circle.png",
+        "hash": "10724955799324087798"
+      },
+      {
+        "file": "docs/paystack-inline/assets/index.md.0Qa4mS41.lean.js",
+        "hash": "16154258561180907978"
+      },
+      {
+        "file": ".github/issues-bot.yml",
+        "hash": "9545911637985008890"
+      },
+      {
+        "file": "docs/otp-input/assets/get-started.md.bYCLH7GC.lean.js",
+        "hash": "17927289659374282508"
+      },
+      {
+        "file": "docs/otp-input/images/recycle.png",
+        "hash": "10221039839496206773"
       },
       {
         "file": ".gitignore",
         "hash": "2594765934000419506"
       },
       {
-        "file": "docs/otp-input/assets/inter-roman-greek.BBVDIX6e.woff2",
-        "hash": "12225282773869548609"
+        "file": "docs/otp-input/assets/index.md.cxQoVX-z.js",
+        "hash": "13321072012633084162"
+      },
+      {
+        "file": "docs/otp-input/images/typescript-logo.png",
+        "hash": "16202868179513312433"
+      },
+      {
+        "file": "docs/.gitignore",
+        "hash": "2594765934000419506"
+      },
+      {
+        "file": "docs/otp-input/images/banner.png",
+        "hash": "6203059496166803201"
+      },
+      {
+        "file": "docs/vue-auth/assets/typescript.md.fbRkoMFq.lean.js",
+        "hash": "11056633757739730203"
+      },
+      {
+        "file": "docs/otp-input/assets/style.Dwvg82iD.css",
+        "hash": "174851521141260016"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
+        "hash": "9802537721033087843"
+      },
+      {
+        "file": "docs/vue-auth/404.html",
+        "hash": "5051894083511252798"
+      },
+      {
+        "file": "docs/otp-input/hashmap.json",
+        "hash": "11360057412558985721"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
+        "hash": "8241952812200813355"
+      },
+      {
+        "file": "docs/vue-auth/images/logout-circle-dark.png",
+        "hash": "9173765670698542902"
+      },
+      {
+        "file": ".github/workflows/publish_latest.yml",
+        "hash": "292815055604179558"
+      },
+      {
+        "file": "docs/vue-auth/images/external-link-dark.png",
+        "hash": "9606923098724950351"
+      },
+      {
+        "file": "docs/vue-auth/assets/api.md.DSyMDXHR.lean.js",
+        "hash": "18034039002700933422"
+      },
+      {
+        "file": ".vscode/settings.template.json",
+        "hash": "11586511439438813548"
+      },
+      {
+        "file": "docs/paystack-inline/assets/inter-italic-vietnamese.BSbpV94h.woff2",
+        "hash": "5439243213935570514"
+      },
+      {
+        "file": "docs/paystack-inline/assets/props.md.DJag38cB.lean.js",
+        "hash": "6233065034615452966"
+      },
+      {
+        "file": "docs/otp-input/assets/inter-roman-vietnamese.BjW4sHH5.woff2",
+        "hash": "9802537721033087843"
+      },
+      {
+        "file": "docs/vue-auth/images/user-community-dark.png",
+        "hash": "5137718679284179092"
       }
     ],
     "projectFileMap": {
       "@toneflix/otp-input": [
         {
           "file": "packages/otp-input/CHANGELOG.md",
-          "hash": "16855375595919460581"
+          "hash": "17835751288234384127"
         },
         {
           "file": "packages/otp-input/README.md",
@@ -768,7 +768,7 @@
         },
         {
           "file": "packages/otp-input/package.json",
-          "hash": "9467608667983132363",
+          "hash": "2167481153686671836",
           "deps": [
             "npm:vue@3.5.11",
             "npm:@vitejs/plugin-vue",
@@ -801,7 +801,7 @@
       "@toneflix/paystack-inline": [
         {
           "file": "packages/paystack-inline/CHANGELOG.md",
-          "hash": "9258786988239010073"
+          "hash": "16826184222440439982"
         },
         {
           "file": "packages/paystack-inline/README.md",
@@ -917,7 +917,7 @@
         },
         {
           "file": "packages/paystack-inline/package.json",
-          "hash": "16338238002183119994",
+          "hash": "17533839813549497880",
           "deps": [
             "npm:vue@3.5.11",
             "npm:@vitejs/plugin-vue",
@@ -1037,7 +1037,7 @@
       "@toneflix/vue-auth": [
         {
           "file": "packages/vue-auth/CHANGELOG.md",
-          "hash": "1318418178705684880"
+          "hash": "4790968453733471827"
         },
         {
           "file": "packages/vue-auth/README.md",
@@ -1181,7 +1181,7 @@
         },
         {
           "file": "packages/vue-auth/package.json",
-          "hash": "2302786457706916687",
+          "hash": "1050731539899857569",
           "deps": [
             "npm:vue",
             "npm:@vitejs/plugin-vue",

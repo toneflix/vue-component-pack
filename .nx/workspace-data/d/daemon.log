@@ -11158,3 +11158,42 @@
 [NX Daemon Server] - 2024-10-26T08:03:15.779Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2024-10-26T08:03:15.779Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-10-26T08:03:15.779Z - Time taken for 'total execution time for createProjectGraph()' 8.698125004768372ms
+[NX Daemon Server] - 2024-10-26T08:05:38.578Z - [WATCHER]: 6 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-26T08:05:38.579Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-26T08:05:38.683Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-26T08:05:38.684Z - [REQUEST]: packages/paystack-inline/package.json,packages/vue-auth/package.json,packages/otp-input/CHANGELOG.md,packages/paystack-inline/CHANGELOG.md,packages/otp-input/package.json,packages/vue-auth/CHANGELOG.md
+[NX Daemon Server] - 2024-10-26T08:05:38.684Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-26T08:05:38.689Z - Time taken for 'hash changed files from watcher' 2.1278750002384186ms
+[NX Daemon Server] - 2024-10-26T08:05:38.710Z - Time taken for 'build-project-configs' 18.123792000114918ms
+[NX Daemon Server] - 2024-10-26T08:05:38.756Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-26T08:05:38.757Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-26T08:05:38.757Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-26T08:05:38.757Z - Time taken for 'total execution time for createProjectGraph()' 43.20895899832249ms
+[NX Daemon Server] - 2024-10-26T08:05:56.471Z - [WATCHER]: packages/vue-auth/docs/.vitepress/config.ts.timestamp-1729929956405-ab5cbe2f95cca.mjs was deleted
+[NX Daemon Server] - 2024-10-26T08:05:56.472Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-26T08:05:56.674Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-26T08:05:56.674Z - [REQUEST]: 
+[NX Daemon Server] - 2024-10-26T08:05:56.674Z - [REQUEST]: packages/vue-auth/docs/.vitepress/config.ts.timestamp-1729929956405-ab5cbe2f95cca.mjs
+[NX Daemon Server] - 2024-10-26T08:05:56.677Z - Time taken for 'hash changed files from watcher' 0.2888749986886978ms
+[NX Daemon Server] - 2024-10-26T08:05:56.688Z - Time taken for 'build-project-configs' 10.08941699564457ms
+[NX Daemon Server] - 2024-10-26T08:05:56.701Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-10-26T08:05:56.701Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-10-26T08:05:56.701Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-10-26T08:05:56.701Z - Time taken for 'total execution time for createProjectGraph()' 10.289666004478931ms
+[NX Daemon Server] - 2024-10-26T08:06:01.587Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-26T08:06:01.705Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-26T08:06:05.517Z - [WATCHER]: 11 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-26T08:06:05.518Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-26T08:06:05.588Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-26T08:06:05.597Z - [WATCHER]: 18 file(s) created or restored, 0 file(s) modified, 45 file(s) deleted
+[NX Daemon Server] - 2024-10-26T08:06:05.621Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-10-26T08:06:05.621Z - [REQUEST]: docs/vue-auth/typescript.html,docs/vue-auth/images/logout-circle.png,docs/vue-auth/images/logout-circle-dark.png,docs/vue-auth/images/user-star.png,docs/vue-auth/404.html,docs/vue-auth/images/user-community.png,docs/vue-auth/index.html,docs/vue-auth/images/banner.png,docs/vue-auth/get-started.html,docs/vue-auth/images/user-star-dark.png,docs/vue-auth/images/user-community-dark.png,docs/vue-auth/images/lock-unlock-dark.png,docs/vue-auth/images/login-circle.png,docs/vue-auth/inline-usage.html,docs/vue-auth/images/lock-unlock.png,docs/vue-auth/images/external-link.png,docs/vue-auth/images/external-link-dark.png,docs/vue-auth/images/login-circle-dark.png
+[NX Daemon Server] - 2024-10-26T08:06:05.621Z - [REQUEST]: docs/vue-auth/assets/setup.md.CTwN3Uga.lean.js,docs/vue-auth/assets/inter-roman-latin-ext.4ZJIpNVo.woff2,packages/vue-auth/docs/.vitepress/.temp/api.md.js,docs/vue-auth/assets/inter-italic-cyrillic.By2_1cv3.woff2,docs/vue-auth/assets/typescript.md.fbRkoMFq.lean.js,docs/vue-auth/assets/index.md.Cg1EBLL0.lean.js,docs/vue-auth/assets/inter-roman-greek.BBVDIX6e.woff2,docs/vue-auth/assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2,docs/vue-auth/assets/inter-italic-latin.C2AdPX0b.woff2,docs/vue-auth/assets/chunks/framework.DNMCOxJz.js,packages/vue-auth/docs/.vitepress/.temp/inline-usage.md.js,docs/vue-auth/assets/inter-italic-latin-ext.CN1xVJS-.woff2,packages/vue-auth/docs/.vitepress/.temp/assets/style.CcWC8e2S.css,docs/vue-auth/assets/api.md.DSyMDXHR.js,docs/vue-auth/assets/setup.md.CTwN3Uga.js,docs/vue-auth/assets/app.dkSNnmqx.js,packages/vue-auth/docs/.vitepress/.temp/usage.md.js,docs/vue-auth/assets/inter-italic-greek.DJ8dCoTZ.woff2,packages/vue-auth/docs/.vitepress/.temp/plugin-vue_export-helper.1tPrXgE0.js,packages/vue-auth/docs/.vitepress/.temp/typescript.md.js,docs/vue-auth/assets/inter-roman-latin.Di8DUHzh.woff2,docs/vue-auth/assets/inter-italic-greek-ext.1u6EdAuj.woff2,packages/vue-auth/docs/.vitepress/.temp/get-started.md.js,docs/vue-auth/assets/typescript.md.fbRkoMFq.js,packages/vue-auth/docs/.vitepress/.temp/app.js,docs/vue-auth/assets/inter-italic-cyrillic-ext.r48I6akx.woff2,docs/vue-auth/setup.html,docs/vue-auth/assets/usage.md.3PVqdnfX.js,docs/vue-auth/assets/get-started.md.CLctmA02.lean.js,docs/vue-auth/api.html,docs/vue-auth/assets/usage.md.3PVqdnfX.lean.js,docs/vue-auth/assets/index.md.Cg1EBLL0.js,docs/vue-auth/assets/style.reHVfgcu.css,docs/vue-auth/assets/get-started.md.CLctmA02.js,docs/vue-auth/assets/inter-italic-vietnamese.BSbpV94h.woff2,packages/vue-auth/docs/.vitepress/.temp/package.json,docs/vue-auth/assets/inter-roman-vietnamese.BjW4sHH5.woff2,packages/vue-auth/docs/.vitepress/.temp/setup.md.js,docs/vue-auth/hashmap.json,docs/vue-auth/assets/chunks/theme.D181Xc3Z.js,packages/vue-auth/docs/.vitepress/.temp/index.md.js,docs/vue-auth/usage.html,docs/vue-auth/assets/inter-roman-greek-ext.CqjqNYQ-.woff2,docs/vue-auth/assets/api.md.DSyMDXHR.lean.js,docs/vue-auth/assets/inter-roman-cyrillic.C5lxZ8CY.woff2
+[NX Daemon Server] - 2024-10-26T08:06:05.623Z - Time taken for 'hash changed files from watcher' 0.9972079992294312ms
+[NX Daemon Server] - 2024-10-26T08:06:05.634Z - Time taken for 'build-project-configs' 9.41516600549221ms
+[NX Daemon Server] - 2024-10-26T08:06:05.641Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-26T08:06:05.649Z - [WATCHER]: 41 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-10-26T08:06:05.650Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-26T08:06:05.650Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-10-26T08:06:05.650Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-10-26T08:06:05.651Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"
