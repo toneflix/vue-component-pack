@@ -1,6 +1,14 @@
 # Vue Authenticator
 
-Advanced authentication plugin for Vue 3
+[![npm](https://img.shields.io/npm/v/@toneflix/vue-auth.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-auth)
+[![npm](https://img.shields.io/npm/dt/@toneflix/vue-auth.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-auth)
+
+Advanced authentication plugin for Vue 3.
+
+<p align="center">
+    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-auth/images/banner.png" alt="Flickity">
+    <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
+</p>
 
 ## Documentation
 

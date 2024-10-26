@@ -1,6 +1,14 @@
 # Vue Paystack Inline
 
+[![npm](https://img.shields.io/npm/v/@toneflix/paystack-inline.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/paystack-inline)
+[![npm](https://img.shields.io/npm/dt/@toneflix/paystack-inline.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/paystack-inline)
+
 Simple Paystack Inline component for Vue 3
+
+<p align="center">
+    <img width="200" src="https://toneflix.github.io/vue-component-pack/paystack-inline/images/banner.png" alt="Flickity">
+    <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
+</p>
 
 ## Documentation
 
