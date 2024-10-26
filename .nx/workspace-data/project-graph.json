@@ -301,7 +301,7 @@
               "docs:deploy"
             ]
           },
-          "description": "Vue 3 authentication plugin."
+          "description": "Advanced authentication plugin for Vue 3."
         },
         "targets": {
           "test": {
@@ -404,6 +404,54 @@
             },
             "configurations": {},
             "parallelism": true
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "runner": {
+      "name": "runner",
+      "type": "lib",
+      "data": {
+        "root": "runner",
+        "sourceRoot": "runner",
+        "name": "runner",
+        "tags": [
+          "npm:public"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "dev"
+            ]
+          },
+          "description": ""
+        },
+        "targets": {
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "metadata": {
+              "scriptContent": "vite",
+              "runCommand": "pnpm run dev"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^dev"
+            ]
           },
           "nx-release-publish": {
             "executor": "@nx/js:release-publish",
@@ -6670,9 +6718,9 @@
       "type": "npm",
       "name": "npm:sass",
       "data": {
-        "version": "1.80.3",
+        "version": "1.80.4",
         "packageName": "sass",
-        "hash": "sha512-ptDWyVmDMVielpz/oWy3YP3nfs7LpJTHIJZboMVs8GEC9eUmtZTZhMHlTW98wY4aEorDfjN38+Wr/XjskFWcfA=="
+        "hash": "sha512-rhMQ2tSF5CsuuspvC94nPM9rToiAFw2h3JTrLlgmNw1MH79v8Cr3DH6KF6o6r+8oofY3iYVPUf66KzC8yuVN1w=="
       }
     },
     "npm:search-insights": {
@@ -7976,6 +8024,53 @@
       },
       {
         "source": "@toneflix/vue-auth",
+        "target": "npm:vue-router",
+        "type": "static"
+      }
+    ],
+    "runner": [
+      {
+        "source": "runner",
+        "target": "npm:@vitejs/plugin-vue",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:vite@5.4.10",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "@toneflix/otp-input",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "@toneflix/paystack-inline",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "@toneflix/vue-auth",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:axios",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:pinia",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:vue",
+        "type": "static"
+      },
+      {
+        "source": "runner",
         "target": "npm:vue-router",
         "type": "static"
       }

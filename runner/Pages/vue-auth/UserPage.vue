@@ -1,14 +1,20 @@
 <script setup lang="ts">
-import { AuthUser, useAuth } from '@toneflix/vue-auth'
+import { AuthUser, useAuth, useInlineAuth } from '@toneflix/vue-auth'
 import { useRouter } from 'vue-router'
 
 const { logout, user } = useAuth<AuthUser & { name: string }>()
+const { logout: inlineLogout } = useInlineAuth()
 const router = useRouter()
 
 const handleLogout = async () => {
   await logout()
   router.replace('/auth/login')
 }
+
+const { send, onSuccess } = inlineLogout()
+onSuccess(() => {
+  router.replace('/auth/login')
+})
 </script>
 
 <template>
@@ -16,5 +22,11 @@ const handleLogout = async () => {
     <div>Name: {{ user.name }}</div>
     <div>Email: {{ user.email }}</div>
     <button @click="handleLogout">Logout</button>
+  </div>
+  <hr />
+  <div class="column-container">
+    <div>Name: {{ user.name }}</div>
+    <div>Email: {{ user.email }}</div>
+    <button @click="send">Logout</button>
   </div>
 </template>

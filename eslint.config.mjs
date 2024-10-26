@@ -16,6 +16,11 @@ export default [
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/essential'],
   {
+    rules: {
+      "@typescript-eslint/no-explicit-any": ['error', { ignoreRestArgs: true, fixToUnknown: true }],
+    },
+  },
+  {
     files: ['**/*.vue'],
     languageOptions: {
       parserOptions: {

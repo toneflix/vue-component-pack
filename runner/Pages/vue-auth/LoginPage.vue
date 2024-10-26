@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
-import { AuthUser, useAuth } from '@toneflix/vue-auth'
+import { AuthUser, BaseError, useAuth, useInlineAuth } from '@toneflix/vue-auth'
 import { useRouter } from 'vue-router'
 
 interface CustomUser extends AuthUser {
@@ -9,6 +9,8 @@ interface CustomUser extends AuthUser {
 }
 
 const router = useRouter()
+
+const { login: inlineLogin } = useInlineAuth()
 const { login } = useAuth()
 
 const form = reactive({ email: 'test@example.com', password: 'password' })
@@ -16,7 +18,7 @@ const data = ref(
   {} as {
     user: CustomUser
     token?: string
-    error?: { errors: { [key: string]: string } }
+    error?: BaseError
   }
 )
 
@@ -25,6 +27,11 @@ const handleLogin = async () => {
 
   if (!data.value.error) router.replace('/auth/profile')
 }
+
+const { error, send, onSuccess } = inlineLogin(form)
+onSuccess(() => {
+  router.replace('/auth/profile')
+})
 </script>
 
 <template>
@@ -38,6 +45,20 @@ const handleLogin = async () => {
       {{ data.error.errors.password }}
     </p>
     <button @click="handleLogin">Login</button>
+    <router-link to="/auth/register">Register</router-link>
+    <router-link to="/auth/forgot">Forgot</router-link>
+  </div>
+  <hr />
+  <div class="column-container">
+    <input v-model="form.email" placeholder="Email Address" />
+    <p class="error" v-if="error?.errors?.email">
+      {{ error.errors.email }}
+    </p>
+    <input v-model="form.password" placeholder="Password" type="password" />
+    <p class="error" v-if="error?.errors?.password">
+      {{ error.errors.password }}
+    </p>
+    <button @click="send">Login</button>
     <router-link to="/auth/register">Register</router-link>
     <router-link to="/auth/forgot">Forgot</router-link>
   </div>

@@ -115,6 +115,18 @@ export interface RegisterCredentials {
 }
 ```
 
+### `BaseError`
+
+Represents the structure of an error. This can be extended to include more fields as needed by your application.
+
+```ts:line-numbers
+export interface BaseError extends Error {
+  status?: string;
+  errors?: Record<string, string | string[]>;
+  [key: string]: unknown;
+}
+```
+
 ## Generic Types in `useAuth` Composable
 
 The `useAuth` composable leverages TypeScript’s generics to allow flexible typing of the user object. This means you can provide a custom type for the user, making the composable adaptable to different user data structures in various applications.
@@ -130,7 +142,7 @@ login<U = AuthUser, T = LoginCredentials>(
 ): Promise<{
   user: U;
   token?: string;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -154,7 +166,7 @@ register<U = AuthUser, T = RegisterCredentials>(
 ): Promise<{
   user: AuthUser | U;
   token?: string;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -176,7 +188,7 @@ logout<T = unknown>(
   options: AuthOptions = getAuthConfig(),
   credentials?: T
 ): Promise<{
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 } | undefined>
 ```
@@ -195,7 +207,7 @@ forgot<T = unknown>(
 ): Promise<{
   countdown: Ref<number>;
   timeout?: number;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -217,7 +229,7 @@ reset<U = AuthUser, T = unknown> (
   options: AuthOptions<U> = getAuthConfig()
 ): Promise<{
   user: U;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -238,7 +250,7 @@ loadUserFromStorage<U = AuthUser, T = unknown>(
   credentials?: T
 ): Promise<{
   user: U;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```

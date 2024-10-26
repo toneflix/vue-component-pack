@@ -1,10 +1,10 @@
-Once registered, Vue Authenticator is now ready to handle authentication across your application. Here’s how you can use the core features such as login, register, logout, and user state management in your Vue components.
+# Usage
 
-## Example: Using Authentication in a Component
+Once registered, Vue Authenticator is now ready to handle authentication across your application. We highly recommend using the [Inline Mode](./inline-usage) for a more streamlined experience. Here’s how you can use the core features such as login, register, logout, and user state management in your Vue components.
 
-### Login
+## Login
 
-To authenticate a user, simply use the login method provided by the useAuth store.
+To authenticate a user, simply use the login method provided by the useAuth composable.
 
 ```vue:line-numbers{3,7,13}
 <script setup>
@@ -39,7 +39,7 @@ const handleLogin = async () => {
 </template>
 ```
 
-### Register
+## Register
 
 Similarly, you can implement registration using the register method.
 
@@ -79,7 +79,7 @@ const handleRegister = async () => {
 </template>
 ```
 
-### Logout
+## Logout
 
 You can log the user out with a button click and handle the redirection afterward.
 
@@ -102,7 +102,7 @@ const handleLogout = async () => {
 </template>
 ```
 
-### Password Recovery
+## Password Recovery
 
 Requesting for password reset token can also be handled with a click.
 
@@ -133,7 +133,7 @@ const handleForgot = async () => {
 </template>
 ```
 
-### Password Reset
+## Password Reset
 
 Once a user has requested a password recovery code, doing a password reset should also be a breeze.
 

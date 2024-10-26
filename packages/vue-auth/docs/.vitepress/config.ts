@@ -25,6 +25,7 @@ export default defineConfig({
         text: 'Documentation',
         items: [
           { text: 'Usage', link: '/usage' },
+          { text: 'Inline Mode', link: '/inline-usage' },
           { text: 'Setup', link: '/setup' },
           { text: 'API', link: '/api' },
           { text: 'Typescript', link: '/typescript' },

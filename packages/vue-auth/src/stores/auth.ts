@@ -2,11 +2,13 @@ import {
   AuthOptions,
   AuthResponse,
   AuthUser,
+  BaseError,
+  DefinitelyAuthResponse,
   LoginCredentials,
   RegisterCredentials
 } from '../types'
 import { Ref, ref, toValue } from 'vue'
-import { getAuthConfig, url } from '../config'
+import { createCountdown, getAuthConfig, url } from '../config'
 
 import axios from 'axios'
 import { defineStore } from 'pinia'
@@ -31,12 +33,7 @@ export function createAuthStore<U = unknown> () {
     const login = async <U = AuthUser, T = LoginCredentials> (
       credentials: T,
       options: AuthOptions<U> = getAuthConfig()
-    ): Promise<{
-      user: U
-      token?: string
-      error?: undefined
-      message?: string
-    }> => {
+    ): Promise<DefinitelyAuthResponse<U>> => {
       const endpoint = url('login')
       try {
         const { data } = await axios.post<AuthResponse<U>>(
@@ -74,12 +71,7 @@ export function createAuthStore<U = unknown> () {
     const register = async <U = AuthUser, T = RegisterCredentials> (
       credentials: T,
       options: AuthOptions<U> = getAuthConfig()
-    ): Promise<{
-      user: U
-      token?: string
-      error?: undefined
-      message?: string
-    }> => {
+    ): Promise<DefinitelyAuthResponse<U>> => {
       const endpoint = url('register')
       try {
         const { data } = await axios.post<AuthResponse<U>>(
@@ -119,7 +111,7 @@ export function createAuthStore<U = unknown> () {
       credentials?: T
     ): Promise<
       | {
-        error?: undefined
+        error?: BaseError
         message?: string
       }
       | undefined
@@ -156,9 +148,9 @@ export function createAuthStore<U = unknown> () {
       options: AuthOptions = getAuthConfig()
     ): Promise<{
       countdown: Ref<number>
-      timeout?: number
-      error?: undefined
-      message?: string
+      timeout?: number;
+      error?: BaseError;
+      message?: string;
     }> => {
       const headers = options.getAuthHeaders ? await options.getAuthHeaders() : {}
 
@@ -173,17 +165,7 @@ export function createAuthStore<U = unknown> () {
           ? options.transformResponse(data)
           : { timeout: data.timeout, message: data.message }
 
-        const countdown = ref<number>(0)
-
-        if (timeout && timeout > 0) {
-          countdown.value = timeout
-          const intval = setInterval(() => {
-            countdown.value -= 1000
-            if (countdown.value <= 0) {
-              clearInterval(intval)
-            }
-          }, 1000)
-        }
+        const countdown = createCountdown(timeout)
 
         return { timeout, countdown, message }
       } catch ({ response }) {
@@ -202,9 +184,9 @@ export function createAuthStore<U = unknown> () {
       credentials: T,
       options: AuthOptions<U> = getAuthConfig()
     ): Promise<{
-      user: U
-      error?: undefined
-      message?: string
+      user: U;
+      error?: BaseError;
+      message?: string;
     }> => {
       const endpoint = url('reset')
       try {
@@ -236,9 +218,9 @@ export function createAuthStore<U = unknown> () {
       options: AuthOptions<U> = getAuthConfig(),
       credentials?: T
     ): Promise<{
-      user: U
-      error?: undefined
-      message?: string
+      user: U;
+      error?: BaseError;
+      message?: string;
     }> => {
       const tkn = localStorage.getItem(options.storageKey || 'auth_token')
       const headers = options.getAuthHeaders ? await options.getAuthHeaders() : {}

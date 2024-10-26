@@ -46,7 +46,7 @@ login<U = AuthUser, T = LoginCredentials>(
 ): Promise<{
   user: U
   token?: string;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -76,7 +76,7 @@ register<U = AuthUser, T = RegisterCredentials>(
 ): Promise<{
   user: U;
   token?: string;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -104,7 +104,7 @@ logout<T = unknown>(
   options?: AuthOptions,
   credentials?: T
 ): Promise<{
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 } | undefined>
 ```
@@ -132,7 +132,7 @@ forgot<T = unknown>(
 ): Promise<{
   countdown: Ref<number>;
   timeout?: number;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -161,7 +161,7 @@ reset<U = AuthUser, T = unknown>(
   options?: AuthOptions<U>
 ): Promise<{
   user: U;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -189,7 +189,7 @@ loadUserFromStorage<U = AuthUser, T = unknown>(
   credentials?: T
 ): Promise<{
   user:  U;
-  error?: undefined;
+  error?: BaseError;
   message?: string;
 }>
 ```
@@ -263,6 +263,50 @@ const handleLogin = async () => {
     </form>
 
     <p v-if="errorMessage">{{ errorMessage }}</p>
+    <p v-if="isAuthenticated">Welcome back, {{ user?.email }}</p>
+  </div>
+</template>
+```
+
+## `useInlineAuth`
+
+The `useInlineAuth` composable extends and shares all methods that are available from the `useAuth` composable.
+
+Usage Example:
+
+```vue:line-numbers
+<script setup>
+import { ref } from 'vue'
+import { useInlineAuth } from '@toneflix/vue-auth'
+
+const { login, register, logout, forgot, reset, loadUserFromStorage, user, isAuthenticated } = useInlineAuth()
+
+// Example use in a form for login
+const loginForm = ref({
+  email: '',
+  password: ''
+})
+
+const { user, token, error, send, message, onError, onSuccess } = login(loginForm)
+
+onSuccess(() => {
+  console.log('User logged in:', user.value)
+})
+
+onError(() => {
+  console.error('Login failed', err)
+})
+</script>
+
+<template>
+  <div>
+    <form @submit.prevent="send">
+      <input v-model="form.email" type="email" placeholder="Email" required />
+      <input v-model="form.password" type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <p v-if="message">{{ message }}</p>
     <p v-if="isAuthenticated">Welcome back, {{ user?.email }}</p>
   </div>
 </template>

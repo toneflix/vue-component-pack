@@ -3,84 +3,97 @@ import { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import { Router } from 'vue-router'
 
 export interface AuthUser {
-  id: string
-  email: string
-  token: string
+  id: string;
+  email: string;
+  token: string;
 }
 
 export interface AuthResponse<U = AuthUser> {
+  user: U;
+  token: string;
+  message?: string;
+}
+
+export interface DefinitelyAuthResponse<U = AuthUser> {
   user: U
-  token: string
-  message?: string
+  error?: BaseError;
+  token?: string;
+  message?: string;
+}
+
+export interface BaseError extends Error {
+  status?: string;
+  errors?: Record<string, string | string[]>;
+  [key: string]: unknown;
 }
 
 export interface AuthEndpoints {
   /**
    * Login requests will be sent to this endpoint
    */
-  login: string
+  login: string;
   /**
    * Logout requests will be sent to this endpoint
    */
-  logout: string
+  logout: string;
   /**
    * Profile requests will be sent to this endpoint
    */
-  profile?: string
+  profile?: string;
   /**
    * Registration requests will be sent to this endpoint
    */
-  register: string
+  register: string;
   /**
    * When a user request a password token, we will send a request to this endpoint to send the token
    */
-  forgot?: string
+  forgot?: string;
   /**
    * When a user is reseting thier password, we will send a request to this endpoint to complete the request
    */
-  reset?: string
+  reset?: string;
   /**
    * Refresh Token requests will be sent to this endpoint
    */
-  refreshToken?: string
+  refreshToken?: string;
 }
 
 interface CustomHeaders {
   [key: string]: string
 }
-export type CustomAxiosHeaders = (RawAxiosRequestHeaders | AxiosHeaders) & CustomHeaders
+export type CustomAxiosHeaders = (RawAxiosRequestHeaders | AxiosHeaders) & CustomHeaders;
 
 export interface AuthOptions<U = AuthUser> {
   /**
    * Provide your router instance
    */
-  router?: Router
+  router?: Router;
   /**
    * The base url for all authentication requests
    */
-  baseUrl: string
+  baseUrl: string;
   /**
    * Authentication endpoint map
    */
-  endpoints: AuthEndpoints
+  endpoints: AuthEndpoints;
   /**
    * The key with which your authentication token will be saved to local storage
    */
-  storageKey?: string
+  storageKey?: string;
   /**
    * Extra config to pass to the axios instance
    */
-  axiosConfig?: object
+  axiosConfig?: object;
   /**
    * The route name to your app's login page, if provided none authenticated users will be redirected here
    *  when they try to access a protected route
    */
-  loginRouteName?: string
+  loginRouteName?: string;
   /**
    *  Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
    * @returns
    */
-  getAuthHeaders?: () => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
+  getAuthHeaders?: () => Promise<CustomAxiosHeaders> | CustomAxiosHeaders;
   /**
    * Transforms the user object returned from the auth endpoint
    * @param response
@@ -88,25 +101,25 @@ export interface AuthOptions<U = AuthUser> {
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   transformResponse?: (response: any) => {
-    user: U
-    token?: string
-    timeout?: number
-    message?: string
+    user: U;
+    token?: string;
+    timeout?: number;
+    message?: string;
   }
   /**
    * The route name to your app's post login page, if provided users will be redirected here
    *  as soon as they do a successfull login attempt.
    */
-  defaultAuthRouteName?: string
+  defaultAuthRouteName?: string;
 }
 
 export interface LoginCredentials {
-  email: string
-  password: string
+  email: string;
+  password: string;
 }
 
 export interface RegisterCredentials {
-  email: string
-  password: string
-  [key: string]: unknown
+  email: string;
+  password: string;
+  [key: string]: unknown;
 }

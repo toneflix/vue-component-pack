@@ -11,6 +11,9 @@ export const authPlugin = (options: AuthOptions) => {
 
   const vueAuth: Plugin<[]> = {
     install: (app: App) => {
+      // Store global authentication options
+      setAuthConfig(options)
+
       // Load user from storage
       const store = useAuthStore()
 
@@ -22,9 +25,6 @@ export const authPlugin = (options: AuthOptions) => {
         // Install Pinia if not already installed
         app.use(pinia)
       }
-
-      // Store global authentication options
-      setAuthConfig(options)
 
       if (router) {
         router.beforeEach((to, from, next) => {
@@ -66,5 +66,6 @@ export const authPlugin = (options: AuthOptions) => {
 
 // export default AuthPlugin;
 
+export * from './src/composables/useInlineAuth'
 export * from './src/composables/useAuth'
 export * from './src/types'

@@ -1,4 +1,4 @@
-import { AuthOptions, AuthUser, LoginCredentials, RegisterCredentials } from '../types'
+import { AuthOptions, AuthUser, BaseError, DefinitelyAuthResponse, LoginCredentials, RegisterCredentials } from '../types'
 
 import { Ref } from 'vue'
 import { createAuthStore } from '../stores/auth'
@@ -19,12 +19,7 @@ export const useAuth = <AU = AuthUser> () => {
   const login = <U = AU, T = LoginCredentials> (
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
-  ): Promise<{
-    user: U;
-    token?: string;
-    error?: undefined;
-    message?: string;
-  }> => {
+  ): Promise<DefinitelyAuthResponse<U>> => {
     return store.login<U, T>(credentials, options)
   }
 
@@ -38,12 +33,7 @@ export const useAuth = <AU = AuthUser> () => {
   const register = <U = AU, T = RegisterCredentials> (
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
-  ): Promise<{
-    user: U;
-    token?: string;
-    error?: undefined;
-    message?: string;
-  }> => {
+  ): Promise<DefinitelyAuthResponse<U>> => {
     return store.register<U, T>(credentials, options)
   }
 
@@ -55,7 +45,7 @@ export const useAuth = <AU = AuthUser> () => {
    * @returns
    */
   const logout = <T = unknown> (options: AuthOptions = getAuthConfig(), credentials?: T): Promise<{
-    error?: undefined;
+    error?: BaseError;
     message?: string;
   } | undefined> => {
     return store.logout(options, credentials)
@@ -71,7 +61,7 @@ export const useAuth = <AU = AuthUser> () => {
   const forgot = <T = unknown> (credentials?: T, options: AuthOptions = getAuthConfig()): Promise<{
     countdown: Ref<number>;
     timeout?: number;
-    error?: undefined;
+    error?: BaseError;
     message?: string;
   }> => {
     return store.forgot(credentials, options)
@@ -89,7 +79,7 @@ export const useAuth = <AU = AuthUser> () => {
     options: AuthOptions<U> = getAuthConfig()
   ): Promise<{
     user: U;
-    error?: undefined;
+    error?: BaseError;
     message?: string;
   }> => {
     return store.reset<U>(credentials, options)
@@ -108,7 +98,7 @@ export const useAuth = <AU = AuthUser> () => {
     credentials?: T
   ): Promise<{
     user: U;
-    error?: undefined;
+    error?: BaseError;
     message?: string;
   }> => {
     return store.loadUserFromStorage<U, T>(options, credentials)

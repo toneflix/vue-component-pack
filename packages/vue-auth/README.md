@@ -97,4 +97,6 @@ const handleLogin = async () => {
 </template>
 ```
 
+### Inline Mode Usage
+
 For full usage and implementation details [visit the documentation page](https://toneflix.github.io/vue-component-pack/vue-auth/)
