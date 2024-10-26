@@ -26,6 +26,7 @@ export default defineConfig({
         items: [
           { text: 'Usage', link: '/usage' },
           { text: 'Setup', link: '/setup' },
+          { text: 'Authenticated User', link: '/auth-user' },
         ]
       },
       {

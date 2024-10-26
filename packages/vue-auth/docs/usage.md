@@ -170,3 +170,42 @@ const handleLogin = async () => {
   </div>
 </template>
 ```
+
+## Accessing the User Object
+
+Once the authentication is set up, you can access the authenticated user object throughout your application. The user object is available after login and can be used to customize content or verify roles.
+
+### Directly in Components
+
+Import the `useAuth` composable to access the user object and authentication state directly in your components.
+
+```vue:line-numbers{2,4}
+<script setup lang="ts">
+import { useAuth } from '@toneflix/vue-auth'
+
+const { user, isAuthenticated } = useAuth()
+
+if (isAuthenticated.value) {
+  console.log('Authenticated user:', user.value)
+}
+</script>
+```
+
+### Using Middlewares
+
+Within middlewares, the user object and other authentication state data are passed as part of the state parameter. This is helpful for route guards or custom redirection logic.
+
+```ts:line-numbers{2,7}
+middlewares: [
+  (to, from, next, { user, isAuthenticated }) => {
+    if (!isAuthenticated) {
+      return next({ name: 'login' })
+    }
+    // Access user details, e.g., for role-based access control
+    if (user?.role !== 'admin' && to.meta.requiresAdmin) {
+      return next({ name: 'not-authorized' })
+    }
+    next()
+  }
+]
+```
