@@ -1,49 +1,48 @@
-import { ref as s, toValue as h } from "vue";
-let o;
-const w = (e) => {
-  if (!e || !o.endpoints[e])
+import { ref as f, toValue as d } from "vue";
+let n;
+const h = (e) => {
+  if (!e || !n.endpoints[e])
     throw new Error(`You have not defined a ${e} endpoint.`);
-  const t = o.endpoints[e];
-  return o && t ? (o.baseUrl + t).replace(/([^:]\/)\/+/g, "$1") : "";
-}, d = (e) => {
-  o = e;
+  const t = n.endpoints[e];
+  return n && t ? (n.baseUrl + t).replace(/([^:]\/)\/+/g, "$1") : "";
+}, v = (e) => {
+  n = e;
 }, g = () => {
-  if (!o)
+  if (!n)
     throw new Error("Auth plugin not initialized properly.");
-  return o;
-}, p = (e, t) => {
-  const n = s(0), r = h(e);
-  if (r && r > 0) {
-    n.value = r;
-    const u = setInterval(() => {
-      n.value -= 1e3, t && t(n.value), n.value <= 0 && clearInterval(u);
+  return n;
+}, C = (e, t) => {
+  const r = f(0), o = d(e);
+  if (o && o > 0) {
+    r.value = o;
+    const a = setInterval(() => {
+      r.value -= 1e3, t && t(r.value), r.value <= 0 && clearInterval(a);
     }, 1e3);
   }
-  return n;
+  return r;
 };
-function C(e, t, n, r, u) {
-  const a = s(!1), i = (l) => {
-    if (e) {
-      if (l < e.length) {
-        const c = (f) => {
-          if (a.value = l + 1 === e.length, f)
-            return r(f);
-          i(l + 1);
-        };
-        e[l](t, n, c, u);
-      } else
-        r();
-      if (!a.value)
-        throw new Error("next() was not called on some middleware. You must call next() on every middleware you define.");
+function m(e, t, r, o, a) {
+  const u = (l) => {
+    if (!e || l >= e.length) {
+      o();
+      return;
     }
+    const c = e[l];
+    let i = !1;
+    if (c(t, r, (s) => {
+      i = !0, s ? o(s) : u(l + 1);
+    }, a), !i)
+      throw new Error(
+        `Middleware at index ${l} did not call next(). All middlewares must call next() to proceed.`
+      );
   };
-  i(0);
+  u(0);
 }
 export {
-  o as authConfig,
-  p as createCountdown,
+  n as authConfig,
+  C as createCountdown,
   g as getAuthConfig,
-  C as runMiddlewares,
-  d as setAuthConfig,
-  w as url
+  m as runMiddlewares,
+  v as setAuthConfig,
+  h as url
 };

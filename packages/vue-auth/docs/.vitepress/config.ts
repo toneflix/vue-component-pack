@@ -22,11 +22,22 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Documentation',
+        text: 'Introduction',
         items: [
           { text: 'Usage', link: '/usage' },
-          { text: 'Inline Mode', link: '/inline-usage' },
           { text: 'Setup', link: '/setup' },
+        ]
+      },
+      {
+        text: 'Advanced',
+        items: [
+          { text: 'Inline Mode', link: '/inline-usage' },
+          { text: 'Middlewares', link: '/middlewares' },
+        ]
+      },
+      {
+        text: 'API and Typescript',
+        items: [
           { text: 'API', link: '/api' },
           { text: 'Typescript', link: '/typescript' },
         ]

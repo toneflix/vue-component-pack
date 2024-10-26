@@ -1,9 +1,6 @@
 import { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
-import { NavigationGuardNext, RouteLocationNormalizedGeneric, Router } from 'vue-router'
+import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
 
-import { createAuthStore } from './stores/auth'
-
-const stores = createAuthStore()
 export interface AuthUser {
   id: string
   email: string
@@ -114,17 +111,17 @@ export interface AuthOptions<U = AuthUser> {
    */
   defaultAuthRouteName?: string;
   /**
-   * An array of functions that will be called and used to validate user actions across your application's routes
+   * Middleware functions to control route access based on user state.
    * 
    * @param response 
    * @returns 
    */
-  middlewares?: (<U = AuthUser>(
-    to: RouteLocationNormalizedGeneric,
-    from: RouteLocationNormalizedGeneric,
+  middlewares?: Array<(
+    to: RouteLocationNormalized,
+    from: RouteLocationNormalized,
     next: NavigationGuardNext,
-    state: { user: U, token?: string, isAuthenticated: boolean }
-  ) => void | boolean | object)[]
+    context: { user: U; token?: string; isAuthenticated: boolean },
+  ) => void>;
 }
 
 export interface LoginCredentials {

@@ -64,45 +64,39 @@ export const createCountdown = (
  * @param context 
  */
 export function runMiddlewares<U = AuthUser> (
-  middlewares: AuthOptions['routeMiddlewares'],
+  middlewares: AuthOptions<U>['middlewares'],
   to: RouteLocationNormalized,
   from: RouteLocationNormalized,
   next: NavigationGuardNext,
-  context: { user: U, token?: string, isAuthenticated: boolean },
+  context: { user: U; token?: string; isAuthenticated: boolean },
 ) {
-  // Flag to track if next() has been called
-  const nextCalled = ref(false);
-
   const executeMiddleware = (index: number) => {
-    if (!middlewares) {
+    if (!middlewares || index >= middlewares.length) {
+      next();
       return;
     }
 
-    if (index < middlewares.length) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const callNext: any = (nextArg: RouteLocationNormalized) => {
-        // Mark as true as next() has been called
-        nextCalled.value = index + 1 === middlewares.length;
+    const middleware = middlewares[index];
+    let nextCalled = false;
 
-        if (nextArg) {
-          // If a middleware calls next with an argument (e.g., redirect), stop the chain.
-          return next(nextArg);
-        }
-        // Otherwise, continue to the next middleware.
+    const wrappedNext = (nextArg?: unknown) => {
+      nextCalled = true;
+      if (nextArg) {
+        next(nextArg);
+      } else {
         executeMiddleware(index + 1);
       }
+    };
 
-      middlewares[index](to, from, callNext, context);
-    } else {
-      // If we've reached the end of the middlewares, call the final next() to proceed with navigation.
-      next();
-    }
+    // Invoke the middleware function with wrapped next
+    middleware(to, from, wrappedNext, context);
 
-    if (!nextCalled.value) {
-      throw new Error("next() was not called on some middleware. You must call next() on every middleware you define.");
+    if (!nextCalled) {
+      throw new Error(
+        `Middleware at index ${index} did not call next(). All middlewares must call next() to proceed.`,
+      );
     }
   };
 
-  // Start running middlewares from the first one in the array.
   executeMiddleware(0);
 }
