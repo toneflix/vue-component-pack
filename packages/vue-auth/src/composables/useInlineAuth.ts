@@ -15,6 +15,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
 
   interface BaseData {
     error?: Ref<BaseError | undefined>
+    loading: Ref<boolean>
     message: Ref<string | undefined>
   }
 
@@ -92,20 +93,26 @@ export const useInlineAuth = <AU = AuthUser>() => {
     const user = ref<U>()
     const error = ref<BaseError>()
     const token = ref<string>()
+    const loading = ref<boolean>(false)
     const message = ref<string>()
 
     const action = async (): Promise<UnrefData<AuthData<U>>> => {
+      loading.value = true
+
       const data = await store.login<U, T>(credentials, options)
       user.value = data.user
       error.value = data.error
       token.value = data.token
       message.value = data.message
+      loading.value = false
 
       const res: UnrefData<AuthData<U>> = {
         user: data.user,
         message: data.message,
-        token: data.token
+        token: data.token,
+        loading: false
       }
+
       if (data.error) {
         res.error = data.error
       }
@@ -119,6 +126,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
       user,
       token,
       error,
+      loading,
       message,
       onError,
       onSuccess
@@ -139,16 +147,26 @@ export const useInlineAuth = <AU = AuthUser>() => {
     const user = ref<U>()
     const error = ref<BaseError>()
     const token = ref<string>()
+    const loading = ref<boolean>(false)
     const message = ref<string>()
 
     const action = async (): Promise<UnrefData<AuthData<U>>> => {
+      loading.value = true
+
       const data = await store.register<U, T>(credentials, options)
       user.value = data.user
       error.value = data.error
       token.value = data.token
       message.value = data.message
+      loading.value = false
 
-      return { user: data.user, error: data.error, token: data.token, message: data.message }
+      return {
+        user: data.user,
+        error: data.error,
+        token: data.token,
+        message: data.message,
+        loading: loading.value
+      }
     }
 
     const { send, onError, onSuccess } = useActionWithCallbacks(action)
@@ -158,6 +176,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
       user,
       token,
       error,
+      loading,
       message,
       onError,
       onSuccess
@@ -176,14 +195,18 @@ export const useInlineAuth = <AU = AuthUser>() => {
     credentials?: T
   ): BaseData & MethodActions<UnrefData<BaseData>> => {
     const error = ref<BaseError>()
+    const loading = ref<boolean>(false)
     const message = ref<string>()
 
     const action = async (): Promise<UnrefData<BaseData>> => {
+      loading.value = true
+
       const data = await store.logout(options, credentials)
       error.value = data?.error
       message.value = data?.message
+      loading.value = false
 
-      return { error: data?.error, message: data?.message }
+      return { error: data?.error, message: data?.message, loading: loading.value }
     }
 
     const { send, onError, onSuccess } = useActionWithCallbacks(action)
@@ -191,6 +214,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
     return {
       send,
       error,
+      loading,
       message,
       onError,
       onSuccess
@@ -209,21 +233,27 @@ export const useInlineAuth = <AU = AuthUser>() => {
     options: AuthOptions = getAuthConfig()
   ): ForgotData & MethodActions<UnrefData<ForgotData>> => {
     const error = ref<BaseError>()
+    const loading = ref<boolean>(false)
     const message = ref<string>()
     const timeout = ref<number>()
     const countdown = ref<number>(0)
 
     const action = async (): Promise<UnrefData<ForgotData>> => {
+      loading.value = true
+
       const data = await store.forgot(credentials, options)
       error.value = data?.error
       message.value = data?.message
       timeout.value = data.timeout
+      loading.value = false
+
       createCountdown(timeout, (val) => {
         countdown.value = val
       })
 
       return {
         error: data.error,
+        loading: loading.value,
         message: data.message,
         timeout: data.timeout,
         countdown: countdown.value
@@ -235,6 +265,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
     return {
       send,
       error,
+      loading,
       message,
       timeout,
       onError,
@@ -256,15 +287,19 @@ export const useInlineAuth = <AU = AuthUser>() => {
   ): UserData<U> & MethodActions<UnrefData<UserData<U>>> => {
     const user = ref<U>()
     const error = ref<BaseError>()
+    const loading = ref<boolean>(false)
     const message = ref<string>()
 
     const action = async (): Promise<UnrefData<UserData<U>>> => {
+      loading.value = true
+
       const data = await store.reset<U>(credentials, options)
       user.value = data.user
       error.value = data?.error
       message.value = data?.message
+      loading.value = false
 
-      return { error: data.error, message: data.message, user: user.value }
+      return { error: data.error, message: data.message, user: user.value, loading: loading.value }
     }
 
     const { send, onError, onSuccess } = useActionWithCallbacks(action)
@@ -273,6 +308,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
       send,
       user,
       error,
+      loading,
       message,
       onError,
       onSuccess
@@ -293,15 +329,19 @@ export const useInlineAuth = <AU = AuthUser>() => {
   ): UserData<U> & MethodActions<UnrefData<UserData<U>>> => {
     const user = ref<U>()
     const error = ref<BaseError>()
+    const loading = ref<boolean>(false)
     const message = ref<string>()
 
     const action = async (): Promise<UnrefData<UserData<U>>> => {
+      loading.value = true
+
       const data = await store.loadUserFromStorage<U, T>(options, credentials)
       user.value = data.user
       error.value = data?.error
       message.value = data?.message
+      loading.value = false
 
-      return { error: data.error, message: data.message, user: user.value }
+      return { error: data.error, message: data.message, user: user.value, loading: loading.value }
     }
 
     const { send, onError, onSuccess } = useActionWithCallbacks(action)
@@ -310,6 +350,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
       send,
       user,
       error,
+      loading,
       message,
       onError,
       onSuccess
