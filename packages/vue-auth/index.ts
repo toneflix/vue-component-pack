@@ -57,14 +57,13 @@ export const authPlugin = (options: AuthOptions) => {
            */
           if (options.middlewares) {
             runMiddlewares(options.middlewares, to, from, next, {
-              user: store.user,
+              user: store.user as never,
               token: store.token,
-              isAuthenticated: store.isAuthenticated,
-            });
+              isAuthenticated: store.isAuthenticated
+            })
           } else {
             next()
           }
-
         })
       }
 

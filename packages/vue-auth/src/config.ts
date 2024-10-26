@@ -1,5 +1,5 @@
 import { AuthOptions, AuthUser } from './types'
-import { NavigationGuardNext, RouteLocationNormalized, RouteLocationNormalizedGeneric } from 'vue-router'
+import { NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
 // src/config.ts
 import { Ref, ref, toValue } from 'vue'
 
@@ -20,11 +20,11 @@ export const url = (endpoint?: string) => {
   return ''
 }
 
-export const setAuthConfig = <U = AuthUser> (options: AuthOptions<U>) => {
+export const setAuthConfig = <U = AuthUser>(options: AuthOptions<U>) => {
   authConfig = options
 }
 
-export const getAuthConfig = <U = AuthUser> (): AuthOptions<U> => {
+export const getAuthConfig = <U = AuthUser>(): AuthOptions<U> => {
   if (!authConfig) {
     throw new Error('Auth plugin not initialized properly.')
   }
@@ -56,47 +56,47 @@ export const createCountdown = (
 
 /**
  * Runs all the define middlewares for the application
- * 
- * @param middlewares 
- * @param to 
- * @param from 
- * @param next 
- * @param context 
+ *
+ * @param middlewares
+ * @param to
+ * @param from
+ * @param next
+ * @param context
  */
-export function runMiddlewares<U = AuthUser> (
+export function runMiddlewares<U = AuthUser>(
   middlewares: AuthOptions<U>['middlewares'],
   to: RouteLocationNormalized,
   from: RouteLocationNormalized,
   next: NavigationGuardNext,
-  context: { user: U; token?: string; isAuthenticated: boolean },
+  context: { user: U; token?: string; isAuthenticated: boolean }
 ) {
   const executeMiddleware = (index: number) => {
     if (!middlewares || index >= middlewares.length) {
-      next();
-      return;
+      next()
+      return
     }
 
-    const middleware = middlewares[index];
-    let nextCalled = false;
+    const middleware = middlewares[index]
+    let nextCalled = false
 
     const wrappedNext = (nextArg?: unknown) => {
-      nextCalled = true;
+      nextCalled = true
       if (nextArg) {
-        next(nextArg);
+        next(nextArg)
       } else {
-        executeMiddleware(index + 1);
+        executeMiddleware(index + 1)
       }
-    };
+    }
 
     // Invoke the middleware function with wrapped next
-    middleware(to, from, wrappedNext, context);
+    middleware(to, from, wrappedNext, context)
 
     if (!nextCalled) {
       throw new Error(
-        `Middleware at index ${index} did not call next(). All middlewares must call next() to proceed.`,
-      );
+        `Middleware at index ${index} did not call next(). All middlewares must call next() to proceed.`
+      )
     }
-  };
+  }
 
-  executeMiddleware(0);
+  executeMiddleware(0)
 }

@@ -70,16 +70,18 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
-  middlewares: [(to, from, next, state) => {
-    if (!state.isAuthenticated && to.name !== 'login') {
-      return next({ name: 'login' })
-    }
+  middlewares: [
+    (to, from, next, state) => {
+      if (!state.isAuthenticated && to.name !== 'login') {
+        return next({ name: 'login' })
+      }
 
-    next()
-  }]
+      next()
+    }
+  ]
 })
 
 app.use(pinia)

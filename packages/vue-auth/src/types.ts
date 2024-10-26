@@ -109,19 +109,21 @@ export interface AuthOptions<U = AuthUser> {
    * The route name to your app's post login page, if provided users will be redirected here
    *  as soon as they do a successfull login attempt.
    */
-  defaultAuthRouteName?: string;
+  defaultAuthRouteName?: string
   /**
    * Middleware functions to control route access based on user state.
-   * 
-   * @param response 
-   * @returns 
+   *
+   * @param response
+   * @returns
    */
-  middlewares?: Array<(
-    to: RouteLocationNormalized,
-    from: RouteLocationNormalized,
-    next: NavigationGuardNext,
-    context: { user: U; token?: string; isAuthenticated: boolean },
-  ) => void>;
+  middlewares?: Array<
+    (
+      to: RouteLocationNormalized,
+      from: RouteLocationNormalized,
+      next: NavigationGuardNext,
+      context: { user: U; token?: string; isAuthenticated: boolean }
+    ) => void
+  >
 }
 
 export interface LoginCredentials {
