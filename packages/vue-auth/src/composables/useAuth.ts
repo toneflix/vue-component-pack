@@ -120,9 +120,12 @@ export const useAuth = <AU = AuthUser>() => {
     return store.loadUserFromStorage<U, T>(options, credentials)
   }
 
+  const { user, token, isAuthenticated } = storeToRefs(store)
+
   return {
-    user: storeToRefs(store).user as Ref<AU>,
-    isAuthenticated: storeToRefs(store).isAuthenticated,
+    user: user as Ref<AU>,
+    token: token,
+    isAuthenticated,
 
     reset,
     login,

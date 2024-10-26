@@ -1,9 +1,9 @@
 import { ref as n } from "vue";
-import { getAuthConfig as S, createCountdown as C } from "../config.mjs";
-import { createAuthStore as b } from "../stores/auth.mjs";
-import { storeToRefs as k } from "pinia";
-const R = () => {
-  const i = b()(), v = (m) => {
+import { getAuthConfig as k, createCountdown as F } from "../config.mjs";
+import { createAuthStore as U } from "../stores/auth.mjs";
+import { storeToRefs as d } from "pinia";
+const j = () => {
+  const i = U()(), v = (m) => {
     const l = n(), s = n();
     return {
       send: async () => {
@@ -17,16 +17,16 @@ const R = () => {
         s.value = t;
       }
     };
-  }, w = (m, l = S()) => {
+  }, f = (m, l = k()) => {
     const s = n(), c = n(), u = n(), a = n(), t = async () => {
       const e = await i.login(m, l);
       s.value = e.user, c.value = e.error, u.value = e.token, a.value = e.message;
-      const f = {
+      const S = {
         user: e.user,
         message: e.message,
         token: e.token
       };
-      return e.error && (f.error = e.error), f;
+      return e.error && (S.error = e.error), S;
     }, { send: g, onError: o, onSuccess: r } = v(t);
     return {
       send: g,
@@ -37,7 +37,7 @@ const R = () => {
       onError: o,
       onSuccess: r
     };
-  }, h = (m, l = S()) => {
+  }, w = (m, l = k()) => {
     const s = n(), c = n(), u = n(), a = n(), t = async () => {
       const e = await i.register(m, l);
       return s.value = e.user, c.value = e.error, u.value = e.token, a.value = e.message, { user: e.user, error: e.error, token: e.token, message: e.message };
@@ -51,7 +51,7 @@ const R = () => {
       onError: o,
       onSuccess: r
     };
-  }, A = (m = S(), l) => {
+  }, E = (m = k(), l) => {
     const s = n(), c = n(), u = async () => {
       const o = await i.logout(m, l);
       return s.value = o == null ? void 0 : o.error, c.value = o == null ? void 0 : o.message, { error: o == null ? void 0 : o.error, message: o == null ? void 0 : o.message };
@@ -63,11 +63,11 @@ const R = () => {
       onError: t,
       onSuccess: g
     };
-  }, E = (m, l = S()) => {
+  }, h = (m, l = k()) => {
     const s = n(), c = n(), u = n(), a = n(0), t = async () => {
       const e = await i.forgot(m, l);
-      return s.value = e == null ? void 0 : e.error, c.value = e == null ? void 0 : e.message, u.value = e.timeout, C(u, (f) => {
-        a.value = f;
+      return s.value = e == null ? void 0 : e.error, c.value = e == null ? void 0 : e.message, u.value = e.timeout, F(u, (S) => {
+        a.value = S;
       }), {
         error: e.error,
         message: e.message,
@@ -84,7 +84,7 @@ const R = () => {
       onSuccess: r,
       countdown: a
     };
-  }, y = (m, l = S()) => {
+  }, y = (m, l = k()) => {
     const s = n(), c = n(), u = n(), a = async () => {
       const r = await i.reset(m, l);
       return s.value = r.user, c.value = r == null ? void 0 : r.error, u.value = r == null ? void 0 : r.message, { error: r.error, message: r.message, user: s.value };
@@ -97,7 +97,7 @@ const R = () => {
       onError: g,
       onSuccess: o
     };
-  }, p = (m = S(), l) => {
+  }, A = (m = k(), l) => {
     const s = n(), c = n(), u = n(), a = async () => {
       const r = await i.loadUserFromStorage(m, l);
       return s.value = r.user, c.value = r == null ? void 0 : r.error, u.value = r == null ? void 0 : r.message, { error: r.error, message: r.message, user: s.value };
@@ -110,18 +110,19 @@ const R = () => {
       onError: g,
       onSuccess: o
     };
-  };
+  }, { user: p, token: C, isAuthenticated: b } = d(i);
   return {
-    user: k(i).user,
-    isAuthenticated: k(i).isAuthenticated,
+    user: p,
+    token: C,
+    isAuthenticated: b,
     reset: y,
-    login: w,
-    logout: A,
-    forgot: E,
-    register: h,
-    loadUserFromStorage: p
+    login: f,
+    logout: E,
+    forgot: h,
+    register: w,
+    loadUserFromStorage: A
   };
 };
 export {
-  R as useInlineAuth
+  j as useInlineAuth
 };

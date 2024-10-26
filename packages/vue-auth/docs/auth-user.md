@@ -6,7 +6,7 @@ Once the authentication is set up, you can access the authenticated user object 
 
 Import the `useAuth` or the `useInlineAuth` composable to access the user object and authentication state directly in your components.
 
-```vue:line-numbers{2,4}
+```vue:line-numbers{2,4,6}
 <script setup lang="ts">
 import { useAuth } from '@toneflix/vue-auth'
 // OR
