@@ -12,7 +12,7 @@ import { createVueAuthStore } from '../stores/vue-auth'
 import { getAuthConfig } from '../utils/config'
 import { storeToRefs } from 'pinia'
 
-export const useAuth = <AU = AuthUser> () => {
+export const useAuth = <AU = AuthUser>() => {
   const useAuthStore = createVueAuthStore()
   const store = useAuthStore()
 
@@ -23,7 +23,7 @@ export const useAuth = <AU = AuthUser> () => {
    * @param options
    * @returns
    */
-  const login = <U = AU, T = LoginCredentials> (
+  const login = <U = AU, T = LoginCredentials>(
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): Promise<DefinitelyAuthResponse<U>> => {
@@ -37,7 +37,7 @@ export const useAuth = <AU = AuthUser> () => {
    * @param options
    * @returns
    */
-  const register = <U = AU, T = RegisterCredentials> (
+  const register = <U = AU, T = RegisterCredentials>(
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): Promise<DefinitelyAuthResponse<U>> => {
@@ -51,14 +51,14 @@ export const useAuth = <AU = AuthUser> () => {
    * @param credentials
    * @returns
    */
-  const logout = <T = unknown> (
+  const logout = <T = unknown>(
     options: AuthOptions = getAuthConfig(),
     credentials?: T
   ): Promise<
     | {
-      error?: BaseError
-      message?: string
-    }
+        error?: BaseError
+        message?: string
+      }
     | undefined
   > => {
     return store.logout(options, credentials)
@@ -71,7 +71,7 @@ export const useAuth = <AU = AuthUser> () => {
    * @param credentials
    * @returns
    */
-  const forgot = <T = unknown> (
+  const forgot = <T = unknown>(
     credentials?: T,
     options: AuthOptions = getAuthConfig()
   ): Promise<{
@@ -90,7 +90,7 @@ export const useAuth = <AU = AuthUser> () => {
    * @param credentials
    * @returns
    */
-  const reset = <U = AU, T = unknown> (
+  const reset = <U = AU, T = unknown>(
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): Promise<{
@@ -109,7 +109,7 @@ export const useAuth = <AU = AuthUser> () => {
    * @param credentials
    * @returns
    */
-  const loadUserFromStorage = <U = AU, T = unknown> (
+  const loadUserFromStorage = <U = AU, T = unknown>(
     options: AuthOptions<U> = getAuthConfig(),
     credentials?: T
   ): Promise<{

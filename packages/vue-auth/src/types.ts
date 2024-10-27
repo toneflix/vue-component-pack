@@ -3,13 +3,6 @@ import 'pinia'
 import { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
 
-declare module 'pinia' {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  export interface DefineStoreOptionsBase<S, Store> {
-    persist?: boolean
-  }
-}
-
 export interface AuthUser {
   id: number
   email: string
