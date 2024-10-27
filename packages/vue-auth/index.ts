@@ -57,7 +57,7 @@ export const authPlugin = (options: AuthOptions) => {
            * Run the route middlewares
            */
           if (options.middlewares) {
-            runMiddlewares(options.middlewares, to, from, next, {
+            runMiddlewares(options.middlewares, to, from, next, router, {
               user: store.user as never,
               token: store.token,
               isAuthenticated: store.isAuthenticated

@@ -4,6 +4,7 @@ import { AuthUser, authPlugin } from '@toneflix/vue-auth'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import App from './app.vue'
+import { authMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { makeServer } from './server/index'
@@ -70,17 +71,11 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
   middlewares: [
-    (to, from, next, state) => {
-      if (!state.isAuthenticated && to.name !== 'login') {
-        return next({ name: 'login' })
-      }
-
-      next()
-    }
+    authMiddleware({ name: 'login' })
   ]
 })
 

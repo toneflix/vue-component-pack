@@ -33,6 +33,27 @@ export interface ResponseError {
   }
 }
 
+export interface Middleware<U = AuthUser> {
+  (
+    to: RouteLocationNormalized,
+    from: RouteLocationNormalized,
+    next: NavigationGuardNext,
+    context: { user: U; token?: string; isAuthenticated: boolean },
+    router?: Router
+  ): void
+}
+
+export interface LoginCredentials {
+  email: string
+  password: string
+}
+
+export interface RegisterCredentials {
+  email: string
+  password: string
+  [key: string]: unknown
+}
+
 export interface AuthEndpoints {
   /**
    * Login requests will be sent to this endpoint
@@ -67,6 +88,7 @@ export interface AuthEndpoints {
 interface CustomHeaders {
   [key: string]: string
 }
+
 export type CustomAxiosHeaders = (RawAxiosRequestHeaders | AxiosHeaders) & CustomHeaders
 
 export interface AuthOptions<U = AuthUser> {
@@ -126,23 +148,5 @@ export interface AuthOptions<U = AuthUser> {
    * @param response
    * @returns
    */
-  middlewares?: Array<
-    (
-      to: RouteLocationNormalized,
-      from: RouteLocationNormalized,
-      next: NavigationGuardNext,
-      context: { user: U; token?: string; isAuthenticated: boolean }
-    ) => void
-  >
-}
-
-export interface LoginCredentials {
-  email: string
-  password: string
-}
-
-export interface RegisterCredentials {
-  email: string
-  password: string
-  [key: string]: unknown
+  middlewares?: Array<Middleware<U>>
 }

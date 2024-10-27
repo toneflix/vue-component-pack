@@ -17,11 +17,11 @@ export const url = (endpoint?: keyof typeof authConfig.endpoints) => {
   return ''
 }
 
-export const setAuthConfig = <U = AuthUser> (options: AuthOptions<U>) => {
+export const setAuthConfig = <U = AuthUser>(options: AuthOptions<U>) => {
   authConfig = options
 }
 
-export const getAuthConfig = <U = AuthUser> (): AuthOptions<U> => {
+export const getAuthConfig = <U = AuthUser>(): AuthOptions<U> => {
   if (!authConfig) {
     throw new Error('Auth plugin not initialized properly.')
   }

@@ -1071,15 +1071,6 @@
         "hash": "sha512-HFZ4Mp26nbWk9d/BpvP0YNL6W4UoZF0VFcTw/aPPA8RpOxeFQgK+ClABGgAUXs9Y/RGX/l1vOmrqz1MQt9MNuw=="
       }
     },
-    "npm:@faker-js/faker": {
-      "type": "npm",
-      "name": "npm:@faker-js/faker",
-      "data": {
-        "version": "9.0.3",
-        "packageName": "@faker-js/faker",
-        "hash": "sha512-lWrrK4QNlFSU+13PL9jMbMKLJYXDFu3tQfayBsMXX7KL/GiQeqfB1CzHkqD5UHBUtPAuPo6XwGbMFNdVMZObRA=="
-      }
-    },
     "npm:@humanfs/core": {
       "type": "npm",
       "name": "npm:@humanfs/core",
@@ -1168,15 +1159,6 @@
         "version": "8.1.8",
         "packageName": "@lerna/create",
         "hash": "sha512-wi72R01tgjBjzG2kjRyTHl4yCTKDfDMIXRyKz9E/FBa9SkFvUOAE4bdyY9MhEsRZmSWL7+CYE8Flv/HScRpBbA=="
-      }
-    },
-    "npm:@miragejs/pretender-node-polyfill": {
-      "type": "npm",
-      "name": "npm:@miragejs/pretender-node-polyfill",
-      "data": {
-        "version": "0.1.2",
-        "packageName": "@miragejs/pretender-node-polyfill",
-        "hash": "sha512-M/BexG/p05C5lFfMunxo/QcgIJnMT2vDVCd00wNqK2ImZONIlEETZwWJu1QtLxtmYlSHlCFl3JNzp0tLe7OJ5g=="
       }
     },
     "npm:@napi-rs/wasm-runtime": {
@@ -3843,15 +3825,6 @@
         "hash": "sha512-hMQ4CX1p1izmuLYyZqLMO/qGNw10wSv9QDCPfzXfyFrOaCSSoRfqE1Kf1s5an66J5JZC62NewG+mK49jOCtQew=="
       }
     },
-    "npm:fake-xml-http-request": {
-      "type": "npm",
-      "name": "npm:fake-xml-http-request",
-      "data": {
-        "version": "2.1.2",
-        "packageName": "fake-xml-http-request",
-        "hash": "sha512-HaFMBi7r+oEC9iJNpc3bvcW7Z7iLmM26hPDmlb0mFwyANSsOQAtJxbdWsXITKOzZUyMYK0zYCv3h5yDj9TsiXg=="
-      }
-    },
     "npm:fast-deep-equal": {
       "type": "npm",
       "name": "npm:fast-deep-equal",
@@ -4516,15 +4489,6 @@
         "version": "4.0.0",
         "packageName": "indent-string",
         "hash": "sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg=="
-      }
-    },
-    "npm:inflected": {
-      "type": "npm",
-      "name": "npm:inflected",
-      "data": {
-        "version": "2.1.0",
-        "packageName": "inflected",
-        "hash": "sha512-hAEKNxvHf2Iq3H60oMBHkB4wl5jn3TPF3+fXek/sRwAB5gP9xWs4r7aweSF95f99HFoz69pnZTcu8f0SIHV18w=="
       }
     },
     "npm:inherits": {
@@ -5535,15 +5499,6 @@
         "hash": "sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg=="
       }
     },
-    "npm:miragejs": {
-      "type": "npm",
-      "name": "npm:miragejs",
-      "data": {
-        "version": "0.2.0-alpha.3",
-        "packageName": "miragejs",
-        "hash": "sha512-rcfnEUoOj5NP9xgUTctazWQIyN3ZpB/Wm/pEewLtPOhpDfl4M1kdE9R12IywxJkTtvt0qbx3GrMrF9SncWz0VA=="
-      }
-    },
     "npm:mitt": {
       "type": "npm",
       "name": "npm:mitt",
@@ -6282,15 +6237,6 @@
         "hash": "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
       }
     },
-    "npm:pretender": {
-      "type": "npm",
-      "name": "npm:pretender",
-      "data": {
-        "version": "3.4.7",
-        "packageName": "pretender",
-        "hash": "sha512-jkPAvt1BfRi0RKamweJdEcnjkeu7Es8yix3bJ+KgBC5VpG/Ln4JE3hYN6vJym4qprm8Xo5adhWpm3HCoft1dOw=="
-      }
-    },
     "npm:prettier": {
       "type": "npm",
       "name": "npm:prettier",
@@ -6649,15 +6595,6 @@
         "version": "4.24.0",
         "packageName": "rollup",
         "hash": "sha512-DOmrlGSXNk1DM0ljiQA+i+o0rSLhtii1je5wgk60j49d1jHT5YYttBv1iWOnYSTG+fZZESUOSNiAl89SIet+Cg=="
-      }
-    },
-    "npm:route-recognizer": {
-      "type": "npm",
-      "name": "npm:route-recognizer",
-      "data": {
-        "version": "0.3.4",
-        "packageName": "route-recognizer",
-        "hash": "sha512-2+MhsfPhvauN1O8KaXpXAOfR/fwe8dnUXVM+xw7yt40lJRfPVQxV6yryZm0cgRvAj5fMF/mdRZbL2ptwbs5i2g=="
       }
     },
     "npm:run-async": {
@@ -13733,28 +13670,6 @@
         "type": "static"
       }
     ],
-    "npm:miragejs": [
-      {
-        "source": "npm:miragejs",
-        "target": "npm:@miragejs/pretender-node-polyfill",
-        "type": "static"
-      },
-      {
-        "source": "npm:miragejs",
-        "target": "npm:inflected",
-        "type": "static"
-      },
-      {
-        "source": "npm:miragejs",
-        "target": "npm:lodash",
-        "type": "static"
-      },
-      {
-        "source": "npm:miragejs",
-        "target": "npm:pretender",
-        "type": "static"
-      }
-    ],
     "npm:multimatch": [
       {
         "source": "npm:multimatch",
@@ -14724,18 +14639,6 @@
       {
         "source": "npm:postcss",
         "target": "npm:source-map-js",
-        "type": "static"
-      }
-    ],
-    "npm:pretender": [
-      {
-        "source": "npm:pretender",
-        "target": "npm:fake-xml-http-request",
-        "type": "static"
-      },
-      {
-        "source": "npm:pretender",
-        "target": "npm:route-recognizer",
         "type": "static"
       }
     ],

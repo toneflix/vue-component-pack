@@ -1,12 +1,13 @@
 import { ref as h, toValue as d } from "vue";
-import { url as l, getAuthConfig as f, createCountdown as v } from "../config.mjs";
+import { url as l, getAuthConfig as f } from "../utils/config.mjs";
 import c from "axios";
-import { defineStore as y } from "pinia";
+import { defineStore as v } from "pinia";
+import { createCountdown as y } from "../utils/plugins.mjs";
 c.defaults.headers.common["Content-Type"] = "application/json; charset=utf-8";
 c.defaults.headers.common.Accept = "application/json";
 c.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 function w() {
-  return y("vue-auth", () => {
+  return v("vue-auth", () => {
     const g = h({}), m = h(), i = h(!1);
     return {
       user: g,
@@ -66,7 +67,7 @@ function w() {
           const { data: e } = await c.post(n, d(s), {
             headers: { ...u },
             ...r.axiosConfig
-          }), { timeout: a, message: o } = r.transformResponse ? r.transformResponse(e) : { timeout: e.timeout, message: e.message }, k = v(a);
+          }), { timeout: a, message: o } = r.transformResponse ? r.transformResponse(e) : { timeout: e.timeout, message: e.message }, k = y(a);
           return { timeout: a, countdown: k, message: o };
         } catch (e) {
           const { response: a } = e;
@@ -114,8 +115,8 @@ function w() {
     };
   });
 }
-const q = w();
+const F = w();
 export {
   w as createAuthStore,
-  q as useAuthStore
+  F as useAuthStore
 };
