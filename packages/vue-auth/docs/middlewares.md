@@ -185,3 +185,72 @@ const auth = authPlugin({
 ```
 
 In this example, loginRouteName manages the basic redirection for unauthenticated users, while middlewares handle additional custom checks.
+
+## Middleware Presets
+
+The plugin ships with reusable middlewares that can be utilized to streamline route protection based on authentication status or user roles. These preset middlewares are designed to simplify the implementation of common route-guard logic.
+
+### Available Preset Middlewares
+
+#### `authMiddleware`
+
+**Purpose**: Ensures that users are authenticated before accessing certain routes.
+
+**Behavior**:
+
+- Checks if the target route (`to`) requires authentication (`to.meta.requiresAuth`).
+- If the user is not authenticated, they will be redirected to the specified `redirectRoute`.
+
+**Usage**:
+
+```ts:line-numbers
+import { authMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
+
+middlewares: [
+  authMiddleware({ name: 'login' })
+]
+```
+
+**Parameters**:
+
+- `redirectRoute`: The route to redirect to if the user fails the authentication check. Typically, this would be the login page or another public route.
+
+#### `roleMiddleware`
+
+**Purpose**: Validates user roles to restrict access to specific routes.
+
+**Behavior**:
+
+- Checks if the user has one or more required roles to access a specific route.
+- If the user does not possess the necessary roles, they are redirected to the specified `redirectRoute`.
+
+**Usage**:
+
+```ts:line-numbers
+import { roleMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
+
+middlewares: [
+  roleMiddleware({ name: 'forbidden' }, ['admin', 'editor'], 'userRoles', 'requiresAdmin')
+]
+```
+
+**Parameters**:
+
+- `redirectRoute`: The route to redirect to if the user does not have the required role(s).
+- `roles`: A single role or an array of roles that the user must have to access the route.
+- `roleKey` (optional): The key in the user object that holds the user’s roles. Default is `roles`.
+- `metaKey` (optional): The meta field in the route (`to.meta`) that specifies routes requiring the specified roles. Default is `requiresAdmin`.
+
+**Example Usage in main.ts**
+
+```ts:line-numbers
+import { authMiddleware, roleMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
+
+const auth = authPlugin({
+  router,
+  middlewares: [
+    authMiddleware({ name: 'login' }), // Redirects to login if not authenticated
+    roleMiddleware({ name: 'forbidden' }, ['admin']) // Redirects to forbidden if user lacks 'admin' role
+  ]
+})
+```
