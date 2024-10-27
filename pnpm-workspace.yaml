@@ -1,4 +1,4 @@
 packages:
   - packages/*
-  - runner
-  # - '!runner'
+  # - runner
+  - '!runner'
