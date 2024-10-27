@@ -22,6 +22,7 @@
     "axios": "^1.7.7",
     "miragejs": "0.2.0-alpha.3",
     "pinia": "^2.2.4",
+    "pinia-plugin-persistedstate": "^4.1.2",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },

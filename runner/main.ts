@@ -1,13 +1,14 @@
 import './style.css'
 
 import { AuthUser, authPlugin } from '@toneflix/vue-auth'
+import { authMiddleware, roleMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import App from './app.vue'
-import { authMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { makeServer } from './server/index'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -19,6 +20,12 @@ const router = createRouter({
       name: 'profile',
       component: () => import('./Pages/vue-auth/UserPage.vue'),
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/auth/admin',
+      name: 'admin',
+      component: () => import('./Pages/vue-auth/UserPage.vue'),
+      meta: { requiresAdmin: true }
     },
     {
       path: '/auth/login',
@@ -47,10 +54,6 @@ const router = createRouter({
   ]
 })
 
-const app = createApp(App)
-
-const pinia = createPinia()
-
 const auth = authPlugin({
   router,
   baseUrl: 'http://example.com/api/v1',
@@ -59,7 +62,7 @@ const auth = authPlugin({
     login: '/login',
     register: '/register',
     logout: '/logout',
-    profile: '/profile',
+    // profile: '/profile',
     forgot: '/forgot',
     reset: '/reset'
   },
@@ -71,13 +74,16 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
-  middlewares: [
-    authMiddleware({ name: 'login' })
-  ]
+  middlewares: [roleMiddleware('/', ['admin'], 'roles'), authMiddleware({ name: 'login' })]
 })
+
+const app = createApp(App)
+
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
 
 app.use(pinia)
 app.use(router)

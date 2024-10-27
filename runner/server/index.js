@@ -104,7 +104,7 @@ export function makeServer({ environment = 'development' } = {}) {
         if (!data) return new Response(401, {}, { message: 'Unauthorized' })
 
         return new Response(200, {}, { data, message: 'OK' })
-      })
+      }) //, { timing: 3000 })
 
       this.passthrough()
     }

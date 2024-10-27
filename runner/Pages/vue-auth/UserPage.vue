@@ -21,12 +21,14 @@ onSuccess(() => {
   <div class="column-container">
     <div>Name: {{ user.name }}</div>
     <div>Email: {{ user.email }}</div>
+    <router-link :to="{ name: 'profile' }">Profile</router-link>
     <button @click="handleLogout">Logout</button>
   </div>
   <hr />
   <div class="column-container">
     <div>Name: {{ user.name }}</div>
     <div>Email: {{ user.email }}</div>
+    <router-link :to="{ name: 'admin' }">Admin</router-link>
     <button @click="send">Logout</button>
   </div>
 </template>

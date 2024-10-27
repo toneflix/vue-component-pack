@@ -113,7 +113,7 @@ function w() {
         return { user: {} };
       }
     };
-  });
+  }, { persist: !0 });
 }
 const F = w();
 export {

@@ -1,10 +1,10 @@
 import { App, Plugin } from 'vue'
+import { createPinia, getActivePinia } from 'pinia'
 
 import { AuthOptions } from './src/types'
-import { createPinia } from 'pinia'
 import { runMiddlewares } from './src/utils/plugins'
 import { setAuthConfig } from './src/utils/config'
-import { useAuthStore } from './src/stores/auth'
+import { useAuthStore } from './src/stores/vue-auth'
 
 // Define the plugin with the correct signature
 export const authPlugin = (options: AuthOptions) => {
@@ -15,17 +15,17 @@ export const authPlugin = (options: AuthOptions) => {
       // Store global authentication options
       setAuthConfig(options)
 
-      // Load user from storage
-      const store = useAuthStore()
-
       // Check if Pinia is already installed
-      const isPiniaInstalled = Object.keys(app._context.config.globalProperties).includes('$pinia')
+      const isPiniaInstalled = !!getActivePinia()
 
       if (!isPiniaInstalled) {
         const pinia = createPinia()
         // Install Pinia if not already installed
         app.use(pinia)
       }
+
+      // Load user from storage
+      const store = useAuthStore()
 
       if (router) {
         router.beforeEach((to, from, next) => {
@@ -69,6 +69,7 @@ export const authPlugin = (options: AuthOptions) => {
       }
 
       store.loadUserFromStorage(options)
+
       app.config.globalProperties.$user = store.user as never
       app.config.globalProperties.$isAuthenticated = store.isAuthenticated
     }

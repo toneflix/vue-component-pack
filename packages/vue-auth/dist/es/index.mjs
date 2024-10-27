@@ -1,42 +1,41 @@
-import { createPinia as f } from "pinia";
-import { runMiddlewares as h } from "./src/utils/plugins.mjs";
-import { setAuthConfig as A } from "./src/utils/config.mjs";
+import { getActivePinia as d, createPinia as f } from "pinia";
+import { runMiddlewares as A } from "./src/utils/plugins.mjs";
+import { setAuthConfig as P } from "./src/utils/config.mjs";
 import { useAuthStore as g } from "./src/stores/auth.mjs";
-import { useInlineAuth as p } from "./src/composables/useInlineAuth.mjs";
-import { useAuth as N } from "./src/composables/useAuth.mjs";
-const y = (r) => {
+import { useInlineAuth as N } from "./src/composables/useInlineAuth.mjs";
+import { useAuth as $ } from "./src/composables/useAuth.mjs";
+const p = (r) => {
   const { router: i, loginRouteName: o, defaultAuthRouteName: l } = r;
   return {
-    install: (s) => {
-      A(r);
-      const e = g();
-      if (!Object.keys(s._context.config.globalProperties).includes("$pinia")) {
+    install: (a) => {
+      if (P(r), !!!d()) {
         const t = f();
-        s.use(t);
+        a.use(t);
       }
-      i && i.beforeEach((t, c, u) => {
-        const m = t.meta.requiresAuth, d = t.meta.requiresGuest, n = o ? i.resolve(o) : null, a = l ? i.resolve(l) : null;
-        if (n != null && n.name && m && !e.isAuthenticated)
-          return u({
+      const e = g();
+      i && i.beforeEach((t, c, s) => {
+        const m = t.meta.requiresAuth, h = t.meta.requiresGuest, u = o ? i.resolve(o) : null, n = l ? i.resolve(l) : null;
+        if (u != null && u.name && m && !e.isAuthenticated)
+          return s({
+            name: u.name,
+            query: { redirect: t.fullPath }
+          });
+        if (n != null && n.name && h && e.isAuthenticated)
+          return s({
             name: n.name,
             query: { redirect: t.fullPath }
           });
-        if (a != null && a.name && d && e.isAuthenticated)
-          return u({
-            name: a.name,
-            query: { redirect: t.fullPath }
-          });
-        r.middlewares ? h(r.middlewares, t, c, u, i, {
+        r.middlewares ? A(r.middlewares, t, c, s, i, {
           user: e.user,
           token: e.token,
           isAuthenticated: e.isAuthenticated
-        }) : u();
-      }), e.loadUserFromStorage(r), s.config.globalProperties.$user = e.user, s.config.globalProperties.$isAuthenticated = e.isAuthenticated;
+        }) : s();
+      }), e.loadUserFromStorage(r), a.config.globalProperties.$user = e.user, a.config.globalProperties.$isAuthenticated = e.isAuthenticated;
     }
   };
 };
 export {
-  y as authPlugin,
-  N as useAuth,
-  p as useInlineAuth
+  p as authPlugin,
+  $ as useAuth,
+  N as useInlineAuth
 };

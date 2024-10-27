@@ -1,13 +1,13 @@
 import { AuthOptions, AuthUser, BaseError, LoginCredentials, RegisterCredentials } from '../types'
 import { Ref, UnwrapRef, ref } from 'vue'
 
-import { createAuthStore } from '../stores/auth'
 import { createCountdown } from '../utils/plugins'
+import { createVueAuthStore } from '../stores/vue-auth'
 import { getAuthConfig } from '../utils/config'
 import { storeToRefs } from 'pinia'
 
-export const useInlineAuth = <AU = AuthUser>() => {
-  const useAuthStore = createAuthStore()
+export const useInlineAuth = <AU = AuthUser> () => {
+  const useAuthStore = createVueAuthStore()
   const store = useAuthStore()
 
   type UnrefData<X> = {
@@ -45,7 +45,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
    * @param action
    * @returns
    */
-  const useActionWithCallbacks = <R extends { error?: BaseError }>(action: () => Promise<R>) => {
+  const useActionWithCallbacks = <R extends { error?: BaseError }> (action: () => Promise<R>) => {
     const errorCallback = ref<(error: BaseError) => void>()
     const successCallback = ref<(data: R) => void>()
 
@@ -87,7 +87,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
    * @param options
    * @returns
    */
-  const login = <U = AU, T = LoginCredentials>(
+  const login = <U = AU, T = LoginCredentials> (
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): AuthData<U> & MethodActions<UnrefData<AuthData<U>>> => {
@@ -141,7 +141,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
    * @param options
    * @returns
    */
-  const register = <U = AU, T = RegisterCredentials>(
+  const register = <U = AU, T = RegisterCredentials> (
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): AuthData<U> & MethodActions<UnrefData<AuthData<U>>> => {
@@ -191,7 +191,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
    * @param credentials
    * @returns
    */
-  const logout = <T = unknown>(
+  const logout = <T = unknown> (
     options: AuthOptions = getAuthConfig(),
     credentials?: T
   ): BaseData & MethodActions<UnrefData<BaseData>> => {
@@ -229,7 +229,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
    * @param credentials
    * @returns
    */
-  const forgot = <T = unknown>(
+  const forgot = <T = unknown> (
     credentials?: T,
     options: AuthOptions = getAuthConfig()
   ): ForgotData & MethodActions<UnrefData<ForgotData>> => {
@@ -282,7 +282,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
    * @param credentials
    * @returns
    */
-  const reset = <U = AU, T = unknown>(
+  const reset = <U = AU, T = unknown> (
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): UserData<U> & MethodActions<UnrefData<UserData<U>>> => {
@@ -324,7 +324,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
    * @param credentials
    * @returns
    */
-  const loadUserFromStorage = <U = AU, T = unknown>(
+  const loadUserFromStorage = <U = AU, T = unknown> (
     options: AuthOptions<U> = getAuthConfig(),
     credentials?: T
   ): UserData<U> & MethodActions<UnrefData<UserData<U>>> => {
