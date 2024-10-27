@@ -1,6 +1,6 @@
+import { AuthOptions, AuthUser, BaseError } from "./types"
+import { NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
 import { Ref, ref, toValue } from "vue"
-
-import { BaseError } from "./types"
 
 /**
  * A simple errors reshaper, usefull for when your errors look like:
@@ -56,4 +56,52 @@ export const createCountdown = (
     }
 
     return countdown
+}
+
+
+/**
+ * Runs all the define middlewares for the application
+ *
+ * @param middlewares
+ * @param to
+ * @param from
+ * @param next
+ * @param context
+ */
+export function runMiddlewares<U = AuthUser> (
+    middlewares: AuthOptions<U>['middlewares'],
+    to: RouteLocationNormalized,
+    from: RouteLocationNormalized,
+    next: NavigationGuardNext,
+    context: { user: U; token?: string; isAuthenticated: boolean }
+) {
+    const executeMiddleware = (index: number) => {
+        if (!middlewares || index >= middlewares.length) {
+            next()
+            return
+        }
+
+        const middleware = middlewares[index]
+        let nextCalled = false
+
+        const wrappedNext = (nextArg?: unknown) => {
+            nextCalled = true
+            if (nextArg) {
+                next(nextArg)
+            } else {
+                executeMiddleware(index + 1)
+            }
+        }
+
+        // Invoke the middleware function with wrapped next
+        middleware(to, from, wrappedNext, context)
+
+        if (!nextCalled) {
+            throw new Error(
+                `Middleware at index ${index} did not call next(). All middlewares must call next() to proceed.`
+            )
+        }
+    }
+
+    executeMiddleware(0)
 }
