@@ -1,4 +1,4 @@
-import { AuthOptions, AuthUser, BaseError } from "./types"
+import { AuthOptions, AuthUser, BaseError } from "../types"
 import { NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
 import { Ref, ref, toValue } from "vue"
 
@@ -16,6 +16,8 @@ import { Ref, ref, toValue } from "vue"
  *   email: "The Email Address has already been taken.", 
  *   phone: "Invalid Phone Number" 
  * };
+ * 
+ * This becomes very usefull if your errors are formated from Laravel's default validator.
  * 
  * @param errors 
  * @returns 

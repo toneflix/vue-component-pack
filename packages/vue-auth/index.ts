@@ -2,8 +2,8 @@ import { App, Plugin } from 'vue'
 
 import { AuthOptions } from './src/types'
 import { createPinia } from 'pinia'
-import { runMiddlewares } from './src/plugins'
-import { setAuthConfig } from './src/config'
+import { runMiddlewares } from './src/utils/plugins'
+import { setAuthConfig } from './src/utils/config'
 import { useAuthStore } from './src/stores/auth'
 
 // Define the plugin with the correct signature

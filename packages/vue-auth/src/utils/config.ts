@@ -1,4 +1,4 @@
-import { AuthOptions, AuthUser } from './types'
+import { AuthOptions, AuthUser } from '../types'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export let authConfig: AuthOptions<any>

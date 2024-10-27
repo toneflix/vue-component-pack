@@ -9,11 +9,11 @@ import {
   ResponseError
 } from '../types'
 import { Ref, ref, toValue } from 'vue'
-import { getAuthConfig, url } from '../config'
+import { getAuthConfig, url } from '../utils/config'
 
 import axios from 'axios'
 import { defineStore } from 'pinia'
-import { createCountdown } from '../plugins'
+import { createCountdown } from '../utils/plugins'
 
 axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8'
 axios.defaults.headers.common['Accept'] = 'application/json'
