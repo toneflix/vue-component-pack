@@ -204,7 +204,7 @@ The plugin ships with reusable middlewares that can be utilized to streamline ro
 **Usage**:
 
 ```ts:line-numbers
-import { authMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
+import { authMiddleware } from '@toneflix/vue-auth'
 
 middlewares: [
   authMiddleware({ name: 'login' })
@@ -227,7 +227,7 @@ middlewares: [
 **Usage**:
 
 ```ts:line-numbers
-import { roleMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
+import { roleMiddleware } from '@toneflix/vue-auth'
 
 middlewares: [
   roleMiddleware({ name: 'forbidden' }, ['admin', 'editor'], 'userRoles', 'requiresAdmin')
@@ -244,7 +244,7 @@ middlewares: [
 **Example Usage in main.ts**
 
 ```ts:line-numbers
-import { authMiddleware, roleMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
+import { authMiddleware, roleMiddleware } from '@toneflix/vue-auth'
 
 const auth = authPlugin({
   router,
