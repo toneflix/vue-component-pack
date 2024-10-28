@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2024-10-28)
+
+### Features
+
+- Export plugins and middleware from main index.tx ([26dbebb](https://github.com/toneflix/vue-component-pack/commit/26dbebb952841b8d6952a15b1b7ebba3f0dc326f))
+
+## 1.0.20 (2024-10-24)
+
+## 1.0.18 (2024-10-24)
+
+## 1.0.17 (2024-10-16)
+
+## 1.0.16 (2024-10-08)
+
+## 1.0.15 (2024-10-08)
+
+## 1.0.14 (2024-10-08)
+
+## 1.0.12 (2024-08-15)
+
+## 1.0.11 (2024-08-15)
+
+## 1.0.10 (2024-08-15)
+
 ## [1.0.20](https://github.com/toneflix/vue-component-pack/compare/1.0.19...1.0.20) (2024-10-24)
 
 **Note:** Version bump only for package runner
