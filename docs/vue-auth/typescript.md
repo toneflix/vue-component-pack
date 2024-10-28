@@ -264,11 +264,13 @@ loadUserFromStorage<U = AuthUser, T = unknown>(
 - `error`: Indicates if there was an error, can be an object holding error data..
 - `message`: An optional message.
 
-## Initialize Config with Custom User Type
+## Custom User Type
 
-When initializing the plugin, you can also pass a custom user type to the plugin instance to avoid errors with middlewares and other config dependencies
+Here are few ways you could use a custom user type by extending `AuthUser` or not:
 
-**_Plugin type inheritance_**
+### Plugin type inheritance
+
+When initializing the plugin, you can pass a custom user type to the plugin instance to avoid errors with middlewares and other config dependencies.
 
 ```ts:line-numbers
 import { authMiddleware, roleMiddleware, authPlugin } from '@toneflix/vue-auth'
@@ -288,11 +290,27 @@ const auth = authPlugin<CustomUser>({
 })
 ```
 
-## Custom User Type
+Middlewares can also recieve a custom user type if there is a need for it.
 
-Here’s an example of how you could use a custom user type by extending `AuthUser`:
+```ts:line-numbers
+import { authMiddleware, roleMiddleware, authPlugin } from '@toneflix/vue-auth'
 
-**_Composable type inheritance_**:
+interface CustomUser {
+  userRole: string;
+}
+
+const auth = authPlugin({
+  router,
+  middlewares: [
+    authMiddleware({ name: 'login' }), 
+    roleMiddleware<CustomUser>({ name: 'forbidden' }, ['admin'], 'userRole')  
+  ]
+})
+```
+
+### Composable type inheritance
+
+You can pass a custom user type to the `useAuth` or `useInlineAuth` composables and it will be inherited by all exported methods.
 
 ```ts:line-numbers
 interface CustomUser extends AuthUser {
@@ -305,7 +323,9 @@ const { user } = useAuth<CustomUser>()
 
 Now, `user` will have the additional name and role properties in addition to the base properties of `AuthUser` (`id`, `email`, and `token`).
 
-**_Method type inheritance_**:
+### Method type inheritance
+
+You can also pass a custom user type to any of the exported methods if they require a different type alltogether.
 
 ```ts:line-numbers
 interface CustomUser {
