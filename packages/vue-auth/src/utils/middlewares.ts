@@ -75,7 +75,7 @@ export const guestMiddleware = (redirectRoute: RouteLocationRaw): Middleware => 
  * @param metaKey The meta key on the target route to check if it's constrained to the rules
  * @returns
  */
-export const roleMiddleware = <U = AuthUser>(
+export const roleMiddleware = <U = never> (
   redirectRoute: RouteLocationRaw,
   roles: string | string[],
   roleKey: keyof U = 'roles' as keyof U,
