@@ -1,0 +1,21 @@
+{
+  "name": "@toneflix/otp-input-docs",
+  "description": "Vue OTP input docs",
+  "author": "Legacy<https://github.com/3m1n3nc3>",
+  "license": "MIT",
+  "private": false,
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.12.1",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "docs:deploy": "../../deploy.sh otp-input"
+  },
+  "devDependencies": {
+    "vitepress": "^1.4.1"
+  },
+  "dependencies": {
+    "@toneflix/otp-input": "^1.0.37"
+  }
+}
