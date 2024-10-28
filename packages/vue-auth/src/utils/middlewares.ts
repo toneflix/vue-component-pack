@@ -43,6 +43,28 @@ export const authMiddleware = (redirectRoute: RouteLocationRaw): Middleware => {
 }
 
 /**
+ * Simple middleware that checkes if the user is a guest
+ *
+ * Checks if the target route is a guest only route
+ *
+ * Redirects user to specified route if user is not guest.
+ * 
+ * Requires guest routes to have the `meta.requireGuest` property
+ *
+ * @param redirectRoute If the user is not a guest, they will be redirected here.
+ * @returns
+ */
+export const guestMiddleware = (redirectRoute: RouteLocationRaw): Middleware => {
+  return (to, from, next, state, router) => {
+    if (state.isAuthenticated && !isCurrent(to, redirectRoute, router) && to.meta.requireGuest) {
+      return next(redirectRoute)
+    }
+
+    next()
+  }
+}
+
+/**
  * Simple middleware that checkes if the user has any or all of the specified roles
  *
  * Redirects user to specified route if user fails role check.
@@ -53,7 +75,7 @@ export const authMiddleware = (redirectRoute: RouteLocationRaw): Middleware => {
  * @param metaKey The meta key on the target route to check if it's constrained to the rules
  * @returns
  */
-export const roleMiddleware = <U = AuthUser>(
+export const roleMiddleware = <U = AuthUser> (
   redirectRoute: RouteLocationRaw,
   roles: string | string[],
   roleKey: keyof U = 'roles' as keyof U,
