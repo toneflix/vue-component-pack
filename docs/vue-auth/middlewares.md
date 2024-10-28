@@ -218,6 +218,32 @@ middlewares: [
 
 - `redirectRoute`: The route to redirect to if the user fails the authentication check. Typically, this would be the login page or another public route.
 
+#### `guestMiddleware`
+
+**Purpose**: Ensures that only guest users are able to access certain routes.
+
+**Behavior**:
+
+- Checks if the target route (`to`) requires only guest access (`to.meta.requiresGuest`).
+- If the user is authenticated (not a guest), they will be redirected to the specified `redirectRoute`.
+
+**Usage**:
+
+```ts:line-numbers
+import { guestMiddleware } from '@toneflix/vue-auth'
+
+middlewares: [
+  guestMiddleware({ name: 'profile' })
+]
+```
+
+**Requires**:
+- `to.meta.requiresGuest` to be set to `true` on the target route.
+
+**Parameters**:
+
+- `redirectRoute`: The route to redirect to if the is authenticated (not a guest). Typically, this would be the account/profile page or another protected route.
+
 #### `roleMiddleware`
 
 **Purpose**: Validates user roles to restrict access to specific routes.

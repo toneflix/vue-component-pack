@@ -1,20 +1,20 @@
 import { getActivePinia as h, createPinia as f } from "pinia";
 import { runMiddlewares as A } from "./src/utils/plugins.mjs";
 import { createCountdown as y, reshapeError as C } from "./src/utils/plugins.mjs";
-import { setAuthConfig as P } from "./src/utils/config.mjs";
-import { useAuthStore as g } from "./src/stores/vue-auth.mjs";
+import { setAuthConfig as g } from "./src/utils/config.mjs";
+import { useAuthStore as P } from "./src/stores/vue-auth.mjs";
 import { useInlineAuth as G } from "./src/composables/useInlineAuth.mjs";
 import { useAuth as S } from "./src/composables/useAuth.mjs";
-import { authMiddleware as F, roleMiddleware as U } from "./src/utils/middlewares.mjs";
-const M = (t) => {
+import { authMiddleware as F, guestMiddleware as U, roleMiddleware as j } from "./src/utils/middlewares.mjs";
+const I = (t) => {
   const { router: i, loginRouteName: o, defaultAuthRouteName: l } = t;
   return {
     install: (n) => {
-      if (P(t), !!!h()) {
+      if (g(t), !!!h()) {
         const r = f();
         n.use(r);
       }
-      const e = g();
+      const e = P();
       i && i.beforeEach((r, m, u) => {
         const c = r.meta.requiresAuth, d = r.meta.requiresGuest, s = o ? i.resolve(o) : null, a = l ? i.resolve(l) : null;
         if (s != null && s.name && c && !e.isAuthenticated)
@@ -38,10 +38,11 @@ const M = (t) => {
 };
 export {
   F as authMiddleware,
-  M as authPlugin,
+  I as authPlugin,
   y as createCountdown,
+  U as guestMiddleware,
   C as reshapeError,
-  U as roleMiddleware,
+  j as roleMiddleware,
   A as runMiddlewares,
   S as useAuth,
   G as useInlineAuth

@@ -49,14 +49,14 @@ export const authMiddleware = (redirectRoute: RouteLocationRaw): Middleware => {
  *
  * Redirects user to specified route if user is not guest.
  * 
- * Requires guest routes to have the `meta.requireGuest` property
+ * Requires guest routes to have the `meta.requiresGuest` property
  *
  * @param redirectRoute If the user is not a guest, they will be redirected here.
  * @returns
  */
 export const guestMiddleware = (redirectRoute: RouteLocationRaw): Middleware => {
   return (to, from, next, state, router) => {
-    if (state.isAuthenticated && !isCurrent(to, redirectRoute, router) && to.meta.requireGuest) {
+    if (state.isAuthenticated && !isCurrent(to, redirectRoute, router) && to.meta.requiresGuest) {
       return next(redirectRoute)
     }
 
