@@ -13973,3 +13973,8 @@
 [NX Daemon Server] - 2024-10-28T06:30:15.808Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2024-10-28T06:30:15.808Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-10-28T06:30:15.808Z - Time taken for 'total execution time for createProjectGraph()' 14.727041999984067ms
+[NX Daemon Server] - 2024-10-28T06:30:51.487Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-10-28T06:30:51.492Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-28T06:30:51.492Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-10-28T06:30:51.493Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-10-28T06:30:51.497Z - Server stopped because: "LOCK_FILES_CHANGED"

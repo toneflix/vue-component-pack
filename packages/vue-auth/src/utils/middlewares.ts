@@ -5,8 +5,9 @@
  * © copyright 2024 3m1n3nc3
  */
 
-import { AuthUser, Middleware } from '../types'
 import { RouteLocationNormalizedGeneric, RouteLocationRaw, Router } from 'vue-router'
+
+import { Middleware } from '../types'
 
 const sameObj = (obj1: unknown, obj2: unknown) => JSON.stringify(obj1) === JSON.stringify(obj2)
 
@@ -75,7 +76,7 @@ export const guestMiddleware = (redirectRoute: RouteLocationRaw): Middleware => 
  * @param metaKey The meta key on the target route to check if it's constrained to the rules
  * @returns
  */
-export const roleMiddleware = <U = never> (
+export const roleMiddleware = <U = never>(
   redirectRoute: RouteLocationRaw,
   roles: string | string[],
   roleKey: keyof U = 'roles' as keyof U,
