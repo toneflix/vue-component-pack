@@ -36,7 +36,7 @@ export interface ResponseError {
   }
 }
 
-export interface Middleware<U = AuthUser> {
+export interface Middleware<U = unknown & AuthUser> {
   (
     to: RouteLocationNormalized,
     from: RouteLocationNormalized,

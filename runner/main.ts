@@ -76,7 +76,7 @@ const auth = authPlugin({
   transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
-  middlewares: [roleMiddleware('/', ['admin'], 'roles'), authMiddleware({ name: 'login' })]
+  middlewares: [roleMiddleware('/', ['admin'], 'email'), authMiddleware({ name: 'login' })]
 })
 
 const app = createApp(App)
