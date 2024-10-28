@@ -211,6 +211,9 @@ middlewares: [
 ]
 ```
 
+**Requires**:
+- `to.meta.requiresAuth` to be set to `true` on the target route.
+
 **Parameters**:
 
 - `redirectRoute`: The route to redirect to if the user fails the authentication check. Typically, this would be the login page or another public route.

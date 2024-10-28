@@ -5,9 +5,8 @@
  * © copyright 2024 3m1n3nc3
  */
 
+import { AuthUser, Middleware } from '../types'
 import { RouteLocationNormalizedGeneric, RouteLocationRaw, Router } from 'vue-router'
-
-import { Middleware } from '../types'
 
 const sameObj = (obj1: unknown, obj2: unknown) => JSON.stringify(obj1) === JSON.stringify(obj2)
 
@@ -49,16 +48,17 @@ export const authMiddleware = (redirectRoute: RouteLocationRaw): Middleware => {
  * Redirects user to specified route if user fails role check.
  *
  * @param redirectRoute If the user fails the check, they will be redirected here.
- * @param roles
- * @param roleKey
+ * @param roles The roles required to pass this check
+ * @param roleKey The key in the user object the holds the user's current role
+ * @param metaKey The meta key on the target route to check if it's constrained to the rules
  * @returns
  */
-export const roleMiddleware = (
+export const roleMiddleware = <U = AuthUser>(
   redirectRoute: RouteLocationRaw,
   roles: string | string[],
-  roleKey: string = 'roles',
+  roleKey: keyof U = 'roles' as keyof U,
   metaKey: string = 'requiresAdmin'
-): Middleware => {
+): Middleware<U> => {
   return (to, from, next, context, router) => {
     if (!context.user[roleKey]) {
       return next()

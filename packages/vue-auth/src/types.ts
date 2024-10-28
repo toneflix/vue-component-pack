@@ -7,6 +7,7 @@ export interface AuthUser {
   id: number
   email: string
   token?: string
+  roles?: string
 }
 
 export interface AuthResponse<U = AuthUser> {

@@ -1,25 +1,25 @@
-import { ref as s, toValue as f } from "vue";
-const v = (l, r) => {
-  const e = s(0), t = f(l);
-  if (t && t > 0) {
-    e.value = t;
-    const n = setInterval(() => {
-      e.value -= 1e3, r && r(e.value), e.value <= 0 && clearInterval(n);
+import { ref as d, toValue as f } from "vue";
+const v = (t) => Object.fromEntries(Object.entries(t || {}).map(([r, e]) => [r, e[0]])), m = (t, r) => {
+  const e = d(0), n = f(t);
+  if (n && n > 0) {
+    e.value = n;
+    const l = setInterval(() => {
+      e.value -= 1e3, r && r(e.value), e.value <= 0 && clearInterval(l);
     }, 1e3);
   }
   return e;
 };
-function m(l, r, e, t, n, d) {
+function h(t, r, e, n, l, s) {
   const a = (o) => {
-    if (!l || o >= l.length) {
-      t();
+    if (!t || o >= t.length) {
+      n();
       return;
     }
-    const i = l[o];
+    const i = t[o];
     let u = !1;
     if (i(r, e, (c) => {
-      u = !0, c ? t(c) : a(o + 1);
-    }, d, n), !u)
+      u = !0, c ? n(c) : a(o + 1);
+    }, s, l), !u)
       throw new Error(
         `Middleware at index ${o} did not call next(). All middlewares must call next() to proceed.`
       );
@@ -27,6 +27,7 @@ function m(l, r, e, t, n, d) {
   a(0);
 }
 export {
-  v as createCountdown,
-  m as runMiddlewares
+  m as createCountdown,
+  v as reshapeError,
+  h as runMiddlewares
 };
