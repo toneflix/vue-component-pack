@@ -273,7 +273,7 @@ middlewares: [
 **Example Usage in main.ts**
 
 ```ts:line-numbers
-import { authMiddleware, roleMiddleware } from '@toneflix/vue-auth'
+import { authMiddleware, roleMiddleware, authPlugin } from '@toneflix/vue-auth'
 
 const auth = authPlugin({
   router,

@@ -264,6 +264,30 @@ loadUserFromStorage<U = AuthUser, T = unknown>(
 - `error`: Indicates if there was an error, can be an object holding error data..
 - `message`: An optional message.
 
+## Initialize Config with Custom User Type
+
+When initializing the plugin, you can also pass a custom user type to the plugin instance to avoid errors with middlewares and other config dependencies
+
+**_Plugin type inheritance_**
+
+```ts:line-numbers
+import { authMiddleware, roleMiddleware, authPlugin } from '@toneflix/vue-auth'
+
+interface CustomUser {
+  id: number,
+  name: string;
+  userRole: string;
+}
+
+const auth = authPlugin<CustomUser>({
+  router,
+  middlewares: [
+    authMiddleware({ name: 'login' }), 
+    roleMiddleware({ name: 'forbidden' }, ['admin'], 'userRole')  
+  ]
+})
+```
+
 ## Custom User Type
 
 Here’s an example of how you could use a custom user type by extending `AuthUser`:
