@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.2.0...@toneflix/vue-auth@1.2.1) (2024-10-28)
+
+### Bug Fixes
+
+- Update generic type asertion for roleMiddleware ([28dfc58](https://github.com/toneflix/vue-component-pack/commit/28dfc58407d78f27d623f5948f26070f123311f9))
+
 # [1.2.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.1.0...@toneflix/vue-auth@1.2.0) (2024-10-28)
 
 ### Bug Fixes
