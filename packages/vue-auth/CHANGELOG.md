@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.1.0...@toneflix/vue-auth@1.2.0) (2024-10-28)
+
+### Bug Fixes
+
+- Add a Generic type to the roleMiddeware to help validate the roleKey param ([6fcfd9c](https://github.com/toneflix/vue-component-pack/commit/6fcfd9cc4781d7691265302cd6392483f4072cb5))
+
+### Features
+
+- Create a guestMiddleware ([3178745](https://github.com/toneflix/vue-component-pack/commit/3178745d69d77f5dbbae22a22dfeec41b71bfabe))
+
 # [1.1.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.0.38...@toneflix/vue-auth@1.1.0) (2024-10-28)
 
 ### Features
