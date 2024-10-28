@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.0.38...@toneflix/vue-auth@1.1.0) (2024-10-28)
+
+### Features
+
+- Export plugins and middleware from main index.tx ([26dbebb](https://github.com/toneflix/vue-component-pack/commit/26dbebb952841b8d6952a15b1b7ebba3f0dc326f))
+
 ## [1.0.38](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.0.37...@toneflix/vue-auth@1.0.38) (2024-10-28)
 
 **Note:** Version bump only for package @toneflix/vue-auth
