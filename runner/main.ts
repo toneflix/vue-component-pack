@@ -73,7 +73,7 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
   middlewares: [roleMiddleware('/', ['admin'], 'roles'), authMiddleware({ name: 'login' })]
