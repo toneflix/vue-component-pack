@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/toneflix/vue-component-pack/compare/runner@1.1.0...runner@1.1.1) (2024-10-28)
+
+### Bug Fixes
+
+- Set generic user type in middlewares to unknown default. ([bb6fb8c](https://github.com/toneflix/vue-component-pack/commit/bb6fb8cb6eab5ed31251b2b7b9ecefebd6943b5f))
+
 # 1.1.0 (2024-10-28)
 
 ### Features
