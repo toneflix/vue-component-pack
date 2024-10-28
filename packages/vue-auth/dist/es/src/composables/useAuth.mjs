@@ -1,4 +1,4 @@
-import { createAuthStore as h } from "../stores/auth.mjs";
+import { createVueAuthStore as h } from "../stores/vue-auth.mjs";
 import { getAuthConfig as e } from "../utils/config.mjs";
 import { storeToRefs as l } from "pinia";
 const F = () => {

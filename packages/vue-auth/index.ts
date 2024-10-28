@@ -82,4 +82,6 @@ export const authPlugin = (options: AuthOptions) => {
 
 export * from './src/composables/useInlineAuth'
 export * from './src/composables/useAuth'
+export * from './src/utils/middlewares'
+export * from './src/utils/plugins'
 export * from './src/types'

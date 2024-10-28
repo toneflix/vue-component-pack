@@ -1,10 +1,10 @@
 import { ref as r } from "vue";
-import { createAuthStore as F } from "../stores/auth.mjs";
-import { createCountdown as U } from "../utils/plugins.mjs";
+import { createCountdown as F } from "../utils/plugins.mjs";
+import { createVueAuthStore as U } from "../stores/vue-auth.mjs";
 import { getAuthConfig as k } from "../utils/config.mjs";
 import { storeToRefs as x } from "pinia";
-const z = () => {
-  const m = F()(), f = (g) => {
+const q = () => {
+  const m = U()(), f = (g) => {
     const l = r(), n = r();
     return {
       send: async () => {
@@ -81,7 +81,7 @@ const z = () => {
     const n = r(), t = r(!1), u = r(), c = r(), s = r(0), i = async () => {
       t.value = !0;
       const e = await m.forgot(g, l);
-      return n.value = e == null ? void 0 : e.error, u.value = e == null ? void 0 : e.message, c.value = e.timeout, t.value = !1, U(c, (d) => {
+      return n.value = e == null ? void 0 : e.error, u.value = e == null ? void 0 : e.message, c.value = e.timeout, t.value = !1, F(c, (d) => {
         s.value = d;
       }), {
         error: e.error,
@@ -145,5 +145,5 @@ const z = () => {
   };
 };
 export {
-  z as useInlineAuth
+  q as useInlineAuth
 };

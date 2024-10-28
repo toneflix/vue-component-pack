@@ -1,7 +1,6 @@
 import './style.css'
 
-import { AuthUser, authPlugin } from '@toneflix/vue-auth'
-import { authMiddleware, roleMiddleware } from '@toneflix/vue-auth/src/utils/middlewares'
+import { AuthUser, authMiddleware, authPlugin, roleMiddleware } from '@toneflix/vue-auth'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import App from './app.vue'
@@ -74,7 +73,7 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
   middlewares: [roleMiddleware('/', ['admin'], 'roles'), authMiddleware({ name: 'login' })]
