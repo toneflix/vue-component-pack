@@ -75,6 +75,7 @@ const verifyPayment = (ref: string) => {
       }
     })
   } catch (error) {
+    loading.value = false
     emit('error', error as { message: string }, ref)
   }
 }
@@ -93,6 +94,7 @@ const initializeNewPayment = () => {
       }
     })
   } catch (error) {
+    loading.value = false
     emit('error', error as { message: string })
   }
 }
