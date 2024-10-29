@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.0.43...@toneflix/paystack-inline@1.1.0) (2024-10-29)
+
+### Features
+
+- Replace /types/paystack**inline-js.d.ts with @types/paystack**inline-js ([83108c9](https://github.com/toneflix/vue-component-pack/commit/83108c9d9c19330f0ac0f90cfac65fd807ba9535))
+
 ## [1.0.43](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.0.42...@toneflix/paystack-inline@1.0.43) (2024-10-28)
 
 **Note:** Version bump only for package @toneflix/paystack-inline
