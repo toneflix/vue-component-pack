@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.45](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.0.44...@toneflix/otp-input@1.0.45) (2024-10-29)
+
+**Note:** Version bump only for package @toneflix/otp-input
+
 ## [1.0.44](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.0.43...@toneflix/otp-input@1.0.44) (2024-10-29)
 
 **Note:** Version bump only for package @toneflix/otp-input

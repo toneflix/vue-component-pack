@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.1.0...@toneflix/paystack-inline@1.1.1) (2024-10-29)
+
+### Bug Fixes
+
+- Set loading state to false if any of the callbacks fail. ([f869bbd](https://github.com/toneflix/vue-component-pack/commit/f869bbdc8d8421cf661c32f3f0de74861fe74d12))
+
 # [1.1.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.0.43...@toneflix/paystack-inline@1.1.0) (2024-10-29)
 
 ### Features
