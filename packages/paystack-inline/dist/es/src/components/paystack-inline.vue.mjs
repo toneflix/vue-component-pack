@@ -1,4 +1,4 @@
-import { defineComponent as b, mergeModels as m, useModel as h, ref as k, watch as N, onMounted as P, onBeforeUnmount as g, renderSlot as c, withDirectives as w, createElementVNode as V, mergeProps as C, createTextVNode as B, toDisplayString as R, openBlock as z, createElementBlock as M, createCommentVNode as S, vShow as T } from "vue";
+import { defineComponent as b, mergeModels as m, useModel as h, ref as k, watch as N, onMounted as P, onBeforeUnmount as g, renderSlot as d, withDirectives as w, createElementVNode as C, mergeProps as B, createTextVNode as V, toDisplayString as R, openBlock as z, createElementBlock as M, createCommentVNode as S, vShow as T } from "vue";
 import { useRoute as _, useRouter as $ } from "vue-router";
 import E from "@paystack/inline-js";
 /* empty css                   */
@@ -36,88 +36,91 @@ const D = ["disabled"], F = {
       );
     } }
   }, {
-    modelValue: {},
-    modelModifiers: {}
+    reference: {},
+    referenceModifiers: {}
   }),
-  emits: /* @__PURE__ */ m(["ready", "success", "verified", "canceled", "destroyed", "error", "initialized"], ["update:modelValue"]),
-  setup(n, { expose: d, emit: f }) {
-    const r = f, l = h(n, "modelValue"), o = n, p = _(), y = $(), a = k(!1), s = (t) => {
-      a.value = !0;
+  emits: /* @__PURE__ */ m(["ready", "success", "verified", "canceled", "destroyed", "error", "initialized"], ["update:reference"]),
+  setup(n, { expose: f, emit: p }) {
+    const o = p, s = h(n, "reference"), a = n, l = _(), y = $(), r = k(!1), c = (e) => {
+      r.value = !0;
       try {
-        o.verifyCallback(t).then(({ status: e, message: i }) => {
-          a.value = !1, r("verified", { status: e, message: i }), l.value = void 0, o.redirectRoute && y.push(o.redirectRoute);
-        });
-      } catch (e) {
-        r("error", e, t);
-      }
-    }, u = () => {
-      a.value = !0;
-      try {
-        o.initializeCallback().then(({ reference: t, authorization_url: e, message: i }) => {
-          r("initialized", { reference: t, authorization_url: e, message: i }), o.inline || !e ? v(t) : e && setTimeout(() => {
-            globalThis.location.href = e;
-          }, 3e3);
+        a.verifyCallback(e).then(({ status: t, message: i }) => {
+          r.value = !1, o("verified", { status: t, message: i }), s.value = void 0, a.redirectRoute && y.push(a.redirectRoute);
         });
       } catch (t) {
-        r("error", t);
+        o("error", t, e);
       }
-    }, v = (t = "") => new E().newTransaction({
-      key: o.publicKey,
-      email: o.customer.email,
-      amount: o.amount * 100,
-      reference: t,
-      firstName: (o.customer.name || o.customer.email).split(" ")[0],
-      lastName: (o.customer.name || o.customer.email).split(" ")[1] || "",
+    }, u = () => {
+      r.value = !0;
+      try {
+        a.initializeCallback().then(({ reference: e, authorization_url: t, message: i }) => {
+          o("initialized", { reference: e, authorization_url: t, message: i }), a.inline || !t ? v(e) : t && setTimeout(() => {
+            globalThis.location.href = t;
+          }, 3e3);
+        });
+      } catch (e) {
+        o("error", e);
+      }
+    }, v = (e = "") => new E().newTransaction({
+      key: a.publicKey,
+      email: a.customer.email,
+      amount: a.amount * 100,
+      reference: e,
+      firstName: (a.customer.name || a.customer.email).split(" ")[0],
+      lastName: (a.customer.name || a.customer.email).split(" ")[1] || "",
       metadata: {
         custom_fields: [
           {
             display_name: "Name",
             variable_name: "Name",
-            value: o.customer.name
+            value: a.customer.name
           },
           {
             display_name: "Phone Number",
             variable_name: "Phone Number",
-            value: o.customer.phone
+            value: a.customer.phone
           }
         ]
       },
-      onSuccess(e) {
-        a.value = !1, r("success", e), o.dontVerify || s(e.reference);
+      onSuccess(t) {
+        r.value = !1, o("success", t), a.dontVerify || c(t.reference);
       },
       onCancel() {
-        a.value = !1, r("canceled", { reference: t });
+        r.value = !1, o("canceled", { reference: e });
       },
-      onError: (e) => {
-        a.value = !1, r("error", e, t);
+      onError: (t) => {
+        r.value = !1, o("error", t, e);
       }
     });
     return N(
-      [l, () => p.query.reference],
-      ([t, e]) => {
-        e || (e = t), e && !o.dontVerify && s(e);
+      [s, () => {
+        var e;
+        return (e = l == null ? void 0 : l.query) == null ? void 0 : e.reference;
+      }],
+      ([e, t]) => {
+        t || (t = e), t && !a.dontVerify && c(t);
       },
       { immediate: !0 }
     ), P(() => {
-      r("ready");
+      o("ready");
     }), g(() => {
-      r("destroyed");
-    }), d({
-      loading: a
-    }), (t, e) => c(t.$slots, "default", {
+      o("destroyed");
+    }), f({
+      loading: r
+    }), (e, t) => d(e.$slots, "default", {
       initialize: () => u(),
-      loading: a.value
+      loading: r.value
     }, () => [
-      w(V("button", C({ class: "pay-button" }, t.$attrs, {
-        disabled: a.value,
-        onClick: e[0] || (e[0] = (i) => u())
+      w(C("button", B({ class: "pay-button" }, e.$attrs, {
+        disabled: r.value,
+        onClick: t[0] || (t[0] = (i) => u())
       }), [
-        c(t.$slots, "button", { loading: a.value }, () => [
-          B(R(a.value ? "" : t.btnLabel) + " ", 1),
-          a.value ? (z(), M("div", F)) : S("", !0)
+        d(e.$slots, "button", { loading: r.value }, () => [
+          V(R(r.value ? "" : e.btnLabel) + " ", 1),
+          r.value ? (z(), M("div", F)) : S("", !0)
         ])
       ], 16, D), [
-        [T, !t.hidden]
+        [T, !e.hidden]
       ])
     ]);
   }
