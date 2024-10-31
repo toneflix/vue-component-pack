@@ -3,7 +3,7 @@
   "version": "1.0.45",
   "description": "Simple customizable OTP input for Vue 3.",
   "style": "dist/lib/style.css",
-  "main": "dist/lib/index.js",
+  "main": "dist/lib/index.cjs",
   "module": "dist/es/index.mjs",
   "type": "module",
   "homepage": "https://toneflix.github.io/vue-component-pack/otp-input",

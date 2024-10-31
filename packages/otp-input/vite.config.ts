@@ -19,7 +19,7 @@ export default defineConfig({
         },
         {
           format: 'cjs',
-          entryFileNames: '[name].js',
+          entryFileNames: '[name].cjs',
           preserveModules: true,
           exports: 'named',
           dir: './dist/lib'
