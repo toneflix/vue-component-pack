@@ -362,7 +362,7 @@ export const useInlineAuth = <AU = AuthUser>() => {
 
   return {
     user: user as Ref<AU>,
-    token: token,
+    token,
     isAuthenticated,
 
     reset,
