@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const l=require("./components/paystack-inline.vue.js"),s=e=>(e.install=n=>{const a=e.name;n.component(a,e)},e),t=s(l.default);exports.PaystackInline=t;exports.default=t;

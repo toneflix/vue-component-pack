@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/index.cjs"),n={install:t=>{t.use(e.PaystackInline)}};exports.PaystackInline=e.PaystackInline;exports.default=n;
