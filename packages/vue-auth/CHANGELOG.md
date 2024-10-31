@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.2.5...@toneflix/vue-auth@1.3.0) (2024-10-31)
+
+### Features
+
+- Make the main entry build cjs extenstion. ([d33af34](https://github.com/toneflix/vue-component-pack/commit/d33af34019baa934b60a84e442bf6a507492c0b8))
+
 ## [1.2.5](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.2.4...@toneflix/vue-auth@1.2.5) (2024-10-29)
 
 **Note:** Version bump only for package @toneflix/vue-auth
