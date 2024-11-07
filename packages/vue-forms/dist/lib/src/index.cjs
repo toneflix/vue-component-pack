@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const u=require("./components/vue-forms.vue.cjs"),r=e=>(e.install=n=>{const s=e.name;n.component(s,e)},e),t=r(u.default);exports.VueForms=t;exports.default=t;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const n=require("./components/vue-forms.vue.cjs"),r=e=>(e.install=u=>{const s=e.name;u.component(s,e)},e),t=r(n.default);exports.VueForms=t;exports.default=t;

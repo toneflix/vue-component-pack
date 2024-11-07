@@ -1,9 +1,9 @@
-import s from "./components/vue-forms.vue.mjs";
-const o = (t) => (t.install = (n) => {
-  const e = t.name;
-  n.component(e, t);
-}, t), a = o(s);
+import a from "./components/vue-forms.vue.mjs";
+const e = (n) => (n.install = (t) => {
+  const s = n.name;
+  t.component(s, n);
+}, n), r = e(a);
 export {
-  a as VueForms,
-  a as default
+  r as VueForms,
+  r as default
 };

@@ -153,10 +153,3 @@ const submit = () => {
   emit('submit')
 }
 </script>
-
-<style scoped>
-.form-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-</style>

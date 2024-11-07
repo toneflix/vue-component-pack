@@ -1,4 +1,9 @@
+@use 'sass:math';
 @use './reset';
+
+@function toFixed($number, $power) {
+  @return math.div(round($number * $power), $power);
+}
 
 .vue-forms,
 .form-groups {
@@ -13,6 +18,28 @@
   font-variation-settings: normal;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
+
+  --tf-btn-opacity: 1;
+
+  .form-actions {
+    button {
+      &.loading,
+      &:disabled {
+        --tf-btn-opacity: 0.6;
+        --tf-btn-cancel-bg: rgb(209 213 219 / var(--tf-btn-opacity));
+        --tf-btn-confirm-bg: rgb(79 70 229 / var(--tf-btn-opacity));
+        --tf-btn-cancel-disabled-bg: rgb(249 250 251 / var(--tf-btn-opacity));
+        --tf-btn-confirm-disabled-bg: rgb(67 56 202 / var(--tf-btn-opacity));
+      }
+    }
+  }
+
+  --tf-primary-opacity: 1;
+  --tf-primary-color: rgb(79 70 229 / var(--tf-primary-opacity));
+  --tf-btn-cancel-bg: rgb(209 213 219 / var(--tf-btn-opacity));
+  --tf-btn-confirm-bg: rgb(79 70 229 / var(--tf-btn-opacity));
+  --tf-btn-cancel-disabled-bg: rgb(249 250 251 / var(--tf-btn-opacity));
+  --tf-btn-confirm-disabled-bg: rgb(67 56 202 / var(--tf-btn-opacity));
 }
 
 .vue-forms,
@@ -116,8 +143,12 @@ p.field-hint {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-top: -0.485rem;
+  margin-left: -0.485rem;
+  & > * {
+    padding-top: 0.485rem;
+    padding-left: 0.485rem;
+  }
 
   .form-group {
     display: flex;
@@ -141,9 +172,10 @@ p.field-hint {
   }
   .form-row .col-#{$i} {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 #{calc(100% / 12) * $i};
-    flex: 0 0 #{calc(100% / 12) * $i};
-    max-width: #{calc(100% / 12) * $i};
+    // -ms-flex: 0 0 #{calc(100% / 12) * $i};
+    // flex: 0 0 #{calc(100% / 12) * $i};
+    // max-width: #{calc(100% / 12) * $i};
+    width: toFixed(math.percentage(math.div($i, 12)), 10000);
   }
 }
 
@@ -173,10 +205,10 @@ p.field-hint {
     &:focus {
       outline: 2px solid transparent;
       outline-offset: 2px;
-      box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(79 70 229 / 1);
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--tf-primary-color);
     }
     &.toggled {
-      background-color: rgb(79 70 229 / 1);
+      background-color: var(--tf-primary-color);
       .switch-indicator {
         transform: translateX(0.7rem);
       }
@@ -206,7 +238,7 @@ p.field-hint {
 .input-radio {
   margin-top: 0.25rem;
   & input {
-    color: rgb(79 70 229 / 1);
+    color: var(--tf-primary-color);
     border-color: rgb(209 213 219 / 1);
     border-radius: 50%;
     width: 1rem;
@@ -280,7 +312,7 @@ p.field-hint {
     align-items: center;
     display: flex;
     & > input {
-      color: rgb(79 70 229 / 1);
+      color: var(--tf-primary-color);
       border-color: rgb(209 213 219 / 1);
       border-radius: 0.25rem;
       width: 1rem;
@@ -300,7 +332,6 @@ p.field-hint {
   padding-top: 1.25rem;
   display: flex;
   justify-content: flex-end;
-  --btn-opacity: 1;
   button {
     cursor: pointer;
     font-weight: 500;
@@ -313,30 +344,29 @@ p.field-hint {
     &:focus {
       outline: 2px solid transparent;
       outline-offset: 2px;
-      box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(67 56 202 / var(--btn-opacity));
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(67 56 202 / var(--tf-btn-opacity));
     }
     &.loading,
     &:disabled {
-      --btn-opacity: 0.6;
       cursor: default;
     }
     &.action-confirm {
-      background-color: rgb(79 70 229 / var(--btn-opacity));
+      background-color: var(--tf-btn-confirm-bg);
       color: #fff;
       display: inline-flex;
       justify-content: center;
       margin-left: 0.75rem;
       border-color: transparent;
       &:not(.loading):hover {
-        background-color: rgb(67 56 202 / var(--btn-opacity));
+        background-color: var(--tf-btn-confirm-disabled-bg);
       }
     }
     &.action-cancel {
       color: rgb(55 65 81 / 1);
       background-color: #fff;
-      border-color: rgb(209 213 219 / var(--btn-opacity));
+      border-color: var(--tf-btn-cancel-bg);
       &:not(.loading):hover {
-        background-color: rgb(249 250 251 / var(--btn-opacity));
+        background-color: var(--tf-btn-cancel-disabled-bg);
       }
     }
   }

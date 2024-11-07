@@ -64,14 +64,101 @@ import { VueForms } from '@toneflix/vue-forms'
 <script setup lang="ts">
 import '@toneflix/vue-forms/dist/lib/style.css'
 import { VueForms } from '@toneflix/vue-forms'
-import { ref } from 'vue'
+import { computed } from 'vue'
 
-const otp = ref<string>('')
+const formFields = ref<FormField[]>([
+  {
+    type: 'text',
+    name: 'name',
+    label: 'Name',
+    col: 6,
+    hint: 'Enter your name',
+    group: 'main'
+  },
+  {
+    type: 'select',
+    name: 'country',
+    label: 'Country',
+    col: 6,
+    hint: 'Select your country',
+    choices: ['Nigeria', 'USA', 'UK', 'Canada'],
+    group: 'main'
+  },
+  {
+    type: 'email',
+    name: 'email',
+    label: 'Email Address',
+    placeholder: 'Email Address',
+    col: 12,
+    hint: 'Enter your Email Address',
+    group: 'alt'
+  },
+  {
+    type: 'radio',
+    name: 'category',
+    label: 'Category',
+    col: 12,
+    hint: 'Choose a category',
+    choices: ['home', 'away', 'middle_ground'],
+    group: 'alt'
+  },
+  {
+    type: 'switch',
+    name: 'safe_mode',
+    label: 'Safe Mode',
+    col: 12,
+    hint: 'Activate Safe Mode',
+    trueValue: 1,
+    falseValue: 0
+  },
+  {
+    type: 'checkbox',
+    name: 'accept',
+    label: 'Do you accept',
+    placeholder: 'Accept',
+    col: 12,
+    hint: 'Accept out terms',
+    trueValue: 1,
+    falseValue: 0
+  }
+])
+
+const formValues = reactive({
+  name: 'John Doe',
+  email: 'john.doe@email.com',
+  accept: 0,
+  category: 'home',
+  safe_mode: 0,
+  country: 'Nigeria',
+  address: ''
+})
 </script>
 
 <template>
-  <div style="display: flex; flex-direction: row;">
-    <vue-forms v-model="otp" />
+  <div style="width: 24rem; margin: 0 auto;">
+    <vue-forms
+      rounded
+      separator
+      show-group-labels
+      style="margin: 0 auto; padding: 1rem;"
+      :fields="formFields"
+      :groupMeta="{
+        main: {
+          title: 'Main Form',
+          subtitle: 'These are the main options',
+          rounded: true
+        },
+        alt: {
+          title: 'Alternative Form',
+          subtitle: 'These are the alternative options',
+          rounded: true
+        }
+      }"
+      v-model="formValues"
+      @cancel="console.log('cancel')"
+      @submit="console.log('submit')"
+      v-model="formValues"
+    />
   </div>
 </template>
 ```

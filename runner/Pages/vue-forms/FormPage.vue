@@ -20,6 +20,8 @@
         }
       }"
       v-model="formValues"
+      @cancel="console.log('cancel')"
+      @submit="console.log('submit')"
     >
       <!-- <template #select="props"> {{ props }} </template> -->
     </VueForms>
@@ -37,7 +39,7 @@
 import { VueForms } from '@toneflix/vue-forms'
 import { FormField } from '@toneflix/vue-forms/src/types'
 import { reactive, ref } from 'vue'
-// import '@toneflix/vue-forms/src/styles/main.scss'
+import '@toneflix/vue-forms/src/styles/main.scss'
 import './style.scss'
 
 // Sample form data
