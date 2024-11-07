@@ -30,5 +30,12 @@ export default defineConfig({
       entry: './index.ts'
     }
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler', // or "modern", "legacy"
+      },
+    },
+  },
   plugins: [vue()]
 })

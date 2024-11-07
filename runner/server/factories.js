@@ -6,7 +6,7 @@ export const userFactory = Factory.extend({
   email: () => faker.internet.email(),
   token: () => faker.string.uuid(),
   password: () => 'password',
-  username: () => faker.internet.userName(),
+  username: () => faker.internet.username(),
   resetToken: () => Math.floor(Math.random() * 9999),
   roles: 'user',
   perms: []

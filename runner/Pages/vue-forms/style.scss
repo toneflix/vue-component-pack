@@ -1,0 +1,13 @@
+@use "@toneflix/vue-forms/src/styles/main.scss";
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+.demo-container {
+  width: 24rem;
+  margin: 0 auto;
+  > div {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+}

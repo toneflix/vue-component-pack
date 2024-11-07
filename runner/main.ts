@@ -14,6 +14,7 @@ const router = createRouter({
   routes: [
     { path: '/', component: () => import('./Pages/otp-input/OtpPage.vue') },
     { path: '/paystack', component: () => import('./Pages/paystack-inline/PaystackPage.vue') },
+    { path: '/forms', component: () => import('./Pages/vue-forms/FormPage.vue') },
     {
       path: '/auth/profile',
       name: 'profile',
@@ -73,7 +74,7 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
   middlewares: [roleMiddleware('/', ['admin'], 'email'), authMiddleware({ name: 'login' })]

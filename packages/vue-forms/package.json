@@ -1,0 +1,32 @@
+{
+  "name": "@toneflix/vue-forms",
+  "version": "1.0.0",
+  "description": "Dynamic form generator for Vue 3.",
+  "main": "dist/lib/index.cjs",
+  "module": "dist/es/index.mjs",
+  "type": "module",
+  "homepage": "https://toneflix.github.io/vue-component-pack/vue-forms",
+  "repository": {
+    "url": "https://github.com/toneflix/vue-component-pack"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.5.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/runtime-core": "^3.5.12",
+    "vite": "^5.4.10",
+    "vue": "^3.5.12"
+  },
+  "nx": {}
+}
