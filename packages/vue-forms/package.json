@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/vue-forms",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Dynamic form generator for Vue 3.",
   "main": "dist/lib/index.cjs",
   "module": "dist/es/index.mjs",
