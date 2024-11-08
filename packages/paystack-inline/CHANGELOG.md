@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.1.1...@toneflix/paystack-inline@1.2.0) (2024-10-31)
+
+### Features
+
+- Make the main entry build cjs extenstion. ([13873a0](https://github.com/toneflix/vue-component-pack/commit/13873a0136a90012cd19c319888ebdb8df3f75d7))
+
 ## [1.1.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.1.0...@toneflix/paystack-inline@1.1.1) (2024-10-29)
 
 ### Bug Fixes
