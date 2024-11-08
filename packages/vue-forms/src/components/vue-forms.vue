@@ -89,34 +89,23 @@
 </template>
 
 <script setup lang="ts">
-import { FormField as FieldType, GroupMeta } from '../types'
+import { BaseProps, FormField as FieldType, VueFormProps, VueFormSlots } from '../types'
 import FormField from './form-group.vue'
 import '../styles/main.scss'
 import { computed } from 'vue'
 import { titleCase } from '../utils/providers'
 import FormActions from './form-actions.vue'
 
-defineProps<{
-  loading?: boolean
-  useGrid?: boolean
-  rounded?: boolean
-  bordered?: boolean
-  separator?: boolean
-  groupMeta?: GroupMeta
-  hideSubmit?: boolean
-  hideCancel?: boolean
-  cancelLabel?: string
-  submitLabel?: string
-  showGroupLabels?: boolean
-}>()
+defineProps<BaseProps>()
+defineSlots<VueFormSlots>()
 
 const emit = defineEmits(['cancel', 'submit'])
 
-const formFields = defineModel<FieldType[]>('fields', {
+const formFields = defineModel<VueFormProps['fields']>('fields', {
   default: () => []
 })
 
-const formValues = defineModel<{ [key: FieldType['name']]: FieldType['value'] }>('modelValue', {
+const formValues = defineModel<VueFormProps['modelValue']>('modelValue', {
   required: true
 })
 

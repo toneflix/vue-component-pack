@@ -4,7 +4,7 @@
       rounded
       loading
       show-group-labels
-      class="mx-auto p-4 m-4"
+      class="p-4 m-4 mx-auto"
       :fields="formFields"
       :groupMeta="{
         main: {
@@ -24,7 +24,7 @@
       @cancel="console.log('cancel')"
       @submit="console.log('submit')"
     >
-      <!-- <template #select="props"> {{ props }} </template> -->
+      <template #select="props"> {{ props.modelValue }} </template>
     </VueForms>
   </div>
   <div class="demo-container">
@@ -97,6 +97,13 @@ const formFields = ref<FormField[]>([
     hint: 'Activate Safe Mode',
     trueValue: 1,
     falseValue: 0
+  },
+  {
+    type: 'textarea',
+    name: 'message',
+    label: 'Message',
+    col: 12,
+    hint: 'Tell us what you think.'
   },
   {
     type: 'checkbox',

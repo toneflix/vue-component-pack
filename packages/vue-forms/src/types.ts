@@ -1,30 +1,34 @@
-import { PublicProps } from 'vue'
+import { PublicProps, VNode } from 'vue'
+
+interface SlotScope extends FormField {
+  modelValue: FormField['value']
+}
 
 export interface FormField {
   type:
-    | 'url'
-    | 'tel'
-    | 'text'
-    | 'file'
-    | 'date'
-    | 'time'
-    | 'week'
-    | 'email'
-    | 'month'
-    | 'color'
-    | 'hidden'
-    | 'number'
-    | 'search'
-    | 'password'
-    | 'textarea'
-    | 'datetime'
-    | 'datetime-local'
-    // =============
-    | 'select' // [x]
-    | 'checkbox'
-    | 'radio'
-    | 'range'
-    | 'switch'
+  | 'url'
+  | 'tel'
+  | 'text'
+  | 'file'
+  | 'date'
+  | 'time'
+  | 'week'
+  | 'email'
+  | 'month'
+  | 'color'
+  | 'hidden'
+  | 'number'
+  | 'search'
+  | 'password'
+  | 'textarea'
+  | 'datetime'
+  | 'datetime-local'
+  // =============
+  | 'select' // [x]
+  | 'checkbox'
+  | 'radio'
+  | 'range'
+  | 'switch'
 
   /**
    * Unique identifier for the field
@@ -158,23 +162,108 @@ export interface FormField {
   falseValue?: boolean | number | string
 }
 
+export interface VueFormSlots {
+  /**
+   * This is where default content goes
+   */
+  default: () => VNode[]
+  /**
+   * Slot for overiding input components
+   */
+  input: (scope: SlotScope) => VNode[]
+  /**
+   * Slot for overiding select component
+   */
+  select: (scope: SlotScope) => VNode[]
+  /**
+   * Slot for overiding checkbox component
+   */
+  checkbox: (scope: SlotScope) => VNode[]
+  /**
+   * Slot for overiding radio component
+   */
+  radio: (scope: SlotScope) => VNode[]
+  /**
+   * Slot for overiding switch component
+   */
+  switch: (scope: SlotScope) => VNode[]
+}
+
+export interface BaseProps {
+  /**
+   * Put the component in loading state
+   */
+  loading?: boolean;
+  /**
+   * If you prefer a grid layout over the default flexbox layout, set to true
+   */
+  useGrid?: boolean;
+  /**
+   * Used along side with "bordered" to create a rounded border
+   */
+  rounded?: boolean;
+  /**
+   * Adds a border to the form
+   */
+  bordered?: boolean;
+  /**
+   * Puts a line separator after every form group
+   */
+  separator?: boolean;
+  /**
+   * Used for customizing group header information
+   */
+  groupMeta?: GroupMeta;
+  /**
+   * Hides the submit button
+   */
+  hideSubmit?: boolean;
+  /**
+   * Hides the cancel button
+   */
+  hideCancel?: boolean;
+  /**
+   * Set the label on the cancel button
+   */
+  cancelLabel?: string;
+  /**
+   * Set the label on the submit button
+   */
+  submitLabel?: string;
+  /**
+   * When group meta is not provided, this will determine if group labels 
+   * should be created from a title cased version the group name
+   */
+  showGroupLabels?: boolean;
+}
+
+export interface VueFormProps<X = { [key: FormField['name']]: FormField['value'] }> extends BaseProps {
+  /**
+   * The available form fields
+   */
+  fields: FormField[];
+  /**
+   * An object representing the form values
+   */
+  modelValue: X;
+}
+
 export type GroupMeta<T extends FormField = FormField> = {
-  [key in T['group'] as string]: {
-    title: string
-    rounded?: boolean
-    subtitle?: string
-    bordered?: boolean
+  [key in T['group']as string]: {
+    title: string;
+    rounded?: boolean;
+    subtitle?: string;
+    bordered?: boolean;
   }
 }
 
 export interface FormValues {
-  [key: FormField['name']]: FormField['value']
+  [key: FormField['name']]: FormField['value'];
 }
 
 export type ComponentConstructor<Props = object, Slots = object> = {
-  new (): {
-    $props: PublicProps & Props
-    $slots: Slots
+  new(): {
+    $props: PublicProps & Props;
+    $slots: Slots;
   }
 }
-// DefineComponen
