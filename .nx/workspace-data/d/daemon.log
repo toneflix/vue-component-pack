@@ -15866,3 +15866,101 @@
 [NX Daemon Server] - 2024-11-08T10:45:48.536Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2024-11-08T10:45:48.536Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-11-08T10:45:48.536Z - Time taken for 'total execution time for createProjectGraph()' 19.32175000011921ms
+[NX Daemon Server] - 2024-11-08T10:46:31.316Z - [WATCHER]: package-template/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:46:31.317Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:46:31.385Z - [WATCHER]: package-template/src/index.ts was modified
+[NX Daemon Server] - 2024-11-08T10:46:31.385Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:46:32.121Z - [WATCHER]: packages/vue-forms/src/types.ts was modified
+[NX Daemon Server] - 2024-11-08T10:46:32.121Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:46:37.720Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T10:46:37.721Z - [REQUEST]: package-template/components.d.ts,package-template/src/index.ts,packages/vue-forms/src/types.ts
+[NX Daemon Server] - 2024-11-08T10:46:37.721Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T10:46:37.725Z - Time taken for 'hash changed files from watcher' 1.059417001903057ms
+[NX Daemon Server] - 2024-11-08T10:46:37.739Z - Time taken for 'build-project-configs' 13.360709000378847ms
+[NX Daemon Server] - 2024-11-08T10:46:37.759Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T10:46:37.760Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T10:46:37.760Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T10:46:37.760Z - Time taken for 'total execution time for createProjectGraph()' 16.01045800000429ms
+[NX Daemon Server] - 2024-11-08T10:46:57.995Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:46:57.995Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:47:00.618Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:47:00.618Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:47:04.453Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T10:47:04.453Z - [REQUEST]: packages/vue-forms/components.d.ts
+[NX Daemon Server] - 2024-11-08T10:47:04.454Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T10:47:04.457Z - Time taken for 'hash changed files from watcher' 1.4669160023331642ms
+[NX Daemon Server] - 2024-11-08T10:47:04.483Z - Time taken for 'build-project-configs' 25.14087500050664ms
+[NX Daemon Server] - 2024-11-08T10:47:04.503Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T10:47:04.504Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T10:47:04.504Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T10:47:04.504Z - Time taken for 'total execution time for createProjectGraph()' 17.553125001490116ms
+[NX Daemon Server] - 2024-11-08T10:48:08.216Z - [WATCHER]: package-template/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:48:08.216Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:48:11.802Z - [WATCHER]: package-template/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:48:11.802Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:48:14.621Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T10:48:14.622Z - [REQUEST]: package-template/components.d.ts
+[NX Daemon Server] - 2024-11-08T10:48:14.622Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T10:48:14.629Z - Time taken for 'hash changed files from watcher' 1.260333001613617ms
+[NX Daemon Server] - 2024-11-08T10:48:14.658Z - Time taken for 'build-project-configs' 30.423708003014326ms
+[NX Daemon Server] - 2024-11-08T10:48:14.672Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T10:48:14.672Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T10:48:14.673Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T10:48:14.673Z - Time taken for 'total execution time for createProjectGraph()' 12.161458000540733ms
+[NX Daemon Server] - 2024-11-08T10:48:22.042Z - [WATCHER]: package-template/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:48:22.042Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:48:28.445Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T10:48:28.445Z - [REQUEST]: package-template/components.d.ts
+[NX Daemon Server] - 2024-11-08T10:48:28.445Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T10:48:28.447Z - Time taken for 'hash changed files from watcher' 0.4583340026438236ms
+[NX Daemon Server] - 2024-11-08T10:48:28.456Z - Time taken for 'build-project-configs' 7.732416998594999ms
+[NX Daemon Server] - 2024-11-08T10:48:28.468Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T10:48:28.469Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T10:48:28.469Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T10:48:28.469Z - Time taken for 'total execution time for createProjectGraph()' 9.918124999850988ms
+[NX Daemon Server] - 2024-11-08T10:48:29.115Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:48:29.115Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:48:35.517Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T10:48:35.518Z - [REQUEST]: packages/vue-forms/components.d.ts
+[NX Daemon Server] - 2024-11-08T10:48:35.518Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T10:48:35.520Z - Time taken for 'hash changed files from watcher' 0.3308749981224537ms
+[NX Daemon Server] - 2024-11-08T10:48:35.528Z - Time taken for 'build-project-configs' 7.295166999101639ms
+[NX Daemon Server] - 2024-11-08T10:48:35.542Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T10:48:35.542Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T10:48:35.542Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T10:48:35.542Z - Time taken for 'total execution time for createProjectGraph()' 11.177792001515627ms
+[NX Daemon Server] - 2024-11-08T10:48:51.425Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:48:51.426Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:48:57.829Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T10:48:57.829Z - [REQUEST]: packages/vue-forms/components.d.ts
+[NX Daemon Server] - 2024-11-08T10:48:57.829Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T10:48:57.832Z - Time taken for 'hash changed files from watcher' 0.5396250002086163ms
+[NX Daemon Server] - 2024-11-08T10:48:57.848Z - Time taken for 'build-project-configs' 15.078333001583815ms
+[NX Daemon Server] - 2024-11-08T10:48:57.863Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T10:48:57.863Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T10:48:57.863Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T10:48:57.863Z - Time taken for 'total execution time for createProjectGraph()' 12.459708999842405ms
+[NX Daemon Server] - 2024-11-08T10:49:02.084Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:49:02.084Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:49:05.491Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:49:05.492Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:49:08.486Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T10:49:08.486Z - [REQUEST]: packages/vue-forms/components.d.ts
+[NX Daemon Server] - 2024-11-08T10:49:08.486Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T10:49:08.489Z - Time taken for 'hash changed files from watcher' 0.40266699716448784ms
+[NX Daemon Server] - 2024-11-08T10:49:08.501Z - Time taken for 'build-project-configs' 10.737541999667883ms
+[NX Daemon Server] - 2024-11-08T10:49:08.518Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T10:49:08.518Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T10:49:08.518Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T10:49:08.518Z - Time taken for 'total execution time for createProjectGraph()' 14.535291999578476ms
+[NX Daemon Server] - 2024-11-08T10:49:24.194Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T10:49:24.194Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T10:49:30.599Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T10:49:30.599Z - [REQUEST]: packages/vue-forms/components.d.ts
+[NX Daemon Server] - 2024-11-08T10:49:30.599Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T10:49:30.603Z - Time taken for 'hash changed files from watcher' 0.9103749990463257ms
+[NX Daemon Server] - 2024-11-08T10:49:30.618Z - Time taken for 'build-project-configs' 14.313374999910593ms
+[NX Daemon Server] - 2024-11-08T10:49:30.638Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T10:49:30.638Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T10:49:30.638Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T10:49:30.638Z - Time taken for 'total execution time for createProjectGraph()' 15.283167000859976ms
