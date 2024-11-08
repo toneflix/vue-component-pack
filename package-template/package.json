@@ -1,11 +1,12 @@
 {
-  "name": "@toneflix/vue-forms",
-  "version": "1.1.1",
-  "description": "Dynamic form generator for Vue 3.",
+  "name": "@toneflix/dummy-comp",
+  "version": "1.1.3",
+  "description": "Dummy Component.",
+  "style": "dist/lib/style.css",
   "main": "dist/lib/index.cjs",
   "module": "dist/es/index.mjs",
   "type": "module",
-  "homepage": "https://toneflix.github.io/vue-component-pack/vue-forms",
+  "homepage": "https://toneflix.github.io/vue-component-pack/dummy-comp",
   "repository": {
     "url": "https://github.com/toneflix/vue-component-pack"
   },
@@ -14,19 +15,21 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build"
+    "build": "vite build",
+    "deploy": "../deploy.sh dummy-comp"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "vue": "^3.5.11"
+    "vue": "^3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
-    "@vue/runtime-core": "^3.5.12",
-    "vite": "^5.4.10",
-    "vue": "^3.5.12"
+    "@vue/runtime-core": "^3.5.11",
+    "vite": "^5.4.8",
+    "vitepress": "^1.4.0",
+    "vue": "^3.5.11"
   },
   "nx": {}
 }
