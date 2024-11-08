@@ -421,54 +421,6 @@
         },
         "implicitDependencies": []
       }
-    },
-    "runner": {
-      "name": "runner",
-      "type": "lib",
-      "data": {
-        "root": "runner",
-        "sourceRoot": "runner",
-        "name": "runner",
-        "tags": [
-          "npm:public"
-        ],
-        "metadata": {
-          "targetGroups": {
-            "NPM Scripts": [
-              "dev"
-            ]
-          },
-          "description": ""
-        },
-        "targets": {
-          "dev": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "dev"
-            },
-            "metadata": {
-              "scriptContent": "vite",
-              "runCommand": "pnpm run dev"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "cache": true,
-            "dependsOn": [
-              "^dev"
-            ]
-          },
-          "nx-release-publish": {
-            "executor": "@nx/js:release-publish",
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
-            "options": {},
-            "configurations": {},
-            "parallelism": true
-          }
-        },
-        "implicitDependencies": []
-      }
     }
   },
   "externalNodes": {
@@ -8163,63 +8115,6 @@
       },
       {
         "source": "@toneflix/vue-auth",
-        "target": "npm:vue-router",
-        "type": "static"
-      }
-    ],
-    "runner": [
-      {
-        "source": "runner",
-        "target": "npm:@vitejs/plugin-vue",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "npm:postcss",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "npm:vite@5.4.10",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "@toneflix/otp-input",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "@toneflix/paystack-inline",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "@toneflix/vue-auth",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "@toneflix/vue-forms",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "npm:axios",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "npm:pinia",
-        "type": "static"
-      },
-      {
-        "source": "runner",
-        "target": "npm:vue",
-        "type": "static"
-      },
-      {
-        "source": "runner",
         "target": "npm:vue-router",
         "type": "static"
       }

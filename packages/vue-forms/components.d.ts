@@ -5,4 +5,4 @@ declare module '@vue/runtime-core' {
     VueForms: ComponentConstructor<VueFormProps, VueFormSlots>
   }
 }
-export { }
+export {}
