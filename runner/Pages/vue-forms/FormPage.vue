@@ -3,7 +3,6 @@
     <VueForms
       rounded
       loading
-      separator
       show-group-labels
       class="mx-auto p-4 m-4"
       :fields="formFields"
@@ -11,12 +10,14 @@
         main: {
           title: 'Main Form',
           subtitle: 'These are the main options',
-          rounded: true
+          rounded: false,
+          bordered: true
         },
         alt: {
           title: 'Alternative Form',
           subtitle: 'These are the alternative options',
-          rounded: true
+          rounded: false,
+          bordered: true
         }
       }"
       v-model="formValues"
