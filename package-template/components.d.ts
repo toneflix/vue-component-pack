@@ -11,7 +11,7 @@ declare module '@vue/runtime-core' {
          * Emitted when the component needs to change the model; Is also used by v-model
          * @param value New model value
          */
-        'onUpdate:modelValue'?: (value: any) => void;
+        'onUpdate:modelValue'?: (value: any) => void
       },
       {
         /**
@@ -22,4 +22,4 @@ declare module '@vue/runtime-core' {
     >
   }
 }
-export { }
+export {}
