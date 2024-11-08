@@ -4,7 +4,7 @@
     :class="{ 'form-row': !useGrid, 'form-grid': useGrid, bordered, rounded }"
     v-if="!isGrouped"
   >
-    <FormField
+    <FormGroup
       v-for="field in formFields"
       :key="field.name"
       :field="field"
@@ -14,7 +14,7 @@
       <template v-for="slot in slotNames" :key="slot" v-slot:[slot]="props">
         <slot :name="slot" v-bind="props" />
       </template>
-    </FormField>
+    </FormGroup>
 
     <hr class="group-separator" v-if="separator && (!hideSubmit || !hideSubmit)" />
 
@@ -57,7 +57,7 @@
           {{ titleCase(String(group)) }}
         </label>
         <div class="vue-forms" :class="{ 'form-row': !useGrid, 'form-grid': useGrid }">
-          <FormField
+          <FormGroup
             v-for="field in fields"
             :key="field.name"
             :field="field"
@@ -67,7 +67,7 @@
             <template v-for="slot in slotNames" :key="slot" v-slot:[slot]="props">
               <slot :name="slot" v-bind="props" />
             </template>
-          </FormField>
+          </FormGroup>
         </div>
       </div>
     </template>
@@ -90,7 +90,7 @@
 
 <script setup lang="ts">
 import { BaseProps, FormField as FieldType, VueFormProps, VueFormSlots } from '../types'
-import FormField from './form-group.vue'
+import FormGroup from './form-group.vue'
 import '../styles/main.scss'
 import { computed } from 'vue'
 import { titleCase } from '../utils/providers'
@@ -109,7 +109,7 @@ const formValues = defineModel<VueFormProps['modelValue']>('modelValue', {
   required: true
 })
 
-const slotNames = ['input', 'select', 'checkbox', 'radio', 'switch']
+const slotNames = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
 const isGrouped = computed(() => formFields.value.some((e) => !!e.group))
 const groups = computed<{ [key: string]: FieldType[] }>(() => groupFormFields(formFields.value))
 

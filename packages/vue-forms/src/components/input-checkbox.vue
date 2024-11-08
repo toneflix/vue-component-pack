@@ -2,7 +2,7 @@
   <div class="input-checkbox">
     <div class="field-check">
       <input
-        :id="name"
+        :id="'vf-' + name"
         :name="name"
         :checked="modelValue === trueValue"
         type="checkbox"
@@ -10,7 +10,7 @@
       />
     </div>
     <div class="field-anotations" v-if="label || hint">
-      <label :for="name" v-if="label">
+      <label :for="'vf-' + name" v-if="label">
         {{ label }}
       </label>
       <p class="field-hint" v-if="hint">{{ hint }}</p>

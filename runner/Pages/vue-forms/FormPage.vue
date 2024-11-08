@@ -24,7 +24,7 @@
       @cancel="console.log('cancel')"
       @submit="console.log('submit')"
     >
-      <template #select="props"> {{ props.modelValue }} </template>
+      <!-- <template #textarea="props">{{ props.modelValue }} </template> -->
     </VueForms>
   </div>
   <div class="demo-container">
@@ -124,6 +124,7 @@ const formValues = reactive({
   category: 'home',
   safe_mode: 0,
   country: 'Nigeria',
-  address: ''
+  address: '',
+  message: 'Hello my people'
 })
 </script>

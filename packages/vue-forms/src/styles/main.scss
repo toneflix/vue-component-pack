@@ -273,7 +273,8 @@ p.field-hint {
 }
 
 .input-field > input,
-.input-field > select {
+.input-field > select,
+.input-field > textarea {
   margin-top: 0.25rem;
   --tf-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   box-shadow: 0 0 #0000, 0 0 #0000, var(--tf-shadow);
@@ -284,9 +285,14 @@ p.field-hint {
   border-width: 1px;
 }
 
+.input-field > textarea {
+  resize: vertical;
+}
+
 @media (min-width: 640px) {
   .input-field > input,
-  .input-field > select {
+  .input-field > select,
+  .input-field > textarea {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }

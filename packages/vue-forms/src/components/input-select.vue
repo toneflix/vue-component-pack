@@ -1,9 +1,9 @@
 <template>
   <div class="input-field">
-    <label :for="name" v-if="label">
+    <label :for="'vf-' + name" v-if="label">
       {{ label }}
     </label>
-    <select :id="name" :name="name" v-model="modelValue">
+    <select :id="'vf-' + name" :name="name" v-model="modelValue">
       <option v-for="(choice, i) in choices" :key="i" :value="choice">
         {{ choice }}
       </option>

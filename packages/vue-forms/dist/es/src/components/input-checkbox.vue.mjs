@@ -57,7 +57,7 @@ const h = { class: "input-checkbox" }, f = { class: "field-check" }, y = ["id", 
     return (e, i) => (t(), o("div", h, [
       u("div", f, [
         u("input", {
-          id: e.name,
+          id: "vf-" + e.name,
           name: e.name,
           checked: s.value === e.trueValue,
           type: "checkbox",
@@ -67,7 +67,7 @@ const h = { class: "input-checkbox" }, f = { class: "field-check" }, y = ["id", 
       e.label || e.hint ? (t(), o("div", V, [
         e.label ? (t(), o("label", {
           key: 0,
-          for: e.name
+          for: "vf-" + e.name
         }, d(e.label), 9, g)) : a("", !0),
         e.hint ? (t(), o("p", k, d(e.hint), 1)) : a("", !0)
       ])) : a("", !0)

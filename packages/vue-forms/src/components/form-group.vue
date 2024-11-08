@@ -1,19 +1,22 @@
 <template>
   <div :class="`form-group col-${useGrid ? 'span-' : ''}${field.col}`">
-    <slot name="input" v-bind="field" :modelValue="modelValue">
-      <InputField v-model="modelValue" v-bind="field" v-if="useInput" />
+    <slot name="input" v-bind="field" :modelValue="modelValue" v-if="useInput">
+      <InputField v-model="modelValue" v-bind="field" />
     </slot>
-    <slot name="select" v-bind="field" :modelValue="modelValue">
-      <InputSelect v-model="modelValue" v-bind="field" v-if="field.type === 'select'" />
+    <slot name="select" v-bind="field" :modelValue="modelValue" v-if="field.type === 'select'">
+      <InputSelect v-model="modelValue" v-bind="field" />
     </slot>
-    <slot name="checkbox" v-bind="field" :modelValue="modelValue">
-      <InputCheckbox v-model="modelValue" v-bind="field" v-if="field.type === 'checkbox'" />
+    <slot name="checkbox" v-bind="field" :modelValue="modelValue" v-if="field.type === 'checkbox'">
+      <InputCheckbox v-model="modelValue" v-bind="field" />
     </slot>
-    <slot name="radio" v-bind="field" :modelValue="modelValue">
-      <InputRadio v-model="modelValue" v-bind="field" v-if="field.type === 'radio'" />
+    <slot name="radio" v-bind="field" :modelValue="modelValue" v-if="field.type === 'radio'">
+      <InputRadio v-model="modelValue" v-bind="field" />
     </slot>
-    <slot name="switch" v-bind="field" :modelValue="modelValue">
-      <InputSwitch v-model="modelValue" v-bind="field" v-if="field.type === 'switch'" />
+    <slot name="switch" v-bind="field" :modelValue="modelValue" v-if="field.type === 'switch'">
+      <InputSwitch v-model="modelValue" v-bind="field" />
+    </slot>
+    <slot name="textarea" v-bind="field" :modelValue="modelValue" v-if="field.type === 'textarea'">
+      <InputTextarea v-model="modelValue" v-bind="field" />
     </slot>
   </div>
 </template>
@@ -26,6 +29,7 @@ import InputField from './input-field.vue'
 import InputSelect from './input-select.vue'
 import InputRadio from './input-radio.vue'
 import InputSwitch from './input-switch.vue'
+import InputTextarea from './input-textarea.vue'
 
 // Props
 const props = defineProps<{

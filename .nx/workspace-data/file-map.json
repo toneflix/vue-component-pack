@@ -20,23 +20,99 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "docs/otp-input/images/recycle-dark.png",
-        "hash": "12800247716495140001"
+        "file": ".github/issues-bot.yml",
+        "hash": "9545911637985008890"
       },
       {
-        "file": ".github/workflows/ci.yml",
-        "hash": "6904001187784468710"
+        "file": "docs/otp-input/events.md",
+        "hash": "1310701180264772440"
       },
       {
-        "file": "docs/vue-auth/images/user-star-dark.png",
-        "hash": "12390371748537502826"
+        "file": "docs/vue-auth/inline-usage.md",
+        "hash": "12102380040390510865"
+      },
+      {
+        "file": "docs/otp-input/.vitepress/theme/index.ts",
+        "hash": "11284446941678184110"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "hash": "11238786352845504801"
+      },
+      {
+        "file": "docs/vue-auth/.vitepress/theme/custom.css",
+        "hash": "14424351526335999689"
+      },
+      {
+        "file": "docs/otp-input/images/banner.png",
+        "hash": "6203059496166803201"
+      },
+      {
+        "file": "docs/vue-auth/.vitepress/theme/index.ts",
+        "hash": "3789747711498604610"
+      },
+      {
+        "file": "deploy-docs.sh",
+        "hash": "4661591695092930215"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/config.yml",
+        "hash": "14540309152648054329"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6716352587460859739"
+      },
+      {
+        "file": "docs/vue-auth/.vitepress/config.mts",
+        "hash": "12953625704941605555"
       },
       {
         "file": "docs/otp-input/props.md",
         "hash": "4392020635691337450"
       },
       {
-        "file": "docs/otp-input/images/layer-solid.png",
+        "file": "docs/paystack-inline/package.json",
+        "hash": "17824423957309227295"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "13950573440340331488"
+      },
+      {
+        "file": "docs/otp-input/images/layer-solid-dark.png",
+        "hash": "14960698455115702100"
+      },
+      {
+        "file": "docs/vue-auth/images/logout-circle.png",
+        "hash": "10724955799324087798"
+      },
+      {
+        "file": "README.md",
+        "hash": "8285748061601689787"
+      },
+      {
+        "file": "docs/paystack-inline/events.md",
+        "hash": "3671535142966072361"
+      },
+      {
+        "file": "nx.json",
+        "hash": "15833547922043738392"
+      },
+      {
+        "file": "docs/vue-auth/images/banner.png",
+        "hash": "17816421865806139644"
+      },
+      {
+        "file": "docs/paystack-inline/images/recycle.png",
+        "hash": "10221039839496206773"
+      },
+      {
+        "file": "SECURITY.md",
+        "hash": "8816609866019919124"
+      },
+      {
+        "file": "docs/paystack-inline/images/layer-solid.png",
         "hash": "17096011977933028059"
       },
       {
@@ -44,312 +120,236 @@
         "hash": "16202868179513312433"
       },
       {
-        "file": "docs/paystack-inline/images/layer-solid.png",
-        "hash": "17096011977933028059"
-      },
-      {
-        "file": "docs/vue-auth/.vitepress/theme/custom.css",
-        "hash": "14424351526335999689"
-      },
-      {
-        "file": "docs/vue-auth/get-started.md",
-        "hash": "10609643735354371024"
-      },
-      {
-        "file": "docs/paystack-inline/images/recycle-dark.png",
-        "hash": "12800247716495140001"
-      },
-      {
-        "file": "docs/paystack-inline/.vitepress/theme/custom.css",
-        "hash": "13637935159758344073"
-      },
-      {
-        "file": "docs/otp-input/.vitepress/theme/index.ts",
-        "hash": "11284446941678184110"
-      },
-      {
-        "file": "SECURITY.md",
-        "hash": "8816609866019919124"
-      },
-      {
-        "file": "docs/vue-auth/images/user-star.png",
-        "hash": "16919855557327794224"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "13950573440340331488"
-      },
-      {
-        "file": "docs/otp-input/images/banner.png",
-        "hash": "6203059496166803201"
-      },
-      {
-        "file": "docs/paystack-inline/.vitepress/theme/index.ts",
-        "hash": "18058270414941144888"
-      },
-      {
-        "file": ".github/workflows/publish_latest.yml",
-        "hash": "292815055604179558"
-      },
-      {
-        "file": "docs/paystack-inline/images/typescript-logo.png",
-        "hash": "16202868179513312433"
-      },
-      {
-        "file": "docs/paystack-inline/.vitepress/theme/PaystackPage.vue",
-        "hash": "11671498681928725264"
-      },
-      {
-        "file": "docs/otp-input/events.md",
-        "hash": "1310701180264772440"
-      },
-      {
         "file": "docs/otp-input/images/recycle.png",
         "hash": "10221039839496206773"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "12170326036353828015"
-      },
-      {
-        "file": "docs/otp-input/package.json",
-        "hash": "17302176840342583133"
-      },
-      {
-        "file": "docs/paystack-inline/package.json",
-        "hash": "17824423957309227295"
-      },
-      {
-        "file": "docs/paystack-inline/get-started.md",
-        "hash": "16701575825101409819"
-      },
-      {
-        "file": "docs/vue-auth/typescript.md",
-        "hash": "17956162956844472848"
-      },
-      {
-        "file": "docs/vue-auth/index.md",
-        "hash": "913190984231375359"
-      },
-      {
-        "file": "docs/paystack-inline/.vitepress/config.mts",
-        "hash": "12337258558336903951"
-      },
-      {
-        "file": "docs/otp-input/images/layer-solid-dark.png",
-        "hash": "14960698455115702100"
-      },
-      {
-        "file": "docs/vue-auth/images/external-link.png",
-        "hash": "11204462617654713746"
-      },
-      {
-        "file": "docs/paystack-inline/images/typescript-logo-dark.png",
-        "hash": "6327957380991664515"
       },
       {
         "file": "docs/paystack-inline/index.md",
         "hash": "17146943086164653793"
       },
       {
-        "file": ".prettierrc.json",
-        "hash": "15117339747707975127"
-      },
-      {
-        "file": "docs/vue-auth/middlewares.md",
-        "hash": "15047318140968492455"
-      },
-      {
-        "file": "docs/paystack-inline/props.md",
-        "hash": "7728939175010374844"
-      },
-      {
-        "file": "docs/vue-auth/usage.md",
-        "hash": "6329271683516584349"
-      },
-      {
-        "file": "docs/vue-auth/package.json",
-        "hash": "16351320436201673450"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "9528850957059324109"
-      },
-      {
-        "file": "docs/vue-auth/.vitepress/config.mts",
-        "hash": "12953625704941605555"
-      },
-      {
-        "file": "docs/.gitignore",
-        "hash": "2594765934000419506"
-      },
-      {
-        "file": "docs/vue-auth/images/lock-unlock-dark.png",
-        "hash": "9367137962912862642"
-      },
-      {
-        "file": "docs/vue-auth/images/external-link-dark.png",
-        "hash": "9606923098724950351"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "3247692525263875962"
-      },
-      {
-        "file": "lerna-debug.log",
-        "hash": "15408215426429787799"
-      },
-      {
-        "file": ".npmignore",
-        "hash": "14893169033837929716"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "6716352587460859739"
-      },
-      {
-        "file": "docs/paystack-inline/images/layer-solid-dark.png",
-        "hash": "14960698455115702100"
-      },
-      {
-        "file": "docs/otp-input/.vitepress/config.mts",
-        "hash": "16679031354613115024"
-      },
-      {
-        "file": "docs/otp-input/index.md",
-        "hash": "3517997735275695656"
-      },
-      {
-        "file": "CHANGELOG.md",
-        "hash": "11238786352845504801"
-      },
-      {
-        "file": "docs/vue-auth/inline-usage.md",
-        "hash": "12102380040390510865"
-      },
-      {
-        "file": ".github/workflows/publish_latest_to_npm.yml",
-        "hash": "9318746510165123096"
-      },
-      {
-        "file": "deploy-docs.sh",
-        "hash": "4661591695092930215"
-      },
-      {
-        "file": ".github/issues-bot.yml",
-        "hash": "9545911637985008890"
-      },
-      {
-        "file": "docs/vue-auth/images/login-circle.png",
-        "hash": "8850224165574781725"
-      },
-      {
-        "file": "docs/vue-auth/auth-user.md",
-        "hash": "3359666352331705816"
-      },
-      {
-        "file": ".github/ISSUE_TEMPLATE/bug.yml",
-        "hash": "672783683400985487"
-      },
-      {
-        "file": "docs/vue-auth/images/user-community.png",
-        "hash": "11123987137707978316"
-      },
-      {
-        "file": "docs/vue-auth/images/banner.png",
-        "hash": "17816421865806139644"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "12534292389619838197"
-      },
-      {
-        "file": "docs/otp-input/images/typescript-logo-dark.png",
-        "hash": "6327957380991664515"
-      },
-      {
-        "file": "docs/vue-auth/api.md",
-        "hash": "13185734929523545847"
-      },
-      {
-        "file": "lerna.json",
-        "hash": "4169324519833395793"
-      },
-      {
         "file": "docs/paystack-inline/demo.md",
         "hash": "5658523967649030896"
-      },
-      {
-        "file": "docs/vue-auth/.vitepress/theme/index.ts",
-        "hash": "3789747711498604610"
-      },
-      {
-        "file": "docs/vue-auth/images/logout-circle-dark.png",
-        "hash": "9173765670698542902"
-      },
-      {
-        "file": "docs/vue-auth/images/lock-unlock.png",
-        "hash": "17957766810913882221"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "8602161890475449243"
-      },
-      {
-        "file": ".vscode/settings.template.json",
-        "hash": "11586511439438813548"
-      },
-      {
-        "file": "package.json",
-        "hash": "6508883405971829810"
-      },
-      {
-        "file": "nx.json",
-        "hash": "15833547922043738392"
-      },
-      {
-        "file": "docs/vue-auth/images/user-community-dark.png",
-        "hash": "5137718679284179092"
-      },
-      {
-        "file": "docs/vue-auth/images/login-circle-dark.png",
-        "hash": "12396571355280936779"
-      },
-      {
-        "file": "docs/paystack-inline/images/recycle.png",
-        "hash": "10221039839496206773"
-      },
-      {
-        "file": "docs/paystack-inline/events.md",
-        "hash": "3671535142966072361"
-      },
-      {
-        "file": "docs/vue-auth/images/logout-circle.png",
-        "hash": "10724955799324087798"
-      },
-      {
-        "file": ".github/ISSUE_TEMPLATE/config.yml",
-        "hash": "14540309152648054329"
-      },
-      {
-        "file": "docs/otp-input/get-started.md",
-        "hash": "7265912364367821079"
       },
       {
         "file": "docs/vue-auth/setup.md",
         "hash": "2100950480652309937"
       },
       {
+        "file": "docs/vue-auth/images/lock-unlock.png",
+        "hash": "17957766810913882221"
+      },
+      {
+        "file": ".npmignore",
+        "hash": "14893169033837929716"
+      },
+      {
+        "file": "docs/vue-auth/images/logout-circle-dark.png",
+        "hash": "9173765670698542902"
+      },
+      {
+        "file": "docs/paystack-inline/.vitepress/theme/index.ts",
+        "hash": "18058270414941144888"
+      },
+      {
+        "file": "docs/vue-auth/images/user-star-dark.png",
+        "hash": "12390371748537502826"
+      },
+      {
+        "file": "docs/otp-input/images/typescript-logo-dark.png",
+        "hash": "6327957380991664515"
+      },
+      {
+        "file": ".prettierrc.json",
+        "hash": "15117339747707975127"
+      },
+      {
+        "file": ".vscode/settings.template.json",
+        "hash": "11586511439438813548"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "8602161890475449243"
+      },
+      {
+        "file": "docs/.gitignore",
+        "hash": "2594765934000419506"
+      },
+      {
+        "file": "docs/vue-auth/images/external-link.png",
+        "hash": "11204462617654713746"
+      },
+      {
+        "file": "package.json",
+        "hash": "6508883405971829810"
+      },
+      {
+        "file": ".github/workflows/publish_latest.yml",
+        "hash": "292815055604179558"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "12534292389619838197"
+      },
+      {
+        "file": "docs/paystack-inline/get-started.md",
+        "hash": "16701575825101409819"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "3247692525263875962"
+      },
+      {
+        "file": "docs/otp-input/images/layer-solid.png",
+        "hash": "17096011977933028059"
+      },
+      {
+        "file": "docs/vue-auth/package.json",
+        "hash": "16351320436201673450"
+      },
+      {
+        "file": "docs/otp-input/index.md",
+        "hash": "3517997735275695656"
+      },
+      {
+        "file": "docs/vue-auth/typescript.md",
+        "hash": "17956162956844472848"
+      },
+      {
         "file": "docs/paystack-inline/images/banner.png",
         "hash": "7874110694037531959"
       },
       {
-        "file": "README.md",
-        "hash": "8285748061601689787"
+        "file": "docs/vue-auth/images/login-circle.png",
+        "hash": "8850224165574781725"
+      },
+      {
+        "file": "docs/paystack-inline/images/typescript-logo.png",
+        "hash": "16202868179513312433"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "6904001187784468710"
+      },
+      {
+        "file": "docs/otp-input/.vitepress/config.mts",
+        "hash": "16679031354613115024"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "4169324519833395793"
+      },
+      {
+        "file": "docs/paystack-inline/props.md",
+        "hash": "7728939175010374844"
+      },
+      {
+        "file": "docs/vue-auth/images/external-link-dark.png",
+        "hash": "9606923098724950351"
+      },
+      {
+        "file": "docs/paystack-inline/images/recycle-dark.png",
+        "hash": "12800247716495140001"
+      },
+      {
+        "file": "docs/paystack-inline/.vitepress/config.mts",
+        "hash": "12337258558336903951"
+      },
+      {
+        "file": "docs/paystack-inline/images/typescript-logo-dark.png",
+        "hash": "6327957380991664515"
+      },
+      {
+        "file": "docs/otp-input/images/recycle-dark.png",
+        "hash": "12800247716495140001"
+      },
+      {
+        "file": "docs/vue-auth/images/user-star.png",
+        "hash": "16919855557327794224"
+      },
+      {
+        "file": "docs/otp-input/package.json",
+        "hash": "17302176840342583133"
+      },
+      {
+        "file": "docs/vue-auth/middlewares.md",
+        "hash": "15047318140968492455"
+      },
+      {
+        "file": "docs/vue-auth/usage.md",
+        "hash": "6329271683516584349"
+      },
+      {
+        "file": "docs/vue-auth/index.md",
+        "hash": "913190984231375359"
       },
       {
         "file": "docs/otp-input/demo.md",
         "hash": "4363019363516486020"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "9528850957059324109"
+      },
+      {
+        "file": "docs/vue-auth/images/user-community-dark.png",
+        "hash": "5137718679284179092"
+      },
+      {
+        "file": "docs/otp-input/get-started.md",
+        "hash": "7265912364367821079"
+      },
+      {
+        "file": "docs/vue-auth/images/lock-unlock-dark.png",
+        "hash": "9367137962912862642"
+      },
+      {
+        "file": ".github/workflows/publish_latest_to_npm.yml",
+        "hash": "9318746510165123096"
+      },
+      {
+        "file": "docs/paystack-inline/.vitepress/theme/PaystackPage.vue",
+        "hash": "11671498681928725264"
+      },
+      {
+        "file": "docs/vue-auth/images/login-circle-dark.png",
+        "hash": "12396571355280936779"
+      },
+      {
+        "file": "docs/vue-auth/auth-user.md",
+        "hash": "3359666352331705816"
+      },
+      {
+        "file": "docs/vue-auth/api.md",
+        "hash": "13185734929523545847"
+      },
+      {
+        "file": "lerna-debug.log",
+        "hash": "15408215426429787799"
+      },
+      {
+        "file": "docs/paystack-inline/images/layer-solid-dark.png",
+        "hash": "14960698455115702100"
+      },
+      {
+        "file": "docs/vue-auth/images/user-community.png",
+        "hash": "11123987137707978316"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "12170326036353828015"
+      },
+      {
+        "file": "docs/paystack-inline/.vitepress/theme/custom.css",
+        "hash": "13637935159758344073"
+      },
+      {
+        "file": "docs/vue-auth/get-started.md",
+        "hash": "10609643735354371024"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/bug.yml",
+        "hash": "672783683400985487"
       }
     ],
     "projectFileMap": {
@@ -569,7 +569,7 @@
         },
         {
           "file": "packages/vue-forms/components.d.ts",
-          "hash": "3819373733782006188"
+          "hash": "6724761684475461619"
         },
         {
           "file": "packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs",
@@ -589,15 +589,15 @@
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/form-group.vue.mjs",
-          "hash": "7031406033718712433"
+          "hash": "6594847360952529164"
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/form-group.vue2.mjs",
-          "hash": "15092189909587304834"
+          "hash": "12924209962815701842"
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs",
-          "hash": "11502247840676819834"
+          "hash": "503478710440451395"
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs",
@@ -605,7 +605,7 @@
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/input-field.vue.mjs",
-          "hash": "721118588425890071"
+          "hash": "11928681358633111374"
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/input-field.vue2.mjs",
@@ -613,7 +613,7 @@
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/input-radio.vue.mjs",
-          "hash": "14035011089098201897"
+          "hash": "5740331155415405239"
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs",
@@ -621,7 +621,7 @@
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/input-select.vue.mjs",
-          "hash": "7025317799384945950"
+          "hash": "13761567650121096543"
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/input-select.vue2.mjs",
@@ -636,8 +636,16 @@
           "hash": "13488538167680639808"
         },
         {
+          "file": "packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs",
+          "hash": "10260310883798998414"
+        },
+        {
+          "file": "packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs",
+          "hash": "5891578742128144810"
+        },
+        {
           "file": "packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs",
-          "hash": "14651813258302042590"
+          "hash": "2974088015312181727"
         },
         {
           "file": "packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs",
@@ -653,7 +661,7 @@
         },
         {
           "file": "packages/vue-forms/dist/es/style.css",
-          "hash": "11472205390794058508"
+          "hash": "8211670644961878746"
         },
         {
           "file": "packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs",
@@ -673,15 +681,15 @@
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/form-group.vue.cjs",
-          "hash": "2209898845840253174"
+          "hash": "6646289953589638962"
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs",
-          "hash": "15340405079753636481"
+          "hash": "1317271145898221205"
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs",
-          "hash": "13838545470942485883"
+          "hash": "8008065809727449416"
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs",
@@ -689,7 +697,7 @@
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/input-field.vue.cjs",
-          "hash": "14198620531485241172"
+          "hash": "9653612830170702431"
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs",
@@ -697,7 +705,7 @@
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs",
-          "hash": "16241275200022117948"
+          "hash": "16897542703701264621"
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs",
@@ -705,7 +713,7 @@
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/input-select.vue.cjs",
-          "hash": "4938844431752205471"
+          "hash": "5268580442772777803"
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs",
@@ -720,8 +728,16 @@
           "hash": "15558466337071581469"
         },
         {
+          "file": "packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs",
+          "hash": "4603979167316738217"
+        },
+        {
+          "file": "packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs",
+          "hash": "16734085475785406662"
+        },
+        {
           "file": "packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs",
-          "hash": "8878169196477349982"
+          "hash": "16474474823619376279"
         },
         {
           "file": "packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs",
@@ -737,7 +753,7 @@
         },
         {
           "file": "packages/vue-forms/dist/lib/style.css",
-          "hash": "11472205390794058508"
+          "hash": "8211670644961878746"
         },
         {
           "file": "packages/vue-forms/index.ts",
@@ -759,31 +775,35 @@
         },
         {
           "file": "packages/vue-forms/src/components/form-group.vue",
-          "hash": "4511000176908294036"
+          "hash": "2220744246579337431"
         },
         {
           "file": "packages/vue-forms/src/components/input-checkbox.vue",
-          "hash": "17214634707417355712"
+          "hash": "14804910423016689424"
         },
         {
           "file": "packages/vue-forms/src/components/input-field.vue",
-          "hash": "644795390192473003"
+          "hash": "1616867935402231455"
         },
         {
           "file": "packages/vue-forms/src/components/input-radio.vue",
-          "hash": "7882000948199661163"
+          "hash": "623053507234743433"
         },
         {
           "file": "packages/vue-forms/src/components/input-select.vue",
-          "hash": "6088531313924290895"
+          "hash": "15884074476262763795"
         },
         {
           "file": "packages/vue-forms/src/components/input-switch.vue",
           "hash": "11478950073849737643"
         },
         {
+          "file": "packages/vue-forms/src/components/input-textarea.vue",
+          "hash": "5740889485760369205"
+        },
+        {
           "file": "packages/vue-forms/src/components/vue-forms.vue",
-          "hash": "7849048783510918211"
+          "hash": "3206524918360956160"
         },
         {
           "file": "packages/vue-forms/src/index.ts",
@@ -795,11 +815,11 @@
         },
         {
           "file": "packages/vue-forms/src/styles/main.scss",
-          "hash": "13398928848833077184"
+          "hash": "14258720356548497610"
         },
         {
           "file": "packages/vue-forms/src/types.ts",
-          "hash": "14122759813132575991"
+          "hash": "8858712175292095488"
         },
         {
           "file": "packages/vue-forms/src/utils/providers.ts",
@@ -845,7 +865,7 @@
         },
         {
           "file": "runner/Pages/vue-forms/FormPage.vue",
-          "hash": "9062055808655991201"
+          "hash": "9340877849221283242"
         },
         {
           "file": "runner/Pages/vue-forms/style.scss",

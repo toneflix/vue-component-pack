@@ -2,10 +2,7 @@ import type { ComponentConstructor, VueFormProps, VueFormSlots } from './src/typ
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    VueForms: ComponentConstructor<
-      VueFormProps,
-      VueFormSlots
-    >
+    VueForms: ComponentConstructor<VueFormProps, VueFormSlots>
   }
 }
 export { }

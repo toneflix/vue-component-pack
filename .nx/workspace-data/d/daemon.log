@@ -14834,3 +14834,588 @@
 [NX Daemon Server] - 2024-11-08T04:10:39.589Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2024-11-08T04:10:39.589Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-11-08T04:10:39.589Z - Time taken for 'total execution time for createProjectGraph()' 10.622541999910027ms
+[NX Daemon Server] - 2024-11-08T04:11:41.410Z - [WATCHER]: packages/vue-forms/src/types.ts was modified
+[NX Daemon Server] - 2024-11-08T04:11:41.411Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:11:47.816Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:11:47.816Z - [REQUEST]: packages/vue-forms/src/types.ts
+[NX Daemon Server] - 2024-11-08T04:11:47.816Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:11:47.820Z - Time taken for 'hash changed files from watcher' 0.860708000138402ms
+[NX Daemon Server] - 2024-11-08T04:11:47.839Z - Time taken for 'build-project-configs' 18.23083300003782ms
+[NX Daemon Server] - 2024-11-08T04:11:47.858Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:11:47.859Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:11:47.859Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:11:47.859Z - Time taken for 'total execution time for createProjectGraph()' 15.330083000008017ms
+[NX Daemon Server] - 2024-11-08T04:12:01.553Z - [WATCHER]: packages/vue-forms/src/types.ts was modified
+[NX Daemon Server] - 2024-11-08T04:12:01.554Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:12:07.958Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:12:07.958Z - [REQUEST]: packages/vue-forms/src/types.ts
+[NX Daemon Server] - 2024-11-08T04:12:07.958Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:12:07.963Z - Time taken for 'hash changed files from watcher' 0.9496250001247972ms
+[NX Daemon Server] - 2024-11-08T04:12:07.977Z - Time taken for 'build-project-configs' 14.13633400015533ms
+[NX Daemon Server] - 2024-11-08T04:12:07.996Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:12:07.996Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:12:07.996Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:12:07.996Z - Time taken for 'total execution time for createProjectGraph()' 14.540208999998868ms
+[NX Daemon Server] - 2024-11-08T04:12:28.794Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T04:12:28.795Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:12:29.096Z - [WATCHER]: packages/vue-forms/src/types.ts was modified
+[NX Daemon Server] - 2024-11-08T04:12:29.096Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:12:35.200Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:12:35.200Z - [REQUEST]: packages/vue-forms/components.d.ts,packages/vue-forms/src/types.ts
+[NX Daemon Server] - 2024-11-08T04:12:35.200Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:12:35.204Z - Time taken for 'hash changed files from watcher' 1.243999999947846ms
+[NX Daemon Server] - 2024-11-08T04:12:35.230Z - Time taken for 'build-project-configs' 25.07320799981244ms
+[NX Daemon Server] - 2024-11-08T04:12:35.247Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:12:35.247Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:12:35.247Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:12:35.247Z - Time taken for 'total execution time for createProjectGraph()' 14.361042000120506ms
+[NX Daemon Server] - 2024-11-08T04:12:35.688Z - [WATCHER]: packages/vue-forms/components.d.ts was modified
+[NX Daemon Server] - 2024-11-08T04:12:35.688Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:12:42.090Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:12:42.090Z - [REQUEST]: packages/vue-forms/components.d.ts
+[NX Daemon Server] - 2024-11-08T04:12:42.090Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:12:42.095Z - Time taken for 'hash changed files from watcher' 0.5808749999850988ms
+[NX Daemon Server] - 2024-11-08T04:12:42.110Z - Time taken for 'build-project-configs' 14.363333000103012ms
+[NX Daemon Server] - 2024-11-08T04:12:42.129Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:12:42.130Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:12:42.130Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:12:42.130Z - Time taken for 'total execution time for createProjectGraph()' 15.42816699994728ms
+[NX Daemon Server] - 2024-11-08T04:13:16.866Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:13:16.876Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was created or restored
+[NX Daemon Server] - 2024-11-08T04:13:16.981Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:13:16.981Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:13:16.981Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:13:16.986Z - Time taken for 'hash changed files from watcher' 0.6206249999813735ms
+[NX Daemon Server] - 2024-11-08T04:13:17.041Z - Time taken for 'build-project-configs' 50.761666000122204ms
+[NX Daemon Server] - 2024-11-08T04:13:17.095Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:13:17.096Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:13:17.096Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:13:17.097Z - Time taken for 'total execution time for createProjectGraph()' 45.28345900005661ms
+[NX Daemon Server] - 2024-11-08T04:13:17.319Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was modified
+[NX Daemon Server] - 2024-11-08T04:13:17.319Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:13:17.520Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:13:17.520Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:13:17.520Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:13:17.558Z - Time taken for 'hash changed files from watcher' 0.41145800007507205ms
+[NX Daemon Server] - 2024-11-08T04:13:17.578Z - Time taken for 'build-project-configs' 19.08599999989383ms
+[NX Daemon Server] - 2024-11-08T04:13:17.631Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:13:17.632Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:13:17.632Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:13:17.632Z - Time taken for 'total execution time for createProjectGraph()' 46.32533399993554ms
+[NX Daemon Server] - 2024-11-08T04:13:23.290Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was modified
+[NX Daemon Server] - 2024-11-08T04:13:23.295Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:13:23.697Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:13:23.697Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:13:23.697Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:13:23.699Z - Time taken for 'hash changed files from watcher' 0.40337499999441206ms
+[NX Daemon Server] - 2024-11-08T04:13:23.709Z - Time taken for 'build-project-configs' 8.668958000140265ms
+[NX Daemon Server] - 2024-11-08T04:13:23.726Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:13:23.726Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:13:23.726Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:13:23.726Z - Time taken for 'total execution time for createProjectGraph()' 13.877582999877632ms
+[NX Daemon Server] - 2024-11-08T04:14:00.557Z - [WATCHER]: packages/vue-forms/src/components/form-group.vue was modified
+[NX Daemon Server] - 2024-11-08T04:14:00.557Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:14:01.361Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:14:01.362Z - [REQUEST]: packages/vue-forms/src/components/form-group.vue
+[NX Daemon Server] - 2024-11-08T04:14:01.362Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:14:01.366Z - Time taken for 'hash changed files from watcher' 0.9602909998502582ms
+[NX Daemon Server] - 2024-11-08T04:14:01.387Z - Time taken for 'build-project-configs' 21.48879099986516ms
+[NX Daemon Server] - 2024-11-08T04:14:01.401Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:14:01.402Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:14:01.402Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:14:01.402Z - Time taken for 'total execution time for createProjectGraph()' 11.438624999951571ms
+[NX Daemon Server] - 2024-11-08T04:14:08.503Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 42 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:14:08.503Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:14:08.570Z - [WATCHER]: 42 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:14:08.570Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:14:08.622Z - [WATCHER]: 9 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:14:08.623Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:14:10.116Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:14:10.117Z - [REQUEST]: packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs,packages/vue-forms/dist/lib/src/components/form-group.vue.cjs,packages/vue-forms/dist/lib/src/index.cjs,packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs,packages/vue-forms/dist/es/src/components/input-field.vue2.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue2.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue.mjs,packages/vue-forms/dist/es/src/components/input-select.vue.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs,packages/vue-forms/dist/es/index.mjs,packages/vue-forms/dist/es/src/components/input-radio.vue.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs,packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs,packages/vue-forms/dist/es/src/components/input-select.vue2.mjs,packages/vue-forms/dist/es/src/utils/providers.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs,packages/vue-forms/dist/es/style.css,packages/vue-forms/dist/lib/src/components/input-switch.vue.cjs,packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs,packages/vue-forms/dist/es/src/components/form-actions.vue.mjs,packages/vue-forms/dist/lib/src/components/form-actions.vue.cjs,packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue2.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs,packages/vue-forms/dist/es/src/components/form-group.vue2.mjs,packages/vue-forms/dist/es/src/components/input-field.vue.mjs,packages/vue-forms/dist/lib/src/utils/providers.cjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs,packages/vue-forms/dist/lib/index.cjs,packages/vue-forms/dist/es/src/components/form-actions.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue.cjs,packages/vue-forms/dist/es/src/components/form-group.vue.mjs,packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs,packages/vue-forms/dist/es/src/index.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs,packages/vue-forms/dist/lib/style.css,packages/vue-forms/dist/lib/src/components/input-switch.vue2.cjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs
+[NX Daemon Server] - 2024-11-08T04:14:10.117Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:14:10.121Z - Time taken for 'hash changed files from watcher' 4.647875000024214ms
+[NX Daemon Server] - 2024-11-08T04:14:10.147Z - Time taken for 'build-project-configs' 24.16037499997765ms
+[NX Daemon Server] - 2024-11-08T04:14:10.166Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:14:10.167Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:14:10.167Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:14:10.167Z - Time taken for 'total execution time for createProjectGraph()' 16.77466699993238ms
+[NX Daemon Server] - 2024-11-08T04:15:04.138Z - [WATCHER]: runner/Pages/vue-forms/FormPage.vue was modified
+[NX Daemon Server] - 2024-11-08T04:15:04.140Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:15:04.343Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:15:04.343Z - [REQUEST]: runner/Pages/vue-forms/FormPage.vue
+[NX Daemon Server] - 2024-11-08T04:15:04.343Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:15:04.347Z - Time taken for 'hash changed files from watcher' 0.7502909998875111ms
+[NX Daemon Server] - 2024-11-08T04:15:04.370Z - Time taken for 'build-project-configs' 20.960707999998704ms
+[NX Daemon Server] - 2024-11-08T04:15:04.399Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:15:04.399Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:15:04.399Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:15:04.399Z - Time taken for 'total execution time for createProjectGraph()' 24.827166999923065ms
+[NX Daemon Server] - 2024-11-08T04:15:11.981Z - [WATCHER]: runner/Pages/vue-forms/FormPage.vue was modified
+[NX Daemon Server] - 2024-11-08T04:15:11.982Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:15:12.383Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:15:12.383Z - [REQUEST]: runner/Pages/vue-forms/FormPage.vue
+[NX Daemon Server] - 2024-11-08T04:15:12.383Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:15:12.385Z - Time taken for 'hash changed files from watcher' 0.26300000003539026ms
+[NX Daemon Server] - 2024-11-08T04:15:12.393Z - Time taken for 'build-project-configs' 7.056499999947846ms
+[NX Daemon Server] - 2024-11-08T04:15:12.406Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:15:12.407Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:15:12.407Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:15:12.407Z - Time taken for 'total execution time for createProjectGraph()' 10.33283400000073ms
+[NX Daemon Server] - 2024-11-08T04:15:29.900Z - [WATCHER]: runner/Pages/vue-forms/FormPage.vue was modified
+[NX Daemon Server] - 2024-11-08T04:15:29.900Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:15:30.705Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:15:30.705Z - [REQUEST]: runner/Pages/vue-forms/FormPage.vue
+[NX Daemon Server] - 2024-11-08T04:15:30.705Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:15:30.709Z - Time taken for 'hash changed files from watcher' 0.9653330000583082ms
+[NX Daemon Server] - 2024-11-08T04:15:30.734Z - Time taken for 'build-project-configs' 22.262458000099286ms
+[NX Daemon Server] - 2024-11-08T04:15:30.754Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:15:30.754Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:15:30.754Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:15:30.754Z - Time taken for 'total execution time for createProjectGraph()' 19.748708000173792ms
+[NX Daemon Server] - 2024-11-08T04:16:24.159Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was modified
+[NX Daemon Server] - 2024-11-08T04:16:24.161Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:16:25.765Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:16:25.765Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:16:25.765Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:16:25.772Z - Time taken for 'hash changed files from watcher' 0.8459589998237789ms
+[NX Daemon Server] - 2024-11-08T04:16:25.797Z - Time taken for 'build-project-configs' 24.555750000057742ms
+[NX Daemon Server] - 2024-11-08T04:16:25.815Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:16:25.815Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:16:25.815Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:16:25.815Z - Time taken for 'total execution time for createProjectGraph()' 16.6347910000477ms
+[NX Daemon Server] - 2024-11-08T04:16:49.447Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was modified
+[NX Daemon Server] - 2024-11-08T04:16:49.448Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:16:52.651Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:16:52.651Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:16:52.651Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:16:52.655Z - Time taken for 'hash changed files from watcher' 0.5348749998956919ms
+[NX Daemon Server] - 2024-11-08T04:16:52.668Z - Time taken for 'build-project-configs' 12.678332999814302ms
+[NX Daemon Server] - 2024-11-08T04:16:52.690Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:16:52.691Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:16:52.691Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:16:52.691Z - Time taken for 'total execution time for createProjectGraph()' 18.810833000112325ms
+[NX Daemon Server] - 2024-11-08T04:17:23.115Z - [WATCHER]: packages/vue-forms/src/types.ts was modified
+[NX Daemon Server] - 2024-11-08T04:17:23.116Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:17:29.520Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:17:29.521Z - [REQUEST]: packages/vue-forms/src/types.ts
+[NX Daemon Server] - 2024-11-08T04:17:29.521Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:17:29.526Z - Time taken for 'hash changed files from watcher' 1.4520419999025762ms
+[NX Daemon Server] - 2024-11-08T04:17:29.542Z - Time taken for 'build-project-configs' 16.16945799998939ms
+[NX Daemon Server] - 2024-11-08T04:17:29.561Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:17:29.561Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:17:29.561Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:17:29.561Z - Time taken for 'total execution time for createProjectGraph()' 13.997332999948412ms
+[NX Daemon Server] - 2024-11-08T04:17:57.327Z - [WATCHER]: packages/vue-forms/src/types.ts was modified
+[NX Daemon Server] - 2024-11-08T04:17:57.328Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:18:03.732Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:18:03.733Z - [REQUEST]: packages/vue-forms/src/types.ts
+[NX Daemon Server] - 2024-11-08T04:18:03.733Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:18:03.737Z - Time taken for 'hash changed files from watcher' 0.7649999998975545ms
+[NX Daemon Server] - 2024-11-08T04:18:03.753Z - Time taken for 'build-project-configs' 14.985249999910593ms
+[NX Daemon Server] - 2024-11-08T04:18:03.770Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:18:03.771Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:18:03.771Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:18:03.771Z - Time taken for 'total execution time for createProjectGraph()' 14.612625000067055ms
+[NX Daemon Server] - 2024-11-08T04:18:20.292Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was modified
+[NX Daemon Server] - 2024-11-08T04:18:20.293Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:18:26.696Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:18:26.696Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:18:26.696Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:18:26.699Z - Time taken for 'hash changed files from watcher' 0.4007500000298023ms
+[NX Daemon Server] - 2024-11-08T04:18:26.711Z - Time taken for 'build-project-configs' 11.668750000186265ms
+[NX Daemon Server] - 2024-11-08T04:18:26.724Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:18:26.724Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:18:26.725Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:18:26.725Z - Time taken for 'total execution time for createProjectGraph()' 10.472999999998137ms
+[NX Daemon Server] - 2024-11-08T04:18:27.502Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:18:27.504Z - [WATCHER]: 7 file(s) created or restored, 0 file(s) modified, 39 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:18:27.556Z - [WATCHER]: 46 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:18:27.557Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:18:27.608Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:18:27.608Z - [REQUEST]: packages/vue-forms/dist/es/index.mjs,packages/vue-forms/dist/es/src/components/form-group.vue2.mjs,packages/vue-forms/dist/es/src/index.mjs,packages/vue-forms/dist/es/src/components/form-actions.vue2.mjs,packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs,packages/vue-forms/dist/es/src/components/form-actions.vue.mjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs,packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs,packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs,packages/vue-forms/dist/lib/src/components/form-group.vue.cjs,packages/vue-forms/dist/es/src/components/input-switch.vue.mjs,packages/vue-forms/dist/lib/src/components/input-switch.vue2.cjs,packages/vue-forms/dist/es/src/components/input-select.vue.mjs,packages/vue-forms/dist/es/src/components/input-field.vue2.mjs,packages/vue-forms/dist/es/src/components/input-select.vue2.mjs,packages/vue-forms/dist/lib/src/components/form-actions.vue2.cjs,packages/vue-forms/dist/lib/src/utils/providers.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs,packages/vue-forms/dist/es/src/components/input-field.vue.mjs,packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs,packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs,packages/vue-forms/dist/es/src/utils/providers.mjs,packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs,packages/vue-forms/dist/es/style.css,packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs,packages/vue-forms/dist/es/src/components/form-group.vue.mjs,packages/vue-forms/dist/lib/style.css,packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs,packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs,packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-select.vue.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue.cjs,packages/vue-forms/dist/es/src/components/input-switch.vue2.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs,packages/vue-forms/dist/lib/index.cjs,packages/vue-forms/dist/es/src/components/input-radio.vue.mjs,packages/vue-forms/dist/lib/src/components/input-switch.vue.cjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs,packages/vue-forms/dist/lib/src/index.cjs,packages/vue-forms/dist/lib/src/components/input-field.vue.cjs
+[NX Daemon Server] - 2024-11-08T04:18:27.608Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:18:27.613Z - Time taken for 'hash changed files from watcher' 1.9280830000061542ms
+[NX Daemon Server] - 2024-11-08T04:18:27.623Z - Time taken for 'build-project-configs' 10.530208999989554ms
+[NX Daemon Server] - 2024-11-08T04:18:27.640Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:18:27.640Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:18:27.640Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:18:27.640Z - Time taken for 'total execution time for createProjectGraph()' 13.928499999921769ms
+[NX Daemon Server] - 2024-11-08T04:20:08.100Z - [WATCHER]: packages/vue-forms/src/styles/main.scss was modified
+[NX Daemon Server] - 2024-11-08T04:20:08.103Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:20:08.308Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:20:08.308Z - [REQUEST]: packages/vue-forms/src/styles/main.scss
+[NX Daemon Server] - 2024-11-08T04:20:08.308Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:20:08.317Z - Time taken for 'hash changed files from watcher' 2.367208000039682ms
+[NX Daemon Server] - 2024-11-08T04:20:08.334Z - Time taken for 'build-project-configs' 15.024708000011742ms
+[NX Daemon Server] - 2024-11-08T04:20:08.354Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:20:08.355Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:20:08.355Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:20:08.355Z - Time taken for 'total execution time for createProjectGraph()' 19.38683299999684ms
+[NX Daemon Server] - 2024-11-08T04:20:16.179Z - [WATCHER]: packages/vue-forms/src/styles/main.scss was modified
+[NX Daemon Server] - 2024-11-08T04:20:16.179Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:20:16.580Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:20:16.580Z - [REQUEST]: packages/vue-forms/src/styles/main.scss
+[NX Daemon Server] - 2024-11-08T04:20:16.580Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:20:16.582Z - Time taken for 'hash changed files from watcher' 0.32470800005830824ms
+[NX Daemon Server] - 2024-11-08T04:20:16.591Z - Time taken for 'build-project-configs' 7.828125ms
+[NX Daemon Server] - 2024-11-08T04:20:16.605Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:20:16.605Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:20:16.605Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:20:16.605Z - Time taken for 'total execution time for createProjectGraph()' 10.389999999897555ms
+[NX Daemon Server] - 2024-11-08T04:22:30.220Z - [WATCHER]: packages/vue-forms/src/styles/main.scss was modified
+[NX Daemon Server] - 2024-11-08T04:22:30.223Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:22:31.029Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:22:31.029Z - [REQUEST]: packages/vue-forms/src/styles/main.scss
+[NX Daemon Server] - 2024-11-08T04:22:31.029Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:22:31.044Z - Time taken for 'hash changed files from watcher' 5.020458000013605ms
+[NX Daemon Server] - 2024-11-08T04:22:31.062Z - Time taken for 'build-project-configs' 18.16833300003782ms
+[NX Daemon Server] - 2024-11-08T04:22:31.092Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:22:31.093Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:22:31.093Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:22:31.093Z - Time taken for 'total execution time for createProjectGraph()' 17.629417000105605ms
+[NX Daemon Server] - 2024-11-08T04:23:30.700Z - [WATCHER]: packages/vue-forms/src/styles/main.scss was modified
+[NX Daemon Server] - 2024-11-08T04:23:30.702Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:23:32.305Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:23:32.305Z - [REQUEST]: packages/vue-forms/src/styles/main.scss
+[NX Daemon Server] - 2024-11-08T04:23:32.305Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:23:32.309Z - Time taken for 'hash changed files from watcher' 0.5757500000763685ms
+[NX Daemon Server] - 2024-11-08T04:23:32.326Z - Time taken for 'build-project-configs' 17.288457999937236ms
+[NX Daemon Server] - 2024-11-08T04:23:32.341Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:23:32.342Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:23:32.342Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:23:32.342Z - Time taken for 'total execution time for createProjectGraph()' 11.533165999921039ms
+[NX Daemon Server] - 2024-11-08T04:23:52.318Z - [WATCHER]: packages/vue-forms/src/styles/main.scss was modified
+[NX Daemon Server] - 2024-11-08T04:23:52.319Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:23:55.523Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:23:55.523Z - [REQUEST]: packages/vue-forms/src/styles/main.scss
+[NX Daemon Server] - 2024-11-08T04:23:55.523Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:23:55.528Z - Time taken for 'hash changed files from watcher' 0.8390000001527369ms
+[NX Daemon Server] - 2024-11-08T04:23:55.549Z - Time taken for 'build-project-configs' 20.182707999832928ms
+[NX Daemon Server] - 2024-11-08T04:23:55.574Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:23:55.574Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:23:55.574Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:23:55.574Z - Time taken for 'total execution time for createProjectGraph()' 22.792707999935374ms
+[NX Daemon Server] - 2024-11-08T04:24:28.501Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was modified
+[NX Daemon Server] - 2024-11-08T04:24:28.502Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:24:34.909Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:24:34.910Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:24:34.910Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:24:34.919Z - Time taken for 'hash changed files from watcher' 3.9141249998938292ms
+[NX Daemon Server] - 2024-11-08T04:24:34.947Z - Time taken for 'build-project-configs' 28.525833000196144ms
+[NX Daemon Server] - 2024-11-08T04:24:34.966Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:24:34.967Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:24:34.967Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:24:34.967Z - Time taken for 'total execution time for createProjectGraph()' 18.94983399985358ms
+[NX Daemon Server] - 2024-11-08T04:25:48.531Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was modified
+[NX Daemon Server] - 2024-11-08T04:25:48.532Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:25:54.934Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:25:54.935Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:25:54.935Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:25:54.939Z - Time taken for 'hash changed files from watcher' 0.5210420000366867ms
+[NX Daemon Server] - 2024-11-08T04:25:54.963Z - Time taken for 'build-project-configs' 23.887041999958456ms
+[NX Daemon Server] - 2024-11-08T04:25:54.982Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:25:54.982Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:25:54.982Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:25:54.982Z - Time taken for 'total execution time for createProjectGraph()' 13.414167000446469ms
+[NX Daemon Server] - 2024-11-08T04:26:01.480Z - [WATCHER]: packages/vue-forms/src/components/input-textarea.vue was modified
+[NX Daemon Server] - 2024-11-08T04:26:01.480Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:26:07.884Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:26:07.884Z - [REQUEST]: packages/vue-forms/src/components/input-textarea.vue
+[NX Daemon Server] - 2024-11-08T04:26:07.884Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:26:07.887Z - Time taken for 'hash changed files from watcher' 0.41216700011864305ms
+[NX Daemon Server] - 2024-11-08T04:26:07.899Z - Time taken for 'build-project-configs' 10.199874999932945ms
+[NX Daemon Server] - 2024-11-08T04:26:07.914Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:26:07.914Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:26:07.914Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:26:07.914Z - Time taken for 'total execution time for createProjectGraph()' 11.963959000073373ms
+[NX Daemon Server] - 2024-11-08T04:26:16.734Z - [WATCHER]: packages/vue-forms/src/components/input-select.vue was modified
+[NX Daemon Server] - 2024-11-08T04:26:16.735Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:26:23.138Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:26:23.139Z - [REQUEST]: packages/vue-forms/src/components/input-select.vue
+[NX Daemon Server] - 2024-11-08T04:26:23.139Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:26:23.142Z - Time taken for 'hash changed files from watcher' 0.5429169996641576ms
+[NX Daemon Server] - 2024-11-08T04:26:23.156Z - Time taken for 'build-project-configs' 12.272834000177681ms
+[NX Daemon Server] - 2024-11-08T04:26:23.175Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:26:23.175Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:26:23.175Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:26:23.175Z - Time taken for 'total execution time for createProjectGraph()' 17.87762500019744ms
+[NX Daemon Server] - 2024-11-08T04:26:27.017Z - [WATCHER]: packages/vue-forms/src/components/input-radio.vue was modified
+[NX Daemon Server] - 2024-11-08T04:26:27.018Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:26:33.421Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:26:33.423Z - [REQUEST]: packages/vue-forms/src/components/input-radio.vue
+[NX Daemon Server] - 2024-11-08T04:26:33.424Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:26:33.429Z - Time taken for 'hash changed files from watcher' 1.1331669995561242ms
+[NX Daemon Server] - 2024-11-08T04:26:33.446Z - Time taken for 'build-project-configs' 16.297915999777615ms
+[NX Daemon Server] - 2024-11-08T04:26:33.464Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:26:33.464Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:26:33.465Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:26:33.465Z - Time taken for 'total execution time for createProjectGraph()' 15.377166000194848ms
+[NX Daemon Server] - 2024-11-08T04:26:57.689Z - [WATCHER]: packages/vue-forms/src/components/input-radio.vue was modified
+[NX Daemon Server] - 2024-11-08T04:26:57.689Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:27:04.092Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:27:04.092Z - [REQUEST]: packages/vue-forms/src/components/input-radio.vue
+[NX Daemon Server] - 2024-11-08T04:27:04.092Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:27:04.094Z - Time taken for 'hash changed files from watcher' 0.36408299999311566ms
+[NX Daemon Server] - 2024-11-08T04:27:04.104Z - Time taken for 'build-project-configs' 8.624166999943554ms
+[NX Daemon Server] - 2024-11-08T04:27:04.118Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:27:04.118Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:27:04.118Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:27:04.118Z - Time taken for 'total execution time for createProjectGraph()' 11.003665999975055ms
+[NX Daemon Server] - 2024-11-08T04:27:07.273Z - [WATCHER]: packages/vue-forms/src/components/input-field.vue was modified
+[NX Daemon Server] - 2024-11-08T04:27:07.274Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:27:13.676Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:27:13.677Z - [REQUEST]: packages/vue-forms/src/components/input-field.vue
+[NX Daemon Server] - 2024-11-08T04:27:13.677Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:27:13.680Z - Time taken for 'hash changed files from watcher' 0.5493330000899732ms
+[NX Daemon Server] - 2024-11-08T04:27:13.699Z - Time taken for 'build-project-configs' 17.550499999895692ms
+[NX Daemon Server] - 2024-11-08T04:27:13.716Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:27:13.716Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:27:13.716Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:27:13.716Z - Time taken for 'total execution time for createProjectGraph()' 12.528874999843538ms
+[NX Daemon Server] - 2024-11-08T04:27:14.755Z - [WATCHER]: packages/vue-forms/src/components/input-checkbox.vue was modified
+[NX Daemon Server] - 2024-11-08T04:27:14.755Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:27:16.430Z - [WATCHER]: packages/vue-forms/src/components/form-group.vue was modified
+[NX Daemon Server] - 2024-11-08T04:27:16.430Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:27:21.161Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:27:21.163Z - [REQUEST]: packages/vue-forms/src/components/input-checkbox.vue,packages/vue-forms/src/components/form-group.vue
+[NX Daemon Server] - 2024-11-08T04:27:21.163Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:27:21.169Z - Time taken for 'hash changed files from watcher' 1.2794590000994503ms
+[NX Daemon Server] - 2024-11-08T04:27:21.185Z - Time taken for 'build-project-configs' 17.63299999991432ms
+[NX Daemon Server] - 2024-11-08T04:27:21.211Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:27:21.211Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:27:21.212Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:27:21.212Z - Time taken for 'total execution time for createProjectGraph()' 21.015000000130385ms
+[NX Daemon Server] - 2024-11-08T04:27:48.115Z - [WATCHER]: packages/vue-forms/src/styles/main.scss was modified
+[NX Daemon Server] - 2024-11-08T04:27:48.116Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:27:54.521Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:27:54.522Z - [REQUEST]: packages/vue-forms/src/styles/main.scss
+[NX Daemon Server] - 2024-11-08T04:27:54.522Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:27:54.527Z - Time taken for 'hash changed files from watcher' 1.2301250002346933ms
+[NX Daemon Server] - 2024-11-08T04:27:54.546Z - Time taken for 'build-project-configs' 18.352375000249594ms
+[NX Daemon Server] - 2024-11-08T04:27:54.566Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:27:54.566Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:27:54.566Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:27:54.566Z - Time taken for 'total execution time for createProjectGraph()' 17.35033300006762ms
+[NX Daemon Server] - 2024-11-08T04:28:56.476Z - [WATCHER]: packages/vue-forms/src/styles/main.scss was modified
+[NX Daemon Server] - 2024-11-08T04:28:56.477Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:29:02.882Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:29:02.882Z - [REQUEST]: packages/vue-forms/src/styles/main.scss
+[NX Daemon Server] - 2024-11-08T04:29:02.882Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:29:02.890Z - Time taken for 'hash changed files from watcher' 0.7841249997727573ms
+[NX Daemon Server] - 2024-11-08T04:29:02.908Z - Time taken for 'build-project-configs' 21.533708999864757ms
+[NX Daemon Server] - 2024-11-08T04:29:02.924Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:29:02.924Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:29:02.924Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:29:02.924Z - Time taken for 'total execution time for createProjectGraph()' 12.005584000144154ms
+[NX Daemon Server] - 2024-11-08T04:29:46.069Z - [WATCHER]: packages/vue-forms/src/components/vue-forms.vue was modified
+[NX Daemon Server] - 2024-11-08T04:29:46.070Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:29:52.472Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:29:52.472Z - [REQUEST]: packages/vue-forms/src/components/vue-forms.vue
+[NX Daemon Server] - 2024-11-08T04:29:52.472Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:29:52.474Z - Time taken for 'hash changed files from watcher' 0.389915999956429ms
+[NX Daemon Server] - 2024-11-08T04:29:52.493Z - Time taken for 'build-project-configs' 17.11083299992606ms
+[NX Daemon Server] - 2024-11-08T04:29:52.510Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:29:52.510Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:29:52.510Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:29:52.510Z - Time taken for 'total execution time for createProjectGraph()' 12.983708000276238ms
+[NX Daemon Server] - 2024-11-08T04:29:53.288Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 46 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:29:53.289Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:29:53.346Z - [WATCHER]: 42 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:29:53.347Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:29:53.400Z - [WATCHER]: 11 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:29:53.401Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:29:59.698Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:29:59.699Z - [REQUEST]: packages/vue-forms/dist/es/src/components/form-actions.vue2.mjs,packages/vue-forms/dist/es/src/index.mjs,packages/vue-forms/dist/es/src/components/form-group.vue.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue2.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue.mjs,packages/vue-forms/dist/es/index.mjs,packages/vue-forms/dist/lib/src/index.cjs,packages/vue-forms/dist/es/src/components/input-field.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue2.cjs,packages/vue-forms/dist/es/src/components/input-select.vue.mjs,packages/vue-forms/dist/es/src/components/input-field.vue.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue.cjs,packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs,packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs,packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs,packages/vue-forms/dist/lib/index.cjs,packages/vue-forms/dist/es/style.css,packages/vue-forms/dist/es/src/utils/providers.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs,packages/vue-forms/dist/es/src/components/form-actions.vue.mjs,packages/vue-forms/dist/lib/src/utils/providers.cjs,packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs,packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs,packages/vue-forms/dist/lib/src/components/form-actions.vue.cjs,packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs,packages/vue-forms/dist/es/src/components/form-group.vue2.mjs,packages/vue-forms/dist/es/src/components/input-select.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs,packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-switch.vue.cjs,packages/vue-forms/dist/es/src/components/input-radio.vue.mjs,packages/vue-forms/dist/lib/src/components/form-group.vue.cjs,packages/vue-forms/dist/lib/src/components/input-switch.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs,packages/vue-forms/dist/lib/style.css
+[NX Daemon Server] - 2024-11-08T04:29:59.699Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:29:59.706Z - Time taken for 'hash changed files from watcher' 3.2977090002968907ms
+[NX Daemon Server] - 2024-11-08T04:29:59.729Z - Time taken for 'build-project-configs' 24.177625000011176ms
+[NX Daemon Server] - 2024-11-08T04:29:59.751Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:29:59.751Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:29:59.751Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:29:59.751Z - Time taken for 'total execution time for createProjectGraph()' 19.072457999922335ms
+[NX Daemon Server] - 2024-11-08T04:30:06.026Z - [WATCHER]: packages/vue-forms/src/components/vue-forms.vue was modified
+[NX Daemon Server] - 2024-11-08T04:30:06.026Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:30:06.228Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:30:06.228Z - [REQUEST]: packages/vue-forms/src/components/vue-forms.vue
+[NX Daemon Server] - 2024-11-08T04:30:06.228Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:30:06.231Z - Time taken for 'hash changed files from watcher' 0.38208300014957786ms
+[NX Daemon Server] - 2024-11-08T04:30:06.240Z - Time taken for 'build-project-configs' 8.801667000167072ms
+[NX Daemon Server] - 2024-11-08T04:30:06.254Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:30:06.255Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:30:06.255Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:30:06.255Z - Time taken for 'total execution time for createProjectGraph()' 11.073708000127226ms
+[NX Daemon Server] - 2024-11-08T04:30:13.686Z - [WATCHER]: packages/vue-forms/src/components/vue-forms.vue was modified
+[NX Daemon Server] - 2024-11-08T04:30:13.686Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:30:14.088Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:30:14.088Z - [REQUEST]: packages/vue-forms/src/components/vue-forms.vue
+[NX Daemon Server] - 2024-11-08T04:30:14.088Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:30:14.090Z - Time taken for 'hash changed files from watcher' 0.2787919999100268ms
+[NX Daemon Server] - 2024-11-08T04:30:14.101Z - Time taken for 'build-project-configs' 9.202458000276238ms
+[NX Daemon Server] - 2024-11-08T04:30:14.116Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:30:14.117Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:30:14.117Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:30:14.117Z - Time taken for 'total execution time for createProjectGraph()' 12.033708999864757ms
+[NX Daemon Server] - 2024-11-08T04:30:16.930Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 46 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:30:16.930Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:30:16.990Z - [WATCHER]: 46 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:30:16.991Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:30:17.732Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:30:17.732Z - [REQUEST]: packages/vue-forms/dist/es/index.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue.cjs,packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs,packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue2.cjs,packages/vue-forms/dist/es/src/components/input-switch.vue2.mjs,packages/vue-forms/dist/lib/src/index.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs,packages/vue-forms/dist/es/src/components/input-select.vue.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue.cjs,packages/vue-forms/dist/es/src/utils/providers.mjs,packages/vue-forms/dist/es/src/index.mjs,packages/vue-forms/dist/es/src/components/form-actions.vue.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs,packages/vue-forms/dist/es/src/components/input-radio.vue.mjs,packages/vue-forms/dist/es/src/components/input-select.vue2.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs,packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs,packages/vue-forms/dist/lib/style.css,packages/vue-forms/dist/es/src/components/form-actions.vue2.mjs,packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs,packages/vue-forms/dist/es/src/components/input-field.vue.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue.cjs,packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs,packages/vue-forms/dist/es/style.css,packages/vue-forms/dist/lib/src/components/form-group.vue.cjs,packages/vue-forms/dist/lib/src/utils/providers.cjs,packages/vue-forms/dist/es/src/components/input-switch.vue.mjs,packages/vue-forms/dist/es/src/components/form-group.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-switch.vue2.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs,packages/vue-forms/dist/es/src/components/input-field.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs,packages/vue-forms/dist/lib/src/components/input-switch.vue.cjs,packages/vue-forms/dist/es/src/components/form-group.vue.mjs,packages/vue-forms/dist/lib/index.cjs,packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs
+[NX Daemon Server] - 2024-11-08T04:30:17.733Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:30:17.735Z - Time taken for 'hash changed files from watcher' 1.065583999734372ms
+[NX Daemon Server] - 2024-11-08T04:30:17.747Z - Time taken for 'build-project-configs' 9.565291999839246ms
+[NX Daemon Server] - 2024-11-08T04:30:17.764Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:30:17.764Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:30:17.764Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:30:17.764Z - Time taken for 'total execution time for createProjectGraph()' 15.157457999885082ms
+[NX Daemon Server] - 2024-11-08T04:30:29.299Z - [WATCHER]: packages/vue-forms/src/components/vue-forms.vue was modified
+[NX Daemon Server] - 2024-11-08T04:30:29.301Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:30:29.503Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:30:29.503Z - [REQUEST]: packages/vue-forms/src/components/vue-forms.vue
+[NX Daemon Server] - 2024-11-08T04:30:29.503Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:30:29.509Z - Time taken for 'hash changed files from watcher' 0.4454999999143183ms
+[NX Daemon Server] - 2024-11-08T04:30:29.526Z - Time taken for 'build-project-configs' 18.829208999872208ms
+[NX Daemon Server] - 2024-11-08T04:30:29.542Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:30:29.543Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:30:29.543Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:30:29.543Z - Time taken for 'total execution time for createProjectGraph()' 14.069542000070214ms
+[NX Daemon Server] - 2024-11-08T04:31:53.171Z - [WATCHER]: packages/vue-forms/src/components/vue-forms.vue was modified
+[NX Daemon Server] - 2024-11-08T04:31:53.173Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:31:53.574Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:31:53.574Z - [REQUEST]: packages/vue-forms/src/components/vue-forms.vue
+[NX Daemon Server] - 2024-11-08T04:31:53.574Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:31:53.576Z - Time taken for 'hash changed files from watcher' 0.40691700018942356ms
+[NX Daemon Server] - 2024-11-08T04:31:53.591Z - Time taken for 'build-project-configs' 13.108334000222385ms
+[NX Daemon Server] - 2024-11-08T04:31:53.612Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:31:53.612Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:31:53.612Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:31:53.612Z - Time taken for 'total execution time for createProjectGraph()' 17.916916999965906ms
+[NX Daemon Server] - 2024-11-08T04:32:00.035Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 46 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:32:00.036Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:32:00.093Z - [WATCHER]: 43 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:32:00.093Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:32:00.158Z - [WATCHER]: 9 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:32:00.161Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:32:00.839Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:32:00.839Z - [REQUEST]: packages/vue-forms/dist/es/src/components/input-radio.vue.mjs,packages/vue-forms/dist/es/src/components/input-field.vue.mjs,packages/vue-forms/dist/es/style.css,packages/vue-forms/dist/es/src/components/input-select.vue2.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs,packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs,packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue.cjs,packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs,packages/vue-forms/dist/es/src/components/input-field.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs,packages/vue-forms/dist/es/src/utils/providers.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs,packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs,packages/vue-forms/dist/lib/src/components/form-group.vue.cjs,packages/vue-forms/dist/lib/src/index.cjs,packages/vue-forms/dist/lib/src/utils/providers.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue.cjs,packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs,packages/vue-forms/dist/es/src/components/form-group.vue.mjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs,packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs,packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs,packages/vue-forms/dist/es/src/components/form-actions.vue.mjs,packages/vue-forms/dist/es/src/components/input-select.vue.mjs,packages/vue-forms/dist/es/index.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs,packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs,packages/vue-forms/dist/lib/index.cjs,packages/vue-forms/dist/es/src/components/form-actions.vue2.mjs,packages/vue-forms/dist/es/src/components/form-group.vue2.mjs,packages/vue-forms/dist/es/src/index.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs,packages/vue-forms/dist/lib/src/components/input-switch.vue.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue2.cjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue.mjs,packages/vue-forms/dist/lib/style.css,packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-switch.vue2.cjs
+[NX Daemon Server] - 2024-11-08T04:32:00.840Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:32:00.846Z - Time taken for 'hash changed files from watcher' 2.080666999798268ms
+[NX Daemon Server] - 2024-11-08T04:32:00.857Z - Time taken for 'build-project-configs' 12.66662500007078ms
+[NX Daemon Server] - 2024-11-08T04:32:00.874Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:32:00.874Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:32:00.874Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:32:00.874Z - Time taken for 'total execution time for createProjectGraph()' 14.221291999798268ms
+[NX Daemon Server] - 2024-11-08T04:49:02.645Z - [WATCHER]: packages/vue-forms/src/components/vue-forms.vue was modified
+[NX Daemon Server] - 2024-11-08T04:49:02.650Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:49:02.856Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:49:02.857Z - [REQUEST]: packages/vue-forms/src/components/vue-forms.vue
+[NX Daemon Server] - 2024-11-08T04:49:02.857Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:49:02.868Z - Time taken for 'hash changed files from watcher' 4.191208000294864ms
+[NX Daemon Server] - 2024-11-08T04:49:02.895Z - Time taken for 'build-project-configs' 25.98070800025016ms
+[NX Daemon Server] - 2024-11-08T04:49:02.917Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:49:02.918Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:49:02.918Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:49:02.918Z - Time taken for 'total execution time for createProjectGraph()' 18.297958000097424ms
+[NX Daemon Server] - 2024-11-08T04:49:18.284Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 46 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:49:18.284Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:49:18.344Z - [WATCHER]: 46 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:49:18.345Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:49:18.687Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:49:18.687Z - [REQUEST]: packages/vue-forms/dist/es/src/components/form-actions.vue2.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs,packages/vue-forms/dist/lib/src/components/input-select.vue.cjs,packages/vue-forms/dist/es/src/components/input-switch.vue.mjs,packages/vue-forms/dist/es/src/components/input-field.vue2.mjs,packages/vue-forms/dist/es/style.css,packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-group.vue.cjs,packages/vue-forms/dist/lib/src/utils/providers.cjs,packages/vue-forms/dist/es/src/components/form-actions.vue.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue.cjs,packages/vue-forms/dist/lib/src/index.cjs,packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs,packages/vue-forms/dist/es/index.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs,packages/vue-forms/dist/lib/style.css,packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs,packages/vue-forms/dist/lib/index.cjs,packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs,packages/vue-forms/dist/es/src/components/form-group.vue.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs,packages/vue-forms/dist/lib/src/components/input-switch.vue.cjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue2.cjs,packages/vue-forms/dist/es/src/index.mjs,packages/vue-forms/dist/es/src/components/input-select.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs,packages/vue-forms/dist/es/src/utils/providers.mjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs,packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs,packages/vue-forms/dist/es/src/components/input-select.vue.mjs,packages/vue-forms/dist/es/src/components/input-field.vue.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs,packages/vue-forms/dist/es/src/components/input-radio.vue.mjs,packages/vue-forms/dist/es/src/components/form-group.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-switch.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs
+[NX Daemon Server] - 2024-11-08T04:49:18.687Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:49:18.689Z - Time taken for 'hash changed files from watcher' 0.8503749999217689ms
+[NX Daemon Server] - 2024-11-08T04:49:18.699Z - Time taken for 'build-project-configs' 8.476334000006318ms
+[NX Daemon Server] - 2024-11-08T04:49:18.714Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:49:18.714Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:49:18.714Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:49:18.714Z - Time taken for 'total execution time for createProjectGraph()' 11.156707999762148ms
+[NX Daemon Server] - 2024-11-08T04:49:49.605Z - [WATCHER]: runner/Pages/vue-forms/FormPage.vue was modified
+[NX Daemon Server] - 2024-11-08T04:49:49.606Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:49:49.810Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:49:49.810Z - [REQUEST]: runner/Pages/vue-forms/FormPage.vue
+[NX Daemon Server] - 2024-11-08T04:49:49.810Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:49:49.813Z - Time taken for 'hash changed files from watcher' 0.5732500003650784ms
+[NX Daemon Server] - 2024-11-08T04:49:49.827Z - Time taken for 'build-project-configs' 12.895165999885648ms
+[NX Daemon Server] - 2024-11-08T04:49:49.847Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:49:49.848Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:49:49.848Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:49:49.848Z - Time taken for 'total execution time for createProjectGraph()' 17.48116600001231ms
+[NX Daemon Server] - 2024-11-08T04:50:06.795Z - [WATCHER]: packages/vue-forms/src/types.ts was modified
+[NX Daemon Server] - 2024-11-08T04:50:06.795Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:50:07.195Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:50:07.195Z - [REQUEST]: packages/vue-forms/src/types.ts
+[NX Daemon Server] - 2024-11-08T04:50:07.195Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:50:07.198Z - Time taken for 'hash changed files from watcher' 0.25283299991860986ms
+[NX Daemon Server] - 2024-11-08T04:50:07.208Z - Time taken for 'build-project-configs' 9.262416999787092ms
+[NX Daemon Server] - 2024-11-08T04:50:07.224Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:50:07.224Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:50:07.224Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:50:07.224Z - Time taken for 'total execution time for createProjectGraph()' 13.768792000133544ms
+[NX Daemon Server] - 2024-11-08T04:50:20.103Z - [WATCHER]: packages/vue-forms/src/types.ts was modified
+[NX Daemon Server] - 2024-11-08T04:50:20.104Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:50:20.907Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:50:20.907Z - [REQUEST]: packages/vue-forms/src/types.ts
+[NX Daemon Server] - 2024-11-08T04:50:20.907Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:50:20.912Z - Time taken for 'hash changed files from watcher' 0.8979589999653399ms
+[NX Daemon Server] - 2024-11-08T04:50:20.926Z - Time taken for 'build-project-configs' 13.899124999996275ms
+[NX Daemon Server] - 2024-11-08T04:50:20.945Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:50:20.945Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:50:20.945Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:50:20.945Z - Time taken for 'total execution time for createProjectGraph()' 14.828292000107467ms
+[NX Daemon Server] - 2024-11-08T04:52:34.660Z - [WATCHER]: packages/vue-forms/src/components/form-group.vue was modified
+[NX Daemon Server] - 2024-11-08T04:52:34.661Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:52:36.265Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:52:36.265Z - [REQUEST]: packages/vue-forms/src/components/form-group.vue
+[NX Daemon Server] - 2024-11-08T04:52:36.265Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:52:36.300Z - Time taken for 'hash changed files from watcher' 1.1022920003160834ms
+[NX Daemon Server] - 2024-11-08T04:52:36.328Z - Time taken for 'build-project-configs' 25.768999999854714ms
+[NX Daemon Server] - 2024-11-08T04:52:36.345Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:52:36.346Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:52:36.346Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:52:36.346Z - Time taken for 'total execution time for createProjectGraph()' 15.332416000310332ms
+[NX Daemon Server] - 2024-11-08T04:52:38.175Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 46 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:52:38.176Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:52:38.228Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:52:38.230Z - [WATCHER]: 46 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-08T04:52:41.379Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:52:41.379Z - [REQUEST]: packages/vue-forms/dist/es/index.mjs,packages/vue-forms/dist/es/src/components/form-actions.vue2.mjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs,packages/vue-forms/dist/es/src/components/input-field.vue.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue2.cjs,packages/vue-forms/dist/lib/index.cjs,packages/vue-forms/dist/es/src/components/input-field.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-group.vue.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs,packages/vue-forms/dist/es/src/components/input-select.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs,packages/vue-forms/dist/es/src/components/input-switch.vue.mjs,packages/vue-forms/dist/lib/src/components/form-actions.vue.cjs,packages/vue-forms/dist/es/src/components/form-group.vue2.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs,packages/vue-forms/dist/lib/src/components/input-switch.vue.cjs,packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs,packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs,packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs,packages/vue-forms/dist/es/src/index.mjs,packages/vue-forms/dist/es/src/components/form-actions.vue.mjs,packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue.cjs,packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs,packages/vue-forms/dist/es/src/components/input-select.vue.mjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs,packages/vue-forms/dist/es/src/components/input-switch.vue2.mjs,packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-switch.vue2.cjs,packages/vue-forms/dist/es/src/components/form-group.vue.mjs,packages/vue-forms/dist/lib/src/index.cjs,packages/vue-forms/dist/es/src/utils/providers.mjs,packages/vue-forms/dist/es/src/components/input-radio.vue.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs,packages/vue-forms/dist/es/style.css,packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs,packages/vue-forms/dist/lib/style.css,packages/vue-forms/dist/lib/src/utils/providers.cjs,packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs,packages/vue-forms/dist/lib/src/components/input-select.vue.cjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs
+[NX Daemon Server] - 2024-11-08T04:52:41.379Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:52:41.388Z - Time taken for 'hash changed files from watcher' 1.6370830000378191ms
+[NX Daemon Server] - 2024-11-08T04:52:41.400Z - Time taken for 'build-project-configs' 15.933250000234693ms
+[NX Daemon Server] - 2024-11-08T04:52:41.419Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:52:41.420Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:52:41.420Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:52:41.420Z - Time taken for 'total execution time for createProjectGraph()' 15.175000000279397ms
+[NX Daemon Server] - 2024-11-08T04:53:25.676Z - [WATCHER]: runner/Pages/vue-forms/FormPage.vue was modified
+[NX Daemon Server] - 2024-11-08T04:53:25.677Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:53:25.879Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:53:25.879Z - [REQUEST]: runner/Pages/vue-forms/FormPage.vue
+[NX Daemon Server] - 2024-11-08T04:53:25.879Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:53:25.882Z - Time taken for 'hash changed files from watcher' 0.5713329999707639ms
+[NX Daemon Server] - 2024-11-08T04:53:25.899Z - Time taken for 'build-project-configs' 15.598875000141561ms
+[NX Daemon Server] - 2024-11-08T04:53:25.927Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:53:25.927Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:53:25.927Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:53:25.927Z - Time taken for 'total execution time for createProjectGraph()' 24.723125000018626ms
+[NX Daemon Server] - 2024-11-08T04:53:34.255Z - [WATCHER]: runner/Pages/vue-forms/FormPage.vue was modified
+[NX Daemon Server] - 2024-11-08T04:53:34.256Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:53:34.658Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:53:34.658Z - [REQUEST]: runner/Pages/vue-forms/FormPage.vue
+[NX Daemon Server] - 2024-11-08T04:53:34.658Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:53:34.659Z - Time taken for 'hash changed files from watcher' 0.2433339999988675ms
+[NX Daemon Server] - 2024-11-08T04:53:34.669Z - Time taken for 'build-project-configs' 7.5817909999750555ms
+[NX Daemon Server] - 2024-11-08T04:53:34.692Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:53:34.693Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:53:34.694Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:53:34.694Z - Time taken for 'total execution time for createProjectGraph()' 14.142584000248462ms
+[NX Daemon Server] - 2024-11-08T04:54:06.532Z - [WATCHER]: runner/Pages/vue-forms/FormPage.vue was modified
+[NX Daemon Server] - 2024-11-08T04:54:06.532Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-08T04:54:07.335Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-08T04:54:07.335Z - [REQUEST]: runner/Pages/vue-forms/FormPage.vue
+[NX Daemon Server] - 2024-11-08T04:54:07.335Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-08T04:54:07.337Z - Time taken for 'hash changed files from watcher' 0.27391700027510524ms
+[NX Daemon Server] - 2024-11-08T04:54:07.345Z - Time taken for 'build-project-configs' 7.308541000355035ms
+[NX Daemon Server] - 2024-11-08T04:54:07.358Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-08T04:54:07.358Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-08T04:54:07.359Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-08T04:54:07.359Z - Time taken for 'total execution time for createProjectGraph()' 10.222000000067055ms

@@ -3,8 +3,8 @@
     <label :for="'vf-' + name" v-if="label">
       {{ label }}
     </label>
-    <input
-      :type="type"
+    <textarea
+      rows="3"
       :id="'vf-' + name"
       :name="name"
       :placeholder="placeholder"
@@ -20,11 +20,11 @@
 <script setup lang="ts">
 import { FormField } from '../types'
 
-defineOptions({ name: 'InputField' })
+defineOptions({ name: 'InputTextarea' })
 
 defineProps<FormField>()
 
-const modelValue = defineModel<FormField['value']>('modelValue', {
+const modelValue = defineModel<string>('modelValue', {
   required: true
 })
 </script>

@@ -1,12 +1,13 @@
-import { defineComponent as f, mergeModels as p, useModel as V, computed as v, openBlock as a, createElementBlock as y, normalizeClass as $, renderSlot as m, mergeProps as u, createBlock as r, createCommentVNode as t } from "vue";
+import { defineComponent as n, mergeModels as f, useModel as p, computed as V, openBlock as v, createElementBlock as y, normalizeClass as $, renderSlot as a, mergeProps as u, createVNode as m, createCommentVNode as r } from "vue";
 import k from "./input-checkbox.vue.mjs";
 import U from "./input-field.vue.mjs";
 import g from "./input-select.vue.mjs";
 import w from "./input-radio.vue.mjs";
-import B from "./input-switch.vue.mjs";
-const E = /* @__PURE__ */ f({
+import b from "./input-switch.vue.mjs";
+import B from "./input-textarea.vue.mjs";
+const I = /* @__PURE__ */ n({
   __name: "form-group",
-  props: /* @__PURE__ */ p({
+  props: /* @__PURE__ */ f({
     field: {},
     useGrid: { type: Boolean }
   }, {
@@ -16,8 +17,8 @@ const E = /* @__PURE__ */ f({
     modelModifiers: {}
   }),
   emits: ["update:modelValue"],
-  setup(i) {
-    const s = i, l = V(i, "modelValue"), n = v(() => [
+  setup(t) {
+    const i = t, l = p(t, "modelValue"), s = V(() => [
       "text",
       "email",
       "url",
@@ -31,48 +32,49 @@ const E = /* @__PURE__ */ f({
       "time",
       "week",
       "file"
-    ].includes(s.field.type));
-    return (e, o) => (a(), y("div", {
+    ].includes(i.field.type));
+    return (e, o) => (v(), y("div", {
       class: $(`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`)
     }, [
-      m(e.$slots, "input", u(e.field, { modelValue: l.value }), () => [
-        n.value ? (a(), r(U, u({
-          key: 0,
+      s.value ? a(e.$slots, "input", u({ key: 0 }, e.field, { modelValue: l.value }), () => [
+        m(U, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[0] || (o[0] = (d) => l.value = d)
-        }, e.field), null, 16, ["modelValue"])) : t("", !0)
-      ], !0),
-      m(e.$slots, "select", u(e.field, { modelValue: l.value }), () => [
-        e.field.type === "select" ? (a(), r(g, u({
-          key: 0,
+        }, e.field), null, 16, ["modelValue"])
+      ], !0) : r("", !0),
+      e.field.type === "select" ? a(e.$slots, "select", u({ key: 1 }, e.field, { modelValue: l.value }), () => [
+        m(g, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[1] || (o[1] = (d) => l.value = d)
-        }, e.field), null, 16, ["modelValue"])) : t("", !0)
-      ], !0),
-      m(e.$slots, "checkbox", u(e.field, { modelValue: l.value }), () => [
-        e.field.type === "checkbox" ? (a(), r(k, u({
-          key: 0,
+        }, e.field), null, 16, ["modelValue"])
+      ], !0) : r("", !0),
+      e.field.type === "checkbox" ? a(e.$slots, "checkbox", u({ key: 2 }, e.field, { modelValue: l.value }), () => [
+        m(k, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[2] || (o[2] = (d) => l.value = d)
-        }, e.field), null, 16, ["modelValue"])) : t("", !0)
-      ], !0),
-      m(e.$slots, "radio", u(e.field, { modelValue: l.value }), () => [
-        e.field.type === "radio" ? (a(), r(w, u({
-          key: 0,
+        }, e.field), null, 16, ["modelValue"])
+      ], !0) : r("", !0),
+      e.field.type === "radio" ? a(e.$slots, "radio", u({ key: 3 }, e.field, { modelValue: l.value }), () => [
+        m(w, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[3] || (o[3] = (d) => l.value = d)
-        }, e.field), null, 16, ["modelValue"])) : t("", !0)
-      ], !0),
-      m(e.$slots, "switch", u(e.field, { modelValue: l.value }), () => [
-        e.field.type === "switch" ? (a(), r(B, u({
-          key: 0,
+        }, e.field), null, 16, ["modelValue"])
+      ], !0) : r("", !0),
+      e.field.type === "switch" ? a(e.$slots, "switch", u({ key: 4 }, e.field, { modelValue: l.value }), () => [
+        m(b, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[4] || (o[4] = (d) => l.value = d)
-        }, e.field), null, 16, ["modelValue"])) : t("", !0)
-      ], !0)
+        }, e.field), null, 16, ["modelValue"])
+      ], !0) : r("", !0),
+      e.field.type === "textarea" ? a(e.$slots, "textarea", u({ key: 5 }, e.field, { modelValue: l.value }), () => [
+        m(B, u({
+          modelValue: l.value,
+          "onUpdate:modelValue": o[5] || (o[5] = (d) => l.value = d)
+        }, e.field), null, 16, ["modelValue"])
+      ], !0) : r("", !0)
     ], 2));
   }
 });
 export {
-  E as default
+  I as default
 };

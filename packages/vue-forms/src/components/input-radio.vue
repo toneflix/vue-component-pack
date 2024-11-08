@@ -7,13 +7,13 @@
         <div class="radio-item" :key="i" v-for="(choice, i) in <string[]>choices">
           <input
             type="radio"
-            :id="choice + name"
+            :id="'vf-' + choice + name"
             :name="name"
             :value="choice"
             :checked="modelValue === choice"
             @change="setValue"
           />
-          <label :for="choice + name">
+          <label :for="'vf-' + choice + name">
             {{ titleCase(choice) }}
           </label>
         </div>
