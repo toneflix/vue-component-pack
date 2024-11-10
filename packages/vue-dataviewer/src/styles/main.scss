@@ -1,0 +1,11 @@
+@import url(https://fonts.bunny.net/css?family=anton:400);
+
+.t-card {
+  min-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .t-card {
+    min-width: 550px;
+  }
+}

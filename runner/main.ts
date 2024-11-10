@@ -15,6 +15,7 @@ const router = createRouter({
     { path: '/', component: () => import('./Pages/otp-input/OtpPage.vue') },
     { path: '/paystack', component: () => import('./Pages/paystack-inline/PaystackPage.vue') },
     { path: '/forms', component: () => import('./Pages/vue-forms/FormPage.vue') },
+    { path: '/viewer', component: () => import('./Pages/data-viewer/ViewerPage.vue') },
     {
       path: '/auth/profile',
       name: 'profile',

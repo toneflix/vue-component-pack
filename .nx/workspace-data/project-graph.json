@@ -138,6 +138,94 @@
         "implicitDependencies": []
       }
     },
+    "@toneflix/vue-dataviewer": {
+      "name": "@toneflix/vue-dataviewer",
+      "type": "lib",
+      "data": {
+        "root": "packages/vue-dataviewer",
+        "sourceRoot": "packages/vue-dataviewer",
+        "name": "@toneflix/vue-dataviewer",
+        "tags": [
+          "npm:public"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "test",
+              "build",
+              "deploy"
+            ]
+          },
+          "description": "Quickly view data from an object with little to no tinkering on vue 3."
+        },
+        "targets": {
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "scriptContent": "echo \"Error: no test specified\" && exit 1",
+              "runCommand": "pnpm run test"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^test"
+            ],
+            "outputs": [
+              "{projectRoot}/build"
+            ]
+          },
+          "build": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "metadata": {
+              "scriptContent": "vite build",
+              "runCommand": "pnpm run build"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^build"
+            ],
+            "outputs": [
+              "{projectRoot}/dist"
+            ]
+          },
+          "deploy": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "deploy"
+            },
+            "metadata": {
+              "scriptContent": "../deploy.sh vue-dataviewer",
+              "runCommand": "pnpm run deploy"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^deploy"
+            ]
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
     "@toneflix/otp-input": {
       "name": "@toneflix/otp-input",
       "type": "lib",
@@ -407,6 +495,54 @@
             ],
             "outputs": [
               "{projectRoot}/dist"
+            ]
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "runner": {
+      "name": "runner",
+      "type": "lib",
+      "data": {
+        "root": "runner",
+        "sourceRoot": "runner",
+        "name": "runner",
+        "tags": [
+          "npm:public"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "dev"
+            ]
+          },
+          "description": ""
+        },
+        "targets": {
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "metadata": {
+              "scriptContent": "vite",
+              "runCommand": "pnpm run dev"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "dependsOn": [
+              "^dev"
             ]
           },
           "nx-release-publish": {
@@ -3473,6 +3609,15 @@
         "version": "3.0.3",
         "packageName": "dateformat",
         "hash": "sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q=="
+      }
+    },
+    "npm:dayjs": {
+      "type": "npm",
+      "name": "npm:dayjs",
+      "data": {
+        "version": "1.11.13",
+        "packageName": "dayjs",
+        "hash": "sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg=="
       }
     },
     "npm:debug": {
@@ -8028,6 +8173,43 @@
         "type": "static"
       }
     ],
+    "@toneflix/vue-dataviewer": [
+      {
+        "source": "@toneflix/vue-dataviewer",
+        "target": "npm:vue",
+        "type": "static"
+      },
+      {
+        "source": "@toneflix/vue-dataviewer",
+        "target": "npm:@vitejs/plugin-vue",
+        "type": "static"
+      },
+      {
+        "source": "@toneflix/vue-dataviewer",
+        "target": "npm:@vue/runtime-core@3.5.12",
+        "type": "static"
+      },
+      {
+        "source": "@toneflix/vue-dataviewer",
+        "target": "npm:vite@5.4.10",
+        "type": "static"
+      },
+      {
+        "source": "@toneflix/vue-dataviewer",
+        "target": "npm:vitepress@1.4.1",
+        "type": "static"
+      },
+      {
+        "source": "@toneflix/vue-dataviewer",
+        "target": "npm:dayjs",
+        "type": "static"
+      },
+      {
+        "source": "@toneflix/vue-dataviewer",
+        "target": "@toneflix/vue-forms",
+        "type": "static"
+      }
+    ],
     "@toneflix/otp-input": [
       {
         "source": "@toneflix/otp-input",
@@ -8115,6 +8297,63 @@
       },
       {
         "source": "@toneflix/vue-auth",
+        "target": "npm:vue-router",
+        "type": "static"
+      }
+    ],
+    "runner": [
+      {
+        "source": "runner",
+        "target": "npm:@vitejs/plugin-vue",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:postcss",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:vite@5.4.10",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "@toneflix/otp-input",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "@toneflix/paystack-inline",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "@toneflix/vue-auth",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "@toneflix/vue-forms",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:axios",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:pinia",
+        "type": "static"
+      },
+      {
+        "source": "runner",
+        "target": "npm:vue",
+        "type": "static"
+      },
+      {
+        "source": "runner",
         "target": "npm:vue-router",
         "type": "static"
       }
