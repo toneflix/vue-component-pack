@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("./components/data-viewer.vue.cjs"),l=e=>(e.install=a=>{const n=e.name;a.component(n,e)},e),t=l(r.default);exports.DataViewer=t;exports.default=t;

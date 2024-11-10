@@ -2,11 +2,25 @@
   <slot :viewData="viewData" :viewMode="viewMode" :toggleDialog="toggleDialog"></slot>
   <TDialog v-model="editDialogToggle" v-bind="$attrs">
     <TCard>
-      <div class="q-pa-md">
-        <div class="text-h6 text-weight-bold q-mb-sm">
-          {{ { view: 'View Data', edit: 'Edit Data', doc: 'View Document' }[viewMode] }}
+      <template #header>
+        <div class="card-title">
+          {{ { view: 'View Data', edit: 'Edit Data', doc: 'View Document' }[viewMode || 'view'] }}
         </div>
-        <q-form v-if="viewMode === 'edit'" class="q-gutter-md">
+      </template>
+      <div class="q-pa-md">
+        <VueForms
+          rounded
+          loading
+          show-group-labels
+          class="p-4 m-4 mx-auto"
+          :fields="formdata"
+          v-model="form"
+          v-if="viewMode === 'edit'"
+          @cancel="viewMode = 'view'"
+          @submit="emit('click:save', viewData)"
+        >
+        </VueForms>
+        <form v-if="viewMode === 'edit'" class="q-gutter-md" @submit.prevent>
           <slot name="form-prepend" :form="form" :errors="errors" :viewData="viewData"> </slot>
           <div class="input_wrap" :key="field[0]" v-for="field in viewDataMap">
             <label class="block q-mb-xs">
@@ -16,10 +30,12 @@
               class="items-center justify-start row q-pr-sm active-grey input-box"
               v-if="typeof field[1] === 'boolean'"
             >
-              <q-radio
+              <InputRadio
                 v-model="form[slug(field[0], '_')]"
+                type="radio"
                 :key="x"
                 :val="x"
+                :name="slug(field[0], '_')"
                 :label="['Pending', 'Approved'][x]"
                 v-for="x in [0, 1]"
               />
@@ -51,40 +67,44 @@
             :loading="saving"
             @click="emit('click:save', viewData)"
           />
-        </q-form>
-        <div class="q-pa-sm" v-else-if="viewMode === 'view'">
-          <q-list separator>
-            <q-item class="q-my-sm" clickable v-ripple @click="toggleDialog(viewData, 'doc')">
-              <q-item-section avatar>
-                <q-avatar square color="primary" text-color="white">
+        </form>
+        <div class="q-pa-sm" v-else-if="viewMode === 'view' && viewData">
+          <div class="t-list" separator>
+            <div
+              class="q-my-sm t-item clickable"
+              v-if="viewData.imageUrl"
+              @click="toggleDialog(viewData, 'doc')"
+            >
+              <div class="t-item-section avatar">
+                <div class="t-avatar">
                   <img :src="viewData.imageUrl" alt="Document" />
-                </q-avatar>
-              </q-item-section>
+                </div>
+              </div>
 
-              <q-item-section>
-                <q-item-label>Click to expand</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item :key="field[0]" v-for="field in viewDataMap">
-              <q-item-section>
-                <q-item-label caption>
+              <div class="t-item-section">
+                <div class="t-item-label">Click to expand</div>
+              </div>
+            </div>
+            <div class="q-my-sm t-item" :key="field[0]" v-for="field in viewDataMap">
+              <div class="t-item-section">
+                <div class="t-item-label caption">
                   {{ titleCase(slug(field[0])) }}
-                </q-item-label>
-                <q-item-label v-if="typeof field[1] === 'boolean'">
+                </div>
+                <div class="t-item-label" v-if="typeof field[1] === 'boolean'">
                   <q-chip square text-color="white" :color="field[1] ? 'green' : 'red '">
                     {{ field[1] ? 'Approved' : 'Pending ' }}
                   </q-chip>
-                </q-item-label>
-                <q-item-label v-else>
+                </div>
+                <div class="t-item-label" v-else>
                   {{ parser(field[1], field[0]) }}
-                </q-item-label>
-              </q-item-section>
-            </q-item>
+                </div>
+              </div>
+            </div>
             <slot name="list-append" :viewData="viewData"> </slot>
-          </q-list>
+          </div>
           <slot name="list-after" :viewData="viewData"> </slot>
         </div>
-        <div class="flex flex-col justify-center q-pa-sm q-gutter-sm" v-else>
+        <div class="img-preview" v-else-if="viewData">
           <TBtn
             dense
             color="primary"
@@ -113,7 +133,8 @@ import TBtn from './TBtn.vue'
 import TCard from './dialog/TCard.vue'
 import TDialog from './dialog/TDialog.vue'
 import TinnerLoading from './TinnerLoading.vue'
-import InputField from '@toneflix/vue-forms/index'
+import { InputField, InputRadio, VueForms } from '@toneflix/vue-forms'
+import { FormField } from '@toneflix/vue-forms/src/types'
 
 defineOptions({
   name: 'DataViewer'
@@ -125,6 +146,15 @@ const emit = defineEmits<{
   (e: 'dataUpdated', data: any): void
   (e: 'click:save', data: any): void
 }>()
+
+const viewData = defineModel<{
+  imageUrl?: string
+  [key: string]: any
+}>('data')
+
+const form = defineModel<{ [key: string]: any }>('form', {
+  default: {}
+})
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
 const props = withDefaults(
@@ -138,9 +168,9 @@ const props = withDefaults(
   }
 )
 
-const viewMode = ref<'edit' | 'view' | 'doc'>('view')
-const viewData = ref<Record<string, never>>({})
-const editDialogToggle = ref(false)
+const viewMode = defineModel<'edit' | 'view' | 'doc'>('mode', {
+  default: 'view'
+})
 
 const loading = defineModel<boolean>('loading', {
   default: false
@@ -150,25 +180,33 @@ const saving = defineModel<boolean>('saving', {
   default: false
 })
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const form = defineModel<{ [key: string]: any }>('form', {
-  default: {}
-})
-
 const errors = defineModel<{ [key: string]: string }>('errors', {
   default: {}
 })
 
-const viewDataMap = computed(
-  () =>
-    Object.entries(viewData.value).filter((e) => {
-      if (viewMode.value === 'edit') {
-        return ![...props.exclusions, ...props.formExclusions].includes(e[0])
-      } else {
-        return !props.exclusions.includes(e[0])
-      }
-    }) as Array<[string, string]>
+const editDialogToggle = ref(false)
+
+const viewDataMap = computed(() =>
+  viewData.value
+    ? (Object.entries(viewData.value).filter((e) => {
+        if (viewMode.value === 'edit') {
+          return ![...props.exclusions, ...props.formExclusions].includes(e[0])
+        } else {
+          return !props.exclusions.includes(e[0])
+        }
+      }) as Array<[string, string]>)
+    : []
 )
+
+const formdata = computed<FormField[]>(() => {
+  return viewDataMap.value.map(([key, value]) => ({
+    col: 12,
+    name: key,
+    type: typeof value === 'boolean' ? 'radio' : 'text',
+    label: titleCase(slug(key, ' ')),
+    choices: ['true', 'false']
+  }))
+})
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const toggleDialog = (data: any, mode: 'edit' | 'view' | 'doc' = 'view') => {

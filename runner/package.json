@@ -24,6 +24,7 @@
     "@toneflix/paystack-inline": "workspace:^",
     "@toneflix/vue-auth": "workspace:^",
     "@toneflix/vue-forms": "workspace:^",
+    "@toneflix/vue-dataviewer": "workspace:^",
     "axios": "^1.7.7",
     "miragejs": "0.2.0-alpha.3",
     "pinia": "^2.2.4",

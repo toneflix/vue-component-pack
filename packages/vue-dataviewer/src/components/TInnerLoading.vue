@@ -3,5 +3,8 @@
 defineOptions({
   name: 'TInnerLoading'
 })
-const loading = defineModel<boolean>('loading')
+
+const loading = defineModel<boolean>('showing', {
+  default: false
+})
 </script>
