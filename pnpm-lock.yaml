@@ -122,8 +122,8 @@ importers:
   packages/vue-dataviewer:
     dependencies:
       '@toneflix/vue-forms':
-        specifier: 1.2.0
-        version: 1.2.0(vue@3.5.12(typescript@5.6.3))
+        specifier: workspace:^
+        version: link:../vue-forms
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
@@ -1194,11 +1194,6 @@ packages:
     resolution: {integrity: sha512-tM4XVr2+UVTxXJzey9Twx48c1gcxFStqn1pQz0tRsX8o3DvxhN5oY5pvyAbUx7VTaZxpej4Zzvc6h+1RJBzpIg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20'
-
-  '@toneflix/vue-forms@1.2.0':
-    resolution: {integrity: sha512-tXDJw2QGuTuZO19rsGNSJrGH9kU8icXd8oA9z79MBOQYkctIXd58lHxB8X3aGAQyR4Ctrgle3VDC5PSeszJNtw==}
-    peerDependencies:
-      vue: ^3.5.11
 
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
@@ -5329,10 +5324,6 @@ snapshots:
     dependencies:
       mini-svg-data-uri: 1.4.4
       tailwindcss: 3.4.14
-
-  '@toneflix/vue-forms@1.2.0(vue@3.5.12(typescript@5.6.3))':
-    dependencies:
-      vue: 3.5.12(typescript@5.6.3)
 
   '@tufjs/canonical-json@2.0.0': {}
 
