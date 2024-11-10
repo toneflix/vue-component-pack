@@ -113,7 +113,7 @@ import TBtn from './TBtn.vue'
 import TCard from './dialog/TCard.vue'
 import TDialog from './dialog/TDialog.vue'
 import TinnerLoading from './TinnerLoading.vue'
-import InputField from '@toneflix/vue-forms'
+import InputField from '@toneflix/vue-forms/index'
 
 defineOptions({
   name: 'DataViewer'

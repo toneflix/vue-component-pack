@@ -3,3 +3,4 @@ packages:
   - runner
   # - '!runner'
   - '!package-template'
+  - '!packages/data-viewer'
