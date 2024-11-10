@@ -34,6 +34,6 @@
   "nx": {},
   "dependencies": {
     "dayjs": "^1.11.13",
-    "@toneflix/vue-forms": "^1.0.1"
+    "@toneflix/vue-forms": "1.2.0"
   }
 }
