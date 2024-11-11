@@ -1,6 +1,7 @@
 packages:
   - packages/*
-  - runner
-  # - '!runner'
+  # - runner
+  - '!runner'
   - '!package-template'
-  - '!packages/data-viewer'
+  - '!packages/vue-forms'
+  - '!packages/vue-dataviewer'
