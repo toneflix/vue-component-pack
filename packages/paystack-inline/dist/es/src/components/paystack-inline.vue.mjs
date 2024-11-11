@@ -41,16 +41,16 @@ const D = ["disabled"], F = {
   }),
   emits: /* @__PURE__ */ m(["ready", "success", "verified", "canceled", "destroyed", "error", "initialized"], ["update:reference"]),
   setup(n, { expose: f, emit: p }) {
-    const o = p, s = h(n, "reference"), a = n, l = _(), y = $(), r = k(!1), u = (e) => {
+    const o = p, u = h(n, "reference"), a = n, l = _(), y = $(), r = k(!1), c = (e) => {
       r.value = !0;
       try {
         a.verifyCallback(e).then(({ status: t, message: i }) => {
-          r.value = !1, o("verified", { status: t, message: i }), s.value = void 0, a.redirectRoute && y.push(a.redirectRoute);
+          r.value = !1, o("verified", { status: t, message: i }), u.value = void 0, a.redirectRoute && y.push(a.redirectRoute);
         });
       } catch (t) {
         r.value = !1, o("error", t, e);
       }
-    }, c = () => {
+    }, s = () => {
       r.value = !0;
       try {
         a.initializeCallback().then(({ reference: e, authorization_url: t, message: i }) => {
@@ -83,7 +83,7 @@ const D = ["disabled"], F = {
         ]
       },
       onSuccess(t) {
-        r.value = !1, o("success", t), a.dontVerify || u(t.reference);
+        r.value = !1, o("success", t), a.dontVerify || c(t.reference);
       },
       onCancel() {
         r.value = !1, o("canceled", { reference: e });
@@ -93,12 +93,12 @@ const D = ["disabled"], F = {
       }
     });
     return N(
-      [s, () => {
+      [u, () => {
         var e;
         return (e = l == null ? void 0 : l.query) == null ? void 0 : e.reference;
       }],
       ([e, t]) => {
-        t || (t = e), t && !a.dontVerify && u(t);
+        t || (t = e), t && !a.dontVerify && c(t);
       },
       { immediate: !0 }
     ), P(() => {
@@ -106,14 +106,15 @@ const D = ["disabled"], F = {
     }), g(() => {
       o("destroyed");
     }), f({
-      loading: r
+      loading: r,
+      initializeNewPayment: s
     }), (e, t) => d(e.$slots, "default", {
-      initialize: () => c(),
+      initialize: () => s(),
       loading: r.value
     }, () => [
       w(C("button", B({ class: "pay-button" }, e.$attrs, {
         disabled: r.value,
-        onClick: t[0] || (t[0] = (i) => c())
+        onClick: t[0] || (t[0] = (i) => s())
       }), [
         d(e.$slots, "button", { loading: r.value }, () => [
           V(R(r.value ? "" : e.btnLabel) + " ", 1),
