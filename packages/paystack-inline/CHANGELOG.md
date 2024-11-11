@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.2.5...@toneflix/paystack-inline@1.3.0) (2024-11-11)
+
+### Features
+
+- expose initializeNewPayment in paystack-inline ([e6869cd](https://github.com/toneflix/vue-component-pack/commit/e6869cd6fd186c4ec4e8d4e353ec802a34b56edf))
+
 ## [1.2.5](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.2.4...@toneflix/paystack-inline@1.2.5) (2024-11-10)
 
 **Note:** Version bump only for package @toneflix/paystack-inline
