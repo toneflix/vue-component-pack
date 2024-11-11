@@ -1,15 +1,14 @@
-import { defineComponent as p, mergeModels as c, useModel as f, openBlock as t, createElementBlock as o, toDisplayString as n, createCommentVNode as s, createElementVNode as a, Fragment as y, renderList as h, unref as g } from "vue";
-import { titleCase as v } from "../utils/providers.mjs";
-const _ = { class: "input-radio" }, b = { key: 0 }, B = {
+import { defineComponent as y, mergeModels as h, useModel as f, computed as g, openBlock as o, createElementBlock as a, toDisplayString as s, createCommentVNode as i, createElementVNode as l, Fragment as v, renderList as b } from "vue";
+const _ = { class: "input-radio" }, B = { key: 0 }, V = {
   key: 0,
   class: "sr-only"
-}, V = { class: "radio-container" }, k = ["id", "name", "value", "checked"], C = ["for"], M = { class: "field-anotations" }, N = {
+}, k = { class: "radio-container" }, C = ["id", "name", "value", "checked"], A = ["for"], M = { class: "field-anotations" }, N = {
   key: 0,
   class: "field-hint"
-}, S = /* @__PURE__ */ p({
+}, L = /* @__PURE__ */ y({
   name: "InputField",
   __name: "input-radio",
-  props: /* @__PURE__ */ c({
+  props: /* @__PURE__ */ h({
     type: {},
     name: {},
     label: {},
@@ -50,40 +49,43 @@ const _ = { class: "input-radio" }, b = { key: 0 }, B = {
     modelModifiers: {}
   }),
   emits: ["update:modelValue"],
-  setup(d) {
-    const i = f(d, "modelValue"), u = (e) => {
-      const r = e.target;
-      i.value = r.value;
+  setup(r) {
+    const t = r, d = f(r, "modelValue"), c = g(() => Array.isArray(t.choices) && typeof t.choices[0] == "string" ? t.choices : Array.isArray(t.choices) && typeof t.choices[0] == "object" ? t.choices.map(
+      (e) => Object.keys(e)[0]
+      // Extract the key as the choice
+    ) : []), p = (e) => {
+      const u = e.target;
+      d.value = u.value;
     };
-    return (e, r) => (t(), o("div", _, [
-      e.label ? (t(), o("label", b, n(e.label), 1)) : s("", !0),
-      a("fieldset", null, [
-        e.label ? (t(), o("legend", B, n(e.label), 1)) : s("", !0),
-        a("div", V, [
-          (t(!0), o(y, null, h(e.choices, (l, m) => (t(), o("div", {
+    return (e, u) => (o(), a("div", _, [
+      e.label ? (o(), a("label", B, s(e.label), 1)) : i("", !0),
+      l("fieldset", null, [
+        e.label ? (o(), a("legend", V, s(e.label), 1)) : i("", !0),
+        l("div", k, [
+          (o(!0), a(v, null, b(c.value, (n, m) => (o(), a("div", {
             class: "radio-item",
             key: m
           }, [
-            a("input", {
+            l("input", {
               type: "radio",
-              id: "vf-" + l + e.name,
+              id: "vf-" + n + e.name,
               name: e.name,
-              value: l,
-              checked: i.value === l,
-              onChange: u
-            }, null, 40, k),
-            a("label", {
-              for: "vf-" + l + e.name
-            }, n(g(v)(l)), 9, C)
+              value: n,
+              checked: d.value === n,
+              onChange: p
+            }, null, 40, C),
+            l("label", {
+              for: "vf-" + n + e.name
+            }, null, 8, A)
           ]))), 128))
         ])
       ]),
-      a("div", M, [
-        e.hint ? (t(), o("p", N, n(e.hint), 1)) : s("", !0)
+      l("div", M, [
+        e.hint ? (o(), a("p", N, s(e.hint), 1)) : i("", !0)
       ])
     ]));
   }
 });
 export {
-  S as default
+  L as default
 };

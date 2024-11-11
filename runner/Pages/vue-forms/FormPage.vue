@@ -90,6 +90,16 @@ const formFields = ref<FormField[]>([
     group: 'alt'
   },
   {
+    type: 'radio',
+    name: 'status',
+    label: 'status',
+    col: 12,
+    hint: 'Set status',
+    choices: ['home', 'away', 'middle_ground'],
+    // choices: [{ Active: true, Inactive: true }],
+    group: 'alt'
+  },
+  {
     type: 'switch',
     name: 'safe_mode',
     label: 'Safe Mode',

@@ -1,4 +1,4 @@
-import { defineComponent as O, mergeModels as C, useModel as f, ref as P, computed as x, watch as I, resolveComponent as R, openBlock as r, createElementBlock as i, Fragment as k, renderSlot as g, createVNode as c, mergeProps as T, withCtx as _, createElementVNode as n, toDisplayString as w, createBlock as j, unref as l, createCommentVNode as V, withModifiers as L, renderList as q, createTextVNode as z } from "vue";
+import { defineComponent as O, mergeModels as C, useModel as f, ref as P, computed as j, watch as R, resolveComponent as I, openBlock as r, createElementBlock as i, Fragment as k, renderSlot as g, createVNode as c, mergeProps as T, withCtx as _, createElementVNode as n, toDisplayString as w, createBlock as x, unref as l, createCommentVNode as V, withModifiers as L, renderList as A, createTextVNode as z } from "vue";
 import G from "dayjs";
 import { titleCase as D, slug as s } from "../utils/providers.mjs";
 import E from "./TBtn.vue.mjs";
@@ -52,22 +52,22 @@ const Z = { class: "card-title" }, ee = { class: "q-pa-md" }, te = { class: "blo
   }),
   emits: /* @__PURE__ */ C(["toggleDialog", "dataUpdated", "click:save"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
   setup(m, { emit: S }) {
-    const b = S, o = f(m, "data"), u = f(m, "form"), M = m, d = f(m, "mode"), B = f(m, "loading"), N = f(m, "saving"), p = f(m, "errors"), $ = P(!1), h = x(
+    const b = S, o = f(m, "data"), u = f(m, "form"), M = m, d = f(m, "mode"), B = f(m, "loading"), N = f(m, "saving"), p = f(m, "errors"), $ = P(!1), h = j(
       () => o.value ? Object.entries(o.value).filter((t) => d.value === "edit" ? ![...M.exclusions, ...M.formExclusions].includes(t[0]) : !M.exclusions.includes(t[0])) : []
-    ), Y = x(() => h.value.map(([t, a]) => ({
+    ), Y = j(() => h.value.map(([t, a]) => ({
       col: 12,
       name: t,
       type: typeof a == "boolean" ? "radio" : "text",
       label: D(s(t, " ")),
-      choices: ["true", "false"]
+      choices: { Accept: !0, Reject: !1 }
     }))), U = (t, a = "view") => {
       o.value = t, d.value = a, $.value = !0;
       const y = Object.fromEntries(
-        Object.entries(t).map(([e, v]) => [s(e), A(v)])
+        Object.entries(t).map(([e, v]) => [s(e), q(v)])
       );
       b("toggleDialog", y, a);
-    }, A = (t, a) => a && a.includes("edAt", a.length - 4) ? G(String(t)).format("Do MMM, YYYY h:MM A") : typeof t == "boolean" ? Number(t) : Array.isArray(t) && t.every((y) => typeof y == "string") && d.value === "view" ? D(t.join(", ")) : t;
-    return I(
+    }, q = (t, a) => a && a.includes("edAt", a.length - 4) ? G(String(t)).format("Do MMM, YYYY h:MM A") : typeof t == "boolean" ? Number(t) : Array.isArray(t) && t.every((y) => typeof y == "string") && d.value === "view" ? D(t.join(", ")) : t;
+    return R(
       o,
       (t) => {
         t && b("dataUpdated", t);
@@ -76,7 +76,7 @@ const Z = { class: "card-title" }, ee = { class: "q-pa-md" }, te = { class: "blo
         immediate: !0
       }
     ), (t, a) => {
-      const y = R("q-chip");
+      const y = I("q-chip");
       return r(), i(k, null, [
         g(t.$slots, "default", {
           viewData: o.value,
@@ -94,7 +94,7 @@ const Z = { class: "card-title" }, ee = { class: "q-pa-md" }, te = { class: "blo
               ]),
               default: _(() => [
                 n("div", ee, [
-                  d.value === "edit" ? (r(), j(l(Q), {
+                  d.value === "edit" ? (r(), x(l(Q), {
                     key: 0,
                     rounded: "",
                     loading: "",
@@ -117,13 +117,13 @@ const Z = { class: "card-title" }, ee = { class: "q-pa-md" }, te = { class: "blo
                       errors: p.value,
                       viewData: o.value
                     }, void 0, !0),
-                    (r(!0), i(k, null, q(h.value, (e) => (r(), i("div", {
+                    (r(!0), i(k, null, A(h.value, (e) => (r(), i("div", {
                       class: "input_wrap",
                       key: e[0]
                     }, [
                       n("label", te, w(l(D)(l(s)(e[0], " "))), 1),
                       typeof e[1] == "boolean" ? (r(), i("div", ae, [
-                        (r(), i(k, null, q([0, 1], (v) => c(l(W), {
+                        (r(), i(k, null, A([0, 1], (v) => c(l(W), {
                           modelValue: u.value[l(s)(e[0], "_")],
                           "onUpdate:modelValue": (F) => u.value[l(s)(e[0], "_")] = F,
                           type: "radio",
@@ -132,7 +132,7 @@ const Z = { class: "card-title" }, ee = { class: "q-pa-md" }, te = { class: "blo
                           name: l(s)(e[0], "_"),
                           label: ["Pending", "Approved"][v]
                         }, null, 8, ["modelValue", "onUpdate:modelValue", "val", "name", "label"])), 64))
-                      ])) : (r(), j(l(X), {
+                      ])) : (r(), x(l(X), {
                         key: 1,
                         type: "text",
                         modelValue: u.value[l(s)(e[0], "_")],
@@ -181,7 +181,7 @@ const Z = { class: "card-title" }, ee = { class: "q-pa-md" }, te = { class: "blo
                           n("div", { class: "t-item-label" }, "Click to expand")
                         ], -1))
                       ])) : V("", !0),
-                      (r(!0), i(k, null, q(h.value, (e) => (r(), i("div", {
+                      (r(!0), i(k, null, A(h.value, (e) => (r(), i("div", {
                         class: "q-my-sm t-item",
                         key: e[0]
                       }, [
@@ -198,7 +198,7 @@ const Z = { class: "card-title" }, ee = { class: "q-pa-md" }, te = { class: "blo
                               ]),
                               _: 2
                             }, 1032, ["color"])
-                          ])) : (r(), i("div", me, w(A(e[1], e[0])), 1))
+                          ])) : (r(), i("div", me, w(q(e[1], e[0])), 1))
                         ])
                       ]))), 128)),
                       g(t.$slots, "list-append", { viewData: o.value }, void 0, !0)

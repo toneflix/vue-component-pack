@@ -22,7 +22,11 @@ import { FormField } from '../types'
 
 defineOptions({ name: 'InputField' })
 
-defineProps<FormField>()
+defineProps<
+  FormField & {
+    type?: string
+  }
+>()
 
 const modelValue = defineModel<FormField['value']>('modelValue', {
   required: true

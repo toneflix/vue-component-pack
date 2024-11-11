@@ -22,10 +22,17 @@ import { FormField } from '../types'
 
 defineOptions({ name: 'InputField' })
 
-const props = withDefaults(defineProps<FormField>(), {
-  trueValue: true,
-  falseValue: false
-})
+const props = withDefaults(
+  defineProps<
+    FormField & {
+      type?: 'checkbox'
+    }
+  >(),
+  {
+    trueValue: true,
+    falseValue: false
+  }
+)
 
 const modelValue = defineModel<FormField['value']>('modelValue', {
   required: true

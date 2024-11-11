@@ -204,7 +204,7 @@ const formdata = computed<FormField[]>(() => {
     name: key,
     type: typeof value === 'boolean' ? 'radio' : 'text',
     label: titleCase(slug(key, ' ')),
-    choices: ['true', 'false']
+    choices: { Accept: true, Reject: false }
   }))
 })
 

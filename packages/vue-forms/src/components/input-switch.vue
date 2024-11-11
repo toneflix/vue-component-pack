@@ -20,10 +20,17 @@ import { getCurrentInstance } from 'vue'
 
 defineOptions({ name: 'InputField' })
 
-const props = withDefaults(defineProps<FormField>(), {
-  trueValue: true,
-  falseValue: false
-})
+const props = withDefaults(
+  defineProps<
+    FormField & {
+      type?: 'switch'
+    }
+  >(),
+  {
+    trueValue: true,
+    falseValue: false
+  }
+)
 
 const modelValue = defineModel<FormField['value']>('modelValue', {
   required: true
