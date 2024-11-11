@@ -159,6 +159,7 @@ onBeforeUnmount(() => {
 })
 
 defineExpose({
-  loading
+  loading,
+  initializeNewPayment
 })
 </script>
