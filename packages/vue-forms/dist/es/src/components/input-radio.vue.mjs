@@ -1,14 +1,15 @@
-import { defineComponent as y, mergeModels as h, useModel as f, computed as g, openBlock as o, createElementBlock as a, toDisplayString as s, createCommentVNode as i, createElementVNode as l, Fragment as v, renderList as b } from "vue";
-const _ = { class: "input-radio" }, B = { key: 0 }, V = {
+import { defineComponent as v, mergeModels as y, useModel as c, computed as g, openBlock as t, createElementBlock as a, toDisplayString as s, createCommentVNode as r, createElementVNode as o, Fragment as b, renderList as h, unref as _ } from "vue";
+import { titleCase as B } from "../utils/providers.mjs";
+const V = { class: "input-radio" }, k = { key: 0 }, C = {
   key: 0,
   class: "sr-only"
-}, k = { class: "radio-container" }, C = ["id", "name", "value", "checked"], A = ["for"], M = { class: "field-anotations" }, N = {
+}, M = { class: "radio-container" }, N = ["id", "name", "value", "checked"], S = ["for"], L = { class: "field-anotations" }, q = {
   key: 0,
   class: "field-hint"
-}, L = /* @__PURE__ */ y({
+}, j = /* @__PURE__ */ v({
   name: "InputField",
   __name: "input-radio",
-  props: /* @__PURE__ */ h({
+  props: /* @__PURE__ */ y({
     type: {},
     name: {},
     label: {},
@@ -22,7 +23,7 @@ const _ = { class: "input-radio" }, B = { key: 0 }, V = {
     hint: {},
     secret: { type: Boolean },
     group: {},
-    choices: {},
+    choices: { default: () => [] },
     required: { type: Boolean },
     readonly: { type: Boolean },
     disabled: { type: Boolean },
@@ -31,7 +32,7 @@ const _ = { class: "input-radio" }, B = { key: 0 }, V = {
     step: {},
     maxLength: {},
     minLength: {},
-    customValidation: { type: Function },
+    customValidation: {},
     validationMessage: {},
     icon: {},
     tooltip: {},
@@ -49,43 +50,43 @@ const _ = { class: "input-radio" }, B = { key: 0 }, V = {
     modelModifiers: {}
   }),
   emits: ["update:modelValue"],
-  setup(r) {
-    const t = r, d = f(r, "modelValue"), c = g(() => Array.isArray(t.choices) && typeof t.choices[0] == "string" ? t.choices : Array.isArray(t.choices) && typeof t.choices[0] == "object" ? t.choices.map(
-      (e) => Object.keys(e)[0]
-      // Extract the key as the choice
-    ) : []), p = (e) => {
-      const u = e.target;
-      d.value = u.value;
+  setup(u) {
+    const d = u, i = c(u, "modelValue"), m = g(() => {
+      var e;
+      return ((e = d.choices) == null ? void 0 : e.map((l) => typeof l == "object" && l !== null && "label" in l && "value" in l ? l : { label: String(l), value: l })) ?? [];
+    }), p = (e) => {
+      const l = e.target;
+      i.value = l.value;
     };
-    return (e, u) => (o(), a("div", _, [
-      e.label ? (o(), a("label", B, s(e.label), 1)) : i("", !0),
-      l("fieldset", null, [
-        e.label ? (o(), a("legend", V, s(e.label), 1)) : i("", !0),
-        l("div", k, [
-          (o(!0), a(v, null, b(c.value, (n, m) => (o(), a("div", {
+    return (e, l) => (t(), a("div", V, [
+      e.label ? (t(), a("label", k, s(e.label), 1)) : r("", !0),
+      o("fieldset", null, [
+        e.label ? (t(), a("legend", C, s(e.label), 1)) : r("", !0),
+        o("div", M, [
+          (t(!0), a(b, null, h(m.value, (n, f) => (t(), a("div", {
             class: "radio-item",
-            key: m
+            key: f
           }, [
-            l("input", {
+            o("input", {
               type: "radio",
-              id: "vf-" + n + e.name,
+              id: "vf-" + n.value + e.name,
               name: e.name,
-              value: n,
-              checked: d.value === n,
+              value: n.value,
+              checked: i.value === n.value,
               onChange: p
-            }, null, 40, C),
-            l("label", {
-              for: "vf-" + n + e.name
-            }, null, 8, A)
+            }, null, 40, N),
+            o("label", {
+              for: "vf-" + n.value + e.name
+            }, s(_(B)(n.label)), 9, S)
           ]))), 128))
         ])
       ]),
-      l("div", M, [
-        e.hint ? (o(), a("p", N, s(e.hint), 1)) : i("", !0)
+      o("div", L, [
+        e.hint ? (t(), a("p", q, s(e.hint), 1)) : r("", !0)
       ])
     ]));
   }
 });
 export {
-  L as default
+  j as default
 };

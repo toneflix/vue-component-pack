@@ -6,29 +6,29 @@ interface SlotScope extends FormField {
 
 export interface FormField {
   type:
-    | 'url'
-    | 'tel'
-    | 'text'
-    | 'file'
-    | 'date'
-    | 'time'
-    | 'week'
-    | 'email'
-    | 'month'
-    | 'color'
-    | 'hidden'
-    | 'number'
-    | 'search'
-    | 'password'
-    | 'datetime'
-    | 'datetime-local'
-    // =============
-    | 'select' // [x]
-    | 'checkbox' // [x]
-    | 'radio' // [x]
-    | 'range'
-    | 'switch' // [x]
-    | 'textarea' // [x]
+  | 'url'
+  | 'tel'
+  | 'text'
+  | 'file'
+  | 'date'
+  | 'time'
+  | 'week'
+  | 'email'
+  | 'month'
+  | 'color'
+  | 'hidden'
+  | 'number'
+  | 'search'
+  | 'password'
+  | 'datetime'
+  | 'datetime-local'
+  // =============
+  | 'select' // [x]
+  | 'checkbox' // [x]
+  | 'radio' // [x]
+  | 'range'
+  | 'switch' // [x]
+  | 'textarea' // [x]
 
   /**
    * Unique identifier for the field
@@ -82,7 +82,7 @@ export interface FormField {
   /**
    * Options for select, radio, etc.
    */
-  choices?: string[] | { label: string; value: string | number }[]
+  choices?: (string | number | { label: string; value: string | number | boolean })[]
   /**
    * Whether the field is mandatory
    */
@@ -255,7 +255,7 @@ export interface VueFormProps<X = { [key: FormField['name']]: FormField['value']
 }
 
 export type GroupMeta<T extends FormField = FormField> = {
-  [key in T['group'] as string]: {
+  [key in T['group']as string]: {
     title: string
     rounded?: boolean
     subtitle?: string
@@ -268,7 +268,7 @@ export interface FormValues {
 }
 
 export type ComponentConstructor<Props = object, Slots = object> = {
-  new (): {
+  new(): {
     $props: PublicProps & Props
     $slots: Slots
   }

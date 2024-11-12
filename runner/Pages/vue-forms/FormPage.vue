@@ -63,6 +63,19 @@ const formFields = ref<FormField[]>([
     group: 'main'
   },
   {
+    type: 'select',
+    name: 'town',
+    label: 'Town',
+    col: 12,
+    hint: 'Select your town',
+    choices: [
+      { label: 'Lagos', value: 1 },
+      { label: 'Kaduna', value: 2 },
+      { label: 'Port Harcourt', value: 3 }
+    ],
+    group: 'main'
+  },
+  {
     type: 'text',
     name: 'address',
     label: 'Address',
@@ -92,11 +105,13 @@ const formFields = ref<FormField[]>([
   {
     type: 'radio',
     name: 'status',
-    label: 'status',
+    label: 'Status',
     col: 12,
     hint: 'Set status',
-    choices: ['home', 'away', 'middle_ground'],
-    // choices: [{ Active: true, Inactive: true }],
+    choices: [
+      { label: 'Inactive', value: 0 },
+      { label: 'Active', value: 1 }
+    ],
     group: 'alt'
   },
   {
@@ -129,7 +144,9 @@ const formFields = ref<FormField[]>([
 
 const formValues = reactive({
   name: 'John Obi Doe',
+  town: 1,
   email: 'john.doe@email.com',
+  status: 0,
   accept: 0,
   category: 'home',
   safe_mode: 0,

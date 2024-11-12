@@ -26,28 +26,6 @@
             <label class="block q-mb-xs">
               {{ titleCase(slug(field[0], ' ')) }}
             </label>
-            <div
-              class="items-center justify-start row q-pr-sm active-grey input-box"
-              v-if="typeof field[1] === 'boolean'"
-            >
-              <InputRadio
-                v-model="form[slug(field[0], '_')]"
-                type="radio"
-                :key="x"
-                :val="x"
-                :name="slug(field[0], '_')"
-                :label="['Pending', 'Approved'][x]"
-                v-for="x in [0, 1]"
-              />
-            </div>
-            <InputField
-              v-else
-              type="text"
-              v-model="form[slug(field[0], '_')]"
-              :error="!!errors[slug(field[0], '_')]"
-              :name="slug(field[0], '_')"
-              :error-message="errors[slug(field[0], '_')]"
-            />
             <slot
               name="form-field-append"
               :form="form"
@@ -133,8 +111,8 @@ import TBtn from './TBtn.vue'
 import TCard from './dialog/TCard.vue'
 import TDialog from './dialog/TDialog.vue'
 import TinnerLoading from './TinnerLoading.vue'
-import { InputField, InputRadio, VueForms } from '@toneflix/vue-forms'
 import { FormField } from '@toneflix/vue-forms/src/types'
+import { VueForms } from '@toneflix/vue-forms'
 
 defineOptions({
   name: 'DataViewer'
@@ -204,7 +182,10 @@ const formdata = computed<FormField[]>(() => {
     name: key,
     type: typeof value === 'boolean' ? 'radio' : 'text',
     label: titleCase(slug(key, ' ')),
-    choices: { Accept: true, Reject: false }
+    choices: [
+      { label: 'Accept', value: true },
+      { label: 'Reject', value: true }
+    ]
   }))
 })
 

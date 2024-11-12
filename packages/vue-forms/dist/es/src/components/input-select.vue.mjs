@@ -1,8 +1,8 @@
-import { defineComponent as s, mergeModels as d, useModel as m, openBlock as t, createElementBlock as l, toDisplayString as i, createCommentVNode as p, withDirectives as c, createElementVNode as f, Fragment as y, renderList as v, vModelSelect as g } from "vue";
-const B = { class: "input-field" }, V = ["for"], h = ["id", "name"], b = ["value"], M = /* @__PURE__ */ s({
+import { defineComponent as m, mergeModels as p, computed as f, useModel as v, openBlock as o, createElementBlock as a, toDisplayString as u, createCommentVNode as y, withDirectives as c, createElementVNode as b, Fragment as g, renderList as B, vModelSelect as V } from "vue";
+const M = { class: "input-field" }, S = ["for"], _ = ["id", "name"], h = ["value"], C = /* @__PURE__ */ m({
   name: "InputField",
   __name: "input-select",
-  props: /* @__PURE__ */ d({
+  props: /* @__PURE__ */ p({
     type: {},
     name: {},
     label: {},
@@ -16,7 +16,7 @@ const B = { class: "input-field" }, V = ["for"], h = ["id", "name"], b = ["value
     hint: {},
     secret: { type: Boolean },
     group: {},
-    choices: {},
+    choices: { default: () => [] },
     required: { type: Boolean },
     readonly: { type: Boolean },
     disabled: { type: Boolean },
@@ -25,7 +25,7 @@ const B = { class: "input-field" }, V = ["for"], h = ["id", "name"], b = ["value
     step: {},
     maxLength: {},
     minLength: {},
-    customValidation: { type: Function },
+    customValidation: {},
     validationMessage: {},
     icon: {},
     tooltip: {},
@@ -43,28 +43,31 @@ const B = { class: "input-field" }, V = ["for"], h = ["id", "name"], b = ["value
     modelModifiers: {}
   }),
   emits: ["update:modelValue"],
-  setup(r) {
-    const a = m(r, "modelValue");
-    return (e, n) => (t(), l("div", B, [
-      e.label ? (t(), l("label", {
+  setup(n) {
+    const s = n, i = f(() => {
+      var l;
+      return ((l = s.choices) == null ? void 0 : l.map((e) => typeof e == "object" && e !== null && "label" in e && "value" in e ? e : { label: String(e), value: e })) ?? [];
+    }), r = v(n, "modelValue");
+    return (l, e) => (o(), a("div", M, [
+      l.label ? (o(), a("label", {
         key: 0,
-        for: "vf-" + e.name
-      }, i(e.label), 9, V)) : p("", !0),
-      c(f("select", {
-        id: "vf-" + e.name,
-        name: e.name,
-        "onUpdate:modelValue": n[0] || (n[0] = (o) => a.value = o)
+        for: "vf-" + l.name
+      }, u(l.label), 9, S)) : y("", !0),
+      c(b("select", {
+        id: "vf-" + l.name,
+        name: l.name,
+        "onUpdate:modelValue": e[0] || (e[0] = (t) => r.value = t)
       }, [
-        (t(!0), l(y, null, v(e.choices, (o, u) => (t(), l("option", {
-          key: u,
-          value: o
-        }, i(o), 9, b))), 128))
-      ], 8, h), [
-        [g, a.value]
+        (o(!0), a(g, null, B(i.value, (t, d) => (o(), a("option", {
+          key: d,
+          value: t.value
+        }, u(t.label), 9, h))), 128))
+      ], 8, _), [
+        [V, r.value]
       ])
     ]));
   }
 });
 export {
-  M as default
+  C as default
 };
