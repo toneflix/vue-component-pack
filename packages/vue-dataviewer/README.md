@@ -82,6 +82,10 @@ const data = reactive({
 <template>
   <div style="display: flex; flex-direction: row;">
     <DataViewer
+      shadow
+      rounded
+      bordered
+      separator
       :data="data"
       v-slot="{ toggleDialog }"
       :boolean-labels="{
@@ -90,6 +94,46 @@ const data = reactive({
     >
       <TBtn label="View Data" @click="toggleDialog(data, 'view')" />
     </DataViewer>
+  </div>
+</template>
+```
+
+### Use the Registered Component in Your Vue Template (Flat Mode)
+
+**SomeComponent.vue**
+
+```vue
+<script setup lang="ts">
+import '@toneflix/vue-dataviewer/dist/lib/style.css'
+import { MainContent } from '@toneflix/vue-dataviewer'
+import { reactive } from 'vue'
+
+const data = reactive({
+  name: 'John Doe',
+  email: 'john.doe@email.com',
+  accept: false,
+  category: 'home',
+  safe_mode: true,
+  country: 'Nigeria',
+  address: '',
+  message: 'Hello my people',
+  imageUrl: 'https://www.tailwind-kit.com/images/person/6.jpg'
+})
+</script>
+
+<template>
+  <div style="display: flex; flex-direction: row;">
+    <MainContent
+      shadow
+      rounded
+      bordered
+      separator
+      :data="data"
+      :boolean-labels="{
+        accept: ['Accepted', 'Rejected'],
+        safe_mode: ['Enabled', 'Disabled']
+      }"
+    />
   </div>
 </template>
 ```
