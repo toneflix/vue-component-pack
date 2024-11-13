@@ -1,4 +1,4 @@
-# Vue OTP Input
+# Vue Dataviewer
 
 [![npm](https://img.shields.io/npm/v/@toneflix/vue-dataviewer.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-dataviewer)
 [![npm](https://img.shields.io/npm/dt/@toneflix/vue-dataviewer.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-dataviewer)
@@ -28,7 +28,7 @@ pnpm add @toneflix/vue-dataviewer
 
 ### Global Registration
 
-You can make OTP Input available throughout your Vue project.
+You can make Vue Dataviewer available throughout your Vue project.
 
 **main.js or main.ts**
 
@@ -36,10 +36,10 @@ You can make OTP Input available throughout your Vue project.
 import '@toneflix/vue-dataviewer/dist/lib/style.css'
 import { createApp } from 'vue'
 import App from './app.vue'
-import DummyComp from '@toneflix/vue-dataviewer'
+import DataViewer from '@toneflix/vue-dataviewer'
 
 const app = createApp(App)
-app.use(DummyComp)
+app.use(DataViewer)
 app.mount('#app')
 ```
 
@@ -52,26 +52,44 @@ You can also import the component in your Vue component.
 ```vue
 <script setup>
 import '@toneflix/vue-dataviewer/dist/lib/style.css'
-import { DummyComp } from '@toneflix/vue-dataviewer'
+import { DataViewer } from '@toneflix/vue-dataviewer'
 </script>
 ```
 
-### Use the Registered Component in Your Vue Template
+### Use the Registered Component in Your Vue Template (Dialog Mode)
 
 **SomeComponent.vue**
 
 ```vue
 <script setup lang="ts">
 import '@toneflix/vue-dataviewer/dist/lib/style.css'
-import { DummyComp } from '@toneflix/vue-dataviewer'
-import { ref } from 'vue'
+import { DataViewer } from '@toneflix/vue-dataviewer'
+import { reactive } from 'vue'
 
-const value = ref<string>('')
+const data = reactive({
+  name: 'John Doe',
+  email: 'john.doe@email.com',
+  accept: false,
+  category: 'home',
+  safe_mode: true,
+  country: 'Nigeria',
+  address: '',
+  message: 'Hello my people',
+  imageUrl: 'https://www.tailwind-kit.com/images/person/6.jpg'
+})
 </script>
 
 <template>
   <div style="display: flex; flex-direction: row;">
-    <vue-dataviewer v-model="value" />
+    <DataViewer
+      :data="data"
+      v-slot="{ toggleDialog }"
+      :boolean-labels="{
+        accept: ['Accepted', 'Rejected']
+      }"
+    >
+      <TBtn label="View Data" @click="toggleDialog(data, 'view')" />
+    </DataViewer>
   </div>
 </template>
 ```

@@ -8,6 +8,11 @@
   <TDialog v-model="dialogToggle" v-bind="$attrs">
     <MainContent
       dialog-mode
+      class="constrained"
+      :shadow="shadow"
+      :rounded="rounded"
+      :bordered="bordered"
+      :separator="separator"
       :exclusions="exclusions"
       :form-exclusions="formExclusions"
       :boolean-labels="booleanLabels"

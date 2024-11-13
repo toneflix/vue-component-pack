@@ -1,19 +1,25 @@
 <template>
   <DataViewer
+    bordered
+    shadow
+    rounded
+    separator
     :data="data"
     :form="data"
-    v-slot="props"
+    v-slot="{ toggleDialog }"
     :boolean-labels="{
       accept: ['Accepted', 'Rejected']
     }"
   >
-    <TBtn label="Edit" @click="props.toggleDialog(data, 'edit')" />
+    <TBtn label="View Data" @click="toggleDialog(data, 'view')" />
   </DataViewer>
+
+  <MainContent bordered shadow rounded separator :data="data" :form="data" class="mmx" />
 </template>
 
 <script setup lang="ts">
 import '@toneflix/vue-dataviewer/src/styles/main.scss'
-import { DataViewer } from '@toneflix/vue-dataviewer'
+import { DataViewer, MainContent } from '@toneflix/vue-dataviewer'
 import { reactive } from 'vue'
 import { TBtn } from '@toneflix/vue-dataviewer'
 
@@ -29,3 +35,10 @@ const data = reactive({
   imageUrl: 'https://www.tailwind-kit.com/images/person/6.jpg'
 })
 </script>
+
+<style lang="scss" scoped>
+.mmx {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+</style>

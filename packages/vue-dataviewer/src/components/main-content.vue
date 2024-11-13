@@ -1,5 +1,5 @@
 <template>
-  <TCard>
+  <TCard :class="{ 't-card-border': bordered, 't-card-shadow': shadow, 't-card-rounded': rounded }">
     <template #header>
       <slot name="header">
         <div class="flex items-center justify-between">
@@ -35,6 +35,7 @@
         <div class="t-list" separator>
           <div
             class="q-my-sm t-item clickable"
+            :class="{ 't-item-separator': separator }"
             v-if="viewData.imageUrl"
             @click="setData(viewData, 'doc')"
           >
@@ -48,7 +49,12 @@
               <div class="t-item-label">Click to expand</div>
             </div>
           </div>
-          <div class="q-my-sm t-item" :key="field[0]" v-for="field in viewDataMap">
+          <div
+            class="q-my-sm t-item"
+            :class="{ 't-item-separator': separator }"
+            :key="field[0]"
+            v-for="field in viewDataMap"
+          >
             <div class="t-item-section">
               <div class="t-item-label caption">
                 {{ titleCase(slug(field[0])) }}
