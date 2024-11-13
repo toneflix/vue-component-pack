@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.3.0...@toneflix/vue-forms@1.4.0) (2024-11-13)
+
+### Bug Fixes
+
+- Use VueForms for data viewer. ([9eaf971](https://github.com/toneflix/vue-component-pack/commit/9eaf9716d301d2f57cd2ffa717538dafdcbe5bc2))
+
+### Features
+
+- Add object support for inpute-radio ([b049acf](https://github.com/toneflix/vue-component-pack/commit/b049acf0f0ed7ba30da60304b49ea8b5c9ff2870))
+
 # [1.3.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.2.0...@toneflix/vue-forms@1.3.0) (2024-11-10)
 
 ### Features
