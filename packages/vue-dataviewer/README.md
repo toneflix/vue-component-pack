@@ -5,10 +5,10 @@
 
 Quickly view data from an object with little to no tinkering on vue 3. - See a live demo [here](https://toneflix.github.io/vue-component-pack/vue-dataviewer/demo.html).
 
-<p align="center">
-    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-dataviewer/images/banner.png" alt="Dummy Comp">
-    <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
-</p>
+<!-- <p align="center">
+    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-dataviewer/images/banner.png" alt="Vue Dataviewer">
+    <img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">
+</p> -->
 
 ## Documentation
 
