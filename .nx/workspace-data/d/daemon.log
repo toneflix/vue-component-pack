@@ -26197,3 +26197,13 @@ Node.js v20.16.0
 [NX Daemon Server] - 2024-11-13T01:00:10.134Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2024-11-13T01:00:10.134Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-11-13T01:00:10.134Z - Time taken for 'total execution time for createProjectGraph()' 16.57108299806714ms
+[NX Daemon Server] - 2024-11-13T04:59:54.629Z - [WATCHER]: pnpm-workspace.yaml was modified
+[NX Daemon Server] - 2024-11-13T04:59:54.634Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-13T05:00:01.040Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-13T05:00:01.041Z - [REQUEST]: pnpm-workspace.yaml
+[NX Daemon Server] - 2024-11-13T05:00:01.041Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-13T05:00:01.057Z - Time taken for 'hash changed files from watcher' 2.8240000009536743ms
+[NX Daemon Server] - 2024-11-13T05:00:01.085Z - Time taken for 'build-project-configs' 34.67112499848008ms
+[NX Daemon Server] - 2024-11-13T05:00:01.114Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-13T05:00:01.114Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-13T05:00:01.114Z - Time taken for 'total execution time for createProjectGraph()' 25.566458001732826ms
