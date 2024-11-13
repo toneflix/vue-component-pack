@@ -26120,3 +26120,14 @@ Node.js v20.16.0
 [NX Daemon Server] - 2024-11-13T00:56:27.151Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-11-13T00:56:27.151Z - Time taken for 'total execution time for createProjectGraph()' 8.562791999429464ms
 [NX Daemon Server] - 2024-11-13T00:56:27.445Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-13T00:57:28.508Z - [WATCHER]: packages/vue-dataviewer/src/types.ts was modified
+[NX Daemon Server] - 2024-11-13T00:57:28.509Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-13T00:57:28.713Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-13T00:57:28.713Z - [REQUEST]: packages/vue-dataviewer/src/types.ts
+[NX Daemon Server] - 2024-11-13T00:57:28.713Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-13T00:57:28.715Z - Time taken for 'hash changed files from watcher' 0.3371249996125698ms
+[NX Daemon Server] - 2024-11-13T00:57:28.726Z - Time taken for 'build-project-configs' 9.315041996538639ms
+[NX Daemon Server] - 2024-11-13T00:57:28.742Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-13T00:57:28.743Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-13T00:57:28.743Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-13T00:57:28.743Z - Time taken for 'total execution time for createProjectGraph()' 12.153332997113466ms
