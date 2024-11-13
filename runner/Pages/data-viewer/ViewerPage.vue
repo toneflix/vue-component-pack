@@ -1,11 +1,21 @@
 <template>
-  <DataViewer mode="edit" :data="data" :form="data" />
+  <DataViewer
+    :data="data"
+    :form="data"
+    v-slot="props"
+    :boolean-labels="{
+      accept: ['Accepted', 'Rejected']
+    }"
+  >
+    <TBtn label="Edit" @click="props.toggleDialog(data, 'edit')" />
+  </DataViewer>
 </template>
 
 <script setup lang="ts">
 import '@toneflix/vue-dataviewer/src/styles/main.scss'
 import { DataViewer } from '@toneflix/vue-dataviewer'
 import { reactive } from 'vue'
+import { TBtn } from '@toneflix/vue-dataviewer'
 
 const data = reactive({
   name: 'John Obi Doe',

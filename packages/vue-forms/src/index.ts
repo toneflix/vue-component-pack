@@ -1,5 +1,12 @@
 import type { App, Plugin } from 'vue'
 
+import _FormActions from './components/form-actions.vue'
+import _InputCheckbox from './components/input-checkbox.vue'
+import _InputField from './components/input-field.vue'
+import _InputRadio from './components/input-radio.vue'
+import _InputSelect from './components/input-select.vue'
+import _InputSwitch from './components/input-switch.vue'
+import _InputTextarea from './components/input-textarea.vue'
 import _VueForms from './components/vue-forms.vue'
 
 type SFCWithInstall<T> = T & Plugin
@@ -15,4 +22,11 @@ const withInstall = <T>(comp: T) => {
 }
 
 export const VueForms = withInstall(_VueForms)
+export const InputField = _InputField
+export const InputRadio = _InputRadio
+export const InputSelect = _InputSelect
+export const FormActions = _FormActions
+export const InputSwitch = _InputSwitch
+export const InputCheckbox = _InputCheckbox
+export const InputTextarea = _InputTextarea
 export default VueForms

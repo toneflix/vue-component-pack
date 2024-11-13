@@ -1,6 +1,8 @@
 import type { App, Plugin } from 'vue'
 
 import _DataViewer from './components/data-viewer.vue'
+import _MainContent from './components/main-content.vue'
+import _TBtn from './components/TBtn.vue'
 
 type SFCWithInstall<T> = T & Plugin
 
@@ -14,5 +16,7 @@ const withInstall = <T>(comp: T) => {
   return comp as SFCWithInstall<T>
 }
 
+export const TBtn = _TBtn
 export const DataViewer = withInstall(_DataViewer)
+export const MainContent = _MainContent
 export default DataViewer

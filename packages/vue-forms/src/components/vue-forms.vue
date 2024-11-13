@@ -4,6 +4,11 @@
     :class="{ 'form-row': !useGrid, 'form-grid': useGrid, bordered, rounded }"
     v-if="!isGrouped"
   >
+    <slot
+      name="prepend"
+      :props="{ formFields, isGrouped, useGrid, bordered, rounded, hideSubmit, separator }"
+    />
+
     <FormGroup
       v-for="field in formFields"
       :key="field.name"
@@ -15,6 +20,8 @@
         <slot :name="slot" v-bind="props" />
       </template>
     </FormGroup>
+
+    <slot :props="{ formFields, isGrouped, useGrid, bordered, rounded, hideSubmit, separator }" />
 
     <hr class="group-separator" v-if="separator && (!hideSubmit || !hideSubmit)" />
 
@@ -31,6 +38,11 @@
     </slot>
   </div>
   <div v-else class="form-groups">
+    <slot
+      name="prepend"
+      :props="{ formFields, isGrouped, useGrid, bordered, rounded, hideSubmit, separator }"
+    />
+
     <template v-for="(fields, group) in groups">
       <hr class="group-separator" :key="group + 'separator'" v-if="group && separator" />
 
@@ -71,6 +83,8 @@
         </div>
       </div>
     </template>
+
+    <slot :props="{ formFields, isGrouped, useGrid, bordered, rounded, hideSubmit, separator }" />
 
     <hr class="group-separator" v-if="separator && (!hideSubmit || !hideSubmit)" />
 

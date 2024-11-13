@@ -1,21 +1,79 @@
+@use '@toneflix/vue-forms/src/styles/main.scss';
 @import url(https://fonts.bunny.net/css?family=anton:400|archivo:100,200,300,400,500,600,700,800);
-@import '@toneflix/vue-forms/src/styles/main.scss';
+
+.t-dialog {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .close-btn {
+    display: inline;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: transparent;
+    color: #e30f0f;
+    &:hover {
+      color: #e30f0fae;
+    }
+  }
+  &-fade {
+    display: none;
+    visibility: hidden;
+  }
+  &-backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  *:not(.t-dialog-backdrop) {
+    position: relative;
+  }
+}
 
 .t-card {
   font-family: 'Archivo', sans-serif;
   min-width: 100%;
+  max-width: 100%;
   border: 1px solid rgba(232, 230, 230, 0.5);
-  padding: 1em;
   border-radius: 0.373em;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-  // .t-card-body {
-  //   padding: 1em;
-  // }
-  .t-card-header {
-    margin-bottom: 0.42em;
+  background-color: #fff;
+  .flex {
+    display: flex;
+    &.justify-between {
+      justify-content: space-between;
+    }
+    &.items-center {
+      align-items: center;
+    }
+  }
+  &-body {
+    overflow: auto;
+    max-height: 80vh;
+    border-top: solid rgba(200, 200, 200, 0.5) 1px;
+  }
+  &-header {
+    padding: 0.7rem 1em;
     .card-title {
       font-weight: 700;
       font-size: 1.25em;
+    }
+  }
+
+  @media (min-width: 576px) {
+    min-width: 550px;
+    max-width: 90vw;
+    &-body {
+      max-height: 90vh;
     }
   }
 }
@@ -33,6 +91,23 @@
   img {
     width: 50px;
     min-height: 50px;
+  }
+}
+
+.t-chip {
+  margin: 0.129rem;
+  width: fit-content;
+  border-radius: 0.422rem;
+  padding: 0.121rem 0.312rem;
+  color: #fff;
+  &-square {
+    border-radius: 0;
+  }
+  &-red {
+    background-color: #e30f0f;
+  }
+  &-green {
+    background-color: #25b401;
   }
 }
 
@@ -81,12 +156,6 @@
   }
 }
 
-@media (min-width: 576px) {
-  .t-card {
-    min-width: 550px;
-  }
-}
-
 button.t-btn {
   display: inline-flex;
   align-items: center;
@@ -114,4 +183,15 @@ button.t-btn:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
   box-shadow: 0 0 0 0px #fff, 0 0 0 2px rgba(213, 118, 50, 0.919), 0 0 #0000;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+.m-4 {
+  margin: 1rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/index.cjs"),a={install:t=>{t.use(e.DataViewer)}};exports.DataViewer=e.DataViewer;exports.default=a;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/index.cjs"),n={install:t=>{t.use(e.DataViewer)}};exports.DataViewer=e.DataViewer;exports.MainContent=e.MainContent;exports.TBtn=e.TBtn;exports.default=n;

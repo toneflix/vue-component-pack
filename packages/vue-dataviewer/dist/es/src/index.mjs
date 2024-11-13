@@ -1,9 +1,13 @@
-import n from "./components/data-viewer.vue.mjs";
-const r = (t) => (t.install = (a) => {
-  const e = t.name;
-  a.component(e, t);
-}, t), i = r(n);
+import o from "./components/data-viewer.vue.mjs";
+import s from "./components/main-content.vue.mjs";
+import i from "./components/TBtn.vue.mjs";
+const r = (n) => (n.install = (t) => {
+  const a = n.name;
+  t.component(a, n);
+}, n), c = i, _ = r(o), l = s;
 export {
-  i as DataViewer,
-  i as default
+  _ as DataViewer,
+  l as MainContent,
+  c as TBtn,
+  _ as default
 };
