@@ -26233,3 +26233,12 @@ Node.js v20.16.0
 [NX Daemon Server] - 2024-11-13T05:07:33.619Z - Time taken for 'total execution time for createProjectGraph()' 20.33016700297594ms
 [NX Daemon Server] - 2024-11-13T05:07:36.390Z - [WATCHER]: packages/vue-dataviewer/README.md was modified
 [NX Daemon Server] - 2024-11-13T05:07:36.391Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-13T05:07:42.793Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-13T05:07:42.793Z - [REQUEST]: packages/vue-dataviewer/README.md
+[NX Daemon Server] - 2024-11-13T05:07:42.793Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-13T05:07:42.794Z - Time taken for 'hash changed files from watcher' 0.5653750002384186ms
+[NX Daemon Server] - 2024-11-13T05:07:42.802Z - Time taken for 'build-project-configs' 6.006415996700525ms
+[NX Daemon Server] - 2024-11-13T05:07:42.815Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-13T05:07:42.815Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-13T05:07:42.816Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-13T05:07:42.816Z - Time taken for 'total execution time for createProjectGraph()' 9.03116600215435ms
