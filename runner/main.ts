@@ -59,6 +59,7 @@ const auth = authPlugin({
   router,
   baseUrl: 'http://example.com/api/v1',
   storageKey: 'my_auth_token',
+  storageOptions: { persist: true },
   endpoints: {
     login: '/login',
     register: '/register',

@@ -112,6 +112,17 @@ export interface AuthOptions<U = AuthUser> {
    */
   storageKey?: string
   /**
+   * Extra options to be passed into the auth store instance
+   * Usefull if you need to pass {persist: true} when using pinia-plugin-persists
+   */
+  storageOptions?: {
+    /**
+     * Options for pinia-plugin-persists
+     */
+    persist?: any // eslint-disable-line @typescript-eslint/no-explicit-any
+    [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
+  }
+  /**
    * Extra config to pass to the axios instance
    */
   axiosConfig?: object

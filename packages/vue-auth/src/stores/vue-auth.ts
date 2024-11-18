@@ -20,6 +20,8 @@ axios.defaults.headers.common['Accept'] = 'application/json'
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
 export function createVueAuthStore<UA = unknown>() {
+  const { storageOptions } = getAuthConfig<UA>()
+
   return defineStore(
     'vue-auth',
     () => {
@@ -291,7 +293,7 @@ export function createVueAuthStore<UA = unknown>() {
         loadUserFromStorage
       }
     },
-    { persist: true } as never
+    storageOptions
   )
 }
 
