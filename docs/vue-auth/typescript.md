@@ -79,7 +79,7 @@ export interface AuthOptions<U = AuthUser> {
   storageKey?: string;
   axiosConfig?: object;
   loginRouteName?: string;
-  getAuthHeaders?: () => Promise<CustomAxiosHeaders> | CustomAxiosHeaders;
+  setAuthHeaders?: () => Promise<CustomAxiosHeaders> | CustomAxiosHeaders;
   transformResponse?: (response: any) => {
     user: U;
     token?: string;

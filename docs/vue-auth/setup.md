@@ -92,14 +92,14 @@ Example:
 storageOptions: { persist: true }
 ```
 
-### `getAuthHeaders`
+### `setAuthHeaders`
 
 This option provides headers for authenticated requests. You can define a function that returns headers, and it’s commonly used to add the Authorization header with the token.
 
 Example:
 
 ```ts
-getAuthHeaders: () => {
+setAuthHeaders: () => {
   const token = localStorage.getItem('my_auth_token')
   return {
     Authorization: `Bearer ${token}`
@@ -370,7 +370,7 @@ const auth = authPlugin({
   },
   loginRouteName: '/auth/login',
   defaultAuthRouteName: '/auth/profile',
-  getAuthHeaders: () => {
+  setAuthHeaders: () => {
     const token = localStorage.getItem('my_auth_token')
     return {
       Authorization: `Bearer ${token}`

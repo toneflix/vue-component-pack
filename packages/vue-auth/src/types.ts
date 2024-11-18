@@ -132,10 +132,19 @@ export interface AuthOptions<U = AuthUser> {
    */
   loginRouteName?: string
   /**
-   *  Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
+   * Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
+   * @deprecated 1.3.8 Will be removed in the future, use `setAuthHeaders()` instead
    * @returns
    */
   getAuthHeaders?: (context: {
+    user: U
+    token?: string
+  }) => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
+  /**
+   * Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
+   * @returns
+   */
+  setAuthHeaders?: (context: {
     user: U
     token?: string
   }) => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
