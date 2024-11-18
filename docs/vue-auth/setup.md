@@ -82,6 +82,16 @@ Example:
 storageKey: 'my_auth_token'
 ```
 
+### `storageOptions`
+
+This option allows you to pass extra options to the auth store instance when needed. This becomes extremely usefull if you use pinia-plugin-persists or another pinia plugin that requires you to pass options to your stores. E.g. `{ persist: true }`
+
+Example:
+
+```js
+storageOptions: { persist: true }
+```
+
 ### `getAuthHeaders`
 
 This option provides headers for authenticated requests. You can define a function that returns headers, and it’s commonly used to add the Authorization header with the token.
@@ -349,6 +359,7 @@ const auth = authPlugin({
   router,
   baseUrl: 'https://example.com/api/v1',
   storageKey: 'my_auth_token',
+  storageOptions: { persist: true },
   endpoints: {
     login: '/login',
     register: '/register',

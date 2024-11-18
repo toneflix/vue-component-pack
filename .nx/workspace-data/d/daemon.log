@@ -26344,3 +26344,80 @@ Node.js v20.16.0
 [NX Daemon Server] - 2024-11-18T16:21:39.975Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-11-18T16:21:39.975Z - Time taken for 'total execution time for createProjectGraph()' 7.2253749999999854ms
 [NX Daemon Server] - 2024-11-18T16:21:40.083Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-18T16:23:30.294Z - [WATCHER]: docs/vue-auth/setup.md was modified
+[NX Daemon Server] - 2024-11-18T16:23:30.295Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T16:23:30.499Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T16:23:30.499Z - [REQUEST]: docs/vue-auth/setup.md
+[NX Daemon Server] - 2024-11-18T16:23:30.499Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T16:23:30.504Z - Time taken for 'hash changed files from watcher' 0.8312500000029104ms
+[NX Daemon Server] - 2024-11-18T16:23:30.528Z - Time taken for 'build-project-configs' 23.53574999999546ms
+[NX Daemon Server] - 2024-11-18T16:23:30.546Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-18T16:23:30.546Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-18T16:23:30.546Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-18T16:23:30.546Z - Time taken for 'total execution time for createProjectGraph()' 14.878499999991618ms
+[NX Daemon Server] - 2024-11-18T16:23:40.508Z - [WATCHER]: docs/vue-auth/setup.md was modified
+[NX Daemon Server] - 2024-11-18T16:23:40.509Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T16:23:40.911Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T16:23:40.911Z - [REQUEST]: docs/vue-auth/setup.md
+[NX Daemon Server] - 2024-11-18T16:23:40.911Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T16:23:40.913Z - Time taken for 'hash changed files from watcher' 0.2899580000084825ms
+[NX Daemon Server] - 2024-11-18T16:23:40.922Z - Time taken for 'build-project-configs' 7.393374999999651ms
+[NX Daemon Server] - 2024-11-18T16:23:40.933Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-18T16:23:40.934Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-18T16:23:40.934Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-18T16:23:40.934Z - Time taken for 'total execution time for createProjectGraph()' 9.58454100000381ms
+[NX Daemon Server] - 2024-11-18T16:24:31.655Z - [WATCHER]: docs/vue-auth/setup.md was modified
+[NX Daemon Server] - 2024-11-18T16:24:31.656Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T16:24:32.459Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T16:24:32.459Z - [REQUEST]: docs/vue-auth/setup.md
+[NX Daemon Server] - 2024-11-18T16:24:32.459Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T16:24:32.463Z - Time taken for 'hash changed files from watcher' 0.6992089999839664ms
+[NX Daemon Server] - 2024-11-18T16:24:32.479Z - Time taken for 'build-project-configs' 15.177834000001894ms
+[NX Daemon Server] - 2024-11-18T16:24:32.495Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-18T16:24:32.495Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-18T16:24:32.495Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-18T16:24:32.495Z - Time taken for 'total execution time for createProjectGraph()' 12.45733299999847ms
+[NX Daemon Server] - 2024-11-18T16:25:45.988Z - [WATCHER]: docs/vue-auth/setup.md was modified
+[NX Daemon Server] - 2024-11-18T16:25:45.990Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T16:25:47.592Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T16:25:47.592Z - [REQUEST]: docs/vue-auth/setup.md
+[NX Daemon Server] - 2024-11-18T16:25:47.592Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T16:25:47.595Z - Time taken for 'hash changed files from watcher' 0.39304100000299513ms
+[NX Daemon Server] - 2024-11-18T16:25:47.613Z - Time taken for 'build-project-configs' 16.063292000006186ms
+[NX Daemon Server] - 2024-11-18T16:25:47.625Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-18T16:25:47.625Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-18T16:25:47.625Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-18T16:25:47.625Z - Time taken for 'total execution time for createProjectGraph()' 9.824124999984633ms
+[NX Daemon Server] - 2024-11-18T16:26:56.723Z - [WATCHER]: docs/vue-auth/setup.md was modified
+[NX Daemon Server] - 2024-11-18T16:26:56.724Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T16:26:59.929Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T16:26:59.930Z - [REQUEST]: docs/vue-auth/setup.md
+[NX Daemon Server] - 2024-11-18T16:26:59.930Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T16:26:59.936Z - Time taken for 'hash changed files from watcher' 1.4801669999724254ms
+[NX Daemon Server] - 2024-11-18T16:26:59.962Z - Time taken for 'build-project-configs' 27.72079200000735ms
+[NX Daemon Server] - 2024-11-18T16:26:59.980Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-18T16:26:59.981Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-18T16:26:59.981Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-18T16:26:59.981Z - Time taken for 'total execution time for createProjectGraph()' 13.626540999975987ms
+[NX Daemon Server] - 2024-11-18T16:27:37.413Z - [WATCHER]: docs/vue-auth/setup.md was modified
+[NX Daemon Server] - 2024-11-18T16:27:37.420Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T16:27:43.867Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T16:27:43.871Z - [REQUEST]: docs/vue-auth/setup.md
+[NX Daemon Server] - 2024-11-18T16:27:43.871Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T16:27:43.898Z - Time taken for 'hash changed files from watcher' 7.5888750000158325ms
+[NX Daemon Server] - 2024-11-18T16:27:43.916Z - Time taken for 'build-project-configs' 19.624958999978844ms
+[NX Daemon Server] - 2024-11-18T16:27:43.931Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-18T16:27:43.932Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-18T16:27:43.932Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-18T16:27:43.932Z - Time taken for 'total execution time for createProjectGraph()' 17.15575000003446ms
+[NX Daemon Server] - 2024-11-18T16:28:52.564Z - [WATCHER]: docs/vue-auth/setup.md was modified
+[NX Daemon Server] - 2024-11-18T16:28:52.569Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-18T16:28:58.977Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-18T16:28:58.977Z - [REQUEST]: docs/vue-auth/setup.md
+[NX Daemon Server] - 2024-11-18T16:28:58.978Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-18T16:28:59.008Z - Time taken for 'hash changed files from watcher' 3.334084000030998ms
+[NX Daemon Server] - 2024-11-18T16:28:59.029Z - Time taken for 'build-project-configs' 35.20762499998091ms
+[NX Daemon Server] - 2024-11-18T16:28:59.048Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-18T16:28:59.048Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-18T16:28:59.048Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-18T16:28:59.050Z - Time taken for 'total execution time for createProjectGraph()' 15.775459000025876ms
