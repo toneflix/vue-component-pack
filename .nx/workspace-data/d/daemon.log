@@ -26680,3 +26680,110 @@ Node.js v20.16.0
 [NX Daemon Server] - 2024-11-19T05:05:17.748Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
 [NX Daemon Server] - 2024-11-19T05:05:17.748Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
 [NX Daemon Server] - 2024-11-19T05:05:17.749Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX Daemon Server] - 2024-11-19T05:08:43.738Z - Started listening on: /var/folders/x6/ns54bm856qj6c12w8t695m740000gn/T/37e2db4187c7de6acbb4/d.sock
+[NX Daemon Server] - 2024-11-19T05:08:43.744Z - [WATCHER]: Subscribed to changes within: /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (native)
+[NX Daemon Server] - 2024-11-19T05:08:43.745Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-19T05:08:43.746Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-19T05:08:43.747Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-19T05:08:43.748Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-19T05:08:43.882Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-19T05:08:43.882Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-19T05:08:43.882Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-19T05:08:43.887Z - Time taken for 'loadNxPlugins' 133.36325ms
+[NX Daemon Server] - 2024-11-19T05:08:44.085Z - Time taken for 'build-project-configs' 189.83466600000003ms
+[NX Daemon Server] - 2024-11-19T05:08:44.112Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-19T05:08:44.112Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-19T05:08:44.113Z - Time taken for 'total for creating and serializing project graph' 364.47850000000005ms
+[NX Daemon Server] - 2024-11-19T05:08:44.114Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-19T05:08:44.114Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 364. Response time: 2.
+[NX Daemon Server] - 2024-11-19T05:08:44.117Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-11-19T05:08:44.117Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-11-19T05:08:44.117Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-11-19T05:08:44.135Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-19T05:08:44.135Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-19T05:08:44.135Z - Time taken for 'total for creating and serializing project graph' 0.14441599999997834ms
+[NX Daemon Server] - 2024-11-19T05:08:44.135Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-19T05:08:44.135Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-11-19T05:08:44.186Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-19T05:08:44.189Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-19T05:08:44.189Z - Handled HASH_TASKS. Handling time: 7. Response time: 3.
+[NX Daemon Server] - 2024-11-19T05:08:45.319Z - [WATCHER]: 7 file(s) created or restored, 0 file(s) modified, 7 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:45.321Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:45.366Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:45.366Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:45.366Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-11-19T05:08:45.370Z - [WATCHER]: 8 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:45.372Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:45.424Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-19T05:08:45.424Z - [REQUEST]: packages/vue-auth/dist/es/index.mjs,packages/vue-auth/dist/es/src/composables/useAuth.mjs,packages/vue-auth/dist/es/src/composables/useInlineAuth.mjs,packages/vue-auth/dist/es/src/utils/plugins.mjs,packages/vue-auth/dist/es/src/utils/config.mjs,packages/vue-auth/dist/es/src/stores/vue-auth.mjs,packages/vue-auth/dist/es/src/utils/middlewares.mjs,packages/vue-auth/dist/lib/src/composables/useInlineAuth.cjs,packages/vue-auth/dist/lib/index.cjs,packages/vue-auth/dist/lib/src/utils/middlewares.cjs,packages/vue-auth/dist/lib/src/utils/plugins.cjs,packages/vue-auth/dist/lib/src/stores/vue-auth.cjs,packages/vue-auth/dist/lib/src/utils/config.cjs,packages/vue-auth/dist/lib/src/composables/useAuth.cjs
+[NX Daemon Server] - 2024-11-19T05:08:45.424Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-19T05:08:45.429Z - [WATCHER]: 14 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:45.429Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:45.429Z - Time taken for 'hash changed files from watcher' 1.5027499999998781ms
+[NX Daemon Server] - 2024-11-19T05:08:45.436Z - Time taken for 'build-project-configs' 8.533042000000023ms
+[NX Daemon Server] - 2024-11-19T05:08:45.465Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.465Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.466Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.466Z - Time taken for 'total execution time for createProjectGraph()' 21.815500000000156ms
+[NX Daemon Server] - 2024-11-19T05:08:45.530Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-19T05:08:45.530Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-19T05:08:45.530Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-19T05:08:45.533Z - Time taken for 'hash changed files from watcher' 0.17116599999985738ms
+[NX Daemon Server] - 2024-11-19T05:08:45.544Z - Time taken for 'build-project-configs' 10.732459000000063ms
+[NX Daemon Server] - 2024-11-19T05:08:45.555Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.556Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.556Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.556Z - Time taken for 'total execution time for createProjectGraph()' 8.963833999999906ms
+[NX Daemon Server] - 2024-11-19T05:08:45.776Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:45.777Z - [WATCHER]: 20 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:45.789Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:45.789Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:45.789Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-11-19T05:08:45.795Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:45.795Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:45.795Z - Handled RECORD_OUTPUTS_HASH. Handling time: 4. Response time: 0.
+[NX Daemon Server] - 2024-11-19T05:08:45.828Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:45.829Z - [WATCHER]: 20 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:45.880Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-19T05:08:45.880Z - [REQUEST]: packages/otp-input/dist/lib/src/index.cjs,packages/paystack-inline/dist/lib/src/index.cjs,packages/otp-input/dist/lib/src/components/otp-input.vue2.cjs,packages/otp-input/dist/lib/index.cjs,packages/paystack-inline/dist/lib/style.css,packages/otp-input/dist/lib/src/components/otp-input.vue.cjs,packages/otp-input/dist/es/style.css,packages/paystack-inline/dist/lib/index.cjs,packages/otp-input/dist/es/src/components/otp-input.vue2.mjs,packages/paystack-inline/dist/es/src/components/paystack-inline.vue2.mjs,packages/otp-input/dist/es/src/index.mjs,packages/paystack-inline/dist/es/src/components/paystack-inline.vue.mjs,packages/paystack-inline/dist/es/style.css,packages/paystack-inline/dist/lib/src/components/paystack-inline.vue2.cjs,packages/otp-input/dist/lib/style.css,packages/paystack-inline/dist/es/src/index.mjs,packages/otp-input/dist/es/src/components/otp-input.vue.mjs,packages/otp-input/dist/es/index.mjs,packages/paystack-inline/dist/es/index.mjs,packages/paystack-inline/dist/lib/src/components/paystack-inline.vue.cjs
+[NX Daemon Server] - 2024-11-19T05:08:45.880Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-19T05:08:45.884Z - Time taken for 'hash changed files from watcher' 0.7798340000003918ms
+[NX Daemon Server] - 2024-11-19T05:08:45.892Z - Time taken for 'build-project-configs' 10.131582999999864ms
+[NX Daemon Server] - 2024-11-19T05:08:45.900Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.901Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.901Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-19T05:08:45.901Z - Time taken for 'total execution time for createProjectGraph()' 6.395416999999725ms
+[NX Daemon Server] - 2024-11-19T05:08:45.901Z - [WATCHER]: 23 file(s) created or restored, 0 file(s) modified, 23 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:45.901Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:45.933Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:45.933Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:45.933Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-11-19T05:08:45.950Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:45.967Z - [WATCHER]: 46 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:46.004Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-19T05:08:46.004Z - [REQUEST]: packages/vue-forms/dist/es/src/components/input-field.vue2.mjs,packages/vue-forms/dist/es/src/components/input-radio.vue.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue2.mjs,packages/vue-forms/dist/es/src/components/input-switch.vue.mjs,packages/vue-forms/dist/es/src/components/input-select.vue.mjs,packages/vue-forms/dist/es/src/components/vue-forms.vue.mjs,packages/vue-forms/dist/es/src/components/vue-forms.vue2.mjs,packages/vue-forms/dist/es/src/components/input-radio.vue2.mjs,packages/vue-forms/dist/es/_virtual/_plugin-vue_export-helper.mjs,packages/vue-forms/dist/es/src/components/input-field.vue.mjs,packages/vue-forms/dist/es/src/components/form-group.vue.mjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue2.mjs,packages/vue-forms/dist/es/src/components/input-checkbox.vue.mjs,packages/vue-forms/dist/es/src/components/form-actions.vue.mjs,packages/vue-forms/dist/es/src/components/form-actions.vue2.mjs,packages/vue-forms/dist/es/src/components/input-select.vue2.mjs,packages/vue-forms/dist/es/src/components/form-group.vue2.mjs,packages/vue-forms/dist/es/src/utils/providers.mjs,packages/vue-forms/dist/es/src/components/input-textarea.vue.mjs,packages/vue-forms/dist/es/style.css,packages/vue-forms/dist/es/src/components/input-textarea.vue2.mjs,packages/vue-forms/dist/es/src/index.mjs,packages/vue-forms/dist/es/index.mjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue.cjs,packages/vue-forms/dist/lib/src/components/input-field.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-switch.vue.cjs,packages/vue-forms/dist/lib/src/components/input-field.vue.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-radio.vue2.cjs,packages/vue-forms/dist/lib/src/components/input-select.vue2.cjs,packages/vue-forms/dist/lib/style.css,packages/vue-forms/dist/lib/src/components/input-radio.vue.cjs,packages/vue-forms/dist/lib/src/components/form-group.vue.cjs,packages/vue-forms/dist/lib/index.cjs,packages/vue-forms/dist/lib/src/components/input-select.vue.cjs,packages/vue-forms/dist/lib/_virtual/_plugin-vue_export-helper.cjs,packages/vue-forms/dist/lib/src/index.cjs,packages/vue-forms/dist/lib/src/components/form-group.vue2.cjs,packages/vue-forms/dist/lib/src/components/form-actions.vue2.cjs,packages/vue-forms/dist/lib/src/utils/providers.cjs,packages/vue-forms/dist/lib/src/components/input-textarea.vue.cjs,packages/vue-forms/dist/lib/src/components/vue-forms.vue.cjs,packages/vue-forms/dist/lib/src/components/input-checkbox.vue.cjs,packages/vue-forms/dist/lib/src/components/input-switch.vue2.cjs
+[NX Daemon Server] - 2024-11-19T05:08:46.004Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-19T05:08:46.005Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:46.005Z - Time taken for 'hash changed files from watcher' 0.9457079999997404ms
+[NX Daemon Server] - 2024-11-19T05:08:46.012Z - Time taken for 'build-project-configs' 5.633041999999932ms
+[NX Daemon Server] - 2024-11-19T05:08:46.021Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-19T05:08:46.021Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-19T05:08:46.021Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-19T05:08:46.022Z - Time taken for 'total execution time for createProjectGraph()' 6.662499999999909ms
+[NX Daemon Server] - 2024-11-19T05:08:46.828Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:46.828Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-19T05:08:46.828Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 1.
+[NX Daemon Server] - 2024-11-19T05:08:46.831Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:46.832Z - [WATCHER]: 30 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:46.883Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:08:46.884Z - [WATCHER]: 30 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-11-19T05:08:46.933Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-19T05:08:46.933Z - [REQUEST]: packages/vue-dataviewer/dist/es/src/utils/providers.mjs,packages/vue-dataviewer/dist/lib/src/components/main-content.vue.cjs,packages/vue-dataviewer/dist/es/src/components/TBtn.vue.mjs,packages/vue-dataviewer/dist/lib/src/components/data-viewer.vue2.cjs,packages/vue-dataviewer/dist/lib/src/components/main-content.vue2.cjs,packages/vue-dataviewer/dist/es/src/components/dialog/TDialog.vue2.mjs,packages/vue-dataviewer/dist/lib/src/components/TInnerLoading.vue2.cjs,packages/vue-dataviewer/dist/es/src/components/main-content.vue.mjs,packages/vue-dataviewer/dist/es/index.mjs,packages/vue-dataviewer/dist/es/src/components/dialog/TDialog.vue.mjs,packages/vue-dataviewer/dist/lib/src/components/dialog/TCard.vue.cjs,packages/vue-dataviewer/dist/lib/src/components/dialog/TCard.vue2.cjs,packages/vue-dataviewer/dist/es/src/components/TInnerLoading.vue.mjs,packages/vue-dataviewer/dist/es/src/components/data-viewer.vue.mjs,packages/vue-dataviewer/dist/es/src/components/main-content.vue2.mjs,packages/vue-dataviewer/dist/es/src/components/dialog/TCard.vue.mjs,packages/vue-dataviewer/dist/lib/src/components/TBtn.vue.cjs,packages/vue-dataviewer/dist/lib/src/components/dialog/TDialog.vue.cjs,packages/vue-dataviewer/dist/lib/index.cjs,packages/vue-dataviewer/dist/lib/src/components/TBtn.vue2.cjs,packages/vue-dataviewer/dist/es/src/components/data-viewer.vue2.mjs,packages/vue-dataviewer/dist/es/src/index.mjs,packages/vue-dataviewer/dist/lib/src/components/dialog/TDialog.vue2.cjs,packages/vue-dataviewer/dist/lib/src/components/data-viewer.vue.cjs,packages/vue-dataviewer/dist/lib/src/utils/providers.cjs,packages/vue-dataviewer/dist/lib/src/components/TInnerLoading.vue.cjs,packages/vue-dataviewer/dist/es/src/components/dialog/TCard.vue2.mjs,packages/vue-dataviewer/dist/lib/src/index.cjs,packages/vue-dataviewer/dist/es/src/components/TInnerLoading.vue2.mjs,packages/vue-dataviewer/dist/es/src/components/TBtn.vue2.mjs
+[NX Daemon Server] - 2024-11-19T05:08:46.934Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-19T05:08:46.935Z - Time taken for 'hash changed files from watcher' 0.6575830000001588ms
+[NX Daemon Server] - 2024-11-19T05:08:46.942Z - Time taken for 'build-project-configs' 5.387166999999863ms
+[NX Daemon Server] - 2024-11-19T05:08:46.951Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-19T05:08:46.951Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-19T05:08:46.951Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-19T05:08:46.951Z - Time taken for 'total execution time for createProjectGraph()' 7.032040999999936ms
+[NX Daemon Server] - 2024-11-19T05:08:46.993Z - Closed a connection. Number of open connections: 0

@@ -15,11 +15,11 @@ function h(t, r, e, n, l, s) {
       n();
       return;
     }
-    const i = t[o];
-    let u = !1;
-    if (i(r, e, (c) => {
-      u = !0, c ? n(c) : a(o + 1);
-    }, s, l), !u)
+    const u = t[o];
+    let c = !1;
+    if (u && u(r, e, (i) => {
+      c = !0, i ? n(i) : a(o + 1);
+    }, s, l), !c)
       throw new Error(
         `Middleware at index ${o} did not call next(). All middlewares must call next() to proceed.`
       );
