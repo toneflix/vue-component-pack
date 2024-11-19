@@ -1,7 +1,9 @@
 packages:
   - packages/*
-  - runner
-  # - '!runner'
+  # - runner
+  - '!runner'
   - '!package-template'
-  # - '!packages/vue-forms'
-  # - '!packages/vue-dataviewer'
+  - '!packages/otp-input'
+  - '!packages/vue-forms'
+  - '!packages/vue-dataviewer'
+  - '!packages/paystack-inline'
