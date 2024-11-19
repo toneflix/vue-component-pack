@@ -45,7 +45,8 @@ export const useInlineAuth = <AU = AuthUser>() => {
    * @param action
    * @returns
    */
-  const useActionWithCallbacks = <R extends { error?: BaseError }>(action: () => Promise<R>) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const useActionWithCallbacks = <R = any>(action: () => Promise<any>) => {
     const errorCallback = ref<(error: BaseError) => void>()
     const successCallback = ref<(data: R) => void>()
 

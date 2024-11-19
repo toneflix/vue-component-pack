@@ -19,8 +19,8 @@ export interface AuthResponse<U = AuthUser> {
 export interface DefinitelyAuthResponse<U = AuthUser> {
   user: U
   error?: BaseError
-  token?: string
-  message?: string
+  token?: string | undefined
+  message?: string | undefined
 }
 
 export interface BaseError extends Error {
@@ -138,7 +138,7 @@ export interface AuthOptions<U = AuthUser> {
    */
   getAuthHeaders?: (context: {
     user: U
-    token?: string
+    token?: string | undefined
   }) => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
   /**
    * Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
@@ -146,7 +146,7 @@ export interface AuthOptions<U = AuthUser> {
    */
   setAuthHeaders?: (context: {
     user: U
-    token?: string
+    token?: string | undefined
   }) => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
   /**
    * Transforms the user object returned from the auth endpoint

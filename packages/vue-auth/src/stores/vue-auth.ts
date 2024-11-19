@@ -161,9 +161,9 @@ export function createVueAuthStore<UA = unknown>() {
         options: AuthOptions = getAuthConfig()
       ): Promise<{
         countdown: Ref<number>
-        timeout?: number
-        error?: BaseError
-        message?: string
+        timeout?: number | undefined
+        error?: BaseError | undefined
+        message?: string | undefined
       }> => {
         const headers = options.setAuthHeaders
           ? await options.setAuthHeaders({ user: user.value, token: token.value })
@@ -207,8 +207,8 @@ export function createVueAuthStore<UA = unknown>() {
         options: AuthOptions<U> = getAuthConfig()
       ): Promise<{
         user: U
-        error?: BaseError
-        message?: string
+        error?: BaseError | undefined
+        message?: string | undefined
       }> => {
         const endpoint = url('reset')
         try {
@@ -242,8 +242,8 @@ export function createVueAuthStore<UA = unknown>() {
         credentials?: T
       ): Promise<{
         user: U
-        error?: BaseError
-        message?: string
+        error?: BaseError | undefined
+        message?: string | undefined
       }> => {
         const tkn = localStorage.getItem(options.storageKey || 'auth_token')
         const headers = options.setAuthHeaders
