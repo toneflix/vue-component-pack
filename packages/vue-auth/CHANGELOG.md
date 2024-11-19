@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.5.0...@toneflix/vue-auth@1.6.0) (2024-11-19)
+
+### Features
+
+- Bring back the `storageOptions` authPlugin config option. ([fdc14cf](https://github.com/toneflix/vue-component-pack/commit/fdc14cf1aaf80ef6c0be7c69426fbd2e0bc39b06))
+
 # [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.4.3...@toneflix/vue-auth@1.5.0) (2024-11-19)
 
 ### Bug Fixes
