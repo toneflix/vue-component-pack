@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.4.3...@toneflix/vue-auth@1.5.0) (2024-11-19)
+
+### Bug Fixes
+
+- Call the underlying `createVueAuthStore` method when calling `useAuthStore`. ([cf1a41d](https://github.com/toneflix/vue-component-pack/commit/cf1a41dd905f9fa0ffd222ccb503ad8138d9a8fb))
+
+### Features
+
+- Remove storage option from initialization options and add as function param where it is required. ([fceffd7](https://github.com/toneflix/vue-component-pack/commit/fceffd744eb59f93b9b296d9d9c3ff4d33bca7f0))
+
 ## [1.4.3](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.4.2...@toneflix/vue-auth@1.4.3) (2024-11-19)
 
 **Note:** Version bump only for package @toneflix/vue-auth
