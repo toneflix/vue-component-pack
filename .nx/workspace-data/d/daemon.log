@@ -26676,3 +26676,7 @@ Node.js v20.16.0
 [NX Daemon Server] - 2024-11-19T05:04:17.340Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2024-11-19T05:04:17.340Z - Time taken for 'total execution time for createProjectGraph()' 6.411291999999776ms
 [NX Daemon Server] - 2024-11-19T05:04:17.432Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-19T05:05:17.748Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-19T05:05:17.748Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (sources)
+[NX Daemon Server] - 2024-11-19T05:05:17.748Z - [WATCHER]: Stopping the watcher for /Users/ralph/Documents/Marx/Toneflix/vue-component-pack (outputs)
+[NX Daemon Server] - 2024-11-19T05:05:17.749Z - Server stopped because: "LOCK_FILES_CHANGED"

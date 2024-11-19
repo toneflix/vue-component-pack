@@ -64,7 +64,7 @@ export const createCountdown = (
  * @param next
  * @param context
  */
-export function runMiddlewares<U = AuthUser>(
+export function runMiddlewares<U = AuthUser> (
   middlewares: AuthOptions<U>['middlewares'],
   to: RouteLocationNormalized,
   from: RouteLocationNormalized,
@@ -91,7 +91,9 @@ export function runMiddlewares<U = AuthUser>(
     }
 
     // Invoke the middleware function with wrapped next
-    middleware(to, from, wrappedNext, context, router)
+    if (middleware) {
+      middleware(to, from, wrappedNext, context, router)
+    }
 
     if (!nextCalled) {
       throw new Error(
