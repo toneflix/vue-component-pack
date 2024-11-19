@@ -70,7 +70,7 @@ export function runMiddlewares<U = AuthUser>(
   from: RouteLocationNormalized,
   next: NavigationGuardNext,
   router: Router,
-  context: { user: U; token?: string; isAuthenticated: boolean }
+  context: { user: U; token?: string | undefined; isAuthenticated: boolean }
 ) {
   const executeMiddleware = (index: number) => {
     if (!middlewares || index >= middlewares.length) {

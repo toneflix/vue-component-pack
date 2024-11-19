@@ -41,7 +41,7 @@ export interface Middleware<U = unknown & AuthUser> {
     to: RouteLocationNormalized,
     from: RouteLocationNormalized,
     next: NavigationGuardNext,
-    context: { user: U; token?: string; isAuthenticated: boolean },
+    context: { user: U; token?: string | undefined; isAuthenticated: boolean },
     router?: Router
   ): void
 }

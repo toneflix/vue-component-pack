@@ -76,9 +76,9 @@ export const useAuth = <AU = AuthUser>() => {
     options: AuthOptions = getAuthConfig()
   ): Promise<{
     countdown: Ref<number>
-    timeout?: number
-    error?: BaseError
-    message?: string
+    timeout?: number | undefined
+    error?: BaseError | undefined
+    message?: string | undefined
   }> => {
     return store.forgot(credentials, options)
   }
@@ -95,8 +95,8 @@ export const useAuth = <AU = AuthUser>() => {
     options: AuthOptions<U> = getAuthConfig()
   ): Promise<{
     user: U
-    error?: BaseError
-    message?: string
+    error?: BaseError | undefined
+    message?: string | undefined
   }> => {
     return store.reset<U>(credentials, options)
   }
@@ -114,8 +114,8 @@ export const useAuth = <AU = AuthUser>() => {
     credentials?: T
   ): Promise<{
     user: U
-    error?: BaseError
-    message?: string
+    error?: BaseError | undefined
+    message?: string | undefined
   }> => {
     return store.loadUserFromStorage<U, T>(options, credentials)
   }
