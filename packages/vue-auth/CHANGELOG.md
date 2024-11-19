@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.4.1...@toneflix/vue-auth@1.4.2) (2024-11-19)
+
+### Bug Fixes
+
+- only call middleware in `runMiddlewares()` if it is defined. ([e2b10db](https://github.com/toneflix/vue-component-pack/commit/e2b10dba4fec719382c062566f5af30b1bb6c307))
+- only call middleware in `runMiddlewares()` if it is defined. ([b530353](https://github.com/toneflix/vue-component-pack/commit/b53035339d0424668cfef6a65a4a49a07557b2c4))
+
 ## [1.4.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.4.0...@toneflix/vue-auth@1.4.1) (2024-11-18)
 
 **Note:** Version bump only for package @toneflix/vue-auth
