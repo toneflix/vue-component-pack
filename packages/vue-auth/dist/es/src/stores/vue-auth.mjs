@@ -1,5 +1,5 @@
 import { ref as i, toValue as d } from "vue";
-import { url as l, getAuthConfig as f } from "../utils/config.mjs";
+import { url as l, getAuthConfig as h } from "../utils/config.mjs";
 import m from "axios";
 import { defineStore as y } from "pinia";
 import { createCountdown as A } from "../utils/plugins.mjs";
@@ -10,17 +10,17 @@ function w(v) {
   return y(
     "vue-auth",
     () => {
-      const c = i({}), g = i(), h = i(!1);
+      const n = i({}), g = i(), f = i(!1);
       return {
-        user: c,
+        user: n,
         token: g,
-        isAuthenticated: h,
-        login: async (s, r = f()) => {
+        isAuthenticated: f,
+        login: async (s, r = h()) => {
           var u;
-          const n = l("login");
+          const c = l("login");
           try {
             const { data: t } = await m.post(
-              n,
+              c,
               d(s),
               r.axiosConfig
             ), {
@@ -28,18 +28,18 @@ function w(v) {
               token: a,
               message: o
             } = r.transformResponse ? r.transformResponse(t) : { user: t.user, token: t.token, message: t.message };
-            return c.value = e, g.value = a, h.value = !0, localStorage.setItem(r.storageKey || "auth_token", t.token), { user: e, token: a, message: o };
+            return n.value = e, g.value = a, f.value = !0, localStorage.setItem(r.storageKey || "auth_token", t.token), { user: e, token: a, message: o };
           } catch (t) {
             const { response: e } = t;
             return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (u = e == null ? void 0 : e.data) == null ? void 0 : u.message };
           }
         },
-        reset: async (s, r = f()) => {
+        reset: async (s, r = h()) => {
           var u;
-          const n = l("reset");
+          const c = l("reset");
           try {
             const { data: t } = await m.post(
-              n,
+              c,
               d(s),
               r.axiosConfig
             ), { user: e, message: a } = r.transformResponse ? r.transformResponse(t) : { user: t.user, message: t.message };
@@ -49,25 +49,25 @@ function w(v) {
             return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (u = e == null ? void 0 : e.data) == null ? void 0 : u.message };
           }
         },
-        logout: async (s = f(), r) => {
+        logout: async (s = h(), r) => {
           var t;
-          const n = s.setAuthHeaders ? await s.setAuthHeaders({ user: c.value, token: g.value }) : s.getAuthHeaders ? await s.getAuthHeaders({ user: c.value, token: g.value }) : {}, u = l("logout");
+          const c = s.setAuthHeaders ? await s.setAuthHeaders({ user: n.value, token: g.value }) : s.getAuthHeaders ? await s.getAuthHeaders({ user: n.value, token: g.value }) : {}, u = l("logout");
           try {
             await m.post(u, d(r), {
-              headers: { ...n },
+              headers: { ...c },
               ...s.axiosConfig
-            }), c.value = {}, g.value = void 0, h.value = !1, localStorage.removeItem(s.storageKey || "auth_token");
+            }), n.value = {}, g.value = void 0, f.value = !1, localStorage.removeItem(s.storageKey || "auth_token");
           } catch (e) {
             const { response: a } = e;
             return { error: (a == null ? void 0 : a.data) || {}, message: (t = a == null ? void 0 : a.data) == null ? void 0 : t.message };
           }
         },
-        forgot: async (s, r = f()) => {
+        forgot: async (s, r = h()) => {
           var t;
-          const n = r.setAuthHeaders ? await r.setAuthHeaders({ user: c.value, token: g.value }) : r.getAuthHeaders ? await r.getAuthHeaders({ user: c.value, token: g.value }) : {}, u = l("forgot");
+          const c = r.setAuthHeaders ? await r.setAuthHeaders({ user: n.value, token: g.value }) : r.getAuthHeaders ? await r.getAuthHeaders({ user: n.value, token: g.value }) : {}, u = l("forgot");
           try {
             const { data: e } = await m.post(u, d(s), {
-              headers: { ...n },
+              headers: { ...c },
               ...r.axiosConfig
             }), { timeout: a, message: o } = r.transformResponse ? r.transformResponse(e) : { timeout: e.timeout, message: e.message }, k = A(a);
             return { timeout: a, countdown: k, message: o };
@@ -80,12 +80,12 @@ function w(v) {
             };
           }
         },
-        register: async (s, r = f()) => {
+        register: async (s, r = h()) => {
           var u;
-          const n = l("register");
+          const c = l("register");
           try {
             const { data: t } = await m.post(
-              n,
+              c,
               d(s),
               r.axiosConfig
             ), {
@@ -93,16 +93,16 @@ function w(v) {
               token: a,
               message: o
             } = r.transformResponse ? r.transformResponse(t) : { user: t.user, token: t.token, message: t.message };
-            return c.value = e, g.value = a, h.value = !0, localStorage.setItem(r.storageKey || "auth_token", t.token), { user: e, token: a, message: o };
+            return n.value = e, g.value = a, f.value = !0, localStorage.setItem(r.storageKey || "auth_token", t.token), { user: e, token: a, message: o };
           } catch (t) {
             const { response: e } = t;
             return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (u = e == null ? void 0 : e.data) == null ? void 0 : u.message };
           }
         },
-        loadUserFromStorage: async (s = f(), r) => {
+        loadUserFromStorage: async (s = h(), r) => {
           var t;
-          const n = localStorage.getItem(s.storageKey || "auth_token"), u = s.setAuthHeaders ? await s.setAuthHeaders({ user: c.value, token: g.value }) : s.getAuthHeaders ? await s.getAuthHeaders({ user: c.value, token: g.value }) : {};
-          if (n && (g.value = n, h.value = !0, s.endpoints.profile)) {
+          const c = localStorage.getItem(s.storageKey || "auth_token"), u = s.setAuthHeaders ? await s.setAuthHeaders({ user: n.value, token: g.value }) : s.getAuthHeaders ? await s.getAuthHeaders({ user: n.value, token: g.value }) : {};
+          if (c && (g.value = c, f.value = !0, s.endpoints.profile)) {
             const e = l("profile");
             try {
               const { data: a } = await m.get(e, {
@@ -110,7 +110,7 @@ function w(v) {
                 params: { ...d(r) },
                 ...s.axiosConfig
               }), { user: o, message: k } = s.transformResponse ? s.transformResponse(a) : { user: a.user, message: a.message };
-              return c.value = o, { user: o, message: k };
+              return n.value = o, { user: o, message: k };
             } catch (a) {
               const { response: o } = a;
               return {
@@ -127,7 +127,7 @@ function w(v) {
     v
   );
 }
-const U = (v) => w(v);
+const U = (v) => w(v)();
 export {
   w as createVueAuthStore,
   U as useAuthStore

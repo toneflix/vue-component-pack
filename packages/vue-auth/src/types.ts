@@ -124,6 +124,11 @@ export interface AuthOptions<U = AuthUser> {
    */
   storageKey?: string
   /**
+   * Extra options to be passed into the auth store instance
+   * Usefull if you need to pass {persist: true} when using pinia-plugin-persists
+   */
+  storageOptions?: StorageOptions
+  /**
    * Extra config to pass to the axios instance
    */
   axiosConfig?: object

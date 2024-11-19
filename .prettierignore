@@ -10,5 +10,6 @@ yarn.lock
 *.mjs
 .pnp.loader.mjs
 /docs
+/documentations
 
 /.nx/workspace-data

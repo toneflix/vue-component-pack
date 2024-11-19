@@ -303,5 +303,7 @@ export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions
 }
 
 // export const useAuthStore = createVueAuthStore()
-export const useAuthStore = (storageOptions?: StorageOptions) =>
-  createVueAuthStore(storageOptions)()
+export const useAuthStore = (storageOptions?: StorageOptions) => {
+  const authStore = createVueAuthStore(storageOptions)
+  return authStore()
+}

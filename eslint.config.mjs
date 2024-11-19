@@ -32,8 +32,10 @@ export default [
     ignores: [
       '**/.*',
       'docs/**/*',
+      'documentations/**/*',
       '**/config/',
       '**/docs/',
+      '**/documentations/',
       '**/dist/',
       '**/.yarn/',
       '**/.quasar/',

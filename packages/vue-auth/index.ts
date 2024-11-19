@@ -25,7 +25,7 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
       }
 
       // Load user from storage
-      const store = useAuthStore()
+      const store = useAuthStore(options.storageOptions)
 
       if (router) {
         router.beforeEach((to, from, next) => {
@@ -85,3 +85,4 @@ export * from './src/composables/useAuth'
 export * from './src/utils/middlewares'
 export * from './src/utils/plugins'
 export * from './src/types'
+export { useAuthStore } from './src/stores/vue-auth'
