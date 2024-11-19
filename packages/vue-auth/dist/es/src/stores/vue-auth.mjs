@@ -6,7 +6,7 @@ import { createCountdown as A } from "../utils/plugins.mjs";
 m.defaults.headers.common["Content-Type"] = "application/json; charset=utf-8";
 m.defaults.headers.common.Accept = "application/json";
 m.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
-function w(k) {
+function w(v) {
   return y(
     "vue-auth",
     () => {
@@ -69,8 +69,8 @@ function w(k) {
             const { data: e } = await m.post(u, d(s), {
               headers: { ...n },
               ...r.axiosConfig
-            }), { timeout: a, message: o } = r.transformResponse ? r.transformResponse(e) : { timeout: e.timeout, message: e.message }, v = A(a);
-            return { timeout: a, countdown: v, message: o };
+            }), { timeout: a, message: o } = r.transformResponse ? r.transformResponse(e) : { timeout: e.timeout, message: e.message }, k = A(a);
+            return { timeout: a, countdown: k, message: o };
           } catch (e) {
             const { response: a } = e;
             return {
@@ -109,8 +109,8 @@ function w(k) {
                 headers: { ...u },
                 params: { ...d(r) },
                 ...s.axiosConfig
-              }), { user: o, message: v } = s.transformResponse ? s.transformResponse(a) : { user: a.user, message: a.message };
-              return c.value = o, { user: o, message: v };
+              }), { user: o, message: k } = s.transformResponse ? s.transformResponse(a) : { user: a.user, message: a.message };
+              return c.value = o, { user: o, message: k };
             } catch (a) {
               const { response: o } = a;
               return {
@@ -124,10 +124,10 @@ function w(k) {
         }
       };
     },
-    k
+    v
   );
 }
-const U = w();
+const U = (v) => w(v);
 export {
   w as createVueAuthStore,
   U as useAuthStore

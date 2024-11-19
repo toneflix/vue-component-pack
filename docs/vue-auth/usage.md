@@ -209,3 +209,23 @@ middlewares: [
   }
 ]
 ```
+
+## Passing optional config to the store instance
+
+The `useAuth()`, `useInlineAuth()` and `useAuthStore()` methods all accept and optional `storageOptions` parameter that allows you to pass extra options to the auth store instance when needed. This becomes extremely usefull if you use `pinia-plugin-persistedstate` or another pinia plugin that requires you to pass additional options to your store instances. E.g. `{ persist: true }`
+
+```vue:line-numbers{4,6}
+<script setup lang="ts">
+import { useAuth,useAuthStore } from '@toneflix/vue-auth'
+
+const { user } = useAuth({ persist: true })
+// OR
+const { user } = useInlineAuth({ persist: true })
+// OR
+const { user } = useAuthStore({ persist: true })
+
+if (user.value) {
+  console.log('user.value is persisted', user.value)
+}
+</script>
+```

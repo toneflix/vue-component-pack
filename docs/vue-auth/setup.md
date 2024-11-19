@@ -82,16 +82,6 @@ Example:
 storageKey: 'my_auth_token'
 ```
 
-### `storageOptions`
-
-This option allows you to pass extra options to the auth store instance when needed. This becomes extremely usefull if you use pinia-plugin-persists or another pinia plugin that requires you to pass options to your stores. E.g. `{ persist: true }`
-
-Example:
-
-```js
-storageOptions: { persist: true }
-```
-
 ### `setAuthHeaders`
 
 This option provides headers for authenticated requests. You can define a function that returns headers, and it’s commonly used to add the Authorization header with the token.
@@ -336,7 +326,7 @@ app.use(router)
 app.mount('#app')
 ```
 
-This ensures that the authentication state is globally available in your application. You can use useAuthStore to access the authentication state throughout your app.
+This ensures that the authentication state is globally available in your application. You can import and call the `useAuthStore()` method `from '@toneflix/vue-auth'` to access the authentication state throughout your app.
 
 ## Full Example Setup
 
@@ -358,8 +348,7 @@ const router = createRouter({
 const auth = authPlugin({
   router,
   baseUrl: 'https://example.com/api/v1',
-  storageKey: 'my_auth_token',
-  storageOptions: { persist: true },
+  storageKey: 'my_auth_token', 
   endpoints: {
     login: '/login',
     register: '/register',
