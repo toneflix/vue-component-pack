@@ -6,7 +6,8 @@ import {
   DefinitelyAuthResponse,
   LoginCredentials,
   RegisterCredentials,
-  ResponseError
+  ResponseError,
+  StorageOptions
 } from '../types'
 import { Ref, ref, toValue } from 'vue'
 import { getAuthConfig, url } from '../utils/config'
@@ -19,9 +20,7 @@ axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8
 axios.defaults.headers.common['Accept'] = 'application/json'
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
-export function createVueAuthStore<UA = unknown>() {
-  const { storageOptions } = getAuthConfig<UA>()
-
+export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions) {
   return defineStore(
     'vue-auth',
     () => {

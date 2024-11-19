@@ -4,7 +4,8 @@ import {
   BaseError,
   DefinitelyAuthResponse,
   LoginCredentials,
-  RegisterCredentials
+  RegisterCredentials,
+  StorageOptions
 } from '../types'
 
 import { Ref } from 'vue'
@@ -12,8 +13,8 @@ import { createVueAuthStore } from '../stores/vue-auth'
 import { getAuthConfig } from '../utils/config'
 import { storeToRefs } from 'pinia'
 
-export const useAuth = <AU = AuthUser>() => {
-  const useAuthStore = createVueAuthStore()
+export const useAuth = <AU = AuthUser>(storageOptions?: StorageOptions) => {
+  const useAuthStore = createVueAuthStore(storageOptions)
   const store = useAuthStore()
 
   /**

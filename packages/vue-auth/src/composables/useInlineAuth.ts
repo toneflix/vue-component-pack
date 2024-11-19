@@ -1,4 +1,11 @@
-import { AuthOptions, AuthUser, BaseError, LoginCredentials, RegisterCredentials } from '../types'
+import {
+  AuthOptions,
+  AuthUser,
+  BaseError,
+  LoginCredentials,
+  RegisterCredentials,
+  StorageOptions
+} from '../types'
 import { Ref, UnwrapRef, ref } from 'vue'
 
 import { createCountdown } from '../utils/plugins'
@@ -6,8 +13,8 @@ import { createVueAuthStore } from '../stores/vue-auth'
 import { getAuthConfig } from '../utils/config'
 import { storeToRefs } from 'pinia'
 
-export const useInlineAuth = <AU = AuthUser>() => {
-  const useAuthStore = createVueAuthStore()
+export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) => {
+  const useAuthStore = createVueAuthStore(storageOptions)
   const store = useAuthStore()
 
   type UnrefData<X> = {

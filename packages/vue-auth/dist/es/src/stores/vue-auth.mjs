@@ -1,13 +1,12 @@
-import { ref as i, toValue as l } from "vue";
-import { getAuthConfig as d, url as f } from "../utils/config.mjs";
+import { ref as i, toValue as d } from "vue";
+import { url as l, getAuthConfig as f } from "../utils/config.mjs";
 import m from "axios";
 import { defineStore as y } from "pinia";
 import { createCountdown as A } from "../utils/plugins.mjs";
 m.defaults.headers.common["Content-Type"] = "application/json; charset=utf-8";
 m.defaults.headers.common.Accept = "application/json";
 m.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
-function w() {
-  const { storageOptions: k } = d();
+function w(k) {
   return y(
     "vue-auth",
     () => {
@@ -16,13 +15,13 @@ function w() {
         user: c,
         token: g,
         isAuthenticated: h,
-        login: async (s, r = d()) => {
+        login: async (s, r = f()) => {
           var u;
-          const n = f("login");
+          const n = l("login");
           try {
             const { data: t } = await m.post(
               n,
-              l(s),
+              d(s),
               r.axiosConfig
             ), {
               user: e,
@@ -35,13 +34,13 @@ function w() {
             return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (u = e == null ? void 0 : e.data) == null ? void 0 : u.message };
           }
         },
-        reset: async (s, r = d()) => {
+        reset: async (s, r = f()) => {
           var u;
-          const n = f("reset");
+          const n = l("reset");
           try {
             const { data: t } = await m.post(
               n,
-              l(s),
+              d(s),
               r.axiosConfig
             ), { user: e, message: a } = r.transformResponse ? r.transformResponse(t) : { user: t.user, message: t.message };
             return { user: e, message: a };
@@ -50,11 +49,11 @@ function w() {
             return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (u = e == null ? void 0 : e.data) == null ? void 0 : u.message };
           }
         },
-        logout: async (s = d(), r) => {
+        logout: async (s = f(), r) => {
           var t;
-          const n = s.setAuthHeaders ? await s.setAuthHeaders({ user: c.value, token: g.value }) : s.getAuthHeaders ? await s.getAuthHeaders({ user: c.value, token: g.value }) : {}, u = f("logout");
+          const n = s.setAuthHeaders ? await s.setAuthHeaders({ user: c.value, token: g.value }) : s.getAuthHeaders ? await s.getAuthHeaders({ user: c.value, token: g.value }) : {}, u = l("logout");
           try {
-            await m.post(u, l(r), {
+            await m.post(u, d(r), {
               headers: { ...n },
               ...s.axiosConfig
             }), c.value = {}, g.value = void 0, h.value = !1, localStorage.removeItem(s.storageKey || "auth_token");
@@ -63,11 +62,11 @@ function w() {
             return { error: (a == null ? void 0 : a.data) || {}, message: (t = a == null ? void 0 : a.data) == null ? void 0 : t.message };
           }
         },
-        forgot: async (s, r = d()) => {
+        forgot: async (s, r = f()) => {
           var t;
-          const n = r.setAuthHeaders ? await r.setAuthHeaders({ user: c.value, token: g.value }) : r.getAuthHeaders ? await r.getAuthHeaders({ user: c.value, token: g.value }) : {}, u = f("forgot");
+          const n = r.setAuthHeaders ? await r.setAuthHeaders({ user: c.value, token: g.value }) : r.getAuthHeaders ? await r.getAuthHeaders({ user: c.value, token: g.value }) : {}, u = l("forgot");
           try {
-            const { data: e } = await m.post(u, l(s), {
+            const { data: e } = await m.post(u, d(s), {
               headers: { ...n },
               ...r.axiosConfig
             }), { timeout: a, message: o } = r.transformResponse ? r.transformResponse(e) : { timeout: e.timeout, message: e.message }, v = A(a);
@@ -81,13 +80,13 @@ function w() {
             };
           }
         },
-        register: async (s, r = d()) => {
+        register: async (s, r = f()) => {
           var u;
-          const n = f("register");
+          const n = l("register");
           try {
             const { data: t } = await m.post(
               n,
-              l(s),
+              d(s),
               r.axiosConfig
             ), {
               user: e,
@@ -100,15 +99,15 @@ function w() {
             return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (u = e == null ? void 0 : e.data) == null ? void 0 : u.message };
           }
         },
-        loadUserFromStorage: async (s = d(), r) => {
+        loadUserFromStorage: async (s = f(), r) => {
           var t;
           const n = localStorage.getItem(s.storageKey || "auth_token"), u = s.setAuthHeaders ? await s.setAuthHeaders({ user: c.value, token: g.value }) : s.getAuthHeaders ? await s.getAuthHeaders({ user: c.value, token: g.value }) : {};
           if (n && (g.value = n, h.value = !0, s.endpoints.profile)) {
-            const e = f("profile");
+            const e = l("profile");
             try {
               const { data: a } = await m.get(e, {
                 headers: { ...u },
-                params: { ...l(r) },
+                params: { ...d(r) },
                 ...s.axiosConfig
               }), { user: o, message: v } = s.transformResponse ? s.transformResponse(a) : { user: a.user, message: a.message };
               return c.value = o, { user: o, message: v };

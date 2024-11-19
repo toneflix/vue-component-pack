@@ -92,6 +92,18 @@ interface CustomHeaders {
   [key: string]: string
 }
 
+/**
+ * Extra options to be passed into the auth store instance
+ * Usefull if you need to pass {persist: true} when using pinia-plugin-persists
+ */
+export interface StorageOptions {
+  /**
+   * Options for pinia-plugin-persists
+   */
+  persist?: any // eslint-disable-line @typescript-eslint/no-explicit-any
+  [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
+}
+
 export type CustomAxiosHeaders = (RawAxiosRequestHeaders | AxiosHeaders) & CustomHeaders
 
 export interface AuthOptions<U = AuthUser> {
@@ -111,17 +123,6 @@ export interface AuthOptions<U = AuthUser> {
    * The key with which your authentication token will be saved to local storage
    */
   storageKey?: string
-  /**
-   * Extra options to be passed into the auth store instance
-   * Usefull if you need to pass {persist: true} when using pinia-plugin-persists
-   */
-  storageOptions?: {
-    /**
-     * Options for pinia-plugin-persists
-     */
-    persist?: any // eslint-disable-line @typescript-eslint/no-explicit-any
-    [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
-  }
   /**
    * Extra config to pass to the axios instance
    */
@@ -156,9 +157,9 @@ export interface AuthOptions<U = AuthUser> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   transformResponse?: (response: any) => {
     user: U
-    token?: string
-    timeout?: number
-    message?: string
+    token?: string | undefined
+    timeout?: number | undefined
+    message?: string | undefined
   }
   /**
    * The route name to your app's post login page, if provided users will be redirected here
