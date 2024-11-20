@@ -4,33 +4,35 @@ export interface DataViewerProps {
   /**
    * When in view mode, the keys in this list will not be loaded into the viewer
    */
-  exclusions?: string[]
+  exclusions?: string[] | undefined
   /**
    * When in edit mode, the keys in this list will not be loaded into the form
    */
-  formExclusions?: string[]
+  formExclusions?: string[] | undefined
   /**
    * Map boolean data labels to data options
    */
-  booleanLabels?: {
-    [key: string]: [string, string]
-  }
+  booleanLabels?:
+    | {
+        [key: string]: [string, string]
+      }
+    | undefined
   /**
    * Used along side with "bordered" to create a rounded border
    */
-  rounded?: boolean
+  rounded?: boolean | undefined
   /**
    * Adds a border to the base card
    */
-  bordered?: boolean
+  bordered?: boolean | undefined
   /**
    * Puts a line separator after every data set
    */
-  separator?: boolean
+  separator?: boolean | undefined
   /**
    * Adds a shadow to the base card
    */
-  shadow?: boolean
+  shadow?: boolean | undefined
 }
 
 export interface MainContentProps extends DataViewerProps {
@@ -49,7 +51,7 @@ export interface MainProps {
    * The data that will be mapped for previewing
    */
   data: {
-    imageUrl?: string
+    imageUrl?: string | undefined
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any
   }
@@ -57,23 +59,23 @@ export interface MainProps {
    * The reactive model data to be used in edit mode
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  form?: { [key: string]: any }
+  form?: { [key: string]: any } | undefined
   /**
    * The current viewing mode
    */
-  mode?: 'edit' | 'view' | 'doc'
+  mode?: 'edit' | 'view' | 'doc' | undefined
   /**
    * Errors will me shown under thier respective fields in edit mode
    */
-  errors?: { [key: string]: string }
+  errors?: { [key: string]: string } | undefined
   /**
    * Put the component in loading state when saving in edit mode
    */
-  saving?: boolean
+  saving?: boolean | undefined
   /**
    * Put the component in loading state
    */
-  loading?: boolean
+  loading?: boolean | undefined
 }
 
 /* eslint-disable @typescript-eslint/no-empty-object-type */

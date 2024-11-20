@@ -1,4 +1,5 @@
 import { defineComponent as w, mergeModels as v, useModel as d, ref as b, openBlock as M, createElementBlock as U, Fragment as B, renderSlot as D, createVNode as f, mergeProps as y, withCtx as $ } from "vue";
+/* empty css                   */
 import k from "./dialog/TDialog.vue.mjs";
 import V from "./main-content.vue.mjs";
 const L = /* @__PURE__ */ w({
@@ -13,10 +14,12 @@ const L = /* @__PURE__ */ w({
     separator: { type: Boolean },
     shadow: { type: Boolean }
   }, {
-    data: {},
+    data: {
+      required: !0
+    },
     dataModifiers: {},
     form: {
-      default: {}
+      required: !1
     },
     formModifiers: {},
     mode: {

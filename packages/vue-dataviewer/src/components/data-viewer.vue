@@ -30,6 +30,7 @@
 </template>
 
 <script setup lang="ts">
+import '../styles/main.scss'
 import { ref } from 'vue'
 import TDialog from './dialog/TDialog.vue'
 import MainContent from './main-content.vue'
@@ -48,13 +49,15 @@ defineEmits<{
 /**
  * The data that will be mapped for previewing
  */
-const viewData = defineModel<MainProps['data']>('data')
+const viewData = defineModel<MainProps['data']>('data', {
+  required: true
+})
 
 /**
  * The reactive model data to be used in edit mode
  */
 const form = defineModel<MainProps['form']>('form', {
-  default: {}
+  required: false
 })
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
@@ -75,7 +78,7 @@ const saving = defineModel<boolean>('saving', {
   default: false
 })
 
-const errors = defineModel<{ [key: string]: string }>('errors', {
+const errors = defineModel<MainProps['errors']>('errors', {
   default: {}
 })
 

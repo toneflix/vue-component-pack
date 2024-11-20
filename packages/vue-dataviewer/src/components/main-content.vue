@@ -4,7 +4,7 @@
       <slot name="header">
         <div class="flex items-center justify-between">
           <div class="card-title">
-            {{ { view: titles.view, edit: titles.edit, doc: titles.doc }[viewMode || 'view'] }}
+            {{ { view: titles?.view, edit: titles?.edit, doc: titles?.doc }[viewMode || 'view'] }}
           </div>
           <button class="close-btn" @click="$emit('toggleDialog', dialogToggle)" v-if="dialogMode">
             &times;
@@ -20,7 +20,7 @@
         :fields="formdata"
         :loading="saving"
         v-model="form"
-        v-if="viewMode === 'edit'"
+        v-if="viewMode === 'edit' && form"
         @cancel="viewMode = 'view'"
         @submit="emit('click:save', viewData)"
       >
@@ -31,7 +31,7 @@
           <slot name="form-append" :form="form" :errors="errors" :viewData="viewData"> </slot>
         </template>
       </VueForms>
-      <div v-else-if="viewMode === 'view' && viewData">
+      <div v-else-if="(viewMode === 'view' || !form) && viewData">
         <div class="t-list" separator>
           <div
             class="q-my-sm t-item clickable"
@@ -89,15 +89,16 @@
 </template>
 
 <script setup lang="ts">
-import dayjs from 'dayjs'
+import '../styles/main.scss'
 import { computed, ref } from 'vue'
 import { slug, titleCase } from '../utils/providers'
 import TBtn from './TBtn.vue'
 import TCard from './dialog/TCard.vue'
-import TinnerLoading from './TinnerLoading.vue'
+import TinnerLoading from './TInnerLoading.vue'
 import { FormField } from '@toneflix/vue-forms/src/types'
 import { VueForms } from '@toneflix/vue-forms'
-import { MainContentProps } from '../types'
+import { MainContentProps, MainProps } from '../types'
+const dayjs = import('dayjs')
 
 defineOptions({
   name: 'MainContent'
@@ -113,16 +114,13 @@ const emit = defineEmits<{
 /**
  * The data that will be mapped for previewing
  */
-const viewData = defineModel<{
-  imageUrl?: string
-  [key: string]: any
-}>('data')
+const viewData = defineModel<MainProps['data']>('data')
 
 /**
  * The reactive model data to be used in edit mode
  */
-const form = defineModel<{ [key: string]: any }>('form', {
-  default: {}
+const form = defineModel<MainProps['form']>('form', {
+  required: false
 })
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
@@ -132,7 +130,7 @@ const props = withDefaults(defineProps<MainContentProps>(), {
   formExclusions: () => ['id', 'user', 'imageUrl', 'createdAt', 'updatedAt']
 })
 
-const viewMode = defineModel<'edit' | 'view' | 'doc'>('mode', {
+const viewMode = defineModel<MainProps['mode']>('mode', {
   default: 'view'
 })
 
@@ -144,7 +142,7 @@ const saving = defineModel<boolean>('saving', {
   default: false
 })
 
-const errors = defineModel<{ [key: string]: string }>('errors', {
+const errors = defineModel<MainProps['errors']>('errors', {
   default: {}
 })
 
@@ -197,9 +195,9 @@ const boolLabel = (key: string, bool: boolean) => {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const parser = (data: string | boolean | any, field?: string) => {
+const parser = async (data: string | boolean | any, field?: string) => {
   if (field && field.includes('edAt', field.length - 4)) {
-    return dayjs(String(data)).format('Do MMM, YYYY h:MM A')
+    return (await dayjs)(String(data)).format('Do MMM, YYYY h:MM A')
   }
 
   if (typeof data === 'boolean') {
