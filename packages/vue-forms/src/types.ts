@@ -6,29 +6,29 @@ interface SlotScope extends FormField {
 
 export interface FormField {
   type:
-    | 'url'
-    | 'tel'
-    | 'text'
-    | 'file'
-    | 'date'
-    | 'time'
-    | 'week'
-    | 'email'
-    | 'month'
-    | 'color'
-    | 'hidden'
-    | 'number'
-    | 'search'
-    | 'password'
-    | 'datetime'
-    | 'datetime-local'
-    // =============
-    | 'select' // [x]
-    | 'checkbox' // [x]
-    | 'radio' // [x]
-    | 'range'
-    | 'switch' // [x]
-    | 'textarea' // [x]
+  | 'url'
+  | 'tel'
+  | 'text'
+  | 'file'
+  | 'date'
+  | 'time'
+  | 'week'
+  | 'email'
+  | 'month'
+  | 'color'
+  | 'hidden'
+  | 'number'
+  | 'search'
+  | 'password'
+  | 'datetime'
+  | 'datetime-local'
+  // =============
+  | 'select' // [x]
+  | 'checkbox' // [x]
+  | 'radio' // [x]
+  | 'range'
+  | 'switch' // [x]
+  | 'textarea' // [x]
 
   /**
    * Unique identifier for the field
@@ -173,6 +173,8 @@ type MainSlotProps = {
   separator: boolean
 }
 
+export type SlotName = 'input' | 'select' | 'checkbox' | 'radio' | 'switch' | 'textarea';
+
 export interface VueFormSlots {
   /**
    * This is where default content goes
@@ -206,6 +208,10 @@ export interface VueFormSlots {
    * Slot for prepending content
    */
   prepend: (props: MainSlotProps) => VNode[]
+  /**
+   * Slot for adding content under actions
+   */
+  actions: () => VNode[]
 }
 
 export interface BaseProps {
@@ -269,7 +275,7 @@ export interface VueFormProps<X = { [key: FormField['name']]: FormField['value']
 }
 
 export type GroupMeta<T extends FormField = FormField> = {
-  [key in T['group'] as string]: {
+  [key in T['group']as string]: {
     title: string
     rounded?: boolean
     subtitle?: string
@@ -282,7 +288,7 @@ export interface FormValues {
 }
 
 export type ComponentConstructor<Props = object, Slots = object> = {
-  new (): {
+  new(): {
     $props: PublicProps & Props
     $slots: Slots
   }

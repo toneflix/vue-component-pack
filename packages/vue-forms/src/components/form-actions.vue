@@ -4,7 +4,7 @@
       type="button"
       class="action-cancel"
       :class="{ loading }"
-      :disabled="loading"
+      :disabled="!!loading"
       @click.prevent="$emit('cancel')"
       v-if="!hideCancel"
     >
@@ -14,7 +14,7 @@
       type="submit"
       class="action-confirm"
       :class="{ loading }"
-      :disabled="loading"
+      :disabled="!!loading"
       @click.prevent="$emit('submit')"
       v-if="!hideSubmit"
     >
@@ -29,11 +29,11 @@ defineOptions({
 })
 
 defineProps<{
-  loading?: boolean
-  hideSubmit?: boolean
-  hideCancel?: boolean
-  cancelLabel?: string
-  submitLabel?: string
+  loading?: boolean | undefined
+  hideSubmit?: boolean | undefined
+  hideCancel?: boolean | undefined
+  cancelLabel?: string | undefined
+  submitLabel?: string | undefined
 }>()
 
 defineEmits(['cancel', 'submit'])

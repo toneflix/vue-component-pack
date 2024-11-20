@@ -4,19 +4,19 @@
       <InputField v-model="modelValue" v-bind="field" />
     </slot>
     <slot name="select" v-bind="field" :modelValue="modelValue" v-if="field.type === 'select'">
-      <InputSelect v-model="modelValue" v-bind="field" />
+      <InputSelect v-model="modelValue" v-bind="field" type="select" />
     </slot>
     <slot name="checkbox" v-bind="field" :modelValue="modelValue" v-if="field.type === 'checkbox'">
-      <InputCheckbox v-model="modelValue" v-bind="field" />
+      <InputCheckbox v-model="modelValue" v-bind="field" type="checkbox" />
     </slot>
     <slot name="radio" v-bind="field" :modelValue="modelValue" v-if="field.type === 'radio'">
-      <InputRadio v-model="modelValue" v-bind="field" />
+      <InputRadio v-model="modelValue" v-bind="field" type="radio" />
     </slot>
     <slot name="switch" v-bind="field" :modelValue="modelValue" v-if="field.type === 'switch'">
-      <InputSwitch v-model="modelValue" v-bind="field" />
+      <InputSwitch v-model="modelValue" v-bind="field" type="switch" />
     </slot>
     <slot name="textarea" v-bind="field" :modelValue="modelValue" v-if="field.type === 'textarea'">
-      <InputTextarea v-model="modelValue" v-bind="field" />
+      <InputTextarea v-model="modelValue" v-bind="field" type="textarea" />
     </slot>
   </div>
 </template>

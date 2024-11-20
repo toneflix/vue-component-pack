@@ -13,7 +13,7 @@
       v-for="field in formFields"
       :key="field.name"
       :field="field"
-      :use-grid="useGrid"
+      :use-grid="!!useGrid"
       v-model="formValues[field.name]"
     >
       <template v-for="slot in slotNames" :key="slot" v-slot:[slot]="props">
@@ -73,7 +73,7 @@
             v-for="field in fields"
             :key="field.name"
             :field="field"
-            :use-grid="useGrid"
+            :use-grid="!!useGrid"
             v-model="formValues[field.name]"
           >
             <template v-for="slot in slotNames" :key="slot" v-slot:[slot]="props">
@@ -90,7 +90,7 @@
 
     <slot name="actions">
       <FormActions
-        :loading="loading"
+        :loading="!!loading"
         :hide-submit="hideSubmit"
         :hide-cancel="hideCancel"
         :submit-label="submitLabel"
@@ -103,7 +103,7 @@
 </template>
 
 <script setup lang="ts">
-import { BaseProps, FormField as FieldType, VueFormProps, VueFormSlots } from '../types'
+import { BaseProps, FormField as FieldType, SlotName, VueFormProps, VueFormSlots } from '../types'
 import FormGroup from './form-group.vue'
 import '../styles/main.scss'
 import { computed } from 'vue'
@@ -123,13 +123,21 @@ const formValues = defineModel<VueFormProps['modelValue']>('modelValue', {
   required: true
 })
 
-const slotNames = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
+const slotNames: SlotName[] = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
 const isGrouped = computed(() => formFields.value.some((e) => !!e.group))
 const groups = computed<{ [key: string]: FieldType[] }>(() => groupFormFields(formFields.value))
 
-const groupFormFields = (fields: FieldType[]) => {
-  const grouped = {} // Object to hold grouped items by group name
-  const ungrouped = [] // Array to hold items without a group
+/**
+ * Parse the form fields and assign them to groups
+ */
+const groupFormFields = (
+  fields: FieldType[]
+): {
+  ungrouped: FieldType[]
+  [key: string]: FieldType[]
+} => {
+  const grouped: { [K: string]: FieldType[] } = {} // Object to hold grouped items by group name
+  const ungrouped: FieldType[] = [] // Array to hold items without a group
 
   if (!isGrouped.value) {
     return { ungrouped: [] }
@@ -142,7 +150,7 @@ const groupFormFields = (fields: FieldType[]) => {
       }
       grouped[field.group].push(field) // Add item to its group
     } else {
-      ungrouped.push(<never>field) // Add item to ungrouped array
+      ungrouped.push(<FieldType>field) // Add item to ungrouped array
     }
   })
 

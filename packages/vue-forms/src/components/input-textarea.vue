@@ -7,7 +7,7 @@
       rows="3"
       :id="'vf-' + name"
       :name="name"
-      :placeholder="placeholder"
+      :placeholder="String(placeholder)"
       v-model="modelValue"
     />
     <div class="field-anotations" v-if="label || hint">
