@@ -26,13 +26,11 @@
     :labels-map="{ createdAt: 'Date Created' }"
     :values-map="{ friend: () => 'David' }"
     :dateProps="['createdAt']"
+    :image-props="['imageUrl', 'imageUrl2']"
     :data="data"
     :form="data"
     class="mmx"
   >
-    <template #image-viewer="props">
-      <div class="">{{ props.src }}</div>
-    </template>
   </MainContent>
 </template>
 
@@ -43,6 +41,7 @@ import { reactive } from 'vue'
 import { TBtn } from '@toneflix/vue-dataviewer'
 
 const data = reactive({
+  id: 1,
   name: 'John Obi Doe',
   email: 'john.doe@email.com',
   accept: false,
@@ -54,6 +53,7 @@ const data = reactive({
   friend: { name: 'David' },
   message: 'Hello my people',
   imageUrl: 'https://www.tailwind-kit.com/images/person/6.jpg',
+  imageUrl2: 'https://www.tailwind-kit.com/images/person/5.jpg',
   createdAt: '2023-06-06 21:22:00',
   nothing: () => 'Hello Nohting'
 })

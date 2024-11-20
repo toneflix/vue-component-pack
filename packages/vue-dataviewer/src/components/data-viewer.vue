@@ -31,11 +31,8 @@
           v-bind="casts.list(props)"
           v-else-if="slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after'"
         />
-        <slot
-          :name="slot"
-          v-bind="casts.listItem(props)"
-          v-else-if="slot === 'list-item' || slot === 'img-list-item'"
-        />
+        <slot :name="slot" v-bind="casts.listItem(props)" v-else-if="slot === 'list-item'" />
+        <slot :name="slot" v-bind="casts.imgListItem(props)" v-else-if="slot === 'img-list-item'" />
         <slot :name="slot" v-bind="casts.imageViewer(props)" v-else-if="slot === 'image-viewer'" />
         <slot :name="slot" v-bind="casts.loader(props)" v-else-if="slot === 'loader'" />
         <slot :name="slot" v-bind="casts.image(props)" v-else-if="slot === 'image'" />
@@ -90,8 +87,9 @@ const form = defineModel<MainProps['form']>('form', {
 withDefaults(defineProps<DataViewerProps>(), {
   titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
   dateFormat: 'do MMM, yyyy h:mm a',
-  exclusions: () => ['imageUrl'],
-  formExclusions: () => ['imageUrl']
+  imageProps: () => ['imageUrl'],
+  exclusions: () => ['id'],
+  formExclusions: () => ['id', 'imageUrl']
 })
 
 const viewMode = defineModel<MainProps['mode']>('mode', {

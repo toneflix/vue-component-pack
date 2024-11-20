@@ -1,38 +1,38 @@
-import { defineComponent as P, mergeModels as E, useModel as f, ref as I, computed as L, openBlock as u, createBlock as q, normalizeClass as b, withCtx as y, renderSlot as i, createElementVNode as r, toDisplayString as w, createElementBlock as d, createCommentVNode as M, unref as c, createSlots as R, Fragment as z, renderList as T, createVNode as S } from "vue";
+import { defineComponent as G, mergeModels as S, useModel as b, ref as q, computed as A, watch as H, openBlock as n, createBlock as F, normalizeClass as M, withCtx as $, renderSlot as u, createElementVNode as i, toDisplayString as h, createElementBlock as v, createCommentVNode as k, unref as m, createSlots as J, Fragment as N, renderList as U, createVNode as O } from "vue";
 /* empty css                   */
-import { titleCase as $, slug as g } from "../utils/providers.mjs";
-import G from "./TBtn.vue.mjs";
-import H from "./dialog/TCard.vue.mjs";
-import J from "./TInnerLoading.vue.mjs";
-import { VueForms as K } from "@toneflix/vue-forms";
-import { formatDate as Q } from "date-fns";
-const W = { class: "flex items-center justify-between" }, X = { class: "card-title" }, Y = { key: 1 }, Z = {
+import { titleCase as p, slug as D } from "../utils/providers.mjs";
+import K from "./TBtn.vue.mjs";
+import Q from "./dialog/TCard.vue.mjs";
+import W from "./TInnerLoading.vue.mjs";
+import { VueForms as X } from "@toneflix/vue-forms";
+import { formatDate as Y } from "date-fns";
+const Z = { class: "flex items-center justify-between" }, _ = { class: "card-title" }, x = { key: 1 }, ee = {
   class: "t-list",
   separator: ""
-}, _ = { class: "t-item-section avatar" }, x = { class: "t-avatar" }, ee = ["src"], ae = { class: "t-item-section" }, te = { class: "t-item-label caption" }, oe = {
+}, ae = ["onClick"], te = { class: "t-item-section avatar" }, oe = { class: "t-avatar" }, le = ["src", "alt"], se = { class: "t-item-section" }, ie = { class: "t-item-label caption" }, re = {
   key: 0,
   class: "t-item-label"
-}, le = {
+}, ne = {
   key: 1,
   class: "t-item-label"
-}, se = {
+}, ue = {
   key: 2,
   class: "image-viewer"
-}, re = ["src"], fe = /* @__PURE__ */ P({
+}, de = ["src", "alt"], Me = /* @__PURE__ */ G({
   name: "MainContent",
   __name: "main-content",
-  props: /* @__PURE__ */ E({
+  props: /* @__PURE__ */ S({
     titles: { default: () => ({ view: "view Data", edit: "Edit Data", doc: "View Docs" }) },
     dialogMode: { type: Boolean },
-    exclusions: { default: () => ["imageUrl"] },
-    formExclusions: { default: () => ["imageUrl"] },
+    exclusions: { default: () => ["id"] },
+    formExclusions: { default: () => ["id", "imageUrl"] },
     booleanLabels: {},
     rounded: { type: Boolean },
     bordered: { type: Boolean },
     separator: { type: Boolean },
     shadow: { type: Boolean },
     dateProps: {},
-    imageProps: {},
+    imageProps: { default: () => ["imageUrl"] },
     dateFormat: { default: "do MMM, yyyy h:mm a" },
     labelsMap: {},
     valuesMap: {}
@@ -58,70 +58,76 @@ const W = { class: "flex items-center justify-between" }, X = { class: "card-tit
     },
     errorsModifiers: {}
   }),
-  emits: /* @__PURE__ */ E(["updateData", "click:save", "toggleDialog"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
-  setup(m, { emit: A }) {
-    const D = A, o = f(m, "data"), p = f(m, "form"), n = m, v = f(m, "mode"), C = f(m, "loading"), F = f(m, "saving"), U = f(m, "errors"), N = I(!1), B = L(
-      () => o.value ? Object.entries(o.value).filter((e) => v.value === "edit" ? ![...n.exclusions, ...n.formExclusions].includes(e[0]) : !n.exclusions.includes(e[0])) : []
-    ), O = L(() => B.value.map(([e, t]) => ({
+  emits: /* @__PURE__ */ S(["updateData", "click:save", "toggleDialog"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
+  setup(c, { emit: R }) {
+    const B = R, o = b(c, "data"), g = b(c, "form"), r = c, d = b(c, "mode"), V = b(c, "loading"), z = b(c, "saving"), P = b(c, "errors"), y = q(), I = q(!1), j = A(
+      () => o.value ? Object.entries(o.value).filter((e) => r.imageProps.includes(e[0]) ? !1 : d.value === "edit" ? ![...r.exclusions, ...r.formExclusions].includes(e[0]) : !r.exclusions.includes(e[0])) : []
+    ), T = A(() => j.value.map(([e, t]) => ({
       col: 12,
       name: e,
       type: typeof t == "boolean" ? "radio" : "text",
-      label: $(g(e, " ")),
+      label: p(D(e, " ")),
       choices: [
         { label: "Accept", value: !0 },
         { label: "Reject", value: !0 }
       ]
-    }))), k = (e, t = "view") => {
-      o.value = e, v.value = t, N.value = !0;
-      const a = Object.fromEntries(
-        Object.entries(e).map(([l, s]) => [g(l), h(s)])
-      );
-      D("updateData", a, t);
-    }, V = (e, t) => {
+    }))), w = (e, t = "view", a) => {
+      if (I.value = !0, a)
+        d.value = "doc", y.value = { alt: a, src: o.value[a] };
+      else {
+        o.value = e, d.value = t;
+        const l = Object.fromEntries(
+          Object.entries(e).map(([s, f]) => [D(s), C(f)])
+        );
+        B("updateData", l, t);
+      }
+    }, E = (e, t) => {
       var a, l, s;
-      return (a = n.booleanLabels) != null && a[e] ? t ? (l = n.booleanLabels) == null ? void 0 : l[e][0] : (s = n.booleanLabels) == null ? void 0 : s[e][1] : t ? "Active" : "Inactive";
-    }, h = (e, t) => {
+      return (a = r.booleanLabels) != null && a[e] ? t ? (l = r.booleanLabels) == null ? void 0 : l[e][0] : (s = r.booleanLabels) == null ? void 0 : s[e][1] : t ? "Active" : "Inactive";
+    }, C = (e, t) => {
       var a, l, s;
-      return t && ((a = n.valuesMap) != null && a[t]) && (e = (l = n.valuesMap) == null ? void 0 : l[t]), t && ((s = n.dateProps) != null && s.includes(t)) ? Q(e, n.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((j) => typeof j == "string") && v.value === "view" ? $(e.join(", ")) : e;
+      return t && ((a = r.valuesMap) != null && a[t]) && (e = (l = r.valuesMap) == null ? void 0 : l[t]), t && ((s = r.dateProps) != null && s.includes(t)) ? Y(e, r.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((f) => typeof f == "string") && d.value === "view" ? p(e.join(", ")) : e;
     };
-    return (e, t) => (u(), q(H, {
-      class: b({ "t-card-border": e.bordered, "t-card-shadow": e.shadow, "t-card-rounded": e.rounded })
+    return H(d, (e) => {
+      e !== "doc" && (y.value = void 0);
+    }), (e, t) => (n(), F(Q, {
+      class: M({ "t-card-border": e.bordered, "t-card-shadow": e.shadow, "t-card-rounded": e.rounded })
     }, {
-      header: y(() => [
-        i(e.$slots, "header", {}, () => {
+      header: $(() => [
+        u(e.$slots, "header", {}, () => {
           var a, l, s;
           return [
-            r("div", W, [
-              r("div", X, w({ view: (a = e.titles) == null ? void 0 : a.view, edit: (l = e.titles) == null ? void 0 : l.edit, doc: (s = e.titles) == null ? void 0 : s.doc }[v.value || "view"]), 1),
-              e.dialogMode ? (u(), d("button", {
+            i("div", Z, [
+              i("div", _, h({ view: (a = e.titles) == null ? void 0 : a.view, edit: (l = e.titles) == null ? void 0 : l.edit, doc: (s = e.titles) == null ? void 0 : s.doc }[d.value || "view"]), 1),
+              e.dialogMode ? (n(), v("button", {
                 key: 0,
                 class: "close-btn",
-                onClick: t[0] || (t[0] = (j) => e.$emit("toggleDialog", !1))
-              }, " × ")) : M("", !0)
+                onClick: t[0] || (t[0] = (f) => e.$emit("toggleDialog", !1))
+              }, " × ")) : k("", !0)
             ])
           ];
         })
       ]),
-      default: y(() => [
-        r("div", null, [
-          v.value === "edit" && p.value ? (u(), q(c(K), {
+      default: $(() => [
+        i("div", null, [
+          d.value === "edit" && g.value ? (n(), F(m(X), {
             key: 0,
             rounded: "",
             "show-group-labels": "",
             class: "p-4 m-4 mx-auto",
-            fields: O.value,
-            loading: F.value,
-            modelValue: p.value,
-            "onUpdate:modelValue": t[1] || (t[1] = (a) => p.value = a),
-            onCancel: t[2] || (t[2] = (a) => v.value = "view"),
-            onSubmit: t[3] || (t[3] = (a) => D("click:save", o.value))
-          }, R({ _: 2 }, [
+            fields: T.value,
+            loading: z.value,
+            modelValue: g.value,
+            "onUpdate:modelValue": t[1] || (t[1] = (a) => g.value = a),
+            onCancel: t[2] || (t[2] = (a) => d.value = "view"),
+            onSubmit: t[3] || (t[3] = (a) => B("click:save", o.value))
+          }, J({ _: 2 }, [
             e.$slots["form-prepend"] ? {
               name: "prepend",
-              fn: y(() => [
-                i(e.$slots, "form-prepend", {
-                  form: p.value,
-                  errors: U.value,
+              fn: $(() => [
+                u(e.$slots, "form-prepend", {
+                  form: g.value,
+                  errors: P.value,
                   data: o.value
                 })
               ]),
@@ -129,96 +135,101 @@ const W = { class: "flex items-center justify-between" }, X = { class: "card-tit
             } : void 0,
             e.$slots["form-append"] ? {
               name: "default",
-              fn: y(() => [
-                i(e.$slots, "form-append", {
-                  form: p.value,
-                  errors: U.value,
+              fn: $(() => [
+                u(e.$slots, "form-append", {
+                  form: g.value,
+                  errors: P.value,
                   data: o.value
                 })
               ]),
               key: "1"
             } : void 0
-          ]), 1032, ["fields", "loading", "modelValue"])) : (v.value === "view" || !p.value) && o.value ? (u(), d("div", Y, [
-            r("div", Z, [
-              i(e.$slots, "img-list-item", {
-                field: "imageUrl",
-                label: "Image",
-                value: String(o.value.imageUrl)
+          ]), 1032, ["fields", "loading", "modelValue"])) : (d.value === "view" || !g.value) && o.value ? (n(), v("div", x, [
+            i("div", ee, [
+              (n(!0), v(N, null, U(e.imageProps, (a) => u(e.$slots, "img-list-item", {
+                toggle: () => w(o.value, "doc", a),
+                field: a,
+                label: m(p)(a),
+                value: String(o.value[a]),
+                key: a
               }, () => [
-                o.value.imageUrl ? (u(), d("div", {
+                o.value[a] ? (n(), v("div", {
                   key: 0,
-                  class: b(["q-my-sm t-item clickable", { "t-item-separator": e.separator }]),
-                  onClick: t[4] || (t[4] = (a) => k(o.value, "doc"))
+                  class: M(["q-my-sm t-item clickable", { "t-item-separator": e.separator }]),
+                  onClick: (l) => w(o.value, "doc", a)
                 }, [
-                  r("div", _, [
-                    i(e.$slots, "image", {
-                      src: o.value.imageUrl
+                  i("div", te, [
+                    u(e.$slots, "image", {
+                      src: o.value[a]
                     }, () => [
-                      r("div", x, [
-                        r("img", {
-                          src: o.value.imageUrl,
-                          alt: "Document"
-                        }, null, 8, ee)
+                      i("div", oe, [
+                        i("img", {
+                          src: o.value[a],
+                          alt: m(p)(a)
+                        }, null, 8, le)
                       ])
                     ])
                   ]),
-                  t[6] || (t[6] = r("div", { class: "t-item-section" }, [
-                    r("div", { class: "t-item-label" }, "Click to expand")
+                  t[5] || (t[5] = i("div", { class: "t-item-section" }, [
+                    i("div", { class: "t-item-label" }, "Click to expand")
                   ], -1))
-                ], 2)) : M("", !0)
-              ]),
-              i(e.$slots, "list-prepend", { data: o.value }),
-              (u(!0), d(z, null, T(B.value, (a) => {
+                ], 10, ae)) : k("", !0)
+              ])), 128)),
+              u(e.$slots, "list-prepend", { data: o.value }),
+              (n(!0), v(N, null, U(j.value, (a) => {
                 var l;
-                return i(e.$slots, "list-item", {
+                return u(e.$slots, "list-item", {
                   key: a[0],
                   field: a[0],
-                  label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? c($)(c(g)(a[0])),
-                  value: typeof a[1] == "boolean" ? V(c(g)(a[0]), a[1]) : h(a[1], a[0])
+                  label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? m(p)(a[0]),
+                  value: typeof a[1] == "boolean" ? E(m(D)(a[0]), a[1]) : C(a[1], a[0])
                 }, () => {
                   var s;
                   return [
-                    r("div", {
-                      class: b(["q-my-sm t-item", { "t-item-separator": e.separator }])
+                    i("div", {
+                      class: M(["q-my-sm t-item", { "t-item-separator": e.separator }])
                     }, [
-                      r("div", ae, [
-                        r("div", te, w(((s = e.labelsMap) == null ? void 0 : s[a[0]]) ?? c($)(c(g)(a[0]))), 1),
-                        typeof a[1] == "boolean" ? (u(), d("div", oe, [
-                          r("div", {
-                            class: b(["t-chip t-chip-square", a[1] ? "t-chip-green" : "t-chip-red"])
-                          }, w(V(c(g)(a[0]), a[1])), 3)
-                        ])) : (u(), d("div", le, w(h(a[1], a[0])), 1))
+                      i("div", se, [
+                        i("div", ie, h(((s = e.labelsMap) == null ? void 0 : s[a[0]]) ?? m(p)(a[0])), 1),
+                        typeof a[1] == "boolean" ? (n(), v("div", re, [
+                          i("div", {
+                            class: M(["t-chip t-chip-square", a[1] ? "t-chip-green" : "t-chip-red"])
+                          }, h(E(m(D)(a[0]), a[1])), 3)
+                        ])) : (n(), v("div", ne, h(C(a[1], a[0])), 1))
                       ])
                     ], 2)
                   ];
                 });
               }), 128)),
-              i(e.$slots, "list-append", { data: o.value })
+              u(e.$slots, "list-append", { data: o.value })
             ]),
-            i(e.$slots, "list-after", { data: o.value })
-          ])) : o.value ? (u(), d("div", se, [
-            i(e.$slots, "image-viewer", {
-              close: () => k(o.value, "view"),
+            u(e.$slots, "list-after", { data: o.value })
+          ])) : o.value ? (n(), v("div", ue, [
+            u(e.$slots, "image-viewer", {
+              close: () => w(o.value, "view"),
               src: o.value.imageUrl
-            }, () => [
-              S(G, {
-                dense: "",
-                color: "primary",
-                label: "Return",
-                icon: "fas fa-arrow-left",
-                onClick: t[5] || (t[5] = (a) => k(o.value, "view"))
-              }),
-              o.value.imageUrl ? (u(), d("img", {
-                key: 0,
-                style: { width: "100%" },
-                src: o.value.imageUrl,
-                alt: "Document"
-              }, null, 8, re)) : M("", !0)
-            ])
-          ])) : M("", !0)
+            }, () => {
+              var a, l, s, f, L;
+              return [
+                O(K, {
+                  dense: "",
+                  color: "primary",
+                  label: "Return",
+                  icon: "fas fa-arrow-left",
+                  onClick: t[4] || (t[4] = (ve) => w(o.value, "view"))
+                }),
+                (a = y.value) != null && a.src || o.value[((l = e.imageProps) == null ? void 0 : l[0]) ?? 0] ? (n(), v("img", {
+                  key: 0,
+                  style: { width: "100%" },
+                  src: String(((s = y.value) == null ? void 0 : s.src) || o.value[((f = e.imageProps) == null ? void 0 : f[0]) ?? 0]),
+                  alt: m(p)(((L = y.value) == null ? void 0 : L.alt) || "Document")
+                }, null, 8, de)) : k("", !0)
+              ];
+            })
+          ])) : k("", !0)
         ]),
-        i(e.$slots, "loader", { loading: C.value }, () => [
-          S(J, { showing: C.value }, null, 8, ["showing"])
+        u(e.$slots, "loader", { loading: V.value }, () => [
+          O(W, { showing: V.value }, null, 8, ["showing"])
         ])
       ]),
       _: 3
@@ -226,5 +237,5 @@ const W = { class: "flex items-center justify-between" }, X = { class: "card-tit
   }
 });
 export {
-  fe as default
+  Me as default
 };

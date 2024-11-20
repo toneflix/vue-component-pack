@@ -3,10 +3,14 @@ import type { PublicProps, VNode } from 'vue'
 export interface DataViewerProps {
   /**
    * When in view mode, the keys in this list will not be loaded into the viewer
+   * 
+   * @default ```["id"]```
    */
   exclusions?: string[] | undefined
   /**
    * When in edit mode, the keys in this list will not be loaded into the form
+   * 
+   * @default ```["id", "imageUrl"]```
    */
   formExclusions?: string[] | undefined
   /**
@@ -41,6 +45,8 @@ export interface DataViewerProps {
   /**
    * An array of props that should be considered as images, when we encounter
    * any of these props we will render it as an image.
+   * 
+   * @default ```["imageUrl"]```
    */
   imageProps?: string[] | undefined
   /**
@@ -132,7 +138,7 @@ export interface ComponentSlots {
   /**
    * Slot for overiding image list items
    */
-  'img-list-item': (scope: { label: string; value: string; field: string }) => VNode[]
+  'img-list-item': (scope: { label: string; value: string; field: string, toggle: () => void }) => VNode[]
   /**
    * Slot for adding content after the form
    */

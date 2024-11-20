@@ -35,20 +35,23 @@
         <div class="t-list" separator>
           <slot
             name="img-list-item"
-            :field="'imageUrl'"
-            :label="'Image'"
-            :value="String(viewData.imageUrl)"
+            :toggle="() => setData(viewData, 'doc', prop)"
+            :field="prop"
+            :label="titleCase(prop)"
+            :value="String(viewData[prop])"
+            :key="prop"
+            v-for="prop in imageProps"
           >
             <div
               class="q-my-sm t-item clickable"
               :class="{ 't-item-separator': separator }"
-              v-if="viewData.imageUrl"
-              @click="setData(viewData, 'doc')"
+              v-if="viewData[prop]"
+              @click="setData(viewData, 'doc', prop)"
             >
               <div class="t-item-section avatar">
-                <slot name="image" :src="viewData.imageUrl">
+                <slot name="image" :src="viewData[prop]">
                   <div class="t-avatar">
-                    <img :src="viewData.imageUrl" alt="Document" />
+                    <img :src="viewData[prop]" :alt="titleCase(prop)" />
                   </div>
                 </slot>
               </div>
@@ -63,7 +66,7 @@
             <slot
               name="list-item"
               :field="field[0]"
-              :label="labelsMap?.[field[0]] ?? titleCase(slug(field[0]))"
+              :label="labelsMap?.[field[0]] ?? titleCase(field[0])"
               :value="
                 typeof field[1] === 'boolean'
                   ? boolLabel(slug(field[0]), field[1])
@@ -73,7 +76,7 @@
               <div class="q-my-sm t-item" :class="{ 't-item-separator': separator }">
                 <div class="t-item-section">
                   <div class="t-item-label caption">
-                    {{ labelsMap?.[field[0]] ?? titleCase(slug(field[0])) }}
+                    {{ labelsMap?.[field[0]] ?? titleCase(field[0]) }}
                   </div>
                   <div class="t-item-label" v-if="typeof field[1] === 'boolean'">
                     <div
@@ -104,10 +107,10 @@
             @click="setData(viewData, 'view')"
           />
           <img
-            v-if="viewData.imageUrl"
+            v-if="activeDoc?.src || viewData[imageProps?.[0] ?? 0]"
             style="width: 100%"
-            :src="viewData.imageUrl"
-            alt="Document"
+            :src="String(activeDoc?.src || viewData[imageProps?.[0] ?? 0])"
+            :alt="titleCase(activeDoc?.alt || 'Document')"
           />
         </slot>
       </div>
@@ -120,7 +123,7 @@
 
 <script setup lang="ts">
 import '../styles/main.scss'
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { slug, titleCase } from '../utils/providers'
 import TBtn from './TBtn.vue'
 import TCard from './dialog/TCard.vue'
@@ -161,8 +164,9 @@ const form = defineModel<MainProps['form']>('form', {
 const props = withDefaults(defineProps<MainContentProps>(), {
   titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
   dateFormat: 'do MMM, yyyy h:mm a',
-  exclusions: () => ['imageUrl'],
-  formExclusions: () => ['imageUrl']
+  imageProps: () => ['imageUrl'],
+  exclusions: () => ['id'],
+  formExclusions: () => ['id', 'imageUrl']
 })
 
 const viewMode = defineModel<MainProps['mode']>('mode', {
@@ -181,12 +185,15 @@ const errors = defineModel<MainProps['errors']>('errors', {
   default: {}
 })
 
+const activeDoc = ref<{ alt: string; src: string }>()
 const dialogToggle = ref(false)
 
 const viewDataMap = computed(() =>
   viewData.value
     ? (Object.entries(viewData.value).filter((e) => {
-        if (viewMode.value === 'edit') {
+        if (props.imageProps.includes(e[0])) {
+          return false
+        } else if (viewMode.value === 'edit') {
           return ![...props.exclusions, ...props.formExclusions].includes(e[0])
         } else {
           return !props.exclusions.includes(e[0])
@@ -209,16 +216,22 @@ const formdata = computed<FormField[]>(() => {
 })
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const setData = (data: any, mode: 'edit' | 'view' | 'doc' = 'view') => {
-  viewData.value = data
-  viewMode.value = mode
+const setData = (data: any, mode: 'edit' | 'view' | 'doc' = 'view', doc?: string) => {
   dialogToggle.value = true
 
-  const nData = Object.fromEntries(
-    Object.entries(data).map(([key, val]) => [slug(key), parser(val)])
-  )
+  if (doc) {
+    viewMode.value = 'doc'
+    activeDoc.value = { alt: doc, src: viewData.value[doc] }
+  } else {
+    viewData.value = data
+    viewMode.value = mode
 
-  emit('updateData', nData, mode)
+    const nData = Object.fromEntries(
+      Object.entries(data).map(([key, val]) => [slug(key), parser(val)])
+    )
+
+    emit('updateData', nData, mode)
+  }
 }
 
 const boolLabel = (key: string, bool: boolean) => {
@@ -257,4 +270,10 @@ const parser = (data: string | boolean | any, field?: string) => {
 
   return data
 }
+
+watch(viewMode, (viewMode) => {
+  if (viewMode !== 'doc') {
+    activeDoc.value = undefined
+  }
+})
 </script>

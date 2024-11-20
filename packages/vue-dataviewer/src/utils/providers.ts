@@ -21,7 +21,7 @@ export const slug = (str: string, separator: string = '_') => {
 }
 
 export const titleCase = (str: string) => {
-  return str
+  return slug(str)
     .toLowerCase()
     .replace(/_/g, ' ')
     .replace(/-/g, ' ')
@@ -50,6 +50,9 @@ export const casts = {
   },
   listItem: <X> (props: X) => {
     return <{ label: string; value: string; field: string }>props
+  },
+  imgListItem: <X> (props: X) => {
+    return <{ label: string; value: string; field: string, toggle: () => void }>props
   },
   imageViewer: <X> (props: X) => {
     return <{ close: () => void; src?: string | undefined }>props
