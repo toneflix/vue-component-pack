@@ -9,6 +9,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - Allow function to be passed as data options. ([31f70ee](https://github.com/toneflix/vue-component-pack/commit/31f70ee02af849ef6cf84a90ffdc5e990b0d8bcb))
 
+- Add prop to determine what data property will be considered as date. ([31f70ee](https://github.com/toneflix/vue-component-pack/commit/31f70ee02af849ef6cf84a90ffdc5e990b0d8bcb))
+
+- Add prop to allow setting custom date format. ([31f70ee](https://github.com/toneflix/vue-component-pack/commit/31f70ee02af849ef6cf84a90ffdc5e990b0d8bcb))
+
+- Allow closing dialog with escape key. ([31f70ee](https://github.com/toneflix/vue-component-pack/commit/31f70ee02af849ef6cf84a90ffdc5e990b0d8bcb))
+
 ## [1.3.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.3.5...@toneflix/vue-dataviewer@1.3.6) (2024-11-20)
 
 ### Bug Fixes
