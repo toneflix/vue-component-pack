@@ -16,9 +16,6 @@
     <template #default="{ toggleDialog }">
       <TBtn label="View Datas" @click="toggleDialog(data, 'view')" />
     </template>
-    <template #image="props">
-      <div class="">{{ props.src }}</div>
-    </template>
   </DataViewer>
 
   <MainContent
@@ -33,6 +30,9 @@
     :form="data"
     class="mmx"
   >
+    <template #image-viewer="props">
+      <div class="">{{ props.src }}</div>
+    </template>
   </MainContent>
 </template>
 

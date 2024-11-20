@@ -39,6 +39,11 @@ export interface DataViewerProps {
    */
   dateProps?: string[] | undefined
   /**
+   * An array of props that should be considered as images, when we encounter
+   * any of these props we will render it as an image.
+   */
+  imageProps?: string[] | undefined
+  /**
    * date-fns string date format will be used to format encountered dates
    *
    * @see https://date-fns.org/docs/format
@@ -100,7 +105,16 @@ export interface MainProps {
   loading?: boolean | undefined
 }
 
-export type SlotName = 'list-item' | 'form-prepend' | 'form-append' | 'list-prepend' | 'list-append' | 'list-after' | 'image' | 'loader'
+export type SlotName =
+  | 'list-item'
+  | 'img-list-item'
+  | 'form-prepend'
+  | 'form-append'
+  | 'list-prepend'
+  | 'list-append'
+  | 'list-after'
+  | 'image-viewer'
+  | 'loader'
 
 export interface ComponentSlots {
   /**
@@ -116,13 +130,25 @@ export interface ComponentSlots {
    */
   'list-item': (scope: { label: string; value: string; field: string }) => VNode[]
   /**
+   * Slot for overiding image list items
+   */
+  'img-list-item': (scope: { label: string; value: string; field: string }) => VNode[]
+  /**
    * Slot for adding content after the form
    */
-  'form-prepend': (scope: { form?: MainProps['form'], errors?: MainProps['errors'], data?: MainProps['data'] }) => VNode[]
+  'form-prepend': (scope: {
+    form?: MainProps['form']
+    errors?: MainProps['errors']
+    data?: MainProps['data']
+  }) => VNode[]
   /**
    * Slot for adding content before the form
    */
-  'form-append': (scope: { form?: MainProps['form'], errors?: MainProps['errors'], data?: MainProps['data'] }) => VNode[]
+  'form-append': (scope: {
+    form?: MainProps['form']
+    errors?: MainProps['errors']
+    data?: MainProps['data']
+  }) => VNode[]
   /**
    * Slot for adding content before the list
    */
@@ -136,9 +162,13 @@ export interface ComponentSlots {
    */
   'list-after': (scope: { data: MainProps['data'] }) => VNode[]
   /**
+   * Slot for overiding images (not the viewer)
+   */
+  image: (scope: { src?: string }) => VNode[]
+  /**
    * Slot for overiding the image viewer
    */
-  image: (scope: { close: () => void; src?: string | undefined }) => VNode[]
+  'image-viewer': (scope: { close: () => void; src?: string | undefined }) => VNode[]
   /**
    * Slot for overiding the loading indicator
    */

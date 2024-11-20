@@ -33,22 +33,31 @@
       </VueForms>
       <div v-else-if="(viewMode === 'view' || !form) && viewData">
         <div class="t-list" separator>
-          <div
-            class="q-my-sm t-item clickable"
-            :class="{ 't-item-separator': separator }"
-            v-if="viewData.imageUrl"
-            @click="setData(viewData, 'doc')"
+          <slot
+            name="img-list-item"
+            :field="'imageUrl'"
+            :label="'Image'"
+            :value="String(viewData.imageUrl)"
           >
-            <div class="t-item-section avatar">
-              <div class="t-avatar">
-                <img :src="viewData.imageUrl" alt="Document" />
+            <div
+              class="q-my-sm t-item clickable"
+              :class="{ 't-item-separator': separator }"
+              v-if="viewData.imageUrl"
+              @click="setData(viewData, 'doc')"
+            >
+              <div class="t-item-section avatar">
+                <slot name="image" :src="viewData.imageUrl">
+                  <div class="t-avatar">
+                    <img :src="viewData.imageUrl" alt="Document" />
+                  </div>
+                </slot>
+              </div>
+
+              <div class="t-item-section">
+                <div class="t-item-label">Click to expand</div>
               </div>
             </div>
-
-            <div class="t-item-section">
-              <div class="t-item-label">Click to expand</div>
-            </div>
-          </div>
+          </slot>
           <slot name="list-prepend" :data="viewData"> </slot>
           <template v-for="field in viewDataMap" :key="field[0]">
             <slot
@@ -85,8 +94,8 @@
         </div>
         <slot name="list-after" :data="viewData"> </slot>
       </div>
-      <div class="img-preview" v-else-if="viewData">
-        <slot name="image" :close="() => setData(viewData, 'view')" :src="viewData.imageUrl">
+      <div class="image-viewer" v-else-if="viewData">
+        <slot name="image-viewer" :close="() => setData(viewData, 'view')" :src="viewData.imageUrl">
           <TBtn
             dense
             color="primary"

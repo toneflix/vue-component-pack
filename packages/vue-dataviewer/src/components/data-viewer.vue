@@ -31,9 +31,14 @@
           v-bind="casts.list(props)"
           v-else-if="slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after'"
         />
-        <slot :name="slot" v-bind="casts.listItem(props)" v-else-if="slot === 'list-item'" />
-        <slot :name="slot" v-bind="casts.image(props)" v-else-if="slot === 'image'" />
+        <slot
+          :name="slot"
+          v-bind="casts.listItem(props)"
+          v-else-if="slot === 'list-item' || slot === 'img-list-item'"
+        />
+        <slot :name="slot" v-bind="casts.imageViewer(props)" v-else-if="slot === 'image-viewer'" />
         <slot :name="slot" v-bind="casts.loader(props)" v-else-if="slot === 'loader'" />
+        <slot :name="slot" v-bind="casts.image(props)" v-else-if="slot === 'image'" />
       </template>
     </MainContent>
   </TDialog>

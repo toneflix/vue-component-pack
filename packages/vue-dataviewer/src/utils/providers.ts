@@ -1,4 +1,4 @@
-import { MainProps, type SlotName } from "../types"
+import { MainProps, SlotName } from '../types'
 
 export const slug = (str: string, separator: string = '_') => {
   const splitCaps = (string: string) =>
@@ -31,52 +31,72 @@ export const titleCase = (str: string) => {
 }
 
 export const slotNames: SlotName[] = [
-  'form-prepend', 'form-append', 'list-item', 'list-prepend', 'list-append', 'list-after', 'image', 'loader'
+  'form-prepend',
+  'form-append',
+  'list-item',
+  'list-prepend',
+  'list-append',
+  'list-after',
+  'image-viewer',
+  'loader'
 ]
 
 export const casts = {
-  listItem: <X> (props: X) => {
-    return <{ label: string; value: string; field: string }>props
-  },
-  castFormPos: <X> (props: X) => {
-    return <{
-      form?: undefined
-      data?: MainProps['data']
-      errors?: MainProps['errors']
-    }>props
-  },
-  list: <X> (props: X) => {
-    return <{
-      data: MainProps['data']
-    }>props
-  },
   image: <X> (props: X) => {
-    return <{ close: () => void; src?: string | undefined }>props
+    return <{ src?: string | undefined }>props
   },
   loader: <X> (props: X) => {
     return <{ loading: boolean }>props
   },
+  listItem: <X> (props: X) => {
+    return <{ label: string; value: string; field: string }>props
+  },
+  imageViewer: <X> (props: X) => {
+    return <{ close: () => void; src?: string | undefined }>props
+  },
+  castFormPos: <X> (props: X) => {
+    return <
+      {
+        form?: undefined
+        data?: MainProps['data']
+        errors?: MainProps['errors']
+      }
+      >props
+  },
+  list: <X> (props: X) => {
+    return <
+      {
+        data: MainProps['data']
+      }
+      >props
+  },
   form: <X> (props: X) => {
-    return <{
-      form?: undefined
-      data?: MainProps['data']
-      errors?: MainProps['errors']
-    }>props
+    return <
+      {
+        form?: undefined
+        data?: MainProps['data']
+        errors?: MainProps['errors']
+      }
+      >props
   }
 }
 
 export const propsCast = <X> (props: X, slot: SlotName) => {
   if (slot === 'form-append' || slot === 'form-prepend') {
-    return <{
-      form?: undefined
-      data?: MainProps['data']
-      errors?: MainProps['errors']
-    }>props
+    return <
+      {
+        form?: undefined
+        data?: MainProps['data']
+        errors?: MainProps['errors']
+      }
+      >props
   } else if (slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after') {
-    return <{
-      data: MainProps['data']
-    }>props
+    return <
+      {
+        data: MainProps['data']
+      }
+      >props
   } else if (slot === 'list-item') {
     return <{ label: string; value: string; field: string }>props
   }
-} 
+}
