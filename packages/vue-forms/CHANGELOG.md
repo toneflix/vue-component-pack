@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.4.5...@toneflix/vue-forms@1.4.6) (2024-11-20)
+
+### Bug Fixes
+
+- Improve type support and fix bugs. ([afe5841](https://github.com/toneflix/vue-component-pack/commit/afe5841c5f93eb1a6e4809b6fbcf66e9c884052a))
+
 ## [1.4.5](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.4.4...@toneflix/vue-forms@1.4.5) (2024-11-19)
 
 **Note:** Version bump only for package @toneflix/vue-forms
