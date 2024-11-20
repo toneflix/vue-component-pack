@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.5.0...@toneflix/vue-dataviewer@1.6.0) (2024-11-20)
+
+### Features
+
+- Add prop to allow further customization of lists. ([7c0eaca](https://github.com/toneflix/vue-component-pack/commit/7c0eaca160443861523454a37e886643bd4c32e7))
+
 # [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.4.0...@toneflix/vue-dataviewer@1.5.0) (2024-11-20)
 
 ### Features
