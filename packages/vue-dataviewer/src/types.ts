@@ -1,4 +1,4 @@
-import type { PublicProps } from 'vue'
+import type { PublicProps, VNode } from 'vue'
 
 export interface DataViewerProps {
   /**
@@ -13,10 +13,10 @@ export interface DataViewerProps {
    * Map boolean data labels to data options
    */
   booleanLabels?:
-    | {
-        [key: string]: [string, string]
-      }
-    | undefined
+  | {
+    [key: string]: [string, string]
+  }
+  | undefined
   /**
    * Used along side with "bordered" to create a rounded border
    */
@@ -45,6 +45,18 @@ export interface DataViewerProps {
    * @default "do MMM, yyyy h:mm a"
    */
   dateFormat?: string | undefined
+  /**
+   * Overide property labels
+   */
+  labelsMap?: {
+    [key: string]: string
+  }
+  /**
+   * Overide property values
+   */
+  valuesMap?: {
+    [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
+  }
 }
 
 export interface MainContentProps extends DataViewerProps {
@@ -64,14 +76,12 @@ export interface MainProps {
    */
   data: {
     imageUrl?: string | undefined
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [key: string]: any
+    [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
   }
   /**
    * The reactive model data to be used in edit mode
    */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  form?: { [key: string]: any } | undefined
+  form?: { [key: string]: any } | undefined // eslint-disable-line @typescript-eslint/no-explicit-any
   /**
    * The current viewing mode
    */
@@ -90,8 +100,53 @@ export interface MainProps {
   loading?: boolean | undefined
 }
 
+export type SlotName = 'list-item' | 'form-prepend' | 'form-append' | 'list-prepend' | 'list-append' | 'list-after' | 'image' | 'loader'
+
+export interface ComponentSlots {
+  /**
+   * This is where default content goes
+   */
+  default: () => VNode[]
+  /**
+   * Slot for overiding the dialog header
+   */
+  header: () => VNode[]
+  /**
+   * Slot for overiding list items
+   */
+  'list-item': (scope: { label: string; value: string; field: string }) => VNode[]
+  /**
+   * Slot for adding content after the form
+   */
+  'form-prepend': (scope: { form?: MainProps['form'], errors?: MainProps['errors'], data?: MainProps['data'] }) => VNode[]
+  /**
+   * Slot for adding content before the form
+   */
+  'form-append': (scope: { form?: MainProps['form'], errors?: MainProps['errors'], data?: MainProps['data'] }) => VNode[]
+  /**
+   * Slot for adding content before the list
+   */
+  'list-prepend': (scope: { data: MainProps['data'] }) => VNode[]
+  /**
+   * Slot for adding content after the list
+   */
+  'list-append': (scope: { data: MainProps['data'] }) => VNode[]
+  /**
+   * Slot for adding content after the list (outside)
+   */
+  'list-after': (scope: { data: MainProps['data'] }) => VNode[]
+  /**
+   * Slot for overiding the image viewer
+   */
+  image: (scope: { close: () => void; src?: string | undefined }) => VNode[]
+  /**
+   * Slot for overiding the loading indicator
+   */
+  loader: (scope: { loading: boolean }) => VNode[]
+}
+
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 export type GlobalComponentConstructor<Props = {}, Slots = {}> = new () => {
   $props: PublicProps & Props & DataViewerProps
-  $slots: Slots
+  $slots: Slots & ComponentSlots
 }

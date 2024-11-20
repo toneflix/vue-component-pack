@@ -25,10 +25,10 @@
         @submit="emit('click:save', viewData)"
       >
         <template #prepend v-if="$slots['form-prepend']">
-          <slot name="form-prepend" :form="form" :errors="errors" :viewData="viewData"> </slot>
+          <slot name="form-prepend" :form="form" :errors="errors" :data="viewData"> </slot>
         </template>
         <template #default v-if="$slots['form-append']">
-          <slot name="form-append" :form="form" :errors="errors" :viewData="viewData"> </slot>
+          <slot name="form-append" :form="form" :errors="errors" :data="viewData"> </slot>
         </template>
       </VueForms>
       <div v-else-if="(viewMode === 'view' || !form) && viewData">
@@ -49,42 +49,63 @@
               <div class="t-item-label">Click to expand</div>
             </div>
           </div>
-          <div
-            class="q-my-sm t-item"
-            :class="{ 't-item-separator': separator }"
-            :key="field[0]"
-            v-for="field in viewDataMap"
-          >
-            <div class="t-item-section">
-              <div class="t-item-label caption">
-                {{ titleCase(slug(field[0])) }}
-              </div>
-              <div class="t-item-label" v-if="typeof field[1] === 'boolean'">
-                <div class="t-chip t-chip-square" :class="field[1] ? 't-chip-green' : 't-chip-red'">
-                  {{ boolLabel(slug(field[0]), field[1]) }}
+          <slot name="list-prepend" :data="viewData"> </slot>
+          <template v-for="field in viewDataMap" :key="field[0]">
+            <slot
+              name="list-item"
+              :field="field[0]"
+              :label="labelsMap?.[field[0]] ?? titleCase(slug(field[0]))"
+              :value="
+                typeof field[1] === 'boolean'
+                  ? boolLabel(slug(field[0]), field[1])
+                  : parser(field[1], field[0])
+              "
+            >
+              <div class="q-my-sm t-item" :class="{ 't-item-separator': separator }">
+                <div class="t-item-section">
+                  <div class="t-item-label caption">
+                    {{ labelsMap?.[field[0]] ?? titleCase(slug(field[0])) }}
+                  </div>
+                  <div class="t-item-label" v-if="typeof field[1] === 'boolean'">
+                    <div
+                      class="t-chip t-chip-square"
+                      :class="field[1] ? 't-chip-green' : 't-chip-red'"
+                    >
+                      {{ boolLabel(slug(field[0]), field[1]) }}
+                    </div>
+                  </div>
+                  <div class="t-item-label" v-else>
+                    {{ parser(field[1], field[0]) }}
+                  </div>
                 </div>
               </div>
-              <div class="t-item-label" v-else>
-                {{ parser(field[1], field[0]) }}
-              </div>
-            </div>
-          </div>
-          <slot name="list-append" :viewData="viewData"> </slot>
+            </slot>
+          </template>
+          <slot name="list-append" :data="viewData"> </slot>
         </div>
-        <slot name="list-after" :viewData="viewData"> </slot>
+        <slot name="list-after" :data="viewData"> </slot>
       </div>
       <div class="img-preview" v-else-if="viewData">
-        <TBtn
-          dense
-          color="primary"
-          label="Return"
-          icon="fas fa-arrow-left"
-          @click="setData(viewData, 'view')"
-        />
-        <img v-if="viewData.imageUrl" style="width: 100%" :src="viewData.imageUrl" alt="Document" />
+        <slot name="image" :close="() => setData(viewData, 'view')" :src="viewData.imageUrl">
+          <TBtn
+            dense
+            color="primary"
+            label="Return"
+            icon="fas fa-arrow-left"
+            @click="setData(viewData, 'view')"
+          />
+          <img
+            v-if="viewData.imageUrl"
+            style="width: 100%"
+            :src="viewData.imageUrl"
+            alt="Document"
+          />
+        </slot>
       </div>
     </div>
-    <TinnerLoading :showing="loading" />
+    <slot name="loader" :loading="loading">
+      <TinnerLoading :showing="loading" />
+    </slot>
   </TCard>
 </template>
 
@@ -97,8 +118,10 @@ import TCard from './dialog/TCard.vue'
 import TinnerLoading from './TInnerLoading.vue'
 import { FormField } from '@toneflix/vue-forms/src/types'
 import { VueForms } from '@toneflix/vue-forms'
-import { MainContentProps, MainProps } from '../types'
+import { ComponentSlots, MainContentProps, MainProps } from '../types'
 import { formatDate } from 'date-fns'
+
+defineSlots<ComponentSlots>()
 
 defineOptions({
   name: 'MainContent'
@@ -114,7 +137,9 @@ const emit = defineEmits<{
 /**
  * The data that will be mapped for previewing
  */
-const viewData = defineModel<MainProps['data']>('data')
+const viewData = defineModel<MainProps['data']>('data', {
+  required: true
+})
 
 /**
  * The reactive model data to be used in edit mode
@@ -197,6 +222,10 @@ const boolLabel = (key: string, bool: boolean) => {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const parser = (data: string | boolean | any, field?: string) => {
+  if (field && props.valuesMap?.[field]) {
+    data = props.valuesMap?.[field]
+  }
+
   if (field && props.dateProps?.includes(field)) {
     return formatDate(data, props.dateFormat)
   }

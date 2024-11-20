@@ -1,13 +1,31 @@
-const c = (r, t = "_") => ((p) => p.replace(/([a-z])([A-Z]+)/g, (s, e, a) => e + " " + a).replace(
+const n = (e, s = "_") => ((a) => a.replace(/([a-z])([A-Z]+)/g, (o, r, t) => r + " " + t).replace(
   /([A-Z])([A-Z]+)([^a-zA-Z0-9]*)$/,
-  (s, e, a, o) => e + a.toLowerCase() + o
+  (o, r, t, p) => r + t.toLowerCase() + p
 ).replace(
   /([A-Z]+)([A-Z][a-z])/g,
-  (s, e, a) => e.toLowerCase() + " " + a
-))(r).replace(/\W+/g, " ").split(/ |\B(?=[A-Z])/).map((p) => p.toLowerCase()).join(t), n = (r) => r.toLowerCase().replace(/_/g, " ").replace(/-/g, " ").replace(/(?:^|\s)\w/g, function(t) {
-  return t.toUpperCase();
-});
+  (o, r, t) => r.toLowerCase() + " " + t
+))(e).replace(/\W+/g, " ").split(/ |\B(?=[A-Z])/).map((a) => a.toLowerCase()).join(s), c = (e) => e.toLowerCase().replace(/_/g, " ").replace(/-/g, " ").replace(/(?:^|\s)\w/g, function(s) {
+  return s.toUpperCase();
+}), i = [
+  "form-prepend",
+  "form-append",
+  "list-item",
+  "list-prepend",
+  "list-append",
+  "list-after",
+  "image",
+  "loader"
+], m = {
+  listItem: (e) => e,
+  castFormPos: (e) => e,
+  list: (e) => e,
+  image: (e) => e,
+  loader: (e) => e,
+  form: (e) => e
+};
 export {
-  c as slug,
-  n as titleCase
+  m as casts,
+  i as slotNames,
+  n as slug,
+  c as titleCase
 };

@@ -19,16 +19,43 @@
       @update-data="(d, m) => $emit('toggleDialog', d, m)"
       @click:save="$emit('click:save', $event)"
       @toggleDialog="dialogToggle = $event"
-    />
+    >
+      <template v-for="slot in slotNames" :key="slot" v-slot:[slot]="props">
+        <slot
+          :name="slot"
+          v-bind="casts.form(props)"
+          v-if="slot === 'form-append' || slot === 'form-prepend'"
+        />
+        <slot
+          :name="slot"
+          v-bind="casts.list(props)"
+          v-else-if="slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after'"
+        />
+        <slot :name="slot" v-bind="casts.listItem(props)" v-else-if="slot === 'list-item'" />
+        <slot :name="slot" v-bind="casts.image(props)" v-else-if="slot === 'image'" />
+        <slot :name="slot" v-bind="casts.loader(props)" v-else-if="slot === 'loader'" />
+      </template>
+    </MainContent>
   </TDialog>
 </template>
 
 <script setup lang="ts">
 import '../styles/main.scss'
-import { ref } from 'vue'
+import { ref, type VNode } from 'vue'
 import TDialog from './dialog/TDialog.vue'
 import MainContent from './main-content.vue'
-import { DataViewerProps, MainProps } from '../types'
+import { ComponentSlots, DataViewerProps, MainProps } from '../types'
+import { casts, slotNames } from '../utils/providers'
+
+defineSlots<
+  ComponentSlots & {
+    /**
+     * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
+     */
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    default: (scope: { toggleDialog: (data?: any, mode?: 'edit' | 'view' | 'doc') => void }) => VNode[]
+  }
+>()
 
 defineOptions({
   name: 'DataViewer'
@@ -81,8 +108,10 @@ const errors = defineModel<MainProps['errors']>('errors', {
 const dialogToggle = ref(false)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const toggleDialog = (data: any, mode: 'edit' | 'view' | 'doc' = 'view') => {
-  viewData.value = data
+const toggleDialog = (data?: any, mode: 'edit' | 'view' | 'doc' = 'view') => {
+  if (data) {
+    viewData.value = data
+  }
   viewMode.value = mode
   dialogToggle.value = true
 }

@@ -18,8 +18,8 @@ const model = defineModel<boolean>('modelValue', {
 })
 
 onMounted(() => {
-  document.onkeyup = (e) => {
-    if (e.key === 'Escape' && model.value) {
+  window.onkeyup = (e) => {
+    if (e.code === 'Escape' && model.value) {
       model.value = false
     }
   }

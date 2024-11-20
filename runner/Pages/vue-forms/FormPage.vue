@@ -24,7 +24,7 @@
       @cancel="console.log('cancel')"
       @submit="console.log('submit')"
     >
-      <!-- <template #textarea="props">{{ props.modelValue }} </template> -->
+      <template #textarea="props">{{ props.modelValue }} </template>
     </VueForms>
   </div>
   <div class="demo-container">

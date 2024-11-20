@@ -7,12 +7,18 @@
     :dateProps="['createdAt']"
     :data="data"
     :form="data"
-    v-slot="{ toggleDialog }"
+    :labels-map="{ createdAt: 'Date Created' }"
+    :values-map="{ friend: 'David' }"
     :boolean-labels="{
       accept: ['Accepted', 'Rejected']
     }"
   >
-    <TBtn label="View Data" @click="toggleDialog(data, 'view')" />
+    <template #default="{ toggleDialog }">
+      <TBtn label="View Datas" @click="toggleDialog(data, 'view')" />
+    </template>
+    <template #image="props">
+      <div class="">{{ props.src }}</div>
+    </template>
   </DataViewer>
 
   <MainContent
@@ -20,11 +26,14 @@
     shadow
     rounded
     separator
+    :labels-map="{ createdAt: 'Date Created' }"
+    :values-map="{ friend: () => 'David' }"
     :dateProps="['createdAt']"
     :data="data"
     :form="data"
     class="mmx"
-  />
+  >
+  </MainContent>
 </template>
 
 <script setup lang="ts">
@@ -41,13 +50,12 @@ const data = reactive({
   safe_mode: true,
   country: 'Nigeria',
   address: '',
+  status: 'pending',
+  friend: { name: 'David' },
   message: 'Hello my people',
   imageUrl: 'https://www.tailwind-kit.com/images/person/6.jpg',
   createdAt: '2023-06-06 21:22:00',
-  nothing: (props: unknown) => {
-    console.log(props)
-    return 'Hello Nohting'
-  }
+  nothing: () => 'Hello Nohting'
 })
 </script>
 
