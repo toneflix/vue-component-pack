@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.3.5...@toneflix/vue-dataviewer@1.3.6) (2024-11-20)
+
+### Bug Fixes
+
+- Add styles to exports ([c6bcba0](https://github.com/toneflix/vue-component-pack/commit/c6bcba0363ac7de216dd4bfd808894427d8626ca))
+
 ## [1.3.5](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.3.4...@toneflix/vue-dataviewer@1.3.5) (2024-11-19)
 
 **Note:** Version bump only for package @toneflix/vue-dataviewer
