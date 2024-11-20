@@ -13,10 +13,10 @@ export interface DataViewerProps {
    * Map boolean data labels to data options
    */
   booleanLabels?:
-    | {
-        [key: string]: [string, string]
-      }
-    | undefined
+  | {
+    [key: string]: [string, string]
+  }
+  | undefined
   /**
    * Used along side with "bordered" to create a rounded border
    */
@@ -33,6 +33,18 @@ export interface DataViewerProps {
    * Adds a shadow to the base card
    */
   shadow?: boolean | undefined
+  /**
+   * An array of props that should be considered as dates, when we encounter 
+   * any of these props we will render it using your provided date format.
+   */
+  dateProps?: string[] | undefined
+  /**
+   * date-fns string date format will be used to format encountered dates
+   * 
+   * @see https://date-fns.org/docs/format
+   * @default "do MMM, yyyy h:mm a"
+   */
+  dateFormat?: string | undefined
 }
 
 export interface MainContentProps extends DataViewerProps {

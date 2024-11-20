@@ -9,13 +9,7 @@
     <MainContent
       dialog-mode
       class="constrained"
-      :shadow="shadow"
-      :rounded="rounded"
-      :bordered="bordered"
-      :separator="separator"
-      :exclusions="exclusions"
-      :form-exclusions="formExclusions"
-      :boolean-labels="booleanLabels"
+      v-bind="$props"
       v-model:form="form"
       v-model:data="viewData"
       v-model:errors="errors"
@@ -62,8 +56,10 @@ const form = defineModel<MainProps['form']>('form', {
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
 withDefaults(defineProps<DataViewerProps>(), {
-  exclusions: () => ['id', 'user', 'imageUrl', 'createdAt', 'updatedAt'],
-  formExclusions: () => ['id', 'user', 'imageUrl', 'createdAt', 'updatedAt']
+  titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
+  dateFormat: 'do MMM, yyyy h:mm a',
+  exclusions: () => ['imageUrl'],
+  formExclusions: () => ['imageUrl']
 })
 
 const viewMode = defineModel<MainProps['mode']>('mode', {

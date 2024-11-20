@@ -1,48 +1,51 @@
 @use '@toneflix/vue-forms/src/styles/main.scss';
 @import url(https://fonts.bunny.net/css?family=anton:400|archivo:100,200,300,400,500,600,700,800);
 
-.t-dialog {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999999;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .close-btn {
-    display: inline;
-    cursor: pointer;
-    font-size: 1.5rem;
-    background: transparent;
-    color: #e30f0f;
-    &:hover {
-      color: #e30f0fae;
-    }
-  }
-  &-fade {
-    display: none;
-    visibility: hidden;
-  }
-  &-backdrop {
+body.t-dialog-active {
+  overflow: hidden;
+  .t-dialog {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  *:not(.t-dialog-backdrop) {
-    position: relative;
+    z-index: 9999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .close-btn {
+      display: inline;
+      cursor: pointer;
+      font-size: 1.5rem;
+      background: transparent;
+      color: #e30f0f;
+      &:hover {
+        color: #e30f0fae;
+      }
+    }
+    &-fade {
+      display: none;
+      visibility: hidden;
+    }
+    &-backdrop {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    *:not(.t-dialog-backdrop) {
+      position: relative;
+    }
   }
 }
 
 .t-card {
   font-family: 'Archivo', sans-serif;
-  min-width: 100%;
-  max-width: 100%;
+  width: 100%;
+  max-width: 90vw;
   background-color: #fff;
   &-rounded {
     border-radius: 0.373em;

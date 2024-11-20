@@ -4,6 +4,7 @@
     shadow
     rounded
     separator
+    :dateProps="['createdAt']"
     :data="data"
     :form="data"
     v-slot="{ toggleDialog }"
@@ -14,7 +15,16 @@
     <TBtn label="View Data" @click="toggleDialog(data, 'view')" />
   </DataViewer>
 
-  <MainContent bordered shadow rounded separator :data="data" :form="data" class="mmx" />
+  <MainContent
+    bordered
+    shadow
+    rounded
+    separator
+    :dateProps="['createdAt']"
+    :data="data"
+    :form="data"
+    class="mmx"
+  />
 </template>
 
 <script setup lang="ts">
@@ -32,7 +42,12 @@ const data = reactive({
   country: 'Nigeria',
   address: '',
   message: 'Hello my people',
-  imageUrl: 'https://www.tailwind-kit.com/images/person/6.jpg'
+  imageUrl: 'https://www.tailwind-kit.com/images/person/6.jpg',
+  createdAt: '2023-06-06 21:22:00',
+  nothing: (props: unknown) => {
+    console.log(props)
+    return 'Hello Nohting'
+  }
 })
 </script>
 

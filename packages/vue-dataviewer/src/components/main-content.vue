@@ -6,7 +6,7 @@
           <div class="card-title">
             {{ { view: titles?.view, edit: titles?.edit, doc: titles?.doc }[viewMode || 'view'] }}
           </div>
-          <button class="close-btn" @click="$emit('toggleDialog', dialogToggle)" v-if="dialogMode">
+          <button class="close-btn" @click="$emit('toggleDialog', false)" v-if="dialogMode">
             &times;
           </button>
         </div>
@@ -98,7 +98,7 @@ import TinnerLoading from './TInnerLoading.vue'
 import { FormField } from '@toneflix/vue-forms/src/types'
 import { VueForms } from '@toneflix/vue-forms'
 import { MainContentProps, MainProps } from '../types'
-const dayjs = import('dayjs')
+import { formatDate } from 'date-fns'
 
 defineOptions({
   name: 'MainContent'
@@ -126,8 +126,9 @@ const form = defineModel<MainProps['form']>('form', {
 
 const props = withDefaults(defineProps<MainContentProps>(), {
   titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
-  exclusions: () => ['id', 'user', 'imageUrl', 'createdAt', 'updatedAt'],
-  formExclusions: () => ['id', 'user', 'imageUrl', 'createdAt', 'updatedAt']
+  dateFormat: 'do MMM, yyyy h:mm a',
+  exclusions: () => ['imageUrl'],
+  formExclusions: () => ['imageUrl']
 })
 
 const viewMode = defineModel<MainProps['mode']>('mode', {
@@ -195,13 +196,17 @@ const boolLabel = (key: string, bool: boolean) => {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const parser = async (data: string | boolean | any, field?: string) => {
-  if (field && field.includes('edAt', field.length - 4)) {
-    return (await dayjs)(String(data)).format('Do MMM, YYYY h:MM A')
+const parser = (data: string | boolean | any, field?: string) => {
+  if (field && props.dateProps?.includes(field)) {
+    return formatDate(data, props.dateFormat)
   }
 
   if (typeof data === 'boolean') {
     return Number(data)
+  }
+
+  if (typeof data === 'function') {
+    return data(viewData.value)
   }
 
   if (

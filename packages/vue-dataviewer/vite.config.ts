@@ -7,7 +7,7 @@ export default defineConfig({
     minify: true,
     emptyOutDir: true,
     rollupOptions: {
-      external: ['vue', '@toneflix/vue-forms', 'dayjs'],
+      external: ['vue', '@toneflix/vue-forms', 'date-fns'],
       input: ['index.ts'],
       output: [
         {
