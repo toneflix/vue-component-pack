@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.4.0...@toneflix/vue-dataviewer@1.5.0) (2024-11-20)
+
+### Features
+
+- Add slot for images and rename img-preview to image-viewer ([b7e4c1c](https://github.com/toneflix/vue-component-pack/commit/b7e4c1cb1af0c4668893f8389fd1be1ac2adbc0e))
+- Add slots to aid full customization. ([df19687](https://github.com/toneflix/vue-component-pack/commit/df19687d95165b499d8ed1f8eadd138f9c1f9107))
+- Improve image control. ([4066662](https://github.com/toneflix/vue-component-pack/commit/4066662df599f28e2ca3dc62ccac3454e2b9f363))
+
 # [1.4.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.3.6...@toneflix/vue-dataviewer@1.4.0) (2024-11-20)
 
 ### Features
