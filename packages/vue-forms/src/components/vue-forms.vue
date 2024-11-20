@@ -148,7 +148,7 @@ const groupFormFields = (
       if (!grouped[field.group]) {
         grouped[field.group] = [] // Initialize group if it doesn't exist
       }
-      grouped[field.group].push(field) // Add item to its group
+      grouped[field.group]?.push(field) // Add item to its group
     } else {
       ungrouped.push(<FieldType>field) // Add item to ungrouped array
     }
