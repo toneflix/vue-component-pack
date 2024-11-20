@@ -1,4 +1,4 @@
-import { defineComponent as B, mergeModels as $, useModel as m, ref as D, openBlock as V, createElementBlock as b, Fragment as C, renderSlot as i, createVNode as k, mergeProps as l, withCtx as w, createSlots as P, renderList as L, unref as d, normalizeProps as t, createCommentVNode as N } from "vue";
+import { defineComponent as B, mergeModels as $, useModel as m, ref as D, openBlock as V, createElementBlock as C, Fragment as b, renderSlot as i, createVNode as k, mergeProps as r, withCtx as w, createSlots as P, renderList as L, unref as d, normalizeProps as t, createCommentVNode as N } from "vue";
 /* empty css                   */
 import q from "./dialog/TDialog.vue.mjs";
 import E from "./main-content.vue.mjs";
@@ -7,6 +7,7 @@ const A = /* @__PURE__ */ B({
   name: "DataViewer",
   __name: "data-viewer",
   props: /* @__PURE__ */ $({
+    listClass: {},
     exclusions: { default: () => ["id"] },
     formExclusions: { default: () => ["id", "imageUrl"] },
     booleanLabels: {},
@@ -46,19 +47,19 @@ const A = /* @__PURE__ */ B({
     const u = m(s, "data"), p = m(s, "form"), f = m(s, "mode"), y = m(s, "loading"), v = m(s, "saving"), M = m(s, "errors"), g = D(!1), U = (o, a = "view") => {
       o && (u.value = o), f.value = a, g.value = !0;
     };
-    return (o, a) => (V(), b(C, null, [
+    return (o, a) => (V(), C(b, null, [
       i(o.$slots, "default", {
         viewData: u.value,
         viewMode: f.value,
         saving: v.value,
         toggleDialog: U
       }),
-      k(q, l({
+      k(q, r({
         modelValue: g.value,
         "onUpdate:modelValue": a[9] || (a[9] = (e) => g.value = e)
       }, o.$attrs), {
         default: w(() => [
-          k(E, l({
+          k(E, r({
             "dialog-mode": "",
             class: "constrained"
           }, o.$props, {
@@ -74,14 +75,14 @@ const A = /* @__PURE__ */ B({
             "onUpdate:mode": a[4] || (a[4] = (e) => f.value = e),
             saving: v.value,
             "onUpdate:saving": a[5] || (a[5] = (e) => v.value = e),
-            onUpdateData: a[6] || (a[6] = (e, r) => o.$emit("toggleDialog", e, r)),
+            onUpdateData: a[6] || (a[6] = (e, l) => o.$emit("toggleDialog", e, l)),
             "onClick:save": a[7] || (a[7] = (e) => o.$emit("click:save", e)),
             onToggleDialog: a[8] || (a[8] = (e) => g.value = e)
           }), P({ _: 2 }, [
             L(d(F), (e) => ({
               name: e,
-              fn: w((r) => [
-                e === "form-append" || e === "form-prepend" ? i(o.$slots, e, t(l({ key: 0 }, d(n).form(r)))) : e === "list-prepend" || e === "list-append" || e === "list-after" ? i(o.$slots, e, t(l({ key: 1 }, d(n).list(r)))) : e === "list-item" ? i(o.$slots, e, t(l({ key: 2 }, d(n).listItem(r)))) : e === "img-list-item" ? i(o.$slots, e, t(l({ key: 3 }, d(n).imgListItem(r)))) : e === "image-viewer" ? i(o.$slots, e, t(l({ key: 4 }, d(n).imageViewer(r)))) : e === "loader" ? i(o.$slots, e, t(l({ key: 5 }, d(n).loader(r)))) : e === "image" ? i(o.$slots, e, t(l({ key: 6 }, d(n).image(r)))) : N("", !0)
+              fn: w((l) => [
+                e === "form-append" || e === "form-prepend" ? i(o.$slots, e, t(r({ key: 0 }, d(n).form(l)))) : e === "list-prepend" || e === "list-append" || e === "list-after" ? i(o.$slots, e, t(r({ key: 1 }, d(n).list(l)))) : e === "list-item" ? i(o.$slots, e, t(r({ key: 2 }, d(n).listItem(l)))) : e === "img-list-item" ? i(o.$slots, e, t(r({ key: 3 }, d(n).imgListItem(l)))) : e === "image-viewer" ? i(o.$slots, e, t(r({ key: 4 }, d(n).imageViewer(l)))) : e === "loader" ? i(o.$slots, e, t(r({ key: 5 }, d(n).loader(l)))) : e === "image" ? i(o.$slots, e, t(r({ key: 6 }, d(n).image(l)))) : N("", !0)
               ])
             }))
           ]), 1040, ["form", "data", "errors", "loading", "mode", "saving"])

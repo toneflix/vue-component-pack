@@ -32,7 +32,7 @@
         </template>
       </VueForms>
       <div v-else-if="(viewMode === 'view' || !form) && viewData">
-        <div class="t-list" separator>
+        <div class="t-list" :class="listClass" separator>
           <slot
             name="img-list-item"
             :toggle="() => setData(viewData, 'doc', prop)"
@@ -43,12 +43,12 @@
             v-for="prop in imageProps"
           >
             <div
-              class="q-my-sm t-item clickable"
+              class="t-item clickable"
               :class="{ 't-item-separator': separator }"
               v-if="viewData[prop]"
               @click="setData(viewData, 'doc', prop)"
             >
-              <div class="t-item-section avatar">
+              <div class="t-item-section t-item-section-avatar">
                 <slot name="image" :src="viewData[prop]">
                   <div class="t-avatar">
                     <img :src="viewData[prop]" :alt="titleCase(prop)" />
@@ -73,7 +73,7 @@
                   : parser(field[1], field[0])
               "
             >
-              <div class="q-my-sm t-item" :class="{ 't-item-separator': separator }">
+              <div class="t-item" :class="{ 't-item-separator': separator }">
                 <div class="t-item-section">
                   <div class="t-item-label caption">
                     {{ labelsMap?.[field[0]] ?? titleCase(field[0]) }}

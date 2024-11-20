@@ -92,10 +92,7 @@ body.t-dialog-active {
 }
 
 .t-list {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
+  display: block;
   width: 100%;
   margin: 2em auto;
 }
@@ -142,10 +139,18 @@ body.t-dialog-active {
 }
 
 .t-item-section {
-  flex: auto 1;
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  &:not(.t-item-section-avatar) {
+    flex: auto 1;
+  }
+
+  &.t-item-section-avatar {
+    margin-right: 1rem;
+  }
+
   .t-item-label.caption {
     font-weight: 500;
   }

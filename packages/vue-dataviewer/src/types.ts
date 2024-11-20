@@ -2,6 +2,10 @@ import type { PublicProps, VNode } from 'vue'
 
 export interface DataViewerProps {
   /**
+   * Class definitions to be attributed to the list wrapper
+   */
+  listClass?: unknown
+  /**
    * When in view mode, the keys in this list will not be loaded into the viewer
    *
    * @default ```["id"]```
