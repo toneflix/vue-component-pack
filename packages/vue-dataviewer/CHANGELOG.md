@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.3.6...@toneflix/vue-dataviewer@1.4.0) (2024-11-20)
+
+### Features
+
+- Allow function to be passed as data options. ([31f70ee](https://github.com/toneflix/vue-component-pack/commit/31f70ee02af849ef6cf84a90ffdc5e990b0d8bcb))
+
 ## [1.3.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.3.5...@toneflix/vue-dataviewer@1.3.6) (2024-11-20)
 
 ### Bug Fixes
