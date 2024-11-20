@@ -89,7 +89,7 @@ const T = {
               (o(!0), a(g, null, t(d, (b) => (o(), N(P, {
                 key: b.name,
                 field: b,
-                "use-grid": e.useGrid,
+                "use-grid": !!e.useGrid,
                 modelValue: m.value[b.name],
                 "onUpdate:modelValue": (h) => m.value[b.name] = h
               }, U({ _: 2 }, [
@@ -110,7 +110,7 @@ const T = {
       e.separator && (!e.hideSubmit || !e.hideSubmit) ? (o(), a("hr", _)) : i("", !0),
       s(e.$slots, "actions", {}, () => [
         z(j, {
-          loading: e.loading,
+          loading: !!e.loading,
           "hide-submit": e.hideSubmit,
           "hide-cancel": e.hideCancel,
           "submit-label": e.submitLabel,
@@ -129,7 +129,7 @@ const T = {
       (o(!0), a(g, null, t(l.value, (d) => (o(), N(P, {
         key: d.name,
         field: d,
-        "use-grid": e.useGrid,
+        "use-grid": !!e.useGrid,
         modelValue: m.value[d.name],
         "onUpdate:modelValue": (r) => m.value[d.name] = r
       }, U({ _: 2 }, [

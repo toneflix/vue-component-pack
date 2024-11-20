@@ -1,8 +1,8 @@
 import { defineComponent as s, mergeModels as p, useModel as u, openBlock as o, createElementBlock as l, toDisplayString as i, createCommentVNode as t, withDirectives as m, createElementVNode as y, vModelDynamic as f } from "vue";
-const c = { class: "input-field" }, h = ["for"], v = ["type", "id", "name", "placeholder"], B = {
+const c = { class: "input-field" }, h = ["for"], g = ["type", "id", "name", "placeholder"], v = {
   key: 1,
   class: "field-anotations"
-}, V = {
+}, B = {
   key: 0,
   class: "field-hint"
 }, b = /* @__PURE__ */ s({
@@ -60,13 +60,13 @@ const c = { class: "input-field" }, h = ["for"], v = ["type", "id", "name", "pla
         type: e.type,
         id: "vf-" + e.name,
         name: e.name,
-        placeholder: e.placeholder,
+        placeholder: String(e.placeholder),
         "onUpdate:modelValue": n[0] || (n[0] = (r) => a.value = r)
-      }, null, 8, v), [
+      }, null, 8, g), [
         [f, a.value]
       ]),
-      e.label || e.hint ? (o(), l("div", B, [
-        e.hint ? (o(), l("p", V, i(e.hint), 1)) : t("", !0)
+      e.label || e.hint ? (o(), l("div", v, [
+        e.hint ? (o(), l("p", B, i(e.hint), 1)) : t("", !0)
       ])) : t("", !0)
     ]));
   }
