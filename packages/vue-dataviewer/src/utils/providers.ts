@@ -42,49 +42,49 @@ export const slotNames: SlotName[] = [
 ]
 
 export const casts = {
-  image: <X> (props: X) => {
+  image: <X>(props: X) => {
     return <{ src?: string | undefined }>props
   },
-  loader: <X> (props: X) => {
+  loader: <X>(props: X) => {
     return <{ loading: boolean }>props
   },
-  listItem: <X> (props: X) => {
+  listItem: <X>(props: X) => {
     return <{ label: string; value: string; field: string }>props
   },
-  imgListItem: <X> (props: X) => {
-    return <{ label: string; value: string; field: string, toggle: () => void }>props
+  imgListItem: <X>(props: X) => {
+    return <{ label: string; value: string; field: string; toggle: () => void }>props
   },
-  imageViewer: <X> (props: X) => {
+  imageViewer: <X>(props: X) => {
     return <{ close: () => void; src?: string | undefined }>props
   },
-  castFormPos: <X> (props: X) => {
+  castFormPos: <X>(props: X) => {
     return <
       {
         form?: undefined
         data?: MainProps['data']
         errors?: MainProps['errors']
       }
-      >props
+    >props
   },
-  list: <X> (props: X) => {
+  list: <X>(props: X) => {
     return <
       {
         data: MainProps['data']
       }
-      >props
+    >props
   },
-  form: <X> (props: X) => {
+  form: <X>(props: X) => {
     return <
       {
         form?: undefined
         data?: MainProps['data']
         errors?: MainProps['errors']
       }
-      >props
+    >props
   }
 }
 
-export const propsCast = <X> (props: X, slot: SlotName) => {
+export const propsCast = <X>(props: X, slot: SlotName) => {
   if (slot === 'form-append' || slot === 'form-prepend') {
     return <
       {
@@ -92,13 +92,13 @@ export const propsCast = <X> (props: X, slot: SlotName) => {
         data?: MainProps['data']
         errors?: MainProps['errors']
       }
-      >props
+    >props
   } else if (slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after') {
     return <
       {
         data: MainProps['data']
       }
-      >props
+    >props
   } else if (slot === 'list-item') {
     return <{ label: string; value: string; field: string }>props
   }
