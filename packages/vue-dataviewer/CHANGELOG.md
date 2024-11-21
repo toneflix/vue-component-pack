@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.12.1...@toneflix/vue-dataviewer@1.13.0) (2024-11-21)
+
+### Features
+
+- Add `content-class` and `dialog-class` to improve customization flexibility. ([3719eff](https://github.com/toneflix/vue-component-pack/commit/3719effceb992f3d624d562bcbd79b3122950408))
+
 ## [1.12.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.12.0...@toneflix/vue-dataviewer@1.12.1) (2024-11-21)
 
 ### Bug Fixes
