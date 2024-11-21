@@ -1,5 +1,7 @@
 import type { PublicProps, VNode } from 'vue'
 
+import { VueFormSlots } from "@toneflix/vue-forms/src/types"
+
 export interface DataViewerProps {
   /**
    * Class definitions to be attributed to the list wrapper
@@ -21,10 +23,10 @@ export interface DataViewerProps {
    * Map boolean data labels to data options
    */
   booleanLabels?:
-    | {
-        [key: string]: [string, string]
-      }
-    | undefined
+  | {
+    [key: string]: [string, string]
+  }
+  | undefined
   /**
    * Used along side with "bordered" to create a rounded border
    */
@@ -115,16 +117,14 @@ export interface MainProps {
   loading?: boolean | undefined
 }
 
-export type SlotName =
-  | 'list-item'
-  | 'img-list-item'
-  | 'form-prepend'
-  | 'form-append'
-  | 'list-prepend'
-  | 'list-append'
-  | 'list-after'
-  | 'image-viewer'
-  | 'loader'
+export type FormSlotName = keyof FormSlots
+
+export type FormSlots = {
+  [K in keyof Omit<VueFormSlots, 'prepend' | 'default' | 'actions'> as `form-${string & K}`]: VueFormSlots[K]
+};
+
+export type SlotName = keyof Omit<ComponentSlots, 'default' | 'header' | 'image'>
+
 
 export interface ComponentSlots {
   /**
@@ -193,5 +193,5 @@ export interface ComponentSlots {
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 export type GlobalComponentConstructor<Props = {}, Slots = {}> = new () => {
   $props: PublicProps & Props & DataViewerProps
-  $slots: Slots & ComponentSlots
+  $slots: Slots & ComponentSlots & FormSlots
 }

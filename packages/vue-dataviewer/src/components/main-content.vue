@@ -30,6 +30,9 @@
         <template #default v-if="$slots['form-append']">
           <slot name="form-append" :form="form" :errors="errors" :data="viewData"> </slot>
         </template>
+        <template v-for="slot in formSlotNames" :key="slot" v-slot:[slot]="props">
+          <slot :name="slot" v-bind="props" />
+        </template>
       </VueForms>
       <div v-else-if="(viewMode === 'view' || !form) && viewData">
         <div class="t-list" :class="listClass" separator>
@@ -124,16 +127,16 @@
 <script setup lang="ts">
 import '../styles/main.scss'
 import { computed, ref, watch } from 'vue'
-import { slug, titleCase } from '../utils/providers'
+import { formSlotNames, slug, titleCase } from '../utils/providers'
 import TBtn from './TBtn.vue'
 import TCard from './dialog/TCard.vue'
 import TinnerLoading from './TInnerLoading.vue'
 import { FormField } from '@toneflix/vue-forms/src/types'
 import { VueForms } from '@toneflix/vue-forms'
-import { ComponentSlots, MainContentProps, MainProps } from '../types'
+import { ComponentSlots, FormSlots, MainContentProps, MainProps } from '../types'
 import { formatDate } from 'date-fns'
 
-defineSlots<ComponentSlots>()
+defineSlots<ComponentSlots & FormSlots>()
 
 defineOptions({
   name: 'MainContent'
