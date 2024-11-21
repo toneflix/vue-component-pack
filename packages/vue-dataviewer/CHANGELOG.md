@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.10.2...@toneflix/vue-dataviewer@1.11.0) (2024-11-21)
+
+### Features
+
+- Add `formProps` props to enable customization of form props. ([9677446](https://github.com/toneflix/vue-component-pack/commit/96774463eb00b000aad13e41711a65b3530dcf32))
+
 ## [1.10.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.10.1...@toneflix/vue-dataviewer@1.10.2) (2024-11-21)
 
 **Note:** Version bump only for package @toneflix/vue-dataviewer
