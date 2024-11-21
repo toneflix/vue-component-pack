@@ -36,7 +36,7 @@ body.t-dialog-active {
       right: 0;
       background-color: rgba(0, 0, 0, 0.6);
     }
-    *:not(.t-dialog-backdrop) {
+    > *:not(.t-dialog-backdrop) {
       position: relative;
     }
   }
