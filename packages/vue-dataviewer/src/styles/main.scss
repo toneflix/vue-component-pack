@@ -64,6 +64,9 @@ body.t-dialog-active {
     &.items-center {
       align-items: center;
     }
+    &.no-wrap {
+      flex-wrap: nowrap;
+    }
   }
   &.constrained .t-card-body {
     max-height: 80vh;
@@ -77,6 +80,9 @@ body.t-dialog-active {
     .card-title {
       font-weight: 700;
       font-size: 1.25em;
+    }
+    > .flex {
+      align-items: flex-start !important;
     }
   }
 

@@ -6,7 +6,7 @@ import _ from "./dialog/TCard.vue.mjs";
 import x from "./TInnerLoading.vue.mjs";
 import { VueForms as ee } from "@toneflix/vue-forms";
 import { formatDate as ae } from "date-fns";
-const te = { class: "flex items-center justify-between" }, oe = { class: "card-title" }, le = { key: 1 }, se = ["onClick"], re = { class: "t-item-section t-item-section-avatar" }, ie = { class: "t-avatar" }, ne = ["src", "alt"], ue = { class: "t-item-section" }, de = { class: "t-item-label caption" }, ve = {
+const te = { class: "flex items-center justify-between no-wrap" }, oe = { class: "card-title" }, le = { key: 1 }, se = ["onClick"], re = { class: "t-item-section t-item-section-avatar" }, ie = { class: "t-avatar" }, ne = ["src", "alt"], ue = { class: "t-item-section" }, de = { class: "t-item-label caption" }, ve = {
   key: 0,
   class: "t-item-label"
 }, me = {

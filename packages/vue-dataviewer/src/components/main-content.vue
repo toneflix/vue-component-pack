@@ -2,7 +2,7 @@
   <TCard :class="{ 't-card-border': bordered, 't-card-shadow': shadow, 't-card-rounded': rounded }">
     <template #header>
       <slot name="header">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between no-wrap">
           <div class="card-title">
             {{ viewTitle }}
           </div>
