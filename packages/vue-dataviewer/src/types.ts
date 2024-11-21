@@ -7,6 +7,10 @@ export interface DataViewerProps {
    */
   listClass?: unknown
   /**
+   * Class definitions to be attributed to the dialog
+   */
+  dialogClass?: unknown
+  /**
    * Set a custom zIndex for the generated dialogs
    *
    * @default 5000
@@ -93,6 +97,10 @@ export interface MainProps {
    * Set the titles for all the different modes
    */
   titles?: { view?: string; edit?: string; doc?: string }
+  /**
+   * Class definitions to be attributed to the main content container
+   */
+  contentClass?: unknown
   /**
    * The data that will be mapped for previewing
    */

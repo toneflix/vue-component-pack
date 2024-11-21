@@ -1,6 +1,6 @@
 import { defineComponent as G, mergeModels as A, useModel as y, ref as F, computed as B, watch as H, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as i, createElementVNode as n, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, mergeProps as J, createSlots as K, renderList as P, normalizeProps as Q, guardReactiveProps as W, Fragment as q, createVNode as O } from "vue";
 /* empty css                   */
-import { titleCase as g, slug as D, formSlotNames as X } from "../utils/providers.mjs";
+import { titleCase as g, slug as C, formSlotNames as X } from "../utils/providers.mjs";
 import Y from "./TBtn.vue.mjs";
 import _ from "./dialog/TCard.vue.mjs";
 import x from "./TInnerLoading.vue.mjs";
@@ -15,12 +15,13 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
 }, ce = {
   key: 2,
   class: "image-viewer"
-}, fe = ["src", "alt"], De = /* @__PURE__ */ G({
+}, fe = ["src", "alt"], Ce = /* @__PURE__ */ G({
   name: "MainContent",
   __name: "main-content",
   props: /* @__PURE__ */ A({
     dialogMode: { type: Boolean },
     listClass: {},
+    dialogClass: {},
     dialogZIndex: {},
     exclusions: { default: () => ["id"] },
     formExclusions: { default: () => ["id", "imageUrl"] },
@@ -35,6 +36,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
     labelsMap: {},
     valuesMap: {},
     titles: {},
+    contentClass: {},
     data: {},
     form: {},
     formProps: {},
@@ -80,7 +82,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
       col: 12,
       name: e,
       type: typeof o == "boolean" ? "radio" : "text",
-      label: g(D(e, " ")),
+      label: g(C(e, " ")),
       choices: [
         { label: "Accept", value: !0 },
         { label: "Reject", value: !0 }
@@ -91,21 +93,28 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
       else {
         t.value = e, d.value = o;
         const l = Object.fromEntries(
-          Object.entries(e).map(([r, b]) => [D(r), C(b)])
+          Object.entries(e).map(([r, b]) => [C(r), D(b)])
         );
         V("updateData", l, o);
       }
     }, L = (e, o) => {
       var a, l, r;
       return (a = s.booleanLabels) != null && a[e] ? o ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (r = s.booleanLabels) == null ? void 0 : r[e][1] : o ? "Active" : "Inactive";
-    }, C = (e, o) => {
+    }, D = (e, o) => {
       var a, l, r;
       return o && ((a = s.valuesMap) != null && a[o]) && (e = (l = s.valuesMap) == null ? void 0 : l[o]), o && ((r = s.dateProps) != null && r.includes(o)) ? ae(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(t.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? g(e.join(", ")) : e;
     };
     return H(d, (e) => {
       e !== "doc" && (w.value = void 0);
     }), (e, o) => (u(), U(_, {
-      class: $({ "t-card-border": e.bordered, "t-card-shadow": e.shadow, "t-card-rounded": e.rounded })
+      class: $([
+        {
+          "t-card-border": e.bordered,
+          "t-card-shadow": e.shadow,
+          "t-card-rounded": e.rounded
+        },
+        e.contentClass
+      ])
     }, {
       header: M(() => [
         i(e.$slots, "header", {}, () => [
@@ -206,7 +215,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                   key: a[0],
                   field: a[0],
                   label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? m(g)(a[0]),
-                  value: typeof a[1] == "boolean" ? L(m(D)(a[0]), a[1]) : C(a[1], a[0])
+                  value: typeof a[1] == "boolean" ? L(m(C)(a[0]), a[1]) : D(a[1], a[0])
                 }, () => {
                   var r;
                   return [
@@ -218,8 +227,8 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                         typeof a[1] == "boolean" ? (u(), v("div", ve, [
                           n("div", {
                             class: $(["t-chip t-chip-square", a[1] ? "t-chip-green" : "t-chip-red"])
-                          }, k(L(m(D)(a[0]), a[1])), 3)
-                        ])) : (u(), v("div", me, k(C(a[1], a[0])), 1))
+                          }, k(L(m(C)(a[0]), a[1])), 3)
+                        ])) : (u(), v("div", me, k(D(a[1], a[0])), 1))
                       ])
                     ], 2)
                   ];
@@ -272,5 +281,5 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
   }
 });
 export {
-  De as default
+  Ce as default
 };

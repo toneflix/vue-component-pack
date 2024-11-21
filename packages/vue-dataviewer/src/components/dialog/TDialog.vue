@@ -1,6 +1,12 @@
 <template>
   <Teleport to="body">
-    <div class="t-dialog" :class="{ 't-dialog-fade': !model }" :style="{ zIndex }" v-if="model">
+    <div
+      class="t-dialog"
+      :class="{ 't-dialog-fade': !model }"
+      :style="{ zIndex }"
+      v-bind="$attrs"
+      v-if="model"
+    >
       <div class="t-dialog-backdrop" @click="model = !model"></div>
       <slot></slot>
     </div>

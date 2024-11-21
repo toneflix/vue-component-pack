@@ -4,6 +4,8 @@
     shadow
     rounded
     separator
+    content-class="content-viewer"
+    dialog-class="appointment-viewer"
     :dateProps="['createdAt']"
     :data="data"
     :form="data"
@@ -23,6 +25,7 @@
     shadow
     rounded
     separator
+    content-class="content-viewer"
     :labels-map="{ createdAt: 'Date Created' }"
     :values-map="{ friend: () => 'David' }"
     :dateProps="['createdAt']"

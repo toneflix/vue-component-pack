@@ -1,5 +1,14 @@
 <template>
-  <TCard :class="{ 't-card-border': bordered, 't-card-shadow': shadow, 't-card-rounded': rounded }">
+  <TCard
+    :class="[
+      {
+        't-card-border': bordered,
+        't-card-shadow': shadow,
+        't-card-rounded': rounded
+      },
+      contentClass
+    ]"
+  >
     <template #header>
       <slot name="header">
         <div class="flex items-center justify-between no-wrap">
