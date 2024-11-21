@@ -13,7 +13,8 @@ const n = (e, s = "_") => ((a) => a.replace(/([a-z])([A-Z]+)/g, (o, r, t) => r +
   "list-append",
   "list-after",
   "image-viewer",
-  "loader"
+  "loader",
+  "footer"
 ], C = {
   image: (e) => e,
   loader: (e) => e,

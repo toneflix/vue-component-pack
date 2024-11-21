@@ -39,7 +39,8 @@ export const slotNames: SlotName[] = [
   'list-append',
   'list-after',
   'image-viewer',
-  'loader'
+  'loader',
+  'footer'
 ]
 
 export const casts = {
