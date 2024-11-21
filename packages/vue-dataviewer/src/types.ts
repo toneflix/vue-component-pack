@@ -119,7 +119,7 @@ export interface MainProps {
   /**
    * The current viewing mode
    */
-  mode?: 'edit' | 'view' | 'doc' | undefined
+  mode?: 'edit' | 'view' | 'doc' | 'close' | undefined
   /**
    * Errors will me shown under thier respective fields in edit mode
    */

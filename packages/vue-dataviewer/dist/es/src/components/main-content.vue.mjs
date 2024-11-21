@@ -68,45 +68,45 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
   }),
   emits: /* @__PURE__ */ A(["updateData", "click:save", "toggleDialog"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
   setup(f, { emit: R }) {
-    const V = R, s = f, t = y(f, "data"), p = y(f, "form"), d = y(f, "mode"), S = y(f, "loading"), z = y(f, "saving"), j = y(f, "errors"), w = F(), I = F(!1), T = B(() => {
-      var o, a, l;
+    const V = R, s = f, o = y(f, "data"), p = y(f, "form"), d = y(f, "mode"), S = y(f, "loading"), z = y(f, "saving"), j = y(f, "errors"), w = F(), I = F(!1), T = B(() => {
+      var t, a, l;
       const e = {
-        view: ((o = s.titles) == null ? void 0 : o.view) || "view Data",
+        view: ((t = s.titles) == null ? void 0 : t.view) || "view Data",
         edit: ((a = s.titles) == null ? void 0 : a.edit) || "Edit Data",
         doc: ((l = s.titles) == null ? void 0 : l.doc) || "View Docs"
       };
-      return { view: e == null ? void 0 : e.view, edit: e == null ? void 0 : e.edit, doc: e == null ? void 0 : e.doc }[d.value || "view"];
+      return { view: e == null ? void 0 : e.view, edit: e == null ? void 0 : e.edit, doc: e == null ? void 0 : e.doc, close: "" }[d.value || "view"];
     }), E = B(
-      () => t.value ? Object.entries(t.value).filter((e) => s.imageProps.includes(e[0]) ? !1 : d.value === "edit" ? ![...s.exclusions, ...s.formExclusions].includes(e[0]) : !s.exclusions.includes(e[0])) : []
-    ), Z = B(() => E.value.map(([e, o]) => ({
+      () => o.value ? Object.entries(o.value).filter((e) => s.imageProps.includes(e[0]) ? !1 : d.value === "edit" ? ![...s.exclusions, ...s.formExclusions].includes(e[0]) : !s.exclusions.includes(e[0])) : []
+    ), Z = B(() => E.value.map(([e, t]) => ({
       col: 12,
       name: e,
-      type: typeof o == "boolean" ? "radio" : "text",
+      type: typeof t == "boolean" ? "radio" : "text",
       label: g(C(e, " ")),
       choices: [
         { label: "Accept", value: !0 },
         { label: "Reject", value: !0 }
       ]
-    }))), c = (e, o = "view", a) => {
-      if (I.value = !0, a)
-        d.value = "doc", w.value = { alt: a, src: t.value[a] };
+    }))), c = (e, t = "view", a) => {
+      if (I.value = t !== "close", a)
+        d.value = "doc", w.value = { alt: a, src: o.value[a] };
       else {
-        t.value = e, d.value = o;
+        o.value = e, d.value = t;
         const l = Object.fromEntries(
           Object.entries(e).map(([r, b]) => [C(r), D(b)])
         );
-        V("updateData", l, o);
+        V("updateData", l, t);
       }
-    }, L = (e, o) => {
+    }, L = (e, t) => {
       var a, l, r;
-      return (a = s.booleanLabels) != null && a[e] ? o ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (r = s.booleanLabels) == null ? void 0 : r[e][1] : o ? "Active" : "Inactive";
-    }, D = (e, o) => {
+      return (a = s.booleanLabels) != null && a[e] ? t ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (r = s.booleanLabels) == null ? void 0 : r[e][1] : t ? "Active" : "Inactive";
+    }, D = (e, t) => {
       var a, l, r;
-      return o && ((a = s.valuesMap) != null && a[o]) && (e = (l = s.valuesMap) == null ? void 0 : l[o]), o && ((r = s.dateProps) != null && r.includes(o)) ? ae(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(t.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? g(e.join(", ")) : e;
+      return t && ((a = s.valuesMap) != null && a[t]) && (e = (l = s.valuesMap) == null ? void 0 : l[t]), t && ((r = s.dateProps) != null && r.includes(t)) ? ae(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? g(e.join(", ")) : e;
     };
     return H(d, (e) => {
       e !== "doc" && (w.value = void 0);
-    }), (e, o) => (u(), U(_, {
+    }), (e, t) => (u(), U(_, {
       class: $([
         {
           "t-card-border": e.bordered,
@@ -123,7 +123,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
             e.dialogMode ? (u(), v("button", {
               key: 0,
               class: "close-btn",
-              onClick: o[0] || (o[0] = (a) => e.$emit("toggleDialog", !1))
+              onClick: t[0] || (t[0] = (a) => e.$emit("toggleDialog", !1))
             }, " × ")) : h("", !0)
           ])
         ])
@@ -137,11 +137,11 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
             class: "p-4 m-4 mx-auto"
           }, e.formProps, {
             modelValue: p.value,
-            "onUpdate:modelValue": o[1] || (o[1] = (a) => p.value = a),
+            "onUpdate:modelValue": t[1] || (t[1] = (a) => p.value = a),
             fields: Z.value,
             loading: z.value,
-            onCancel: o[2] || (o[2] = (a) => d.value = "view"),
-            onSubmit: o[3] || (o[3] = (a) => V("click:save", t.value))
+            onCancel: t[2] || (t[2] = (a) => d.value = "view"),
+            onSubmit: t[3] || (t[3] = (a) => V("click:save", o.value))
           }), K({ _: 2 }, [
             e.$slots["form-prepend"] ? {
               name: "prepend",
@@ -149,7 +149,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                 i(e.$slots, "form-prepend", {
                   form: p.value,
                   errors: j.value,
-                  data: t.value
+                  data: o.value
                 })
               ]),
               key: "0"
@@ -160,7 +160,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                 i(e.$slots, "form-append", {
                   form: p.value,
                   errors: j.value,
-                  data: t.value
+                  data: o.value
                 })
               ]),
               key: "1"
@@ -171,43 +171,43 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                 i(e.$slots, a, Q(W(l)))
               ])
             }))
-          ]), 1040, ["modelValue", "fields", "loading"])) : (d.value === "view" || !p.value) && t.value ? (u(), v("div", le, [
+          ]), 1040, ["modelValue", "fields", "loading"])) : (d.value === "view" || !p.value) && o.value ? (u(), v("div", le, [
             n("div", {
               class: $(["t-list", e.listClass]),
               separator: ""
             }, [
               (u(!0), v(q, null, P(e.imageProps, (a) => i(e.$slots, "img-list-item", {
-                toggle: () => c(t.value, "doc", a),
+                toggle: () => c(o.value, "doc", a),
                 field: a,
                 label: m(g)(a),
-                value: String(t.value[a]),
+                value: String(o.value[a]),
                 key: a
               }, () => [
-                t.value[a] ? (u(), v("div", {
+                o.value[a] ? (u(), v("div", {
                   key: 0,
                   class: $(["t-item clickable", { "t-item-separator": e.separator }]),
-                  onClick: (l) => c(t.value, "doc", a)
+                  onClick: (l) => c(o.value, "doc", a)
                 }, [
                   n("div", re, [
                     i(e.$slots, "image", {
-                      src: t.value[a]
+                      src: o.value[a]
                     }, () => [
                       n("div", ie, [
                         n("img", {
-                          src: t.value[a],
+                          src: o.value[a],
                           alt: m(g)(a)
                         }, null, 8, ne)
                       ])
                     ])
                   ]),
-                  o[5] || (o[5] = n("div", { class: "t-item-section" }, [
+                  t[5] || (t[5] = n("div", { class: "t-item-section" }, [
                     n("div", { class: "t-item-label" }, "Click to expand")
                   ], -1))
                 ], 10, se)) : h("", !0)
               ])), 128)),
               i(e.$slots, "list-prepend", {
-                data: t.value,
-                toggle: (a) => c(t.value, a)
+                data: o.value,
+                toggle: (a) => c(o.value, a)
               }),
               (u(!0), v(q, null, P(E.value, (a) => {
                 var l;
@@ -235,18 +235,18 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                 });
               }), 128)),
               i(e.$slots, "list-append", {
-                data: t.value,
-                toggle: (a) => c(t.value, a)
+                data: o.value,
+                toggle: (a) => c(o.value, a)
               })
             ], 2),
             i(e.$slots, "list-after", {
-              data: t.value,
-              toggle: (a) => c(t.value, a)
+              data: o.value,
+              toggle: (a) => c(o.value, a)
             })
-          ])) : t.value ? (u(), v("div", ce, [
+          ])) : o.value ? (u(), v("div", ce, [
             i(e.$slots, "image-viewer", {
-              close: () => c(t.value, "view"),
-              src: t.value.imageUrl
+              close: () => c(o.value, "view"),
+              src: o.value.imageUrl
             }, () => {
               var a, l, r, b, N;
               return [
@@ -255,12 +255,12 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                   color: "primary",
                   label: "Return",
                   icon: "fas fa-arrow-left",
-                  onClick: o[4] || (o[4] = (ge) => c(t.value, "view"))
+                  onClick: t[4] || (t[4] = (ge) => c(o.value, "view"))
                 }),
-                (a = w.value) != null && a.src || t.value[((l = e.imageProps) == null ? void 0 : l[0]) ?? 0] ? (u(), v("img", {
+                (a = w.value) != null && a.src || o.value[((l = e.imageProps) == null ? void 0 : l[0]) ?? 0] ? (u(), v("img", {
                   key: 0,
                   style: { width: "100%" },
-                  src: String(((r = w.value) == null ? void 0 : r.src) || t.value[((b = e.imageProps) == null ? void 0 : b[0]) ?? 0]),
+                  src: String(((r = w.value) == null ? void 0 : r.src) || o.value[((b = e.imageProps) == null ? void 0 : b[0]) ?? 0]),
                   alt: m(g)(((N = w.value) == null ? void 0 : N.alt) || "Document")
                 }, null, 8, fe)) : h("", !0)
               ];
@@ -271,9 +271,9 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
           O(x, { showing: S.value }, null, 8, ["showing"])
         ]),
         i(e.$slots, "footer", {
-          data: t.value,
+          data: o.value,
           mode: d.value,
-          toggle: (a) => c(t.value, a)
+          toggle: (a) => c(o.value, a)
         })
       ]),
       _: 3

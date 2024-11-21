@@ -73,12 +73,12 @@ defineSlots<
     /**
      * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
      */
-    default: (scope: { toggleDialog: (data?: any, mode?: 'edit' | 'view' | 'doc') => void }) => VNode[]
+    default: (scope: { toggleDialog: (data?: any, mode?: MainProps['mode']) => void }) => VNode[]
   }
 >()
 
 defineEmits<{
-  (e: 'toggleDialog', data: any, mode: 'edit' | 'view' | 'doc'): void
+  (e: 'toggleDialog', data: any, mode: 'edit' | 'view' | 'doc' | 'close'): void
   (e: 'click:save', data: any): void
 }>()
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -122,12 +122,12 @@ const errors = defineModel<MainProps['errors']>('errors', {
 
 const dialogToggle = ref(false)
 
-const loadDialog = (data?: any, mode: 'edit' | 'view' | 'doc' = 'view') => {
+const loadDialog = (data?: any, mode: 'edit' | 'view' | 'doc' | 'close' = 'view') => {
   if (data) {
     viewData.value = data
   }
   viewMode.value = mode
-  dialogToggle.value = true
+  dialogToggle.value = mode !== 'close'
 }
 
 defineExpose({

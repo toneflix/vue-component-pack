@@ -2,7 +2,7 @@ import { defineComponent as V, mergeModels as w, useModel as u, ref as P, openBl
 /* empty css                   */
 import S from "./dialog/TDialog.vue.mjs";
 import q from "./main-content.vue.mjs";
-import { slotNames as E, casts as t, formSlotNames as F } from "../utils/providers.mjs";
+import { slotNames as E, casts as n, formSlotNames as F } from "../utils/providers.mjs";
 const G = /* @__PURE__ */ V({
   name: "DataViewer",
   __name: "data-viewer",
@@ -54,9 +54,9 @@ const G = /* @__PURE__ */ V({
     errorsModifiers: {}
   }),
   emits: /* @__PURE__ */ w(["toggleDialog", "click:save"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
-  setup(n, { expose: U }) {
-    const g = u(n, "data"), $ = u(n, "form"), v = u(n, "mode"), M = u(n, "loading"), p = u(n, "saving"), k = u(n, "errors"), m = P(!1), C = (o, a = "view") => {
-      o && (g.value = o), v.value = a, m.value = !0;
+  setup(t, { expose: U }) {
+    const g = u(t, "data"), $ = u(t, "form"), v = u(t, "mode"), M = u(t, "loading"), p = u(t, "saving"), k = u(t, "errors"), m = P(!1), C = (o, a = "view") => {
+      o && (g.value = o), v.value = a, m.value = a !== "close";
     };
     return U({
       dialogToggle: m,
@@ -106,7 +106,7 @@ const G = /* @__PURE__ */ V({
             D(i(E), (e) => ({
               name: e,
               fn: f((l) => [
-                e === "form-append" || e === "form-prepend" ? r(o.$slots, e, d(s({ key: 0 }, i(t).form(l)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? r(o.$slots, e, d(s({ key: 1 }, i(t).list(l)))) : e === "list-item" ? r(o.$slots, e, d(s({ key: 2 }, i(t).listItem(l)))) : e === "img-list-item" ? r(o.$slots, e, d(s({ key: 3 }, i(t).imgListItem(l)))) : e === "image-viewer" ? r(o.$slots, e, d(s({ key: 4 }, i(t).imageViewer(l)))) : e === "loader" ? r(o.$slots, e, d(s({ key: 5 }, i(t).loader(l)))) : e === "image" ? r(o.$slots, e, d(s({ key: 6 }, i(t).image(l)))) : L("", !0)
+                e === "form-append" || e === "form-prepend" ? r(o.$slots, e, d(s({ key: 0 }, i(n).form(l)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? r(o.$slots, e, d(s({ key: 1 }, i(n).list(l)))) : e === "list-item" ? r(o.$slots, e, d(s({ key: 2 }, i(n).listItem(l)))) : e === "img-list-item" ? r(o.$slots, e, d(s({ key: 3 }, i(n).imgListItem(l)))) : e === "image-viewer" ? r(o.$slots, e, d(s({ key: 4 }, i(n).imageViewer(l)))) : e === "loader" ? r(o.$slots, e, d(s({ key: 5 }, i(n).loader(l)))) : e === "image" ? r(o.$slots, e, d(s({ key: 6 }, i(n).image(l)))) : L("", !0)
               ])
             })),
             D(i(F), (e) => ({

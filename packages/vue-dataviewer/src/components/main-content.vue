@@ -176,7 +176,7 @@ defineOptions({
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const emit = defineEmits<{
-  (e: 'updateData', data: any, mode: 'edit' | 'view' | 'doc'): void
+  (e: 'updateData', data: any, mode: 'edit' | 'view' | 'doc' | 'close'): void
   (e: 'click:save', data: any): void
   (e: 'toggleDialog', state: boolean): void
 }>()
@@ -228,7 +228,7 @@ const viewTitle = computed(() => {
     doc: props.titles?.doc || 'View Docs'
   }
 
-  return { view: map?.view, edit: map?.edit, doc: map?.doc }[viewMode.value || 'view']
+  return { view: map?.view, edit: map?.edit, doc: map?.doc, close: '' }[viewMode.value || 'view']
 })
 
 const viewDataMap = computed(() =>
@@ -259,8 +259,8 @@ const formdata = computed<FormField[]>(() => {
 })
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const setData = (data: any, mode: 'edit' | 'view' | 'doc' = 'view', doc?: string) => {
-  dialogToggle.value = true
+const setData = (data: any, mode: 'edit' | 'view' | 'doc' | 'close' = 'view', doc?: string) => {
+  dialogToggle.value = mode !== 'close'
 
   if (doc) {
     viewMode.value = 'doc'
