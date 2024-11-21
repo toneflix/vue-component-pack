@@ -103,11 +103,11 @@
 </template>
 
 <script setup lang="ts">
-import { BaseProps, FormField as FieldType, SlotName, VueFormProps, VueFormSlots } from '../types'
-import FormGroup from './form-group.vue'
 import '../styles/main.scss'
+import { BaseProps, FormField as FieldType, VueFormProps, VueFormSlots } from '../types'
+import FormGroup from './form-group.vue'
 import { computed } from 'vue'
-import { titleCase } from '../utils/providers'
+import { slotNames, titleCase } from '../utils/providers'
 import FormActions from './form-actions.vue'
 
 defineProps<BaseProps>()
@@ -123,7 +123,6 @@ const formValues = defineModel<VueFormProps['modelValue']>('modelValue', {
   required: true
 })
 
-const slotNames: SlotName[] = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
 const isGrouped = computed(() => formFields.value.some((e) => !!e.group))
 const groups = computed<{ [key: string]: FieldType[] }>(() => groupFormFields(formFields.value))
 

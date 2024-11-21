@@ -1,3 +1,5 @@
+import { SlotName } from "../types"
+
 export const titleCase = (str: string) => {
   return str
     .toLowerCase()
@@ -7,3 +9,5 @@ export const titleCase = (str: string) => {
       return match.toUpperCase()
     })
 }
+
+export const slotNames: SlotName[] = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
