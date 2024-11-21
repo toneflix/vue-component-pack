@@ -71,6 +71,7 @@ export const casts = {
     return <
       {
         data: MainProps['data']
+        toggle: () => void
       }
     >props
   },
