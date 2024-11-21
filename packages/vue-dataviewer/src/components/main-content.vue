@@ -145,6 +145,15 @@ const emit = defineEmits<{
   (e: 'click:save', data: any): void
   (e: 'toggleDialog', state: boolean): void
 }>()
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
+const props = withDefaults(defineProps<MainContentProps & MainProps>(), {
+  titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
+  dateFormat: 'do MMM, yyyy h:mm a',
+  imageProps: () => ['imageUrl'],
+  exclusions: () => ['id'],
+  formExclusions: () => ['id', 'imageUrl']
+})
 
 /**
  * The data that will be mapped for previewing
@@ -158,15 +167,6 @@ const viewData = defineModel<MainProps['data']>('data', {
  */
 const form = defineModel<MainProps['form']>('form', {
   required: false
-})
-/* eslint-enable @typescript-eslint/no-explicit-any */
-
-const props = withDefaults(defineProps<MainContentProps>(), {
-  titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
-  dateFormat: 'do MMM, yyyy h:mm a',
-  imageProps: () => ['imageUrl'],
-  exclusions: () => ['id'],
-  formExclusions: () => ['id', 'imageUrl']
 })
 
 const viewMode = defineModel<MainProps['mode']>('mode', {

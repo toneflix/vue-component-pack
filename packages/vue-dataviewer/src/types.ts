@@ -6,6 +6,10 @@ export interface DataViewerProps {
    */
   listClass?: unknown
   /**
+   * Set the titles for all the different modes
+   */
+  titles?: { view: string; edit: string; doc: string }
+  /**
    * When in view mode, the keys in this list will not be loaded into the viewer
    *
    * @default ```["id"]```
@@ -75,10 +79,6 @@ export interface DataViewerProps {
 }
 
 export interface MainContentProps extends DataViewerProps {
-  /**
-   * Set the titles for all the different modes
-   */
-  titles?: { view: string; edit: string; doc: string }
   /**
    * If this is active a close button is displayed on the card title
    */

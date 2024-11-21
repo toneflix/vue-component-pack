@@ -49,25 +49,33 @@ import MainContent from './main-content.vue'
 import { ComponentSlots, DataViewerProps, MainProps } from '../types'
 import { casts, slotNames } from '../utils/providers'
 
-defineSlots<
-  ComponentSlots & {
-    /**
-     * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
-     */
-    /* eslint-disable @typescript-eslint/no-explicit-any */
-    default: (scope: { toggleDialog: (data?: any, mode?: 'edit' | 'view' | 'doc') => void }) => VNode[]
-  }
->()
-
 defineOptions({
   name: 'DataViewer'
 })
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
+defineSlots<
+  ComponentSlots & {
+    /**
+     * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
+     */
+    default: (scope: { toggleDialog: (data?: any, mode?: 'edit' | 'view' | 'doc') => void }) => VNode[]
+  }
+>()
+
 defineEmits<{
   (e: 'toggleDialog', data: any, mode: 'edit' | 'view' | 'doc'): void
   (e: 'click:save', data: any): void
 }>()
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+withDefaults(defineProps<DataViewerProps & MainProps>(), {
+  titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
+  dateFormat: 'do MMM, yyyy h:mm a',
+  imageProps: () => ['imageUrl'],
+  exclusions: () => ['id'],
+  formExclusions: () => ['id', 'imageUrl']
+})
 
 /**
  * The data that will be mapped for previewing
@@ -81,15 +89,6 @@ const viewData = defineModel<MainProps['data']>('data', {
  */
 const form = defineModel<MainProps['form']>('form', {
   required: false
-})
-/* eslint-enable @typescript-eslint/no-explicit-any */
-
-withDefaults(defineProps<DataViewerProps>(), {
-  titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
-  dateFormat: 'do MMM, yyyy h:mm a',
-  imageProps: () => ['imageUrl'],
-  exclusions: () => ['id'],
-  formExclusions: () => ['id', 'imageUrl']
 })
 
 const viewMode = defineModel<MainProps['mode']>('mode', {
@@ -110,7 +109,7 @@ const errors = defineModel<MainProps['errors']>('errors', {
 
 const dialogToggle = ref(false)
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 const toggleDialog = (data?: any, mode: 'edit' | 'view' | 'doc' = 'view') => {
   if (data) {
     viewData.value = data
