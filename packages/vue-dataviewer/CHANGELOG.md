@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.15.1...@toneflix/vue-dataviewer@1.16.0) (2024-11-21)
+
+### Features
+
+- Add `toggle()` to `form-*` slots. ([770433d](https://github.com/toneflix/vue-component-pack/commit/770433d3fe6a51629e507607b1633e3c8123c130))
+
 ## [1.15.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.15.0...@toneflix/vue-dataviewer@1.15.1) (2024-11-21)
 
 ### Bug Fixes
