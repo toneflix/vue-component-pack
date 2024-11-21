@@ -37,6 +37,15 @@
         <slot :name="slot" v-bind="casts.loader(props)" v-else-if="slot === 'loader'" />
         <slot :name="slot" v-bind="casts.image(props)" v-else-if="slot === 'image'" />
       </template>
+      <template v-for="slot in formSlotNames" :key="slot" v-slot:[slot]="props">
+        <slot :name="slot" v-bind="props" />
+      </template>
+      <template #form-prepend="props">
+        <slot name="form-prepend" v-bind="props" />
+      </template>
+      <template #form-append="props">
+        <slot name="form-append" v-bind="props" />
+      </template>
     </MainContent>
   </TDialog>
 </template>
@@ -46,8 +55,8 @@ import '../styles/main.scss'
 import { ref, type VNode } from 'vue'
 import TDialog from './dialog/TDialog.vue'
 import MainContent from './main-content.vue'
-import { ComponentSlots, DataViewerProps, MainProps } from '../types'
-import { casts, slotNames } from '../utils/providers'
+import { ComponentSlots, DataViewerProps, FormSlots, MainProps } from '../types'
+import { casts, formSlotNames, slotNames } from '../utils/providers'
 
 defineOptions({
   name: 'DataViewer'
@@ -55,7 +64,7 @@ defineOptions({
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 defineSlots<
-  ComponentSlots & {
+  ComponentSlots & FormSlots & {
     /**
      * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
      */
