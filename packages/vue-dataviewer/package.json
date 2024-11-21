@@ -34,7 +34,7 @@
   },
   "nx": {},
   "dependencies": {
-    "@toneflix/vue-forms": "^1.4.6",
+    "@toneflix/vue-forms": "1.4.6",
     "date-fns": "^4.1.0"
   }
 }
