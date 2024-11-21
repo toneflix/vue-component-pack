@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.8.0...@toneflix/vue-dataviewer@1.9.0) (2024-11-21)
+
+### Features
+
+- Add toggle() to list slots scopes ([a8096c6](https://github.com/toneflix/vue-component-pack/commit/a8096c6e95b28d1aa0b7702925f013422e37f936))
+
 # [1.8.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.7.0...@toneflix/vue-dataviewer@1.8.0) (2024-11-21)
 
 ### Features
