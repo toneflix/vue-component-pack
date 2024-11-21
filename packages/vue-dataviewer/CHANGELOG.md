@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.9.1...@toneflix/vue-dataviewer@1.10.0) (2024-11-21)
+
+### Features
+
+- Add `dialog-z-index` props to `DataViewer` to enable dialog z-index customization. ([6fdee82](https://github.com/toneflix/vue-component-pack/commit/6fdee8227fe15079d1b515d991dfb182c327c834))
+
 ## [1.9.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.9.0...@toneflix/vue-dataviewer@1.9.1) (2024-11-21)
 
 **Note:** Version bump only for package @toneflix/vue-dataviewer
