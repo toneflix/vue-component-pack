@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.15.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.15.0...@toneflix/vue-dataviewer@1.15.1) (2024-11-21)
+
+### Bug Fixes
+
+- Change t-dialog class position form absolute to fixed. ([2c00f61](https://github.com/toneflix/vue-component-pack/commit/2c00f619e626aeb7189351e44bd9e1fa1f7590fd))
+- Fix programatic dialog toggling. ([310fbee](https://github.com/toneflix/vue-component-pack/commit/310fbeebba4ce0caa372fbe4fa7792fe0753ea24))
+
 # [1.15.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.14.1...@toneflix/vue-dataviewer@1.15.0) (2024-11-21)
 
 ### Features
