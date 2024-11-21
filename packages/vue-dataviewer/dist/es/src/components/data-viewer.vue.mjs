@@ -1,4 +1,4 @@
-import { defineComponent as D, mergeModels as w, useModel as m, ref as V, openBlock as P, createElementBlock as b, Fragment as I, renderSlot as l, createVNode as B, mergeProps as i, withCtx as u, createSlots as N, normalizeProps as d, guardReactiveProps as y, renderList as U, unref as t, createCommentVNode as z } from "vue";
+import { defineComponent as D, mergeModels as w, useModel as m, ref as V, openBlock as P, createElementBlock as b, Fragment as I, renderSlot as r, createVNode as B, withCtx as u, mergeProps as t, createSlots as N, normalizeProps as d, guardReactiveProps as y, renderList as U, unref as i, createCommentVNode as z } from "vue";
 /* empty css                   */
 import L from "./dialog/TDialog.vue.mjs";
 import S from "./main-content.vue.mjs";
@@ -59,19 +59,20 @@ const A = /* @__PURE__ */ D({
       o && (f.value = o), g.value = a, v.value = !0;
     };
     return (o, a) => (P(), b(I, null, [
-      l(o.$slots, "default", {
+      r(o.$slots, "default", {
         viewData: f.value,
         viewMode: g.value,
         saving: p.value,
         toggleDialog: C
       }),
-      B(L, i({
-        class: o.dialogClass,
+      B(L, {
         modelValue: v.value,
-        "onUpdate:modelValue": a[9] || (a[9] = (e) => v.value = e)
-      }, o.$attrs, { "z-index": o.dialogZIndex }), {
+        "onUpdate:modelValue": a[9] || (a[9] = (e) => v.value = e),
+        "z-index": o.dialogZIndex,
+        "dialog-class": o.dialogClass
+      }, {
         default: u(() => [
-          B(S, i({
+          B(S, t({
             "dialog-mode": "",
             class: "constrained"
           }, o.$props, {
@@ -87,34 +88,34 @@ const A = /* @__PURE__ */ D({
             "onUpdate:mode": a[4] || (a[4] = (e) => g.value = e),
             saving: p.value,
             "onUpdate:saving": a[5] || (a[5] = (e) => p.value = e),
-            onUpdateData: a[6] || (a[6] = (e, r) => o.$emit("toggleDialog", e, r)),
+            onUpdateData: a[6] || (a[6] = (e, l) => o.$emit("toggleDialog", e, l)),
             "onClick:save": a[7] || (a[7] = (e) => o.$emit("click:save", e)),
             onToggleDialog: a[8] || (a[8] = (e) => v.value = e)
           }), N({
             "form-prepend": u((e) => [
-              l(o.$slots, "form-prepend", d(y(e)))
+              r(o.$slots, "form-prepend", d(y(e)))
             ]),
             "form-append": u((e) => [
-              l(o.$slots, "form-append", d(y(e)))
+              r(o.$slots, "form-append", d(y(e)))
             ]),
             _: 2
           }, [
-            U(t(q), (e) => ({
+            U(i(q), (e) => ({
               name: e,
-              fn: u((r) => [
-                e === "form-append" || e === "form-prepend" ? l(o.$slots, e, d(i({ key: 0 }, t(n).form(r)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? l(o.$slots, e, d(i({ key: 1 }, t(n).list(r)))) : e === "list-item" ? l(o.$slots, e, d(i({ key: 2 }, t(n).listItem(r)))) : e === "img-list-item" ? l(o.$slots, e, d(i({ key: 3 }, t(n).imgListItem(r)))) : e === "image-viewer" ? l(o.$slots, e, d(i({ key: 4 }, t(n).imageViewer(r)))) : e === "loader" ? l(o.$slots, e, d(i({ key: 5 }, t(n).loader(r)))) : e === "image" ? l(o.$slots, e, d(i({ key: 6 }, t(n).image(r)))) : z("", !0)
+              fn: u((l) => [
+                e === "form-append" || e === "form-prepend" ? r(o.$slots, e, d(t({ key: 0 }, i(n).form(l)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? r(o.$slots, e, d(t({ key: 1 }, i(n).list(l)))) : e === "list-item" ? r(o.$slots, e, d(t({ key: 2 }, i(n).listItem(l)))) : e === "img-list-item" ? r(o.$slots, e, d(t({ key: 3 }, i(n).imgListItem(l)))) : e === "image-viewer" ? r(o.$slots, e, d(t({ key: 4 }, i(n).imageViewer(l)))) : e === "loader" ? r(o.$slots, e, d(t({ key: 5 }, i(n).loader(l)))) : e === "image" ? r(o.$slots, e, d(t({ key: 6 }, i(n).image(l)))) : z("", !0)
               ])
             })),
-            U(t(E), (e) => ({
+            U(i(E), (e) => ({
               name: e,
-              fn: u((r) => [
-                l(o.$slots, e, d(y(r)))
+              fn: u((l) => [
+                r(o.$slots, e, d(y(l)))
               ])
             }))
           ]), 1040, ["form", "data", "errors", "loading", "mode", "saving"])
         ]),
         _: 3
-      }, 16, ["class", "modelValue", "z-index"])
+      }, 8, ["modelValue", "z-index", "dialog-class"])
     ], 64));
   }
 });

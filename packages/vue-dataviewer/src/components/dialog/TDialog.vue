@@ -2,9 +2,8 @@
   <Teleport to="body">
     <div
       class="t-dialog"
-      :class="{ 't-dialog-fade': !model }"
+      :class="[{ 't-dialog-fade': !model }, dialogClass]"
       :style="{ zIndex }"
-      v-bind="$attrs"
       v-if="model"
     >
       <div class="t-dialog-backdrop" @click="model = !model"></div>
@@ -21,7 +20,16 @@ defineOptions({
 
 withDefaults(
   defineProps<{
+    /**
+     * Set a custom zIndex for the generated dialogs
+     *
+     * @default 5000
+     */
     zIndex?: number | undefined
+    /**
+     * Class definitions to be attributed to the dialog
+     */
+    dialogClass?: unknown
   }>(),
   {
     zIndex: 5000

@@ -1,37 +1,38 @@
-import { defineComponent as d, mergeModels as n, useModel as s, onMounted as r, watch as u, openBlock as a, createBlock as m, Teleport as i, createElementBlock as c, mergeProps as p, createElementVNode as f, renderSlot as v, createCommentVNode as g } from "vue";
-const V = /* @__PURE__ */ d({
+import { defineComponent as t, mergeModels as s, useModel as n, onMounted as i, watch as r, openBlock as a, createBlock as u, Teleport as m, createElementBlock as c, normalizeClass as p, normalizeStyle as f, createElementVNode as v, renderSlot as g, createCommentVNode as k } from "vue";
+const z = /* @__PURE__ */ t({
   name: "TDialog",
   __name: "TDialog",
-  props: /* @__PURE__ */ n({
-    zIndex: { default: 5e3 }
+  props: /* @__PURE__ */ s({
+    zIndex: { default: 5e3 },
+    dialogClass: {}
   }, {
     modelValue: { type: Boolean, default: !1 },
     modelModifiers: {}
   }),
   emits: ["update:modelValue"],
-  setup(t) {
-    const e = s(t, "modelValue");
-    return r(() => {
-      window.onkeyup = (o) => {
-        o.code === "Escape" && e.value && (e.value = !1);
+  setup(d) {
+    const e = n(d, "modelValue");
+    return i(() => {
+      window.onkeyup = (l) => {
+        l.code === "Escape" && e.value && (e.value = !1);
       };
-    }), u(e, (o) => {
-      document.body.classList[o ? "add" : "remove"]("t-dialog-active");
-    }), (o, l) => (a(), m(i, { to: "body" }, [
-      e.value ? (a(), c("div", p({
+    }), r(e, (l) => {
+      document.body.classList[l ? "add" : "remove"]("t-dialog-active");
+    }), (l, o) => (a(), u(m, { to: "body" }, [
+      e.value ? (a(), c("div", {
         key: 0,
-        class: ["t-dialog", { "t-dialog-fade": !e.value }],
-        style: { zIndex: o.zIndex }
-      }, o.$attrs), [
-        f("div", {
+        class: p(["t-dialog", [{ "t-dialog-fade": !e.value }, l.dialogClass]]),
+        style: f({ zIndex: l.zIndex })
+      }, [
+        v("div", {
           class: "t-dialog-backdrop",
-          onClick: l[0] || (l[0] = (k) => e.value = !e.value)
+          onClick: o[0] || (o[0] = (y) => e.value = !e.value)
         }),
-        v(o.$slots, "default")
-      ], 16)) : g("", !0)
+        g(l.$slots, "default")
+      ], 6)) : k("", !0)
     ]));
   }
 });
 export {
-  V as default
+  z as default
 };

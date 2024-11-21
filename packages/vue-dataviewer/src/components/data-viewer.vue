@@ -5,7 +5,7 @@
     :saving="saving"
     :toggleDialog="toggleDialog"
   ></slot>
-  <TDialog :class="dialogClass" v-model="dialogToggle" v-bind="$attrs" :z-index="dialogZIndex">
+  <TDialog v-model="dialogToggle" :z-index="dialogZIndex" :dialog-class="dialogClass">
     <MainContent
       dialog-mode
       class="constrained"
