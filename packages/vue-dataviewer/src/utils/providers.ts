@@ -1,5 +1,5 @@
 import { FormSlotName, MainProps, SlotName } from '../types'
-// import { slotNames as xFormSlotNames } from '@toneflix/vue-forms/src/utils/providers'
+import { slotNames as xFormSlotNames } from '@toneflix/vue-forms/src/utils/providers'
 
 export const slug = (str: string, separator: string = '_') => {
   const splitCaps = (string: string) =>
@@ -31,9 +31,7 @@ export const titleCase = (str: string) => {
     })
 }
 
-export const formSlotNames: FormSlotName[] =
-  //xFormSlotNames
-  ['form-input', 'form-select', 'form-checkbox', 'form-radio', 'form-switch', 'form-textarea']
+export const formSlotNames: FormSlotName[] = xFormSlotNames.map((e) => <FormSlotName>('form-' + e))
 
 export const slotNames: SlotName[] = [
   'list-item',
