@@ -1,4 +1,4 @@
-import { slotNames as m } from "../../../../node_modules/.pnpm/@toneflix_vue-forms@1.5.0_vue@3.5.13_typescript@5.6.3_/node_modules/@toneflix/vue-forms/src/utils/providers.mjs";
+import { slotNames as m } from "@toneflix/vue-forms/src/utils/providers";
 const n = (e, s = "_") => ((a) => a.replace(/([a-z])([A-Z]+)/g, (o, r, t) => r + " " + t).replace(
   /([A-Z])([A-Z]+)([^a-zA-Z0-9]*)$/,
   (o, r, t, l) => r + t.toLowerCase() + l
