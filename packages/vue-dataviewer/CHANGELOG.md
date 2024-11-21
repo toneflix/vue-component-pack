@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.12.0...@toneflix/vue-dataviewer@1.12.1) (2024-11-21)
+
+### Bug Fixes
+
+- Add `footer` slot to the `slotNames` array. ([d8ef6ac](https://github.com/toneflix/vue-component-pack/commit/d8ef6ac1ffd3e87d2eb0b60b99dd09b1f98b91b2))
+
 # [1.12.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.11.1...@toneflix/vue-dataviewer@1.12.0) (2024-11-21)
 
 ### Features
