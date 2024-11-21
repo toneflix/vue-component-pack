@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.11.1...@toneflix/vue-dataviewer@1.12.0) (2024-11-21)
+
+### Features
+
+- Add a `footer` slot to add content at the bottom of the container. ([96b2933](https://github.com/toneflix/vue-component-pack/commit/96b29332ec7c2fd444c6875cd7c004f671fd0505))
+
 ## [1.11.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.11.0...@toneflix/vue-dataviewer@1.11.1) (2024-11-21)
 
 ### Bug Fixes
