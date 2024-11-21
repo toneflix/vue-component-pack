@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.4.6...@toneflix/vue-forms@1.5.0) (2024-11-21)
+
+### Bug Fixes
+
+- Only push field into group if group is not indefined. ([16593b7](https://github.com/toneflix/vue-component-pack/commit/16593b71c3cdd9b47e97e927b122934d595f141d))
+
+### Features
+
+- Add slots for form ([4313b3b](https://github.com/toneflix/vue-component-pack/commit/4313b3bf498026a49f789a578f5c70a354454804))
+- export slotNames array ([b27cf04](https://github.com/toneflix/vue-component-pack/commit/b27cf047bbebec43f4aeefe9165bfe3b807a6405))
+
 ## [1.4.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.4.5...@toneflix/vue-forms@1.4.6) (2024-11-20)
 
 ### Bug Fixes
