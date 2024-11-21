@@ -1,4 +1,4 @@
-import { SlotName } from "../types"
+import { SlotName } from '../types'
 
 export const titleCase = (str: string) => {
   return str

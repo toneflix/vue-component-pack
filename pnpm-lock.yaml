@@ -73,6 +73,21 @@ importers:
         specifier: ^3.5.11
         version: 3.5.13(typescript@5.6.3)
 
+  packages/vue-forms:
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: ^5.1.4
+        version: 5.2.0(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
+      '@vue/runtime-core':
+        specifier: ^3.5.12
+        version: 3.5.13
+      vite:
+        specifier: ^5.4.10
+        version: 5.4.11(sass@1.80.4)
+      vue:
+        specifier: ^3.5.12
+        version: 3.5.13(typescript@5.6.3)
+
 packages:
 
   '@algolia/autocomplete-core@1.17.7':

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=e=>e.toLowerCase().replace(/_/g," ").replace(/-/g," ").replace(/(?:^|\s)\w/g,function(t){return t.toUpperCase()});exports.titleCase=r;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=e=>e.toLowerCase().replace(/_/g," ").replace(/-/g," ").replace(/(?:^|\s)\w/g,function(t){return t.toUpperCase()}),s=["input","select","checkbox","radio","switch","textarea"];exports.slotNames=s;exports.titleCase=r;
