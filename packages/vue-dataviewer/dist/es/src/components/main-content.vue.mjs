@@ -1,8 +1,8 @@
-import { defineComponent as H, mergeModels as A, useModel as y, ref as F, computed as B, watch as J, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as n, createElementVNode as r, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, createSlots as K, renderList as P, normalizeProps as Q, guardReactiveProps as W, Fragment as q, createVNode as O } from "vue";
+import { defineComponent as G, mergeModels as A, useModel as y, ref as F, computed as B, watch as H, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as n, createElementVNode as r, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, createSlots as J, renderList as P, normalizeProps as K, guardReactiveProps as Q, Fragment as q, createVNode as O } from "vue";
 /* empty css                   */
-import { titleCase as g, slug as D, formSlotNames as X } from "../utils/providers.mjs";
-import Y from "./TBtn.vue.mjs";
-import Z from "./dialog/TCard.vue.mjs";
+import { titleCase as g, slug as D, formSlotNames as W } from "../utils/providers.mjs";
+import X from "./TBtn.vue.mjs";
+import Y from "./dialog/TCard.vue.mjs";
 import _ from "./TInnerLoading.vue.mjs";
 import { VueForms as x } from "@toneflix/vue-forms";
 import { formatDate as ee } from "date-fns";
@@ -15,12 +15,13 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
 }, me = {
   key: 2,
   class: "image-viewer"
-}, ce = ["src", "alt"], he = /* @__PURE__ */ H({
+}, ce = ["src", "alt"], he = /* @__PURE__ */ G({
   name: "MainContent",
   __name: "main-content",
   props: /* @__PURE__ */ A({
     dialogMode: { type: Boolean },
     listClass: {},
+    dialogZIndex: {},
     exclusions: { default: () => ["id"] },
     formExclusions: { default: () => ["id", "imageUrl"] },
     booleanLabels: {},
@@ -64,7 +65,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
   }),
   emits: /* @__PURE__ */ A(["updateData", "click:save", "toggleDialog"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
   setup(c, { emit: R }) {
-    const V = R, s = c, o = y(c, "data"), p = y(c, "form"), d = y(c, "mode"), S = y(c, "loading"), z = y(c, "saving"), j = y(c, "errors"), w = F(), T = F(!1), I = B(() => {
+    const V = R, s = c, o = y(c, "data"), p = y(c, "form"), d = y(c, "mode"), S = y(c, "loading"), z = y(c, "saving"), j = y(c, "errors"), w = F(), I = F(!1), T = B(() => {
       var t, a, l;
       const e = {
         view: ((t = s.titles) == null ? void 0 : t.view) || "view Data",
@@ -74,7 +75,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
       return { view: e == null ? void 0 : e.view, edit: e == null ? void 0 : e.edit, doc: e == null ? void 0 : e.doc }[d.value || "view"];
     }), E = B(
       () => o.value ? Object.entries(o.value).filter((e) => s.imageProps.includes(e[0]) ? !1 : d.value === "edit" ? ![...s.exclusions, ...s.formExclusions].includes(e[0]) : !s.exclusions.includes(e[0])) : []
-    ), G = B(() => E.value.map(([e, t]) => ({
+    ), Z = B(() => E.value.map(([e, t]) => ({
       col: 12,
       name: e,
       type: typeof t == "boolean" ? "radio" : "text",
@@ -84,7 +85,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
         { label: "Reject", value: !0 }
       ]
     }))), f = (e, t = "view", a) => {
-      if (T.value = !0, a)
+      if (I.value = !0, a)
         d.value = "doc", w.value = { alt: a, src: o.value[a] };
       else {
         o.value = e, d.value = t;
@@ -100,15 +101,15 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
       var a, l, i;
       return t && ((a = s.valuesMap) != null && a[t]) && (e = (l = s.valuesMap) == null ? void 0 : l[t]), t && ((i = s.dateProps) != null && i.includes(t)) ? ee(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? g(e.join(", ")) : e;
     };
-    return J(d, (e) => {
+    return H(d, (e) => {
       e !== "doc" && (w.value = void 0);
-    }), (e, t) => (u(), U(Z, {
+    }), (e, t) => (u(), U(Y, {
       class: $({ "t-card-border": e.bordered, "t-card-shadow": e.shadow, "t-card-rounded": e.rounded })
     }, {
       header: M(() => [
         n(e.$slots, "header", {}, () => [
           r("div", ae, [
-            r("div", te, k(I.value), 1),
+            r("div", te, k(T.value), 1),
             e.dialogMode ? (u(), v("button", {
               key: 0,
               class: "close-btn",
@@ -124,13 +125,13 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
             rounded: "",
             "show-group-labels": "",
             class: "p-4 m-4 mx-auto",
-            fields: G.value,
+            fields: Z.value,
             loading: z.value,
             modelValue: p.value,
             "onUpdate:modelValue": t[1] || (t[1] = (a) => p.value = a),
             onCancel: t[2] || (t[2] = (a) => d.value = "view"),
             onSubmit: t[3] || (t[3] = (a) => V("click:save", o.value))
-          }, K({ _: 2 }, [
+          }, J({ _: 2 }, [
             e.$slots["form-prepend"] ? {
               name: "prepend",
               fn: M(() => [
@@ -153,10 +154,10 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
               ]),
               key: "1"
             } : void 0,
-            P(m(X), (a) => ({
+            P(m(W), (a) => ({
               name: a,
               fn: M((l) => [
-                n(e.$slots, a, Q(W(l)))
+                n(e.$slots, a, K(Q(l)))
               ])
             }))
           ]), 1032, ["fields", "loading", "modelValue"])) : (d.value === "view" || !p.value) && o.value ? (u(), v("div", oe, [
@@ -238,7 +239,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
             }, () => {
               var a, l, i, b, N;
               return [
-                O(Y, {
+                O(X, {
                   dense: "",
                   color: "primary",
                   label: "Return",

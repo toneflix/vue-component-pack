@@ -8,6 +8,12 @@ export interface DataViewerProps {
    */
   listClass?: unknown
   /**
+   * Set a custom zIndex for the generated dialogs
+   *
+   * @default 5000
+   */
+  dialogZIndex?: number
+  /**
    * When in view mode, the keys in this list will not be loaded into the viewer
    *
    * @default ```["id"]```

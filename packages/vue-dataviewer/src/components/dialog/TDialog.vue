@@ -1,6 +1,6 @@
 <template>
   <Teleport to="body">
-    <div class="t-dialog" :class="{ 't-dialog-fade': !model }" v-if="model">
+    <div class="t-dialog" :class="{ 't-dialog-fade': !model }" :style="{ zIndex }" v-if="model">
       <div class="t-dialog-backdrop" @click="model = !model"></div>
       <slot></slot>
     </div>
@@ -12,6 +12,15 @@ import { watch, onMounted } from 'vue'
 defineOptions({
   name: 'TDialog'
 })
+
+withDefaults(
+  defineProps<{
+    zIndex?: number | undefined
+  }>(),
+  {
+    zIndex: 5000
+  }
+)
 
 const model = defineModel<boolean>('modelValue', {
   default: false
