@@ -1,6 +1,6 @@
-import { defineComponent as H, mergeModels as A, useModel as b, ref as F, computed as B, watch as J, openBlock as u, createBlock as U, normalizeClass as w, withCtx as $, renderSlot as n, createElementVNode as r, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, createSlots as K, renderList as P, normalizeProps as Q, guardReactiveProps as W, Fragment as q, createVNode as O } from "vue";
+import { defineComponent as H, mergeModels as A, useModel as y, ref as F, computed as B, watch as J, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as n, createElementVNode as r, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, createSlots as K, renderList as P, normalizeProps as Q, guardReactiveProps as W, Fragment as q, createVNode as O } from "vue";
 /* empty css                   */
-import { titleCase as f, slug as D, formSlotNames as X } from "../utils/providers.mjs";
+import { titleCase as g, slug as D, formSlotNames as X } from "../utils/providers.mjs";
 import Y from "./TBtn.vue.mjs";
 import Z from "./dialog/TCard.vue.mjs";
 import _ from "./TInnerLoading.vue.mjs";
@@ -64,7 +64,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
   }),
   emits: /* @__PURE__ */ A(["updateData", "click:save", "toggleDialog"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
   setup(c, { emit: R }) {
-    const V = R, s = c, o = b(c, "data"), p = b(c, "form"), d = b(c, "mode"), S = b(c, "loading"), z = b(c, "saving"), j = b(c, "errors"), y = F(), T = F(!1), I = B(() => {
+    const V = R, s = c, o = y(c, "data"), p = y(c, "form"), d = y(c, "mode"), S = y(c, "loading"), z = y(c, "saving"), j = y(c, "errors"), w = F(), T = F(!1), I = B(() => {
       var t, a, l;
       const e = {
         view: ((t = s.titles) == null ? void 0 : t.view) || "view Data",
@@ -78,18 +78,18 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
       col: 12,
       name: e,
       type: typeof t == "boolean" ? "radio" : "text",
-      label: f(D(e, " ")),
+      label: g(D(e, " ")),
       choices: [
         { label: "Accept", value: !0 },
         { label: "Reject", value: !0 }
       ]
-    }))), M = (e, t = "view", a) => {
+    }))), f = (e, t = "view", a) => {
       if (T.value = !0, a)
-        d.value = "doc", y.value = { alt: a, src: o.value[a] };
+        d.value = "doc", w.value = { alt: a, src: o.value[a] };
       else {
         o.value = e, d.value = t;
         const l = Object.fromEntries(
-          Object.entries(e).map(([i, g]) => [D(i), C(g)])
+          Object.entries(e).map(([i, b]) => [D(i), C(b)])
         );
         V("updateData", l, t);
       }
@@ -98,14 +98,14 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
       return (a = s.booleanLabels) != null && a[e] ? t ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (i = s.booleanLabels) == null ? void 0 : i[e][1] : t ? "Active" : "Inactive";
     }, C = (e, t) => {
       var a, l, i;
-      return t && ((a = s.valuesMap) != null && a[t]) && (e = (l = s.valuesMap) == null ? void 0 : l[t]), t && ((i = s.dateProps) != null && i.includes(t)) ? ee(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((g) => typeof g == "string") && d.value === "view" ? f(e.join(", ")) : e;
+      return t && ((a = s.valuesMap) != null && a[t]) && (e = (l = s.valuesMap) == null ? void 0 : l[t]), t && ((i = s.dateProps) != null && i.includes(t)) ? ee(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? g(e.join(", ")) : e;
     };
     return J(d, (e) => {
-      e !== "doc" && (y.value = void 0);
+      e !== "doc" && (w.value = void 0);
     }), (e, t) => (u(), U(Z, {
-      class: w({ "t-card-border": e.bordered, "t-card-shadow": e.shadow, "t-card-rounded": e.rounded })
+      class: $({ "t-card-border": e.bordered, "t-card-shadow": e.shadow, "t-card-rounded": e.rounded })
     }, {
-      header: $(() => [
+      header: M(() => [
         n(e.$slots, "header", {}, () => [
           r("div", ae, [
             r("div", te, k(I.value), 1),
@@ -117,7 +117,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
           ])
         ])
       ]),
-      default: $(() => [
+      default: M(() => [
         r("div", null, [
           d.value === "edit" && p.value ? (u(), U(m(x), {
             key: 0,
@@ -133,7 +133,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
           }, K({ _: 2 }, [
             e.$slots["form-prepend"] ? {
               name: "prepend",
-              fn: $(() => [
+              fn: M(() => [
                 n(e.$slots, "form-prepend", {
                   form: p.value,
                   errors: j.value,
@@ -144,7 +144,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
             } : void 0,
             e.$slots["form-append"] ? {
               name: "default",
-              fn: $(() => [
+              fn: M(() => [
                 n(e.$slots, "form-append", {
                   form: p.value,
                   errors: j.value,
@@ -155,26 +155,26 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
             } : void 0,
             P(m(X), (a) => ({
               name: a,
-              fn: $((l) => [
+              fn: M((l) => [
                 n(e.$slots, a, Q(W(l)))
               ])
             }))
           ]), 1032, ["fields", "loading", "modelValue"])) : (d.value === "view" || !p.value) && o.value ? (u(), v("div", oe, [
             r("div", {
-              class: w(["t-list", e.listClass]),
+              class: $(["t-list", e.listClass]),
               separator: ""
             }, [
               (u(!0), v(q, null, P(e.imageProps, (a) => n(e.$slots, "img-list-item", {
-                toggle: () => M(o.value, "doc", a),
+                toggle: () => f(o.value, "doc", a),
                 field: a,
-                label: m(f)(a),
+                label: m(g)(a),
                 value: String(o.value[a]),
                 key: a
               }, () => [
                 o.value[a] ? (u(), v("div", {
                   key: 0,
-                  class: w(["t-item clickable", { "t-item-separator": e.separator }]),
-                  onClick: (l) => M(o.value, "doc", a)
+                  class: $(["t-item clickable", { "t-item-separator": e.separator }]),
+                  onClick: (l) => f(o.value, "doc", a)
                 }, [
                   r("div", se, [
                     n(e.$slots, "image", {
@@ -183,7 +183,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
                       r("div", ie, [
                         r("img", {
                           src: o.value[a],
-                          alt: m(f)(a)
+                          alt: m(g)(a)
                         }, null, 8, re)
                       ])
                     ])
@@ -193,25 +193,28 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
                   ], -1))
                 ], 10, le)) : h("", !0)
               ])), 128)),
-              n(e.$slots, "list-prepend", { data: o.value }),
+              n(e.$slots, "list-prepend", {
+                data: o.value,
+                toggle: (a) => f(o.value, a)
+              }),
               (u(!0), v(q, null, P(E.value, (a) => {
                 var l;
                 return n(e.$slots, "list-item", {
                   key: a[0],
                   field: a[0],
-                  label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? m(f)(a[0]),
+                  label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? m(g)(a[0]),
                   value: typeof a[1] == "boolean" ? L(m(D)(a[0]), a[1]) : C(a[1], a[0])
                 }, () => {
                   var i;
                   return [
                     r("div", {
-                      class: w(["t-item", { "t-item-separator": e.separator }])
+                      class: $(["t-item", { "t-item-separator": e.separator }])
                     }, [
                       r("div", ne, [
-                        r("div", ue, k(((i = e.labelsMap) == null ? void 0 : i[a[0]]) ?? m(f)(a[0])), 1),
+                        r("div", ue, k(((i = e.labelsMap) == null ? void 0 : i[a[0]]) ?? m(g)(a[0])), 1),
                         typeof a[1] == "boolean" ? (u(), v("div", de, [
                           r("div", {
-                            class: w(["t-chip t-chip-square", a[1] ? "t-chip-green" : "t-chip-red"])
+                            class: $(["t-chip t-chip-square", a[1] ? "t-chip-green" : "t-chip-red"])
                           }, k(L(m(D)(a[0]), a[1])), 3)
                         ])) : (u(), v("div", ve, k(C(a[1], a[0])), 1))
                       ])
@@ -219,28 +222,34 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
                   ];
                 });
               }), 128)),
-              n(e.$slots, "list-append", { data: o.value })
+              n(e.$slots, "list-append", {
+                data: o.value,
+                toggle: (a) => f(o.value, a)
+              })
             ], 2),
-            n(e.$slots, "list-after", { data: o.value })
+            n(e.$slots, "list-after", {
+              data: o.value,
+              toggle: (a) => f(o.value, a)
+            })
           ])) : o.value ? (u(), v("div", me, [
             n(e.$slots, "image-viewer", {
-              close: () => M(o.value, "view"),
+              close: () => f(o.value, "view"),
               src: o.value.imageUrl
             }, () => {
-              var a, l, i, g, N;
+              var a, l, i, b, N;
               return [
                 O(Y, {
                   dense: "",
                   color: "primary",
                   label: "Return",
                   icon: "fas fa-arrow-left",
-                  onClick: t[4] || (t[4] = (fe) => M(o.value, "view"))
+                  onClick: t[4] || (t[4] = (fe) => f(o.value, "view"))
                 }),
-                (a = y.value) != null && a.src || o.value[((l = e.imageProps) == null ? void 0 : l[0]) ?? 0] ? (u(), v("img", {
+                (a = w.value) != null && a.src || o.value[((l = e.imageProps) == null ? void 0 : l[0]) ?? 0] ? (u(), v("img", {
                   key: 0,
                   style: { width: "100%" },
-                  src: String(((i = y.value) == null ? void 0 : i.src) || o.value[((g = e.imageProps) == null ? void 0 : g[0]) ?? 0]),
-                  alt: m(f)(((N = y.value) == null ? void 0 : N.alt) || "Document")
+                  src: String(((i = w.value) == null ? void 0 : i.src) || o.value[((b = e.imageProps) == null ? void 0 : b[0]) ?? 0]),
+                  alt: m(g)(((N = w.value) == null ? void 0 : N.alt) || "Document")
                 }, null, 8, ce)) : h("", !0)
               ];
             })

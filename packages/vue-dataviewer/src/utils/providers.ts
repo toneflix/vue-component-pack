@@ -71,7 +71,7 @@ export const casts = {
     return <
       {
         data: MainProps['data']
-        toggle: () => void
+        toggle: (mode: MainProps['mode']) => void
       }
     >props
   },

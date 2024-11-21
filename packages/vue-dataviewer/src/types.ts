@@ -167,15 +167,24 @@ export interface ComponentSlots {
   /**
    * Slot for adding content before the list
    */
-  'list-prepend': (scope: { data: MainProps['data']; toggle: () => void }) => VNode[]
+  'list-prepend': (scope: {
+    data: MainProps['data']
+    toggle: (mode?: MainProps['mode']) => void
+  }) => VNode[]
   /**
    * Slot for adding content after the list
    */
-  'list-append': (scope: { data: MainProps['data']; toggle: () => void }) => VNode[]
+  'list-append': (scope: {
+    data: MainProps['data']
+    toggle: (mode?: MainProps['mode']) => void
+  }) => VNode[]
   /**
    * Slot for adding content after the list (outside)
    */
-  'list-after': (scope: { data: MainProps['data']; toggle: () => void }) => VNode[]
+  'list-after': (scope: {
+    data: MainProps['data']
+    toggle: (mode?: MainProps['mode']) => void
+  }) => VNode[]
   /**
    * Slot for overiding images (not the viewer)
    */

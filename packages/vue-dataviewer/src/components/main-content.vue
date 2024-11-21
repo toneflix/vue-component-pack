@@ -64,7 +64,12 @@
               </div>
             </div>
           </slot>
-          <slot name="list-prepend" :data="viewData"> </slot>
+          <slot
+            name="list-prepend"
+            :data="viewData"
+            :toggle="(mode: MainProps['mode']) => setData(viewData, mode)"
+          >
+          </slot>
           <template v-for="field in viewDataMap" :key="field[0]">
             <slot
               name="list-item"
@@ -96,9 +101,19 @@
               </div>
             </slot>
           </template>
-          <slot name="list-append" :data="viewData"> </slot>
+          <slot
+            name="list-append"
+            :data="viewData"
+            :toggle="(mode: MainProps['mode']) => setData(viewData, mode)"
+          >
+          </slot>
         </div>
-        <slot name="list-after" :data="viewData"> </slot>
+        <slot
+          name="list-after"
+          :data="viewData"
+          :toggle="(mode: MainProps['mode']) => setData(viewData, mode)"
+        >
+        </slot>
       </div>
       <div class="image-viewer" v-else-if="viewData">
         <slot name="image-viewer" :close="() => setData(viewData, 'view')" :src="viewData.imageUrl">
