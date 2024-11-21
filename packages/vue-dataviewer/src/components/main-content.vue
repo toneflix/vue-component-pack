@@ -4,7 +4,7 @@
       <slot name="header">
         <div class="flex items-center justify-between">
           <div class="card-title">
-            {{ { view: titles?.view, edit: titles?.edit, doc: titles?.doc }[viewMode || 'view'] }}
+            {{ viewTitle }}
           </div>
           <button class="close-btn" @click="$emit('toggleDialog', false)" v-if="dialogMode">
             &times;
@@ -148,7 +148,6 @@ const emit = defineEmits<{
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
 const props = withDefaults(defineProps<MainContentProps & MainProps>(), {
-  titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
   dateFormat: 'do MMM, yyyy h:mm a',
   imageProps: () => ['imageUrl'],
   exclusions: () => ['id'],
@@ -187,6 +186,15 @@ const errors = defineModel<MainProps['errors']>('errors', {
 
 const activeDoc = ref<{ alt: string; src: string }>()
 const dialogToggle = ref(false)
+const viewTitle = computed(() => {
+  const map = {
+    view: props.titles?.view || 'view Data',
+    edit: props.titles?.edit || 'Edit Data',
+    doc: props.titles?.doc || 'View Docs'
+  }
+
+  return { view: map?.view, edit: map?.edit, doc: map?.doc }[viewMode.value || 'view']
+})
 
 const viewDataMap = computed(() =>
   viewData.value

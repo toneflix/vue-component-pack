@@ -70,7 +70,6 @@ defineEmits<{
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 withDefaults(defineProps<DataViewerProps & MainProps>(), {
-  titles: () => ({ view: 'view Data', edit: 'Edit Data', doc: 'View Docs' }),
   dateFormat: 'do MMM, yyyy h:mm a',
   imageProps: () => ['imageUrl'],
   exclusions: () => ['id'],

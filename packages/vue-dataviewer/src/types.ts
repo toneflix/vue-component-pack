@@ -6,10 +6,6 @@ export interface DataViewerProps {
    */
   listClass?: unknown
   /**
-   * Set the titles for all the different modes
-   */
-  titles?: { view: string; edit: string; doc: string }
-  /**
    * When in view mode, the keys in this list will not be loaded into the viewer
    *
    * @default ```["id"]```
@@ -86,6 +82,10 @@ export interface MainContentProps extends DataViewerProps {
 }
 
 export interface MainProps {
+  /**
+   * Set the titles for all the different modes
+   */
+  titles?: { view: string; edit: string; doc: string }
   /**
    * The data that will be mapped for previewing
    */
