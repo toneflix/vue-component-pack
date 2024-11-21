@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.7.0...@toneflix/vue-dataviewer@1.8.0) (2024-11-21)
+
+### Features
+
+- Add toggle() to list props scopes ([d356729](https://github.com/toneflix/vue-component-pack/commit/d356729de67684eb7971f7c572223a0a5115b312))
+
 # [1.7.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.6.3...@toneflix/vue-dataviewer@1.7.0) (2024-11-21)
 
 ### Features
