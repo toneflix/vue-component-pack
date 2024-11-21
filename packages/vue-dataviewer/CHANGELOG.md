@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.13.0...@toneflix/vue-dataviewer@1.13.1) (2024-11-21)
+
+### Bug Fixes
+
+- Extraneous non-props attributes warning for dialogClass ([8bcbaef](https://github.com/toneflix/vue-component-pack/commit/8bcbaef4ba0d7534fa9015664e6f5364621e2704))
+
 # [1.13.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.12.1...@toneflix/vue-dataviewer@1.13.0) (2024-11-21)
 
 ### Features
