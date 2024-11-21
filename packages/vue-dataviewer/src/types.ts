@@ -85,7 +85,7 @@ export interface MainProps {
   /**
    * Set the titles for all the different modes
    */
-  titles?: { view: string; edit: string; doc: string }
+  titles?: { view?: string; edit?: string; doc?: string }
   /**
    * The data that will be mapped for previewing
    */
