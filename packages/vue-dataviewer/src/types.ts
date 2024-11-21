@@ -1,6 +1,5 @@
 import type { PublicProps, VNode } from 'vue'
-
-import { VueFormSlots } from '@toneflix/vue-forms/src/types'
+import { BaseProps as VueFormProps, VueFormSlots } from '@toneflix/vue-forms/src/types'
 
 export interface DataViewerProps {
   /**
@@ -105,6 +104,10 @@ export interface MainProps {
    * The reactive model data to be used in edit mode
    */
   form?: { [key: string]: any } | undefined // eslint-disable-line @typescript-eslint/no-explicit-any
+  /**
+   * Form instance customization props.
+   */
+  formProps?: VueFormProps
   /**
    * The current viewing mode
    */

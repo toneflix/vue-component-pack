@@ -17,9 +17,10 @@
         rounded
         show-group-labels
         class="p-4 m-4 mx-auto"
+        v-bind="formProps"
+        v-model="form"
         :fields="formdata"
         :loading="saving"
-        v-model="form"
         v-if="viewMode === 'edit' && form"
         @cancel="viewMode = 'view'"
         @submit="emit('click:save', viewData)"

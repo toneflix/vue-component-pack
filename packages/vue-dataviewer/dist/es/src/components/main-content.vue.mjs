@@ -1,21 +1,21 @@
-import { defineComponent as G, mergeModels as A, useModel as y, ref as F, computed as B, watch as H, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as n, createElementVNode as r, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, createSlots as J, renderList as P, normalizeProps as K, guardReactiveProps as Q, Fragment as q, createVNode as O } from "vue";
+import { defineComponent as G, mergeModels as A, useModel as y, ref as F, computed as B, watch as H, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as n, createElementVNode as i, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, mergeProps as J, createSlots as K, renderList as P, normalizeProps as Q, guardReactiveProps as W, Fragment as q, createVNode as O } from "vue";
 /* empty css                   */
-import { titleCase as g, slug as D, formSlotNames as W } from "../utils/providers.mjs";
-import X from "./TBtn.vue.mjs";
-import Y from "./dialog/TCard.vue.mjs";
-import _ from "./TInnerLoading.vue.mjs";
-import { VueForms as x } from "@toneflix/vue-forms";
-import { formatDate as ee } from "date-fns";
-const ae = { class: "flex items-center justify-between" }, te = { class: "card-title" }, oe = { key: 1 }, le = ["onClick"], se = { class: "t-item-section t-item-section-avatar" }, ie = { class: "t-avatar" }, re = ["src", "alt"], ne = { class: "t-item-section" }, ue = { class: "t-item-label caption" }, de = {
+import { titleCase as g, slug as D, formSlotNames as X } from "../utils/providers.mjs";
+import Y from "./TBtn.vue.mjs";
+import _ from "./dialog/TCard.vue.mjs";
+import x from "./TInnerLoading.vue.mjs";
+import { VueForms as ee } from "@toneflix/vue-forms";
+import { formatDate as ae } from "date-fns";
+const te = { class: "flex items-center justify-between" }, oe = { class: "card-title" }, le = { key: 1 }, se = ["onClick"], re = { class: "t-item-section t-item-section-avatar" }, ie = { class: "t-avatar" }, ne = ["src", "alt"], ue = { class: "t-item-section" }, de = { class: "t-item-label caption" }, ve = {
   key: 0,
   class: "t-item-label"
-}, ve = {
+}, me = {
   key: 1,
   class: "t-item-label"
-}, me = {
+}, ce = {
   key: 2,
   class: "image-viewer"
-}, ce = ["src", "alt"], he = /* @__PURE__ */ G({
+}, fe = ["src", "alt"], De = /* @__PURE__ */ G({
   name: "MainContent",
   __name: "main-content",
   props: /* @__PURE__ */ A({
@@ -37,6 +37,7 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
     titles: {},
     data: {},
     form: {},
+    formProps: {},
     mode: {},
     errors: {},
     saving: { type: Boolean },
@@ -90,26 +91,26 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
       else {
         o.value = e, d.value = t;
         const l = Object.fromEntries(
-          Object.entries(e).map(([i, b]) => [D(i), C(b)])
+          Object.entries(e).map(([r, b]) => [D(r), C(b)])
         );
         V("updateData", l, t);
       }
     }, L = (e, t) => {
-      var a, l, i;
-      return (a = s.booleanLabels) != null && a[e] ? t ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (i = s.booleanLabels) == null ? void 0 : i[e][1] : t ? "Active" : "Inactive";
+      var a, l, r;
+      return (a = s.booleanLabels) != null && a[e] ? t ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (r = s.booleanLabels) == null ? void 0 : r[e][1] : t ? "Active" : "Inactive";
     }, C = (e, t) => {
-      var a, l, i;
-      return t && ((a = s.valuesMap) != null && a[t]) && (e = (l = s.valuesMap) == null ? void 0 : l[t]), t && ((i = s.dateProps) != null && i.includes(t)) ? ee(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? g(e.join(", ")) : e;
+      var a, l, r;
+      return t && ((a = s.valuesMap) != null && a[t]) && (e = (l = s.valuesMap) == null ? void 0 : l[t]), t && ((r = s.dateProps) != null && r.includes(t)) ? ae(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? g(e.join(", ")) : e;
     };
     return H(d, (e) => {
       e !== "doc" && (w.value = void 0);
-    }), (e, t) => (u(), U(Y, {
+    }), (e, t) => (u(), U(_, {
       class: $({ "t-card-border": e.bordered, "t-card-shadow": e.shadow, "t-card-rounded": e.rounded })
     }, {
       header: M(() => [
         n(e.$slots, "header", {}, () => [
-          r("div", ae, [
-            r("div", te, k(T.value), 1),
+          i("div", te, [
+            i("div", oe, k(T.value), 1),
             e.dialogMode ? (u(), v("button", {
               key: 0,
               class: "close-btn",
@@ -119,19 +120,20 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
         ])
       ]),
       default: M(() => [
-        r("div", null, [
-          d.value === "edit" && p.value ? (u(), U(m(x), {
+        i("div", null, [
+          d.value === "edit" && p.value ? (u(), U(m(ee), J({
             key: 0,
             rounded: "",
             "show-group-labels": "",
-            class: "p-4 m-4 mx-auto",
-            fields: Z.value,
-            loading: z.value,
+            class: "p-4 m-4 mx-auto"
+          }, e.formProps, {
             modelValue: p.value,
             "onUpdate:modelValue": t[1] || (t[1] = (a) => p.value = a),
+            fields: Z.value,
+            loading: z.value,
             onCancel: t[2] || (t[2] = (a) => d.value = "view"),
             onSubmit: t[3] || (t[3] = (a) => V("click:save", o.value))
-          }, J({ _: 2 }, [
+          }), K({ _: 2 }, [
             e.$slots["form-prepend"] ? {
               name: "prepend",
               fn: M(() => [
@@ -154,14 +156,14 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
               ]),
               key: "1"
             } : void 0,
-            P(m(W), (a) => ({
+            P(m(X), (a) => ({
               name: a,
               fn: M((l) => [
-                n(e.$slots, a, K(Q(l)))
+                n(e.$slots, a, Q(W(l)))
               ])
             }))
-          ]), 1032, ["fields", "loading", "modelValue"])) : (d.value === "view" || !p.value) && o.value ? (u(), v("div", oe, [
-            r("div", {
+          ]), 1040, ["modelValue", "fields", "loading"])) : (d.value === "view" || !p.value) && o.value ? (u(), v("div", le, [
+            i("div", {
               class: $(["t-list", e.listClass]),
               separator: ""
             }, [
@@ -177,22 +179,22 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
                   class: $(["t-item clickable", { "t-item-separator": e.separator }]),
                   onClick: (l) => f(o.value, "doc", a)
                 }, [
-                  r("div", se, [
+                  i("div", re, [
                     n(e.$slots, "image", {
                       src: o.value[a]
                     }, () => [
-                      r("div", ie, [
-                        r("img", {
+                      i("div", ie, [
+                        i("img", {
                           src: o.value[a],
                           alt: m(g)(a)
-                        }, null, 8, re)
+                        }, null, 8, ne)
                       ])
                     ])
                   ]),
-                  t[5] || (t[5] = r("div", { class: "t-item-section" }, [
-                    r("div", { class: "t-item-label" }, "Click to expand")
+                  t[5] || (t[5] = i("div", { class: "t-item-section" }, [
+                    i("div", { class: "t-item-label" }, "Click to expand")
                   ], -1))
-                ], 10, le)) : h("", !0)
+                ], 10, se)) : h("", !0)
               ])), 128)),
               n(e.$slots, "list-prepend", {
                 data: o.value,
@@ -206,18 +208,18 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
                   label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? m(g)(a[0]),
                   value: typeof a[1] == "boolean" ? L(m(D)(a[0]), a[1]) : C(a[1], a[0])
                 }, () => {
-                  var i;
+                  var r;
                   return [
-                    r("div", {
+                    i("div", {
                       class: $(["t-item", { "t-item-separator": e.separator }])
                     }, [
-                      r("div", ne, [
-                        r("div", ue, k(((i = e.labelsMap) == null ? void 0 : i[a[0]]) ?? m(g)(a[0])), 1),
-                        typeof a[1] == "boolean" ? (u(), v("div", de, [
-                          r("div", {
+                      i("div", ue, [
+                        i("div", de, k(((r = e.labelsMap) == null ? void 0 : r[a[0]]) ?? m(g)(a[0])), 1),
+                        typeof a[1] == "boolean" ? (u(), v("div", ve, [
+                          i("div", {
                             class: $(["t-chip t-chip-square", a[1] ? "t-chip-green" : "t-chip-red"])
                           }, k(L(m(D)(a[0]), a[1])), 3)
-                        ])) : (u(), v("div", ve, k(C(a[1], a[0])), 1))
+                        ])) : (u(), v("div", me, k(C(a[1], a[0])), 1))
                       ])
                     ], 2)
                   ];
@@ -232,32 +234,32 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
               data: o.value,
               toggle: (a) => f(o.value, a)
             })
-          ])) : o.value ? (u(), v("div", me, [
+          ])) : o.value ? (u(), v("div", ce, [
             n(e.$slots, "image-viewer", {
               close: () => f(o.value, "view"),
               src: o.value.imageUrl
             }, () => {
-              var a, l, i, b, N;
+              var a, l, r, b, N;
               return [
-                O(X, {
+                O(Y, {
                   dense: "",
                   color: "primary",
                   label: "Return",
                   icon: "fas fa-arrow-left",
-                  onClick: t[4] || (t[4] = (fe) => f(o.value, "view"))
+                  onClick: t[4] || (t[4] = (ge) => f(o.value, "view"))
                 }),
                 (a = w.value) != null && a.src || o.value[((l = e.imageProps) == null ? void 0 : l[0]) ?? 0] ? (u(), v("img", {
                   key: 0,
                   style: { width: "100%" },
-                  src: String(((i = w.value) == null ? void 0 : i.src) || o.value[((b = e.imageProps) == null ? void 0 : b[0]) ?? 0]),
+                  src: String(((r = w.value) == null ? void 0 : r.src) || o.value[((b = e.imageProps) == null ? void 0 : b[0]) ?? 0]),
                   alt: m(g)(((N = w.value) == null ? void 0 : N.alt) || "Document")
-                }, null, 8, ce)) : h("", !0)
+                }, null, 8, fe)) : h("", !0)
               ];
             })
           ])) : h("", !0)
         ]),
         n(e.$slots, "loader", { loading: S.value }, () => [
-          O(_, { showing: S.value }, null, 8, ["showing"])
+          O(x, { showing: S.value }, null, 8, ["showing"])
         ])
       ]),
       _: 3
@@ -265,5 +267,5 @@ const ae = { class: "flex items-center justify-between" }, te = { class: "card-t
   }
 });
 export {
-  he as default
+  De as default
 };

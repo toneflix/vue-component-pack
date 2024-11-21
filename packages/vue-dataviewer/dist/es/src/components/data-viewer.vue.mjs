@@ -1,4 +1,4 @@
-import { defineComponent as V, mergeModels as w, useModel as m, ref as C, openBlock as P, createElementBlock as b, Fragment as I, renderSlot as l, createVNode as B, mergeProps as i, withCtx as u, createSlots as N, normalizeProps as d, guardReactiveProps as y, renderList as U, unref as t, createCommentVNode as z } from "vue";
+import { defineComponent as V, mergeModels as w, useModel as m, ref as P, openBlock as C, createElementBlock as b, Fragment as I, renderSlot as l, createVNode as B, mergeProps as i, withCtx as u, createSlots as N, normalizeProps as d, guardReactiveProps as y, renderList as U, unref as t, createCommentVNode as z } from "vue";
 /* empty css                   */
 import L from "./dialog/TDialog.vue.mjs";
 import S from "./main-content.vue.mjs";
@@ -24,6 +24,7 @@ const A = /* @__PURE__ */ V({
     titles: {},
     data: {},
     form: {},
+    formProps: {},
     mode: {},
     errors: {},
     saving: { type: Boolean },
@@ -52,10 +53,10 @@ const A = /* @__PURE__ */ V({
   }),
   emits: /* @__PURE__ */ w(["toggleDialog", "click:save"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
   setup(s) {
-    const f = m(s, "data"), $ = m(s, "form"), g = m(s, "mode"), M = m(s, "loading"), p = m(s, "saving"), k = m(s, "errors"), v = C(!1), D = (o, a = "view") => {
+    const f = m(s, "data"), $ = m(s, "form"), g = m(s, "mode"), M = m(s, "loading"), p = m(s, "saving"), k = m(s, "errors"), v = P(!1), D = (o, a = "view") => {
       o && (f.value = o), g.value = a, v.value = !0;
     };
-    return (o, a) => (P(), b(I, null, [
+    return (o, a) => (C(), b(I, null, [
       l(o.$slots, "default", {
         viewData: f.value,
         viewMode: g.value,
