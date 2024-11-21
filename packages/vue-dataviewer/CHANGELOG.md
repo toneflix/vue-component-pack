@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.3](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.6.2...@toneflix/vue-dataviewer@1.6.3) (2024-11-21)
+
+### Bug Fixes
+
+- Makes titles props optional ([16469c5](https://github.com/toneflix/vue-component-pack/commit/16469c5252b6b5fd1cbfa3a6f404f948060bce76))
+
 ## [1.6.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.6.1...@toneflix/vue-dataviewer@1.6.2) (2024-11-21)
 
 **Note:** Version bump only for package @toneflix/vue-dataviewer
