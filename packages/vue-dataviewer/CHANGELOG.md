@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.11.0...@toneflix/vue-dataviewer@1.11.1) (2024-11-21)
+
+### Bug Fixes
+
+- Fix card header styles being overridden by other libraries. ([6669db4](https://github.com/toneflix/vue-component-pack/commit/6669db4c1c415e8bbc9efaf69252996e57e01de8))
+
 # [1.11.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.10.2...@toneflix/vue-dataviewer@1.11.0) (2024-11-21)
 
 ### Features
