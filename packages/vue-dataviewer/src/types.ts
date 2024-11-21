@@ -180,6 +180,7 @@ export interface ComponentSlots {
     form?: MainProps['form']
     errors?: MainProps['errors']
     data?: MainProps['data']
+    toggle: (mode?: MainProps['mode']) => void
   }) => VNode[]
   /**
    * Slot for adding content before the form
@@ -188,6 +189,7 @@ export interface ComponentSlots {
     form?: MainProps['form']
     errors?: MainProps['errors']
     data?: MainProps['data']
+    toggle: (mode?: MainProps['mode']) => void
   }) => VNode[]
   /**
    * Slot for adding content before the list

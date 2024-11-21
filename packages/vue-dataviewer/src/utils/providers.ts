@@ -83,6 +83,7 @@ export const casts = {
         form?: undefined
         data?: MainProps['data']
         errors?: MainProps['errors']
+        toggle: (mode: MainProps['mode']) => void
       }
     >props
   }

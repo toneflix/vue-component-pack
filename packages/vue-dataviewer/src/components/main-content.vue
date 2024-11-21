@@ -35,10 +35,24 @@
         @submit="emit('click:save', viewData)"
       >
         <template #prepend v-if="$slots['form-prepend']">
-          <slot name="form-prepend" :form="form" :errors="errors" :data="viewData"> </slot>
+          <slot
+            name="form-prepend"
+            :form="form"
+            :errors="errors"
+            :data="viewData"
+            :toggle="(mode: MainProps['mode']) => setData(viewData, mode)"
+          >
+          </slot>
         </template>
         <template #default v-if="$slots['form-append']">
-          <slot name="form-append" :form="form" :errors="errors" :data="viewData"> </slot>
+          <slot
+            name="form-append"
+            :form="form"
+            :errors="errors"
+            :data="viewData"
+            :toggle="(mode: MainProps['mode']) => setData(viewData, mode)"
+          >
+          </slot>
         </template>
         <template v-for="slot in formSlotNames" :key="slot" v-slot:[slot]="props">
           <slot :name="slot" v-bind="props" />
