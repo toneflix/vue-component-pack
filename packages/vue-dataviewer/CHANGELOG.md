@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.10.0...@toneflix/vue-dataviewer@1.10.1) (2024-11-21)
+
+### Bug Fixes
+
+- Fix t-dialog position style leaking to all dialog elements. ([2aafaba](https://github.com/toneflix/vue-component-pack/commit/2aafaba82b844005f54ad9779a306ff5a896c412))
+
 # [1.10.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.9.1...@toneflix/vue-dataviewer@1.10.0) (2024-11-21)
 
 ### Features
