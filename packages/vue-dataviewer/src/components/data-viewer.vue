@@ -3,7 +3,7 @@
     :viewData="viewData"
     :viewMode="viewMode"
     :saving="saving"
-    :toggleDialog="toggleDialog"
+    :toggleDialog="loadDialog"
   ></slot>
   <TDialog v-model="dialogToggle" :z-index="dialogZIndex" :dialog-class="dialogClass">
     <MainContent
@@ -122,12 +122,16 @@ const errors = defineModel<MainProps['errors']>('errors', {
 
 const dialogToggle = ref(false)
 
-
-const toggleDialog = (data?: any, mode: 'edit' | 'view' | 'doc' = 'view') => {
+const loadDialog = (data?: any, mode: 'edit' | 'view' | 'doc' = 'view') => {
   if (data) {
     viewData.value = data
   }
   viewMode.value = mode
   dialogToggle.value = true
 }
+
+defineExpose({
+  dialogToggle,
+  toggleDialog: () =>dialogToggle.value = !dialogToggle.value
+})
 </script>
