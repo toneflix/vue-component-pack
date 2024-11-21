@@ -132,6 +132,6 @@ const loadDialog = (data?: any, mode: 'edit' | 'view' | 'doc' | 'close' = 'view'
 
 defineExpose({
   dialogToggle,
-  closeDialog: () => dialogToggle.value = false
+ dialogToggler: () => dialogToggle.value = !dialogToggle.value
 })
 </script>

@@ -261,6 +261,9 @@ const formdata = computed<FormField[]>(() => {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const setData = (data: any, mode: 'edit' | 'view' | 'doc' | 'close' = 'view', doc?: string) => {
   dialogToggle.value = mode !== 'close'
+  if (mode === 'close') {
+    return emit('toggleDialog', false)
+  }
 
   if (doc) {
     viewMode.value = 'doc'

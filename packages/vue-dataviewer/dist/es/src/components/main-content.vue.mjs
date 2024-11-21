@@ -1,4 +1,4 @@
-import { defineComponent as G, mergeModels as A, useModel as y, ref as F, computed as B, watch as H, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as i, createElementVNode as n, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, mergeProps as J, createSlots as K, renderList as P, normalizeProps as Q, guardReactiveProps as W, Fragment as q, createVNode as O } from "vue";
+import { defineComponent as G, mergeModels as A, useModel as y, ref as F, computed as P, watch as H, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as i, createElementVNode as n, toDisplayString as k, createElementBlock as v, createCommentVNode as h, unref as m, mergeProps as J, createSlots as K, renderList as V, normalizeProps as Q, guardReactiveProps as W, Fragment as q, createVNode as O } from "vue";
 /* empty css                   */
 import { titleCase as g, slug as C, formSlotNames as X } from "../utils/providers.mjs";
 import Y from "./TBtn.vue.mjs";
@@ -68,7 +68,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
   }),
   emits: /* @__PURE__ */ A(["updateData", "click:save", "toggleDialog"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
   setup(f, { emit: R }) {
-    const V = R, s = f, o = y(f, "data"), p = y(f, "form"), d = y(f, "mode"), S = y(f, "loading"), z = y(f, "saving"), j = y(f, "errors"), w = F(), I = F(!1), T = B(() => {
+    const D = R, s = f, o = y(f, "data"), p = y(f, "form"), d = y(f, "mode"), S = y(f, "loading"), z = y(f, "saving"), j = y(f, "errors"), w = F(), I = F(!1), T = P(() => {
       var t, a, l;
       const e = {
         view: ((t = s.titles) == null ? void 0 : t.view) || "view Data",
@@ -76,9 +76,9 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
         doc: ((l = s.titles) == null ? void 0 : l.doc) || "View Docs"
       };
       return { view: e == null ? void 0 : e.view, edit: e == null ? void 0 : e.edit, doc: e == null ? void 0 : e.doc, close: "" }[d.value || "view"];
-    }), E = B(
+    }), E = P(
       () => o.value ? Object.entries(o.value).filter((e) => s.imageProps.includes(e[0]) ? !1 : d.value === "edit" ? ![...s.exclusions, ...s.formExclusions].includes(e[0]) : !s.exclusions.includes(e[0])) : []
-    ), Z = B(() => E.value.map(([e, t]) => ({
+    ), Z = P(() => E.value.map(([e, t]) => ({
       col: 12,
       name: e,
       type: typeof t == "boolean" ? "radio" : "text",
@@ -88,19 +88,21 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
         { label: "Reject", value: !0 }
       ]
     }))), c = (e, t = "view", a) => {
-      if (I.value = t !== "close", a)
+      if (I.value = t !== "close", t === "close")
+        return D("toggleDialog", !1);
+      if (a)
         d.value = "doc", w.value = { alt: a, src: o.value[a] };
       else {
         o.value = e, d.value = t;
         const l = Object.fromEntries(
-          Object.entries(e).map(([r, b]) => [C(r), D(b)])
+          Object.entries(e).map(([r, b]) => [C(r), B(b)])
         );
-        V("updateData", l, t);
+        D("updateData", l, t);
       }
     }, L = (e, t) => {
       var a, l, r;
       return (a = s.booleanLabels) != null && a[e] ? t ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (r = s.booleanLabels) == null ? void 0 : r[e][1] : t ? "Active" : "Inactive";
-    }, D = (e, t) => {
+    }, B = (e, t) => {
       var a, l, r;
       return t && ((a = s.valuesMap) != null && a[t]) && (e = (l = s.valuesMap) == null ? void 0 : l[t]), t && ((r = s.dateProps) != null && r.includes(t)) ? ae(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? g(e.join(", ")) : e;
     };
@@ -141,7 +143,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
             fields: Z.value,
             loading: z.value,
             onCancel: t[2] || (t[2] = (a) => d.value = "view"),
-            onSubmit: t[3] || (t[3] = (a) => V("click:save", o.value))
+            onSubmit: t[3] || (t[3] = (a) => D("click:save", o.value))
           }), K({ _: 2 }, [
             e.$slots["form-prepend"] ? {
               name: "prepend",
@@ -165,7 +167,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
               ]),
               key: "1"
             } : void 0,
-            P(m(X), (a) => ({
+            V(m(X), (a) => ({
               name: a,
               fn: M((l) => [
                 i(e.$slots, a, Q(W(l)))
@@ -176,7 +178,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
               class: $(["t-list", e.listClass]),
               separator: ""
             }, [
-              (u(!0), v(q, null, P(e.imageProps, (a) => i(e.$slots, "img-list-item", {
+              (u(!0), v(q, null, V(e.imageProps, (a) => i(e.$slots, "img-list-item", {
                 toggle: () => c(o.value, "doc", a),
                 field: a,
                 label: m(g)(a),
@@ -209,13 +211,13 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                 data: o.value,
                 toggle: (a) => c(o.value, a)
               }),
-              (u(!0), v(q, null, P(E.value, (a) => {
+              (u(!0), v(q, null, V(E.value, (a) => {
                 var l;
                 return i(e.$slots, "list-item", {
                   key: a[0],
                   field: a[0],
                   label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? m(g)(a[0]),
-                  value: typeof a[1] == "boolean" ? L(m(C)(a[0]), a[1]) : D(a[1], a[0])
+                  value: typeof a[1] == "boolean" ? L(m(C)(a[0]), a[1]) : B(a[1], a[0])
                 }, () => {
                   var r;
                   return [
@@ -228,7 +230,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
                           n("div", {
                             class: $(["t-chip t-chip-square", a[1] ? "t-chip-green" : "t-chip-red"])
                           }, k(L(m(C)(a[0]), a[1])), 3)
-                        ])) : (u(), v("div", me, k(D(a[1], a[0])), 1))
+                        ])) : (u(), v("div", me, k(B(a[1], a[0])), 1))
                       ])
                     ], 2)
                   ];

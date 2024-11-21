@@ -4,6 +4,7 @@
     shadow
     rounded
     separator
+    ref="dataViewer"
     content-class="content-viewer"
     dialog-class="appointment-viewer"
     :dateProps="['createdAt']"
@@ -35,6 +36,8 @@
     class="mmx"
   >
   </MainContent>
+
+  <TBtn label="Toggle Dialog" @click="dataViewer?.dialogToggler" />
 </template>
 
 <script setup lang="ts">
@@ -42,6 +45,7 @@ import '@toneflix/vue-dataviewer/src/styles/main.scss'
 import { DataViewer, MainContent } from '@toneflix/vue-dataviewer'
 import { reactive } from 'vue'
 import { TBtn } from '@toneflix/vue-dataviewer'
+import { ref } from 'vue'
 
 const data = reactive({
   id: 1,
@@ -60,6 +64,8 @@ const data = reactive({
   createdAt: '2023-06-06 21:22:00',
   nothing: () => 'Hello Nohting'
 })
+
+const dataViewer = ref()
 </script>
 
 <style lang="scss" scoped>
