@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.13.1...@toneflix/vue-dataviewer@1.14.0) (2024-11-21)
+
+### Features
+
+- Expose dialogToggle and toggleDialog() to toggle dialog. ([c9cea0e](https://github.com/toneflix/vue-component-pack/commit/c9cea0ed951b85476ea67acff5048f8bb1aa146c))
+
 ## [1.13.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.13.0...@toneflix/vue-dataviewer@1.13.1) (2024-11-21)
 
 ### Bug Fixes
