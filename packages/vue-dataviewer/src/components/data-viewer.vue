@@ -29,7 +29,12 @@
         <slot
           :name="slot"
           v-bind="casts.list(props)"
-          v-else-if="slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after'"
+          v-else-if="
+            slot === 'list-prepend' ||
+            slot === 'list-append' ||
+            slot === 'list-after' ||
+            slot === 'footer'
+          "
         />
         <slot :name="slot" v-bind="casts.listItem(props)" v-else-if="slot === 'list-item'" />
         <slot :name="slot" v-bind="casts.imgListItem(props)" v-else-if="slot === 'img-list-item'" />

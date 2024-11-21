@@ -1,4 +1,4 @@
-import { defineComponent as V, mergeModels as w, useModel as m, ref as P, openBlock as C, createElementBlock as b, Fragment as I, renderSlot as l, createVNode as B, mergeProps as i, withCtx as u, createSlots as N, normalizeProps as d, guardReactiveProps as y, renderList as U, unref as t, createCommentVNode as z } from "vue";
+import { defineComponent as V, mergeModels as w, useModel as m, ref as P, openBlock as C, createElementBlock as b, Fragment as I, renderSlot as d, createVNode as B, mergeProps as i, withCtx as u, createSlots as N, normalizeProps as l, guardReactiveProps as y, renderList as U, unref as t, createCommentVNode as z } from "vue";
 /* empty css                   */
 import L from "./dialog/TDialog.vue.mjs";
 import S from "./main-content.vue.mjs";
@@ -57,7 +57,7 @@ const A = /* @__PURE__ */ V({
       o && (f.value = o), g.value = a, v.value = !0;
     };
     return (o, a) => (C(), b(I, null, [
-      l(o.$slots, "default", {
+      d(o.$slots, "default", {
         viewData: f.value,
         viewMode: g.value,
         saving: p.value,
@@ -89,23 +89,23 @@ const A = /* @__PURE__ */ V({
             onToggleDialog: a[8] || (a[8] = (e) => v.value = e)
           }), N({
             "form-prepend": u((e) => [
-              l(o.$slots, "form-prepend", d(y(e)))
+              d(o.$slots, "form-prepend", l(y(e)))
             ]),
             "form-append": u((e) => [
-              l(o.$slots, "form-append", d(y(e)))
+              d(o.$slots, "form-append", l(y(e)))
             ]),
             _: 2
           }, [
             U(t(q), (e) => ({
               name: e,
               fn: u((r) => [
-                e === "form-append" || e === "form-prepend" ? l(o.$slots, e, d(i({ key: 0 }, t(n).form(r)))) : e === "list-prepend" || e === "list-append" || e === "list-after" ? l(o.$slots, e, d(i({ key: 1 }, t(n).list(r)))) : e === "list-item" ? l(o.$slots, e, d(i({ key: 2 }, t(n).listItem(r)))) : e === "img-list-item" ? l(o.$slots, e, d(i({ key: 3 }, t(n).imgListItem(r)))) : e === "image-viewer" ? l(o.$slots, e, d(i({ key: 4 }, t(n).imageViewer(r)))) : e === "loader" ? l(o.$slots, e, d(i({ key: 5 }, t(n).loader(r)))) : e === "image" ? l(o.$slots, e, d(i({ key: 6 }, t(n).image(r)))) : z("", !0)
+                e === "form-append" || e === "form-prepend" ? d(o.$slots, e, l(i({ key: 0 }, t(n).form(r)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? d(o.$slots, e, l(i({ key: 1 }, t(n).list(r)))) : e === "list-item" ? d(o.$slots, e, l(i({ key: 2 }, t(n).listItem(r)))) : e === "img-list-item" ? d(o.$slots, e, l(i({ key: 3 }, t(n).imgListItem(r)))) : e === "image-viewer" ? d(o.$slots, e, l(i({ key: 4 }, t(n).imageViewer(r)))) : e === "loader" ? d(o.$slots, e, l(i({ key: 5 }, t(n).loader(r)))) : e === "image" ? d(o.$slots, e, l(i({ key: 6 }, t(n).image(r)))) : z("", !0)
               ])
             })),
             U(t(E), (e) => ({
               name: e,
               fn: u((r) => [
-                l(o.$slots, e, d(y(r)))
+                d(o.$slots, e, l(y(r)))
               ])
             }))
           ]), 1040, ["form", "data", "errors", "loading", "mode", "saving"])

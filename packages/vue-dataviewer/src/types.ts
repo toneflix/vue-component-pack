@@ -145,6 +145,14 @@ export interface ComponentSlots {
    */
   header: () => VNode[]
   /**
+   * Slot for adding content at the bottom of the container
+   */
+  footer: (scope: {
+    data: MainProps['data']
+    mode?: MainProps['mode']
+    toggle: (mode?: MainProps['mode']) => void
+  }) => VNode[]
+  /**
    * Slot for overiding list items
    */
   'list-item': (scope: { label: string; value: string; field: string }) => VNode[]

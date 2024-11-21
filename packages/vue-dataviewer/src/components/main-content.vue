@@ -137,6 +137,13 @@
     <slot name="loader" :loading="loading">
       <TinnerLoading :showing="loading" />
     </slot>
+
+    <slot
+      name="footer"
+      :data="viewData"
+      :mode="viewMode"
+      :toggle="(mode: MainProps['mode']) => setData(viewData, mode)"
+    ></slot>
   </TCard>
 </template>
 
