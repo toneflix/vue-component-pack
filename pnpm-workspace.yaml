@@ -1,7 +1,7 @@
 packages:
   - packages/*
-  - runner
-  # - '!runner'
+  # - runner
+  - '!runner'
   - '!package-template'
   - '!packages/otp-input'
   - '!packages/vue-auth'
