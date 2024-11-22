@@ -38,11 +38,11 @@ const F = /* @__PURE__ */ $({
       return o ? o().some((p) => {
         var f;
         return p.type !== Comment && ((f = p.children) == null ? void 0 : f.length);
-      }) && r.field.type === e || e === "input" && i.value : !1;
+      }) && (r.field.type === e || e === "input" && i.value) : !1;
     }
     const n = V(() => y.some(k));
     return console.log(n.value), (e, o) => (C(), U("div", {
-      class: b([`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`, { "has-slot": n.value }])
+      class: b([`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`, { unsloted: !n.value }])
     }, [
       i.value ? a(e.$slots, "input", u({ key: 0 }, e.field, { modelValue: l.value }), () => [
         d(S, u({

@@ -20,7 +20,7 @@
     "@eslint/js": "^9.13.0",
     "@paystack/inline-js": "^2.22.1",
     "@vitejs/plugin-vue": "^5.1.4",
-    "eslint": "~9.12.0",
+    "eslint": "^9.15.0",
     "eslint-plugin-vue": "^9.29.1",
     "globals": "^15.11.0",
     "lerna": "^8.1.8",

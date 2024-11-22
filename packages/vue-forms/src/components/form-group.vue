@@ -1,5 +1,5 @@
 <template>
-  <div :class="[`form-group col-${useGrid ? 'span-' : ''}${field.col}`, { 'has-slot': hasSlots }]">
+  <div :class="[`form-group col-${useGrid ? 'span-' : ''}${field.col}`, { unsloted: !hasSlots }]">
     <!-- Default Slots -->
     <slot name="input" v-bind="field" :modelValue="modelValue" v-if="useInput">
       <InputField v-model="modelValue" v-bind="field" />
@@ -77,7 +77,7 @@ function isSlotPopulated(slotName: string): boolean {
   const slotContent = slot()
   // Check if any of the returned nodes are actual elements (not comments)
   const check = slotContent.some((node) => node.type !== Comment && node.children?.length)
-  return (check && props.field.type === slotName) || (slotName === 'input' && useInput.value)
+  return check && (props.field.type === slotName || (slotName === 'input' && useInput.value))
 }
 
 // Compute if any slot is populated
