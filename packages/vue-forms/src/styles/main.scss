@@ -46,6 +46,7 @@
   .form-groups > .group {
     &.bordered {
       border: solid 1px #d8d7d7;
+      padding: 0.5rem;
     }
 
     &.rounded {
@@ -93,10 +94,6 @@
     > .group {
       margin: 0.175rem 0 0.375rem;
       position: relative;
-
-      &.bordered {
-        padding: 0.5rem;
-      }
 
       &:has(label.group-label) {
         margin: 0.475rem 0;
