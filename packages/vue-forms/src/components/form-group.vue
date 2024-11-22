@@ -1,5 +1,5 @@
 <template>
-  <div :class="`form-group col-${useGrid ? 'span-' : ''}${field.col}`">
+  <div :class="[`form-group col-${useGrid ? 'span-' : ''}${field.col}`, { hasSlots }]">
     <slot name="input" v-bind="field" :modelValue="modelValue" v-if="useInput">
       <InputField v-model="modelValue" v-bind="field" />
     </slot>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, useSlots } from 'vue'
 import { FormField } from '../types'
 import InputCheckbox from './input-checkbox.vue'
 import InputField from './input-field.vue'
@@ -30,6 +30,9 @@ import InputSelect from './input-select.vue'
 import InputRadio from './input-radio.vue'
 import InputSwitch from './input-switch.vue'
 import InputTextarea from './input-textarea.vue'
+
+const slots = useSlots()
+const hasSlots = computed(() => Object.keys(slots).length > 0)
 
 // Props
 const props = defineProps<{
