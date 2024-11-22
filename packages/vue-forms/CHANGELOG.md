@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.9.0...@toneflix/vue-forms@1.9.1) (2024-11-22)
+
+### Bug Fixes
+
+- Fix group padding ([e50a60b](https://github.com/toneflix/vue-component-pack/commit/e50a60b920cd0acc78df9c8114cfd3947b536eb3))
+
 # [1.9.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.8.1...@toneflix/vue-forms@1.9.0) (2024-11-22)
 
 ### Features
