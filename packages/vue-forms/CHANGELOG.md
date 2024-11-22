@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.7.0...@toneflix/vue-forms@1.7.1) (2024-11-22)
+
+### Bug Fixes
+
+- Skip defaut slot in hasSlots check ([ceed831](https://github.com/toneflix/vue-component-pack/commit/ceed831b556e58865133fd5c70c17f5d546d8996))
+
 # [1.7.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.6.0...@toneflix/vue-forms@1.7.0) (2024-11-22)
 
 ### Features
