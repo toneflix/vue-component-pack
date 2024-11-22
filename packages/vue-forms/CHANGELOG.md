@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.3](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.7.2...@toneflix/vue-forms@1.7.3) (2024-11-22)
+
+### Bug Fixes
+
+- Check if slot is not empty for hasSlots logic ([2e840ad](https://github.com/toneflix/vue-component-pack/commit/2e840adc5406d6de264d94764fd93fb238561037))
+
 ## [1.7.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.7.1...@toneflix/vue-forms@1.7.2) (2024-11-22)
 
 ### Bug Fixes

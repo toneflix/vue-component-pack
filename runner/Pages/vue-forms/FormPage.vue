@@ -24,7 +24,6 @@
       @cancel="console.log('cancel')"
       @submit="console.log('submit')"
     >
-      <template #input> Hello </template>
     </VueForms>
   </div>
   <div class="demo-container">
