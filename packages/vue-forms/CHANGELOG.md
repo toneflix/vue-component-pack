@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.5.0...@toneflix/vue-forms@1.6.0) (2024-11-21)
+
+### Features
+
+- Scope all styles to .vue-forms-controller ([fd6c917](https://github.com/toneflix/vue-component-pack/commit/fd6c91731da35b3f780338ef39da7cc97d3a1371))
+
 # [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.4.6...@toneflix/vue-forms@1.5.0) (2024-11-21)
 
 ### Bug Fixes
