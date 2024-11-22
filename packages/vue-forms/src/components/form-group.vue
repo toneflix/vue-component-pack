@@ -1,5 +1,5 @@
 <template>
-  <div :class="[`form-group col-${useGrid ? 'span-' : ''}${field.col}`, { hasSlots }]">
+  <div :class="[`form-group col-${useGrid ? 'span-' : ''}${field.col}`, { 'has-slot': hasSlots }]">
     <slot name="input" v-bind="field" :modelValue="modelValue" v-if="useInput">
       <InputField v-model="modelValue" v-bind="field" />
     </slot>
@@ -32,7 +32,7 @@ import InputSwitch from './input-switch.vue'
 import InputTextarea from './input-textarea.vue'
 
 const slots = useSlots()
-const hasSlots = computed(() => Object.keys(slots).length > 0)
+const hasSlots = computed(() => Object.keys(slots).some((n) => n !== 'default' && slots[n]))
 
 // Props
 const props = defineProps<{
