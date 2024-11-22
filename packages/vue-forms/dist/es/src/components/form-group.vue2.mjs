@@ -1,4 +1,4 @@
-import { defineComponent as $, mergeModels as c, useModel as g, computed as V, useSlots as w, openBlock as C, createElementBlock as U, normalizeClass as b, renderSlot as a, mergeProps as u, createVNode as d, createCommentVNode as s } from "vue";
+import { defineComponent as $, mergeModels as c, useModel as w, computed as f, useSlots as C, openBlock as U, createElementBlock as b, normalizeClass as g, renderSlot as a, mergeProps as u, createVNode as d, createCommentVNode as s } from "vue";
 import h from "./input-checkbox.vue.mjs";
 import S from "./input-field.vue.mjs";
 import B from "./input-select.vue.mjs";
@@ -18,7 +18,7 @@ const F = /* @__PURE__ */ $({
   }),
   emits: ["update:modelValue"],
   setup(m) {
-    const r = m, l = g(m, "modelValue"), i = V(() => [
+    const r = m, l = w(m, "modelValue"), i = f(() => [
       "text",
       "email",
       "url",
@@ -32,17 +32,17 @@ const F = /* @__PURE__ */ $({
       "time",
       "week",
       "file"
-    ].includes(r.field.type)), v = w(), y = ["input", "select", "checkbox", "radio", "switch", "textarea"];
-    function k(e) {
-      const o = v[e];
-      return o ? o().some((p) => {
-        var f;
-        return p.type !== Comment && ((f = p.children) == null ? void 0 : f.length);
+    ].includes(r.field.type)), V = C(), v = ["input", "select", "checkbox", "radio", "switch", "textarea"];
+    function y(e) {
+      const o = V[e];
+      return o ? o().some((n) => {
+        var p;
+        return n.type !== Comment && ((p = n.children) == null ? void 0 : p.length);
       }) && (r.field.type === e || e === "input" && i.value) : !1;
     }
-    const n = V(() => y.some(k));
-    return console.log(n.value), (e, o) => (C(), U("div", {
-      class: b([`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`, { unsloted: !n.value }])
+    const k = f(() => v.some(y));
+    return (e, o) => (U(), b("div", {
+      class: g([`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`, { unsloted: !k.value }])
     }, [
       i.value ? a(e.$slots, "input", u({ key: 0 }, e.field, { modelValue: l.value }), () => [
         d(S, u({

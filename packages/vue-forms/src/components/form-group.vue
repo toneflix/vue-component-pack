@@ -82,7 +82,6 @@ function isSlotPopulated(slotName: string): boolean {
 
 // Compute if any slot is populated
 const hasSlots = computed(() => slotsNames.some(isSlotPopulated))
-console.log(hasSlots.value)
 </script>
 
 <style scoped>
