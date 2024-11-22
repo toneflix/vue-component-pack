@@ -92,8 +92,11 @@
 
     > .group {
       margin: 0.175rem 0 0.375rem;
-      padding: 0.5rem;
       position: relative;
+
+      &.bordered {
+        padding: 0.5rem;
+      }
 
       &:has(label.group-label) {
         margin: 0.475rem 0;

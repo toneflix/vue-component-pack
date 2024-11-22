@@ -17,7 +17,7 @@
           title: 'Alternative Form',
           subtitle: 'These are the alternative options',
           rounded: false,
-          bordered: true
+          bordered: false
         }
       }"
       v-model="formValues"
