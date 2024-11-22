@@ -1,7 +1,7 @@
 import o from "./form-group.vue2.mjs";
 /* empty css                 */
 import r from "../../_virtual/_plugin-vue_export-helper.mjs";
-const f = /* @__PURE__ */ r(o, [["__scopeId", "data-v-33b0f7b0"]]);
+const _ = /* @__PURE__ */ r(o, [["__scopeId", "data-v-50c4842b"]]);
 export {
-  f as default
+  _ as default
 };
