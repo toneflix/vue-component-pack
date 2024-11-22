@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.7.3...@toneflix/vue-forms@1.8.0) (2024-11-22)
+
+### Bug Fixes
+
+- Make `hasSlots` feature work as intended. ([ce1d40a](https://github.com/toneflix/vue-component-pack/commit/ce1d40a094cdb4e162a1b9a83d2df544b5d7b81d))
+
+### Features
+
+- Prevent applying styles to unsloted element. ([73ebece](https://github.com/toneflix/vue-component-pack/commit/73ebece10fe19352c441b49be9dd7d6df4c2deb2))
+
 ## [1.7.3](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.7.2...@toneflix/vue-forms@1.7.3) (2024-11-22)
 
 ### Bug Fixes
