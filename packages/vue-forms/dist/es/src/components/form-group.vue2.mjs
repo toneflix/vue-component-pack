@@ -1,11 +1,11 @@
-import { defineComponent as v, mergeModels as y, useSlots as k, computed as i, useModel as $, openBlock as b, createElementBlock as w, normalizeClass as U, renderSlot as t, mergeProps as u, createVNode as d, createCommentVNode as s } from "vue";
+import { defineComponent as v, mergeModels as y, useSlots as $, computed as r, useModel as k, openBlock as w, createElementBlock as U, normalizeClass as b, renderSlot as t, mergeProps as u, createVNode as d, createCommentVNode as s } from "vue";
 import g from "./input-checkbox.vue.mjs";
 import B from "./input-field.vue.mjs";
 import C from "./input-select.vue.mjs";
 import M from "./input-radio.vue.mjs";
 import N from "./input-switch.vue.mjs";
 import S from "./input-textarea.vue.mjs";
-const O = /* @__PURE__ */ v({
+const j = /* @__PURE__ */ v({
   __name: "form-group",
   props: /* @__PURE__ */ y({
     field: {},
@@ -18,9 +18,12 @@ const O = /* @__PURE__ */ v({
   }),
   emits: ["update:modelValue"],
   setup(m) {
-    const r = k(), n = i(() => Object.keys(r).some((e) => p.includes(e))), p = ["input", "select", "checkbox", "radio", "switch", "textarea"];
-    console.log(r);
-    const f = m, l = $(m, "modelValue"), V = i(() => [
+    const i = $(), n = ["input", "select", "checkbox", "radio", "switch", "textarea"], p = r(
+      () => n.some((e) => {
+        const o = i[e];
+        return o && o().length > 0;
+      })
+    ), f = m, l = k(m, "modelValue"), V = r(() => [
       "text",
       "email",
       "url",
@@ -35,8 +38,8 @@ const O = /* @__PURE__ */ v({
       "week",
       "file"
     ].includes(f.field.type));
-    return (e, o) => (b(), w("div", {
-      class: U([`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`, { "has-slot": n.value }])
+    return (e, o) => (w(), U("div", {
+      class: b([`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`, { "has-slot": p.value }])
     }, [
       V.value ? t(e.$slots, "input", u({ key: 0 }, e.field, { modelValue: l.value }), () => [
         d(B, u({
@@ -78,5 +81,5 @@ const O = /* @__PURE__ */ v({
   }
 });
 export {
-  O as default
+  j as default
 };

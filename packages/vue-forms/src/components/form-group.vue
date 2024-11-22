@@ -1,5 +1,6 @@
 <template>
   <div :class="[`form-group col-${useGrid ? 'span-' : ''}${field.col}`, { 'has-slot': hasSlots }]">
+    <!-- Default Slots -->
     <slot name="input" v-bind="field" :modelValue="modelValue" v-if="useInput">
       <InputField v-model="modelValue" v-bind="field" />
     </slot>
@@ -31,10 +32,19 @@ import InputRadio from './input-radio.vue'
 import InputSwitch from './input-switch.vue'
 import InputTextarea from './input-textarea.vue'
 
+// Use the Composition API to get available slots
 const slots = useSlots()
-const hasSlots = computed(() => Object.keys(slots).some((n) => slotsNames.includes(n)))
+
+// Array of all named slots
 const slotsNames = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
-console.log(slots)
+
+// Check if any of the named slots are populated by the parent
+const hasSlots = computed(() =>
+  slotsNames.some((slotName) => {
+    const slot = slots[slotName]
+    return slot && slot().length > 0 // Check if slot content exists
+  })
+)
 
 // Props
 const props = defineProps<{
@@ -42,10 +52,12 @@ const props = defineProps<{
   useGrid?: boolean
 }>()
 
+// v-model for two-way binding
 const modelValue = defineModel<FormField['value']>('modelValue', {
   required: true
 })
 
+// Compute whether to use input types
 const useInput = computed(() => {
   const types: FormField['type'][] = [
     'text',
