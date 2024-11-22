@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.9.1...@toneflix/vue-forms@1.9.2) (2024-11-22)
+
+### Bug Fixes
+
+- Remove unesessary console.log() ([fc839e3](https://github.com/toneflix/vue-component-pack/commit/fc839e39aba8e0d13c289ff193593d99b7d667de))
+
 ## [1.9.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.9.0...@toneflix/vue-forms@1.9.1) (2024-11-22)
 
 ### Bug Fixes
