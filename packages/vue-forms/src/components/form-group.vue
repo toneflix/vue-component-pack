@@ -32,20 +32,6 @@ import InputRadio from './input-radio.vue'
 import InputSwitch from './input-switch.vue'
 import InputTextarea from './input-textarea.vue'
 
-// Use the Composition API to get available slots
-const slots = useSlots()
-
-// Array of all named slots
-const slotsNames = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
-
-// Check if any of the named slots are populated by the parent
-const hasSlots = computed(() =>
-  slotsNames.some((slotName) => {
-    const slot = slots[slotName]
-    return slot && slot().length > 0 // Check if slot content exists
-  })
-)
-
 // Props
 const props = defineProps<{
   field: FormField
@@ -77,6 +63,26 @@ const useInput = computed(() => {
 
   return types.includes(props.field.type)
 })
+
+// Use the Composition API to get available slots
+const slots = useSlots()
+
+// Array of all named slots
+const slotsNames = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
+
+// Helper function to check if a slot is truly populated
+function isSlotPopulated(slotName: string): boolean {
+  const slot = slots[slotName]
+  if (!slot) return false
+  const slotContent = slot()
+  // Check if any of the returned nodes are actual elements (not comments)
+  const check = slotContent.some((node) => node.type !== Comment && node.children?.length)
+  return (check && props.field.type === slotName) || (slotName === 'input' && useInput.value)
+}
+
+// Compute if any slot is populated
+const hasSlots = computed(() => slotsNames.some(isSlotPopulated))
+console.log(hasSlots.value)
 </script>
 
 <style scoped>

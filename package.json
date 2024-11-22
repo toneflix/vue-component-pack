@@ -8,6 +8,7 @@
   "packageManager": "pnpm@9.12.1",
   "scripts": {
     "build": "lerna run build",
+    "watch": "lerna run watch",
     "preview": "lerna run dev --scope=runner --",
     "lint": "pnpm run eslint && pnpm run prettier --check",
     "fmt": "pnpm run eslint && pnpm run prettier --write",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@paystack/inline-js": "^2.22.1",
+    "@vitejs/plugin-vue": "^5.1.4",
     "eslint": "~9.12.0",
     "eslint-plugin-vue": "^9.29.1",
     "globals": "^15.11.0",
@@ -26,6 +28,7 @@
     "sass": "^1.80.4",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.11.0",
+    "vite": "^5.4.11",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   }
