@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.8.1...@toneflix/vue-forms@1.9.0) (2024-11-22)
+
+### Features
+
+- Not applying default padding to from group without borders. ([f7b543d](https://github.com/toneflix/vue-component-pack/commit/f7b543d11ace0a9ae62926b65d7ef8bef9c21885))
+
 ## [1.8.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.8.0...@toneflix/vue-forms@1.8.1) (2024-11-22)
 
 **Note:** Version bump only for package @toneflix/vue-forms
