@@ -1,13 +1,13 @@
-import { defineComponent as V, mergeModels as v, useSlots as y, computed as i, useModel as $, openBlock as k, createElementBlock as U, normalizeClass as b, renderSlot as d, mergeProps as u, createVNode as t, createCommentVNode as m } from "vue";
-import w from "./input-checkbox.vue.mjs";
-import g from "./input-field.vue.mjs";
-import B from "./input-select.vue.mjs";
-import C from "./input-radio.vue.mjs";
-import M from "./input-switch.vue.mjs";
+import { defineComponent as v, mergeModels as y, useSlots as k, computed as i, useModel as $, openBlock as b, createElementBlock as w, normalizeClass as U, renderSlot as t, mergeProps as u, createVNode as d, createCommentVNode as s } from "vue";
+import g from "./input-checkbox.vue.mjs";
+import B from "./input-field.vue.mjs";
+import C from "./input-select.vue.mjs";
+import M from "./input-radio.vue.mjs";
+import N from "./input-switch.vue.mjs";
 import S from "./input-textarea.vue.mjs";
-const O = /* @__PURE__ */ V({
+const O = /* @__PURE__ */ v({
   __name: "form-group",
-  props: /* @__PURE__ */ v({
+  props: /* @__PURE__ */ y({
     field: {},
     useGrid: { type: Boolean }
   }, {
@@ -17,8 +17,10 @@ const O = /* @__PURE__ */ V({
     modelModifiers: {}
   }),
   emits: ["update:modelValue"],
-  setup(s) {
-    const r = y(), n = i(() => Object.keys(r).some((e) => e !== "default" && r[e])), p = s, l = $(s, "modelValue"), f = i(() => [
+  setup(m) {
+    const r = k(), n = i(() => Object.keys(r).some((e) => p.includes(e))), p = ["input", "select", "checkbox", "radio", "switch", "textarea"];
+    console.log(r);
+    const f = m, l = $(m, "modelValue"), V = i(() => [
       "text",
       "email",
       "url",
@@ -32,46 +34,46 @@ const O = /* @__PURE__ */ V({
       "time",
       "week",
       "file"
-    ].includes(p.field.type));
-    return (e, o) => (k(), U("div", {
-      class: b([`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`, { "has-slot": n.value }])
+    ].includes(f.field.type));
+    return (e, o) => (b(), w("div", {
+      class: U([`form-group col-${e.useGrid ? "span-" : ""}${e.field.col}`, { "has-slot": n.value }])
     }, [
-      f.value ? d(e.$slots, "input", u({ key: 0 }, e.field, { modelValue: l.value }), () => [
-        t(g, u({
+      V.value ? t(e.$slots, "input", u({ key: 0 }, e.field, { modelValue: l.value }), () => [
+        d(B, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[0] || (o[0] = (a) => l.value = a)
         }, e.field), null, 16, ["modelValue"])
-      ], !0) : m("", !0),
-      e.field.type === "select" ? d(e.$slots, "select", u({ key: 1 }, e.field, { modelValue: l.value }), () => [
-        t(B, u({
+      ], !0) : s("", !0),
+      e.field.type === "select" ? t(e.$slots, "select", u({ key: 1 }, e.field, { modelValue: l.value }), () => [
+        d(C, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[1] || (o[1] = (a) => l.value = a)
         }, e.field, { type: "select" }), null, 16, ["modelValue"])
-      ], !0) : m("", !0),
-      e.field.type === "checkbox" ? d(e.$slots, "checkbox", u({ key: 2 }, e.field, { modelValue: l.value }), () => [
-        t(w, u({
+      ], !0) : s("", !0),
+      e.field.type === "checkbox" ? t(e.$slots, "checkbox", u({ key: 2 }, e.field, { modelValue: l.value }), () => [
+        d(g, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[2] || (o[2] = (a) => l.value = a)
         }, e.field, { type: "checkbox" }), null, 16, ["modelValue"])
-      ], !0) : m("", !0),
-      e.field.type === "radio" ? d(e.$slots, "radio", u({ key: 3 }, e.field, { modelValue: l.value }), () => [
-        t(C, u({
+      ], !0) : s("", !0),
+      e.field.type === "radio" ? t(e.$slots, "radio", u({ key: 3 }, e.field, { modelValue: l.value }), () => [
+        d(M, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[3] || (o[3] = (a) => l.value = a)
         }, e.field, { type: "radio" }), null, 16, ["modelValue"])
-      ], !0) : m("", !0),
-      e.field.type === "switch" ? d(e.$slots, "switch", u({ key: 4 }, e.field, { modelValue: l.value }), () => [
-        t(M, u({
+      ], !0) : s("", !0),
+      e.field.type === "switch" ? t(e.$slots, "switch", u({ key: 4 }, e.field, { modelValue: l.value }), () => [
+        d(N, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[4] || (o[4] = (a) => l.value = a)
         }, e.field, { type: "switch" }), null, 16, ["modelValue"])
-      ], !0) : m("", !0),
-      e.field.type === "textarea" ? d(e.$slots, "textarea", u({ key: 5 }, e.field, { modelValue: l.value }), () => [
-        t(S, u({
+      ], !0) : s("", !0),
+      e.field.type === "textarea" ? t(e.$slots, "textarea", u({ key: 5 }, e.field, { modelValue: l.value }), () => [
+        d(S, u({
           modelValue: l.value,
           "onUpdate:modelValue": o[5] || (o[5] = (a) => l.value = a)
         }, e.field, { type: "textarea" }), null, 16, ["modelValue"])
-      ], !0) : m("", !0)
+      ], !0) : s("", !0)
     ], 2));
   }
 });

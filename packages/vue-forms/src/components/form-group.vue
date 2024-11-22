@@ -32,7 +32,9 @@ import InputSwitch from './input-switch.vue'
 import InputTextarea from './input-textarea.vue'
 
 const slots = useSlots()
-const hasSlots = computed(() => Object.keys(slots).some((n) => n !== 'default' && slots[n]))
+const hasSlots = computed(() => Object.keys(slots).some((n) => slotsNames.includes(n)))
+const slotsNames = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea']
+console.log(slots)
 
 // Props
 const props = defineProps<{
