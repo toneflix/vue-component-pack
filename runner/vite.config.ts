@@ -5,15 +5,15 @@ export default defineConfig({
   plugins: [vue()],
   optimizeDeps: {
     force: true,
-    include: ['../packages/**/*'],
+    include: ['../packages/**/*']
   },
   server: {
     watch: {
       // usePolling: false,
-      followSymlinks: true,
-    },
+      followSymlinks: true
+    }
   },
   resolve: {
-    preserveSymlinks: true,
+    preserveSymlinks: true
   }
 })
