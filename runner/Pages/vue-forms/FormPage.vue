@@ -24,11 +24,11 @@
       @cancel="console.log('cancel')"
       @submit="console.log('submit')"
     >
-      <template #select>
+      <!-- <template #select>
         <select>
           <option value="option1">Option 1</option>
         </select>
-      </template>
+      </template> -->
     </VueForms>
   </div>
   <div class="demo-container">
