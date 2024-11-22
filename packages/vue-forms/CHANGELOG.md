@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.6.0...@toneflix/vue-forms@1.7.0) (2024-11-22)
+
+### Features
+
+- add the hasSlots class to help customize when custom slots are in use. ([14ca62a](https://github.com/toneflix/vue-component-pack/commit/14ca62a52db60a3d10e3b1d5ed54cc817da044d3))
+
 # [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.5.0...@toneflix/vue-forms@1.6.0) (2024-11-21)
 
 ### Features
