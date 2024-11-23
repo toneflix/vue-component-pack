@@ -30,6 +30,7 @@ export interface BaseError extends Error {
 }
 
 export interface ResponseError {
+  status: number;
   response: {
     data: BaseError
     [key: string]: unknown
@@ -159,6 +160,11 @@ export interface AuthOptions<U = AuthUser> {
     user: U
     token?: string | undefined
   }) => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
+  /**
+   * Something went wrong and the user's authentication has ben cleared, but you can handle this gracefully
+   * @returns
+   */
+  resetHandler?: (router: Router) => void
   /**
    * Transforms the user object returned from the auth endpoint
    * @param response

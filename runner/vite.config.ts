@@ -9,7 +9,7 @@ export default defineConfig({
   },
   server: {
     watch: {
-      // usePolling: false,
+      usePolling: false,
       followSymlinks: true
     }
   },

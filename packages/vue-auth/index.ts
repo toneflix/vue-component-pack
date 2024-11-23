@@ -7,7 +7,7 @@ import { setAuthConfig } from './src/utils/config'
 import { useAuthStore } from './src/stores/vue-auth'
 
 // Define the plugin with the correct signature
-export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
+export const authPlugin = <U = unknown> (options: AuthOptions<U>) => {
   const { router, loginRouteName, defaultAuthRouteName } = options
 
   const vueAuth: Plugin<[]> = {
@@ -28,6 +28,16 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
       const store = useAuthStore(options.storageOptions)
 
       if (router) {
+        /**
+         * Handle system reset here
+         */
+        store.$subscribe((_, store) => {
+          if (options.resetHandler && store.refreshed) {
+            store.refreshed = false
+            options.resetHandler(router)
+          }
+        })
+
         router.beforeEach((to, from, next) => {
           const requiresAuth = to.meta.requiresAuth
           const requiresGuest = to.meta.requiresGuest

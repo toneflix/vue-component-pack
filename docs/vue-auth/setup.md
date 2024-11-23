@@ -188,6 +188,27 @@ transformResponse(resp: {
 
 This function gives you control over how user data and tokens are extracted from the API response.
 
+## 6. System Reset
+
+Sometimes, your authentication token may get outdated from the server, causing the server to return a `401 Unauthorized` error, when this happens, `@toneflix/vue-auth` will do all of the following:
+
+- Set `user` to`{}`
+- Set `token` to `undefined`
+- Set `isAuthenticated` to `false`
+- Call the `resetHandler` method of the authentication setup instance if it is defined.
+
+The `resetHandler` method provides the current `router` interface, giving you the freedom to redirect user to any other part of the app you want or do something else entirely.
+
+### Defining `resetHandler`
+
+To use the `resetHandler`, simply define it in your current authentication setup instance.
+
+```ts
+resetHandler (router) {
+  router.replace({ name: 'login' })
+}
+```
+
 ## 6. Route Protection
 
 To manage access to certain routes based on authentication status, the `@toneflix/vue-auth` plugin relies on meta properties in your Vue Router configuration. These meta fields allow you to specify whether a route requires the user to be authenticated or if it should only be accessible to guests (unauthenticated users).
@@ -385,6 +406,9 @@ const auth = authPlugin({
     return {
       Authorization: `Bearer ${token}`
     }
+  },
+  resetHandler (router) {
+    router.replace({ name: 'login' })
   },
   transformResponse(resp: { data: AuthUser; token?: string }) {
     return { user: resp.data, token: resp.token }

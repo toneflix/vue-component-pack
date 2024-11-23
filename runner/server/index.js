@@ -1,7 +1,7 @@
 import { Model, Response, createServer } from 'miragejs'
 import { testUser, userFactory } from './factories'
 
-export function makeServer({ environment = 'development' } = {}) {
+export function makeServer ({ environment = 'development' } = {}) {
   let server = createServer({
     environment,
 
@@ -13,12 +13,12 @@ export function makeServer({ environment = 'development' } = {}) {
       user: userFactory
     },
 
-    seeds(server) {
+    seeds (server) {
       server.create('user', testUser)
       server.createList('user', 10)
     },
 
-    routes() {
+    routes () {
       this.urlPrefix = 'http://example.com'
 
       this.namespace = 'api/v1'
@@ -97,13 +97,14 @@ export function makeServer({ environment = 'development' } = {}) {
       this.get('profile', (schema, request) => {
         const params = request.requestHeaders
 
-        const data = schema.findBy('user', {
-          token: (params?.Authorization || '').replace('Bearer ', '')
-        })
+        // const data = schema.findBy('user', {
+        //   token: (params?.Authorization || '').replace('Bearer ', '')
+        // })
 
-        if (!data) return new Response(401, {}, { message: 'Unauthorized' })
+        return new Response(401, {}, { message: 'Unauthorized' })
+        // if (!data) return new Response(401, {}, { message: 'Unauthorized' })
 
-        return new Response(200, {}, { data, message: 'OK' })
+        // return new Response(200, {}, { data, message: 'OK' })
       }) //, { timing: 3000 })
 
       this.passthrough()
