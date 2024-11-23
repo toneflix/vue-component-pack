@@ -58,7 +58,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
           user.value = usr
           token.value = tkn
           isAuthenticated.value = true
-          localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
+          globalThis.localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
 
           return { user: usr, token: tkn, message }
         } catch (error) {
@@ -97,7 +97,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
           user.value = usr
           token.value = tkn
           isAuthenticated.value = true
-          localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
+          globalThis.localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
 
           return { user: usr, token: tkn, message }
         } catch (error) {
@@ -135,7 +135,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
           user.value = {} as AuthUser
           token.value = undefined
           isAuthenticated.value = false
-          localStorage.removeItem(options.storageKey ?? 'auth_token')
+          globalThis.localStorage.removeItem(options.storageKey ?? 'auth_token')
         } catch (error) {
           const { response } = <ResponseError>error
           return { error: response?.data || {}, message: response?.data?.message }
@@ -237,7 +237,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
         error?: BaseError | undefined
         message?: string | undefined
       }> => {
-        const tkn = localStorage.getItem(options.storageKey ?? 'auth_token') ?? token.value
+        const tkn = globalThis.localStorage.getItem(options.storageKey ?? 'auth_token') ?? token.value
 
         const headers = await buildHeaders(options as unknown as AuthOptions, user.value, token.value)
 

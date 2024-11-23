@@ -72,7 +72,7 @@ These endpoints will be appended to the baseUrl, so make sure the relative paths
 
 ## 3. Storage and Tokens
 
-### `storageKey`
+### `storageKey (string|optional)`
 
 The `storageKey` is the key under which the authentication token will be stored in local storage. By default, the token is saved as a string in localStorage after a successful login. You can provide a custom key to avoid conflicts with other tokens.
 
@@ -82,7 +82,7 @@ Example:
 storageKey: 'my_auth_token'
 ```
 
-### `storageOptions`
+### `storageOptions (optional)`
 
 This option allows you to pass extra options to the auth store instance when needed. This becomes extremely usefull if you use pinia-plugin-persists or another pinia plugin that requires you to pass options to your stores. E.g. `{ persist: true }`
 
@@ -109,9 +109,19 @@ setAuthHeaders: () => {
 
 This function is useful for passing authentication headers when making profile or logout requests.
 
+### `disableAutoRefresh (boolean|optional)`
+
+If auth token exists in memory but user is empty, sometimes due to page refresh and unavailable persistence setup, `vue-auth` automatically makes a request to the defined `endpoints.profile` endpoint to refresh the user object, setting this option to `true` will prevent the refresh entirely.
+
+Example:
+
+```js
+disableAutoRefresh: false
+```
+
 ## 4. Routing Behavior
 
-### `loginRouteName`
+### `loginRouteName (string|optional)`
 
 The `loginRouteName` defines the name of the login route in your application. This is essential for redirecting unauthenticated users when they try to access protected routes.
 
@@ -123,7 +133,7 @@ loginRouteName: '/auth/login'
 
 When an unauthenticated user tries to access a route that requires authentication, they will be redirected to this route.
 
-### `defaultAuthRouteName`
+### `defaultAuthRouteName (string|optional)`
 
 The `defaultAuthRouteName` is the route where authenticated users will be redirected if they try to access a route that requires a guest, like the login or registration routes.
 
@@ -154,7 +164,7 @@ When an authenticated user tries to access a route that requires guest, they wil
 
 ## 5. Transforming Responses
 
-### `transformResponse`
+### `transformResponse (function|optional)`
 
 The `transformResponse` function allows you to transform the API response before storing the user and token data. This is useful if your API returns a different structure than the default `AuthUser` interface.
 
