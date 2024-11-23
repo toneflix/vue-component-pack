@@ -75,7 +75,8 @@ const props = withDefaults(
 
 const field = computed<FormField>(() => ({
   type: props.type,
-  name: props.name
+  name: props.name,
+  autofocus: true
 }))
 
 const modelValue = defineModel<FormField['value']>('modelValue', {
