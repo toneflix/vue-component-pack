@@ -64,7 +64,7 @@ export const createCountdown = (
  * @param next
  * @param context
  */
-export function runMiddlewares<U = AuthUser> (
+export function runMiddlewares<U = AuthUser>(
   middlewares: AuthOptions<U>['middlewares'],
   to: RouteLocationNormalized,
   from: RouteLocationNormalized,

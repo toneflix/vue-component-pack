@@ -101,7 +101,11 @@ function C(k) {
         },
         loadUserFromStorage: async (s = f(), r, u) => {
           var e;
-          const o = globalThis.localStorage.getItem(s.storageKey ?? "auth_token") ?? m.value, t = await y(s, n.value, m.value);
+          const o = globalThis.localStorage.getItem(s.storageKey ?? "auth_token") ?? m.value, t = await y(
+            s,
+            n.value,
+            m.value
+          );
           if (o && s.endpoints.profile && (m.value = o, h.value = !0, !u || !s.disableAutoRefresh)) {
             const a = i("profile");
             try {
