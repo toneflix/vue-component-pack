@@ -1,24 +1,28 @@
-const l = (r, s) => JSON.stringify(r) === JSON.stringify(s), f = (r, s, u) => {
-  const e = u ? u.resolve(s) : s;
-  return typeof e == "string" ? r.path === e : r.path === e.path && l(r.query, e.query);
-}, p = (r) => (s, u, e, i, n) => {
-  if (!i.isAuthenticated && !f(s, r, n) && s.meta.requiresAuth)
+const d = (r, s) => JSON.stringify(r) === JSON.stringify(s), f = (r, s, u) => {
+  try {
+    const e = u ? u.resolve(s) : s;
+    return typeof e == "string" ? r.path === e : r.path === e.path && d(r.query, e.query);
+  } catch {
+    return !1;
+  }
+}, p = (r) => (s, u, e, t, i) => {
+  if (!t.isAuthenticated && !f(s, r, i) && s.meta.requiresAuth)
     return e(r);
   e();
-}, q = (r) => (s, u, e, i, n) => {
-  if (i.isAuthenticated && !f(s, r, n) && s.meta.requiresGuest)
+}, q = (r) => (s, u, e, t, i) => {
+  if (t.isAuthenticated && !f(s, r, i) && s.meta.requiresGuest)
     return e(r);
   e();
-}, A = (r, s, u = "roles", e = "requiresAdmin") => (i, n, a, t, h) => {
-  if (!t.user[u])
+}, y = (r, s, u = "roles", e = "requiresAdmin") => (t, i, a, n, h) => {
+  if (!n.user[u])
     return a();
-  const m = Array.isArray(t.user[u]) ? t.user[u] : [String(t.user[u])], d = typeof s == "string" ? [s] : s;
-  if (!m.some((g) => d.includes(g)) && !f(i, r, h) && i.meta[e])
+  const c = Array.isArray(n.user[u]) ? n.user[u] : [String(n.user[u])], l = typeof s == "string" ? [s] : s;
+  if (!c.some((m) => l.includes(m)) && !f(t, r, h) && t.meta[e])
     return a(r);
   a();
 };
 export {
   p as authMiddleware,
   q as guestMiddleware,
-  A as roleMiddleware
+  y as roleMiddleware
 };

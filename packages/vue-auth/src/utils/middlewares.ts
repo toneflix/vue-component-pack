@@ -16,11 +16,15 @@ const isCurrent = (
   redirectRoute: RouteLocationRaw,
   router?: Router
 ) => {
-  const route = router ? router.resolve(redirectRoute) : redirectRoute
+  try {
+    const route = router ? router.resolve(redirectRoute) : redirectRoute
 
-  return typeof route === 'string'
-    ? to.path === route
-    : to.path === route.path && sameObj(to.query, route.query)
+    return typeof route === 'string'
+      ? to.path === route
+      : to.path === route.path && sameObj(to.query, route.query)
+  } catch {
+    return false
+  }
 }
 
 /**
@@ -33,8 +37,8 @@ const isCurrent = (
  * @param redirectRoute If the user fails the check, they will be redirected here.
  * @returns
  */
-export const authMiddleware = <U = unknown>(redirectRoute: RouteLocationRaw): Middleware<U> => {
-  return (to, from, next, state, router) => {
+export const authMiddleware = <U = unknown> (redirectRoute: RouteLocationRaw): Middleware<U> => {
+  return (to, _, next, state, router) => {
     if (!state.isAuthenticated && !isCurrent(to, redirectRoute, router) && to.meta.requiresAuth) {
       return next(redirectRoute)
     }
@@ -55,8 +59,8 @@ export const authMiddleware = <U = unknown>(redirectRoute: RouteLocationRaw): Mi
  * @param redirectRoute If the user is not a guest, they will be redirected here.
  * @returns
  */
-export const guestMiddleware = <U = unknown>(redirectRoute: RouteLocationRaw): Middleware<U> => {
-  return (to, from, next, state, router) => {
+export const guestMiddleware = <U = unknown> (redirectRoute: RouteLocationRaw): Middleware<U> => {
+  return (to, _, next, state, router) => {
     if (state.isAuthenticated && !isCurrent(to, redirectRoute, router) && to.meta.requiresGuest) {
       return next(redirectRoute)
     }
@@ -76,7 +80,7 @@ export const guestMiddleware = <U = unknown>(redirectRoute: RouteLocationRaw): M
  * @param metaKey The meta key on the target route to check if it's constrained to the rules
  * @returns
  */
-export const roleMiddleware = <U = unknown>(
+export const roleMiddleware = <U = unknown> (
   redirectRoute: RouteLocationRaw,
   roles: string | string[],
   roleKey: keyof U = 'roles' as keyof U,
