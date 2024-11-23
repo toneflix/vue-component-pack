@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.7.0...@toneflix/vue-auth@1.8.0) (2024-11-23)
+
+### Features
+
+- Add `resetHandler` to handle system resets and 401 errors. ([0d3841a](https://github.com/toneflix/vue-component-pack/commit/0d3841a7f74af0ba15539e76baea86a0885fd393))
+
 # [1.7.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.6.0...@toneflix/vue-auth@1.7.0) (2024-11-23)
 
 ### Bug Fixes
