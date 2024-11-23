@@ -138,6 +138,11 @@ export interface AuthOptions<U = AuthUser> {
    */
   loginRouteName?: string
   /**
+   * If token exist but user is empty, vue-auth automatically makes a request to the profile endpoint to
+   * refresh the user objet, seting this to true will prevent that from happening.
+   */
+  disableAutoRefresh?: boolean
+  /**
    * Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
    * @deprecated 1.3.8 Will be removed in the future, use `setAuthHeaders()` instead
    * @returns

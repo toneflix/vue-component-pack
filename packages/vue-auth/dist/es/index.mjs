@@ -15,24 +15,24 @@ const I = (t) => {
         n.use(r);
       }
       const e = P(t.storageOptions);
-      i && i.beforeEach((r, m, s) => {
-        const c = r.meta.requiresAuth, d = r.meta.requiresGuest, u = o ? i.resolve(o) : null, a = l ? i.resolve(l) : null;
-        if (u != null && u.name && c && !e.isAuthenticated)
-          return s({
-            name: u.name,
+      i && i.beforeEach((r, d, u) => {
+        const m = r.meta.requiresAuth, c = r.meta.requiresGuest, s = o ? i.resolve(o) : null, a = l ? i.resolve(l) : null;
+        if (s != null && s.name && m && !e.isAuthenticated)
+          return u({
+            name: s.name,
             query: { redirect: r.fullPath }
           });
-        if (a != null && a.name && d && e.isAuthenticated)
-          return s({
+        if (a != null && a.name && c && e.isAuthenticated)
+          return u({
             name: a.name,
             query: { redirect: r.fullPath }
           });
-        t.middlewares ? A(t.middlewares, r, m, s, i, {
+        t.middlewares ? A(t.middlewares, r, d, u, i, {
           user: e.user,
           token: e.token,
           isAuthenticated: e.isAuthenticated
-        }) : s();
-      }), e.loadUserFromStorage(t), n.config.globalProperties.$user = e.user, n.config.globalProperties.$isAuthenticated = e.isAuthenticated;
+        }) : u();
+      }), e.loadUserFromStorage(t, void 0, !0), n.config.globalProperties.$user = e.user, n.config.globalProperties.$isAuthenticated = e.isAuthenticated;
     }
   };
 };

@@ -58,7 +58,7 @@ export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions
           user.value = usr
           token.value = tkn
           isAuthenticated.value = true
-          localStorage.setItem(options.storageKey || 'auth_token', data.token)
+          localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
 
           return { user: usr, token: tkn, message }
         } catch (error) {
@@ -97,7 +97,7 @@ export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions
           user.value = usr
           token.value = tkn
           isAuthenticated.value = true
-          localStorage.setItem(options.storageKey || 'auth_token', data.token)
+          localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
 
           return { user: usr, token: tkn, message }
         } catch (error) {
@@ -139,7 +139,7 @@ export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions
           user.value = {} as AuthUser
           token.value = undefined
           isAuthenticated.value = false
-          localStorage.removeItem(options.storageKey || 'auth_token')
+          localStorage.removeItem(options.storageKey ?? 'auth_token')
         } catch (error) {
           const { response } = <ResponseError>error
           return { error: response?.data || {}, message: response?.data?.message }
@@ -238,13 +238,15 @@ export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions
        */
       const loadUserFromStorage = async <U = UA, T = unknown>(
         options: AuthOptions<U> = getAuthConfig(),
-        credentials?: T
+        credentials?: T,
+        auto?: boolean
       ): Promise<{
         user: U
         error?: BaseError | undefined
         message?: string | undefined
       }> => {
-        const tkn = localStorage.getItem(options.storageKey || 'auth_token')
+        const tkn = localStorage.getItem(options.storageKey ?? 'auth_token')
+
         const headers = options.setAuthHeaders
           ? await options.setAuthHeaders({ user: user.value, token: token.value })
           : options.getAuthHeaders
@@ -255,7 +257,7 @@ export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions
           token.value = tkn
           isAuthenticated.value = true
 
-          if (options.endpoints.profile) {
+          if (options.endpoints.profile && (!auto || !options.disableAutoRefresh)) {
             const endpoint = url('profile')
             try {
               const { data } = await axios.get<AuthResponse<U>>(endpoint, {

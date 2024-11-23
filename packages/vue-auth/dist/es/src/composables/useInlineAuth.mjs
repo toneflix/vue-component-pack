@@ -5,24 +5,24 @@ import { getAuthConfig as k } from "../utils/config.mjs";
 import { storeToRefs as I } from "pinia";
 const z = (S) => {
   const m = x(S)(), f = (g) => {
-    const l = r(), n = r();
+    const l = r(), u = r();
     return {
       send: async () => {
         const s = await g();
-        return s.error && l.value ? l.value(s.error) : !s.error && n.value && n.value(s), s;
+        return s.error && l.value ? l.value(s.error) : !s.error && u.value && u.value(s), s;
       },
       onError: (s) => {
         l.value = s;
       },
       onSuccess: (s) => {
-        n.value = s;
+        u.value = s;
       }
     };
   }, w = (g, l = k()) => {
-    const n = r(), t = r(), u = r(), c = r(!1), s = r(), i = async () => {
-      c.value = !0;
+    const u = r(), o = r(), a = r(), n = r(!1), s = r(), i = async () => {
+      n.value = !0;
       const e = await m.login(g, l);
-      n.value = e.user, t.value = e.error, u.value = e.token, s.value = e.message, c.value = !1;
+      u.value = e.user, o.value = e.error, a.value = e.token, s.value = e.message, n.value = !1;
       const d = {
         user: e.user,
         message: e.message,
@@ -30,106 +30,106 @@ const z = (S) => {
         loading: !1
       };
       return e.error && (d.error = e.error), d;
-    }, { send: v, onError: a, onSuccess: o } = f(i);
+    }, { send: v, onError: t, onSuccess: c } = f(i);
     return {
       send: v,
-      user: n,
-      token: u,
-      error: t,
-      loading: c,
+      user: u,
+      token: a,
+      error: o,
+      loading: n,
       message: s,
-      onError: a,
-      onSuccess: o
+      onError: t,
+      onSuccess: c
     };
   }, E = (g, l = k()) => {
-    const n = r(), t = r(), u = r(), c = r(!1), s = r(), i = async () => {
-      c.value = !0;
+    const u = r(), o = r(), a = r(), n = r(!1), s = r(), i = async () => {
+      n.value = !0;
       const e = await m.register(g, l);
-      return n.value = e.user, t.value = e.error, u.value = e.token, s.value = e.message, c.value = !1, {
+      return u.value = e.user, o.value = e.error, a.value = e.token, s.value = e.message, n.value = !1, {
         user: e.user,
         error: e.error,
         token: e.token,
         message: e.message,
-        loading: c.value
+        loading: n.value
       };
-    }, { send: v, onError: a, onSuccess: o } = f(i);
+    }, { send: v, onError: t, onSuccess: c } = f(i);
     return {
       send: v,
-      user: n,
-      token: u,
-      error: t,
-      loading: c,
+      user: u,
+      token: a,
+      error: o,
+      loading: n,
       message: s,
-      onError: a,
-      onSuccess: o
+      onError: t,
+      onSuccess: c
     };
   }, h = (g = k(), l) => {
-    const n = r(), t = r(!1), u = r(), c = async () => {
-      t.value = !0;
-      const a = await m.logout(g, l);
-      return n.value = a == null ? void 0 : a.error, u.value = a == null ? void 0 : a.message, t.value = !1, { error: a == null ? void 0 : a.error, message: a == null ? void 0 : a.message, loading: t.value };
-    }, { send: s, onError: i, onSuccess: v } = f(c);
+    const u = r(), o = r(!1), a = r(), n = async () => {
+      o.value = !0;
+      const t = await m.logout(g, l);
+      return u.value = t == null ? void 0 : t.error, a.value = t == null ? void 0 : t.message, o.value = !1, { error: t == null ? void 0 : t.error, message: t == null ? void 0 : t.message, loading: o.value };
+    }, { send: s, onError: i, onSuccess: v } = f(n);
     return {
       send: s,
-      error: n,
-      loading: t,
-      message: u,
+      error: u,
+      loading: o,
+      message: a,
       onError: i,
       onSuccess: v
     };
   }, y = (g, l = k()) => {
-    const n = r(), t = r(!1), u = r(), c = r(), s = r(0), i = async () => {
-      t.value = !0;
+    const u = r(), o = r(!1), a = r(), n = r(), s = r(0), i = async () => {
+      o.value = !0;
       const e = await m.forgot(g, l);
-      return n.value = e == null ? void 0 : e.error, u.value = e == null ? void 0 : e.message, c.value = e.timeout, t.value = !1, U(c, (d) => {
+      return u.value = e == null ? void 0 : e.error, a.value = e == null ? void 0 : e.message, n.value = e.timeout, o.value = !1, U(n, (d) => {
         s.value = d;
       }), {
         error: e.error,
-        loading: t.value,
+        loading: o.value,
         message: e.message,
         timeout: e.timeout,
         countdown: s.value
       };
-    }, { send: v, onError: a, onSuccess: o } = f(i);
+    }, { send: v, onError: t, onSuccess: c } = f(i);
     return {
       send: v,
-      error: n,
-      loading: t,
-      message: u,
-      timeout: c,
-      onError: a,
-      onSuccess: o,
+      error: u,
+      loading: o,
+      message: a,
+      timeout: n,
+      onError: t,
+      onSuccess: c,
       countdown: s
     };
   }, A = (g, l = k()) => {
-    const n = r(), t = r(), u = r(!1), c = r(), s = async () => {
-      u.value = !0;
-      const o = await m.reset(g, l);
-      return n.value = o.user, t.value = o == null ? void 0 : o.error, c.value = o == null ? void 0 : o.message, u.value = !1, { error: o.error, message: o.message, user: n.value, loading: u.value };
-    }, { send: i, onError: v, onSuccess: a } = f(s);
+    const u = r(), o = r(), a = r(!1), n = r(), s = async () => {
+      a.value = !0;
+      const c = await m.reset(g, l);
+      return u.value = c.user, o.value = c == null ? void 0 : c.error, n.value = c == null ? void 0 : c.message, a.value = !1, { error: c.error, message: c.message, user: u.value, loading: a.value };
+    }, { send: i, onError: v, onSuccess: t } = f(s);
     return {
       send: i,
-      user: n,
-      error: t,
-      loading: u,
-      message: c,
+      user: u,
+      error: o,
+      loading: a,
+      message: n,
       onError: v,
-      onSuccess: a
+      onSuccess: t
     };
-  }, p = (g = k(), l) => {
-    const n = r(), t = r(), u = r(!1), c = r(), s = async () => {
-      u.value = !0;
-      const o = await m.loadUserFromStorage(g, l);
-      return n.value = o.user, t.value = o == null ? void 0 : o.error, c.value = o == null ? void 0 : o.message, u.value = !1, { error: o.error, message: o.message, user: n.value, loading: u.value };
-    }, { send: i, onError: v, onSuccess: a } = f(s);
+  }, p = (g = k(), l, u) => {
+    const o = r(), a = r(), n = r(!1), s = r(), i = async () => {
+      n.value = !0;
+      const e = await m.loadUserFromStorage(g, l, u);
+      return o.value = e.user, a.value = e == null ? void 0 : e.error, s.value = e == null ? void 0 : e.message, n.value = !1, { error: e.error, message: e.message, user: o.value, loading: n.value };
+    }, { send: v, onError: t, onSuccess: c } = f(i);
     return {
-      send: i,
-      user: n,
-      error: t,
-      loading: u,
-      message: c,
-      onError: v,
-      onSuccess: a
+      send: v,
+      user: o,
+      error: a,
+      loading: n,
+      message: s,
+      onError: t,
+      onSuccess: c
     };
   }, { user: C, token: b, isAuthenticated: F } = I(m);
   return {

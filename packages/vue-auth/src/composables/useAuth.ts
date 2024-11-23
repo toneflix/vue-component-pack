@@ -112,13 +112,14 @@ export const useAuth = <AU = AuthUser>(storageOptions?: StorageOptions) => {
    */
   const loadUserFromStorage = <U = AU, T = unknown>(
     options: AuthOptions<U> = getAuthConfig(),
-    credentials?: T
+    credentials?: T,
+    auto?: boolean
   ): Promise<{
     user: U
     error?: BaseError | undefined
     message?: string | undefined
   }> => {
-    return store.loadUserFromStorage<U, T>(options, credentials)
+    return store.loadUserFromStorage<U, T>(options, credentials, auto)
   }
 
   const { user, token, isAuthenticated } = storeToRefs(store)

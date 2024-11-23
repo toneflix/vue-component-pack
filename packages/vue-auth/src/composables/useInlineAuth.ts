@@ -334,7 +334,8 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
    */
   const loadUserFromStorage = <U = AU, T = unknown>(
     options: AuthOptions<U> = getAuthConfig(),
-    credentials?: T
+    credentials?: T,
+    auto?: boolean
   ): UserData<U> & MethodActions<UnrefData<UserData<U>>> => {
     const user = ref<U>()
     const error = ref<BaseError>()
@@ -344,7 +345,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
     const action = async (): Promise<UnrefData<UserData<U>>> => {
       loading.value = true
 
-      const data = await store.loadUserFromStorage<U, T>(options, credentials)
+      const data = await store.loadUserFromStorage<U, T>(options, credentials, auto)
       user.value = data.user
       error.value = data?.error
       message.value = data?.message
