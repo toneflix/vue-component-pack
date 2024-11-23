@@ -12,11 +12,16 @@
       inline-mode
       :field="field"
       :class="[`form-group inline-controller`]"
-      v-show="expanded || viewing === 'input'"
+      v-if="expanded || viewing === 'input'"
       v-model="modelValue"
+      @blur="viewing = 'label'"
     >
       <template #default="props" v-if="$slots.default">
-        <slot name="default" v-bind="props" />
+        <slot
+          name="default"
+          v-bind="props"
+          :toggleView="() => (viewing = viewing === 'input' ? 'label' : 'input')"
+        />
       </template>
     </FormGroup>
     <button

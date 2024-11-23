@@ -1,10 +1,10 @@
 <template>
   <div class="input-field">
-    <label :for="'vf-' + name" v-if="label">
+    <label :for="id" v-if="label">
       {{ label }}
     </label>
     <select
-      :id="'vf-' + name"
+      :id="id"
       :name="name"
       v-model="modelValue"
       @blur="$emit('blur', $event)"
@@ -17,7 +17,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, useId } from 'vue'
 import { FormField, InputEvents } from '../types'
 
 defineOptions({ name: 'InputField' })
@@ -49,5 +49,13 @@ const parsedChoices = computed(() => {
 
 const modelValue = defineModel<FormField['value']>('modelValue', {
   required: true
+})
+
+const id = 'vf-' + props.name + useId()
+
+onMounted(() => {
+  if (props.autofocus) {
+    ;(<HTMLInputElement>document.querySelector('#' + id))?.focus()
+  }
 })
 </script>

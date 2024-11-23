@@ -32,9 +32,9 @@
     </VueForms>
   </div>
   <div class="demo-container">
-    <InlineForm v-model="formValues.name" type="text" label-tag="div" label-class="">
-      <input v-model="formValues.name" />
-    </InlineForm>
+    <InlineForm v-model="formValues.name" type="text" label-tag="div" label-class=""> </InlineForm>
+    <!-- <input v-model="formValues.name" @blur="toggleView" /> 
+      v-slot="{ toggleView }"-->
   </div>
   <div class="demo-container">
     <pre>

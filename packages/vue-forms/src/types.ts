@@ -104,6 +104,10 @@ export interface FormField {
    */
   multiple?: boolean
   /**
+   * Allow this input to be autofocused on mount
+   */
+  autofocus?: boolean
+  /**
    * Step size for number/range inputs
    */
   step?: number
