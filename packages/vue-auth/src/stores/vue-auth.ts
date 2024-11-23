@@ -241,11 +241,11 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
 
         const headers = await buildHeaders(options as unknown as AuthOptions, user.value, token.value)
 
-        if (tkn) {
+        if (tkn && options.endpoints.profile) {
           token.value = tkn
           isAuthenticated.value = true
 
-          if (options.endpoints.profile && (!auto || !options.disableAutoRefresh)) {
+          if (!auto || !options.disableAutoRefresh) {
             const endpoint = url('profile')
             try {
               const { data } = await axios.get<AuthResponse<U>>(endpoint, {
@@ -270,7 +270,9 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
               }
             }
           }
-        } else if (Object.entries(user.value).length > 0) {
+        }
+
+        if (Object.entries(user.value).length > 0) {
           return { user: user.value }
         }
 

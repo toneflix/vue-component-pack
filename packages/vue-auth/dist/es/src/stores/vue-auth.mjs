@@ -102,28 +102,25 @@ function C(k) {
         loadUserFromStorage: async (s = f(), r, u) => {
           var e;
           const o = globalThis.localStorage.getItem(s.storageKey ?? "auth_token") ?? m.value, t = await y(s, n.value, m.value);
-          if (o) {
-            if (m.value = o, h.value = !0, s.endpoints.profile && (!u || !s.disableAutoRefresh)) {
-              const a = i("profile");
-              try {
-                const { data: c } = await l.get(a, {
-                  headers: { ...t },
-                  params: { ...d(r) },
-                  ...s.axiosConfig
-                }), { user: g, message: R } = s.transformResponse ? s.transformResponse(c) : { user: c.user, message: c.message };
-                return n.value = g, { user: g, message: R };
-              } catch (c) {
-                const { response: g } = c;
-                return {
-                  user: {},
-                  error: (g == null ? void 0 : g.data) || {},
-                  message: (e = g == null ? void 0 : g.data) == null ? void 0 : e.message
-                };
-              }
+          if (o && s.endpoints.profile && (m.value = o, h.value = !0, !u || !s.disableAutoRefresh)) {
+            const a = i("profile");
+            try {
+              const { data: c } = await l.get(a, {
+                headers: { ...t },
+                params: { ...d(r) },
+                ...s.axiosConfig
+              }), { user: g, message: R } = s.transformResponse ? s.transformResponse(c) : { user: c.user, message: c.message };
+              return n.value = g, { user: g, message: R };
+            } catch (c) {
+              const { response: g } = c;
+              return {
+                user: {},
+                error: (g == null ? void 0 : g.data) || {},
+                message: (e = g == null ? void 0 : g.data) == null ? void 0 : e.message
+              };
             }
-          } else if (Object.entries(n.value).length > 0)
-            return { user: n.value };
-          return { user: {} };
+          }
+          return Object.entries(n.value).length > 0 ? { user: n.value } : { user: {} };
         }
       };
     },
