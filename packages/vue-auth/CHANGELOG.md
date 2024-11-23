@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.6.0...@toneflix/vue-auth@1.7.0) (2024-11-23)
+
+### Bug Fixes
+
+- Add styles to exports ([c6bcba0](https://github.com/toneflix/vue-component-pack/commit/c6bcba0363ac7de216dd4bfd808894427d8626ca))
+- Export, type return and already return false in `isCurrent` route checker if we cant resolve the route. ([d87ced1](https://github.com/toneflix/vue-component-pack/commit/d87ced141207c1d20ae13931c01d5fb9cd15ceea))
+- Improve `loadUserFromStorage` method signature. ([4c055c9](https://github.com/toneflix/vue-component-pack/commit/4c055c9ddf435d64f4eaac836c21289773192643))
+- Make `hasSlots` feature work as intended. ([ce1d40a](https://github.com/toneflix/vue-component-pack/commit/ce1d40a094cdb4e162a1b9a83d2df544b5d7b81d))
+- Wrap `isCurrent` route checker logig in try catch. ([4085a8e](https://github.com/toneflix/vue-component-pack/commit/4085a8ef9e784097386310bdb8bb4e3a681f4cfa))
+
+### Features
+
+- Return user in `loadUserFromStorage` if user exist even if token does not. ([eb0a242](https://github.com/toneflix/vue-component-pack/commit/eb0a2422aaa3cfdf4ad0876ac1b28090083fa3a9))
+
 # [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.5.0...@toneflix/vue-auth@1.6.0) (2024-11-19)
 
 ### Features
