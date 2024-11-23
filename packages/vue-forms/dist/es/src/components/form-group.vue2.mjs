@@ -53,8 +53,8 @@ const K = /* @__PURE__ */ g({
             modelValue: u.value,
             "onUpdate:modelValue": l[0] || (l[0] = (o) => u.value = o)
           }, e.field, {
-            onFocus: l[1] || (l[1] = (o) => e.$emit("focus", o)),
-            onBlur: l[2] || (l[2] = (o) => e.$emit("blur", o))
+            onBlur: l[1] || (l[1] = (o) => e.$emit("blur", o)),
+            onFocus: l[2] || (l[2] = (o) => e.$emit("focus", o))
           }), null, 16, ["modelValue"])
         ], !0) : a("", !0),
         e.field.type === "select" ? d(e.$slots, "select", t({ key: 1 }, e.field, { modelValue: u.value }), () => [
@@ -63,8 +63,8 @@ const K = /* @__PURE__ */ g({
             "onUpdate:modelValue": l[3] || (l[3] = (o) => u.value = o)
           }, e.field, {
             type: "select",
-            onFocus: l[4] || (l[4] = (o) => e.$emit("focus", o)),
-            onBlur: l[5] || (l[5] = (o) => e.$emit("blur", o))
+            onBlur: l[4] || (l[4] = (o) => e.$emit("blur", o)),
+            onFocus: l[5] || (l[5] = (o) => e.$emit("focus", o))
           }), null, 16, ["modelValue"])
         ], !0) : a("", !0),
         e.field.type === "checkbox" ? d(e.$slots, "checkbox", t({ key: 2 }, e.field, { modelValue: u.value }), () => [
@@ -91,8 +91,8 @@ const K = /* @__PURE__ */ g({
             "onUpdate:modelValue": l[9] || (l[9] = (o) => u.value = o)
           }, e.field, {
             type: "textarea",
-            onFocus: l[10] || (l[10] = (o) => e.$emit("focus", o)),
-            onBlur: l[11] || (l[11] = (o) => e.$emit("blur", o))
+            onBlur: l[10] || (l[10] = (o) => e.$emit("blur", o)),
+            onFocus: l[11] || (l[11] = (o) => e.$emit("focus", o))
           }), null, 16, ["modelValue"])
         ], !0) : a("", !0)
       ], 64))

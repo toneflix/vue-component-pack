@@ -1,8 +1,8 @@
-import { defineComponent as p, mergeModels as r, computed as f, useModel as v, openBlock as o, createElementBlock as n, toDisplayString as s, createCommentVNode as y, withDirectives as b, createElementVNode as g, Fragment as B, renderList as V, vModelSelect as c } from "vue";
-const M = { class: "input-field" }, S = ["for"], k = ["id", "name"], C = ["value"], F = /* @__PURE__ */ p({
+import { defineComponent as f, mergeModels as i, computed as y, useModel as v, useId as b, onMounted as c, openBlock as o, createElementBlock as n, toDisplayString as d, createCommentVNode as B, withDirectives as g, createElementVNode as V, Fragment as M, renderList as S, vModelSelect as k } from "vue";
+const C = { class: "input-field" }, N = ["name"], q = ["value"], L = /* @__PURE__ */ f({
   name: "InputField",
   __name: "input-select",
-  props: /* @__PURE__ */ r({
+  props: /* @__PURE__ */ i({
     type: {},
     name: {},
     label: {},
@@ -22,6 +22,7 @@ const M = { class: "input-field" }, S = ["for"], k = ["id", "name"], C = ["value
     disabled: { type: Boolean },
     pattern: {},
     multiple: { type: Boolean },
+    autofocus: { type: Boolean },
     step: {},
     maxLength: {},
     minLength: {},
@@ -42,34 +43,37 @@ const M = { class: "input-field" }, S = ["for"], k = ["id", "name"], C = ["value
     },
     modelModifiers: {}
   }),
-  emits: /* @__PURE__ */ r(["focus", "blur"], ["update:modelValue"]),
-  setup(a) {
-    const i = a, d = f(() => {
-      var l;
-      return ((l = i.choices) == null ? void 0 : l.map((e) => typeof e == "object" && e !== null && "label" in e && "value" in e ? e : { label: String(e), value: e })) ?? [];
-    }), u = v(a, "modelValue");
-    return (l, e) => (o(), n("div", M, [
-      l.label ? (o(), n("label", {
+  emits: /* @__PURE__ */ i(["focus", "blur"], ["update:modelValue"]),
+  setup(r) {
+    const a = r, m = y(() => {
+      var t;
+      return ((t = a.choices) == null ? void 0 : t.map((e) => typeof e == "object" && e !== null && "label" in e && "value" in e ? e : { label: String(e), value: e })) ?? [];
+    }), s = v(r, "modelValue"), u = "vf-" + a.name + b();
+    return c(() => {
+      var t;
+      a.autofocus && ((t = document.querySelector("#" + u)) == null || t.focus());
+    }), (t, e) => (o(), n("div", C, [
+      t.label ? (o(), n("label", {
         key: 0,
-        for: "vf-" + l.name
-      }, s(l.label), 9, S)) : y("", !0),
-      b(g("select", {
-        id: "vf-" + l.name,
-        name: l.name,
-        "onUpdate:modelValue": e[0] || (e[0] = (t) => u.value = t),
-        onFocus: e[1] || (e[1] = (t) => l.$emit("focus", t)),
-        onBlur: e[2] || (e[2] = (t) => l.$emit("blur", t))
+        for: u
+      }, d(t.label), 1)) : B("", !0),
+      g(V("select", {
+        id: u,
+        name: t.name,
+        "onUpdate:modelValue": e[0] || (e[0] = (l) => s.value = l),
+        onBlur: e[1] || (e[1] = (l) => t.$emit("blur", l)),
+        onFocus: e[2] || (e[2] = (l) => t.$emit("focus", l))
       }, [
-        (o(!0), n(B, null, V(d.value, (t, m) => (o(), n("option", {
-          key: m,
-          value: t.value
-        }, s(t.label), 9, C))), 128))
-      ], 40, k), [
-        [c, u.value]
+        (o(!0), n(M, null, S(m.value, (l, p) => (o(), n("option", {
+          key: p,
+          value: l.value
+        }, d(l.label), 9, q))), 128))
+      ], 40, N), [
+        [k, s.value]
       ])
     ]));
   }
 });
 export {
-  F as default
+  L as default
 };

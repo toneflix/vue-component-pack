@@ -1,5 +1,5 @@
-import { defineComponent as v, mergeModels as y, useModel as c, computed as g, openBlock as t, createElementBlock as a, toDisplayString as s, createCommentVNode as r, createElementVNode as o, Fragment as b, renderList as h, unref as _ } from "vue";
-import { titleCase as B } from "../utils/providers.mjs";
+import { defineComponent as v, mergeModels as y, useModel as c, computed as g, openBlock as l, createElementBlock as a, toDisplayString as s, createCommentVNode as r, createElementVNode as n, Fragment as b, renderList as h, unref as B } from "vue";
+import { titleCase as _ } from "../utils/providers.mjs";
 const V = { class: "input-radio" }, k = { key: 0 }, C = {
   key: 0,
   class: "sr-only"
@@ -29,6 +29,7 @@ const V = { class: "input-radio" }, k = { key: 0 }, C = {
     disabled: { type: Boolean },
     pattern: {},
     multiple: { type: Boolean },
+    autofocus: { type: Boolean },
     step: {},
     maxLength: {},
     minLength: {},
@@ -53,36 +54,36 @@ const V = { class: "input-radio" }, k = { key: 0 }, C = {
   setup(u) {
     const d = u, i = c(u, "modelValue"), m = g(() => {
       var e;
-      return ((e = d.choices) == null ? void 0 : e.map((l) => typeof l == "object" && l !== null && "label" in l && "value" in l ? l : { label: String(l), value: l })) ?? [];
+      return ((e = d.choices) == null ? void 0 : e.map((t) => typeof t == "object" && t !== null && "label" in t && "value" in t ? t : { label: String(t), value: t })) ?? [];
     }), p = (e) => {
-      const l = e.target;
-      i.value = l.value;
+      const t = e.target;
+      i.value = t.value;
     };
-    return (e, l) => (t(), a("div", V, [
-      e.label ? (t(), a("label", k, s(e.label), 1)) : r("", !0),
-      o("fieldset", null, [
-        e.label ? (t(), a("legend", C, s(e.label), 1)) : r("", !0),
-        o("div", M, [
-          (t(!0), a(b, null, h(m.value, (n, f) => (t(), a("div", {
+    return (e, t) => (l(), a("div", V, [
+      e.label ? (l(), a("label", k, s(e.label), 1)) : r("", !0),
+      n("fieldset", null, [
+        e.label ? (l(), a("legend", C, s(e.label), 1)) : r("", !0),
+        n("div", M, [
+          (l(!0), a(b, null, h(m.value, (o, f) => (l(), a("div", {
             class: "radio-item",
             key: f
           }, [
-            o("input", {
+            n("input", {
               type: "radio",
-              id: "vf-" + n.value + e.name,
+              id: "vf-" + o.value + e.name,
               name: e.name,
-              value: n.value,
-              checked: i.value === n.value,
+              value: o.value,
+              checked: i.value === o.value,
               onChange: p
             }, null, 40, N),
-            o("label", {
-              for: "vf-" + n.value + e.name
-            }, s(_(B)(n.label)), 9, S)
+            n("label", {
+              for: "vf-" + o.value + e.name
+            }, s(B(_)(o.label)), 9, S)
           ]))), 128))
         ])
       ]),
-      o("div", L, [
-        e.hint ? (t(), a("p", q, s(e.hint), 1)) : r("", !0)
+      n("div", L, [
+        e.hint ? (l(), a("p", q, s(e.hint), 1)) : r("", !0)
       ])
     ]));
   }

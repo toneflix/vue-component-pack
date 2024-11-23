@@ -1,14 +1,14 @@
-import { defineComponent as d, mergeModels as r, useModel as p, openBlock as t, createElementBlock as n, toDisplayString as s, createCommentVNode as a, withDirectives as m, createElementVNode as f, vModelDynamic as y } from "vue";
-const h = { class: "input-field" }, c = ["for"], B = ["type", "id", "name", "placeholder"], b = {
+import { defineComponent as m, mergeModels as d, useModel as f, useId as y, onMounted as c, openBlock as l, createElementBlock as n, toDisplayString as p, createCommentVNode as i, withDirectives as h, createElementVNode as B, vModelDynamic as b } from "vue";
+const g = { class: "input-field" }, V = ["type", "name", "placeholder"], v = {
   key: 1,
   class: "field-anotations"
-}, g = {
+}, M = {
   key: 0,
   class: "field-hint"
-}, V = /* @__PURE__ */ d({
+}, S = /* @__PURE__ */ m({
   name: "InputField",
   __name: "input-field",
-  props: /* @__PURE__ */ r({
+  props: /* @__PURE__ */ d({
     type: {},
     name: {},
     label: {},
@@ -28,6 +28,7 @@ const h = { class: "input-field" }, c = ["for"], B = ["type", "id", "name", "pla
     disabled: { type: Boolean },
     pattern: {},
     multiple: { type: Boolean },
+    autofocus: { type: Boolean },
     step: {},
     maxLength: {},
     minLength: {},
@@ -48,31 +49,34 @@ const h = { class: "input-field" }, c = ["for"], B = ["type", "id", "name", "pla
     },
     modelModifiers: {}
   }),
-  emits: /* @__PURE__ */ r(["focus", "blur"], ["update:modelValue"]),
+  emits: /* @__PURE__ */ d(["focus", "blur"], ["update:modelValue"]),
   setup(u) {
-    const i = p(u, "modelValue");
-    return (e, o) => (t(), n("div", h, [
-      e.label ? (t(), n("label", {
+    const s = u, r = f(u, "modelValue"), a = "vf-" + s.name + y();
+    return c(() => {
+      var e;
+      s.autofocus && ((e = document.querySelector("#" + a)) == null || e.focus());
+    }), (e, o) => (l(), n("div", g, [
+      e.label ? (l(), n("label", {
         key: 0,
-        for: "vf-" + e.name
-      }, s(e.label), 9, c)) : a("", !0),
-      m(f("input", {
+        for: a
+      }, p(e.label), 1)) : i("", !0),
+      h(B("input", {
         type: e.type,
-        id: "vf-" + e.name,
+        id: a,
         name: e.name,
         placeholder: String(e.placeholder),
-        "onUpdate:modelValue": o[0] || (o[0] = (l) => i.value = l),
-        onFocus: o[1] || (o[1] = (l) => e.$emit("focus", l)),
-        onBlur: o[2] || (o[2] = (l) => e.$emit("blur", l))
-      }, null, 40, B), [
-        [y, i.value]
+        "onUpdate:modelValue": o[0] || (o[0] = (t) => r.value = t),
+        onBlur: o[1] || (o[1] = (t) => e.$emit("blur", t)),
+        onFocus: o[2] || (o[2] = (t) => e.$emit("focus", t))
+      }, null, 40, V), [
+        [b, r.value]
       ]),
-      e.label || e.hint ? (t(), n("div", b, [
-        e.hint ? (t(), n("p", g, s(e.hint), 1)) : a("", !0)
-      ])) : a("", !0)
+      e.label || e.hint ? (l(), n("div", v, [
+        e.hint ? (l(), n("p", M, p(e.hint), 1)) : i("", !0)
+      ])) : i("", !0)
     ]));
   }
 });
 export {
-  V as default
+  S as default
 };

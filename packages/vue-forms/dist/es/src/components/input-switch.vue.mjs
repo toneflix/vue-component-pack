@@ -1,4 +1,4 @@
-import { defineComponent as d, mergeModels as c, useModel as p, getCurrentInstance as m, openBlock as f, createElementBlock as h, createElementVNode as l, normalizeClass as b, unref as u, toDisplayString as y } from "vue";
+import { defineComponent as d, mergeModels as c, useModel as p, getCurrentInstance as m, openBlock as f, createElementBlock as h, createElementVNode as l, normalizeClass as y, unref as u, toDisplayString as b } from "vue";
 const V = { class: "input-switch" }, g = ["aria-labelledby"], B = ["id"], v = /* @__PURE__ */ d({
   name: "InputField",
   __name: "input-switch",
@@ -22,6 +22,7 @@ const V = { class: "input-switch" }, g = ["aria-labelledby"], B = ["id"], v = /*
     disabled: { type: Boolean },
     pattern: {},
     multiple: { type: Boolean },
+    autofocus: { type: Boolean },
     step: {},
     maxLength: {},
     minLength: {},
@@ -53,7 +54,7 @@ const V = { class: "input-switch" }, g = ["aria-labelledby"], B = ["id"], v = /*
         type: "button",
         role: "switch",
         "aria-checked": "false",
-        class: b(["switch-button", { toggled: t.value === s.trueValue }]),
+        class: y(["switch-button", { toggled: t.value === s.trueValue }]),
         "aria-labelledby": `switch-label-${u(o)}`,
         onClick: r
       }, i[0] || (i[0] = [
@@ -65,7 +66,7 @@ const V = { class: "input-switch" }, g = ["aria-labelledby"], B = ["id"], v = /*
       l("span", {
         class: "switch-label",
         id: `switch-label-${u(o)}`
-      }, y(s.label), 9, B)
+      }, b(s.label), 9, B)
     ]));
   }
 });
