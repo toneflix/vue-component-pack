@@ -40,7 +40,7 @@ export const isCurrent = (
  * @param redirectRoute If the user fails the check, they will be redirected here.
  * @returns
  */
-export const authMiddleware = <U = unknown> (redirectRoute: RouteLocationRaw): Middleware<U> => {
+export const authMiddleware = <U = unknown>(redirectRoute: RouteLocationRaw): Middleware<U> => {
   return (to, _, next, state, router) => {
     if (!state.isAuthenticated && !isCurrent(to, redirectRoute, router) && to.meta.requiresAuth) {
       return next(redirectRoute)
@@ -62,7 +62,7 @@ export const authMiddleware = <U = unknown> (redirectRoute: RouteLocationRaw): M
  * @param redirectRoute If the user is not a guest, they will be redirected here.
  * @returns
  */
-export const guestMiddleware = <U = unknown> (redirectRoute: RouteLocationRaw): Middleware<U> => {
+export const guestMiddleware = <U = unknown>(redirectRoute: RouteLocationRaw): Middleware<U> => {
   return (to, _, next, state, router) => {
     if (state.isAuthenticated && !isCurrent(to, redirectRoute, router) && to.meta.requiresGuest) {
       return next(redirectRoute)
@@ -83,7 +83,7 @@ export const guestMiddleware = <U = unknown> (redirectRoute: RouteLocationRaw): 
  * @param metaKey The meta key on the target route to check if it's constrained to the rules
  * @returns
  */
-export const roleMiddleware = <U = unknown> (
+export const roleMiddleware = <U = unknown>(
   redirectRoute: RouteLocationRaw,
   roles: string | string[],
   roleKey: keyof U = 'roles' as keyof U,

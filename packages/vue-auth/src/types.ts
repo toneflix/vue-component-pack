@@ -30,7 +30,7 @@ export interface BaseError extends Error {
 }
 
 export interface ResponseError {
-  status: number;
+  status: number
   response: {
     data: BaseError
     [key: string]: unknown
