@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.10.0...@toneflix/vue-forms@1.11.0) (2024-11-23)
+
+### Features
+
+- add save event to InlineForm. ([cec94d8](https://github.com/toneflix/vue-component-pack/commit/cec94d80ebe211a9112d15be914b374c178da733))
+
 # [1.10.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.9.2...@toneflix/vue-forms@1.10.0) (2024-11-23)
 
 ### Features
