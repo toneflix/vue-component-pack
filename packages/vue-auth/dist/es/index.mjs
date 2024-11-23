@@ -1,12 +1,12 @@
 import { getActivePinia as h, createPinia as f } from "pinia";
 import { runMiddlewares as A } from "./src/utils/plugins.mjs";
-import { createCountdown as y, reshapeError as C } from "./src/utils/plugins.mjs";
+import { createCountdown as x, reshapeError as y } from "./src/utils/plugins.mjs";
 import { setAuthConfig as g } from "./src/utils/config.mjs";
 import { useAuthStore as P } from "./src/stores/vue-auth.mjs";
 import { useInlineAuth as G } from "./src/composables/useInlineAuth.mjs";
 import { useAuth as S } from "./src/composables/useAuth.mjs";
-import { authMiddleware as F, guestMiddleware as O, roleMiddleware as U } from "./src/utils/middlewares.mjs";
-const I = (t) => {
+import { authMiddleware as F, guestMiddleware as O, isCurrent as U, roleMiddleware as j } from "./src/utils/middlewares.mjs";
+const C = (t) => {
   const { router: i, loginRouteName: o, defaultAuthRouteName: l } = t;
   return {
     install: (n) => {
@@ -38,11 +38,12 @@ const I = (t) => {
 };
 export {
   F as authMiddleware,
-  I as authPlugin,
-  y as createCountdown,
+  C as authPlugin,
+  x as createCountdown,
   O as guestMiddleware,
-  C as reshapeError,
-  U as roleMiddleware,
+  U as isCurrent,
+  y as reshapeError,
+  j as roleMiddleware,
   A as runMiddlewares,
   S as useAuth,
   P as useAuthStore,

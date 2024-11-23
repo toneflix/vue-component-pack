@@ -11,13 +11,16 @@ import { Middleware } from '../types'
 
 const sameObj = (obj1: unknown, obj2: unknown) => JSON.stringify(obj1) === JSON.stringify(obj2)
 
-const isCurrent = (
+export const isCurrent = (
   to: RouteLocationNormalizedGeneric,
-  redirectRoute: RouteLocationRaw,
+  currentRoute: RouteLocationRaw,
   router?: Router
-) => {
+): boolean => {
   try {
-    const route = router ? router.resolve(redirectRoute) : redirectRoute
+    const route = router ? router.resolve(currentRoute) : currentRoute
+    if (!route) {
+      return false;
+    }
 
     return typeof route === 'string'
       ? to.path === route
