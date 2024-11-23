@@ -10,11 +10,11 @@ import {
   StorageOptions
 } from '../types'
 import { Ref, ref, toValue } from 'vue'
-import { getAuthConfig, url } from '../utils/config'
+import { getAuthConfig, buildHeaders, url } from '../utils/config'
 
 import axios from 'axios'
 import { defineStore } from 'pinia'
-import { buildHeaders, createCountdown } from '../utils/plugins'
+import { createCountdown } from '../utils/plugins'
 
 axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8'
 axios.defaults.headers.common['Accept'] = 'application/json'

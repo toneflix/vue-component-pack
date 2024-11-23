@@ -17,13 +17,29 @@ export const url = (endpoint?: keyof typeof authConfig.endpoints) => {
   return ''
 }
 
-export const setAuthConfig = <U = AuthUser>(options: AuthOptions<U>) => {
+export const setAuthConfig = <U = AuthUser> (options: AuthOptions<U>) => {
   authConfig = options
 }
 
-export const getAuthConfig = <U = AuthUser>(): AuthOptions<U> => {
+export const getAuthConfig = <U = AuthUser> (): AuthOptions<U> => {
   if (!authConfig) {
     throw new Error('Auth plugin not initialized properly.')
   }
   return authConfig
+}
+
+/**
+ * Build the headers for the request, using either the old and new method.
+ * 
+ * @param options 
+ * @param user 
+ * @param token 
+ * @returns 
+ */
+export const buildHeaders = async <U extends AuthUser = AuthUser> (options: AuthOptions, user: U, token?: string) => {
+  return options.setAuthHeaders
+    ? await options.setAuthHeaders({ user, token: token })
+    : options.getAuthHeaders
+      ? await options.getAuthHeaders({ user, token: token })
+      : {}
 }

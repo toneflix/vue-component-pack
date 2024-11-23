@@ -1,19 +1,20 @@
 let t;
-const n = (r) => {
-  if (!r || !t.endpoints[r])
-    throw new Error(`You have not defined a ${r} endpoint.`);
-  const e = t.endpoints[r];
-  return t && e ? (t.baseUrl + e).replace(/([^:]\/)\/+/g, "$1") : "";
-}, o = (r) => {
-  t = r;
-}, i = () => {
+const n = (e) => {
+  if (!e || !t.endpoints[e])
+    throw new Error(`You have not defined a ${e} endpoint.`);
+  const r = t.endpoints[e];
+  return t && r ? (t.baseUrl + r).replace(/([^:]\/)\/+/g, "$1") : "";
+}, u = (e) => {
+  t = e;
+}, s = () => {
   if (!t)
     throw new Error("Auth plugin not initialized properly.");
   return t;
-};
+}, h = async (e, r, a) => e.setAuthHeaders ? await e.setAuthHeaders({ user: r, token: a }) : e.getAuthHeaders ? await e.getAuthHeaders({ user: r, token: a }) : {};
 export {
   t as authConfig,
-  i as getAuthConfig,
-  o as setAuthConfig,
+  h as buildHeaders,
+  s as getAuthConfig,
+  u as setAuthConfig,
   n as url
 };

@@ -1,8 +1,8 @@
 import { ref as v, toValue as d } from "vue";
-import { url as i, getAuthConfig as f } from "../utils/config.mjs";
+import { url as i, getAuthConfig as f, buildHeaders as y } from "../utils/config.mjs";
 import l from "axios";
 import { defineStore as w } from "pinia";
-import { buildHeaders as y, createCountdown as S } from "../utils/plugins.mjs";
+import { createCountdown as S } from "../utils/plugins.mjs";
 l.defaults.headers.common["Content-Type"] = "application/json; charset=utf-8";
 l.defaults.headers.common.Accept = "application/json";
 l.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
