@@ -23,20 +23,17 @@
   </svg>
 </template>
 <script setup lang="ts">
+import { InlineFormProps } from '../types'
+
 defineOptions({
   name: 'IconEdit'
 })
 
-withDefaults(
-  defineProps<{
-    size?: number
-    color?: string
-    strokWidth?: number
-  }>(),
-  {
-    size: 15,
-    color: 'currentColor',
-    strokWidth: 2
-  }
-)
+type Concrete = InlineFormProps['iconProps'] & {}
+
+withDefaults(defineProps<Concrete>(), {
+  size: 15,
+  color: 'currentColor',
+  strokWidth: 2
+})
 </script>

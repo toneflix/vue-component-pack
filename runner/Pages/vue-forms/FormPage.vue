@@ -37,9 +37,9 @@
       type="text"
       label-tag="div"
       label-class=""
-      v-slot="{ toggleView }"
+      @save="console.log"
     >
-      <input ref="tg" v-model="formValues.name" @blur="toggleView" />
+      <input ref="tg" v-model="formValues.name" />
     </InlineForm>
   </div>
   <div class="demo-container">

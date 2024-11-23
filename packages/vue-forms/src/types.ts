@@ -6,29 +6,29 @@ interface SlotScope extends FormField {
 
 export interface FormField {
   type:
-    | 'url'
-    | 'tel'
-    | 'text'
-    | 'file'
-    | 'date'
-    | 'time'
-    | 'week'
-    | 'email'
-    | 'month'
-    | 'color'
-    | 'hidden'
-    | 'number'
-    | 'search'
-    | 'password'
-    | 'datetime'
-    | 'datetime-local'
-    // =============
-    | 'select' // [x]
-    | 'checkbox' // [x]
-    | 'radio' // [x]
-    | 'range'
-    | 'switch' // [x]
-    | 'textarea' // [x]
+  | 'url'
+  | 'tel'
+  | 'text'
+  | 'file'
+  | 'date'
+  | 'time'
+  | 'week'
+  | 'email'
+  | 'month'
+  | 'color'
+  | 'hidden'
+  | 'number'
+  | 'search'
+  | 'password'
+  | 'datetime'
+  | 'datetime-local'
+  // =============
+  | 'select' // [x]
+  | 'checkbox' // [x]
+  | 'radio' // [x]
+  | 'range'
+  | 'switch' // [x]
+  | 'textarea' // [x]
 
   /**
    * Unique identifier for the field
@@ -167,6 +167,41 @@ export interface FormField {
   falseValue?: boolean | number | string
 }
 
+export interface InlineFormProps {
+  /**
+   * The name of the form field
+   */
+  name?: FormField['name']
+  /**
+   * The type of input (Ignored when using default slot)
+   */
+  type?: FormField['type']
+  /**
+   * If set to true, both the label and the input will be visible at the same time
+   */
+  expanded?: boolean
+  /**
+   * If set to true, the save btn will always be visible when needed
+   */
+  showSave?: boolean
+  /**
+   * The tag to render the label with
+   */
+  labelTag?: string
+  /**
+   * Custom classes for the label
+   */
+  labelClass?: unknown
+  /**
+   * Props for SVG Icons
+   */
+  iconProps?: {
+    size?: number
+    color?: string
+    strokWidth?: number
+  }
+}
+
 type MainSlotProps = {
   formFields: FormField[]
   isGrouped: boolean
@@ -284,7 +319,7 @@ export interface InputEvents {
 }
 
 export type GroupMeta<T extends FormField = FormField> = {
-  [key in T['group'] as string]: {
+  [key in T['group']as string]: {
     title: string
     rounded?: boolean
     subtitle?: string
@@ -297,7 +332,7 @@ export interface FormValues {
 }
 
 export type ComponentConstructor<Props = object, Slots = object> = {
-  new (): {
+  new(): {
     $props: PublicProps & Props
     $slots: Slots
   }
