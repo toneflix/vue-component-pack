@@ -32,6 +32,11 @@
     </VueForms>
   </div>
   <div class="demo-container">
+    <InlineForm v-model="formValues.name" type="text" label-tag="div" label-class="">
+      <input v-model="formValues.name" />
+    </InlineForm>
+  </div>
+  <div class="demo-container">
     <pre>
         <code>
             {{ formValues }}
@@ -41,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { VueForms } from '@toneflix/vue-forms'
+import { VueForms, InlineForm } from '@toneflix/vue-forms'
 import { FormField } from '@toneflix/vue-forms/src/types'
 import { reactive, ref } from 'vue'
 import '@toneflix/vue-forms/src/styles/main.scss'

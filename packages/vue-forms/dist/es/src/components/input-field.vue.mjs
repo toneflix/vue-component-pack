@@ -1,14 +1,14 @@
-import { defineComponent as s, mergeModels as p, useModel as u, openBlock as o, createElementBlock as l, toDisplayString as i, createCommentVNode as t, withDirectives as m, createElementVNode as y, vModelDynamic as f } from "vue";
-const c = { class: "input-field" }, h = ["for"], g = ["type", "id", "name", "placeholder"], v = {
+import { defineComponent as d, mergeModels as r, useModel as p, openBlock as t, createElementBlock as n, toDisplayString as s, createCommentVNode as a, withDirectives as m, createElementVNode as f, vModelDynamic as y } from "vue";
+const h = { class: "input-field" }, c = ["for"], B = ["type", "id", "name", "placeholder"], b = {
   key: 1,
   class: "field-anotations"
-}, B = {
+}, g = {
   key: 0,
   class: "field-hint"
-}, b = /* @__PURE__ */ s({
+}, V = /* @__PURE__ */ d({
   name: "InputField",
   __name: "input-field",
-  props: /* @__PURE__ */ p({
+  props: /* @__PURE__ */ r({
     type: {},
     name: {},
     label: {},
@@ -48,29 +48,31 @@ const c = { class: "input-field" }, h = ["for"], g = ["type", "id", "name", "pla
     },
     modelModifiers: {}
   }),
-  emits: ["update:modelValue"],
-  setup(d) {
-    const a = u(d, "modelValue");
-    return (e, n) => (o(), l("div", c, [
-      e.label ? (o(), l("label", {
+  emits: /* @__PURE__ */ r(["focus", "blur"], ["update:modelValue"]),
+  setup(u) {
+    const i = p(u, "modelValue");
+    return (e, o) => (t(), n("div", h, [
+      e.label ? (t(), n("label", {
         key: 0,
         for: "vf-" + e.name
-      }, i(e.label), 9, h)) : t("", !0),
-      m(y("input", {
+      }, s(e.label), 9, c)) : a("", !0),
+      m(f("input", {
         type: e.type,
         id: "vf-" + e.name,
         name: e.name,
         placeholder: String(e.placeholder),
-        "onUpdate:modelValue": n[0] || (n[0] = (r) => a.value = r)
-      }, null, 8, g), [
-        [f, a.value]
+        "onUpdate:modelValue": o[0] || (o[0] = (l) => i.value = l),
+        onFocus: o[1] || (o[1] = (l) => e.$emit("focus", l)),
+        onBlur: o[2] || (o[2] = (l) => e.$emit("blur", l))
+      }, null, 40, B), [
+        [y, i.value]
       ]),
-      e.label || e.hint ? (o(), l("div", v, [
-        e.hint ? (o(), l("p", B, i(e.hint), 1)) : t("", !0)
-      ])) : t("", !0)
+      e.label || e.hint ? (t(), n("div", b, [
+        e.hint ? (t(), n("p", g, s(e.hint), 1)) : a("", !0)
+      ])) : a("", !0)
     ]));
   }
 });
 export {
-  b as default
+  V as default
 };

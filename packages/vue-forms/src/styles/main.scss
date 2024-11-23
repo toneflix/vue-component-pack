@@ -339,6 +339,42 @@
     }
   }
 
+  /**
+  * Inline input field styles
+  */
+  &.inline-form {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    .inline-controller {
+      display: inline;
+      .input-field {
+        display: inline;
+      }
+      &.unsloted > .input-field > * {
+        display: inline;
+        width: auto;
+      }
+    }
+    .inline-button {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #000000;
+      &:hover {
+        color: #000000af;
+      }
+    }
+  }
+
+  /**
+  * Form action styles
+  */
   .vue-forms .form-actions,
   .form-groups .form-actions {
     padding-top: 1.25rem;

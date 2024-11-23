@@ -4,6 +4,7 @@ import { VueForms } from './src/index'
 export {
   VueForms,
   InputField,
+  InlineForm,
   InputRadio,
   InputSelect,
   FormActions,

@@ -1,24 +1,43 @@
 <template>
-  <div :class="[`form-group col-${useGrid ? 'span-' : ''}${field.col}`, { unsloted: !hasSlots }]">
+  <div
+    :class="
+      inlineMode
+        ? [{ unsloted: !hasSlots && !$slots.default }]
+        : [`form-group col-${useGrid ? 'span-' : ''}${field.col}`, { unsloted: !hasSlots }]
+    "
+  >
     <!-- Default Slots -->
-    <slot name="input" v-bind="field" :modelValue="modelValue" v-if="useInput">
-      <InputField v-model="modelValue" v-bind="field" />
-    </slot>
-    <slot name="select" v-bind="field" :modelValue="modelValue" v-if="field.type === 'select'">
-      <InputSelect v-model="modelValue" v-bind="field" type="select" />
-    </slot>
-    <slot name="checkbox" v-bind="field" :modelValue="modelValue" v-if="field.type === 'checkbox'">
-      <InputCheckbox v-model="modelValue" v-bind="field" type="checkbox" />
-    </slot>
-    <slot name="radio" v-bind="field" :modelValue="modelValue" v-if="field.type === 'radio'">
-      <InputRadio v-model="modelValue" v-bind="field" type="radio" />
-    </slot>
-    <slot name="switch" v-bind="field" :modelValue="modelValue" v-if="field.type === 'switch'">
-      <InputSwitch v-model="modelValue" v-bind="field" type="switch" />
-    </slot>
-    <slot name="textarea" v-bind="field" :modelValue="modelValue" v-if="field.type === 'textarea'">
-      <InputTextarea v-model="modelValue" v-bind="field" type="textarea" />
-    </slot>
+    <slot v-bind="field" :modelValue="modelValue" v-if="$slots.default"></slot>
+    <template v-else>
+      <slot name="input" v-bind="field" :modelValue="modelValue" v-if="useInput">
+        <InputField v-model="modelValue" v-bind="field" />
+      </slot>
+      <slot name="select" v-bind="field" :modelValue="modelValue" v-if="field.type === 'select'">
+        <InputSelect v-model="modelValue" v-bind="field" type="select" />
+      </slot>
+      <slot
+        name="checkbox"
+        v-bind="field"
+        :modelValue="modelValue"
+        v-if="field.type === 'checkbox'"
+      >
+        <InputCheckbox v-model="modelValue" v-bind="field" type="checkbox" />
+      </slot>
+      <slot name="radio" v-bind="field" :modelValue="modelValue" v-if="field.type === 'radio'">
+        <InputRadio v-model="modelValue" v-bind="field" type="radio" />
+      </slot>
+      <slot name="switch" v-bind="field" :modelValue="modelValue" v-if="field.type === 'switch'">
+        <InputSwitch v-model="modelValue" v-bind="field" type="switch" />
+      </slot>
+      <slot
+        name="textarea"
+        v-bind="field"
+        :modelValue="modelValue"
+        v-if="field.type === 'textarea'"
+      >
+        <InputTextarea v-model="modelValue" v-bind="field" type="textarea" />
+      </slot>
+    </template>
   </div>
 </template>
 
@@ -36,6 +55,7 @@ import InputTextarea from './input-textarea.vue'
 const props = defineProps<{
   field: FormField
   useGrid?: boolean
+  inlineMode?: boolean
 }>()
 
 // v-model for two-way binding
@@ -74,9 +94,11 @@ const slotsNames = ['input', 'select', 'checkbox', 'radio', 'switch', 'textarea'
 function isSlotPopulated(slotName: string): boolean {
   const slot = slots[slotName]
   if (!slot) return false
+
   const slotContent = slot()
   // Check if any of the returned nodes are actual elements (not comments)
   const check = slotContent.some((node) => node.type !== Comment && node.children?.length)
+
   return check && (props.field.type === slotName || (slotName === 'input' && useInput.value))
 }
 

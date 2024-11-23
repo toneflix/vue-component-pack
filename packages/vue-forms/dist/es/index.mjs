@@ -1,18 +1,19 @@
 import { VueForms as e } from "./src/index.mjs";
-import { FormActions as r, InputCheckbox as i, InputField as a, InputRadio as s, InputSelect as I, InputSwitch as c, InputTextarea as l } from "./src/index.mjs";
-const n = {
+import { FormActions as u, InlineForm as i, InputCheckbox as I, InputField as a, InputRadio as l, InputSelect as m, InputSwitch as s, InputTextarea as c } from "./src/index.mjs";
+const o = {
   install: (t) => {
     t.use(e);
   }
 };
 export {
-  r as FormActions,
-  i as InputCheckbox,
+  u as FormActions,
+  i as InlineForm,
+  I as InputCheckbox,
   a as InputField,
-  s as InputRadio,
-  I as InputSelect,
-  c as InputSwitch,
-  l as InputTextarea,
+  l as InputRadio,
+  m as InputSelect,
+  s as InputSwitch,
+  c as InputTextarea,
   e as VueForms,
-  n as default
+  o as default
 };

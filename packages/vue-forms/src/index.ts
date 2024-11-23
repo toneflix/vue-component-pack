@@ -1,6 +1,7 @@
 import type { App, Plugin } from 'vue'
 
 import _FormActions from './components/form-actions.vue'
+import _InlineForm from "./components/inline-form.vue";
 import _InputCheckbox from './components/input-checkbox.vue'
 import _InputField from './components/input-field.vue'
 import _InputRadio from './components/input-radio.vue'
@@ -11,8 +12,8 @@ import _VueForms from './components/vue-forms.vue'
 
 type SFCWithInstall<T> = T & Plugin
 
-const withInstall = <T>(comp: T) => {
-  ;(comp as SFCWithInstall<T>).install = (app: App) => {
+const withInstall = <T> (comp: T) => {
+  ; (comp as SFCWithInstall<T>).install = (app: App) => {
     /* eslint-disable @typescript-eslint/no-explicit-any */
     const name = (comp as any).name
     // register component
@@ -23,6 +24,7 @@ const withInstall = <T>(comp: T) => {
 
 export const VueForms = withInstall(_VueForms)
 export const InputField = _InputField
+export const InlineForm = _InlineForm
 export const InputRadio = _InputRadio
 export const InputSelect = _InputSelect
 export const FormActions = _FormActions

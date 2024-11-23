@@ -1,4 +1,4 @@
-import { defineComponent as Q, mergeModels as L, useModel as c, computed as w, openBlock as o, createElementBlock as a, normalizeClass as g, renderSlot as s, Fragment as f, renderList as m, createBlock as N, createSlots as U, unref as v, withCtx as E, mergeProps as q, createCommentVNode as n, createVNode as z, createElementVNode as D, toDisplayString as G } from "vue";
+import { defineComponent as Q, mergeModels as L, useModel as w, computed as c, openBlock as o, createElementBlock as a, normalizeClass as g, renderSlot as u, Fragment as f, renderList as p, createBlock as N, createSlots as U, unref as v, withCtx as E, mergeProps as q, createCommentVNode as n, createVNode as z, createElementVNode as D, toDisplayString as G } from "vue";
 /* empty css                   */
 import P from "./form-group.vue.mjs";
 import { slotNames as j, titleCase as R } from "../utils/providers.mjs";
@@ -18,7 +18,7 @@ const T = { class: "vue-forms-controller" }, W = {
 }, x = {
   key: 0,
   class: "group-separator"
-}, ue = /* @__PURE__ */ Q({
+}, de = /* @__PURE__ */ Q({
   __name: "vue-forms",
   props: /* @__PURE__ */ L({
     loading: { type: Boolean },
@@ -44,27 +44,27 @@ const T = { class: "vue-forms-controller" }, W = {
   }),
   emits: /* @__PURE__ */ L(["cancel", "submit"], ["update:fields", "update:modelValue"]),
   setup(S, { emit: H }) {
-    const I = H, l = c(S, "fields"), p = c(S, "modelValue"), t = w(() => l.value.some((e) => !!e.group)), J = w(() => K(l.value)), K = (e) => {
-      const u = {}, d = [];
+    const I = H, l = w(S, "fields"), b = w(S, "modelValue"), t = c(() => l.value.some((e) => !!e.group)), J = c(() => K(l.value)), K = (e) => {
+      const d = {}, s = [];
       return t.value ? (e.forEach((r) => {
         var i;
-        r.group ? (u[r.group] || (u[r.group] = []), (i = u[r.group]) == null || i.push(r)) : d.push(r);
+        r.group ? (d[r.group] || (d[r.group] = []), (i = d[r.group]) == null || i.push(r)) : s.push(r);
       }), {
-        ...u,
+        ...d,
         // Spread grouped items by group name
-        ungrouped: d
+        ungrouped: s
         // Add ungrouped items as a separate group
       }) : { ungrouped: [] };
     }, y = () => {
       I("submit");
     };
-    return (e, u) => (o(), a("div", T, [
+    return (e, d) => (o(), a("div", T, [
       t.value ? (o(), a("div", X, [
-        s(e.$slots, "prepend", {
+        u(e.$slots, "prepend", {
           props: { formFields: l.value, isGrouped: t.value, useGrid: e.useGrid, bordered: e.bordered, rounded: e.rounded, hideSubmit: e.hideSubmit, separator: e.separator }
         }),
-        (o(!0), a(f, null, m(J.value, (d, r) => {
-          var i, V, k, M, $, B, C, F;
+        (o(!0), a(f, null, p(J.value, (s, r) => {
+          var i, V, $, k, M, B, C, F;
           return o(), a(f, null, [
             r && e.separator ? (o(), a("hr", {
               class: "group-separator",
@@ -79,8 +79,8 @@ const T = { class: "vue-forms-controller" }, W = {
             ])) : n("", !0),
             r ? (o(), a("div", {
               class: g(["group", {
-                bordered: !((V = e.groupMeta) != null && V[r]) && e.bordered || !!((M = (k = e.groupMeta) == null ? void 0 : k[r]) != null && M.bordered),
-                rounded: !(($ = e.groupMeta) != null && $[r]) && e.rounded || !!((C = (B = e.groupMeta) == null ? void 0 : B[r]) != null && C.rounded)
+                bordered: !((V = e.groupMeta) != null && V[r]) && e.bordered || !!((k = ($ = e.groupMeta) == null ? void 0 : $[r]) != null && k.bordered),
+                rounded: !((M = e.groupMeta) != null && M[r]) && e.rounded || !!((C = (B = e.groupMeta) == null ? void 0 : B[r]) != null && C.rounded)
               }]),
               key: r + "group"
             }, [
@@ -88,17 +88,17 @@ const T = { class: "vue-forms-controller" }, W = {
               D("div", {
                 class: g(["vue-forms", { "form-row": !e.useGrid, "form-grid": e.useGrid }])
               }, [
-                (o(!0), a(f, null, m(d, (b) => (o(), N(P, {
-                  key: b.name,
-                  field: b,
+                (o(!0), a(f, null, p(s, (h) => (o(), N(P, {
+                  key: h.name,
+                  field: h,
                   "use-grid": !!e.useGrid,
-                  modelValue: p.value[b.name],
-                  "onUpdate:modelValue": (h) => p.value[b.name] = h
+                  modelValue: b.value[h.name],
+                  "onUpdate:modelValue": (m) => b.value[h.name] = m
                 }, U({ _: 2 }, [
-                  m(v(j), (h) => ({
-                    name: h,
+                  p(v(j).filter((m) => !!e.$slots[m]), (m) => ({
+                    name: m,
                     fn: E((O) => [
-                      s(e.$slots, h, q({ ref_for: !0 }, O))
+                      u(e.$slots, m, q({ ref_for: !0 }, O))
                     ])
                   }))
                 ]), 1032, ["field", "use-grid", "modelValue", "onUpdate:modelValue"]))), 128))
@@ -106,11 +106,11 @@ const T = { class: "vue-forms-controller" }, W = {
             ], 2)) : n("", !0)
           ], 64);
         }), 256)),
-        s(e.$slots, "default", {
+        u(e.$slots, "default", {
           props: { formFields: l.value, isGrouped: t.value, useGrid: e.useGrid, bordered: e.bordered, rounded: e.rounded, hideSubmit: e.hideSubmit, separator: e.separator }
         }),
         e.separator && (!e.hideSubmit || !e.hideSubmit) ? (o(), a("hr", x)) : n("", !0),
-        s(e.$slots, "actions", {}, () => [
+        u(e.$slots, "actions", {}, () => [
           z(A, {
             loading: !!e.loading,
             "hide-submit": e.hideSubmit,
@@ -118,35 +118,35 @@ const T = { class: "vue-forms-controller" }, W = {
             "submit-label": e.submitLabel,
             "cancel-label": e.cancelLabel,
             onSubmit: y,
-            onCancel: u[1] || (u[1] = (d) => e.$emit("cancel"))
+            onCancel: d[1] || (d[1] = (s) => e.$emit("cancel"))
           }, null, 8, ["loading", "hide-submit", "hide-cancel", "submit-label", "cancel-label"])
         ])
       ])) : (o(), a("div", {
         key: 0,
         class: g(["vue-forms", { "form-row": !e.useGrid, "form-grid": e.useGrid, bordered: e.bordered, rounded: e.rounded }])
       }, [
-        s(e.$slots, "prepend", {
+        u(e.$slots, "prepend", {
           props: { formFields: l.value, isGrouped: t.value, useGrid: e.useGrid, bordered: e.bordered, rounded: e.rounded, hideSubmit: e.hideSubmit, separator: e.separator }
         }),
-        (o(!0), a(f, null, m(l.value, (d) => (o(), N(P, {
-          key: d.name,
-          field: d,
+        (o(!0), a(f, null, p(l.value, (s) => (o(), N(P, {
+          key: s.name,
+          field: s,
           "use-grid": !!e.useGrid,
-          modelValue: p.value[d.name],
-          "onUpdate:modelValue": (r) => p.value[d.name] = r
+          modelValue: b.value[s.name],
+          "onUpdate:modelValue": (r) => b.value[s.name] = r
         }, U({ _: 2 }, [
-          m(v(j), (r) => ({
+          p(v(j).filter((r) => !!e.$slots[r]), (r) => ({
             name: r,
             fn: E((i) => [
-              s(e.$slots, r, q({ ref_for: !0 }, i))
+              u(e.$slots, r, q({ ref_for: !0 }, i))
             ])
           }))
         ]), 1032, ["field", "use-grid", "modelValue", "onUpdate:modelValue"]))), 128)),
-        s(e.$slots, "default", {
+        u(e.$slots, "default", {
           props: { formFields: l.value, isGrouped: t.value, useGrid: e.useGrid, bordered: e.bordered, rounded: e.rounded, hideSubmit: e.hideSubmit, separator: e.separator }
         }),
         e.separator && (!e.hideSubmit || !e.hideSubmit) ? (o(), a("hr", W)) : n("", !0),
-        s(e.$slots, "actions", {}, () => [
+        u(e.$slots, "actions", {}, () => [
           z(A, {
             loading: e.loading,
             "hide-submit": e.hideSubmit,
@@ -154,7 +154,7 @@ const T = { class: "vue-forms-controller" }, W = {
             "submit-label": e.submitLabel,
             "cancel-label": e.cancelLabel,
             onSubmit: y,
-            onCancel: u[0] || (u[0] = (d) => e.$emit("cancel"))
+            onCancel: d[0] || (d[0] = (s) => e.$emit("cancel"))
           }, null, 8, ["loading", "hide-submit", "hide-cancel", "submit-label", "cancel-label"])
         ])
       ], 2))
@@ -162,5 +162,5 @@ const T = { class: "vue-forms-controller" }, W = {
   }
 });
 export {
-  ue as default
+  de as default
 };

@@ -18,9 +18,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import { FormField } from '../types'
+import { FormField, InputEvents } from '../types'
 
 defineOptions({ name: 'InputField' })
+defineEmits<InputEvents>()
 
 defineProps<
   FormField & {
