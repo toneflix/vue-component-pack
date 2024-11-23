@@ -32,9 +32,15 @@
     </VueForms>
   </div>
   <div class="demo-container">
-    <InlineForm v-model="formValues.name" type="text" label-tag="div" label-class=""> </InlineForm>
-    <!-- <input v-model="formValues.name" @blur="toggleView" /> 
-      v-slot="{ toggleView }"-->
+    <InlineForm
+      v-model="formValues.name"
+      type="text"
+      label-tag="div"
+      label-class=""
+      v-slot="{ toggleView }"
+    >
+      <input ref="tg" v-model="formValues.name" @blur="toggleView" />
+    </InlineForm>
   </div>
   <div class="demo-container">
     <pre>
@@ -48,7 +54,7 @@
 <script setup lang="ts">
 import { VueForms, InlineForm } from '@toneflix/vue-forms'
 import { FormField } from '@toneflix/vue-forms/src/types'
-import { reactive, ref } from 'vue'
+import { reactive, ref, watch } from 'vue'
 import '@toneflix/vue-forms/src/styles/main.scss'
 import './style.scss'
 
@@ -162,5 +168,13 @@ const formValues = reactive({
   country: 'Nigeria',
   address: '',
   message: 'Hello my people'
+})
+
+const tg = ref()
+
+watch(tg, (tg) => {
+  if (tg) {
+    tg.focus()
+  }
 })
 </script>
