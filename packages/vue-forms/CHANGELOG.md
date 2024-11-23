@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.9.2...@toneflix/vue-forms@1.10.0) (2024-11-23)
+
+### Features
+
+- Add auto focus support to common inputs. ([b7574f8](https://github.com/toneflix/vue-component-pack/commit/b7574f8602707ef7c5a6d4277f499510ac3a8100))
+- Add focus and blur events to input like form controls. ([c8fec56](https://github.com/toneflix/vue-component-pack/commit/c8fec561006ccba3404466c8c4754960055c9c08))
+- Allow inline form to autofocus by default. ([de0feab](https://github.com/toneflix/vue-component-pack/commit/de0feaba88d68431c8a95b922354a4de861b0b58))
+- Create InlineForm component ([5827a71](https://github.com/toneflix/vue-component-pack/commit/5827a71da0a31af6384b0a1ca862dcb672a12cc2))
+
 ## [1.9.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.9.1...@toneflix/vue-forms@1.9.2) (2024-11-22)
 
 ### Bug Fixes
