@@ -14,7 +14,7 @@ import { getAuthConfig, url } from '../utils/config'
 
 import axios from 'axios'
 import { defineStore } from 'pinia'
-import { createCountdown } from '../utils/plugins'
+import { buildHeaders, createCountdown } from '../utils/plugins'
 
 axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8'
 axios.defaults.headers.common['Accept'] = 'application/json'
@@ -123,11 +123,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
         }
         | undefined
       > => {
-        const headers = options.setAuthHeaders
-          ? await options.setAuthHeaders({ user: user.value, token: token.value })
-          : options.getAuthHeaders
-            ? await options.getAuthHeaders({ user: user.value, token: token.value })
-            : {}
+        const headers = await buildHeaders(options, user.value, token.value)
 
         const endpoint = url('logout')
         try {
@@ -164,11 +160,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
         error?: BaseError | undefined
         message?: string | undefined
       }> => {
-        const headers = options.setAuthHeaders
-          ? await options.setAuthHeaders({ user: user.value, token: token.value })
-          : options.getAuthHeaders
-            ? await options.getAuthHeaders({ user: user.value, token: token.value })
-            : {}
+        const headers = await buildHeaders(options, user.value, token.value)
 
         const endpoint = url('forgot')
         try {
@@ -247,11 +239,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
       }> => {
         const tkn = localStorage.getItem(options.storageKey ?? 'auth_token') ?? token.value
 
-        const headers = options.setAuthHeaders
-          ? await options.setAuthHeaders({ user: user.value, token: token.value })
-          : options.getAuthHeaders
-            ? await options.getAuthHeaders({ user: user.value, token: token.value })
-            : {}
+        const headers = await buildHeaders(options as unknown as AuthOptions, user.value, token.value)
 
         if (tkn) {
           token.value = tkn

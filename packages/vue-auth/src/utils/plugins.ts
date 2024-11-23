@@ -64,7 +64,7 @@ export const createCountdown = (
  * @param next
  * @param context
  */
-export function runMiddlewares<U = AuthUser>(
+export function runMiddlewares<U = AuthUser> (
   middlewares: AuthOptions<U>['middlewares'],
   to: RouteLocationNormalized,
   from: RouteLocationNormalized,
@@ -103,4 +103,20 @@ export function runMiddlewares<U = AuthUser>(
   }
 
   executeMiddleware(0)
+}
+
+/**
+ * Build the headers for the request, using either the old and new method.
+ * 
+ * @param options 
+ * @param user 
+ * @param token 
+ * @returns 
+ */
+export const buildHeaders = async <U extends AuthUser = AuthUser> (options: AuthOptions, user: U, token?: string) => {
+  return options.setAuthHeaders
+    ? await options.setAuthHeaders({ user, token: token })
+    : options.getAuthHeaders
+      ? await options.getAuthHeaders({ user, token: token })
+      : {}
 }
