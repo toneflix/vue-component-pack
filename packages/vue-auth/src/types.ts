@@ -39,10 +39,25 @@ export interface ResponseError {
 
 export interface Middleware<U = unknown & AuthUser> {
   (
+    /**
+     * The destination route
+     */
     to: RouteLocationNormalized,
+    /**
+     * The previous route
+     */
     from: RouteLocationNormalized,
+    /**
+     * next() callback passed to navigation guards.
+     */
     next: NavigationGuardNext,
+    /**
+     * The `context` Object, contains `user`, `token` and the `isAuthenticated` property
+     */
     context: { user: U; token?: string | undefined; isAuthenticated: boolean },
+    /**
+     * The current router interface
+     */
     router?: Router
   ): void
 }
