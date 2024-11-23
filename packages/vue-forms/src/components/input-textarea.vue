@@ -9,6 +9,8 @@
       :name="name"
       :placeholder="String(placeholder)"
       v-model="modelValue"
+      @blur="$emit('blur', $event)"
+      @focus="$emit('focus', $event)"
     />
     <div class="field-anotations" v-if="label || hint">
       <p class="field-hint" v-if="hint">
@@ -18,9 +20,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import { FormField } from '../types'
+import { FormField, InputEvents } from '../types'
 
 defineOptions({ name: 'InputTextarea' })
+defineEmits<InputEvents>()
 
 defineProps<
   FormField & {

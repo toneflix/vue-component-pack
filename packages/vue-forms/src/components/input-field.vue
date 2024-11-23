@@ -9,6 +9,8 @@
       :name="name"
       :placeholder="String(placeholder)"
       v-model="modelValue"
+      @blur="$emit('blur', $event)"
+      @focus="$emit('focus', $event)"
     />
     <div class="field-anotations" v-if="label || hint">
       <p class="field-hint" v-if="hint">

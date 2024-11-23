@@ -3,7 +3,13 @@
     <label :for="'vf-' + name" v-if="label">
       {{ label }}
     </label>
-    <select :id="'vf-' + name" :name="name" v-model="modelValue">
+    <select
+      :id="'vf-' + name"
+      :name="name"
+      v-model="modelValue"
+      @blur="$emit('blur', $event)"
+      @focus="$emit('focus', $event)"
+    >
       <option v-for="(choice, i) in parsedChoices" :key="i" :value="choice.value">
         {{ choice.label }}
       </option>
@@ -12,9 +18,10 @@
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
-import { FormField } from '../types'
+import { FormField, InputEvents } from '../types'
 
 defineOptions({ name: 'InputField' })
+defineEmits<InputEvents>()
 
 const props = withDefaults(
   defineProps<

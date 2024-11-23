@@ -10,10 +10,21 @@
     <slot v-bind="field" :modelValue="modelValue" v-if="$slots.default"></slot>
     <template v-else>
       <slot name="input" v-bind="field" :modelValue="modelValue" v-if="useInput">
-        <InputField v-model="modelValue" v-bind="field" />
+        <InputField
+          v-model="modelValue"
+          v-bind="field"
+          @blur="$emit('blur', $event)"
+          @focus="$emit('focus', $event)"
+        />
       </slot>
       <slot name="select" v-bind="field" :modelValue="modelValue" v-if="field.type === 'select'">
-        <InputSelect v-model="modelValue" v-bind="field" type="select" />
+        <InputSelect
+          v-model="modelValue"
+          v-bind="field"
+          type="select"
+          @blur="$emit('blur', $event)"
+          @focus="$emit('focus', $event)"
+        />
       </slot>
       <slot
         name="checkbox"
@@ -35,7 +46,13 @@
         :modelValue="modelValue"
         v-if="field.type === 'textarea'"
       >
-        <InputTextarea v-model="modelValue" v-bind="field" type="textarea" />
+        <InputTextarea
+          v-model="modelValue"
+          v-bind="field"
+          type="textarea"
+          @blur="$emit('blur', $event)"
+          @focus="$emit('focus', $event)"
+        />
       </slot>
     </template>
   </div>
@@ -43,13 +60,15 @@
 
 <script setup lang="ts">
 import { computed, useSlots } from 'vue'
-import { FormField } from '../types'
+import { FormField, InputEvents } from '../types'
 import InputCheckbox from './input-checkbox.vue'
 import InputField from './input-field.vue'
 import InputSelect from './input-select.vue'
 import InputRadio from './input-radio.vue'
 import InputSwitch from './input-switch.vue'
 import InputTextarea from './input-textarea.vue'
+
+defineEmits<InputEvents>()
 
 // Props
 const props = defineProps<{

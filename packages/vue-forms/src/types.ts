@@ -274,6 +274,11 @@ export interface VueFormProps<X = { [key: FormField['name']]: FormField['value']
   modelValue: X
 }
 
+export interface InputEvents {
+  (name: 'focus', event: Event): void;
+  (name: 'blur', event: Event): void;
+}
+
 export type GroupMeta<T extends FormField = FormField> = {
   [key in T['group']as string]: {
     title: string
