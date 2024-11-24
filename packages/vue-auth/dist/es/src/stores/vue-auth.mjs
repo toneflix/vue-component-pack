@@ -32,7 +32,11 @@ function b(k) {
             return u.value = e, g.value = a, d.value = !0, globalThis.localStorage.setItem(r.storageKey ?? "auth_token", t.token), { user: e, token: a, message: n };
           } catch (t) {
             const { response: e } = t;
-            return { user: {}, error: (e == null ? void 0 : e.data) ?? t ?? {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
+            return {
+              user: {},
+              error: (e == null ? void 0 : e.data) ?? t ?? {},
+              message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message
+            };
           }
         },
         reset: async (s, r = h()) => {
@@ -47,7 +51,11 @@ function b(k) {
             return { user: e, message: a };
           } catch (t) {
             const { response: e } = t;
-            return { user: {}, error: (e == null ? void 0 : e.data) ?? t ?? {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
+            return {
+              user: {},
+              error: (e == null ? void 0 : e.data) ?? t ?? {},
+              message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message
+            };
           }
         },
         logout: async (s = h(), r) => {
@@ -97,7 +105,11 @@ function b(k) {
             return u.value = e, g.value = a, d.value = !0, globalThis.localStorage.setItem(r.storageKey ?? "auth_token", t.token), { user: e, token: a, message: n };
           } catch (t) {
             const { response: e } = t;
-            return { user: {}, error: (e == null ? void 0 : e.data) ?? t ?? {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
+            return {
+              user: {},
+              error: (e == null ? void 0 : e.data) ?? t ?? {},
+              message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message
+            };
           }
         },
         loadUserFromStorage: async (s = h(), r, c) => {
