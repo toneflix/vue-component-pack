@@ -18,64 +18,64 @@ function b(k) {
         isAuthenticated: d,
         login: async (s, r = h()) => {
           var o;
-          const n = f("login");
+          const c = f("login");
           try {
             const { data: t } = await m.post(
-              n,
+              c,
               i(s),
               r.axiosConfig
             ), {
               user: e,
               token: a,
-              message: c
+              message: n
             } = r.transformResponse ? r.transformResponse(t) : { user: t.user, token: t.token, message: t.message };
-            return u.value = e, g.value = a, d.value = !0, globalThis.localStorage.setItem(r.storageKey ?? "auth_token", t.token), { user: e, token: a, message: c };
+            return u.value = e, g.value = a, d.value = !0, globalThis.localStorage.setItem(r.storageKey ?? "auth_token", t.token), { user: e, token: a, message: n };
           } catch (t) {
             const { response: e } = t;
-            return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
+            return { user: {}, error: (e == null ? void 0 : e.data) ?? t ?? {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
           }
         },
         reset: async (s, r = h()) => {
           var o;
-          const n = f("reset");
+          const c = f("reset");
           try {
             const { data: t } = await m.post(
-              n,
+              c,
               i(s),
               r.axiosConfig
             ), { user: e, message: a } = r.transformResponse ? r.transformResponse(t) : { user: t.user, message: t.message };
             return { user: e, message: a };
           } catch (t) {
             const { response: e } = t;
-            return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
+            return { user: {}, error: (e == null ? void 0 : e.data) ?? t ?? {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
           }
         },
         logout: async (s = h(), r) => {
           var t;
-          const n = await R(s, u.value, g.value), o = f("logout");
+          const c = await R(s, u.value, g.value), o = f("logout");
           try {
             await m.post(o, i(r), {
-              headers: { ...n },
+              headers: { ...c },
               ...s.axiosConfig
             }), u.value = {}, g.value = void 0, d.value = !1, globalThis.localStorage.removeItem(s.storageKey ?? "auth_token");
           } catch (e) {
             const { response: a } = e;
-            return { error: (a == null ? void 0 : a.data) || {}, message: (t = a == null ? void 0 : a.data) == null ? void 0 : t.message };
+            return { error: (a == null ? void 0 : a.data) ?? e ?? {}, message: (t = a == null ? void 0 : a.data) == null ? void 0 : t.message };
           }
         },
         forgot: async (s, r = h()) => {
           var t;
-          const n = await R(r, u.value, g.value), o = f("forgot");
+          const c = await R(r, u.value, g.value), o = f("forgot");
           try {
             const { data: e } = await m.post(o, i(s), {
-              headers: { ...n },
+              headers: { ...c },
               ...r.axiosConfig
-            }), { timeout: a, message: c } = r.transformResponse ? r.transformResponse(e) : { timeout: e.timeout, message: e.message }, l = C(a);
-            return { timeout: a, countdown: l, message: c };
+            }), { timeout: a, message: n } = r.transformResponse ? r.transformResponse(e) : { timeout: e.timeout, message: e.message }, l = C(a);
+            return { timeout: a, countdown: l, message: n };
           } catch (e) {
             const { response: a } = e;
             return {
-              error: (a == null ? void 0 : a.data) || {},
+              error: (a == null ? void 0 : a.data) ?? e ?? {},
               countdown: v(0),
               message: (t = a == null ? void 0 : a.data) == null ? void 0 : t.message
             };
@@ -83,44 +83,44 @@ function b(k) {
         },
         register: async (s, r = h()) => {
           var o;
-          const n = f("register");
+          const c = f("register");
           try {
             const { data: t } = await m.post(
-              n,
+              c,
               i(s),
               r.axiosConfig
             ), {
               user: e,
               token: a,
-              message: c
+              message: n
             } = r.transformResponse ? r.transformResponse(t) : { user: t.user, token: t.token, message: t.message };
-            return u.value = e, g.value = a, d.value = !0, globalThis.localStorage.setItem(r.storageKey ?? "auth_token", t.token), { user: e, token: a, message: c };
+            return u.value = e, g.value = a, d.value = !0, globalThis.localStorage.setItem(r.storageKey ?? "auth_token", t.token), { user: e, token: a, message: n };
           } catch (t) {
             const { response: e } = t;
-            return { user: {}, error: (e == null ? void 0 : e.data) || {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
+            return { user: {}, error: (e == null ? void 0 : e.data) ?? t ?? {}, message: (o = e == null ? void 0 : e.data) == null ? void 0 : o.message };
           }
         },
-        loadUserFromStorage: async (s = h(), r, n) => {
+        loadUserFromStorage: async (s = h(), r, c) => {
           var e;
           const o = globalThis.localStorage.getItem(s.storageKey ?? "auth_token") ?? g.value, t = await R(
             s,
             u.value,
             g.value
           );
-          if (o && s.endpoints.profile && (g.value = o, d.value = !0, !n || !s.disableAutoRefresh)) {
+          if (o && s.endpoints.profile && (g.value = o, d.value = !0, !c || !s.disableAutoRefresh)) {
             const a = f("profile");
             try {
-              const { data: c } = await m.get(a, {
+              const { data: n } = await m.get(a, {
                 headers: { ...t },
                 params: { ...i(r) },
                 ...s.axiosConfig
-              }), { user: l, message: y } = s.transformResponse ? s.transformResponse(c) : { user: c.user, message: c.message };
+              }), { user: l, message: y } = s.transformResponse ? s.transformResponse(n) : { user: n.user, message: n.message };
               return u.value = l, { user: l, message: y };
-            } catch (c) {
-              const { response: l, status: y } = c;
+            } catch (n) {
+              const { response: l, status: y } = n;
               return y === 401 && (u.value = {}, g.value = void 0, w.value = !0, d.value = !1, globalThis.localStorage.removeItem(s.storageKey ?? "auth_token")), {
                 user: {},
-                error: (l == null ? void 0 : l.data) || {},
+                error: (l == null ? void 0 : l.data) ?? n ?? {},
                 message: (e = l == null ? void 0 : l.data) == null ? void 0 : e.message
               };
             }
