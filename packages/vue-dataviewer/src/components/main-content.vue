@@ -34,6 +34,15 @@
         @cancel="viewMode = 'view'"
         @submit="submit"
       >
+        <template #actions v-if="$slots['form-actions']">
+          <slot
+            name="form-actions"
+            :loading="saving"
+            :submit="submit"
+            :cancel="() => (viewMode = 'view')"
+          >
+          </slot>
+        </template>
         <template #prepend v-if="$slots['form-prepend']">
           <slot
             name="form-prepend"

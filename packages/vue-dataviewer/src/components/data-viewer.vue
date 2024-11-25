@@ -41,16 +41,11 @@
         <slot :name="slot" v-bind="casts.imgListItem(props)" v-else-if="slot === 'img-list-item'" />
         <slot :name="slot" v-bind="casts.imageViewer(props)" v-else-if="slot === 'image-viewer'" />
         <slot :name="slot" v-bind="casts.loader(props)" v-else-if="slot === 'loader'" />
+        <slot :name="slot" v-bind="casts.formActions(props)" v-else-if="slot === 'form-actions'" />
         <slot :name="slot" v-bind="casts.image(props)" v-else-if="slot === 'image'" />
       </template>
       <template v-for="slot in formSlotNames" :key="slot" v-slot:[slot]="props">
         <slot :name="slot" v-bind="props" />
-      </template>
-      <template #form-prepend="props">
-        <slot name="form-prepend" v-bind="props" />
-      </template>
-      <template #form-append="props">
-        <slot name="form-append" v-bind="props" />
       </template>
     </MainContent>
   </TDialog>
