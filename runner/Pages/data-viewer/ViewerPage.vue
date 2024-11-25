@@ -4,6 +4,7 @@
     shadow
     rounded
     separator
+    mode="edit"
     ref="dataViewer"
     content-class="content-viewer"
     dialog-class="appointment-viewer"
@@ -17,7 +18,8 @@
     }"
   >
     <template #default="{ toggleDialog }">
-      <TBtn label="View Datas" @click="toggleDialog(data, 'view')" />
+      <TBtn label="View Data" @click="toggleDialog(data, 'view')" />
+      <TBtn label="Edit" @click="toggleDialog(data, 'edit')" />
     </template>
   </DataViewer>
 
@@ -26,6 +28,7 @@
     shadow
     rounded
     separator
+    mode="edit"
     content-class="content-viewer"
     :labels-map="{ createdAt: 'Date Created' }"
     :values-map="{ friend: () => 'David' }"
