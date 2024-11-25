@@ -32,7 +32,7 @@
         :loading="saving"
         v-if="viewMode === 'edit' && form"
         @cancel="viewMode = 'view'"
-        @submit="emit('click:save', viewData)"
+        @submit="submit"
       >
         <template #prepend v-if="$slots['form-prepend']">
           <slot
@@ -182,7 +182,6 @@ import { VueForms } from '@toneflix/vue-forms'
 import { ComponentSlots, FormSlots, MainContentProps, MainProps } from '../types'
 import { formatDate } from 'date-fns'
 import { toValue } from 'vue'
-import { onBeforeMount } from 'vue'
 
 defineSlots<ComponentSlots & FormSlots>()
 
@@ -190,13 +189,11 @@ defineOptions({
   name: 'MainContent'
 })
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 const emit = defineEmits<{
-  (e: 'updateData', data: any, mode: 'edit' | 'view' | 'doc' | 'close'): void
-  (e: 'click:save', data: any): void
+  (e: 'setData', data: MainProps['data'], mode: 'edit' | 'view' | 'doc' | 'close'): void
+  (e: 'click:save', form: MainProps['form'], data: MainProps['data']): void
   (e: 'toggleDialog', state: boolean): void
 }>()
-/* eslint-enable @typescript-eslint/no-explicit-any */
 
 const props = withDefaults(defineProps<MainContentProps & MainProps>(), {
   dateFormat: 'do MMM, yyyy h:mm a',
@@ -292,8 +289,9 @@ const setData = (data: any, mode: 'edit' | 'view' | 'doc' | 'close' = 'view', do
       Object.entries(data).map(([key, val]) => [slug(key), parser(val)])
     )
 
-    emit('updateData', nData, mode)
+    emit('setData', nData, mode)
   }
+  sanitizeForm()
 }
 
 const boolLabel = (key: string, bool: boolean) => {
@@ -339,7 +337,12 @@ watch(viewMode, (viewMode) => {
   }
 })
 
-onBeforeMount(() => {
+const submit = () => {
+  sanitizeForm()
+  emit('click:save', form.value, viewData.value)
+}
+
+const sanitizeForm = () => {
   if (form.value) {
     const createKey = (key: string) => (props.slugifyFormKeys ? slug(key, '_') : key)
 
@@ -350,5 +353,9 @@ onBeforeMount(() => {
         return acc
       }, {})
   }
+}
+
+defineExpose({
+  sanitizeForm
 })
 </script>

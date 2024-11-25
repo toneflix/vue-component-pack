@@ -1,12 +1,12 @@
-import { defineComponent as V, mergeModels as w, useModel as u, ref as P, openBlock as b, createElementBlock as I, Fragment as N, renderSlot as r, createVNode as B, withCtx as g, mergeProps as s, createSlots as z, normalizeProps as d, guardReactiveProps as y, renderList as U, unref as i, createCommentVNode as F } from "vue";
+import { defineComponent as z, mergeModels as B, useModel as m, ref as C, openBlock as F, createElementBlock as b, Fragment as I, renderSlot as r, createVNode as D, withCtx as u, mergeProps as n, createSlots as N, normalizeProps as i, guardReactiveProps as y, renderList as U, unref as d, createCommentVNode as S } from "vue";
 /* empty css                   */
 import L from "./dialog/TDialog.vue.mjs";
-import S from "./main-content.vue.mjs";
-import { slotNames as T, casts as t, formSlotNames as q } from "../utils/providers.mjs";
-const A = /* @__PURE__ */ V({
+import q from "./main-content.vue.mjs";
+import { slotNames as E, casts as t, formSlotNames as T } from "../utils/providers.mjs";
+const G = /* @__PURE__ */ z({
   name: "DataViewer",
   __name: "data-viewer",
-  props: /* @__PURE__ */ w({
+  props: /* @__PURE__ */ B({
     listClass: {},
     dialogClass: {},
     dialogZIndex: {},
@@ -54,30 +54,34 @@ const A = /* @__PURE__ */ V({
     },
     errorsModifiers: {}
   }),
-  emits: /* @__PURE__ */ w(["toggleDialog", "click:save"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
-  setup(m, { expose: D }) {
-    const f = u(m, "data"), $ = u(m, "form"), v = u(m, "mode"), M = u(m, "loading"), p = u(m, "saving"), k = u(m, "errors"), n = P(!1), C = (o, a = "view") => {
-      o && (f.value = o), v.value = a, n.value = a !== "close";
+  emits: /* @__PURE__ */ B(["toggleDialog", "click:save"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
+  setup(s, { expose: V }) {
+    const f = m(s, "data"), $ = m(s, "form"), g = m(s, "mode"), M = m(s, "loading"), p = m(s, "saving"), k = m(s, "errors"), v = C(!1), w = C(), P = (o, a = "view") => {
+      o && (f.value = o), g.value = a, v.value = a !== "close";
     };
-    return D({
-      dialogToggle: n,
-      dialogToggler: () => n.value = !n.value
-    }), (o, a) => (b(), I(N, null, [
+    return V({
+      sanitizeForm: () => {
+        var o;
+        return (o = w.value) == null ? void 0 : o.sanitizeForm();
+      }
+    }), (o, a) => (F(), b(I, null, [
       r(o.$slots, "default", {
         viewData: f.value,
-        viewMode: v.value,
+        viewMode: g.value,
         saving: p.value,
-        toggleDialog: C
+        toggleDialog: P
       }),
-      B(L, {
-        modelValue: n.value,
-        "onUpdate:modelValue": a[9] || (a[9] = (e) => n.value = e),
+      D(L, {
+        modelValue: v.value,
+        "onUpdate:modelValue": a[9] || (a[9] = (e) => v.value = e),
         "z-index": o.dialogZIndex,
         "dialog-class": o.dialogClass
       }, {
-        default: g(() => [
-          B(S, s({
+        default: u(() => [
+          D(q, n({
             "dialog-mode": "",
+            ref_key: "mainContent",
+            ref: w,
             class: "constrained"
           }, o.$props, {
             form: $.value,
@@ -88,32 +92,32 @@ const A = /* @__PURE__ */ V({
             "onUpdate:errors": a[2] || (a[2] = (e) => k.value = e),
             loading: M.value,
             "onUpdate:loading": a[3] || (a[3] = (e) => M.value = e),
-            mode: v.value,
-            "onUpdate:mode": a[4] || (a[4] = (e) => v.value = e),
+            mode: g.value,
+            "onUpdate:mode": a[4] || (a[4] = (e) => g.value = e),
             saving: p.value,
             "onUpdate:saving": a[5] || (a[5] = (e) => p.value = e),
-            onUpdateData: a[6] || (a[6] = (e, l) => o.$emit("toggleDialog", e, l)),
-            "onClick:save": a[7] || (a[7] = (e) => o.$emit("click:save", e)),
-            onToggleDialog: a[8] || (a[8] = (e) => n.value = e)
-          }), z({
-            "form-prepend": g((e) => [
-              r(o.$slots, "form-prepend", d(y(e)))
+            onSetData: a[6] || (a[6] = (e, l) => o.$emit("toggleDialog", e, l)),
+            "onClick:save": a[7] || (a[7] = (e, l) => o.$emit("click:save", e, l)),
+            onToggleDialog: a[8] || (a[8] = (e) => v.value = e)
+          }), N({
+            "form-prepend": u((e) => [
+              r(o.$slots, "form-prepend", i(y(e)))
             ]),
-            "form-append": g((e) => [
-              r(o.$slots, "form-append", d(y(e)))
+            "form-append": u((e) => [
+              r(o.$slots, "form-append", i(y(e)))
             ]),
             _: 2
           }, [
-            U(i(T), (e) => ({
+            U(d(E), (e) => ({
               name: e,
-              fn: g((l) => [
-                e === "form-append" || e === "form-prepend" ? r(o.$slots, e, d(s({ key: 0 }, i(t).form(l)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? r(o.$slots, e, d(s({ key: 1 }, i(t).list(l)))) : e === "list-item" ? r(o.$slots, e, d(s({ key: 2 }, i(t).listItem(l)))) : e === "img-list-item" ? r(o.$slots, e, d(s({ key: 3 }, i(t).imgListItem(l)))) : e === "image-viewer" ? r(o.$slots, e, d(s({ key: 4 }, i(t).imageViewer(l)))) : e === "loader" ? r(o.$slots, e, d(s({ key: 5 }, i(t).loader(l)))) : e === "image" ? r(o.$slots, e, d(s({ key: 6 }, i(t).image(l)))) : F("", !0)
+              fn: u((l) => [
+                e === "form-append" || e === "form-prepend" ? r(o.$slots, e, i(n({ key: 0 }, d(t).form(l)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? r(o.$slots, e, i(n({ key: 1 }, d(t).list(l)))) : e === "list-item" ? r(o.$slots, e, i(n({ key: 2 }, d(t).listItem(l)))) : e === "img-list-item" ? r(o.$slots, e, i(n({ key: 3 }, d(t).imgListItem(l)))) : e === "image-viewer" ? r(o.$slots, e, i(n({ key: 4 }, d(t).imageViewer(l)))) : e === "loader" ? r(o.$slots, e, i(n({ key: 5 }, d(t).loader(l)))) : e === "image" ? r(o.$slots, e, i(n({ key: 6 }, d(t).image(l)))) : S("", !0)
               ])
             })),
-            U(i(q), (e) => ({
+            U(d(T), (e) => ({
               name: e,
-              fn: g((l) => [
-                r(o.$slots, e, d(y(l)))
+              fn: u((l) => [
+                r(o.$slots, e, i(y(l)))
               ])
             }))
           ]), 1040, ["form", "data", "errors", "loading", "mode", "saving"])
@@ -124,5 +128,5 @@ const A = /* @__PURE__ */ V({
   }
 });
 export {
-  A as default
+  G as default
 };

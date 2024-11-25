@@ -31,11 +31,17 @@ declare module '@vue/runtime-core' {
            */
           'onUpdate:data': (data: MainProps['data']) => void
           /**
+           * Emited when the data is first initialized and set
+           * @param data
+           * @returns
+           */
+          setData: (data: MainProps['data'], mode: 'edit' | 'view' | 'doc' | 'close') => void
+          /**
            * Emited when the save button is clicked
            * @param data
            * @returns
            */
-          'click:save': (data: any) => void
+          'click:save': (form: MainProps['form'], data: MainProps['data']) => void
         },
       {
         /**

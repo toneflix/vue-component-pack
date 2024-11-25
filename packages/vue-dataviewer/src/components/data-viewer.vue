@@ -8,6 +8,7 @@
   <TDialog v-model="dialogToggle" :z-index="dialogZIndex" :dialog-class="dialogClass">
     <MainContent
       dialog-mode
+      ref="mainContent"
       class="constrained"
       v-bind="$props"
       v-model:form="form"
@@ -16,8 +17,8 @@
       v-model:loading="loading"
       v-model:mode="viewMode"
       v-model:saving="saving"
-      @update-data="(d, m) => $emit('toggleDialog', d, m)"
-      @click:save="$emit('click:save', $event)"
+      @set-data="(d, m) => $emit('toggleDialog', d, m)"
+      @click:save="(e, f) => $emit('click:save', e, f)"
       @toggleDialog="dialogToggle = $event"
     >
       <template v-for="slot in slotNames" :key="slot" v-slot:[slot]="props">
@@ -79,7 +80,7 @@ defineSlots<
 
 defineEmits<{
   (e: 'toggleDialog', data: any, mode: 'edit' | 'view' | 'doc' | 'close'): void
-  (e: 'click:save', data: any): void
+  (e: 'click:save', form: MainProps['form'], data: MainProps['data']): void
 }>()
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -121,6 +122,7 @@ const errors = defineModel<MainProps['errors']>('errors', {
 })
 
 const dialogToggle = ref(false)
+const mainContent = ref()
 
 const loadDialog = (data?: any, mode: 'edit' | 'view' | 'doc' | 'close' = 'view') => {
   if (data) {
@@ -131,7 +133,6 @@ const loadDialog = (data?: any, mode: 'edit' | 'view' | 'doc' | 'close' = 'view'
 }
 
 defineExpose({
-  dialogToggle,
- dialogToggler: () => dialogToggle.value = !dialogToggle.value
+  sanitizeForm: () => mainContent.value?.sanitizeForm()
 })
 </script>
