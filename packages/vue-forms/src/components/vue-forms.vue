@@ -30,7 +30,7 @@
 
       <hr class="group-separator" v-if="separator && (!hideSubmit || !hideSubmit)" />
 
-      <slot name="actions">
+      <slot name="actions" :loading="!!loading" :submit="submit" :cancel="() => $emit('cancel')">
         <FormActions
           :loading="loading"
           :hide-submit="hideSubmit"
@@ -97,7 +97,7 @@
 
       <hr class="group-separator" v-if="separator && (!hideSubmit || !hideSubmit)" />
 
-      <slot name="actions">
+      <slot name="actions" :loading="!!loading" :submit="submit" :cancel="() => $emit('cancel')">
         <FormActions
           :loading="!!loading"
           :hide-submit="hideSubmit"
