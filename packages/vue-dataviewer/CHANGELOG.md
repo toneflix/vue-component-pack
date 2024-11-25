@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.16.0...@toneflix/vue-dataviewer@1.17.0) (2024-11-25)
+
+### Bug Fixes
+
+- Check if slot is not empty for hasSlots logic ([2e840ad](https://github.com/toneflix/vue-component-pack/commit/2e840adc5406d6de264d94764fd93fb238561037))
+- Make `hasSlots` feature work as intended. ([ce1d40a](https://github.com/toneflix/vue-component-pack/commit/ce1d40a094cdb4e162a1b9a83d2df544b5d7b81d))
+
+### Features
+
+- Add `resetHandler` to handle system resets and 401 errors. ([0d3841a](https://github.com/toneflix/vue-component-pack/commit/0d3841a7f74af0ba15539e76baea86a0885fd393))
+- add the hasSlots class to help customize when custom slots are in use. ([14ca62a](https://github.com/toneflix/vue-component-pack/commit/14ca62a52db60a3d10e3b1d5ed54cc817da044d3))
+- Prevent applying styles to unsloted element. ([73ebece](https://github.com/toneflix/vue-component-pack/commit/73ebece10fe19352c441b49be9dd7d6df4c2deb2))
+
 # [1.16.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.15.1...@toneflix/vue-dataviewer@1.16.0) (2024-11-21)
 
 ### Features
