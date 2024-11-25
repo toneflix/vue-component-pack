@@ -29,6 +29,7 @@
     rounded
     separator
     mode="edit"
+    slugifyFormKeys
     content-class="content-viewer"
     :labels-map="{ createdAt: 'Date Created' }"
     :values-map="{ friend: () => 'David' }"

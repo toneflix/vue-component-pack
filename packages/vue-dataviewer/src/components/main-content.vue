@@ -181,6 +181,8 @@ import { FormField } from '@toneflix/vue-forms/src/types'
 import { VueForms } from '@toneflix/vue-forms'
 import { ComponentSlots, FormSlots, MainContentProps, MainProps } from '../types'
 import { formatDate } from 'date-fns'
+import { toValue } from 'vue'
+import { onBeforeMount } from 'vue'
 
 defineSlots<ComponentSlots & FormSlots>()
 
@@ -334,6 +336,19 @@ const parser = (data: string | boolean | any, field?: string) => {
 watch(viewMode, (viewMode) => {
   if (viewMode !== 'doc') {
     activeDoc.value = undefined
+  }
+})
+
+onBeforeMount(() => {
+  if (form.value) {
+    const createKey = (key: string) => (props.slugifyFormKeys ? slug(key, '_') : key)
+
+    form.value = Object.entries(form.value)
+      .filter(([e]) => !props.formExclusions.includes(createKey(e)))
+      .reduce((acc: { [object: string]: unknown }, [key, value]) => {
+        acc[createKey(key)] = toValue(value)
+        return acc
+      }, {})
   }
 })
 </script>

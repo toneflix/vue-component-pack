@@ -1,24 +1,24 @@
-import { defineComponent as G, mergeModels as A, useModel as y, ref as F, computed as P, watch as H, openBlock as u, createBlock as U, normalizeClass as $, withCtx as M, renderSlot as i, createElementVNode as n, toDisplayString as k, createElementBlock as m, createCommentVNode as h, unref as c, mergeProps as J, createSlots as K, renderList as V, normalizeProps as Q, guardReactiveProps as W, Fragment as q, createVNode as O } from "vue";
+import { defineComponent as Z, mergeModels as N, useModel as b, ref as A, computed as P, watch as G, onBeforeMount as H, toValue as J, openBlock as u, createBlock as O, normalizeClass as $, withCtx as M, renderSlot as i, createElementVNode as n, toDisplayString as k, createElementBlock as c, createCommentVNode as C, unref as f, mergeProps as Q, createSlots as W, renderList as V, normalizeProps as X, guardReactiveProps as Y, Fragment as U, createVNode as q } from "vue";
 /* empty css                   */
-import { titleCase as f, slug as C, formSlotNames as X } from "../utils/providers.mjs";
-import Y from "./TBtn.vue.mjs";
-import _ from "./dialog/TCard.vue.mjs";
-import x from "./TInnerLoading.vue.mjs";
-import { VueForms as ee } from "@toneflix/vue-forms";
-import { formatDate as ae } from "date-fns";
-const te = { class: "flex items-center justify-between no-wrap" }, oe = { class: "card-title" }, le = { key: 1 }, se = ["onClick"], re = { class: "t-item-section t-item-section-avatar" }, ie = { class: "t-avatar" }, ne = ["src", "alt"], ue = { class: "t-item-section" }, de = { class: "t-item-label caption" }, ve = {
+import { titleCase as p, slug as h, formSlotNames as _ } from "../utils/providers.mjs";
+import x from "./TBtn.vue.mjs";
+import ee from "./dialog/TCard.vue.mjs";
+import ae from "./TInnerLoading.vue.mjs";
+import { VueForms as te } from "@toneflix/vue-forms";
+import { formatDate as oe } from "date-fns";
+const le = { class: "flex items-center justify-between no-wrap" }, se = { class: "card-title" }, re = { key: 1 }, ie = ["onClick"], ne = { class: "t-item-section t-item-section-avatar" }, ue = { class: "t-avatar" }, de = ["src", "alt"], ve = { class: "t-item-section" }, me = { class: "t-item-label caption" }, ce = {
   key: 0,
   class: "t-item-label"
-}, me = {
+}, fe = {
   key: 1,
   class: "t-item-label"
-}, ce = {
+}, ge = {
   key: 2,
   class: "image-viewer"
-}, ge = ["src", "alt"], Ce = /* @__PURE__ */ G({
+}, pe = ["src", "alt"], Be = /* @__PURE__ */ Z({
   name: "MainContent",
   __name: "main-content",
-  props: /* @__PURE__ */ A({
+  props: /* @__PURE__ */ N({
     dialogMode: { type: Boolean },
     listClass: {},
     dialogClass: {},
@@ -40,6 +40,7 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
     data: {},
     form: {},
     formProps: {},
+    slugifyFormKeys: { type: Boolean },
     mode: {},
     errors: {},
     saving: { type: Boolean },
@@ -66,49 +67,54 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
     },
     errorsModifiers: {}
   }),
-  emits: /* @__PURE__ */ A(["updateData", "click:save", "toggleDialog"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
-  setup(g, { emit: R }) {
-    const D = R, s = g, t = y(g, "data"), p = y(g, "form"), d = y(g, "mode"), S = y(g, "loading"), z = y(g, "saving"), j = y(g, "errors"), w = F(), I = F(!1), T = P(() => {
-      var o, a, l;
+  emits: /* @__PURE__ */ N(["updateData", "click:save", "toggleDialog"], ["update:data", "update:form", "update:mode", "update:loading", "update:saving", "update:errors"]),
+  setup(g, { emit: K }) {
+    const D = K, s = g, o = b(g, "data"), m = b(g, "form"), d = b(g, "mode"), j = b(g, "loading"), R = b(g, "saving"), E = b(g, "errors"), w = A(), z = A(!1), I = P(() => {
+      var t, a, l;
       const e = {
-        view: ((o = s.titles) == null ? void 0 : o.view) || "view Data",
+        view: ((t = s.titles) == null ? void 0 : t.view) || "view Data",
         edit: ((a = s.titles) == null ? void 0 : a.edit) || "Edit Data",
         doc: ((l = s.titles) == null ? void 0 : l.doc) || "View Docs"
       };
       return { view: e == null ? void 0 : e.view, edit: e == null ? void 0 : e.edit, doc: e == null ? void 0 : e.doc, close: "" }[d.value || "view"];
-    }), E = P(
-      () => t.value ? Object.entries(t.value).filter((e) => s.imageProps.includes(e[0]) ? !1 : d.value === "edit" ? ![...s.exclusions, ...s.formExclusions].includes(e[0]) : !s.exclusions.includes(e[0])) : []
-    ), Z = P(() => E.value.map(([e, o]) => ({
+    }), S = P(
+      () => o.value ? Object.entries(o.value).filter((e) => s.imageProps.includes(e[0]) ? !1 : d.value === "edit" ? ![...s.exclusions, ...s.formExclusions].includes(e[0]) : !s.exclusions.includes(e[0])) : []
+    ), T = P(() => S.value.map(([e, t]) => ({
       col: 12,
       name: e,
-      type: typeof o == "boolean" ? "radio" : "text",
-      label: f(C(e, " ")),
+      type: typeof t == "boolean" ? "radio" : "text",
+      label: p(h(e, " ")),
       choices: [
         { label: "Accept", value: !0 },
         { label: "Reject", value: !0 }
       ]
-    }))), v = (e, o = "view", a) => {
-      if (I.value = o !== "close", o === "close")
+    }))), v = (e, t = "view", a) => {
+      if (z.value = t !== "close", t === "close")
         return D("toggleDialog", !1);
       if (a)
-        d.value = "doc", w.value = { alt: a, src: t.value[a] };
+        d.value = "doc", w.value = { alt: a, src: o.value[a] };
       else {
-        t.value = e, d.value = o;
+        o.value = e, d.value = t;
         const l = Object.fromEntries(
-          Object.entries(e).map(([r, b]) => [C(r), B(b)])
+          Object.entries(e).map(([r, y]) => [h(r), B(y)])
         );
-        D("updateData", l, o);
+        D("updateData", l, t);
       }
-    }, L = (e, o) => {
+    }, F = (e, t) => {
       var a, l, r;
-      return (a = s.booleanLabels) != null && a[e] ? o ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (r = s.booleanLabels) == null ? void 0 : r[e][1] : o ? "Active" : "Inactive";
-    }, B = (e, o) => {
+      return (a = s.booleanLabels) != null && a[e] ? t ? (l = s.booleanLabels) == null ? void 0 : l[e][0] : (r = s.booleanLabels) == null ? void 0 : r[e][1] : t ? "Active" : "Inactive";
+    }, B = (e, t) => {
       var a, l, r;
-      return o && ((a = s.valuesMap) != null && a[o]) && (e = (l = s.valuesMap) == null ? void 0 : l[o]), o && ((r = s.dateProps) != null && r.includes(o)) ? ae(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(t.value) : Array.isArray(e) && e.every((b) => typeof b == "string") && d.value === "view" ? f(e.join(", ")) : e;
+      return t && ((a = s.valuesMap) != null && a[t]) && (e = (l = s.valuesMap) == null ? void 0 : l[t]), t && ((r = s.dateProps) != null && r.includes(t)) ? oe(e, s.dateFormat) : typeof e == "boolean" ? Number(e) : typeof e == "function" ? e(o.value) : Array.isArray(e) && e.every((y) => typeof y == "string") && d.value === "view" ? p(e.join(", ")) : e;
     };
-    return H(d, (e) => {
+    return G(d, (e) => {
       e !== "doc" && (w.value = void 0);
-    }), (e, o) => (u(), U(_, {
+    }), H(() => {
+      if (m.value) {
+        const e = (t) => s.slugifyFormKeys ? h(t, "_") : t;
+        m.value = Object.entries(m.value).filter(([t]) => !s.formExclusions.includes(e(t))).reduce((t, [a, l]) => (t[e(a)] = J(l), t), {});
+      }
+    }), (e, t) => (u(), O(ee, {
       class: $([
         {
           "t-card-border": e.bordered,
@@ -120,39 +126,39 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
     }, {
       header: M(() => [
         i(e.$slots, "header", {}, () => [
-          n("div", te, [
-            n("div", oe, k(T.value), 1),
-            e.dialogMode ? (u(), m("button", {
+          n("div", le, [
+            n("div", se, k(I.value), 1),
+            e.dialogMode ? (u(), c("button", {
               key: 0,
               class: "close-btn",
-              onClick: o[0] || (o[0] = (a) => e.$emit("toggleDialog", !1))
-            }, " × ")) : h("", !0)
+              onClick: t[0] || (t[0] = (a) => e.$emit("toggleDialog", !1))
+            }, " × ")) : C("", !0)
           ])
         ])
       ]),
       default: M(() => [
         n("div", null, [
-          d.value === "edit" && p.value ? (u(), U(c(ee), J({
+          d.value === "edit" && m.value ? (u(), O(f(te), Q({
             key: 0,
             rounded: "",
             "show-group-labels": "",
             class: "p-4 m-4 mx-auto"
           }, e.formProps, {
-            modelValue: p.value,
-            "onUpdate:modelValue": o[1] || (o[1] = (a) => p.value = a),
-            fields: Z.value,
-            loading: z.value,
-            onCancel: o[2] || (o[2] = (a) => d.value = "view"),
-            onSubmit: o[3] || (o[3] = (a) => D("click:save", t.value))
-          }), K({ _: 2 }, [
+            modelValue: m.value,
+            "onUpdate:modelValue": t[1] || (t[1] = (a) => m.value = a),
+            fields: T.value,
+            loading: R.value,
+            onCancel: t[2] || (t[2] = (a) => d.value = "view"),
+            onSubmit: t[3] || (t[3] = (a) => D("click:save", o.value))
+          }), W({ _: 2 }, [
             e.$slots["form-prepend"] ? {
               name: "prepend",
               fn: M(() => [
                 i(e.$slots, "form-prepend", {
-                  form: p.value,
-                  errors: j.value,
-                  data: t.value,
-                  toggle: (a) => v(t.value, a)
+                  form: m.value,
+                  errors: E.value,
+                  data: o.value,
+                  toggle: (a) => v(o.value, a)
                 })
               ]),
               key: "0"
@@ -161,123 +167,123 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
               name: "default",
               fn: M(() => [
                 i(e.$slots, "form-append", {
-                  form: p.value,
-                  errors: j.value,
-                  data: t.value,
-                  toggle: (a) => v(t.value, a)
+                  form: m.value,
+                  errors: E.value,
+                  data: o.value,
+                  toggle: (a) => v(o.value, a)
                 })
               ]),
               key: "1"
             } : void 0,
-            V(c(X), (a) => ({
+            V(f(_), (a) => ({
               name: a,
               fn: M((l) => [
-                i(e.$slots, a, Q(W(l)))
+                i(e.$slots, a, X(Y(l)))
               ])
             }))
-          ]), 1040, ["modelValue", "fields", "loading"])) : (d.value === "view" || !p.value) && t.value ? (u(), m("div", le, [
+          ]), 1040, ["modelValue", "fields", "loading"])) : (d.value === "view" || !m.value) && o.value ? (u(), c("div", re, [
             n("div", {
               class: $(["t-list", e.listClass]),
               separator: ""
             }, [
-              (u(!0), m(q, null, V(e.imageProps, (a) => i(e.$slots, "img-list-item", {
-                toggle: () => v(t.value, "doc", a),
+              (u(!0), c(U, null, V(e.imageProps, (a) => i(e.$slots, "img-list-item", {
+                toggle: () => v(o.value, "doc", a),
                 field: a,
-                label: c(f)(a),
-                value: String(t.value[a]),
+                label: f(p)(a),
+                value: String(o.value[a]),
                 key: a
               }, () => [
-                t.value[a] ? (u(), m("div", {
+                o.value[a] ? (u(), c("div", {
                   key: 0,
                   class: $(["t-item clickable", { "t-item-separator": e.separator }]),
-                  onClick: (l) => v(t.value, "doc", a)
+                  onClick: (l) => v(o.value, "doc", a)
                 }, [
-                  n("div", re, [
+                  n("div", ne, [
                     i(e.$slots, "image", {
-                      src: t.value[a]
+                      src: o.value[a]
                     }, () => [
-                      n("div", ie, [
+                      n("div", ue, [
                         n("img", {
-                          src: t.value[a],
-                          alt: c(f)(a)
-                        }, null, 8, ne)
+                          src: o.value[a],
+                          alt: f(p)(a)
+                        }, null, 8, de)
                       ])
                     ])
                   ]),
-                  o[5] || (o[5] = n("div", { class: "t-item-section" }, [
+                  t[5] || (t[5] = n("div", { class: "t-item-section" }, [
                     n("div", { class: "t-item-label" }, "Click to expand")
                   ], -1))
-                ], 10, se)) : h("", !0)
+                ], 10, ie)) : C("", !0)
               ])), 128)),
               i(e.$slots, "list-prepend", {
-                data: t.value,
-                toggle: (a) => v(t.value, a)
+                data: o.value,
+                toggle: (a) => v(o.value, a)
               }),
-              (u(!0), m(q, null, V(E.value, (a) => {
+              (u(!0), c(U, null, V(S.value, (a) => {
                 var l;
                 return i(e.$slots, "list-item", {
                   key: a[0],
                   field: a[0],
-                  label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? c(f)(a[0]),
-                  value: typeof a[1] == "boolean" ? L(c(C)(a[0]), a[1]) : B(a[1], a[0])
+                  label: ((l = e.labelsMap) == null ? void 0 : l[a[0]]) ?? f(p)(a[0]),
+                  value: typeof a[1] == "boolean" ? F(f(h)(a[0]), a[1]) : B(a[1], a[0])
                 }, () => {
                   var r;
                   return [
                     n("div", {
                       class: $(["t-item", { "t-item-separator": e.separator }])
                     }, [
-                      n("div", ue, [
-                        n("div", de, k(((r = e.labelsMap) == null ? void 0 : r[a[0]]) ?? c(f)(a[0])), 1),
-                        typeof a[1] == "boolean" ? (u(), m("div", ve, [
+                      n("div", ve, [
+                        n("div", me, k(((r = e.labelsMap) == null ? void 0 : r[a[0]]) ?? f(p)(a[0])), 1),
+                        typeof a[1] == "boolean" ? (u(), c("div", ce, [
                           n("div", {
                             class: $(["t-chip t-chip-square", a[1] ? "t-chip-green" : "t-chip-red"])
-                          }, k(L(c(C)(a[0]), a[1])), 3)
-                        ])) : (u(), m("div", me, k(B(a[1], a[0])), 1))
+                          }, k(F(f(h)(a[0]), a[1])), 3)
+                        ])) : (u(), c("div", fe, k(B(a[1], a[0])), 1))
                       ])
                     ], 2)
                   ];
                 });
               }), 128)),
               i(e.$slots, "list-append", {
-                data: t.value,
-                toggle: (a) => v(t.value, a)
+                data: o.value,
+                toggle: (a) => v(o.value, a)
               })
             ], 2),
             i(e.$slots, "list-after", {
-              data: t.value,
-              toggle: (a) => v(t.value, a)
+              data: o.value,
+              toggle: (a) => v(o.value, a)
             })
-          ])) : t.value ? (u(), m("div", ce, [
+          ])) : o.value ? (u(), c("div", ge, [
             i(e.$slots, "image-viewer", {
-              close: () => v(t.value, "view"),
-              src: t.value.imageUrl
+              close: () => v(o.value, "view"),
+              src: o.value.imageUrl
             }, () => {
-              var a, l, r, b, N;
+              var a, l, r, y, L;
               return [
-                O(Y, {
+                q(x, {
                   dense: "",
                   color: "primary",
                   label: "Return",
                   icon: "fas fa-arrow-left",
-                  onClick: o[4] || (o[4] = (fe) => v(t.value, "view"))
+                  onClick: t[4] || (t[4] = (ye) => v(o.value, "view"))
                 }),
-                (a = w.value) != null && a.src || t.value[((l = e.imageProps) == null ? void 0 : l[0]) ?? 0] ? (u(), m("img", {
+                (a = w.value) != null && a.src || o.value[((l = e.imageProps) == null ? void 0 : l[0]) ?? 0] ? (u(), c("img", {
                   key: 0,
                   style: { width: "100%" },
-                  src: String(((r = w.value) == null ? void 0 : r.src) || t.value[((b = e.imageProps) == null ? void 0 : b[0]) ?? 0]),
-                  alt: c(f)(((N = w.value) == null ? void 0 : N.alt) || "Document")
-                }, null, 8, ge)) : h("", !0)
+                  src: String(((r = w.value) == null ? void 0 : r.src) || o.value[((y = e.imageProps) == null ? void 0 : y[0]) ?? 0]),
+                  alt: f(p)(((L = w.value) == null ? void 0 : L.alt) || "Document")
+                }, null, 8, pe)) : C("", !0)
               ];
             })
-          ])) : h("", !0)
+          ])) : C("", !0)
         ]),
-        i(e.$slots, "loader", { loading: S.value }, () => [
-          O(x, { showing: S.value }, null, 8, ["showing"])
+        i(e.$slots, "loader", { loading: j.value }, () => [
+          q(ae, { showing: j.value }, null, 8, ["showing"])
         ]),
         i(e.$slots, "footer", {
-          data: t.value,
+          data: o.value,
           mode: d.value,
-          toggle: (a) => v(t.value, a)
+          toggle: (a) => v(o.value, a)
         })
       ]),
       _: 3
@@ -285,5 +291,5 @@ const te = { class: "flex items-center justify-between no-wrap" }, oe = { class:
   }
 });
 export {
-  Ce as default
+  Be as default
 };

@@ -1,9 +1,9 @@
-import { defineComponent as V, mergeModels as w, useModel as u, ref as P, openBlock as b, createElementBlock as I, Fragment as N, renderSlot as r, createVNode as B, withCtx as g, mergeProps as s, createSlots as z, normalizeProps as d, guardReactiveProps as y, renderList as U, unref as i, createCommentVNode as L } from "vue";
+import { defineComponent as V, mergeModels as w, useModel as u, ref as P, openBlock as b, createElementBlock as I, Fragment as N, renderSlot as r, createVNode as B, withCtx as g, mergeProps as s, createSlots as z, normalizeProps as d, guardReactiveProps as y, renderList as U, unref as i, createCommentVNode as F } from "vue";
 /* empty css                   */
-import S from "./dialog/TDialog.vue.mjs";
-import T from "./main-content.vue.mjs";
-import { slotNames as q, casts as t, formSlotNames as E } from "../utils/providers.mjs";
-const G = /* @__PURE__ */ V({
+import L from "./dialog/TDialog.vue.mjs";
+import S from "./main-content.vue.mjs";
+import { slotNames as T, casts as t, formSlotNames as q } from "../utils/providers.mjs";
+const A = /* @__PURE__ */ V({
   name: "DataViewer",
   __name: "data-viewer",
   props: /* @__PURE__ */ w({
@@ -27,6 +27,7 @@ const G = /* @__PURE__ */ V({
     data: {},
     form: {},
     formProps: {},
+    slugifyFormKeys: { type: Boolean },
     mode: {},
     errors: {},
     saving: { type: Boolean },
@@ -68,14 +69,14 @@ const G = /* @__PURE__ */ V({
         saving: p.value,
         toggleDialog: C
       }),
-      B(S, {
+      B(L, {
         modelValue: n.value,
         "onUpdate:modelValue": a[9] || (a[9] = (e) => n.value = e),
         "z-index": o.dialogZIndex,
         "dialog-class": o.dialogClass
       }, {
         default: g(() => [
-          B(T, s({
+          B(S, s({
             "dialog-mode": "",
             class: "constrained"
           }, o.$props, {
@@ -103,13 +104,13 @@ const G = /* @__PURE__ */ V({
             ]),
             _: 2
           }, [
-            U(i(q), (e) => ({
+            U(i(T), (e) => ({
               name: e,
               fn: g((l) => [
-                e === "form-append" || e === "form-prepend" ? r(o.$slots, e, d(s({ key: 0 }, i(t).form(l)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? r(o.$slots, e, d(s({ key: 1 }, i(t).list(l)))) : e === "list-item" ? r(o.$slots, e, d(s({ key: 2 }, i(t).listItem(l)))) : e === "img-list-item" ? r(o.$slots, e, d(s({ key: 3 }, i(t).imgListItem(l)))) : e === "image-viewer" ? r(o.$slots, e, d(s({ key: 4 }, i(t).imageViewer(l)))) : e === "loader" ? r(o.$slots, e, d(s({ key: 5 }, i(t).loader(l)))) : e === "image" ? r(o.$slots, e, d(s({ key: 6 }, i(t).image(l)))) : L("", !0)
+                e === "form-append" || e === "form-prepend" ? r(o.$slots, e, d(s({ key: 0 }, i(t).form(l)))) : e === "list-prepend" || e === "list-append" || e === "list-after" || e === "footer" ? r(o.$slots, e, d(s({ key: 1 }, i(t).list(l)))) : e === "list-item" ? r(o.$slots, e, d(s({ key: 2 }, i(t).listItem(l)))) : e === "img-list-item" ? r(o.$slots, e, d(s({ key: 3 }, i(t).imgListItem(l)))) : e === "image-viewer" ? r(o.$slots, e, d(s({ key: 4 }, i(t).imageViewer(l)))) : e === "loader" ? r(o.$slots, e, d(s({ key: 5 }, i(t).loader(l)))) : e === "image" ? r(o.$slots, e, d(s({ key: 6 }, i(t).image(l)))) : F("", !0)
               ])
             })),
-            U(i(E), (e) => ({
+            U(i(q), (e) => ({
               name: e,
               fn: g((l) => [
                 r(o.$slots, e, d(y(l)))
@@ -123,5 +124,5 @@ const G = /* @__PURE__ */ V({
   }
 });
 export {
-  G as default
+  A as default
 };
