@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.17.0...@toneflix/vue-dataviewer@1.17.1) (2024-11-25)
+
+### Bug Fixes
+
+- Fix dialog close button. ([130d1f4](https://github.com/toneflix/vue-component-pack/commit/130d1f49ba05de1af0c7b4ae5cd6b0bdc77b1754))
+- Fix the dialog close button ([235f4af](https://github.com/toneflix/vue-component-pack/commit/235f4af1b30028f088cd719e3fc5ddba2492ccbd))
+
 # [1.17.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.16.0...@toneflix/vue-dataviewer@1.17.0) (2024-11-25)
 
 ### Bug Fixes
