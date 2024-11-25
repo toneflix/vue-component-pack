@@ -20,6 +20,9 @@ body.t-dialog-active {
       font-size: 1.5rem;
       background: transparent;
       color: #e30f0f;
+      border: 0;
+      padding: 0;
+      margin: 0;
       &:hover {
         color: #e30f0fae;
       }
