@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.17.1...@toneflix/vue-dataviewer@1.18.0) (2024-11-25)
+
+### Features
+
+- Exclude excluded from props from actual form data and add the `slugifyFormKeys` to determine wether to convert form keys to slugs. ([3a704e0](https://github.com/toneflix/vue-component-pack/commit/3a704e0c7fbff97aa9e1fb35d5313e087889aad9))
+
 ## [1.17.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.17.0...@toneflix/vue-dataviewer@1.17.1) (2024-11-25)
 
 ### Bug Fixes
