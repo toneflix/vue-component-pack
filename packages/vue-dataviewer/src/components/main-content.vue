@@ -365,6 +365,7 @@ const sanitizeForm = () => {
 }
 
 defineExpose({
+  submit,
   sanitizeForm
 })
 </script>

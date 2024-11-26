@@ -18,7 +18,7 @@
       v-model:mode="viewMode"
       v-model:saving="saving"
       @set-data="(d, m) => $emit('toggleDialog', d, m)"
-      @click:save="(e, f) => $emit('click:save', e, f)"
+      @click:save="(f, d) => $emit('click:save', f, d)"
       @toggleDialog="dialogToggle = $event"
     >
       <template v-for="slot in slotNames" :key="slot" v-slot:[slot]="props">
@@ -128,6 +128,7 @@ const loadDialog = (data?: any, mode: 'edit' | 'view' | 'doc' | 'close' = 'view'
 }
 
 defineExpose({
+  submit: () => mainContent.value?.submit(),
   sanitizeForm: () => mainContent.value?.sanitizeForm()
 })
 </script>
