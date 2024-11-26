@@ -326,7 +326,8 @@ const parser = (data: string | boolean | any, field?: string, editing: boolean =
   }
 
   if (typeof data === 'boolean' || (field && props.booleanLabels?.[field])) {
-    return data === 'true' ? 1 : data === 'false' ? 0 : Number(data)
+    const value = data === 'true' ? 1 : data === 'false' ? 0 : Number(data)
+    return editing ? (props.formBooleanToNumber ? value : value === 1) : value
   }
 
   if (typeof data === 'function') {

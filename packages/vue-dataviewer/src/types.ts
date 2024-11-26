@@ -136,6 +136,10 @@ export interface MainProps {
    * Put the component in loading state
    */
   loading?: boolean | undefined
+  /**
+   * convert booleans to numbers in form data.
+   */
+  formBooleanToNumber?: boolean | undefined
 }
 
 export type FormSlotName = keyof FormSlots
