@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.22.0...@toneflix/vue-dataviewer@1.23.0) (2024-11-26)
+
+### Features
+
+- Use parser to prepare form data, while also checking if field is date so as to set proper input type. ([b700901](https://github.com/toneflix/vue-component-pack/commit/b7009013d93d688b81bc52c32932030b93cb19ff))
+
 # [1.22.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.21.0...@toneflix/vue-dataviewer@1.22.0) (2024-11-26)
 
 ### Features
