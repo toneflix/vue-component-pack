@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.19.0...@toneflix/vue-dataviewer@1.20.0) (2024-11-26)
+
+### Features
+
+- Expose form actions slot to data-viewer via form-actions slot. ([2f7e28f](https://github.com/toneflix/vue-component-pack/commit/2f7e28f7f1a66cebd3e29d322f3b462de28727c2))
+
 # [1.19.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.18.0...@toneflix/vue-dataviewer@1.19.0) (2024-11-25)
 
 ### Features
