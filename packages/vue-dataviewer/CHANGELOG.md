@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.20.0...@toneflix/vue-dataviewer@1.21.0) (2024-11-26)
+
+### Features
+
+- Add submit to exposed data-viewer properties. ([2bf07d3](https://github.com/toneflix/vue-component-pack/commit/2bf07d39c34fafd6dc9256f37f2b6fafc3f46b3f))
+
 # [1.20.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.19.0...@toneflix/vue-dataviewer@1.20.0) (2024-11-26)
 
 ### Features
