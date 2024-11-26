@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.18.0...@toneflix/vue-dataviewer@1.19.0) (2024-11-25)
+
+### Features
+
+- Sanitize form content only when initializing and when saving. Also expose the sanitize function. ([11344f1](https://github.com/toneflix/vue-component-pack/commit/11344f19e4e116afd59838af32dba85346ae4d03))
+
 # [1.18.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.17.1...@toneflix/vue-dataviewer@1.18.0) (2024-11-25)
 
 ### Features
