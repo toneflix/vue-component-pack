@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.24.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.23.0...@toneflix/vue-dataviewer@1.24.0) (2024-11-26)
+
+### Bug Fixes
+
+- Properly handle boolean values. ([3350f4d](https://github.com/toneflix/vue-component-pack/commit/3350f4d75007ce3e6050ea952c7f5ce4927a85ab))
+
+### Features
+
+- Allow setting wether form booleans should be returned as boolean or as number. ([4b1481f](https://github.com/toneflix/vue-component-pack/commit/4b1481f1d1cc66c1202fee97ad85d16dff7e2975))
+
 # [1.23.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.22.0...@toneflix/vue-dataviewer@1.23.0) (2024-11-26)
 
 ### Features
