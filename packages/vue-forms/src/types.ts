@@ -6,29 +6,29 @@ interface SlotScope extends FormField {
 
 export interface FormField {
   type:
-  | 'url'
-  | 'tel'
-  | 'text'
-  | 'file'
-  | 'date'
-  | 'time'
-  | 'week'
-  | 'email'
-  | 'month'
-  | 'color'
-  | 'hidden'
-  | 'number'
-  | 'search'
-  | 'password'
-  | 'datetime'
-  | 'datetime-local'
-  // =============
-  | 'select' // [x]
-  | 'checkbox' // [x]
-  | 'radio' // [x]
-  | 'range'
-  | 'switch' // [x]
-  | 'textarea' // [x]
+    | 'url'
+    | 'tel'
+    | 'text'
+    | 'file'
+    | 'date'
+    | 'time'
+    | 'week'
+    | 'email'
+    | 'month'
+    | 'color'
+    | 'hidden'
+    | 'number'
+    | 'search'
+    | 'password'
+    | 'datetime'
+    | 'datetime-local'
+    // =============
+    | 'select' // [x]
+    | 'checkbox' // [x]
+    | 'radio' // [x]
+    | 'range'
+    | 'switch' // [x]
+    | 'textarea' // [x]
 
   /**
    * Unique identifier for the field
@@ -250,7 +250,7 @@ export interface VueFormSlots {
   /**
    * Slot for adding content under actions
    */
-  actions: (scope: { loading: boolean, submit: () => void, cancel: () => void }) => VNode[]
+  actions: (scope: { loading: boolean; submit: () => void; cancel: () => void }) => VNode[]
 }
 
 export interface BaseProps {
@@ -319,7 +319,7 @@ export interface InputEvents {
 }
 
 export type GroupMeta<T extends FormField = FormField> = {
-  [key in T['group']as string]: {
+  [key in T['group'] as string]: {
     title: string
     rounded?: boolean
     subtitle?: string
@@ -332,7 +332,7 @@ export interface FormValues {
 }
 
 export type ComponentConstructor<Props = object, Slots = object> = {
-  new(): {
+  new (): {
     $props: PublicProps & Props
     $slots: Slots
   }

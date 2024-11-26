@@ -1,11 +1,11 @@
 import { defineComponent as p, mergeModels as d, useModel as f, useId as c, onMounted as y, openBlock as l, createElementBlock as a, toDisplayString as m, createCommentVNode as u, withDirectives as h, createElementVNode as B, vModelText as b } from "vue";
-const g = { class: "input-field" }, V = ["name", "placeholder"], v = {
+const V = { class: "input-field" }, g = ["name", "placeholder"], v = {
   key: 1,
   class: "field-anotations"
 }, M = {
   key: 0,
   class: "field-hint"
-}, S = /* @__PURE__ */ p({
+}, N = /* @__PURE__ */ p({
   name: "InputTextarea",
   __name: "input-textarea",
   props: /* @__PURE__ */ d({
@@ -55,7 +55,7 @@ const g = { class: "input-field" }, V = ["name", "placeholder"], v = {
     return y(() => {
       var e;
       r.autofocus && ((e = document.querySelector("#" + n)) == null || e.focus());
-    }), (e, o) => (l(), a("div", g, [
+    }), (e, o) => (l(), a("div", V, [
       e.label ? (l(), a("label", {
         key: 0,
         for: n
@@ -64,11 +64,11 @@ const g = { class: "input-field" }, V = ["name", "placeholder"], v = {
         rows: "3",
         id: n,
         name: e.name,
-        placeholder: String(e.placeholder),
+        placeholder: e.placeholder ?? "",
         "onUpdate:modelValue": o[0] || (o[0] = (t) => s.value = t),
         onBlur: o[1] || (o[1] = (t) => e.$emit("blur", t)),
         onFocus: o[2] || (o[2] = (t) => e.$emit("focus", t))
-      }, null, 40, V), [
+      }, null, 40, g), [
         [b, s.value]
       ]),
       e.label || e.hint ? (l(), a("div", v, [
@@ -78,5 +78,5 @@ const g = { class: "input-field" }, V = ["name", "placeholder"], v = {
   }
 });
 export {
-  S as default
+  N as default
 };
