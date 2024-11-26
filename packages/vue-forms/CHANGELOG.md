@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.11.0...@toneflix/vue-forms@1.12.0) (2024-11-26)
+
+### Features
+
+- Add loading, submit and cancel scope to actions slot. ([2ca5e70](https://github.com/toneflix/vue-component-pack/commit/2ca5e703161a94bffe8471b2b256753c9939114f))
+
 # [1.11.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.10.0...@toneflix/vue-forms@1.11.0) (2024-11-23)
 
 ### Features
