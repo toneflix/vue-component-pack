@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.21.0...@toneflix/vue-dataviewer@1.22.0) (2024-11-26)
+
+### Features
+
+- Set label as placeholder. ([4e02253](https://github.com/toneflix/vue-component-pack/commit/4e022535f77d421514517f32c87fa634db7de240))
+
 # [1.21.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.20.0...@toneflix/vue-dataviewer@1.21.0) (2024-11-26)
 
 ### Features
