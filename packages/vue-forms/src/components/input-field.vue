@@ -7,7 +7,7 @@
       :type="type"
       :id="id"
       :name="name"
-      :placeholder="String(placeholder)"
+      :placeholder="placeholder ?? ''"
       v-model="modelValue"
       @blur="$emit('blur', $event)"
       @focus="$emit('focus', $event)"
