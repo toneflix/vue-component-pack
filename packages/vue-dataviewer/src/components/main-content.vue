@@ -325,8 +325,8 @@ const parser = (data: string | boolean | any, field?: string, editing: boolean =
     return editing ? formatDate(data, "yyyy-MM-dd'T'HH:mm:ss") : formatDate(data, props.dateFormat)
   }
 
-  if (typeof data === 'boolean') {
-    return Number(data)
+  if (typeof data === 'boolean' || (field && props.booleanLabels?.[field])) {
+    return data === 'true' ? 1 : data === 'false' ? 0 : Number(data)
   }
 
   if (typeof data === 'function') {
