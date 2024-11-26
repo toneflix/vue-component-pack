@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.0...@toneflix/vue-forms@1.12.1) (2024-11-26)
+
+### Bug Fixes
+
+- Prevent input fields without a placeholder from showing undefined as placeholder. ([76c9792](https://github.com/toneflix/vue-component-pack/commit/76c9792a4cf5928a1df4fbb02f3d80ffc88c5541))
+
 # [1.12.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.11.0...@toneflix/vue-forms@1.12.0) (2024-11-26)
 
 ### Features
