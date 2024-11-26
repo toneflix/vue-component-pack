@@ -190,7 +190,6 @@ import { FormField } from '@toneflix/vue-forms/src/types'
 import { VueForms } from '@toneflix/vue-forms'
 import { ComponentSlots, FormSlots, MainContentProps, MainProps } from '../types'
 import { formatDate } from 'date-fns'
-import { toValue } from 'vue'
 
 defineSlots<ComponentSlots & FormSlots>()
 
@@ -271,7 +270,11 @@ const formdata = computed<FormField[]>(() => {
   return viewDataMap.value.map(([key, value]) => ({
     col: 12,
     name: key,
-    type: typeof value === 'boolean' ? 'radio' : 'text',
+    type: props.dateProps?.includes(key)
+      ? 'datetime-local'
+      : typeof value === 'boolean'
+      ? 'radio'
+      : 'text',
     label: titleCase(slug(key, ' ')),
     placeholder: titleCase(slug(key, ' ')),
     choices: [
@@ -313,13 +316,13 @@ const boolLabel = (key: string, bool: boolean) => {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const parser = (data: string | boolean | any, field?: string) => {
+const parser = (data: string | boolean | any, field?: string, editing: boolean = false) => {
   if (field && props.valuesMap?.[field]) {
     data = props.valuesMap?.[field]
   }
 
   if (field && props.dateProps?.includes(field)) {
-    return formatDate(data, props.dateFormat)
+    return editing ? formatDate(data, "yyyy-MM-dd'T'HH:mm:ss") : formatDate(data, props.dateFormat)
   }
 
   if (typeof data === 'boolean') {
@@ -359,7 +362,7 @@ const sanitizeForm = () => {
     form.value = Object.entries(form.value)
       .filter(([e]) => !props.formExclusions.includes(createKey(e)))
       .reduce((acc: { [object: string]: unknown }, [key, value]) => {
-        acc[createKey(key)] = toValue(value)
+        acc[createKey(key)] = parser(value, key, true)
         return acc
       }, {})
   }
