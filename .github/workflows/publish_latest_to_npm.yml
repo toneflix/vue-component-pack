@@ -37,6 +37,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build for publishing
+        run: pnpm build
+
+      - name: Format build
+        run: pnpm fmt
+
       - name: Add token to NPMRC
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.TONEFLIX_RELEASE_TOKEN }}" >> ~/.npmrc
