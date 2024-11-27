@@ -130,6 +130,18 @@ const formFields = ref<FormField[]>([
     group: 'alt'
   },
   {
+    type: 'radio',
+    name: 'available',
+    label: 'Availability',
+    col: 12,
+    hint: 'Set Availability',
+    choices: [
+      { label: 'Available', value: true },
+      { label: 'unavailable', value: false }
+    ],
+    group: 'alt'
+  },
+  {
     type: 'switch',
     name: 'safe_mode',
     label: 'Safe Mode',
@@ -167,7 +179,8 @@ const formValues = reactive({
   safe_mode: 0,
   country: 'Nigeria',
   address: '',
-  message: 'Hello my people'
+  message: 'Hello my people',
+  available: false
 })
 
 const tg = ref()
