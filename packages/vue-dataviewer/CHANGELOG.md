@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.26.0...@toneflix/vue-dataviewer@1.27.0) (2024-11-27)
+
+### Features
+
+- Add the hideFooter prop to hide the card footer if needed. ([9c002bc](https://github.com/toneflix/vue-component-pack/commit/9c002bc8531f07e1e908627bf7c855a82d3238c4))
+
 # [1.26.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.25.0...@toneflix/vue-dataviewer@1.26.0) (2024-11-27)
 
 ### Features
