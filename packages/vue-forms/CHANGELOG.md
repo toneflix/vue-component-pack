@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.4](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.3...@toneflix/vue-forms@1.12.4) (2024-11-27)
+
+### Bug Fixes
+
+- Separate card actions by gap instead of margin on the actions. ([4ea08fd](https://github.com/toneflix/vue-component-pack/commit/4ea08fd85be018950fcfbb6d970e120c1528cf05))
+
 ## [1.12.3](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.2...@toneflix/vue-forms@1.12.3) (2024-11-26)
 
 ### Bug Fixes
