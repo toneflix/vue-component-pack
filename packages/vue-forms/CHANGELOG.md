@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.8](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.7...@toneflix/vue-forms@1.12.8) (2024-11-27)
+
+### Bug Fixes
+
+- Fix input-radio value and validation. ([ff1ae17](https://github.com/toneflix/vue-component-pack/commit/ff1ae174de6cd830a740ad293cade08192a36f0a))
+
 ## [1.12.7](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.6...@toneflix/vue-forms@1.12.7) (2024-11-27)
 
 **Note:** Version bump only for package @toneflix/vue-forms
