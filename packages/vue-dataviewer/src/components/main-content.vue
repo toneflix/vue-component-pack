@@ -182,7 +182,7 @@
     <slot name="loader" :loading="loading">
       <TinnerLoading :showing="loading" />
     </slot>
-    <template #footer>
+    <template #footer v-if="!hideFooter">
       <slot
         name="footer"
         :data="viewData"

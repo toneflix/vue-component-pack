@@ -137,6 +137,10 @@ export interface MainProps {
    */
   loading?: boolean | undefined
   /**
+   * Hides the card footer when available.
+   */
+  hideFooter?: boolean | undefined
+  /**
    * convert booleans to numbers in form data.
    */
   formBooleanToNumber?: boolean | undefined
