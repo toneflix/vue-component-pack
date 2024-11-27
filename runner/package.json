@@ -25,6 +25,7 @@
     "@toneflix/vue-dataviewer": "workspace:*",
     "@toneflix/vue-forms": "file:../packages/vue-forms",
     "axios": "^1.7.7",
+    "lodash-es": "^4.17.21",
     "miragejs": "0.2.0-alpha.3",
     "pinia": "^2.2.4",
     "pinia-plugin-persistedstate": "^4.1.2",

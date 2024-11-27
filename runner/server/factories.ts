@@ -7,9 +7,9 @@ export const userFactory = Factory.extend({
   token: () => faker.string.uuid(),
   password: () => 'password',
   username: () => faker.internet.username(),
-  resetToken: () => Math.floor(Math.random() * 9999),
+  resetToken: () => String(Math.floor(Math.random() * 9999)),
   roles: 'user',
-  perms: []
+  perms: <string[]>[]
 })
 
 export const testUser = {

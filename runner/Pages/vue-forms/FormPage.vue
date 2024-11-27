@@ -29,7 +29,6 @@
           <option value="option1">Option 1</option>
         </select>
       </template> -->
-      <template #actions="props"> Hello {{ props.submit }} </template>
     </VueForms>
   </div>
   <div class="demo-container">

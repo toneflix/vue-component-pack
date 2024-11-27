@@ -62,8 +62,8 @@ const parsedChoices = computed(() => {
 
 // Event handler for setting the value
 const setValue = (event: Event) => {
-  const target = event.target as HTMLInputElement
-  modelValue.value = parseValue(target.value)
+  const { value } = event.target as HTMLInputElement
+  modelValue.value = !isNaN(Number(value)) ? Number(value) : value
 }
 
 // Event handler for setting the value

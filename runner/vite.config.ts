@@ -4,8 +4,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   optimizeDeps: {
-    force: true,
-    include: ['../packages/**/*']
+    noDiscovery: true,
+    include: []
   },
   server: {
     watch: {
@@ -14,6 +14,8 @@ export default defineConfig({
     }
   },
   resolve: {
-    preserveSymlinks: true
+    alias: {
+      lodash: 'lodash-es',
+    },
   }
 })
