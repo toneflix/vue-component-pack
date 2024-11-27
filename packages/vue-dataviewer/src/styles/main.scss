@@ -45,9 +45,14 @@ body.t-dialog-active {
   }
 }
 
-.t-card {
-  --tf-btn-confirm-bg: #10c44c;
-  --tf-btn-cancel-bg: #ff3a3a;
+.t-card,
+.t-dialog-controls {
+  --tf-primary-color: #e58846;
+  --tf-primary-color-faded: #e58846c4;
+  --tf-positive-color: #25b401;
+  --tf-positive-color-faded: #25b401c0;
+  --tf-negative-color: #e30f0f;
+  --tf-negative-color-faded: #e30f0fba;
   font-family: 'Archivo', sans-serif;
   width: 100%;
   max-width: 90vw;
@@ -129,10 +134,10 @@ body.t-dialog-active {
     border-radius: 0;
   }
   &-red {
-    background-color: #e30f0f;
+    background-color: var(--tf-negative-color);
   }
   &-green {
-    background-color: #25b401;
+    background-color: var(--tf-positive-color);
   }
 }
 
@@ -207,12 +212,19 @@ button.t-btn,
   border-radius: 0.25rem;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);
   color: #fff;
-  background-color: rgb(229, 136, 70);
+  background-color: var(--tf-primary-color);
+  cursor: pointer;
   &.action-confirm {
-    background-color: var(--tf-btn-confirm-bg);
+    background-color: var(--tf-positive-color);
+    &:hover {
+      background-color: var(--tf-primary-color-faded);
+    }
   }
   &.action-cancel {
-    background-color: var(--tf-btn-cancel-bg);
+    background-color: var(--tf-negative-color);
+    &:hover {
+      background-color: var(--tf-negative-color-faded);
+    }
   }
 }
 
@@ -222,14 +234,13 @@ button.t-btn,
 }
 
 button.t-btn:hover {
-  background-color: rgba(229, 136, 70, 0.919);
-  cursor: pointer;
+  background-color: var(--tf-primary-color-faded);
 }
 
 button.t-btn:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  box-shadow: 0 0 0 0px #fff, 0 0 0 2px rgba(213, 118, 50, 0.919), 0 0 #0000;
+  box-shadow: 0 0 0 0px #fff, 0 0 0 2px var(--tf-primary-color-faded), 0 0 #0000;
 }
 
 .p-4 {

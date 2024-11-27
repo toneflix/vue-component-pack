@@ -1,10 +1,22 @@
 <template>
-  <slot
-    :viewData="viewData"
-    :viewMode="viewMode"
-    :saving="saving"
-    :toggleDialog="loadDialog"
-  ></slot>
+  <div
+    class="t-dialog-controls"
+    :style="{
+      '--tf-primary-color': colors?.primary,
+      '--tf-primary-color-faded': colors?.primaryFaded,
+      '--tf-positive-color': colors?.positive,
+      '--tf-positive-color-faded': colors?.positiveFaded,
+      '--tf-negative-color': colors?.negative,
+      '--tf-positive-negative-faded': colors?.negativeFaded
+    }"
+  >
+    <slot
+      :viewData="viewData"
+      :viewMode="viewMode"
+      :saving="saving"
+      :toggleDialog="loadDialog"
+    ></slot>
+  </div>
   <TDialog v-model="dialogToggle" :z-index="dialogZIndex" :dialog-class="dialogClass">
     <MainContent
       dialog-mode
@@ -30,18 +42,14 @@
         <slot
           :name="slot"
           v-bind="casts.list(props)"
-          v-else-if="
-            slot === 'list-prepend' ||
-            slot === 'list-append' ||
-            slot === 'list-after' ||
-            slot === 'footer'
-          "
+          v-else-if="slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after'"
         />
         <slot :name="slot" v-bind="casts.listItem(props)" v-else-if="slot === 'list-item'" />
         <slot :name="slot" v-bind="casts.imgListItem(props)" v-else-if="slot === 'img-list-item'" />
         <slot :name="slot" v-bind="casts.imageViewer(props)" v-else-if="slot === 'image-viewer'" />
         <slot :name="slot" v-bind="casts.loader(props)" v-else-if="slot === 'loader'" />
         <slot :name="slot" v-bind="casts.formActions(props)" v-else-if="slot === 'form-actions'" />
+        <slot :name="slot" v-bind="casts.footer(props)" v-else-if="slot === 'footer'" />
         <slot :name="slot" v-bind="casts.image(props)" v-else-if="slot === 'image'" />
       </template>
       <template v-for="slot in formSlotNames" :key="slot" v-slot:[slot]="props">

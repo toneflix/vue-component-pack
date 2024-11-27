@@ -8,6 +8,14 @@
       },
       contentClass
     ]"
+    :style="{
+      '--tf-primary-color': colors?.primary,
+      '--tf-primary-color-faded': colors?.primaryFaded,
+      '--tf-positive-color': colors?.positive,
+      '--tf-positive-color-faded': colors?.positiveFaded,
+      '--tf-negative-color': colors?.negative,
+      '--tf-positive-negative-faded': colors?.negativeFaded
+    }"
   >
     <template #header>
       <slot name="header">

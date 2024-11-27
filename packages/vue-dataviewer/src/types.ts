@@ -140,6 +140,35 @@ export interface MainProps {
    * convert booleans to numbers in form data.
    */
   formBooleanToNumber?: boolean | undefined
+  /**
+   * Set the colors used, values should be in rgb,rgba or hex.
+   */
+  colors?: {
+    /**
+    * The main color.
+    */
+    primary?: string;
+    /**
+    * The main color but with opacity added.
+    */
+    primaryFaded?: string;
+    /**
+    * Color used to denote positive actions or result.
+    */
+    positive?: string;
+    /**
+    * Color used to denote positive actions or result but with opacity added.
+    */
+    positiveFaded?: string;
+    /**
+    * Color used to denote negative actions or result.
+    */
+    negative?: string;
+    /**
+    * Color used to denote negative actions or result but with opacity added.
+    */
+    negativeFaded?: string;
+  }
 }
 
 export type FormSlotName = keyof FormSlots
@@ -168,7 +197,7 @@ export interface ComponentSlots {
     mode?: MainProps['mode']
     loading: boolean;
     submit: () => void;
-    cancel: () => void
+    cancel: () => void;
     toggle: (mode?: MainProps['mode']) => void
   }) => VNode[]
   /**
