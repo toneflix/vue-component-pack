@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.24.1...@toneflix/vue-dataviewer@1.25.0) (2024-11-27)
+
+### Features
+
+- Create card footer like the current header. ([6ff1d3b](https://github.com/toneflix/vue-component-pack/commit/6ff1d3b85ada5d550ae0a4b53130a660ed77a273))
+
 ## [1.24.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.24.0...@toneflix/vue-dataviewer@1.24.1) (2024-11-27)
 
 ### Bug Fixes
