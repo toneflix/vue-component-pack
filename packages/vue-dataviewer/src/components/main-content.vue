@@ -278,8 +278,8 @@ const formdata = computed<FormField[]>(() => {
     label: titleCase(slug(key, ' ')),
     placeholder: titleCase(slug(key, ' ')),
     choices: [
-      { label: 'Accept', value: true },
-      { label: 'Reject', value: true }
+      { label: props.booleanLabels?.[key]?.[1] ?? 'Accept', value: true },
+      { label: props.booleanLabels?.[key]?.[0] ?? 'Reject', value: false }
     ]
   }))
 })
