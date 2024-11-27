@@ -166,6 +166,9 @@ export interface ComponentSlots {
   footer: (scope: {
     data: MainProps['data']
     mode?: MainProps['mode']
+    loading: boolean;
+    submit: () => void;
+    cancel: () => void
     toggle: (mode?: MainProps['mode']) => void
   }) => VNode[]
   /**

@@ -24,6 +24,8 @@
     <div>
       <VueForms
         rounded
+        hide-cancel
+        hide-submit
         show-group-labels
         class="p-4 m-4 mx-auto"
         v-bind="formProps"
@@ -172,25 +174,38 @@
     <slot name="loader" :loading="loading">
       <TinnerLoading :showing="loading" />
     </slot>
-
-    <slot
-      name="footer"
-      :data="viewData"
-      :mode="viewMode"
-      :toggle="(mode: MainProps['mode']) => setData(viewData, mode)"
-    ></slot>
+    <template #footer>
+      <slot
+        name="footer"
+        :data="viewData"
+        :mode="viewMode"
+        :loading="saving"
+        :submit="submit"
+        :cancel="() => (viewMode = 'view')"
+        :toggle="(mode: MainProps['mode']) => setData(viewData, mode)"
+      >
+        <FormActions
+          :loading="loading"
+          :hide-cancel="props.formProps?.hideCancel"
+          :hide-submit="props.formProps?.hideSubmit"
+          :cancel-label="props.formProps?.cancelLabel"
+          :submit-label="props.formProps?.submitLabel"
+        />
+      </slot>
+    </template>
   </TCard>
 </template>
 
 <script setup lang="ts">
 import '../styles/main.scss'
+// import '@toneflix/vue-forms/dist/lib/style.css'
 import { computed, ref, watch } from 'vue'
 import { formSlotNames, slug, titleCase } from '../utils/providers'
 import TBtn from './TBtn.vue'
 import TCard from './dialog/TCard.vue'
 import TinnerLoading from './TInnerLoading.vue'
 import { FormField } from '@toneflix/vue-forms/src/types'
-import { VueForms } from '@toneflix/vue-forms'
+import { FormActions, VueForms } from '@toneflix/vue-forms'
 import { ComponentSlots, FormSlots, MainContentProps, MainProps } from '../types'
 import { formatDate } from 'date-fns'
 

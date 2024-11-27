@@ -46,6 +46,8 @@ body.t-dialog-active {
 }
 
 .t-card {
+  --tf-btn-confirm-bg: #10c44c;
+  --tf-btn-cancel-bg: #ff3a3a;
   font-family: 'Archivo', sans-serif;
   width: 100%;
   max-width: 90vw;
@@ -76,10 +78,10 @@ body.t-dialog-active {
   }
   &-body {
     overflow: auto;
-    border-top: solid rgba(200, 200, 200, 0.5) 1px;
   }
   &-header {
     padding: 0.7rem 1em;
+    border-bottom: solid rgba(200, 200, 200, 0.5) 1px;
     .card-title {
       font-weight: 700;
       font-size: 1.25em;
@@ -87,6 +89,10 @@ body.t-dialog-active {
     > .flex {
       align-items: flex-start !important;
     }
+  }
+  &-footer {
+    padding: 0.7rem 1em;
+    border-top: solid rgba(200, 200, 200, 0.5) 1px;
   }
 
   @media (min-width: 576px) {
@@ -185,7 +191,8 @@ body.t-dialog-active {
   }
 }
 
-button.t-btn {
+button.t-btn,
+.form-actions button {
   display: inline-flex;
   align-items: center;
   padding-left: 0.625rem;
@@ -201,6 +208,17 @@ button.t-btn {
   box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);
   color: #fff;
   background-color: rgb(229, 136, 70);
+  &.action-confirm {
+    background-color: var(--tf-btn-confirm-bg);
+  }
+  &.action-cancel {
+    background-color: var(--tf-btn-cancel-bg);
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
 }
 
 button.t-btn:hover {
