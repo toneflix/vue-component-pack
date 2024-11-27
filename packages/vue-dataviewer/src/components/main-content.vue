@@ -119,8 +119,8 @@
               :field="field[0]"
               :label="labelsMap?.[field[0]] ?? titleCase(field[0])"
               :value="
-                typeof field[1] === 'boolean'
-                  ? boolLabel(field[0], field[1]) || booleanLabels?.[field[0]]
+                isBoolean(field[1])
+                  ? boolLabel(field[0], !!field[1]) || booleanLabels?.[field[0]]
                   : parser(field[1], field[0])
               "
             >
@@ -129,10 +129,7 @@
                   <div class="t-item-label caption">
                     {{ labelsMap?.[field[0]] ?? titleCase(field[0]) }}
                   </div>
-                  <div
-                    class="t-item-label"
-                    v-if="typeof field[1] === 'boolean' || booleanLabels?.[field[0]]"
-                  >
+                  <div class="t-item-label" v-if="isBoolean(field[1]) || booleanLabels?.[field[0]]">
                     <div
                       class="t-chip t-chip-square"
                       :class="field[1] ? 't-chip-green' : 't-chip-red'"
@@ -208,7 +205,7 @@
 import '../styles/main.scss'
 // import '@toneflix/vue-forms/dist/lib/style.css'
 import { computed, ref, watch } from 'vue'
-import { formSlotNames, slug, titleCase } from '../utils/providers'
+import { formSlotNames, isBoolean, slug, titleCase } from '../utils/providers'
 import TBtn from './TBtn.vue'
 import TCard from './dialog/TCard.vue'
 import TinnerLoading from './TInnerLoading.vue'
@@ -296,11 +293,7 @@ const formdata = computed<FormField[]>(() => {
   return viewDataMap.value.map(([key, value]) => ({
     col: 12,
     name: key,
-    type: props.dateProps?.includes(key)
-      ? 'datetime-local'
-      : typeof value === 'boolean'
-      ? 'radio'
-      : 'text',
+    type: props.dateProps?.includes(key) ? 'datetime-local' : isBoolean(value) ? 'radio' : 'text',
     label: titleCase(slug(key, ' ')),
     placeholder: titleCase(slug(key, ' ')),
     choices: [
@@ -351,7 +344,7 @@ const parser = (data: string | boolean | any, field?: string, editing: boolean =
     return editing ? formatDate(data, "yyyy-MM-dd'T'HH:mm:ss") : formatDate(data, props.dateFormat)
   }
 
-  if (typeof data === 'boolean' || (field && props.booleanLabels?.[field])) {
+  if (isBoolean(data) || (field && props.booleanLabels?.[field])) {
     const value = data === 'true' ? 1 : data === 'false' ? 0 : Number(data)
     return editing ? (props.formBooleanToNumber ? value : value === 1) : value
   }

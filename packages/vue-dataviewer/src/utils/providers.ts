@@ -126,3 +126,22 @@ export const propsCast = <X> (props: X, slot: SlotName) => {
     return <{ label: string; value: string; field: string }>props
   }
 }
+
+export const isBoolean = <T extends string | number | boolean> (value: T): boolean => {
+  const booleanStrings = ["true", "false"];
+  const booleanNumbers = [1, 0];
+
+  if (typeof value === "boolean") {
+    return true;
+  }
+
+  if (typeof value === "string" && booleanStrings.includes(value.toLowerCase())) {
+    return true;
+  }
+
+  if (typeof value === "number" && booleanNumbers.includes(value)) {
+    return true;
+  }
+
+  return false;
+}
