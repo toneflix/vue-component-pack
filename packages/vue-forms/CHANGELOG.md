@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.3](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.2...@toneflix/vue-forms@1.12.3) (2024-11-26)
+
+### Bug Fixes
+
+- Leave placeholder as string or undefined, but cast to string. ([210c900](https://github.com/toneflix/vue-component-pack/commit/210c900c9374362b8e2ff23ac736bf186f2d819b))
+
 ## [1.12.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.1...@toneflix/vue-forms@1.12.2) (2024-11-26)
 
 **Note:** Version bump only for package @toneflix/vue-forms
