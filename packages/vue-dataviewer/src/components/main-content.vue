@@ -73,7 +73,7 @@
           >
           </slot>
         </template>
-        <template v-for="slot in formSlotNames" :key="slot" v-slot:[slot]="props">
+        <template v-for="slot in formSlotNames" :key="slot" v-slot:[formSlot(slot)]="props">
           <slot :name="slot" v-bind="props" />
         </template>
       </VueForms>
@@ -369,6 +369,10 @@ watch(viewMode, (viewMode) => {
     activeDoc.value = undefined
   }
 })
+
+const formSlot = (slot: string) => {
+  return slot.replace('form-', '')
+}
 
 const submit = () => {
   sanitizeForm()
