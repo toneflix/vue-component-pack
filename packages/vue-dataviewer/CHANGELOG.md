@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.25.0...@toneflix/vue-dataviewer@1.26.0) (2024-11-27)
+
+### Features
+
+- Add colors props and handler to control the system colors. ([c70ff49](https://github.com/toneflix/vue-component-pack/commit/c70ff492a47b1805ea5d3dc6d36f8d168d296a1b))
+
 # [1.25.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.24.1...@toneflix/vue-dataviewer@1.25.0) (2024-11-27)
 
 ### Features
