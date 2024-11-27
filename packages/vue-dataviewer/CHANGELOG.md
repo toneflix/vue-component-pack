@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.27.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.27.0...@toneflix/vue-dataviewer@1.27.1) (2024-11-27)
+
+### Bug Fixes
+
+- Improve boolean checking. ([2a83a93](https://github.com/toneflix/vue-component-pack/commit/2a83a93a21f8bb1292e0173541d8875fddd4a111))
+
 # [1.27.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.26.0...@toneflix/vue-dataviewer@1.27.0) (2024-11-27)
 
 ### Features
