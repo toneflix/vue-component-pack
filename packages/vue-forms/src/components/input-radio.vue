@@ -10,7 +10,7 @@
             :id="'vf-' + choice.value + name"
             :name="name"
             :value="choice.value"
-            :checked="modelValue === choice.value"
+            :checked="checked(choice.value)"
             @change="setValue"
           />
           <label :for="'vf-' + choice.value + name">
@@ -64,5 +64,14 @@ const parsedChoices = computed(() => {
 const setValue = (event: Event) => {
   const target = event.target as HTMLInputElement
   modelValue.value = target.value
+}
+
+// Event handler for setting the value
+const checked = (value: boolean | string | number): boolean => {
+  const mValue = modelValue.value
+  const data = value === 'true' ? true : value === 'false' ? false : Number(value) === 1
+  const mData = mValue === 'true' ? true : mValue === 'false' ? false : Number(mValue) === 1
+
+  return data === mData
 }
 </script>
