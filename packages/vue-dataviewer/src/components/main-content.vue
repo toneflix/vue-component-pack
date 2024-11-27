@@ -110,7 +110,7 @@
               :label="labelsMap?.[field[0]] ?? titleCase(field[0])"
               :value="
                 typeof field[1] === 'boolean'
-                  ? boolLabel(slug(field[0]), field[1])
+                  ? boolLabel(field[0], field[1]) || booleanLabels?.[field[0]]
                   : parser(field[1], field[0])
               "
             >
@@ -119,12 +119,15 @@
                   <div class="t-item-label caption">
                     {{ labelsMap?.[field[0]] ?? titleCase(field[0]) }}
                   </div>
-                  <div class="t-item-label" v-if="typeof field[1] === 'boolean'">
+                  <div
+                    class="t-item-label"
+                    v-if="typeof field[1] === 'boolean' || booleanLabels?.[field[0]]"
+                  >
                     <div
                       class="t-chip t-chip-square"
                       :class="field[1] ? 't-chip-green' : 't-chip-red'"
                     >
-                      {{ boolLabel(slug(field[0]), field[1]) }}
+                      {{ boolLabel(field[0], !!field[1]) }}
                     </div>
                   </div>
                   <div class="t-item-label" v-else>
