@@ -47,52 +47,52 @@ export const slotNames: SlotName[] = [
 ]
 
 export const casts = {
-  image: <X> (props: X) => {
+  image: <X>(props: X) => {
     return <{ src?: string | undefined }>props
   },
-  loader: <X> (props: X) => {
+  loader: <X>(props: X) => {
     return <{ loading: boolean }>props
   },
-  listItem: <X> (props: X) => {
+  listItem: <X>(props: X) => {
     return <{ label: string; value: string; field: string }>props
   },
-  imgListItem: <X> (props: X) => {
+  imgListItem: <X>(props: X) => {
     return <{ label: string; value: string; field: string; toggle: () => void }>props
   },
-  imageViewer: <X> (props: X) => {
+  imageViewer: <X>(props: X) => {
     return <{ close: () => void; src?: string | undefined }>props
   },
-  castFormPos: <X> (props: X) => {
+  castFormPos: <X>(props: X) => {
     return <
       {
         form?: undefined
         data?: MainProps['data']
         errors?: MainProps['errors']
       }
-      >props
+    >props
   },
-  list: <X> (props: X) => {
+  list: <X>(props: X) => {
     return <
       {
         data: MainProps['data']
         mode?: MainProps['mode'] | undefined
         toggle: (mode: MainProps['mode']) => void
       }
-      >props
+    >props
   },
-  footer: <X> (props: X) => {
+  footer: <X>(props: X) => {
     return <
       {
         data: MainProps['data']
         mode?: MainProps['mode'] | undefined
-        loading: boolean;
-        submit: () => void;
-        cancel: () => void;
+        loading: boolean
+        submit: () => void
+        cancel: () => void
         toggle: (mode: MainProps['mode']) => void
       }
-      >props
+    >props
   },
-  form: <X> (props: X) => {
+  form: <X>(props: X) => {
     return <
       {
         form?: undefined
@@ -100,14 +100,14 @@ export const casts = {
         errors?: MainProps['errors']
         toggle: (mode: MainProps['mode']) => void
       }
-      >props
+    >props
   },
-  formActions: <X> (props: X) => {
+  formActions: <X>(props: X) => {
     return <{ loading: boolean; submit: () => void; cancel: () => void }>props
   }
 }
 
-export const propsCast = <X> (props: X, slot: SlotName) => {
+export const propsCast = <X>(props: X, slot: SlotName) => {
   if (slot === 'form-append' || slot === 'form-prepend') {
     return <
       {
@@ -115,33 +115,33 @@ export const propsCast = <X> (props: X, slot: SlotName) => {
         data?: MainProps['data']
         errors?: MainProps['errors']
       }
-      >props
+    >props
   } else if (slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after') {
     return <
       {
         data: MainProps['data']
       }
-      >props
+    >props
   } else if (slot === 'list-item') {
     return <{ label: string; value: string; field: string }>props
   }
 }
 
-export const isBoolean = <T extends string | number | boolean> (value: T): boolean => {
-  const booleanStrings = ["true", "false"];
-  const booleanNumbers = [1, 0];
+export const isBoolean = <T extends string | number | boolean>(value: T): boolean => {
+  const booleanStrings = ['true', 'false']
+  const booleanNumbers = [1, 0]
 
-  if (typeof value === "boolean") {
-    return true;
+  if (typeof value === 'boolean') {
+    return true
   }
 
-  if (typeof value === "string" && booleanStrings.includes(value.toLowerCase())) {
-    return true;
+  if (typeof value === 'string' && booleanStrings.includes(value.toLowerCase())) {
+    return true
   }
 
-  if (typeof value === "number" && booleanNumbers.includes(value)) {
-    return true;
+  if (typeof value === 'number' && booleanNumbers.includes(value)) {
+    return true
   }
 
-  return false;
+  return false
 }

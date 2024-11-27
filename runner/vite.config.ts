@@ -15,7 +15,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      lodash: 'lodash-es',
-    },
+      lodash: 'lodash-es'
+    }
   }
 })

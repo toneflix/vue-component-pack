@@ -13,12 +13,12 @@ export const makeServer = ({ environment = 'development' } = {}) => {
       user: userFactory
     },
 
-    seeds (server) {
+    seeds(server) {
       server.create('user', testUser)
       server.createList('user', 10)
     },
 
-    routes () {
+    routes() {
       this.urlPrefix = 'http://example.com'
 
       this.namespace = 'api/v1'
@@ -40,7 +40,7 @@ export const makeServer = ({ environment = 'development' } = {}) => {
 
       this.post('register', (schema, request) => {
         const params = JSON.parse(request.requestBody)
-        const errors: { email?: string, name?: string } = {}
+        const errors: { email?: string; name?: string } = {}
 
         if (!params.email) errors.email = 'Email address is required'
         if (!params.name) errors.name = 'Name is required'
@@ -62,7 +62,7 @@ export const makeServer = ({ environment = 'development' } = {}) => {
 
       this.post('reset', (schema, request) => {
         const params = JSON.parse(request.requestBody)
-        const errors: { token?: string, password?: string, password_confirmation?: string } = {}
+        const errors: { token?: string; password?: string; password_confirmation?: string } = {}
 
         const data = schema.findBy('user', { resetToken: params.token })
 
@@ -76,7 +76,12 @@ export const makeServer = ({ environment = 'development' } = {}) => {
         if (Object.entries(errors).length > 0)
           return new Response(422, {}, { errors, message: 'Error Occured' })
 
-        if (!data) return new Response(422, { token: 'Invalid reset token' }, { errors, message: 'Error Occured' })
+        if (!data)
+          return new Response(
+            422,
+            { token: 'Invalid reset token' },
+            { errors, message: 'Error Occured' }
+          )
 
         data.password = params.password
         data.save()

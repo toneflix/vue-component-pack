@@ -32,10 +32,10 @@ export interface DataViewerProps {
    * Map boolean data labels to data options
    */
   booleanLabels?:
-  | {
-    [key: string]: [string, string]
-  }
-  | undefined
+    | {
+        [key: string]: [string, string]
+      }
+    | undefined
   /**
    * Used along side with "bordered" to create a rounded border
    */
@@ -149,29 +149,29 @@ export interface MainProps {
    */
   colors?: {
     /**
-    * The main color.
-    */
-    primary?: string;
+     * The main color.
+     */
+    primary?: string
     /**
-    * The main color but with opacity added.
-    */
-    primaryFaded?: string;
+     * The main color but with opacity added.
+     */
+    primaryFaded?: string
     /**
-    * Color used to denote positive actions or result.
-    */
-    positive?: string;
+     * Color used to denote positive actions or result.
+     */
+    positive?: string
     /**
-    * Color used to denote positive actions or result but with opacity added.
-    */
-    positiveFaded?: string;
+     * Color used to denote positive actions or result but with opacity added.
+     */
+    positiveFaded?: string
     /**
-    * Color used to denote negative actions or result.
-    */
-    negative?: string;
+     * Color used to denote negative actions or result.
+     */
+    negative?: string
     /**
-    * Color used to denote negative actions or result but with opacity added.
-    */
-    negativeFaded?: string;
+     * Color used to denote negative actions or result but with opacity added.
+     */
+    negativeFaded?: string
   }
 }
 
@@ -179,7 +179,7 @@ export type FormSlotName = keyof FormSlots
 
 export type FormSlots = {
   [K in keyof Omit<VueFormSlots, 'prepend' | 'default' | 'actions'> as `form-${string &
-  K}`]: VueFormSlots[K]
+    K}`]: VueFormSlots[K]
 }
 
 export type SlotName = keyof Omit<ComponentSlots, 'default' | 'header' | 'image'>
@@ -199,9 +199,9 @@ export interface ComponentSlots {
   footer: (scope: {
     data: MainProps['data']
     mode?: MainProps['mode']
-    loading: boolean;
-    submit: () => void;
-    cancel: () => void;
+    loading: boolean
+    submit: () => void
+    cancel: () => void
     toggle: (mode?: MainProps['mode']) => void
   }) => VNode[]
   /**
