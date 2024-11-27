@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.24.0...@toneflix/vue-dataviewer@1.24.1) (2024-11-27)
+
+### Bug Fixes
+
+- Do proper formdata boolean map. ([1546595](https://github.com/toneflix/vue-component-pack/commit/15465950edf96aef7700905f4221052780edd990))
+- Fix boolLabel handling. ([20df5b7](https://github.com/toneflix/vue-component-pack/commit/20df5b756860f2621f69b55ba2863122e089fa6c))
+
 # [1.24.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.23.0...@toneflix/vue-dataviewer@1.24.0) (2024-11-26)
 
 ### Bug Fixes
