@@ -1,5 +1,11 @@
 import type { PublicProps, VNode } from 'vue'
-import { BaseProps as VueFormProps, VueFormSlots } from '@toneflix/vue-forms/src/types'
+import {
+  FormField as VueFormField,
+  BaseProps as VueFormProps,
+  VueFormSlots
+} from '@toneflix/vue-forms/src/types'
+
+export type ArgsType<Y extends SlotName> = Parameters<ComponentSlots[Y]>[number]
 
 export interface DataViewerProps {
   /**
@@ -32,10 +38,10 @@ export interface DataViewerProps {
    * Map boolean data labels to data options
    */
   booleanLabels?:
-    | {
-        [key: string]: [string, string]
-      }
-    | undefined
+  | {
+    [key: string]: [string, string]
+  }
+  | undefined
   /**
    * Used along side with "bordered" to create a rounded border
    */
@@ -179,7 +185,7 @@ export type FormSlotName = keyof FormSlots
 
 export type FormSlots = {
   [K in keyof Omit<VueFormSlots, 'prepend' | 'default' | 'actions'> as `form-${string &
-    K}`]: VueFormSlots[K]
+  K}`]: VueFormSlots[K]
 }
 
 export type SlotName = keyof Omit<ComponentSlots, 'default' | 'header' | 'image'>
@@ -217,6 +223,17 @@ export interface ComponentSlots {
     field: string
     toggle: () => void
   }) => VNode[]
+  /**
+   * Slot for overiding the form
+   */
+  form: (
+    scope: VueFormProps & {
+      loading: boolean
+      fields: VueFormField[]
+      submit: () => void
+      cancel: () => void
+    }
+  ) => VNode[]
   /**
    * Slot for adding content after the form
    */

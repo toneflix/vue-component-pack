@@ -34,23 +34,7 @@
       @toggleDialog="dialogToggle = $event"
     >
       <template v-for="slot in slotNames" :key="slot" v-slot:[slot]="props">
-        <slot
-          :name="slot"
-          v-bind="casts.form(props)"
-          v-if="slot === 'form-append' || slot === 'form-prepend'"
-        />
-        <slot
-          :name="slot"
-          v-bind="casts.list(props)"
-          v-else-if="slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after'"
-        />
-        <slot :name="slot" v-bind="casts.listItem(props)" v-else-if="slot === 'list-item'" />
-        <slot :name="slot" v-bind="casts.imgListItem(props)" v-else-if="slot === 'img-list-item'" />
-        <slot :name="slot" v-bind="casts.imageViewer(props)" v-else-if="slot === 'image-viewer'" />
-        <slot :name="slot" v-bind="casts.loader(props)" v-else-if="slot === 'loader'" />
-        <slot :name="slot" v-bind="casts.formActions(props)" v-else-if="slot === 'form-actions'" />
-        <slot :name="slot" v-bind="casts.footer(props)" v-else-if="slot === 'footer'" />
-        <slot :name="slot" v-bind="casts.image(props)" v-else-if="slot === 'image'" />
+        <slot :name="slot" v-bind="<any>props" />
       </template>
       <template v-for="slot in formSlotNames" :key="slot" v-slot:[slot]="props">
         <slot :name="slot" v-bind="props" />
@@ -65,7 +49,7 @@ import { ref, type VNode } from 'vue'
 import TDialog from './dialog/TDialog.vue'
 import MainContent from './main-content.vue'
 import { ComponentSlots, DataViewerProps, FormSlots, MainProps } from '../types'
-import { casts, formSlotNames, slotNames } from '../utils/providers'
+import { formSlotNames, slotNames } from '../utils/providers'
 
 defineOptions({
   name: 'DataViewer'

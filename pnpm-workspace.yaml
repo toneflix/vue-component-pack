@@ -1,10 +1,10 @@
 packages:
   - packages/*
-  # - runner
-  - '!runner'
-  - '!package-template'
-  - '!packages/otp-input'
-  - '!packages/vue-auth'
-  - '!packages/vue-forms'
+  - runner
+  # - '!runner'
+  # - '!package-template'
+  # - '!packages/otp-input'
+  # - '!packages/vue-auth'
+  # - '!packages/vue-forms'
   # - '!packages/vue-dataviewer'
-  - '!packages/paystack-inline'
+  # - '!packages/paystack-inline'

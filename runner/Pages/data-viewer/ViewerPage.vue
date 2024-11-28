@@ -36,7 +36,7 @@
     :dateProps="['createdAt']"
     :image-props="['imageUrl', 'imageUrl2']"
     :data="data"
-    :form="data"
+    :form="form"
     class="mmx"
   >
   </MainContent>
@@ -57,7 +57,7 @@ const data = reactive({
   email: 'john.doe@email.com',
   accept: false,
   category: 'home',
-  safe_mode: true,
+  safeMode: true,
   country: 'Nigeria',
   address: '',
   status: 'pending',
@@ -69,6 +69,14 @@ const data = reactive({
   nothing: () => 'Hello Nohting'
 })
 
+const form = reactive({
+  name: 'John Obi Doe',
+  email: 'john.doe@email.com',
+  accept: false,
+  category: 'home',
+  safe_mode: true,
+  message: 'Hello my people'
+})
 const dataViewer = ref()
 </script>
 
