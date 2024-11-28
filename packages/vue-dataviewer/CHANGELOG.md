@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.27.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.27.1...@toneflix/vue-dataviewer@1.27.2) (2024-11-27)
+
+### Bug Fixes
+
+- Fix form slots not working. ([efe4d03](https://github.com/toneflix/vue-component-pack/commit/efe4d03f6b3dc121e23470863bb98ec16a0cbee4))
+
 ## [1.27.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.27.0...@toneflix/vue-dataviewer@1.27.1) (2024-11-27)
 
 ### Bug Fixes
