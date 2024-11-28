@@ -47,7 +47,7 @@ export const slotNames: SlotName[] = [
   'form'
 ]
 
-export const propsCast = <X> (props: X, slot: SlotName) => {
+export const propsCast = <X>(props: X, slot: SlotName) => {
   if (slot === 'form-append' || slot === 'form-prepend') {
     return <
       {
@@ -55,19 +55,19 @@ export const propsCast = <X> (props: X, slot: SlotName) => {
         data?: MainProps['data']
         errors?: MainProps['errors']
       }
-      >props
+    >props
   } else if (slot === 'list-prepend' || slot === 'list-append' || slot === 'list-after') {
     return <
       {
         data: MainProps['data']
       }
-      >props
+    >props
   } else if (slot === 'list-item') {
     return <{ label: string; value: string; field: string }>props
   }
 }
 
-export const isBoolean = <T extends string | number | boolean> (value: T): boolean => {
+export const isBoolean = <T extends string | number | boolean>(value: T): boolean => {
   const booleanStrings = ['true', 'false']
   const booleanNumbers = [1, 0]
 
