@@ -25,13 +25,17 @@ import '../styles/main.scss'
 const emit = defineEmits<{
   (event: 'ready'): void
   (event: 'success', response: { message: string; reference: string }): void
-  (event: 'verified', response: { message?: string; status: boolean }): void
+  (event: 'verified', response: { message?: string | undefined; status: boolean }): void
   (event: 'canceled', response: { reference: string }): void
   (event: 'destroyed'): void
   (event: 'error', error: { message: string }, reference?: string): void
   (
     event: 'initialized',
-    data: { reference: string; authorization_url?: string; message?: string }
+    data: {
+      reference: string
+      authorization_url?: string | undefined
+      message?: string | undefined
+    }
   ): void
 }>()
 
@@ -40,17 +44,20 @@ const reference = defineModel<string>('reference')
 const props = withDefaults(defineProps<PaystackInlineProps>(), {
   btnLabel: 'Pay Now',
   initializeCallback() {
-    return new Promise<{ reference: string; authorization_url?: string; message: string }>(
-      (resolve) =>
-        resolve({
-          message: '',
-          reference: '',
-          authorization_url: ''
-        })
+    return new Promise<{
+      reference: string
+      authorization_url?: string | undefined
+      message: string
+    }>((resolve) =>
+      resolve({
+        message: '',
+        reference: '',
+        authorization_url: ''
+      })
     )
   },
   verifyCallback() {
-    return new Promise<{ status: boolean; message?: string }>((resolve) =>
+    return new Promise<{ status: boolean; message?: string | undefined }>((resolve) =>
       resolve({
         status: true,
         message: ''
@@ -66,7 +73,7 @@ const loading = ref(false)
 const verifyPayment = (ref: string) => {
   loading.value = true
   try {
-    props.verifyCallback(ref).then(({ status, message }) => {
+    props.verifyCallback(ref)?.then(({ status, message }) => {
       loading.value = false
       emit('verified', { status, message })
       reference.value = undefined
@@ -83,7 +90,7 @@ const verifyPayment = (ref: string) => {
 const initializeNewPayment = () => {
   loading.value = true
   try {
-    props.initializeCallback().then(({ reference, authorization_url, message }) => {
+    props.initializeCallback()?.then(({ reference, authorization_url, message }) => {
       emit('initialized', { reference, authorization_url, message })
       if (props.inline || !authorization_url) {
         paystackInline(reference)
@@ -112,12 +119,12 @@ const paystackInline = (reference: string = '') => {
         {
           display_name: 'Name',
           variable_name: 'Name',
-          value: props.customer.name
+          value: props.customer.name ?? ''
         },
         {
           display_name: 'Phone Number',
           variable_name: 'Phone Number',
-          value: props.customer.phone
+          value: props.customer.phone ?? ''
         }
       ]
     },

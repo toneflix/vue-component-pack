@@ -21,7 +21,8 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "exactOptionalPropertyTypes": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "esModuleInterop": true // This is a temporary solution till when updates to @types/paystack__inline-js are approved
   },
   "exclude": ["documentations/**/*"]
 }
