@@ -112,7 +112,7 @@ const paystackInline = (reference: string = '') => {
     email: props.customer.email,
     amount: props.amount * 100,
     reference: reference,
-    firstName: (props.customer.name || props.customer.email).split(' ')[0],
+    firstName: (props.customer.name || props.customer.email).split(' ')[0] || '',
     lastName: (props.customer.name || props.customer.email).split(' ')[1] || '',
     metadata: {
       custom_fields: [
