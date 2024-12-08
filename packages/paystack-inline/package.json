@@ -22,11 +22,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@paystack/inline-js": "^2.22.0",
-    "vue-router": "^4.4.5"
+    "@paystack/inline-js": "^2.22.0"
   },
   "peerDependencies": {
-    "vue": "^3.5.11"
+    "vue": "^3.5.11",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@types/paystack__inline-js": "^1.0.0",
