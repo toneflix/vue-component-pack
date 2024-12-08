@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.28.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.27.2...@toneflix/vue-dataviewer@1.28.0) (2024-11-28)
+
+### Features
+
+- Add form slot to enable overiding the entire form. ([95d8375](https://github.com/toneflix/vue-component-pack/commit/95d83754b184d49a53d4cabcc059ad6c3576b6af))
+
 ## [1.27.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.27.1...@toneflix/vue-dataviewer@1.27.2) (2024-11-27)
 
 ### Bug Fixes
