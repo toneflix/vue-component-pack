@@ -79,6 +79,34 @@ importers:
         specifier: ^3.5.11
         version: 3.5.13(typescript@5.6.3)
 
+  packages/vue-auth:
+    dependencies:
+      axios:
+        specifier: ^1.7.7
+        version: 1.7.7
+      pinia:
+        specifier: ^2.2.4
+        version: 2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
+      vue-router:
+        specifier: ^4.4.5
+        version: 4.4.5(vue@3.5.13(typescript@5.6.3))
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: ^5.1.4
+        version: 5.2.0(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
+      '@vue/runtime-core':
+        specifier: ^3.5.12
+        version: 3.5.13
+      vite:
+        specifier: ^5.4.10
+        version: 5.4.11(sass@1.80.4)
+      vitepress:
+        specifier: ^1.4.1
+        version: 1.5.0(@algolia/client-search@5.15.0)(axios@1.7.7)(postcss@8.4.49)(sass@1.80.4)(search-insights@2.17.3)(typescript@5.6.3)
+      vue:
+        specifier: ^3.5.12
+        version: 3.5.13(typescript@5.6.3)
+
 packages:
 
   '@algolia/autocomplete-core@1.17.7':
@@ -2662,6 +2690,15 @@ packages:
   pify@5.0.0:
     resolution: {integrity: sha512-eW/gHNMlxdSP6dmG6uJip6FXN0EQBwm2clYYd8Wul42Cwu/DK8HEftzsapcNdYe2MfLiIwZqsDk2RDEsTE79hA==}
     engines: {node: '>=10'}
+
+  pinia@2.3.0:
+    resolution: {integrity: sha512-ohZj3jla0LL0OH5PlLTDMzqKiVw2XARmC1XYLdLWIPBMdhDW/123ZWr4zVAhtJm+aoSkFa13pYXskAvAscIkhQ==}
+    peerDependencies:
+      typescript: '>=4.4.4'
+      vue: ^2.7.0 || ^3.5.11
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   pkg-dir@4.2.0:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
@@ -6337,6 +6374,16 @@ snapshots:
   pify@4.0.1: {}
 
   pify@5.0.0: {}
+
+  pinia@2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)):
+    dependencies:
+      '@vue/devtools-api': 6.6.4
+      vue: 3.5.13(typescript@5.6.3)
+      vue-demi: 0.14.10(vue@3.5.13(typescript@5.6.3))
+    optionalDependencies:
+      typescript: 5.6.3
+    transitivePeerDependencies:
+      - '@vue/composition-api'
 
   pkg-dir@4.2.0:
     dependencies:
