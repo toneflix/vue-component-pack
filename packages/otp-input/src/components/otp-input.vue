@@ -139,7 +139,7 @@ const onValueChange = (e: CustomInputEvent, index: number) => {
   if (e.target.value === '' || !e.target.validity.valid) {
     return
   }
-  let next: number
+  let next: number | undefined
   const value = e.target.value
   inputValues.value = Object.assign([], inputValues.value)
   if (value.length > 1) {
@@ -163,8 +163,8 @@ const onValueChange = (e: CustomInputEvent, index: number) => {
   }
   if (next) {
     const element = inputsRef.value[next]
-    element.focus()
-    element.select()
+    element?.focus()
+    element?.select()
   }
   triggerChange(inputValues.value)
 }
@@ -184,7 +184,7 @@ const onKeyDown = (e: CustomKeyboardEvent, index: number) => {
       triggerChange(vals)
     } else if (next) {
       vals[nextIndex] = ''
-      inputsRef.value[next].focus()
+      inputsRef.value[next]?.focus()
       inputValues.value = vals
       triggerChange(vals)
     }
@@ -200,7 +200,7 @@ const onKeyDown = (e: CustomKeyboardEvent, index: number) => {
         triggerChange(vals)
       } else if (prev) {
         vals[prevIndex] = ''
-        inputsRef.value[prev].focus()
+        inputsRef.value[prev]?.focus()
         inputValues.value = vals
         triggerChange(vals)
       }
@@ -213,13 +213,13 @@ const onKeyDown = (e: CustomKeyboardEvent, index: number) => {
     case KEY_CODE.left:
       e.preventDefault()
       if (prev) {
-        inputsRef.value[prev].focus()
+        inputsRef.value[prev]?.focus()
       }
       break
     case KEY_CODE.right:
       e.preventDefault()
       if (next) {
-        inputsRef.value[next].focus()
+        inputsRef.value[next]?.focus()
       }
       break
     case KEY_CODE.up:
