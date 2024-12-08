@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.3.7...@toneflix/paystack-inline@1.4.0) (2024-12-08)
+
+### Bug Fixes
+
+- Make `hasSlots` feature work as intended. ([ce1d40a](https://github.com/toneflix/vue-component-pack/commit/ce1d40a094cdb4e162a1b9a83d2df544b5d7b81d))
+- **paystack-inline:** Fix all optional dependency issues for ts. ([fc47bda](https://github.com/toneflix/vue-component-pack/commit/fc47bda57b823e0c92ce68ca67cfce5f37ed4416))
+
+### Features
+
+- Prevent applying styles to unsloted element. ([73ebece](https://github.com/toneflix/vue-component-pack/commit/73ebece10fe19352c441b49be9dd7d6df4c2deb2))
+
 ## [1.3.7](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.3.6...@toneflix/paystack-inline@1.3.7) (2024-11-19)
 
 **Note:** Version bump only for package @toneflix/paystack-inline
