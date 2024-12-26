@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-trix@1.2.1...@toneflix/vue-trix@1.2.2) (2024-12-26)
+
+### Bug Fixes
+
+- (vue-trix) Remove editor instance on before initialize event ([836a478](https://github.com/toneflix/vue-component-pack/commit/836a47803f5dccc397cfae4052187013c8b29168))
+
 ## [1.2.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-trix@1.2.0...@toneflix/vue-trix@1.2.1) (2024-12-26)
 
 ### Bug Fixes
