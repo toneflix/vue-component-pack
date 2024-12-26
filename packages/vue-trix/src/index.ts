@@ -10,7 +10,6 @@ const withInstall = <T>(comp: T) => {
     const name: string = (comp as any).name
     // register component
 
-    app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith('trix')
     app.component(name, comp as SFCWithInstall<T>)
   }
   return comp as SFCWithInstall<T>

@@ -110,10 +110,6 @@ export interface MainProps extends EventsDef {
    */
   placeholder?: string | undefined
   /**
-   * The source content is associated to v-model directive.
-   */
-  srcContent?: string | undefined
-  /**
    * The boolean attribute allows saving editor state into browser's localStorage
    * (optional, default is `false`).
    */
