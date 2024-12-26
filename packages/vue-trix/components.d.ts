@@ -6,13 +6,7 @@ import type { EventsDef, GlobalComponentConstructor } from './src/types'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     VueTrix: GlobalComponentConstructor<
-      EventsDef & {
-        /**
-         * Emitted when the component needs to change the model; Is also used by v-model
-         * @param value New model value
-         */
-        'onUpdate:modelValue'?: (value: any) => void
-      },
+      EventsDef,
       {
         /**
          * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
@@ -22,4 +16,4 @@ declare module '@vue/runtime-core' {
     >
   }
 }
-export {}
+export { }

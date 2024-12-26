@@ -16,17 +16,26 @@ export interface Events {
   (name: 'file-accept', file: File): void
   (
     name: 'attachment-add',
-    attachment: { attachment: any; attachmentManager: any; file: File }
+    attachment: any,
+    attachmentManager: any,
+    file: File
   ): void
   (name: 'selection-change', event: TrixEvent): void
   (
     name: 'attachment-remove',
-    attachment: { attachment: any; attachmentManager: any; file: File }
+    attachment: any,
+    attachmentManager: any,
+    file: File
   ): void
   (name: 'before-initialize', event: TrixEvent): void
 }
 
 export interface EventsDef {
+  /**
+   * Emitted when the component needs to change the model; Is also used by v-model
+   * @param value New model value
+   */
+  'onUpdate:modelValue'?: (value: string) => void
   /**
    * Emitted on input
    * @param value
@@ -39,20 +48,17 @@ export interface EventsDef {
   onUpdate?: (value?: string | undefined) => void
   /**
    * Emitted when the input looses focus
-   * @param event
-   * @param editor
+   * @param event 
    */
   onBlur?: (event: TrixEvent) => void
   /**
    * Emitted when the input recieves focus
-   * @param event
-   * @param editor
+   * @param event 
    */
   onFocus?: (event: TrixEvent) => void
   /**
    * Emitted after trix is initialized
-   * @param event
-   * @param editor
+   * @param event 
    */
   onInitialize?: (event: TrixEvent, editor: any) => void
   /**
@@ -64,7 +70,7 @@ export interface EventsDef {
    * Emitted when an attachement is added
    * @param attachment
    */
-  onAttachmentAdd?: (attachment: { attachment: any; attachmentManager: any; file: File }) => void
+  onAttachmentAdd?: (attachment: any, attachmentManager: any, file: File) => void
   /**
    * Emitted when the text selection in the input changes
    * @param event

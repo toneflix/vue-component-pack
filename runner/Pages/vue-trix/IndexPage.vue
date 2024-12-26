@@ -4,7 +4,7 @@
       :disabled="disabled"
       v-model="model"
       @update="console.log"
-      @attachment-remove="console.log"
+      @attachment-add="console.log"
     />
     <input type="checkbox" v-model="disabled" />
     {{ model }}
