@@ -23,7 +23,7 @@ export interface Events {
     name: 'attachment-remove',
     attachment: { attachment: any; attachmentManager: any; file: File }
   ): void
-  (name: 'before-initialize', event: TrixEvent, editor: any): void
+  (name: 'before-initialize', event: TrixEvent): void
 }
 
 export interface EventsDef {
@@ -81,7 +81,7 @@ export interface EventsDef {
    * @param event
    * @param editor
    */
-  onBeforeInitialize?: (event: TrixEvent, editor: any) => void
+  onBeforeInitialize?: (event: TrixEvent) => void
 }
 /* eslint-enable @typescript-eslint/no-explicit-any */
 

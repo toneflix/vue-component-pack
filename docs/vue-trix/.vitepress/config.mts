@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import vue from '@vitejs/plugin-vue';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -34,5 +35,12 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/toneflix/vue-component-pack/tree/main/packages/vue-trix' }
     ]
+  },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag.startsWith('trix-'),
+      },
+    },
   }
 })

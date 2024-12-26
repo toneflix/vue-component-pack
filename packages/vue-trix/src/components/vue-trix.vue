@@ -14,7 +14,7 @@
       @trix-attachment-add="(e: any) => emit('attachment-add', e.attachment)"
       @trix-attachment-remove="(e: any) => emit('attachment-remove', e.attachment)"
       @trix-selection-change="(e: any) => emit('selection-change', e, editor.editor)"
-      @trix-before-initialize="(e: any) => emit('before-initialize', e, editor.editor)"
+      @trix-before-initialize="(e: any) => emit('before-initialize', e)"
     />
     <input type="hidden" :name="inputName" :id="computedId" :value="modelValue" />
   </div>

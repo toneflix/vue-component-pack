@@ -115,3 +115,21 @@ const config = ref<Record<string, any>>({
   <vue-trix :config="config" model-value="<p>Hello World</p>" />
 </template>
 ```
+
+
+<script setup lang="ts">
+import { ref } from 'vue';
+const content = ref<string>('');
+
+const onChanged = (v) => {
+  alert(`The value has changed to ${v}`);
+};
+
+const onComplete = (v) => {
+    alert(`OTP input completed with value: ${v}`)
+}
+
+const onUpdate = (v) => {
+  alert(`New value is ${v}`);
+};
+</script>
