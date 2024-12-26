@@ -14,6 +14,7 @@ hero:
 
 <script setup lang="ts">
 import { ref } from 'vue';
+const image = 'https://toneflix.github.io/vue-component-pack/vue-trix/images/banner.png'
 const content = ref<string>(`<div style="margin: 0; font-family: Arial, sans-serif; line-height: 1.6;">
 
   <!-- Header Section -->
@@ -34,9 +35,9 @@ const content = ref<string>(`<div style="margin: 0; font-family: Arial, sans-ser
     <div style="margin-bottom: 20px;">
       <h2 style="color: #333;">Image Gallery</h2>
       <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-        <img src="https://via.placeholder.com/150" alt="Sample 1" style="width: 150px; height: 150px; border-radius: 5px;">
-        <img src="https://via.placeholder.com/150" alt="Sample 2" style="width: 150px; height: 150px; border-radius: 5px;">
-        <img src="https://via.placeholder.com/150" alt="Sample 3" style="width: 150px; height: 150px; border-radius: 5px;">
+        <img src="${image}" alt="Sample 1" style="width: 150px !important; height: 150px !important; border-radius: 5px;">
+        <img src="${image}" alt="Sample 2" style="width: 150px !important; height: 150px !important; border-radius: 5px;">
+        <img src="${image}" alt="Sample 3" style="width: 150px !important; height: 150px !important; border-radius: 5px;">
       </div>
     </div>
 
