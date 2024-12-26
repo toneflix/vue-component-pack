@@ -1,4 +1,4 @@
-# Vue OTP Input
+# Vue Trix
 
 [![npm](https://img.shields.io/npm/v/@toneflix/vue-trix.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-trix)
 [![npm](https://img.shields.io/npm/dt/@toneflix/vue-trix.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-trix)
@@ -14,6 +14,12 @@ Simple and lightweight Trix rich-text editor for Vue.js. - See a live demo [here
 
 Read the full documentation [here](https://toneflix.github.io/vue-component-pack/vue-trix/)
 
+## Features
+
+- A simple and lightweight rich-text editor for writing daily.
+- Two-way binding with `v-model` easily.
+- Auto-save editor data temporally what you have typed into the form input in case something goes wrong (for example, the browser could crash or you could accidentally refresh the page without submit saving).
+
 ## Installation
 
 ```bash
@@ -28,7 +34,7 @@ pnpm add @toneflix/vue-trix
 
 ### Global Registration
 
-You can make OTP Input available throughout your Vue project.
+You can make Vue Trix available throughout your Vue project.
 
 **main.js or main.ts**
 
@@ -56,7 +62,7 @@ import { VueTrix } from '@toneflix/vue-trix'
 </script>
 ```
 
-### Use the Registered Component in Your Vue Template
+### Create a simple editor in your single component file
 
 **SomeComponent.vue**
 
