@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-trix@1.2.2...@toneflix/vue-trix@1.3.0) (2024-12-26)
+
+### Features
+
+- (vue-trix) set component name in defineOptions ([f11bfc1](https://github.com/toneflix/vue-component-pack/commit/f11bfc14f1e4341ed136ee8dd6d6268a0ae5bbb5))
+
 ## [1.2.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-trix@1.2.1...@toneflix/vue-trix@1.2.2) (2024-12-26)
 
 ### Bug Fixes
