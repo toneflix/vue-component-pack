@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-trix@1.4.0...@toneflix/vue-trix@1.5.0) (2024-12-26)
+
+### Features
+
+- (vue-trix) format ([063e21f](https://github.com/toneflix/vue-component-pack/commit/063e21f4b92e6966220728e616c7f8d18198e714))
+- (vue-trix) spread attachment events properties. ([7110664](https://github.com/toneflix/vue-component-pack/commit/711066426f8adc8b178b55cf9dd179cc6afd787e))
+
 # [1.4.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-trix@1.3.0...@toneflix/vue-trix@1.4.0) (2024-12-26)
 
 ### Features
