@@ -1,6 +1,6 @@
 import type { App, Plugin } from 'vue'
 
-import _DummyComp from './components/dummy-comp.vue'
+import _VueTrix from './components/vue-trix.vue'
 
 type SFCWithInstall<T> = T & Plugin
 
@@ -9,10 +9,12 @@ const withInstall = <T> (comp: T) => {
     /* eslint-disable @typescript-eslint/no-explicit-any */
     const name: string = (comp as any).name
     // register component
+
+    app.config.compilerOptions.isCustomElement = tag => tag.startsWith('trix')
     app.component(name, comp as SFCWithInstall<T>)
   }
   return comp as SFCWithInstall<T>
 }
 
-export const DummyComp = withInstall(_DummyComp)
-export default DummyComp
+export const VueTrix = withInstall(_VueTrix)
+export default VueTrix

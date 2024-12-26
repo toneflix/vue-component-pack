@@ -23,6 +23,7 @@
     "@toneflix/paystack-inline": "workspace:*",
     "@toneflix/vue-auth": "workspace:*",
     "@toneflix/vue-dataviewer": "workspace:*",
+    "@toneflix/vue-trix": "workspace:*",
     "@toneflix/vue-forms": "file:../packages/vue-forms",
     "axios": "^1.7.7",
     "lodash-es": "^4.17.21",
