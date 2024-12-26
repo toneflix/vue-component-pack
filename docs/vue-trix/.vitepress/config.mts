@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Vue OTP Input",
-  base: "/vue-component-pack/otp-input",
-  description: "Vue OTP Input documentation",
+  title: "Vue Trix",
+  base: "/vue-component-pack/vue-trix",
+  description: "Vue Trix documentation",
   head: [
-    ['link', { rel: 'icon', href: '/vue-component-pack/otp-input/images/banner.png' }],
+    ['link', { rel: 'icon', href: '/vue-component-pack/vue-trix/images/banner.png' }],
     ['meta', {
-      name: 'auto',
+      name: 'author',
       content: 'Toneflix Code.',
     }],
   ],
@@ -32,7 +32,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/toneflix/vue-component-pack/tree/main/packages/otp-input' }
+      { icon: 'github', link: 'https://github.com/toneflix/vue-component-pack/tree/main/packages/vue-trix' }
     ]
   }
 })

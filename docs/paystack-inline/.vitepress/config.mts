@@ -8,7 +8,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/vue-component-pack/paystack-inline/images/banner.png' }],
     ['meta', {
-      name: 'auto',
+      name: 'author',
       content: 'Toneflix Code.',
     }],
   ],

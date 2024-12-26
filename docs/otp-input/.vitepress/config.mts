@@ -8,7 +8,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/vue-component-pack/otp-input/images/banner.png' }],
     ['meta', {
-      name: 'auto',
+      name: 'author',
       content: 'Toneflix Code.',
     }],
   ],
