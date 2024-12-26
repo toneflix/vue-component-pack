@@ -54,8 +54,8 @@ importers:
   docs/vue-trix:
     dependencies:
       '@toneflix/vue-trix':
-        specifier: ^1.4.0
-        version: 1.4.0(@vitejs/plugin-vue@5.2.1(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3)))(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
+        specifier: ^1.5.0
+        version: 1.5.0(@vitejs/plugin-vue@5.2.1(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3)))(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
     devDependencies:
       vitepress:
         specifier: ^1.5.0
@@ -871,8 +871,8 @@ packages:
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
-  '@toneflix/vue-trix@1.4.0':
-    resolution: {integrity: sha512-g+4ZY2GuIvcN/gcHden5E6Wfd9vSJeNfF2zlgwz01urpgm264vbNJALAQwpC4HIxmW9sShWzAvEBgVy6mruuzQ==}
+  '@toneflix/vue-trix@1.5.0':
+    resolution: {integrity: sha512-pOonxXI55DqRcGBIMUzd6Ajg69pyn98DUGWLfWtqlU81M9XuvAsMfD1PRKePF1yn62+xZC1+BiIIHARZ03Vnaw==}
     peerDependencies:
       '@vitejs/plugin-vue': ^5.1.4
       vite: ^5.4.8
@@ -4306,7 +4306,7 @@ snapshots:
 
   '@sinclair/typebox@0.27.8': {}
 
-  '@toneflix/vue-trix@1.4.0(@vitejs/plugin-vue@5.2.1(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3)))(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))':
+  '@toneflix/vue-trix@1.5.0(@vitejs/plugin-vue@5.2.1(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3)))(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       '@vitejs/plugin-vue': 5.2.1(vite@5.4.11(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
       trix: 2.1.12

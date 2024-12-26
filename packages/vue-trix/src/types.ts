@@ -66,12 +66,12 @@ export interface EventsDef {
    * @param event
    * @param editor
    */
-  onSelectionChange?: (event: TrixEvent, editor: any) => void
+  onSelectionChange?: (event: TrixEvent) => void
   /**
    * Emitted when an attachement is removed
    * @param attachment
    */
-  onAttachmentRemove?: (attachment: { attachment: any; attachmentManager: any; file: File }) => void
+  onAttachmentRemove?: (attachment: any, attachmentManager: any, file: File) => void
   /**
    * Emitted before trix is initialized
    * @param event

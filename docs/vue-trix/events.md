@@ -2,6 +2,25 @@
 
 This page demonstrates usage of the events emitted by Vue Trix.
 
+### before-initialize {`(event: TrixEvent)`}
+
+Emitted before trix is initialized.
+
+```vue:line-numbers
+<script setup lang="ts">
+import { ref } from 'vue';
+const content = ref<string>('<p>Hello World</p>');
+
+const onEvent = (v) => {
+  alert(`The before-initialize event was emitted (${v})`);
+};
+</script>
+
+<template>
+  <vue-trix v-model="content" @before-initialize="onEvent" />
+</template>
+```
+
 ### initialize {`(event: TrixEvent, editor: Trix)`}
 
 Emitted after trix is initialized.
@@ -25,7 +44,9 @@ const onEvent = (v) => {
 
 Emitted when the component needs to update the model.
 
-<vue-trix v-model="content[0]" @update:model-value="e=>onEvent(e, 'update:modelValue')" />
+<ClientOnly>
+  <vue-trix v-model="content[0]" @update:model-value="e=>onEvent(e, 'update:modelValue')" />
+</ClientOnly>
 
 ```vue:line-numbers
 <script setup lang="ts">
@@ -46,8 +67,10 @@ const onUpdate = (v) => {
 
 Emitted on input.
 
-<vue-trix v-model="content[1]" @input="e=>onEvent(e, 'input')" />
-
+<ClientOnly>
+  <vue-trix v-model="content[1]" @input="e=>onEvent(e, 'input')" />
+</ClientOnly>
+  
 ```vue:line-numbers
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -67,8 +90,10 @@ const onEvent = (v) => {
 
 Emitted when the content of the input is updated.
 
-<vue-trix v-model="content[2]" @update="e=>onEvent(e, 'update')" />
-
+<ClientOnly>
+  <vue-trix v-model="content[2]" @update="e=>onEvent(e, 'update')" />
+</ClientOnly>
+  
 ```vue:line-numbers
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -88,8 +113,10 @@ const onEvent = (v) => {
 
 Emitted when the input looses focus.
 
-<vue-trix v-model="content[3]" @input="e=>onEvent(e, 'blur')" />
-
+<ClientOnly>
+  <vue-trix v-model="content[3]" @input="e=>onEvent(e, 'blur')" />
+</ClientOnly>
+  
 ```vue:line-numbers
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -105,12 +132,14 @@ const onEvent = (v) => {
 </template>
 ```
 
-### focus {`(event?: TrixEvent)`}
+### focus {`(event: TrixEvent)`}
 
 Emitted when the input gains focus.
 
-<vue-trix v-model="content[4]" @input="e=>onEvent(e, 'focus')" />
-
+<ClientOnly>
+  <vue-trix v-model="content[4]" @input="e=>onEvent(e, 'focus')" />
+</ClientOnly>
+  
 ```vue:line-numbers
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -130,15 +159,18 @@ const onEvent = (v) => {
 
 Emitted when an added file is accepted
 
-<vue-trix v-model="content[5]" @file-accept="e=>onEvent(e, 'file-accept')" />
-
+<ClientOnly>
+  <vue-trix v-model="content[5]" @file-accept="e=>onEvent(e, 'file-accept')" />
+</ClientOnly>
+  
 ```vue:line-numbers
 <script setup lang="ts">
 import { ref } from 'vue';
 const content = ref<string>('<p>Hello World</p>');
 
 const onEvent = (v) => {
-  alert(`The file-accept event was emitted (${v})`);
+  alert(`The file-accept event was emitted`);
+  console.log(v)
 };
 </script>
 
@@ -147,19 +179,22 @@ const onEvent = (v) => {
 </template>
 ```
 
-### attachment-add {`(attachment: {attachment: TrixAttachment, attachmentManager: TrixAttachmentManager, file: File})`}
+### attachment-add {`(attachment: TrixAttachment, attachmentManager: TrixAttachmentManager, file: File)`}
 
-Emitted when an added file is accepted
+Emitted when an attachement is added
 
-<vue-trix v-model="content[5]" @attachment-add="e=>onEvent(e, 'attachment-add')" />
-
+<ClientOnly>
+  <vue-trix v-model="content[6]" @attachment-add="e=>onEvent(e, 'attachment-add')" />
+</ClientOnly>
+  
 ```vue:line-numbers
 <script setup lang="ts">
 import { ref } from 'vue';
 const content = ref<string>('<p>Hello World</p>');
 
 const onEvent = (v) => {
-  alert(`The attachment-add event was emitted (${v})`);
+  alert(`The attachment-add event was emitted`);
+  console.log(v)
 };
 </script>
 
@@ -168,9 +203,58 @@ const onEvent = (v) => {
 </template>
 ```
 
+### attachment-remove {`(attachment: TrixAttachment, attachmentManager: TrixAttachmentManager, file: File)`}
+
+Emitted when an attachement is removed
+
+<ClientOnly>
+  <vue-trix v-model="content[7]" @attachment-remove="e=>onEvent(e, 'attachment-remove')" />
+</ClientOnly>
+  
+```vue:line-numbers
+<script setup lang="ts">
+import { ref } from 'vue';
+const content = ref<string>('<p>Hello World</p>');
+
+const onEvent = (v) => {
+  alert(`The attachment-remove event was emitted`);
+  console.log(v)
+};
+</script>
+
+<template>
+  <vue-trix v-model="content" @attachment-remove="onEvent" />
+</template>
+```
+
+### selection-change {`(event: TrixEvent)`}
+
+Emitted when the text selection in the input changes
+
+<ClientOnly>
+  <vue-trix v-model="content[8]" @selection-change="e=>onEvent(e, 'selection-change')" />
+</ClientOnly>
+  
+```vue:line-numbers
+<script setup lang="ts">
+import { ref } from 'vue';
+const content = ref<string>('<p>Hello World</p>');
+
+const onEvent = (v) => {
+  alert(`The selection-change event was emitted`);
+  console.log(v)
+};
+</script>
+
+<template>
+  <vue-trix v-model="content" @selection-change="onEvent" />
+</template>
+```
+
 <script setup lang="ts">
 import { ref } from 'vue';
 const content = ref<string[]>([
+  '<p>Hello World</p>',
   '<p>Hello World</p>',
   '<p>Hello World</p>',
   '<p>Hello World</p>',

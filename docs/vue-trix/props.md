@@ -6,7 +6,10 @@ This page demonstrates usage of the props exposed by Vue Trix.
 
 Must be a string; Either use this property (along with a listener for 'update:modelValue' event) OR use v-model directive.
 
-  <vue-trix v-model="content"/>
+  <ClientOnly>
+    <vue-trix v-model="content"/>
+  </ClientOnly>
+
   <div style="text-align:center; margin-top: 10px;">
     Value: {{content}}
   </div>
@@ -26,8 +29,10 @@ const content = ref<string>('<p>Hello World</p>');
 
 This prop will put the editor in read-only mode
 
+<ClientOnly>
   <vue-trix disabled model-value="<p>Hello World</p>"/> 
-
+</ClientOnly>
+  
 ```vue:line-numbers
 <template>
   <vue-trix disabled model-value="<p>Hello World</p>" />
@@ -59,8 +64,10 @@ This is referenced `name` of the hidden input field defined.
 
 The placeholder attribute specifies a short hint that describes the expected value of an editor.
 
+<ClientOnly>
   <vue-trix placeholder="Enter the description" model-value="" input-id="s"/> 
-
+</ClientOnly>
+  
 ```vue:line-numbers
 <template>
   <vue-trix placeholder="Enter the description" model-value="<p>Hello World</p>" />
@@ -105,7 +112,6 @@ const config = ref<Record<string, any>>({
   <vue-trix :config="config" model-value="<p>Hello World</p>" />
 </template>
 ```
-
 
 <script setup lang="ts">
 import { ref } from 'vue';

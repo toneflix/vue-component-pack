@@ -4,7 +4,7 @@ outline: deep
 
 # Get Started
 
-Setting up OTP Input is pretty simple and straightforward.
+Setting up Vue Trix is pretty simple and straightforward.
 
 ## Installation
 
@@ -13,15 +13,15 @@ Install using your preferred package manager.
 ::: code-group
 
 ```bash [npm]
-npm install @toneflix/otp-input
+npm install @toneflix/vue-trix
 ```
 
 ```bash [yarn]
-yarn add @toneflix/otp-input
+yarn add @toneflix/vue-trix
 ```
 
 ```bash [pnpm]
-pnpm add @toneflix/otp-input
+pnpm add @toneflix/vue-trix
 ```
 
 :::
@@ -30,18 +30,18 @@ pnpm add @toneflix/otp-input
 
 ### Global Registration
 
-You can make OTP Input available throughout your Vue project.
+You can make Vue Trix available throughout your Vue project.
 
 **main.js or main.ts**
 
 ```js:line-numbers{1,4}
-import '@toneflix/otp-input/dist/lib/style.css';
+import 'trix/dist/trix.css'
 import { createApp } from 'vue';
 import App from './app.vue';
-import OtpInput from '@toneflix/otp-input';
+import VueTrix from '@toneflix/vue-trix';
 
 const app = createApp(App);
-app.use(OtpInput);
+app.use(VueTrix);
 app.mount('#app');
 ```
 
@@ -53,8 +53,8 @@ You can also import the component in your Vue component.
 
 ```vue:line-numbers{2,3}
 <script setup>
-import '@toneflix/otp-input/dist/lib/style.css';
-import { OtpInput } from '@toneflix/otp-input';
+import 'trix/dist/trix.css'
+import { VueTrix } from '@toneflix/vue-trix';
 </script>
 ```
 
@@ -64,16 +64,16 @@ import { OtpInput } from '@toneflix/otp-input';
 
 ```vue:line-numbers{2,3}
 <script setup lang="ts">
-import '@toneflix/otp-input/dist/lib/style.css';
-import { OtpInput } from '@toneflix/otp-input';
+import 'trix/dist/trix.css'
+import { VueTrix } from '@toneflix/vue-trix';
 import { ref } from 'vue';
 
-const otp = ref<string>('');
+const content = ref<string>('<p>Hello World</p>');
 </script>
 
 <template>
   <div style="display: flex; flex-direction: row;">
-    <otp-input v-model="otp" />
+    <vue-trix v-model="content" />
   </div>
 </template>
 ```

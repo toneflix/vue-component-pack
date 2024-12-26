@@ -1,8 +1,6 @@
 import { VNode } from 'vue'
 import type { EventsDef, GlobalComponentConstructor } from './src/types'
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     VueTrix: GlobalComponentConstructor<

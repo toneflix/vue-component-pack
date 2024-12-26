@@ -4,6 +4,7 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 packages=(
     "vue-auth"
     "otp-input"
+    "vue-trix"
     # "flickity-vue"
     "paystack-inline"
     "all"
