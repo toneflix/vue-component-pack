@@ -119,7 +119,7 @@ const config = ref<Record<string, any>>({
 
 <script setup lang="ts">
 import { ref } from 'vue';
-const content = ref<string>('');
+const content = ref<string>('<p>Hello World</p>');
 
 const onChanged = (v) => {
   alert(`The value has changed to ${v}`);

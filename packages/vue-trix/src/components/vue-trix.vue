@@ -26,6 +26,10 @@ import Trix from 'trix'
 import { computed, onMounted, ref, watch } from 'vue'
 import { Events, TrixEvent, MainProps } from '../types'
 
+defineOptions({
+  name: 'vue-trix'
+})
+
 const {
   config = {},
   inputId = '',
