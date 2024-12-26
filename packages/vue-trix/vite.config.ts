@@ -37,11 +37,13 @@ export default defineConfig({
       }
     }
   },
-  plugins: [vue({
-    template: {
-      compilerOptions: {
-        isCustomElement: tag => tag.startsWith('trix')
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('trix')
+        }
       }
-    }
-  })]
+    })
+  ]
 })
