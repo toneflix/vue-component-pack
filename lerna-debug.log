@@ -9,24 +9,24 @@
 3 verbose rootPath /Users/ralph/Documents/Marx/Toneflix/vue-component-pack
 4 error Failed to process project graph. Run "nx reset" to fix this. Please report the issue if you keep seeing it.
 4 error       An error occurred while processing files for the nx/js/dependencies-and-lockfile plugin.
-4 error     - pnpm-lock.yaml: duplicated mapping key (402:3)
+4 error     - pnpm-lock.yaml: duplicated mapping key (6682:3)
 4 error
-4 error    399 |     resolution: {integrity: sha51 ...
-4 error    400 |     engines: {node: '>=6.9.0'}
-4 error    401 |
-4 error    402 |   '@babel/core@7.26.0':
-4 error   ---------^
-4 error    403 |     resolution: {integrity: sha51 ...
-4 error    404 |     engines: {node: '>=6.9.0'}
-4 error       YAMLException: duplicated mapping key (402:3)
+4 error    6679 |
+4 error    6680 |   jiti@2.4.2:
+4 error    6681 |     optional: true
+4 error    6682 |   jiti@2.4.2:
+4 error   ----------^
+4 error    6683 |     optional: true
+4 error    6684 |
+4 error       YAMLException: duplicated mapping key (6682:3)
 4 error
-4 error        399 |     resolution: {integrity: sha51 ...
-4 error        400 |     engines: {node: '>=6.9.0'}
-4 error        401 |
-4 error        402 |   '@babel/core@7.26.0':
-4 error       ---------^
-4 error        403 |     resolution: {integrity: sha51 ...
-4 error        404 |     engines: {node: '>=6.9.0'}
+4 error        6679 |
+4 error        6680 |   jiti@2.4.2:
+4 error        6681 |     optional: true
+4 error        6682 |   jiti@2.4.2:
+4 error       ----------^
+4 error        6683 |     optional: true
+4 error        6684 |
 4 error           at generateError (/Users/ralph/Documents/Marx/Toneflix/vue-component-pack/node_modules/.pnpm/@zkochan+js-yaml@0.0.7/node_modules/@zkochan/js-yaml/lib/loader.js:183:10)
 4 error           at throwError (/Users/ralph/Documents/Marx/Toneflix/vue-component-pack/node_modules/.pnpm/@zkochan+js-yaml@0.0.7/node_modules/@zkochan/js-yaml/lib/loader.js:187:9)
 4 error           at storeMappingPair (/Users/ralph/Documents/Marx/Toneflix/vue-component-pack/node_modules/.pnpm/@zkochan+js-yaml@0.0.7/node_modules/@zkochan/js-yaml/lib/loader.js:358:7)
