@@ -6,7 +6,7 @@ This page demonstrates usage of the props exposed by Vue Trix.
 
 Must be a string; Either use this property (along with a listener for 'update:modelValue' event) OR use v-model directive.
 
-  <vue-trix v-model="content" />
+  <vue-trix v-model="content" style="background: #f0f; padding: 5px;"/>
   <div style="text-align:center; margin-top: 10px;">
     Value: {{content}}
   </div>

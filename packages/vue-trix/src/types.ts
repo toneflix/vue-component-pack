@@ -10,15 +10,15 @@ export type TrixEvent = Event & {
 export interface Events {
   (name: 'input', value?: string | undefined): void
   (name: 'update', value?: string | undefined): void
-  (name: 'blur', event: TrixEvent, editor: any): void
-  (name: 'focus', event: TrixEvent, editor: any): void
+  (name: 'blur', event: TrixEvent): void
+  (name: 'focus', event: TrixEvent): void
   (name: 'initialize', event: TrixEvent, editor: any): void
   (name: 'file-accept', file: File): void
   (
     name: 'attachment-add',
     attachment: { attachment: any; attachmentManager: any; file: File }
   ): void
-  (name: 'selection-change', event: TrixEvent, editor: any): void
+  (name: 'selection-change', event: TrixEvent): void
   (
     name: 'attachment-remove',
     attachment: { attachment: any; attachmentManager: any; file: File }
@@ -42,13 +42,13 @@ export interface EventsDef {
    * @param event
    * @param editor
    */
-  onBlur?: (event: TrixEvent, editor: any) => void
+  onBlur?: (event: TrixEvent) => void
   /**
    * Emitted when the input recieves focus
    * @param event
    * @param editor
    */
-  onFocus?: (event: TrixEvent, editor: any) => void
+  onFocus?: (event: TrixEvent) => void
   /**
    * Emitted after trix is initialized
    * @param event

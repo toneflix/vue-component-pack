@@ -6,14 +6,14 @@
       :input="computedId"
       :contenteditable="!disabled"
       :placeholder="placeholder"
-      @trix-blur="(e: any) => emit('blur', e, editor.editor)"
-      @trix-focus="(e: any) => emit('focus', e, editor.editor)"
+      @trix-blur="(e: any) => emit('blur', e)"
+      @trix-focus="(e: any) => emit('focus', e)"
       @trix-change="handleContentChange"
       @trix-initialize="handleInitialize"
       @trix-file-accept="(e: File) => emit('file-accept', e)"
       @trix-attachment-add="(e: any) => emit('attachment-add', e.attachment)"
       @trix-attachment-remove="(e: any) => emit('attachment-remove', e.attachment)"
-      @trix-selection-change="(e: any) => emit('selection-change', e, editor.editor)"
+      @trix-selection-change="(e: any) => emit('selection-change', e)"
       @trix-before-initialize="(e: any) => emit('before-initialize', e)"
     />
     <input type="hidden" :name="inputName" :id="computedId" :value="modelValue" />
@@ -102,7 +102,7 @@ const handleInitialize = (e: TrixEvent) => {
 
   initialized.value = true
 
-  emit('initialize', e, editor.value.editor)
+  emit('initialize', e, editor.value?.editor)
 }
 
 const handleInitialContentChange = (newContent: any) => {
