@@ -14,19 +14,9 @@ export interface Events {
   (name: 'focus', event: TrixEvent): void
   (name: 'initialize', event: TrixEvent, editor: any): void
   (name: 'file-accept', file: File): void
-  (
-    name: 'attachment-add',
-    attachment: any,
-    attachmentManager: any,
-    file: File
-  ): void
+  (name: 'attachment-add', attachment: any, attachmentManager: any, file: File): void
   (name: 'selection-change', event: TrixEvent): void
-  (
-    name: 'attachment-remove',
-    attachment: any,
-    attachmentManager: any,
-    file: File
-  ): void
+  (name: 'attachment-remove', attachment: any, attachmentManager: any, file: File): void
   (name: 'before-initialize', event: TrixEvent): void
 }
 
@@ -48,17 +38,17 @@ export interface EventsDef {
   onUpdate?: (value?: string | undefined) => void
   /**
    * Emitted when the input looses focus
-   * @param event 
+   * @param event
    */
   onBlur?: (event: TrixEvent) => void
   /**
    * Emitted when the input recieves focus
-   * @param event 
+   * @param event
    */
   onFocus?: (event: TrixEvent) => void
   /**
    * Emitted after trix is initialized
-   * @param event 
+   * @param event
    */
   onInitialize?: (event: TrixEvent, editor: any) => void
   /**
