@@ -28,7 +28,7 @@ pnpm add @toneflix/vue-place-selector
 
 ## Get API Key
 
-This package depends on the `Toneflix Places API` for it's data set, the `Toneflix Places API` requires an API key for use on production, the get you api keys, head to `https://naija-places.toneflix.com.ng`:
+This package depends on the [Toneflix Places API](https://naija-places.toneflix.com.ng) for it's data set, the `Toneflix Places API` requires an API key for use on production, to get your own api keys, head to https://naija-places.toneflix.com.ng:
 
 1. Click on `Portal`.
 2. Login if required.
