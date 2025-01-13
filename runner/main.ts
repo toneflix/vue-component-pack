@@ -26,44 +26,44 @@ const router = createRouter({
           path: '/auth/profile',
           name: 'profile',
           component: () => import('./Pages/vue-auth/UserPage.vue'),
-          meta: { requiresAuth: true },
+          meta: { requiresAuth: true }
         },
         {
           path: '/auth/admin',
           name: 'admin',
           component: () => import('./Pages/vue-auth/UserPage.vue'),
-          meta: { requiresAdmin: true },
+          meta: { requiresAdmin: true }
         },
         {
           path: '/auth/login',
           name: 'login',
           meta: { requiresGuest: true },
-          component: () => import('./Pages/vue-auth/LoginPage.vue'),
+          component: () => import('./Pages/vue-auth/LoginPage.vue')
         },
         {
           path: '/auth/register',
           name: 'register',
           component: () => import('./Pages/vue-auth/RegisterPage.vue'),
-          meta: { requiresGuest: true },
+          meta: { requiresGuest: true }
         },
         {
           path: '/auth/forgot',
           name: 'forgot',
           component: () => import('./Pages/vue-auth/ForgotPage.vue'),
-          meta: { requiresGuest: true },
+          meta: { requiresGuest: true }
         },
         {
           path: '/auth/reset',
           name: 'reset',
           component: () => import('./Pages/vue-auth/ResetPage.vue'),
-          meta: { requiresGuest: true },
+          meta: { requiresGuest: true }
         }
       ]
     }
   ]
 })
 
-// makeServer()
+makeServer()
 
 const auth = authPlugin({
   router,
@@ -79,7 +79,7 @@ const auth = authPlugin({
     reset: '/reset'
   },
   loginRouteName: '/auth/login',
-  resetHandler (router) {
+  resetHandler(router) {
     router.replace({ name: 'login' })
   },
   setAuthHeaders: () => {
@@ -88,7 +88,7 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
   middlewares: [roleMiddleware('/', ['admin'], 'email'), authMiddleware({ name: 'login' })]

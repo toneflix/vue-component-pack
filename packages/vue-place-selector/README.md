@@ -125,3 +125,20 @@ If you do not have an `env` file, you can pass the `api-key` prop to each compon
   />
 </template>
 ```
+
+### Styling
+
+`Vue CSC Selector` is simply an unstyled html `select` element, you can style with css as usual or pass an custom component to the default slot which exposes the following interface:
+
+```ts
+{
+  props: {
+    loading: boolean;
+    options: Place[];
+    disable: boolean;
+    modelValue: string | number | null;
+    'onUpdate:modelValue': (value: any) => void;
+  },
+  selected: string | number | null;
+}
+```
