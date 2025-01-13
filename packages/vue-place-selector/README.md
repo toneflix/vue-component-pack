@@ -1,4 +1,4 @@
-# Vue CSC Selector
+# Vue Place Selector
 
 [![npm](https://img.shields.io/npm/v/@toneflix/vue-place-selector.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-place-selector)
 [![npm](https://img.shields.io/npm/dt/@toneflix/vue-place-selector.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-place-selector)
@@ -6,7 +6,7 @@
 Country State City Selector component for Vue3. - See a live demo [here](https://toneflix.github.io/vue-component-pack/vue-place-selector/demo.html).
 
 <p align="center">
-    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-place-selector/images/banner.png" alt="CSC Selector">
+    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-place-selector/images/banner.png" alt="Place Selector">
     <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
 </p>
 
@@ -38,7 +38,7 @@ This package depends on the `Toneflix Places API` for it's data set, the `Tonefl
 
 ### Global Registration
 
-You can make `Vue CSC Selector` available throughout your Vue project.
+You can make `Vue Place Selector` available throughout your Vue project.
 
 **main.js or main.ts**
 
@@ -128,7 +128,7 @@ If you do not have an `env` file, you can pass the `api-key` prop to each compon
 
 ### Styling
 
-`Vue CSC Selector` is simply an unstyled html `select` element, you can style with css as usual or pass an custom component to the default slot which exposes the following interface:
+`Vue Place Selector` is simply an unstyled html `select` element, you can style with css as usual or pass an custom component to the default slot which exposes the following interface:
 
 ```ts
 {
