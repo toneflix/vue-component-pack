@@ -59,15 +59,15 @@ export type PaystackInlineProps = {
    */
   verifyCallback?: (
     reference: string
-  ) => Promise<{ status: boolean; message?: string | undefined }> | undefined
+  ) => Promise<{ status: boolean; message?: string | undefined }> | Promise<undefined> | undefined
   /**
    * Will be called before we initialize the transaction, usefull if you need to initialize transaction from server
    */
   initializeCallback?: () =>
     | Promise<{
-        message?: string | undefined
-        reference: string
-        authorization_url?: string | undefined
-      }>
-    | undefined
+      message?: string | undefined
+      reference: string
+      authorization_url?: string | undefined
+    }>
+    | Promise<undefined> | undefined
 }

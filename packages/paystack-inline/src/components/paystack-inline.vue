@@ -70,36 +70,44 @@ const route = useRoute()
 const router = useRouter()
 const loading = ref(false)
 
-const verifyPayment = (ref: string) => {
+const verifyPayment = async (ref: string) => {
   loading.value = true
   try {
-    props.verifyCallback(ref)?.then(({ status, message }) => {
-      loading.value = false
-      emit('verified', { status, message })
+    const data = await props.verifyCallback(ref)
+    if (data && data.status === true) {
+      emit('verified', { status: data.status, message: data.message })
       reference.value = undefined
       if (props.redirectRoute) {
         router.push(props.redirectRoute)
       }
-    })
+    }
+    loading.value = false
   } catch (error) {
     loading.value = false
     emit('error', error as { message: string }, ref)
   }
 }
 
-const initializeNewPayment = () => {
+const initializeNewPayment = async () => {
   loading.value = true
   try {
-    props.initializeCallback()?.then(({ reference, authorization_url, message }) => {
-      emit('initialized', { reference, authorization_url, message })
-      if (props.inline || !authorization_url) {
-        paystackInline(reference)
-      } else if (authorization_url) {
+    const data = await props.initializeCallback()
+    if (data && (data.authorization_url || data.reference)) {
+      emit('initialized', {
+        reference: data.reference,
+        authorization_url: data.authorization_url,
+        message: data.message
+      })
+      if (props.inline || !data.authorization_url) {
+        paystackInline(data.reference)
+      } else if (data.authorization_url) {
         setTimeout(() => {
-          globalThis.location.href = authorization_url
+          globalThis.location.href = String(data.authorization_url)
         }, 3000)
       }
-    })
+    } else {
+      loading.value = false
+    }
   } catch (error) {
     loading.value = false
     emit('error', error as { message: string })
