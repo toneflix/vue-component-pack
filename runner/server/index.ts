@@ -6,25 +6,25 @@ export const makeServer = ({ environment = 'development' } = {}) => {
     environment,
 
     models: {
-      user: Model
+      user: Model,
     },
 
     factories: {
       user: userFactory
     },
 
-    seeds(server) {
+    seeds (server) {
       server.create('user', testUser)
       server.createList('user', 10)
     },
 
-    routes() {
+    routes () {
       this.urlPrefix = 'http://example.com'
 
       this.namespace = 'api/v1'
 
       this.get('users', (schema) => {
-        return schema.users.all()
+        return schema.all('user')
       })
 
       this.post('login', (schema, request) => {
@@ -114,6 +114,7 @@ export const makeServer = ({ environment = 'development' } = {}) => {
       }) //, { timing: 3000 })
 
       this.passthrough()
+      this.passthrough("https://naija-places.toneflix.com.ng/**")
     }
   })
 

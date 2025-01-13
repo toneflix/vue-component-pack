@@ -7,7 +7,7 @@ export default defineConfig({
     minify: true,
     emptyOutDir: true,
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', '@vueuse/core', 'axios'],
       input: ['index.ts'],
       output: [
         {

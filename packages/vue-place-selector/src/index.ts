@@ -1,6 +1,6 @@
 import type { App, Plugin } from 'vue'
 
-import _CscSelector from './components/csc-selector.vue'
+import _VuePlaceSelector from './components/place-selector.vue'
 
 type SFCWithInstall<T> = T & Plugin
 
@@ -14,5 +14,5 @@ const withInstall = <T> (comp: T) => {
   return comp as SFCWithInstall<T>
 }
 
-export const CscSelector = withInstall(_CscSelector)
-export default CscSelector
+export const VuePlaceSelector = withInstall(_VuePlaceSelector)
+export default VuePlaceSelector

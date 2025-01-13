@@ -17,8 +17,8 @@ const form = reactive({ email: 'test@example.com', password: 'password' })
 const data = ref(
   {} as {
     user: CustomUser
-    token?: string
-    error?: BaseError
+    token?: string | undefined
+    error?: BaseError | undefined
   }
 )
 
