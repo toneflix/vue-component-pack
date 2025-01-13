@@ -13,10 +13,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', component: () => import('./Pages/otp-input/OtpPage.vue') },
-    { path: '/paystack', component: () => import('./Pages/paystack-inline/PaystackPage.vue') },
+    { path: '/paystack', component: () => import('./Pages/components/PaystackPage.vue') },
     { path: '/forms', component: () => import('./Pages/vue-forms/FormPage.vue') },
     { path: '/viewer', component: () => import('./Pages/data-viewer/ViewerPage.vue') },
-    { path: '/trix', component: () => import('./Pages/vue-trix/IndexPage.vue') },
+    { path: '/trix', component: () => import('./Pages/components/VueTrix.vue') },
+    { path: '/csc', component: () => import('./Pages/components/VueTrix.vue') },
     {
       path: '/auth/profile',
       name: 'profile',
@@ -70,7 +71,7 @@ const auth = authPlugin({
     reset: '/reset'
   },
   loginRouteName: '/auth/login',
-  resetHandler(router) {
+  resetHandler (router) {
     router.replace({ name: 'login' })
   },
   setAuthHeaders: () => {
@@ -79,7 +80,7 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
   middlewares: [roleMiddleware('/', ['admin'], 'email'), authMiddleware({ name: 'login' })]

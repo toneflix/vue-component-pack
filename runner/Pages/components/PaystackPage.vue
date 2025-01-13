@@ -61,11 +61,15 @@ const reference = ref<string>()
 const state = ref<{
   ready: boolean
   success: { message: string; reference: string }
-  verified: { message?: string; status: boolean }
+  verified: { message?: string | undefined; status: boolean }
   canceled: { reference: string }
   destroyed: boolean
-  error: { message: string; reference?: string }
-  initialized: { reference: string; authorization_url?: string; message?: string }
+  error: { message: string; reference?: string | undefined }
+  initialized: {
+    reference: string
+    authorization_url?: string | undefined
+    message?: string | undefined
+  }
 }>({
   ready: false,
   success: { message: '', reference: '' },

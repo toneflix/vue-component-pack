@@ -28,7 +28,7 @@ const emit = defineEmits<{
   (event: 'verified', response: { message?: string | undefined; status: boolean }): void
   (event: 'canceled', response: { reference: string }): void
   (event: 'destroyed'): void
-  (event: 'error', error: { message: string }, reference?: string): void
+  (event: 'error', error: { message: string }, reference?: string | undefined): void
   (
     event: 'initialized',
     data: {
@@ -39,7 +39,7 @@ const emit = defineEmits<{
   ): void
 }>()
 
-const reference = defineModel<string>('reference')
+const reference = defineModel<string | undefined>('reference')
 
 const props = withDefaults(defineProps<PaystackInlineProps>(), {
   btnLabel: 'Pay Now',

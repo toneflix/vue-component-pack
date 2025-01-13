@@ -1,0 +1,35 @@
+{
+  "name": "@toneflix/vue-csc-selector",
+  "version": "1.0.0",
+  "description": "Country State City Selector component for Vue3.",
+  "style": "dist/lib/style.css",
+  "main": "dist/lib/index.cjs",
+  "module": "dist/es/index.mjs",
+  "type": "module",
+  "homepage": "https://toneflix.github.io/vue-component-pack/vue-csc-selector",
+  "repository": {
+    "url": "https://github.com/toneflix/vue-component-pack"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "deploy": "../deploy.sh vue-csc-selector"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/runtime-core": "^3.5.11",
+    "vite": "^5.4.8",
+    "vitepress": "^1.4.0",
+    "vue": "^3.5.11"
+  },
+  "nx": {}
+}

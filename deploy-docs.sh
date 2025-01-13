@@ -7,6 +7,7 @@ packages=(
     "vue-trix"
     # "flickity-vue"
     "paystack-inline"
+    "vue-csc-selector"
     "all"
     "Quit"
 )
