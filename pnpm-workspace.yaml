@@ -3,7 +3,7 @@ packages:
   # - runner
   - '!runner'
   - '!package-template'
-  - '!packages/vue-csc-selector'
+  - '!packages/vue-place-selector'
   - '!packages/otp-input'
   - '!packages/vue-auth'
   - '!packages/vue-trix'
