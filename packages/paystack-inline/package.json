@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/paystack-inline",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Paystack Inline component for Vue 3.",
   "style": "dist/lib/style.css",
   "main": "dist/lib/index.cjs",
