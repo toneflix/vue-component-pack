@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.4.4...@toneflix/paystack-inline@1.5.0) (2025-01-13)
+
+### Features
+
+- (paystack-inline) Handle cases when a transaction fails, if the callbacks return undefined. ([8ee5fbc](https://github.com/toneflix/vue-component-pack/commit/8ee5fbcfc16843a92818b8f318fdf15e3e56cb3b))
+
 ## [1.4.4](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.4.3...@toneflix/paystack-inline@1.4.4) (2025-01-13)
 
 **Note:** Version bump only for package @toneflix/paystack-inline
