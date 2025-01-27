@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.2.1...@toneflix/vue-place-selector@1.2.2) (2025-01-27)
+
+### Bug Fixes
+
+- (vue-place-selector) Fix bug that prevented setting option-value to anything other than id or iso2 as the API would return a 404. ([054b713](https://github.com/toneflix/vue-component-pack/commit/054b713521244fd825c5606e5d711d8a1a47546f))
+
 ## [1.2.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.2.0...@toneflix/vue-place-selector@1.2.1) (2025-01-13)
 
 **Note:** Version bump only for package @toneflix/vue-place-selector
