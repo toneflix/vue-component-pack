@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.2.2...@toneflix/vue-place-selector@1.3.0) (2025-01-27)
+
+### Features
+
+- Change the way slotted modelValue updates are handled. ([4bca5ea](https://github.com/toneflix/vue-component-pack/commit/4bca5ea2089eccd2a67d4d491445852894075a41))
+
 ## [1.2.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.2.1...@toneflix/vue-place-selector@1.2.2) (2025-01-27)
 
 ### Bug Fixes
