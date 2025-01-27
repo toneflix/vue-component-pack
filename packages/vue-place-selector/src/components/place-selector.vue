@@ -117,7 +117,7 @@ const fetchPlaces = async () => {
     } else {
       selectedValue.value = modelValue.value
     }
-    doneBus.emit({ key: props.type, value: selectedValue.value! }) // Indicate data is ready
+    doneBus.emit({ key: props.type, value: selected.value?.iso2 ?? selectedValue.value! }) // Indicate data is ready
   } catch (error) {
     emit('error', 'Error fetching places:', error)
     loading.value = false
@@ -128,7 +128,7 @@ const fetchPlaces = async () => {
 const emitChange = (value: string | number | null) => {
   if (value !== null) {
     modelValue.value = value
-    bus.emit({ key: props.type, value })
+    bus.emit({ key: props.type, value: selected.value?.iso2 ?? value })
     emit('change', value, selected.value)
   }
 }

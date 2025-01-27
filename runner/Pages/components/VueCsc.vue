@@ -1,11 +1,17 @@
 <template>
   <div class="demo-container">
     <div>
-      <VuePlaceSelector type="country" v-model="form.country" @error="console.log" />
+      <VuePlaceSelector
+        option-value="name"
+        type="country"
+        v-model="form.country"
+        @error="console.log"
+      />
     </div>
     <div>
       <VuePlaceSelector
         type="state"
+        option-value="name"
         v-model="form.state"
         :params="{ countries: form.country }"
         @error="console.log"
@@ -14,6 +20,7 @@
     <div>
       <VuePlaceSelector
         type="city"
+        option-value="name"
         v-model="form.city"
         :params="{ countries: form.country, states: form.state }"
         @error="console.log"

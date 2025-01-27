@@ -6,7 +6,7 @@ import { createApp, h } from 'vue'
 
 import App from './app.vue'
 import { createPinia } from 'pinia'
-import { makeServer } from './server/index'
+// import { makeServer } from './server/index'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 const router = createRouter({
@@ -63,7 +63,7 @@ const router = createRouter({
   ]
 })
 
-makeServer()
+// makeServer()
 
 const auth = authPlugin({
   router,
@@ -79,7 +79,7 @@ const auth = authPlugin({
     reset: '/reset'
   },
   loginRouteName: '/auth/login',
-  resetHandler(router) {
+  resetHandler (router) {
     router.replace({ name: 'login' })
   },
   setAuthHeaders: () => {
@@ -88,7 +88,7 @@ const auth = authPlugin({
       Authorization: `Bearer ${token}`
     }
   },
-  transformResponse(resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
+  transformResponse (resp: { data: AuthUser; token?: string; timeout?: number; message?: string }) {
     return { user: resp.data, token: resp.token, timeout: resp.timeout, message: resp.message }
   },
   middlewares: [roleMiddleware('/', ['admin'], 'email'), authMiddleware({ name: 'login' })]
