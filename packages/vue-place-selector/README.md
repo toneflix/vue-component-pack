@@ -5,9 +5,8 @@
 
 Country State City Selector component for Vue3. - See a live demo [here](https://toneflix.github.io/vue-component-pack/vue-place-selector/demo.html).
 
-<p align="center">
-    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-place-selector/images/banner.png" alt="Place Selector">
-    <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
+<p align="center"> 
+    <img width="200" src="https://github.com/user-attachments/assets/151cda20-bd08-49ce-9cf6-3f14d599993a" alt="Place Selector"> 
 </p>
 
 ## Documentation
