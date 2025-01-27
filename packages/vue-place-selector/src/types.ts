@@ -7,8 +7,8 @@ export interface Place {
   name: string
 }
 
-export type Type = 'country' | 'state' | 'city'
-export type TypeP = 'countries' | 'states' | 'cities'
+export type Type = 'country' | 'state' | 'city' | 'ngcity' | 'lga' | 'ward'
+export type TypeP = 'countries' | 'states' | 'cities' | 'ngcities' | 'lgas' | 'wards'
 export type Params = { [P in TypeP]?: string | number | null | undefined }
 
 export interface BaseProps {

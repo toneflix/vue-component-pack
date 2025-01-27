@@ -26,6 +26,15 @@
         @error="console.log"
       />
     </div>
+    <div>
+      <VuePlaceSelector
+        type="ngcity"
+        option-value="name"
+        v-model="form.city"
+        :params="{ states: form.state }"
+        @error="console.log"
+      />
+    </div>
     <br />
     {{ form }}
   </div>
