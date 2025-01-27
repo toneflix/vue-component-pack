@@ -46,8 +46,8 @@ import { VuePlaceSelector } from '../../../packages/vue-place-selector'
 import { ref } from 'vue'
 
 const form = ref({
-  country: '',
-  state: '',
+  country: 'Nigeria',
+  state: 'Lagos',
   city: ''
 })
 </script>

@@ -55,6 +55,7 @@ const modelValue = defineModel<string | number | null>('modelValue', {
 // Reactive states
 const options = ref<Place[]>([])
 const loading = ref(false)
+const initialized = ref(false)
 const selectedValue = ref<string | number | null>(null)
 
 // Local reactive copy of params to avoid mutating the prop directly
@@ -116,7 +117,11 @@ const fetchPlaces = async () => {
       emitChange(selectedValue.value)
     } else {
       selectedValue.value = modelValue.value
+      if (!initialized.value) {
+        emitChange(selectedValue.value)
+      }
     }
+
     doneBus.emit({ key: props.type, value: selected.value?.iso2 ?? selectedValue.value! }) // Indicate data is ready
   } catch (error) {
     emit('error', 'Error fetching places:', error)
@@ -126,6 +131,7 @@ const fetchPlaces = async () => {
 
 // Emit value changes to parent and event bus
 const emitChange = (value: string | number | null) => {
+  initialized.value = true
   if (value !== null) {
     modelValue.value = value
     bus.emit({ key: props.type, value: selected.value?.iso2 ?? value })
@@ -141,6 +147,7 @@ const onChange = () => {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const onUpdateModelValue = (value: any) => {
   selectedValue.value = value
+  modelValue.value = value
   emitChange(value)
 }
 
@@ -162,6 +169,8 @@ doneBus.on(({ key, value }) => {
 
 // Fetch data on mount
 onMounted(async () => {
-  await fetchPlaces()
+  if (Object.values(localParams.value).length <= 0) {
+    await fetchPlaces()
+  }
 })
 </script>
