@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.3.0...@toneflix/vue-place-selector@1.4.0) (2025-01-27)
+
+### Features
+
+- Add support for Nigerian locations. ([4ad37f0](https://github.com/toneflix/vue-component-pack/commit/4ad37f0e8d4c4396032abbeed996a44349bdb12b))
+
 # [1.3.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.2.2...@toneflix/vue-place-selector@1.3.0) (2025-01-27)
 
 ### Features
