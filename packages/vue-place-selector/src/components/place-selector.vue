@@ -28,13 +28,14 @@ import { useEventBus } from '@vueuse/core'
 import axios from 'axios'
 import { BaseProps, Params, Place, Type } from '../types'
 import { patterns, typeMaps, typePMaps } from '../utils/config'
+import { reactive } from 'vue'
 
 defineOptions({
   name: 'VuePlaceSelector'
 })
 
 const emit = defineEmits<{
-  (name: 'error', msg: string, error: unknown): void
+  (name: 'error', msg: string, error: any): void // eslint-disable-line @typescript-eslint/no-explicit-any
   (name: 'change', value: string | number, data?: Place | undefined): void
 }>()
 
@@ -59,23 +60,27 @@ const initialized = ref(false)
 const selectedValue = ref<string | number | null>(null)
 
 // Local reactive copy of params to avoid mutating the prop directly
-const localParams = ref({ ...props.params })
+const localParams = reactive(props.params)
 
 const selected = computed<Place | undefined>(() =>
   options.value.find((e) => e[props.optionValue] === selectedValue.value)
 )
 
 // Validity check for params
-const valid = computed(() =>
-  Object.values(localParams.value ?? {}).every((value) => value !== null && value !== undefined)
-)
+const valid = computed(() => {
+  // Since we're using iso2 to find or id to relate parents, ensure that the value
+  // is a number or is string with a length of 2
+  return Object.values(localParams ?? {}).every(
+    (value) => value && (typeof value === 'number' || value.length === 2)
+  )
+})
 
 // Computed URL
 const url = computed(() => {
   if (!patterns[props.type] || !valid.value) return null
 
   let path = patterns[props.type]
-  for (const [key, value] of Object.entries(localParams.value || {})) {
+  for (const [key, value] of Object.entries(localParams || {})) {
     const i = typePMaps[<never>key]
     path = path.replace(`:${i}`, value?.toString() || '')
   }
@@ -86,7 +91,7 @@ const url = computed(() => {
 })
 
 // Event bus for communication
-const bus = useEventBus<{ key: Type; value: number | string }>(props.busKey)
+const bus = useEventBus<{ key: Type; value: number | string | undefined }>(props.busKey)
 
 // New event bus for loading state management
 const doneBus = useEventBus<{ key: Type; value: number | string }>(props.busKey + 'doneBus')
@@ -123,8 +128,9 @@ const fetchPlaces = async () => {
     }
 
     doneBus.emit({ key: props.type, value: selected.value?.iso2 ?? selectedValue.value! }) // Indicate data is ready
-  } catch (error) {
-    emit('error', 'Error fetching places:', error)
+  } catch (e) {
+    const error: any = e // eslint-disable-line @typescript-eslint/no-explicit-any
+    emit('error', 'Error fetching ' + typeMaps[props.type], error?.response?.data ?? error)
     loading.value = false
   }
 }
@@ -134,7 +140,7 @@ const emitChange = (value: string | number | null) => {
   initialized.value = true
   if (value !== null) {
     modelValue.value = value
-    bus.emit({ key: props.type, value: selected.value?.iso2 ?? value })
+    bus.emit({ key: props.type, value: selected.value?.iso2 })
     emit('change', value, selected.value)
   }
 }
@@ -154,8 +160,8 @@ const onUpdateModelValue = (value: any) => {
 // Listen for updates on the event bus
 bus.on(({ key, value }) => {
   const i = typeMaps[key]
-  if (localParams.value[i] !== undefined) {
-    localParams.value = { ...localParams.value, [i]: value } // Update localParams immutably
+  if (localParams[i] !== undefined) {
+    localParams[i] = value // Update localParams immutably
     fetchPlaces() // Trigger cascade fetch
   }
 })
@@ -169,7 +175,7 @@ doneBus.on(({ key, value }) => {
 
 // Fetch data on mount
 onMounted(async () => {
-  if (Object.values(localParams.value).length <= 0) {
+  if (Object.values(localParams).length <= 0) {
     await fetchPlaces()
   }
 })
