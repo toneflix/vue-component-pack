@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.4.0...@toneflix/vue-place-selector@1.5.0) (2025-01-27)
+
+### Features
+
+- Support initializing with a default value. ([e57ba21](https://github.com/toneflix/vue-component-pack/commit/e57ba217307eadfdf2516fca4475a0e2e5a0508b))
+
 # [1.4.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.3.0...@toneflix/vue-place-selector@1.4.0) (2025-01-27)
 
 ### Features
