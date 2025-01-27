@@ -6,7 +6,7 @@
         options,
         disable: loading || !valid,
         modelValue,
-        'onUpdate:modelValue': (value: any) => emitChange(value),
+        'onUpdate:modelValue': onUpdateModelValue
       }"
       :selected="selected"
     >
@@ -136,6 +136,12 @@ const emitChange = (value: string | number | null) => {
 // Handle select change
 const onChange = () => {
   emitChange(selectedValue.value)
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const onUpdateModelValue = (value: any) => {
+  selectedValue.value = value
+  emitChange(value)
 }
 
 // Listen for updates on the event bus
