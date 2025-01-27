@@ -1,7 +1,7 @@
 packages:
   - packages/*
-  - runner
-  # - '!runner'
+  # - runner
+  - '!runner'
   - '!package-template'
   # - '!packages/vue-place-selector'
   - '!packages/otp-input'
