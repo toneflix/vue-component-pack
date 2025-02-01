@@ -16,6 +16,7 @@
 </template>
 
 <script setup lang="ts">
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import PaystackPop from '@paystack/inline-js'
@@ -24,8 +25,11 @@ import '../styles/main.scss'
 
 const emit = defineEmits<{
   (event: 'ready'): void
-  (event: 'success', response: { message: string; reference: string }): void
-  (event: 'verified', response: { message?: string | undefined; status: boolean }): void
+  (event: 'success', response: { message: string; reference: string; [k: string]: any }): void
+  (
+    event: 'verified',
+    response: { message?: string | undefined; status: boolean; [k: string]: any }
+  ): void
   (event: 'canceled', response: { reference: string }): void
   (event: 'destroyed'): void
   (event: 'error', error: { message: string }, reference?: string | undefined): void
@@ -75,7 +79,7 @@ const verifyPayment = async (ref: string) => {
   try {
     const data = await props.verifyCallback(ref)
     if (data && data.status === true) {
-      emit('verified', { status: data.status, message: data.message })
+      emit('verified', data)
       reference.value = undefined
       if (props.redirectRoute) {
         router.push(props.redirectRoute)
@@ -136,11 +140,11 @@ const paystackInline = (reference: string = '') => {
         }
       ]
     },
-    onSuccess(response) {
+    onSuccess(data) {
       loading.value = false
-      emit('success', response)
+      emit('success', data)
       if (!props.dontVerify) {
-        verifyPayment(response.reference)
+        verifyPayment(data.reference)
       }
     },
     onCancel() {
