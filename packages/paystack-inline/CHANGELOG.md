@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.5.2...@toneflix/paystack-inline@1.6.0) (2025-02-01)
+
+### Features
+
+- (paystack-inline) Return the the full response payload in the verified and success event. ([7268b79](https://github.com/toneflix/vue-component-pack/commit/7268b7940f78b1381d261a3d53e61fa1cc308c53))
+
 ## [1.5.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.5.1...@toneflix/paystack-inline@1.5.2) (2025-01-14)
 
 ### Bug Fixes
