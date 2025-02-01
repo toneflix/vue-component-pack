@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.5.0...@toneflix/vue-place-selector@1.5.1) (2025-01-27)
+
+### Bug Fixes
+
+- Ensure that only data is only loaded when iso2 is set ([4dd81f0](https://github.com/toneflix/vue-component-pack/commit/4dd81f086e9b2273b70a7a286ac11862639db1e7))
+
 # [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.4.0...@toneflix/vue-place-selector@1.5.0) (2025-01-27)
 
 ### Features
