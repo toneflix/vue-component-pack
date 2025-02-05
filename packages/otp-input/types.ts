@@ -59,6 +59,18 @@ export interface OtpInputType {
    */
   secondaryColor?: string | undefined
   /**
+   * The text color for the input boxes
+   *
+   * @default #000
+   */
+  textColor?: string | undefined
+  /**
+   * The text color for the focused input box
+   *
+   * @default #000
+   */
+  textColorActive?: string | undefined
+  /**
    * The position of the component
    * [
    * left,

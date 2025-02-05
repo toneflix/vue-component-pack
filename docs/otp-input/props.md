@@ -80,11 +80,35 @@ The primary color for the input boxes.
 
 The secondary color for the input boxes, used when a box is focused.
 
-<otp-input model-value="" secondary-color="#663399" />
+<otp-input model-value="" secondary-color="#3dc2ff" />
 
 ```vue:line-numbers
 <template>
-  <otp-input model-value="" secondary-color="#663399" />
+  <otp-input model-value="" secondary-color="#3dc2ff" />
+</template>
+```
+
+## textColor | {~~`string`~~} | [_default: #3880ff_]
+
+The text color for the input boxes.
+
+<otp-input model-value="" text-color="#663399" />
+
+```vue:line-numbers
+<template>
+  <otp-input model-value="" text-color="#663399" />
+</template>
+```
+
+## textColorActive | {~~`string`~~} | [_default: #3dc2ff_]
+
+The text color for the focused input boxe.
+
+<otp-input model-value="" text-color-active="#3dc2ff" />
+
+```vue:line-numbers
+<template>
+  <otp-input model-value="" text-color-active="#3dc2ff" />
 </template>
 ```
 

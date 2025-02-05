@@ -5,6 +5,8 @@
   --ci-color-secondary: #3dc2ff;
   --ci-border-radius: 0;
   --ci-border-width: 2px;
+  --ci-text-color-active: var(--ci-color-secondary);
+  --ci-text-color: var(--ci-color-primary);
   --ci-font-size: 30px;
   --ci-font-family: 'Anton', sans-serif;
   --ci-gap: 10px;
@@ -73,14 +75,14 @@
     font-size: var(--ci-font-size);
     text-align: center;
     transition: 0.2s all ease-in-out;
-    color: var(--ci-color-primary);
+    color: var(--ci-text-color);
     box-sizing: border-box;
     appearance: initial;
     -webkit-appearance: initial;
     &:focus {
       outline: none;
-      color: var(--ci-color-secondary);
-      caret-color: var(--ci-color-secondary);
+      color: var(--ci-text-color-active);
+      caret-color: var(--ci-text-color-active);
     }
   }
   &.border-b {

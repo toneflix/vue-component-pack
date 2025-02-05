@@ -5,11 +5,13 @@
     :style="{
       '--ci-gap': gap,
       '--ci-font-size': fontSize,
+      '--ci-text-color': textColor ?? primaryColor,
       '--ci-font-family': fontFamily,
       '--ci-border-width': borderSize,
       '--ci-border-radius': rounded || borderRadius ? borderRadius ?? '5px' : undefined,
       '--ci-color-primary': primaryColor,
-      '--ci-color-secondary': secondaryColor
+      '--ci-color-secondary': secondaryColor,
+      '--ci-text-color-active': textColorActive ?? secondaryColor
     }"
   >
     <slot>
