@@ -104,6 +104,13 @@ export interface OtpInputType {
    */
   inputsCount?: number | undefined
   /**
+   * Size of the border radius in CSS units, including unit name (will overide `rounded`)
+   *
+   * @example 2px
+   * @default 5px
+   */
+  borderRadius?: string | undefined
+  /**
    * Width of the input borders in CSS units, including unit name
    *
    * @example 2px

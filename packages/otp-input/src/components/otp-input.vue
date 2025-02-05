@@ -7,7 +7,7 @@
       '--ci-font-size': fontSize,
       '--ci-font-family': fontFamily,
       '--ci-border-width': borderSize,
-      '--ci-border-radius': rounded ? '5px' : undefined,
+      '--ci-border-radius': rounded || borderRadius ? borderRadius ?? '5px' : undefined,
       '--ci-color-primary': primaryColor,
       '--ci-color-secondary': secondaryColor
     }"

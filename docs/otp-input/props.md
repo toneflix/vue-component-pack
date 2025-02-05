@@ -162,6 +162,18 @@ Size of the input borders in CSS units, including unit name.
 </template>
 ```
 
+## borderRadius | {~~`string`~~} | [_default: 5px_]
+
+Size of the border radius in CSS units, including unit name (will overide `rounded`)
+
+<otp-input model-value="" border-radius="10px" />
+
+```vue:line-numbers
+<template>
+  <otp-input model-value="" border-radius="10px" />
+</template>
+```
+
 ## fieldWidth | {~~`number`~~} | [_default: 56_]
 
 Width of the input boxes.
