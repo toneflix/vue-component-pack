@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.4.0...@toneflix/otp-input@1.5.0) (2025-02-05)
+
+### Features
+
+- (otp-input) Add props to control background color. ([6fda689](https://github.com/toneflix/vue-component-pack/commit/6fda689c4304f69a90b06f8ea385aff8fec70e3f))
+
 # [1.4.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.3.0...@toneflix/otp-input@1.4.0) (2025-02-05)
 
 ### Features
