@@ -13,9 +13,9 @@
     "docs:deploy": "../../deploy.sh otp-input"
   },
   "devDependencies": {
-    "vitepress": "^1.4.1"
+    "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "@toneflix/otp-input": "^1.0.37"
+    "@toneflix/otp-input": "^1.3.0"
   }
 }
