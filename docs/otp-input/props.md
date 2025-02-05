@@ -112,6 +112,30 @@ The text color for the focused input boxe.
 </template>
 ```
 
+## backgroundColor | {~~`string`~~} | [_default: transparent]
+
+Sets the background color for the input boxes.
+
+<otp-input model-value="" background-color="#8B8686" />
+
+```vue:line-numbers
+<template>
+  <otp-input model-value="" background-color="#8B8686" />
+</template>
+```
+
+## backgroundColorActive | {~~`string`~~} | [_default: transparent]
+
+Sets the background color for the focused input box.
+
+<otp-input model-value="" background-color-active="#8B8686" />
+
+```vue:line-numbers
+<template>
+  <otp-input model-value="" background-color-active="#8B8686" />
+</template>
+```
+
 ## fontSize | {~~`string`~~} | [_default: 30px_]
 
 Font size in CSS units, including unit name.
