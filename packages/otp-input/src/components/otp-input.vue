@@ -11,7 +11,9 @@
       '--ci-border-radius': rounded || borderRadius ? borderRadius ?? '5px' : undefined,
       '--ci-color-primary': primaryColor,
       '--ci-color-secondary': secondaryColor,
-      '--ci-text-color-active': textColorActive ?? secondaryColor
+      '--ci-text-color-active': textColorActive ?? secondaryColor,
+      '--ci-background': backgroundColor,
+      '--ci-background-active': backgroundColorActive
     }"
   >
     <slot>

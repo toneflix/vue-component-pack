@@ -71,6 +71,18 @@ export interface OtpInputType {
    */
   textColorActive?: string | undefined
   /**
+   * Sets the background color for the input boxes
+   *
+   * @default transparent
+   */
+  backgroundColor?: string | undefined
+  /**
+   * Sets the background color for the focused input box
+   *
+   * @default transparent
+   */
+  backgroundColorActive?: string | undefined
+  /**
    * The position of the component
    * [
    * left,

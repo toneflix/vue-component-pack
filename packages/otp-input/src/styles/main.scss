@@ -9,6 +9,8 @@
   --ci-text-color: var(--ci-color-primary);
   --ci-font-size: 30px;
   --ci-font-family: 'Anton', sans-serif;
+  --ci-background: transparent;
+  --ci-background-active: transparent;
   --ci-gap: 10px;
   &.disabled {
     opacity: 0.5;
@@ -79,10 +81,12 @@
     box-sizing: border-box;
     appearance: initial;
     -webkit-appearance: initial;
+    background-color: var(--ci-background);
     &:focus {
       outline: none;
       color: var(--ci-text-color-active);
       caret-color: var(--ci-text-color-active);
+      background-color: var(--ci-background-active);
     }
   }
   &.border-b {
