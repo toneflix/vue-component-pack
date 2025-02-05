@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.2.0...@toneflix/otp-input@1.3.0) (2025-02-05)
+
+### Features
+
+- (otp-input) Add borderRadius prop. ([6c5ffb4](https://github.com/toneflix/vue-component-pack/commit/6c5ffb420c233cee8559ad8713cd6ef9fcbd1a5f))
+
 # [1.2.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.1.13...@toneflix/otp-input@1.2.0) (2024-12-08)
 
 ### Bug Fixes
