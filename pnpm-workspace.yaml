@@ -1,11 +1,10 @@
 packages:
   - packages/*
-  - runner
-  - '!runner'
+  # - runner
   - '!package-template'
   - '!packages/vue-place-selector'
-  # - '!packages/otp-input'
-  - '!packages/vue-auth'
+  - '!packages/otp-input'
+  # - '!packages/vue-auth'
   - '!packages/vue-trix'
   - '!packages/vue-forms'
   - '!packages/vue-dataviewer'
