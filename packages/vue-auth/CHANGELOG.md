@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.4](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.8.3...@toneflix/vue-auth@1.8.4) (2025-02-08)
+
+### Bug Fixes
+
+- (vue-auth) Fix minor typscript bug. ([53a3924](https://github.com/toneflix/vue-component-pack/commit/53a392409b8966601cf8433c1fd7291e4c9a428a))
+
 ## [1.8.3](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.8.2...@toneflix/vue-auth@1.8.3) (2024-12-08)
 
 **Note:** Version bump only for package @toneflix/vue-auth
