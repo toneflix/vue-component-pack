@@ -115,6 +115,7 @@ interface CustomHeaders {
 export interface StorageOptions {
   /**
    * Options for pinia-plugin-persists
+   * @default true
    */
   persist?: any // eslint-disable-line @typescript-eslint/no-explicit-any
   [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
