@@ -9,7 +9,7 @@ import {
   ResponseError,
   StorageOptions
 } from '../types'
-import { type Ref, ref, computed, toValue } from 'vue'
+import { Ref, ref, computed, toValue } from 'vue'
 import { getAuthConfig, buildHeaders, url } from '../utils/config'
 
 import axios from 'axios'
@@ -20,7 +20,7 @@ axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8
 axios.defaults.headers.common['Accept'] = 'application/json'
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
-export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOptions) {
+export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions) {
   return defineStore(
     'vue-auth',
     () => {
@@ -36,7 +36,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
        * @param options
        * @returns
        */
-      const login = async <U = UA, T = LoginCredentials> (
+      const login = async <U = UA, T = LoginCredentials>(
         credentials: T,
         options: AuthOptions<U> = getAuthConfig()
       ): Promise<DefinitelyAuthResponse<U>> => {
@@ -53,8 +53,8 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
             token: tkn,
             message
           } = options.transformResponse
-              ? options.transformResponse(data)
-              : { user: data.user, token: data.token, message: data.message }
+            ? options.transformResponse(data)
+            : { user: data.user, token: data.token, message: data.message }
 
           user.value = usr
           token.value = tkn
@@ -78,7 +78,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
        * @param options
        * @returns
        */
-      const register = async <U = UA, T = RegisterCredentials> (
+      const register = async <U = UA, T = RegisterCredentials>(
         credentials: T,
         options: AuthOptions<U> = getAuthConfig()
       ): Promise<DefinitelyAuthResponse<U>> => {
@@ -95,8 +95,8 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
             token: tkn,
             message
           } = options.transformResponse
-              ? options.transformResponse(data)
-              : { user: data.user, token: data.token, message: data.message }
+            ? options.transformResponse(data)
+            : { user: data.user, token: data.token, message: data.message }
 
           user.value = usr
           token.value = tkn
@@ -120,14 +120,14 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
        * @param credentials
        * @returns
        */
-      const logout = async <T = unknown> (
+      const logout = async <T = unknown>(
         options: AuthOptions = getAuthConfig(),
         credentials?: T
       ): Promise<
         | {
-          error?: BaseError
-          message?: string
-        }
+            error?: BaseError
+            message?: string
+          }
         | undefined
       > => {
         const headers = await buildHeaders(options, user.value, token.value)
@@ -157,7 +157,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
        * @param credentials
        * @returns
        */
-      const forgot = async <T = unknown, M extends ForgotResponse = ForgotResponse> (
+      const forgot = async <T = unknown, M extends ForgotResponse = ForgotResponse>(
         credentials?: T,
         options: AuthOptions = getAuthConfig()
       ): Promise<{
@@ -199,7 +199,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
        * @param options
        * @returns
        */
-      const reset = async <U = UA, T = unknown> (
+      const reset = async <U = UA, T = unknown>(
         credentials: T,
         options: AuthOptions<U> = getAuthConfig()
       ): Promise<{
@@ -238,7 +238,7 @@ export function createVueAuthStore<UA = unknown> (storageOptions?: StorageOption
        * @param credentials
        * @returns
        */
-      const loadUserFromStorage = async <U = UA, T = unknown> (
+      const loadUserFromStorage = async <U = UA, T = unknown>(
         options: AuthOptions<U> = getAuthConfig(),
         credentials?: T,
         auto?: boolean
