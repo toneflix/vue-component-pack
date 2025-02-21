@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/vue-auth",
-  "version": "1.8.4",
+  "version": "1.9.0",
   "description": "Advanced authentication plugin for Vue 3.",
   "main": "dist/lib/index.cjs",
   "module": "dist/es/index.mjs",

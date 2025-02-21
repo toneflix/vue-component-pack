@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.8.4...@toneflix/vue-auth@1.9.0) (2025-02-21)
+
+### Bug Fixes
+
+- (vue-auth) Fix import error ([dad82ae](https://github.com/toneflix/vue-component-pack/commit/dad82ae33888fb9584aa60fd225224816d19d9f4))
+
+### Features
+
+- (vue-auth) Allow configuration to be set in a config.vue-auth.[js|ts] file and fix isAuthentication bug. ([d853d6d](https://github.com/toneflix/vue-component-pack/commit/d853d6de8fc68854b536455cee2d6d912e151fe0))
+
 ## [1.8.4](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.8.3...@toneflix/vue-auth@1.8.4) (2025-02-08)
 
 ### Bug Fixes
