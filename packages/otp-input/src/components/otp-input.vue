@@ -268,7 +268,7 @@ watch(
   () => props.modelValue,
   (v) => {
     for (let i = 0; i < props.inputsCount; i++) {
-      inputValues.value[i] = v[i] || ''
+      inputValues.value[i] = v?.[i] ?? ''
     }
   },
   {
