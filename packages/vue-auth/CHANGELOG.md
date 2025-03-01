@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.9.2...@toneflix/vue-auth@1.10.0) (2025-03-01)
+
+### Features
+
+- Add skipInit option to skip pinia re-initialization is needed. ([c41e8a0](https://github.com/toneflix/vue-component-pack/commit/c41e8a054cb96d0f28136ea00e4b830958912633))
+
 ## [1.9.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.9.1...@toneflix/vue-auth@1.9.2) (2025-03-01)
 
 **Note:** Version bump only for package @toneflix/vue-auth
