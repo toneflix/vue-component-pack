@@ -118,6 +118,11 @@ export interface StorageOptions {
    * @default true
    */
   persist?: any // eslint-disable-line @typescript-eslint/no-explicit-any
+  /**
+   * If set to true, we will not try to reinitialize pinia
+   * @default undefined
+   */
+  skipInit?: boolean
   [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
