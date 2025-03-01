@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.5.1...@toneflix/vue-place-selector@1.6.0) (2025-03-01)
+
+### Features
+
+- (place-slector) Allow to use name as a valid initializer. ([0d885e1](https://github.com/toneflix/vue-component-pack/commit/0d885e16907a6ff15443fc855799d29b54b667cb))
+
 ## [1.5.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.5.0...@toneflix/vue-place-selector@1.5.1) (2025-01-27)
 
 ### Bug Fixes
