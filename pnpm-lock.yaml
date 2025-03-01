@@ -54,117 +54,6 @@ importers:
         specifier: ^4.4.5
         version: 4.4.5(vue@3.5.12(typescript@5.6.3))
 
-  packages/otp-input:
-    devDependencies:
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.4
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5)(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
-      '@vue/runtime-core':
-        specifier: ^3.5.11
-        version: 3.5.13
-      vite:
-        specifier: ^5.4.8
-        version: 5.4.14(@types/node@22.10.5)(sass@1.80.4)
-      vitepress:
-        specifier: ^1.4.0
-        version: 1.6.3(@algolia/client-search@5.20.1)(@types/node@22.10.5)(axios@1.7.7)(postcss@8.5.1)(sass@1.80.4)(search-insights@2.17.3)(typescript@5.6.3)
-      vue:
-        specifier: ^3.5.11
-        version: 3.5.13(typescript@5.6.3)
-
-  packages/paystack-inline:
-    dependencies:
-      '@paystack/inline-js':
-        specifier: ^2.22.0
-        version: 2.22.1
-      vue-router:
-        specifier: ^4.4.5
-        version: 4.4.5(vue@3.5.13(typescript@5.6.3))
-    devDependencies:
-      '@types/paystack__inline-js':
-        specifier: ^1.0.0
-        version: 1.0.1
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.4
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5)(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
-      '@vue/runtime-core':
-        specifier: ^3.5.11
-        version: 3.5.13
-      vite:
-        specifier: ^5.4.8
-        version: 5.4.14(@types/node@22.10.5)(sass@1.80.4)
-      vitepress:
-        specifier: ^1.4.0
-        version: 1.6.3(@algolia/client-search@5.20.1)(@types/node@22.10.5)(axios@1.7.7)(postcss@8.5.1)(sass@1.80.4)(search-insights@2.17.3)(typescript@5.6.3)
-      vue:
-        specifier: ^3.5.11
-        version: 3.5.13(typescript@5.6.3)
-
-  packages/vue-auth:
-    dependencies:
-      axios:
-        specifier: ^1.7.7
-        version: 1.7.7
-      pinia:
-        specifier: ^2.2.4
-        version: 2.3.1(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
-      vue-router:
-        specifier: ^4.4.5
-        version: 4.4.5(vue@3.5.13(typescript@5.6.3))
-    devDependencies:
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.4
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5)(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
-      '@vue/runtime-core':
-        specifier: ^3.5.12
-        version: 3.5.13
-      vite:
-        specifier: ^5.4.10
-        version: 5.4.14(@types/node@22.10.5)(sass@1.80.4)
-      vitepress:
-        specifier: ^1.4.1
-        version: 1.6.3(@algolia/client-search@5.20.1)(@types/node@22.10.5)(axios@1.7.7)(postcss@8.5.1)(sass@1.80.4)(search-insights@2.17.3)(typescript@5.6.3)
-      vue:
-        specifier: ^3.5.12
-        version: 3.5.13(typescript@5.6.3)
-
-  packages/vue-dataviewer:
-    dependencies:
-      '@toneflix/vue-forms':
-        specifier: ^1.12.2
-        version: 1.12.8(vue@3.5.13(typescript@5.6.3))
-      date-fns:
-        specifier: ^4.1.0
-        version: 4.1.0
-    devDependencies:
-      '@types/luxon':
-        specifier: ^3.4.2
-        version: 3.4.2
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.4
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5)(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
-      '@vue/runtime-core':
-        specifier: ^3.5.11
-        version: 3.5.13
-      vite:
-        specifier: ^5.4.8
-        version: 5.4.14(@types/node@22.10.5)(sass@1.80.4)
-      vitepress:
-        specifier: ^1.4.0
-        version: 1.6.3(@algolia/client-search@5.20.1)(@types/node@22.10.5)(axios@1.7.7)(postcss@8.5.1)(sass@1.80.4)(search-insights@2.17.3)(typescript@5.6.3)
-      vue:
-        specifier: ^3.5.11
-        version: 3.5.13(typescript@5.6.3)
-
-  packages/vue-forms:
-    devDependencies:
-      '@vue/runtime-core':
-        specifier: ^3.5.12
-        version: 3.5.13
-      vue:
-        specifier: ^3.5.12
-        version: 3.5.13(typescript@5.6.3)
-
   packages/vue-place-selector:
     dependencies:
       '@vueuse/core':
@@ -188,21 +77,6 @@ importers:
         version: 1.6.3(@algolia/client-search@5.20.1)(@types/node@22.10.5)(axios@1.7.7)(postcss@8.5.1)(sass@1.80.4)(search-insights@2.17.3)(typescript@5.6.3)
       vue:
         specifier: ^3.5.11
-        version: 3.5.13(typescript@5.6.3)
-
-  packages/vue-trix:
-    dependencies:
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.4
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5)(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
-      trix:
-        specifier: ^2.1
-        version: 2.1.12
-      vite:
-        specifier: ^5.4.8
-        version: 5.4.14(@types/node@22.10.5)(sass@1.80.4)
-      vue:
-        specifier: ^3.5
         version: 3.5.13(typescript@5.6.3)
 
 packages:
@@ -1105,11 +979,6 @@ packages:
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
-  '@toneflix/vue-forms@1.12.8':
-    resolution: {integrity: sha512-h0DwgEIso0pBlni4eiZW1K6q93HWV5IBO13rH1WAwxPFpWOwghffkr3R6ht1ESQQE0YAmpx718iLnx7bourSVw==}
-    peerDependencies:
-      vue: ^3.5.11
-
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
     engines: {node: ^16.14.0 || >=18.0.0}
@@ -1133,9 +1002,6 @@ packages:
   '@types/linkify-it@5.0.0':
     resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
 
-  '@types/luxon@3.4.2':
-    resolution: {integrity: sha512-TifLZlFudklWlMBfhubvgqTXRzLDI5pCbGa4P8a3wPyUQSW+1xQ5eDsreP9DWHX3tjq1ke96uYG/nwundroWcA==}
-
   '@types/markdown-it@14.1.2':
     resolution: {integrity: sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==}
 
@@ -1156,12 +1022,6 @@ packages:
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
-
-  '@types/paystack__inline-js@1.0.1':
-    resolution: {integrity: sha512-uAXk9EJobC/0v5zetSULTU8+3lIE3Y0Q0KwpR0lF7KRf+tj4AcE87kr6b8tpRkrr6uo9qXKgyjma+bmGDhwxbQ==}
-
-  '@types/trusted-types@2.0.7':
-    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1713,9 +1573,6 @@ packages:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
     engines: {node: '>=8'}
 
-  date-fns@4.1.0:
-    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
-
   dateformat@3.0.3:
     resolution: {integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==}
 
@@ -1784,9 +1641,6 @@ packages:
   dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
-
-  dompurify@3.2.4:
-    resolution: {integrity: sha512-ysFSFEDVduQpyhzAob/kkuJjf5zWkZD8/A9ywSp1byueyuCfHamrCBa14/Oc2iiB0e51B+NpxSl5gmzn+Ms/mg==}
 
   dot-prop@5.3.0:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
@@ -2938,15 +2792,6 @@ packages:
     resolution: {integrity: sha512-eW/gHNMlxdSP6dmG6uJip6FXN0EQBwm2clYYd8Wul42Cwu/DK8HEftzsapcNdYe2MfLiIwZqsDk2RDEsTE79hA==}
     engines: {node: '>=10'}
 
-  pinia@2.3.1:
-    resolution: {integrity: sha512-khUlZSwt9xXCaTbbxFYBKDc/bWAGWJjOgvxETwkTN7KRm66EeT1ZdZj6i2ceh9sP2Pzqsbc704r2yngBrxBVug==}
-    peerDependencies:
-      typescript: '>=4.4.4'
-      vue: ^2.7.0 || ^3.5.11
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   pkg-dir@4.2.0:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
@@ -3381,9 +3226,6 @@ packages:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
     engines: {node: '>=8'}
 
-  trix@2.1.12:
-    resolution: {integrity: sha512-0hQvJdy257XuzRdCzSQ/QvcqyTp+8ixMxVLWxSbWvEzD2kgKFlcrMjgWZbtVkJENaod+jm2sBTOWAZVNWK+DMA==}
-
   ts-api-utils@1.3.0:
     resolution: {integrity: sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==}
     engines: {node: '>=16'}
@@ -3583,17 +3425,6 @@ packages:
       markdown-it-mathjax3:
         optional: true
       postcss:
-        optional: true
-
-  vue-demi@0.14.10:
-    resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
-    engines: {node: '>=12'}
-    hasBin: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
         optional: true
 
   vue-eslint-parser@9.4.3:
@@ -4673,10 +4504,6 @@ snapshots:
 
   '@sinclair/typebox@0.27.8': {}
 
-  '@toneflix/vue-forms@1.12.8(vue@3.5.13(typescript@5.6.3))':
-    dependencies:
-      vue: 3.5.13(typescript@5.6.3)
-
   '@tufjs/canonical-json@2.0.0': {}
 
   '@tufjs/models@2.0.1':
@@ -4698,8 +4525,6 @@ snapshots:
 
   '@types/linkify-it@5.0.0': {}
 
-  '@types/luxon@3.4.2': {}
-
   '@types/markdown-it@14.1.2':
     dependencies:
       '@types/linkify-it': 5.0.0
@@ -4720,11 +4545,6 @@ snapshots:
       undici-types: 6.20.0
 
   '@types/normalize-package-data@2.4.4': {}
-
-  '@types/paystack__inline-js@1.0.1': {}
-
-  '@types/trusted-types@2.0.7':
-    optional: true
 
   '@types/unist@3.0.3': {}
 
@@ -5341,8 +5161,6 @@ snapshots:
 
   dargs@7.0.0: {}
 
-  date-fns@4.1.0: {}
-
   dateformat@3.0.3: {}
 
   debug@4.3.7:
@@ -5385,10 +5203,6 @@ snapshots:
   dir-glob@3.0.1:
     dependencies:
       path-type: 4.0.0
-
-  dompurify@3.2.4:
-    optionalDependencies:
-      '@types/trusted-types': 2.0.7
 
   dot-prop@5.3.0:
     dependencies:
@@ -6771,16 +6585,6 @@ snapshots:
 
   pify@5.0.0: {}
 
-  pinia@2.3.1(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)):
-    dependencies:
-      '@vue/devtools-api': 6.6.4
-      vue: 3.5.13(typescript@5.6.3)
-      vue-demi: 0.14.10(vue@3.5.13(typescript@5.6.3))
-    optionalDependencies:
-      typescript: 5.6.3
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-
   pkg-dir@4.2.0:
     dependencies:
       find-up: 4.1.0
@@ -7235,10 +7039,6 @@ snapshots:
 
   trim-newlines@3.0.1: {}
 
-  trix@2.1.12:
-    dependencies:
-      dompurify: 3.2.4
-
   ts-api-utils@1.3.0(typescript@5.6.3):
     dependencies:
       typescript: 5.6.3
@@ -7426,10 +7226,6 @@ snapshots:
       - typescript
       - universal-cookie
 
-  vue-demi@0.14.10(vue@3.5.13(typescript@5.6.3)):
-    dependencies:
-      vue: 3.5.13(typescript@5.6.3)
-
   vue-eslint-parser@9.4.3(eslint@9.14.0(jiti@2.4.2)):
     dependencies:
       debug: 4.3.7
@@ -7447,11 +7243,6 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.12(typescript@5.6.3)
-
-  vue-router@4.4.5(vue@3.5.13(typescript@5.6.3)):
-    dependencies:
-      '@vue/devtools-api': 6.6.4
-      vue: 3.5.13(typescript@5.6.3)
 
   vue@3.5.12(typescript@5.6.3):
     dependencies:

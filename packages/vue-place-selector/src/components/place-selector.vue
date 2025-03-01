@@ -71,7 +71,8 @@ const valid = computed(() => {
   // Since we're using iso2 to find or id to relate parents, ensure that the value
   // is a number or is string with a length of 2
   return Object.values(localParams ?? {}).every(
-    (value) => value && (typeof value === 'number' || value.length === 2)
+    (value) => typeof value !== 'undefined'
+    // (value) => value && (typeof value === 'number' || value.length === 2)
   )
 })
 
