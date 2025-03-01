@@ -28,7 +28,7 @@ export function createVueAuthStore<UA = unknown>(storageOptions?: StorageOptions
       const token = ref<string>()
       const refreshed = ref<boolean>(false)
       const isAuthenticated = computed(() => !!token.value)
-      console.log(storageOptions)
+
       /**
        * Attempt to do a login
        *

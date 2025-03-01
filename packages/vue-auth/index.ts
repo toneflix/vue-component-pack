@@ -23,6 +23,7 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
         // Install Pinia if not already installed
         app.use(pinia)
       }
+      console.log(isPiniaInstalled)
 
       // Load user from storage
       const store = useAuthStore(options.storageOptions)
