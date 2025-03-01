@@ -7,7 +7,7 @@ import { setAuthConfig } from './src/utils/config'
 import { useAuthStore } from './src/stores/vue-auth'
 
 // Define the plugin with the correct signature
-export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
+export const authPlugin = <U = unknown> (options: AuthOptions<U>) => {
   const { router, loginRouteName, defaultAuthRouteName } = options
 
   const vueAuth: Plugin<[]> = {
@@ -15,6 +15,7 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
       // Store global authentication options
       setAuthConfig<U>(options)
 
+      // TODO: Document the skipInit option
       // Check if Pinia is already installed
       const isPiniaInstalled = !!getActivePinia() || options.storageOptions?.skipInit
 
