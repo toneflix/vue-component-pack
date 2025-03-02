@@ -3,6 +3,8 @@ import 'pinia'
 import { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
 
+import { PiniaPlugin } from 'pinia'
+
 export interface AuthUser {
   id: number
   email: string
@@ -123,6 +125,10 @@ export interface StorageOptions {
    * @default undefined
    */
   skipInit?: boolean
+  /**
+   * Load optional pinia plugins
+   */
+  plugins?: PiniaPlugin[]
   [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
