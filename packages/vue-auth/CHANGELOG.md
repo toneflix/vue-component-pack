@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.10.0...@toneflix/vue-auth@1.11.0) (2025-03-02)
+
+### Features
+
+- Add options.storageOptions.plugins config to allow installing pinia plugins directly. ([0260a94](https://github.com/toneflix/vue-component-pack/commit/0260a943f1673724c9fabf38863446c87716c7f0))
+
 # [1.10.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.9.2...@toneflix/vue-auth@1.10.0) (2025-03-01)
 
 ### Features
