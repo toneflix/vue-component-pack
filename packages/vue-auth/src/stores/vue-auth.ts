@@ -143,13 +143,23 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
             ...options.axiosConfig
           })
 
-          user.value = {} as AuthUser
-          token.value = undefined
-          globalThis.localStorage.removeItem(options.storageKey ?? 'auth_token')
+          clearAuth(options)
         } catch (error) {
           const { response } = <ResponseError>error
           return { error: response?.data ?? error ?? {}, message: response?.data?.message }
         }
+      }
+
+      /**
+       * Clear the current authentication without making any server request.
+       *
+       * @param options
+       * @returns
+       */
+      const clearAuth = <U>(options: AuthOptions<U> = getAuthConfig()): void => {
+        user.value = {} as AuthUser
+        token.value = undefined
+        globalThis.localStorage.removeItem(options.storageKey ?? 'auth_token')
       }
 
       type ForgotResponse = { timeout?: number; message?: string }
@@ -282,10 +292,8 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
             } catch (error) {
               const { response, status } = <ResponseError>error
               if (status === 401) {
-                user.value = {} as U
-                token.value = undefined
                 refreshed.value = true
-                globalThis.localStorage.removeItem(options.storageKey ?? 'auth_token')
+                clearAuth(options)
               }
 
               return {
@@ -315,6 +323,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
         logout,
         forgot,
         register,
+        clearAuth,
         loadUserFromStorage
       }
     },

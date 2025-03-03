@@ -231,6 +231,16 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
   }
 
   /**
+   * Clear the current authentication without making any server request.
+   *
+   * @param options
+   * @returns
+   */
+  const clearAuth = (options: AuthOptions = getAuthConfig()): void => {
+    return store.clearAuth(options)
+  }
+
+  /**
    * Request for a password reset token
    *
    * @param options
@@ -379,6 +389,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
     logout,
     forgot,
     register,
+    clearAuth,
     loadUserFromStorage
   }
 }
