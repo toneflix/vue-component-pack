@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.11.0...@toneflix/vue-auth@1.12.0) (2025-03-03)
+
+### Bug Fixes
+
+- (vue-auth) Assert that plugin is defined. ([bb3d9f2](https://github.com/toneflix/vue-component-pack/commit/bb3d9f20b999f46cfa5f49d23162021d28b281d9))
+
+### Features
+
+- Remove plugins and skipInit from storage options when passing to the authstore. ([daf1b62](https://github.com/toneflix/vue-component-pack/commit/daf1b6205120105e0e5b8325bf147715977501d1))
+
 # [1.11.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.10.0...@toneflix/vue-auth@1.11.0) (2025-03-02)
 
 ### Features
