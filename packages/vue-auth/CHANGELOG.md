@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.12.0...@toneflix/vue-auth@1.13.0) (2025-03-03)
+
+### Features
+
+- (vue-auth) Add a clearAuth method to clear user auth without making any server requests. ([4ef3220](https://github.com/toneflix/vue-component-pack/commit/4ef322062de75bab163c56ed28ea61d142c09e2d))
+
 # [1.12.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.11.0...@toneflix/vue-auth@1.12.0) (2025-03-03)
 
 ### Bug Fixes
