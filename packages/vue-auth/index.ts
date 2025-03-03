@@ -27,7 +27,7 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
         // Install pinia options.storageOptions.plugins if any is provided
         if (options.storageOptions?.plugins) {
           for (let i = 0; i < options.storageOptions.plugins.length; i++) {
-            const plugin = options.storageOptions.plugins[i]
+            const plugin = options.storageOptions.plugins[i]!
             pinia.use(plugin)
           }
         }
