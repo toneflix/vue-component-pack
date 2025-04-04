@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.9](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.8...@toneflix/vue-forms@1.12.9) (2025-04-04)
+
+### Bug Fixes
+
+- Fix missing slot props. ([8519113](https://github.com/toneflix/vue-component-pack/commit/8519113dbc2813faf39de528f59392cbc71a71c0))
+
 ## [1.12.8](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.7...@toneflix/vue-forms@1.12.8) (2024-11-27)
 
 ### Bug Fixes
