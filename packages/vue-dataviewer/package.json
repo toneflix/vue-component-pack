@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/vue-dataviewer",
-  "version": "1.28.0",
+  "version": "1.28.1",
   "description": "Quickly view data from an object with little to no tinkering on vue 3.",
   "style": "dist/lib/style.css",
   "main": "dist/lib/index.cjs",
