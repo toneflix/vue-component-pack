@@ -11,10 +11,10 @@
     }"
   >
     <slot
-      :viewData="viewData"
-      :viewMode="viewMode"
+      :toggle-dialog="loadDialog"
+      :view-data="viewData"
+      :view-mode="viewMode"
       :saving="saving"
-      :toggleDialog="loadDialog"
     ></slot>
   </div>
   <TDialog v-model="dialogToggle" :z-index="dialogZIndex" :dialog-class="dialogClass">
@@ -61,7 +61,12 @@ defineSlots<
     /**
      * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
      */
-    default: (scope: { toggleDialog: (data?: any, mode?: MainProps['mode']) => void }) => VNode[]
+    default: (scope: {
+      toggleDialog: (data?: any, mode?: MainProps['mode']) => void,
+      viewData: MainProps['data'];
+      viewMode: MainProps['mode'];
+      saving: boolean;
+    }) => VNode[]
   }
 >()
 

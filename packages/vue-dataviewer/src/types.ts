@@ -38,10 +38,10 @@ export interface DataViewerProps {
    * Map boolean data labels to data options
    */
   booleanLabels?:
-    | {
-        [key: string]: [string, string]
-      }
-    | undefined
+  | {
+    [key: string]: [string, string]
+  }
+  | undefined
   /**
    * Used along side with "bordered" to create a rounded border
    */
@@ -185,7 +185,7 @@ export type FormSlotName = keyof FormSlots
 
 export type FormSlots = {
   [K in keyof Omit<VueFormSlots, 'prepend' | 'default' | 'actions'> as `form-${string &
-    K}`]: VueFormSlots[K]
+  K}`]: VueFormSlots[K]
 }
 
 export type SlotName = keyof Omit<ComponentSlots, 'default' | 'header' | 'image'>
@@ -218,9 +218,10 @@ export interface ComponentSlots {
    * Slot for overiding image list items
    */
   'img-list-item': (scope: {
-    label: string
-    value: string
-    field: string
+    key?: string | number | undefined | null;
+    label: string;
+    value: string;
+    field: string;
     toggle: () => void
   }) => VNode[]
   /**
