@@ -6,29 +6,29 @@ interface SlotScope extends FormField {
 
 export interface FormField {
   type:
-    | 'url'
-    | 'tel'
-    | 'text'
-    | 'file'
-    | 'date'
-    | 'time'
-    | 'week'
-    | 'email'
-    | 'month'
-    | 'color'
-    | 'hidden'
-    | 'number'
-    | 'search'
-    | 'password'
-    | 'datetime'
-    | 'datetime-local'
-    // =============
-    | 'select' // [x]
-    | 'checkbox' // [x]
-    | 'radio' // [x]
-    | 'range'
-    | 'switch' // [x]
-    | 'textarea' // [x]
+  | 'url'
+  | 'tel'
+  | 'text'
+  | 'file'
+  | 'date'
+  | 'time'
+  | 'week'
+  | 'email'
+  | 'month'
+  | 'color'
+  | 'hidden'
+  | 'number'
+  | 'search'
+  | 'password'
+  | 'datetime'
+  | 'datetime-local'
+  // =============
+  | 'select' // [x]
+  | 'checkbox' // [x]
+  | 'radio' // [x]
+  | 'range'
+  | 'switch' // [x]
+  | 'textarea' // [x]
 
   /**
    * Unique identifier for the field
@@ -203,13 +203,13 @@ export interface InlineFormProps {
 }
 
 type MainSlotProps = {
-  formFields: FormField[]
-  isGrouped: boolean
-  useGrid: boolean
-  bordered: boolean
-  rounded: boolean
-  hideSubmit: boolean
-  separator: boolean
+  formFields?: FormField[] | undefined;
+  isGrouped?: boolean | undefined;
+  useGrid?: boolean | undefined;
+  bordered?: boolean | undefined;
+  rounded?: boolean | undefined;
+  hideSubmit?: boolean | undefined;
+  separator?: boolean | undefined;
 }
 
 export type SlotName = keyof Omit<VueFormSlots, 'default' | 'prepend' | 'actions'>
@@ -218,7 +218,7 @@ export interface VueFormSlots {
   /**
    * This is where default content goes
    */
-  default: (props: MainSlotProps) => VNode[]
+  default: (scope: { props: MainSlotProps }) => VNode[]
   /**
    * Slot for overiding input components
    */
@@ -246,7 +246,7 @@ export interface VueFormSlots {
   /**
    * Slot for prepending content
    */
-  prepend: (scope: MainSlotProps) => VNode[]
+  prepend: (scope: { props: MainSlotProps }) => VNode[]
   /**
    * Slot for adding content under actions
    */
@@ -319,7 +319,7 @@ export interface InputEvents {
 }
 
 export type GroupMeta<T extends FormField = FormField> = {
-  [key in T['group'] as string]: {
+  [key in T['group']as string]: {
     title: string
     rounded?: boolean
     subtitle?: string
@@ -332,7 +332,7 @@ export interface FormValues {
 }
 
 export type ComponentConstructor<Props = object, Slots = object> = {
-  new (): {
+  new(): {
     $props: PublicProps & Props
     $slots: Slots
   }
