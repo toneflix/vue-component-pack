@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.7.0...@toneflix/vue-place-selector@1.7.1) (2025-04-11)
+
+**Note:** Version bump only for package @toneflix/vue-place-selector
+
+# [1.7.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.6.0...@toneflix/vue-place-selector@1.7.0) (2025-04-11)
+
+### Features
+
+- Add loaded event and implement banned and allowed list props. ([f666ff7](https://github.com/toneflix/vue-component-pack/commit/f666ff7918d7e12fca6a843b1edc73a2b797288b))
+
 # [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.5.1...@toneflix/vue-place-selector@1.6.0) (2025-03-01)
 
 ### Features
