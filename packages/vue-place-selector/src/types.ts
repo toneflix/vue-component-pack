@@ -18,6 +18,8 @@ export interface BaseProps {
   busKey?: string | undefined
   type?: Type | undefined
   optionValue?: string | undefined
+  allowedList?: string | undefined
+  bannedList?: string | undefined
 }
 
 /* eslint-disable @typescript-eslint/no-empty-object-type */

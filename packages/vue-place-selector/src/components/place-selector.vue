@@ -37,6 +37,7 @@ defineOptions({
 const emit = defineEmits<{
   (name: 'error', msg: string, error: any): void // eslint-disable-line @typescript-eslint/no-explicit-any
   (name: 'change', value: string | number, data?: Place | undefined): void
+  (name: 'loaded', data: Place[]): void
 }>()
 
 // Props and defaults
@@ -106,6 +107,10 @@ const fetchPlaces = async () => {
     const { data } = await axios.get<{ data: Place[] }>(
       `https://naija-places.toneflix.com.ng/api${props.baseUrl + url.value}`,
       {
+        params: {
+          allowed: props.allowedList,
+          banned: props.bannedList
+        },
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
@@ -113,6 +118,8 @@ const fetchPlaces = async () => {
         }
       }
     )
+
+    emit('loaded', data.data)
 
     options.value = data.data
     loading.value = false
