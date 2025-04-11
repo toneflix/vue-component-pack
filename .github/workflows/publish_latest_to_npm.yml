@@ -37,6 +37,13 @@ jobs:
           node-version: 22
           cache: 'pnpm'
 
+      - name: Add token to NPMRC
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+
+      - name: Test NPM Authentication
+        run: pnpm whoami
+
       - name: Install dependencies
         run: pnpm install
 
@@ -45,13 +52,6 @@ jobs:
 
       - name: Format build
         run: pnpm fmt
-
-      - name: Add token to NPMRC
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-
-      - name: Test NPM Authentication
-        run: pnpm whoami
 
       - name: Version & Publish
         run: |
