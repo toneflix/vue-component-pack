@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/vue-place-selector",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Place (Country, State, City, e.t.c) Selector component for Vue3.",
   "style": "dist/lib/style.css",
   "main": "dist/lib/index.cjs",
