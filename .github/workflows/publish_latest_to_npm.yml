@@ -45,7 +45,10 @@ jobs:
 
       - name: Add token to NPMRC
         run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.TONEFLIX_RELEASE_TOKEN }}" >> ~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+
+      - name: Test NPM Authentication
+        run: pnpm whoami
 
       - name: Version & Publish
         env:
@@ -54,5 +57,4 @@ jobs:
         run: |
           git config user.name "Github Workflow (on behalf of ${{ github.actor }})"
           git config user.email "users.noreply.github.com"
-          pnpm whoami
           pnpm run ci:publish:latest
