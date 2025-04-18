@@ -65,7 +65,7 @@ export const createCountdown = (
  * @param next
  * @param context
  */
-export function runMiddlewares<U = AuthUser> (
+export function runMiddlewares<U = AuthUser>(
   middlewares: AuthOptions<U>['middlewares'],
   to: RouteLocationNormalized,
   from: RouteLocationNormalized,
@@ -108,12 +108,12 @@ export function runMiddlewares<U = AuthUser> (
 
 /**
  * Initialize Pinia
- * 
+ *
  * Will check if Pinia is already installed, if it is not, it
  * will install it.
- * 
- * @param app 
- * @param storageOptions 
+ *
+ * @param app
+ * @param storageOptions
  */
 export const initPinia = (app: App, storageOptions?: StorageOptions) => {
   let hasPinia = false
