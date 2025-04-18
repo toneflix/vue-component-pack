@@ -1,7 +1,5 @@
 import { AuthOptions, AuthUser } from '../types'
 
-import { loadAuthConfig } from './config-loader'
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export let authConfig: AuthOptions<any>
 
@@ -21,13 +19,6 @@ export const url = (endpoint?: keyof typeof authConfig.endpoints) => {
 
 export const setAuthConfig = <U = AuthUser>(options: AuthOptions<U>) => {
   authConfig = options
-
-  // Load the config file in project root if any
-  loadAuthConfig().then((config) => {
-    if (config && Object.keys(config).length > 0) {
-      Object.assign(authConfig, config)
-    }
-  })
 }
 
 export const getAuthConfig = <U = AuthUser>(): AuthOptions<U> => {

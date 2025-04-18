@@ -10,8 +10,9 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
   const { router, loginRouteName, defaultAuthRouteName } = options
 
   const vueAuth: Plugin<[]> = {
-    install: (app: App) => {
+    install: async (app: App) => {
       // Store global authentication options
+
       setAuthConfig<U>(options)
 
       // Check and install Pinia if it is not already installed
