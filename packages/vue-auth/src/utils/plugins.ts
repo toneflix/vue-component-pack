@@ -1,6 +1,7 @@
-import { AuthOptions, AuthUser, BaseError } from '../types'
+import { App, Ref, ref, toValue } from 'vue'
+import { AuthOptions, AuthUser, BaseError, StorageOptions } from '../types'
 import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
-import { Ref, ref, toValue } from 'vue'
+import { createPinia, getActivePinia } from 'pinia'
 
 /**
  * A simple errors reshaper, usefull for when your errors look like:
@@ -64,7 +65,7 @@ export const createCountdown = (
  * @param next
  * @param context
  */
-export function runMiddlewares<U = AuthUser>(
+export function runMiddlewares<U = AuthUser> (
   middlewares: AuthOptions<U>['middlewares'],
   to: RouteLocationNormalized,
   from: RouteLocationNormalized,
@@ -103,4 +104,43 @@ export function runMiddlewares<U = AuthUser>(
   }
 
   executeMiddleware(0)
+}
+
+/**
+ * Initialize Pinia
+ * 
+ * Will check if Pinia is already installed, if it is not, it
+ * will install it.
+ * 
+ * @param app 
+ * @param storageOptions 
+ */
+export const initPinia = (app: App, storageOptions?: StorageOptions) => {
+  let hasPinia = false
+
+  try {
+    const pinia = getActivePinia()
+    if (pinia) {
+      hasPinia = true
+    }
+  } catch {
+    hasPinia = false
+  }
+
+  // TODO: Document the options.storageOptions.skipInit option
+  // Install Pinia if not already installed
+  if (!hasPinia || storageOptions?.skipInit) {
+    const pinia = createPinia()
+
+    // TODO: Document the plugins option
+    // Install pinia options.storageOptions.plugins if any is provided
+    if (storageOptions?.plugins) {
+      for (let i = 0; i < storageOptions.plugins.length; i++) {
+        const plugin = storageOptions.plugins[i]!
+        pinia.use(plugin)
+      }
+    }
+
+    app.use(pinia)
+  }
 }
