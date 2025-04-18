@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.13.0...@toneflix/vue-auth@1.13.1) (2025-04-18)
+
+### Bug Fixes
+
+- (vue-auth) temporarily remove pinia installation block. ([54b7ba2](https://github.com/toneflix/vue-component-pack/commit/54b7ba26ee46346a2346cee89e160aa9f26c5a19))
+
 # [1.13.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.12.0...@toneflix/vue-auth@1.13.0) (2025-03-03)
 
 ### Features
