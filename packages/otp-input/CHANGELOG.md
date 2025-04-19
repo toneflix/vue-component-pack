@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.5.1...@toneflix/otp-input@1.6.0) (2025-04-19)
+
+### Features
+
+- (otp-input) Add masking for input. ([a00477f](https://github.com/toneflix/vue-component-pack/commit/a00477f77cfb86bc355dbefccddc4921df150f4a))
+
 ## [1.5.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.5.0...@toneflix/otp-input@1.5.1) (2025-03-01)
 
 ### Bug Fixes
