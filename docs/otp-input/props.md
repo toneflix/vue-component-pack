@@ -186,6 +186,32 @@ Borders that should be visible.
 </template>
 ```
 
+## masked | {~~`boolean`~~} | {~~`square`~~} | {~~`circle`~~} | {~~`disc`~~}
+
+Borders that should be visible.
+
+<div
+  style="padding-top: 10px; display:flex; gap: 15px; justify-content:center;"
+>
+  <otp-input model-value="" masked />
+  <otp-input model-value="" masked="disc" />
+  <otp-input model-value="" masked="square" />
+  <otp-input model-value="" masked="circle" />
+</div>
+
+```vue:line-numbers
+<template>
+  <div
+    style="padding-top: 10px; display:flex; gap: 15px; justify-content:center;"
+  >
+    <otp-input model-value="" masked />
+    <otp-input model-value="" masked="disc" />
+    <otp-input model-value="" masked="square" />
+    <otp-input model-value="" masked="circle" />
+  </div>
+</template>
+```
+
 ## fontFamily | {~~`string`~~} | [_default: "Anton", sans-serif;_]
 
 Font Family that will be used by the component.

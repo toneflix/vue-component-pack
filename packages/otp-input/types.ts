@@ -165,6 +165,10 @@ export interface OtpInputType {
    */
   rounded?: boolean | null | undefined
   /**
+   * Hides the input as the user types
+   */
+  masked?: boolean | 'disc' | 'circle' | 'square' | null | undefined
+  /**
    * Indicates if the component should be put in error state
    */
   hasError?: boolean | null | undefined

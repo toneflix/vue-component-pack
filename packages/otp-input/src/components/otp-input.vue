@@ -35,7 +35,15 @@
           type="number"
           pattern="[0-9]"
           maxlength="1"
-          :class="inputClass"
+          :class="[
+            inputClass,
+            {
+              masked: !!masked,
+              disk: masked === 'disc',
+              circle: masked === 'circle',
+              square: masked === 'square'
+            }
+          ]"
           :style="{
             width: `${fieldWidth}px`,
             height: `${fieldHeight}px`

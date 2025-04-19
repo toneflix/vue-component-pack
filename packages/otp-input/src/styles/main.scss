@@ -1,4 +1,5 @@
 @import url(https://fonts.bunny.net/css?family=anton:400);
+@import './text-security/text-security.css';
 
 .code-input-container {
   --ci-color-primary: #3880ff;
@@ -87,6 +88,19 @@
       color: var(--ci-text-color-active);
       caret-color: var(--ci-text-color-active);
       background-color: var(--ci-background-active);
+    }
+    &.masked:not(.square, .circle),
+    &.masked.disk {
+      font-family: text-security-disc;
+      -webkit-text-security: disc;
+    }
+    &.masked.square {
+      font-family: text-security-square;
+      -webkit-text-security: square;
+    }
+    &.masked.circle {
+      font-family: text-security-circle;
+      -webkit-text-security: circle;
     }
   }
   &.border-b {
