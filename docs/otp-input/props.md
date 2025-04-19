@@ -191,18 +191,26 @@ Borders that should be visible.
 Borders that should be visible.
 
 <div
-  style="padding-top: 10px; display:flex; gap: 15px; justify-content:center;"
+    style="padding-top: 10px; display:flex; gap: 15px; flex-direction: column; align-items:center;"
 >
-  <otp-input model-value="" masked />
-  <otp-input model-value="" masked="disc" />
-  <otp-input model-value="" masked="square" />
-  <otp-input model-value="" masked="circle" />
+  <div style="display:flex; gap: 15px;align-items:center;"> 
+    <otp-input model-value="" masked /> Default
+  </div>
+  <div style="display:flex; gap: 15px;align-items:center;"> 
+    <otp-input model-value="" masked="disc" /> disc
+  </div> 
+  <div style="display:flex; gap: 15px;align-items:center;"> 
+    <otp-input model-value="" masked="square" /> square
+  </div> 
+  <div style="display:flex; gap: 15px;align-items:center;"> 
+    <otp-input model-value="" masked="dicirclesc" /> circle
+  </div> 
 </div>
 
 ```vue:line-numbers
 <template>
   <div
-    style="padding-top: 10px; display:flex; gap: 15px; justify-content:center;"
+    style="padding-top: 10px; display:flex; gap: 15px; flex-direction: column;"
   >
     <otp-input model-value="" masked />
     <otp-input model-value="" masked="disc" />
