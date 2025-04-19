@@ -52,16 +52,16 @@
           :value="v"
           :key="index"
           :ref="
-            (el) => {
-              if (el) inputsRef[index + 1] = el as unknown as HtmlInput;
+            (el: unknown) => {
+              if (el) inputsRef[index + 1] = el as HtmlInput;
             }
           "
           :required="required === true"
           :readonly="index > 0 && inputValues[index - 1] === ''"
           :disabled="disabled === true"
-          @input="(e) => onValueChange(e as unknown as CustomInputEvent, index)"
-          @focus="(e) => onFocus(e as unknown as CustomFocusEvent, index)"
-          @keydown="(e) => onKeyDown(e as unknown as CustomKeyboardEvent, index)"
+          @input="(e: unknown) => onValueChange(e as CustomInputEvent, index)"
+          @focus="(e: unknown) => onFocus(e as CustomFocusEvent, index)"
+          @keydown="(e: unknown) => onKeyDown(e as CustomKeyboardEvent, index)"
           v-if="index > -1"
         />
       </template>
