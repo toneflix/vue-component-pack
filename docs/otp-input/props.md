@@ -203,7 +203,7 @@ Borders that should be visible.
     <otp-input model-value="" masked="square" /> square
   </div> 
   <div style="display:flex; gap: 15px;align-items:center;"> 
-    <otp-input model-value="" masked="dicirclesc" /> circle
+    <otp-input model-value="" masked="circle" /> circle
   </div> 
 </div>
 
