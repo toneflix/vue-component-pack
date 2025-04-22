@@ -30,7 +30,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
     () => {
       const user = ref<UA>({} as UA)
       const token = ref<string>()
-      const refreshed = ref<boolean>(false)
+      const sessionExpired = ref<boolean>(false)
       const isAuthenticated = computed(() => !!token.value)
 
       /**
@@ -160,6 +160,19 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
         user.value = {} as AuthUser
         token.value = undefined
         globalThis.localStorage.removeItem(options.storageKey ?? 'auth_token')
+      }
+
+      /**
+       * Reset the current auth session
+       *
+       * Will call `clearAuth` and set `sessionExpired` to true
+       *
+       * @param options
+       * @returns
+       */
+      const resetSession = <U>(options: AuthOptions<U> = getAuthConfig()): void => {
+        sessionExpired.value = true
+        clearAuth(options)
       }
 
       type ForgotResponse = { timeout?: number; message?: string }
@@ -292,7 +305,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
             } catch (error) {
               const { response, status } = <ResponseError>error
               if (status === 401) {
-                refreshed.value = true
+                sessionExpired.value = true
                 clearAuth(options)
               }
 
@@ -315,7 +328,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
       return {
         user,
         token,
-        refreshed,
+        sessionExpired,
         isAuthenticated,
 
         login,
@@ -324,6 +337,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
         forgot,
         register,
         clearAuth,
+        resetSession,
         loadUserFromStorage
       }
     },

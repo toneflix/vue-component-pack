@@ -22,22 +22,25 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
       const store = useAuthStore(options.storageOptions)
 
       if (router) {
-        /**
-         * Handle system reset here
-         */
-        store.$subscribe((_, store) => {
-          if (options.resetHandler && store.refreshed) {
-            store.refreshed = false
-            options.resetHandler(router)
-          }
-        })
+        router.beforeResolve((to, from, next) => {
+          /**
+           * Handle system reset here
+           */
+          store.$subscribe((_, store) => {
+            if (options.resetHandler && store.sessionExpired) {
+              store.sessionExpired = false
+              options.resetHandler(router, to, from, next)
+            }
+          })
+          // })
 
-        router.beforeEach((to, from, next) => {
+          // router.beforeEach((to, from, next) => {
           const requiresAuth = to.meta.requiresAuth
           const requiresGuest = to.meta.requiresGuest
 
           // Resolve the login route
           const loginRoute = loginRouteName ? router.resolve(loginRouteName) : null
+
           // Resolve the default auth route
           const defaultAuthRoute = defaultAuthRouteName
             ? router.resolve(defaultAuthRouteName)
@@ -64,7 +67,8 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
             runMiddlewares(options.middlewares, to, from, next, router, {
               user: store.user as never,
               token: store.token,
-              isAuthenticated: store.isAuthenticated
+              isAuthenticated: store.isAuthenticated,
+              $subscribe: store.$subscribe
             })
           } else {
             next()

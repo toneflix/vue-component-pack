@@ -197,7 +197,7 @@ Sometimes, your authentication token may get outdated from the server, causing t
 - Set `isAuthenticated` to `false`
 - Call the `resetHandler` method of the authentication setup instance if it is defined.
 
-The `resetHandler` method provides the current `router` interface, giving you the freedom to redirect user to any other part of the app you want or do something else entirely.
+The `resetHandler` method provides the current `router` interface, `from` an `to` routes and the `next()` navigation callback, giving you the freedom to redirect user to any other part of the app you want or do something else entirely.
 
 ### Defining `resetHandler`
 
@@ -209,7 +209,7 @@ resetHandler (router) {
 }
 ```
 
-## 6. Route Protection
+## 7. Route Protection
 
 To manage access to certain routes based on authentication status, the `@toneflix/vue-auth` plugin relies on meta properties in your Vue Router configuration. These meta fields allow you to specify whether a route requires the user to be authenticated or if it should only be accessible to guests (unauthenticated users).
 
@@ -332,7 +332,7 @@ By adding these meta properties, you give `@toneflix/vue-auth` the necessary inf
 
 This setup allows you to easily control which users have access to certain parts of your app based on whether they are logged in or not.
 
-## 7. Pinia Integration
+## 8. Pinia Integration
 
 The `@toneflix/vue-auth` plugin requires Pinia for state management. When you install the plugin, it automatically checks whether Pinia is already installed in your Vue application.
 

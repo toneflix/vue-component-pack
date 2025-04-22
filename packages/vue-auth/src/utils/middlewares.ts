@@ -89,7 +89,7 @@ export const roleMiddleware = <U = unknown>(
   roleKey: keyof U = 'roles' as keyof U,
   metaKey: string = 'requiresAdmin'
 ): Middleware<U> => {
-  return (to, from, next, context, router) => {
+  return (to, _, next, context, router) => {
     if (!context.user[roleKey]) {
       return next()
     }

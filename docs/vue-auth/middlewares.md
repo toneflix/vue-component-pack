@@ -46,10 +46,11 @@ Each middleware function should have the following signature:
 - `to` (RouteLocationNormalized): The target route the user is navigating to.
 - `from` (RouteLocationNormalized): The route the user is navigating from.
 - `next` (NavigationGuardNext): A function that must be called to proceed with navigation. This function accepts optional parameters to control navigation (e.g., redirect to another route).
-- `context` (`{ user: U; token?: string; isAuthenticated: boolean }`): Contextual information about the user’s state, including:
+- `context` (`{ user: U; token?: string; isAuthenticated: boolean; $subscribe: AuthStoreSubscribeCallback }`): Contextual information about the user’s state, including:
   - `user`: The current user object.
   - `token`: The authentication token, if available.
   - `isAuthenticated`: Boolean flag indicating if the user is authenticated.
+  - `$subscribe`: The subscribe callback for the auth store.
 
 ### Calling `next()`
 
@@ -189,6 +190,7 @@ In this example, loginRouteName manages the basic redirection for unauthenticate
 ## Middleware Presets
 
 The plugin ships with reusable middlewares that can be utilized to streamline route protection based on authentication status or user roles. These preset middlewares are designed to simplify the implementation of common route-guard logic.
+We do not put any efforts into these presets so we do recommmed for you to write your own middlewares, howbeit, you can copy these presets and use them as a starting point.
 
 ### Available Preset Middlewares
 

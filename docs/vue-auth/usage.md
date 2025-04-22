@@ -171,6 +171,34 @@ const handleLogin = async () => {
 </template>
 ```
 
+## Auth Reset
+
+There are times when you need to manualy do a system reset so the user can authenticate again, by calling the the `clearAuth` or the `resetSession` methods, the key difference is that the `resetSession` method also sets the `sessionExpired` property to `true` so action can be picked up by the [`resetHandler`](./setup#_6-system-reset).
+
+```vue:line-numbers{3,6}
+<script setup lang="ts">
+import { useAuth } from '@toneflix/vue-auth'
+
+const { user, clearAuth } = useAuth() // or useInlineAuth()
+
+if (user.value.isBanned) {
+  clearAuth()
+}
+</script>
+```
+OR
+```vue:line-numbers{3,6}
+<script setup lang="ts">
+import { useAuth } from '@toneflix/vue-auth'
+
+const { user, clearAuth } = useAuth() // or useInlineAuth()
+
+if (user.value.isBanned) {
+  sessionExpired()
+}
+</script>
+```
+
 ## Accessing the User Object
 
 Once the authentication is set up, you can access the authenticated user object throughout your application. The user object is available after login and can be used to customize content or verify roles.

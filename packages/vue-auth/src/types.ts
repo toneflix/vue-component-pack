@@ -4,6 +4,7 @@ import { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
 
 import { PiniaPlugin } from 'pinia'
+import { useAuthStore } from './stores/vue-auth'
 
 export interface AuthUser {
   id: number
@@ -39,6 +40,8 @@ export interface ResponseError {
   }
 }
 
+export type AuthStoreSubscribeCallback = ReturnType<typeof useAuthStore>['$subscribe']
+
 export interface Middleware<U = unknown & AuthUser> {
   (
     /**
@@ -50,15 +53,32 @@ export interface Middleware<U = unknown & AuthUser> {
      */
     from: RouteLocationNormalized,
     /**
-     * next() callback passed to navigation guards.
+     * next() navigation callback.
      */
     next: NavigationGuardNext,
     /**
-     * The `context` Object, contains `user`, `token` and the `isAuthenticated` property
+     * The `context` Object, contains `user`, `token`, `isAuthenticated` and the `$subscribe` property
      */
-    context: { user: U; token?: string | undefined; isAuthenticated: boolean },
+    context: {
+      /**
+       * The currently authenticated user
+       */
+      user: U
+      /**
+       * The current authentication token
+       */
+      token?: string | undefined
+      /**
+       * Determines if the user is currently authenticated
+       */
+      isAuthenticated: boolean
+      /**
+       * The subscribe callback for the auth store
+       */
+      $subscribe: AuthStoreSubscribeCallback
+    },
     /**
-     * The current router interface
+     * The current router instance
      */
     router?: Router
   ): void
@@ -136,33 +156,33 @@ export type CustomAxiosHeaders = (RawAxiosRequestHeaders | AxiosHeaders) & Custo
 
 export interface AuthOptions<U = AuthUser> {
   /**
-   * Provide your router instance
+   * The current router instance.
    */
   router?: Router
   /**
-   * The base url for all authentication requests
+   * The base url for all authentication requests.
    */
   baseUrl: string
   /**
-   * Authentication endpoint map
+   * Authentication endpoint map.
    */
   endpoints: AuthEndpoints
   /**
-   * The key with which your authentication token will be saved to local storage
+   * The key with which your authentication token will be saved to local storage.
    */
   storageKey?: string
   /**
-   * Extra options to be passed into the auth store instance
-   * Usefull if you need to pass {persist: true} when using pinia-plugin-persists
+   * Extra options to be passed into the auth store instance.
+   * Usefull if you need to pass {persist: true} when using pinia-plugin-persists.
    */
   storageOptions?: StorageOptions
   /**
-   * Extra config to pass to the axios instance
+   * Extra config to pass to the axios instance.
    */
   axiosConfig?: object
   /**
-   * The route name to your app's login page, if provided none authenticated users will be redirected here
-   *  when they try to access a protected route
+   * The route name to your app's login page, if provided guests will be redirected here
+   *  when they try to access a protected route.
    */
   loginRouteName?: string
   /**
@@ -172,7 +192,7 @@ export interface AuthOptions<U = AuthUser> {
   disableAutoRefresh?: boolean
   /**
    * Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
-   * @deprecated 1.3.8 Will be removed in the future, use `setAuthHeaders()` instead
+   * @deprecated 1.3.8 Will be removed in the future, use `setAuthHeaders()` instead.
    * @returns
    */
   getAuthHeaders?: (context: {
@@ -180,7 +200,7 @@ export interface AuthOptions<U = AuthUser> {
     token?: string | undefined
   }) => Promise<CustomAxiosHeaders> | CustomAxiosHeaders
   /**
-   * Headers that will be sent along requests for authenticated users, used by logout and profile endpoints
+   * Headers that will be sent along requests for authenticated users, used by logout and profile endpoints.
    * @returns
    */
   setAuthHeaders?: (context: {
@@ -191,7 +211,24 @@ export interface AuthOptions<U = AuthUser> {
    * Something went wrong and the user's authentication has ben cleared, but you can handle this gracefully
    * @returns
    */
-  resetHandler?: (router: Router) => void
+  resetHandler?: (
+    /**
+     * The current router instance.
+     */
+    router: Router,
+    /**
+     * The destination/target route.
+     */
+    to: RouteLocationNormalized,
+    /**
+     * The previous route.
+     */
+    from: RouteLocationNormalized,
+    /**
+     * next() navigation callback.
+     */
+    next: NavigationGuardNext
+  ) => void
   /**
    * Transforms the user object returned from the auth endpoint
    * @param response

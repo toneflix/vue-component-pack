@@ -1,5 +1,11 @@
 import { App, Ref, ref, toValue } from 'vue'
-import { AuthOptions, AuthUser, BaseError, StorageOptions } from '../types'
+import {
+  AuthOptions,
+  AuthStoreSubscribeCallback,
+  AuthUser,
+  BaseError,
+  StorageOptions
+} from '../types'
 import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
 import { createPinia, getActivePinia } from 'pinia'
 
@@ -71,7 +77,12 @@ export function runMiddlewares<U = AuthUser>(
   from: RouteLocationNormalized,
   next: NavigationGuardNext,
   router: Router,
-  context: { user: U; token?: string | undefined; isAuthenticated: boolean }
+  context: {
+    user: U
+    token?: string | undefined
+    isAuthenticated: boolean
+    $subscribe: AuthStoreSubscribeCallback
+  }
 ) {
   const executeMiddleware = (index: number) => {
     if (!middlewares || index >= middlewares.length) {

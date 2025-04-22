@@ -76,6 +76,18 @@ export const useAuth = <AU = AuthUser>(storageOptions?: StorageOptions) => {
   }
 
   /**
+   * Reset the current auth session
+   *
+   * Will call `clearAuth` and set `sessionExpired` to true
+   *
+   * @param options
+   * @returns
+   */
+  const resetSession = (options: AuthOptions = getAuthConfig()) => {
+    return store.resetSession(options)
+  }
+
+  /**
    * Request for a password reset token
    *
    * @param options
@@ -132,11 +144,12 @@ export const useAuth = <AU = AuthUser>(storageOptions?: StorageOptions) => {
     return store.loadUserFromStorage<U, T>(options, credentials, auto)
   }
 
-  const { user, token, isAuthenticated } = storeToRefs(store)
+  const { user, token, sessionExpired, isAuthenticated } = storeToRefs(store)
 
   return {
     user: user as Ref<AU>,
     token,
+    sessionExpired,
     isAuthenticated,
 
     reset,
@@ -145,6 +158,7 @@ export const useAuth = <AU = AuthUser>(storageOptions?: StorageOptions) => {
     forgot,
     register,
     clearAuth,
+    resetSession,
     loadUserFromStorage
   }
 }
