@@ -5,6 +5,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.13.4](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.13.3...@toneflix/vue-auth@1.13.4) (2025-04-22)
 
+### Features
+
+- (vue-auth) renamed `refreshed` vue-auth store property to sessionExpired.
+- (vue-auth) Now using router.beforeResolve in place of router.beforeEach.
+- (vue-auth) Add $subscribe to Middleware context property signature.
+- (vue-auth) Improve inline comments.
+- (vue-auth) Add `to`, `from`, `next()` to resetHandler parameters.
+- (vue-auth) Add the reset sessionMethod and add `sessionExpired` property to composable signatures.
+
 **Note:** Version bump only for package @toneflix/vue-auth
 
 ## [1.13.3](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.13.2...@toneflix/vue-auth@1.13.3) (2025-04-18)

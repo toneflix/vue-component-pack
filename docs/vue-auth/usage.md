@@ -173,9 +173,9 @@ const handleLogin = async () => {
 
 ## Auth Reset
 
-There are times when you need to manualy do a system reset so the user can authenticate again, by calling the the `clearAuth` or the `resetSession` methods, the key difference is that the `resetSession` method also sets the `sessionExpired` property to `true` so action can be picked up by the [`resetHandler`](./setup#_6-system-reset).
+There are times when you need to manualy do a system reset so the user can authenticate again, you can do this by calling either of `clearAuth` or the `resetSession` methods, the key difference is that the `resetSession` method also sets the `sessionExpired` property to `true` so that the action can be picked up by the [`resetHandler`](./setup#_6-system-reset).
 
-```vue:line-numbers{3,6}
+```vue:line-numbers{4,7}
 <script setup lang="ts">
 import { useAuth } from '@toneflix/vue-auth'
 
@@ -187,14 +187,14 @@ if (user.value.isBanned) {
 </script>
 ```
 OR
-```vue:line-numbers{3,6}
+```vue:line-numbers{4,7}
 <script setup lang="ts">
 import { useAuth } from '@toneflix/vue-auth'
 
-const { user, clearAuth } = useAuth() // or useInlineAuth()
+const { user, resetSession } = useAuth() // or useInlineAuth()
 
 if (user.value.isBanned) {
-  sessionExpired()
+  resetSession()
 }
 </script>
 ```
