@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.6.0...@toneflix/paystack-inline@1.7.0) (2025-05-05)
+
+### Features
+
+- Allow initialization even when no initialization callback is provided. ([cfd79e6](https://github.com/toneflix/vue-component-pack/commit/cfd79e64803e9c7f584799454b887f548fc334f4))
+
 # [1.6.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.5.2...@toneflix/paystack-inline@1.6.0) (2025-02-01)
 
 ### Features
