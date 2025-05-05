@@ -1,12 +1,13 @@
 packages:
   - packages/*
+  # - 'runner'
   - '!package-template'
   - '!packages/vue-place-selector'
   - '!packages/otp-input'
   - '!packages/vue-trix'
   - '!packages/vue-forms'
   - '!packages/vue-dataviewer'
-  - '!packages/paystack-inline'
+  # - '!packages/paystack-inline'
 
 onlyBuiltDependencies:
   - vue-demi

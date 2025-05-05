@@ -54,6 +54,34 @@ importers:
         specifier: ^4.4.5
         version: 4.4.5(vue@3.5.12(typescript@5.6.3))
 
+  packages/paystack-inline:
+    dependencies:
+      '@paystack/inline-js':
+        specifier: ^2.22.0
+        version: 2.22.1
+      vue-router:
+        specifier: ^4.4.5
+        version: 4.4.5(vue@3.5.13(typescript@5.6.3))
+    devDependencies:
+      '@types/paystack__inline-js':
+        specifier: ^1.0.0
+        version: 1.0.1
+      '@vitejs/plugin-vue':
+        specifier: ^5.1.4
+        version: 5.2.3(vite@5.4.18(@types/node@22.10.5)(sass@1.80.4))(vue@3.5.13(typescript@5.6.3))
+      '@vue/runtime-core':
+        specifier: ^3.5.11
+        version: 3.5.13
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.18(@types/node@22.10.5)(sass@1.80.4)
+      vitepress:
+        specifier: ^1.4.0
+        version: 1.6.3(@algolia/client-search@5.23.4)(@types/node@22.10.5)(axios@1.7.7)(postcss@8.5.3)(sass@1.80.4)(search-insights@2.17.3)(typescript@5.6.3)
+      vue:
+        specifier: ^3.5.11
+        version: 3.5.13(typescript@5.6.3)
+
   packages/vue-auth:
     dependencies:
       axios:
@@ -1033,6 +1061,9 @@ packages:
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+
+  '@types/paystack__inline-js@1.0.1':
+    resolution: {integrity: sha512-uAXk9EJobC/0v5zetSULTU8+3lIE3Y0Q0KwpR0lF7KRf+tj4AcE87kr6b8tpRkrr6uo9qXKgyjma+bmGDhwxbQ==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -4626,6 +4657,8 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
+  '@types/paystack__inline-js@1.0.1': {}
+
   '@types/unist@3.0.3': {}
 
   '@types/web-bluetooth@0.0.21': {}
@@ -7387,6 +7420,11 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.12(typescript@5.6.3)
+
+  vue-router@4.4.5(vue@3.5.13(typescript@5.6.3)):
+    dependencies:
+      '@vue/devtools-api': 6.6.4
+      vue: 3.5.13(typescript@5.6.3)
 
   vue@3.5.12(typescript@5.6.3):
     dependencies:

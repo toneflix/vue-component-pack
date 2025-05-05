@@ -55,7 +55,7 @@ const props = withDefaults(defineProps<PaystackInlineProps>(), {
     }>((resolve) =>
       resolve({
         message: '',
-        reference: '',
+        reference: '-',
         authorization_url: ''
       })
     )
@@ -102,6 +102,7 @@ const initializeNewPayment = async () => {
         authorization_url: data.authorization_url,
         message: data.message
       })
+
       if (props.inline || !data.authorization_url) {
         paystackInline(data.reference)
       } else if (data.authorization_url) {
