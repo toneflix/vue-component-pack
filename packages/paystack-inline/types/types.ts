@@ -73,6 +73,7 @@ export type PaystackInlineProps = {
     | Promise<
         | {
             authorization_url?: string | undefined
+            access_code?: string | undefined
             message: string
             reference: string
           }

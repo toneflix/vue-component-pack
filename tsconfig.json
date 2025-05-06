@@ -23,7 +23,11 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "exactOptionalPropertyTypes": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true // This is a temporary solution till when updates to @types/paystack__inline-js are approved
+    "esModuleInterop": true, // This is a temporary solution till when updates to @types/paystack__inline-js are approved
+    "baseUrl": ".",
+    "paths": {
+      "@types/paystack__inline-js": ["types/paystack__inline-js"]
+    }
   },
   "exclude": ["documentations/**/*"]
 }

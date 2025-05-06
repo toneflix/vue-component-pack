@@ -37,6 +37,7 @@ const emit = defineEmits<{
     event: 'initialized',
     data: {
       reference: string
+      access_code?: string | undefined
       authorization_url?: string | undefined
       message?: string | undefined
     }
@@ -51,12 +52,14 @@ const props = withDefaults(defineProps<PaystackInlineProps>(), {
   initializeCallback() {
     return new Promise<{
       reference: string
+      access_code?: string | undefined
       authorization_url?: string | undefined
       message: string
     }>((resolve) =>
       resolve({
         message: '',
         reference: '-',
+        access_code: '',
         authorization_url: ''
       })
     )
@@ -97,7 +100,7 @@ const initializeNewPayment = async () => {
   loading.value = true
   try {
     const data = await props.initializeCallback()
-    if (data && (data.authorization_url || data.reference)) {
+    if (data?.authorization_url || data?.reference || data?.access_code) {
       emit('initialized', {
         reference: data.reference,
         authorization_url: data.authorization_url,
@@ -105,7 +108,7 @@ const initializeNewPayment = async () => {
       })
 
       if (props.inline || !data.authorization_url) {
-        return paystackInline(data.reference)
+        return paystackInline(data.reference, data.access_code)
       } else if (data.authorization_url) {
         setTimeout(() => {
           globalThis.location.href = String(data.authorization_url)
@@ -120,28 +123,11 @@ const initializeNewPayment = async () => {
   }
 }
 
-const paystackInline = (reference: string = '') => {
-  return paystack.newTransaction({
-    key: props.publicKey,
-    email: props.customer.email,
-    amount: props.amount * 100,
-    reference: reference,
-    firstName: (props.customer.name || props.customer.email).split(' ').at(0) || '',
-    lastName: (props.customer.name || props.customer.email).split(' ').at(-1) || '',
-    metadata: {
-      custom_fields: [
-        {
-          display_name: 'Name',
-          variable_name: 'Name',
-          value: props.customer.name ?? props.customer.email?.split('@').at(0)
-        },
-        {
-          display_name: 'Phone Number',
-          variable_name: 'Phone Number',
-          value: props.customer.phone ?? ''
-        }
-      ]
-    },
+const paystackInline = (reference?: string, accessCode?: string) => {
+  const callbacks: Pick<
+    Parameters<typeof paystack['newTransaction']>['0'],
+    'onSuccess' | 'onCancel' | 'onError' | 'onLoad'
+  > = {
     onSuccess(data) {
       loading.value = false
       emit('success', data)
@@ -151,13 +137,38 @@ const paystackInline = (reference: string = '') => {
     },
     onCancel() {
       loading.value = false
-      emit('canceled', { reference })
+      emit('canceled', { reference: reference! })
     },
     onError: (error) => {
       loading.value = false
       emit('error', error, reference)
     }
-  })
+  }
+
+  return accessCode
+    ? paystack.resumeTransaction({ accessCode }, callbacks)
+    : paystack.newTransaction({
+        key: props.publicKey,
+        email: props.customer.email,
+        amount: props.amount * 100,
+        reference: reference,
+        firstName: (props.customer.name || props.customer.email).split(' ').at(0) || '',
+        lastName: (props.customer.name || props.customer.email).split(' ').at(-1) || '',
+        metadata: {
+          custom_fields: [
+            {
+              display_name: 'Name',
+              variable_name: 'Name',
+              value: props.customer.name ?? props.customer.email?.split('@').at(0)
+            },
+            {
+              display_name: 'Phone Number',
+              variable_name: 'Phone Number',
+              value: props.customer.phone ?? ''
+            }
+          ]
+        }
+      })
 }
 
 watch(
