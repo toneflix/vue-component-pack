@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.10.1...@toneflix/paystack-inline@1.10.2) (2025-05-06)
+
+### Bug Fixes
+
+- (paystack-inline) Change first parameter of the resumeTransaction method to string (accessCode). ([3906dfb](https://github.com/toneflix/vue-component-pack/commit/3906dfbf71eb4659a8a4b7892d05208c3d32316b))
+
 ## [1.10.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.10.0...@toneflix/paystack-inline@1.10.1) (2025-05-06)
 
 ### Bug Fixes
