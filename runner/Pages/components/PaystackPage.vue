@@ -6,6 +6,7 @@
       :customer="{
         email: 'john@example.com'
       }"
+      :initialize-callback="async () => ({ access_code, reference })"
       :public-key="pKey"
       @ready="state.ready = true"
       @success="
@@ -48,17 +49,22 @@
     </pre>
 
     <input v-model="pKey" placeholder="Public Key" />
+    <br />
+    <input v-model="access_code" placeholder="Access Code" />
+    <br />
+    <input v-model="reference" placeholder="Reference" />
   </div>
 </template>
 <script setup lang="ts">
 import { PaystackInline } from '@toneflix/paystack-inline'
 import '@toneflix/paystack-inline/dist/lib/style.css'
-import { ref, watch } from 'vue'
+import { reactive, ref, watch } from 'vue'
 
 const pKey = ref(localStorage.getItem('pKey') || 'pk_test_TYooMQauvdEDq54NiTphI7jx')
 const reference = ref<string>()
+const access_code = ref<string>(localStorage.getItem('access_code') || '12122')
 
-const state = ref<{
+const state = reactive<{
   ready: boolean
   success: { message: string; reference: string }
   verified: { message?: string | undefined; status: boolean }
@@ -66,7 +72,8 @@ const state = ref<{
   destroyed: boolean
   error: { message: string; reference?: string | undefined }
   initialized: {
-    reference: string
+    reference?: string | undefined
+    access_code?: string | undefined
     authorization_url?: string | undefined
     message?: string | undefined
   }
@@ -82,6 +89,10 @@ const state = ref<{
 
 watch(pKey, (pKey) => {
   localStorage.setItem('pKey', pKey)
+})
+
+watch(access_code, (access_code) => {
+  localStorage.setItem('access_code', access_code)
 })
 </script>
 

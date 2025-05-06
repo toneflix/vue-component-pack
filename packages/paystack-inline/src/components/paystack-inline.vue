@@ -100,6 +100,7 @@ const initializeNewPayment = async () => {
   loading.value = true
   try {
     const data = await props.initializeCallback()
+
     if (data?.authorization_url || data?.reference || data?.access_code) {
       emit('initialized', {
         reference: data.reference,
@@ -147,7 +148,7 @@ const paystackInline = (reference?: string, accessCode?: string) => {
   }
 
   return accessCode
-    ? paystack.resumeTransaction({ accessCode }, callbacks)
+    ? paystack.resumeTransaction(accessCode, callbacks)
     : paystack.newTransaction({
         key: props.publicKey,
         email: props.customer.email,

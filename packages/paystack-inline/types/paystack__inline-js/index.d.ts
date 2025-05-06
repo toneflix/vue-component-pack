@@ -227,12 +227,13 @@ declare module '@paystack/inline-js' {
     isLoaded(): boolean
 
     resumeTransaction(
-      options: {
-        /**
-         * Access code created on the API via the https://paystack.com/docs/#initialize-a-transaction endpoint
-         */
-        accessCode: string
-      },
+      /**
+       * Access code created on the API via the https://paystack.com/docs/#initialize-a-transaction endpoint
+       */
+      accessCode: string,
+      /**
+       * Callback Definitions
+       */
       callbacks?: Pick<NewTransactionOptions, 'onSuccess' | 'onCancel' | 'onError' | 'onLoad'>
     ): PopupTransaction
 

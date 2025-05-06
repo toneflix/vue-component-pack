@@ -72,10 +72,16 @@ export type PaystackInlineProps = {
   initializeCallback?: () =>
     | Promise<
         | {
-            authorization_url?: string | undefined
+            authorization_url?: string
             access_code?: string | undefined
-            message: string
-            reference: string
+            reference: string // Required in this shape
+            message?: string | undefined
+          }
+        | {
+            authorization_url?: string
+            access_code: string // Required in this shape
+            reference?: string | undefined
+            message?: string | undefined
           }
         | undefined
       >
