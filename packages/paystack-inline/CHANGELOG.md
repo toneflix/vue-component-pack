@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.8.0...@toneflix/paystack-inline@1.9.0) (2025-05-06)
+
+### Features
+
+- (paystack-inline) Handle accessCode during initialization if available. ([ce2684b](https://github.com/toneflix/vue-component-pack/commit/ce2684bea21616c756ff2631d41d8c0d0e30d228))
+
 # [1.8.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.7.0...@toneflix/paystack-inline@1.8.0) (2025-05-06)
 
 ### Features
