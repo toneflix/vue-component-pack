@@ -43,6 +43,7 @@ const emit = defineEmits<{
   ): void
 }>()
 
+const paystack = new PaystackPop()
 const reference = defineModel<string | undefined>('reference')
 
 const props = withDefaults(defineProps<PaystackInlineProps>(), {
@@ -104,7 +105,7 @@ const initializeNewPayment = async () => {
       })
 
       if (props.inline || !data.authorization_url) {
-        paystackInline(data.reference)
+        return paystackInline(data.reference)
       } else if (data.authorization_url) {
         setTimeout(() => {
           globalThis.location.href = String(data.authorization_url)
@@ -120,19 +121,19 @@ const initializeNewPayment = async () => {
 }
 
 const paystackInline = (reference: string = '') => {
-  return new PaystackPop().newTransaction({
+  return paystack.newTransaction({
     key: props.publicKey,
     email: props.customer.email,
     amount: props.amount * 100,
     reference: reference,
-    firstName: (props.customer.name || props.customer.email).split(' ')[0] || '',
-    lastName: (props.customer.name || props.customer.email).split(' ')[1] || '',
+    firstName: (props.customer.name || props.customer.email).split(' ').at(0) || '',
+    lastName: (props.customer.name || props.customer.email).split(' ').at(-1) || '',
     metadata: {
       custom_fields: [
         {
           display_name: 'Name',
           variable_name: 'Name',
-          value: props.customer.name ?? ''
+          value: props.customer.name ?? props.customer.email?.split('@').at(0)
         },
         {
           display_name: 'Phone Number',
@@ -180,6 +181,7 @@ onBeforeUnmount(() => {
 
 defineExpose({
   loading,
+  paystack,
   initializeNewPayment
 })
 </script>
