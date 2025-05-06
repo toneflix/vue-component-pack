@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.9.0...@toneflix/paystack-inline@1.10.0) (2025-05-06)
+
+### Features
+
+- (paystack-inline) Move types to package dir from project root. ([da51f04](https://github.com/toneflix/vue-component-pack/commit/da51f049d398a1a7ea3cfa449d73b88865e278a6))
+
 # [1.9.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.8.0...@toneflix/paystack-inline@1.9.0) (2025-05-06)
 
 ### Features
