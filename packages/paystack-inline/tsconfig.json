@@ -1,6 +1,6 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@types/paystack__inline-js": ["types/paystack__inline-js"]
     }

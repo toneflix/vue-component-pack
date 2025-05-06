@@ -36,7 +36,7 @@ const emit = defineEmits<{
   (
     event: 'initialized',
     data: {
-      reference: string
+      reference?: string | undefined
       access_code?: string | undefined
       authorization_url?: string | undefined
       message?: string | undefined
@@ -52,7 +52,7 @@ const props = withDefaults(defineProps<PaystackInlineProps>(), {
   initializeCallback() {
     return new Promise<{
       reference: string
-      access_code?: string | undefined
+      access_code?: string
       authorization_url?: string | undefined
       message: string
     }>((resolve) =>
@@ -103,6 +103,7 @@ const initializeNewPayment = async () => {
     if (data?.authorization_url || data?.reference || data?.access_code) {
       emit('initialized', {
         reference: data.reference,
+        access_code: data.access_code,
         authorization_url: data.authorization_url,
         message: data.message
       })
@@ -167,7 +168,8 @@ const paystackInline = (reference?: string, accessCode?: string) => {
               value: props.customer.phone ?? ''
             }
           ]
-        }
+        },
+        ...callbacks
       })
 }
 

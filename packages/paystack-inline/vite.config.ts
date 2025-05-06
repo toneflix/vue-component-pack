@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   resolve: {
     alias: {
-      '@types/paystack__inline-js': resolve(__dirname, '../../types/paystack__inline-js')
+      '@types/paystack__inline-js': resolve(__dirname, 'types/paystack__inline-js')
     }
   },
   build: {
@@ -13,7 +13,7 @@ export default defineConfig({
     minify: true,
     emptyOutDir: true,
     rollupOptions: {
-      external: ['vue', 'vue-router', '@paystack/inline-js'],
+      external: ['vue', 'vue-router', '@paystack/inline-js', '@types/paystack__inline-js'],
       input: ['index.ts'],
       output: [
         {
