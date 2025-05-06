@@ -96,11 +96,13 @@ Your Paystack public key.
 
 A function that will be called before the transaction is initialized. This is useful if you need to initialize the transaction from a server.
 
+The function takes no parameters and must return a promise that resolves to an object of `{authorization_url?: string, message: string, reference: string}`
+
 ```vue:line-numbers
 <script setup lang="ts">
 function initializeTransaction() {
   return new Promise((resolve) => {
-    resolve({ reference: 'txn_ref_123', authorization_url: 'https://payment.url' });
+    resolve({ reference: 'txn_ref_Iow1...', authorization_url: 'https://paystack.com/p...' });
   });
 }
 </script>
@@ -116,7 +118,7 @@ function initializeTransaction() {
 
 ## verifyCallback | {~~`function`~~}
 
-A function that will be called to verify the transaction. It receives the reference as a parameter and should return a Promise.
+A function that will be called to verify the transaction. It receives the reference as a parameter and should return a Promise that resolves to an object of that resolves to an object of `{status: boolean, message: string}`
 
 ```vue:line-numbers
 <script setup lang="ts">

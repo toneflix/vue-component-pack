@@ -66,20 +66,53 @@ import { PaystackInline } from '@toneflix/paystack-inline';
 <script setup lang="ts">
 import '@toneflix/paystack-inline/dist/lib/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
-import { ref } from 'vue'
-
-const pKey = ref('pk_test_TYooMQauvdEDq54NiTphI7jx')
 </script>
 
 <template>
   <div style="display: flex; flex-direction: row;">
     <PaystackInline
       dont-verify
+      public-key="your-paystack-public-key"
       :amount="1000"
       :customer="{
         email: 'john@example.com'
       }"
-      :public-key="pKey"
+    />
+  </div>
+</template>
+```
+
+### Initialize Payment
+
+Before we can load the Paystack pop up, we need to initialize the payment request from our backend server, you can make a request to your server and provide the `initialize-callback` attribute which is a function that returns a promise that resolves to an object of `{authorization_url?: string, message: string, reference: string}`. Also set the `hidden` attribute if you do want to do things programmatically and not show a payment button.
+
+**VerifyComponent.vue**
+
+```vue:line-numbers{2,3}
+<script setup lang="ts">
+import '@toneflix/paystack-inline/dist/lib/style.css'
+import { PaystackInline } from '@toneflix/paystack-inline'
+</script>
+
+<template>
+  <div style="display: flex; flex-direction: row;">
+    <PaystackInline
+      public-key="your-paystack-public-key"
+      :amount="1000"
+      :customer="{
+        email: 'john@example.com'
+      }"
+      :initialize-callback="
+        () => {
+          return new Promise((resolve) =>
+            resolve({
+              authorization_url: 'https://paystack.com/p...', // Not required
+              message: 'Verified',
+              reference: 'txn_ref_Iow1...',
+            })
+          )
+        }
+      "
     />
   </div>
 </template>
@@ -97,7 +130,6 @@ import '@toneflix/paystack-inline/dist/lib/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 import { ref } from 'vue'
 
-const pKey = ref('pk_test_TYooMQauvdEDq54NiTphI7jx')
 const reference = ref()
 
 const verify = () => {
@@ -108,7 +140,7 @@ const verify = () => {
 <template>
   <div style="display: flex; flex-direction: row;">
     <PaystackInline
-      hidden
+      public-key="your-paystack-public-key"
       :amount="1000"
       :customer="{
         email: 'john@example.com'
@@ -137,27 +169,23 @@ const verify = () => {
 <script setup lang="ts">
 import '@toneflix/paystack-inline/dist/lib/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
-import { ref } from 'vue'
-
-const pKey = ref('pk_test_TYooMQauvdEDq54NiTphI7jx')
 </script>
 
 <template>
   <div style="display: flex; flex-direction: row;">
     <PaystackInline
       dont-verify
+      public-key="your-paystack-public-key"
       :amount="1000"
       :customer="{
         email: 'john@example.com'
       }"
-      :public-key="pKey"
+      v-slot="{ initialize, loading }"
     >
-      <template #default="{ initialize, loading }">
-        <button class="pay-button" :disabled="loading" @click="initialize()">
-          {{ !loading ? 'Pay Now' : '' }}
-          <div class="spinner" v-if="loading"></div>
-        </button>
-      </template>
+      <button class="pay-button" :disabled="loading" @click="initialize()">
+        {{ !loading ? 'Pay Now' : '' }}
+        <div class="spinner" v-if="loading"></div>
+      </button>
     </PaystackInline>
   </div>
 </template>

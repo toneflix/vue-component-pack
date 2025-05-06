@@ -27,7 +27,7 @@ export default defineConfig({
         items: [
           { text: 'Props', link: '/props' },
           { text: 'Events', link: '/events' }
-        ]
+        ],
       }
     ],
 
