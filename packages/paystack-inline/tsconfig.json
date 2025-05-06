@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@types/paystack__inline-js": ["types/paystack__inline-js"]
+    }
+  }
+}
