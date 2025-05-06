@@ -29,7 +29,7 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@types/paystack__inline-js": "^1.0.0",
+    "@types/paystack__inline-js": "^1.0.1",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/runtime-core": "^3.5.11",
     "vite": "^5.4.8",
