@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.7.0...@toneflix/paystack-inline@1.8.0) (2025-05-06)
+
+### Features
+
+- (paystack-inline) Expose the base Paystack instance. ([9ba5704](https://github.com/toneflix/vue-component-pack/commit/9ba57041c0b231bf36da8a7a9cb6bf23eb65ed1d))
+
 # [1.7.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.6.0...@toneflix/paystack-inline@1.7.0) (2025-05-05)
 
 ### Features
