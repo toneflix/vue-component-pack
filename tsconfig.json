@@ -24,10 +24,7 @@
     "exactOptionalPropertyTypes": true,
     "resolveJsonModule": true,
     "esModuleInterop": true, // This is a temporary solution till when updates to @types/paystack__inline-js are approved
-    "baseUrl": ".",
-    "paths": {
-      "@types/paystack__inline-js": ["types/paystack__inline-js"]
-    }
+    "baseUrl": "."
   },
   "exclude": ["documentations/**/*"]
 }
