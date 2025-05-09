@@ -236,6 +236,7 @@ export interface AuthOptions<U = AuthUser> {
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   transformResponse?: (response: any) => {
+    [key: string | symbol]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
     user: U
     token?: string | undefined
     timeout?: number | undefined
