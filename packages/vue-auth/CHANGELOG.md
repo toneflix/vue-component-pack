@@ -9,6 +9,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - Allow adding extra returning extra response data from login and registration methods. ([d5c7b33](https://github.com/toneflix/vue-component-pack/commit/d5c7b3373dd57896d61e8380002444e8c0fa9646))
 
+### ⚠ BREAKING CHANGES
+
+- We now require pinia ^3.0.0. ([a46d6b7](https://github.com/toneflix/vue-component-pack/commit/a46d6b7c5302316418a1e9a778a0f4a0990c2dc8))
+
 ## [1.13.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.13.5...@toneflix/vue-auth@1.13.6) (2025-05-06)
 
 **Note:** Version bump only for package @toneflix/vue-auth
