@@ -22,7 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.7",
-    "pinia": "^2.2.4"
+    "pinia": "^3.0.0"
   },
   "peerDependencies": {
     "vue": "^3.5.11",
