@@ -13,7 +13,7 @@ import { createVueAuthStore } from '../stores/vue-auth'
 import { getAuthConfig } from '../utils/config'
 import { storeToRefs } from 'pinia'
 
-export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) => {
+export const useInlineAuth = <AU = AuthUser> (storageOptions?: StorageOptions) => {
   const useAuthStore = createVueAuthStore(storageOptions)
   const store = useAuthStore()
 
@@ -53,7 +53,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
    * @returns
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const useActionWithCallbacks = <R = any>(action: () => Promise<any>) => {
+  const useActionWithCallbacks = <R = any> (action: () => Promise<any>) => {
     const errorCallback = ref<(error: BaseError) => void>()
     const successCallback = ref<(data: R) => void>()
 
@@ -95,7 +95,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
    * @param options
    * @returns
    */
-  const login = <U = AU, T = LoginCredentials>(
+  const login = <U = AU, T = LoginCredentials> (
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): AuthData<U> & MethodActions<UnrefData<AuthData<U>>> => {
@@ -116,6 +116,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
       loading.value = false
 
       const res: UnrefData<AuthData<U>> = {
+        ...data,
         user: data.user,
         message: data.message,
         token: data.token,
@@ -149,7 +150,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
    * @param options
    * @returns
    */
-  const register = <U = AU, T = RegisterCredentials>(
+  const register = <U = AU, T = RegisterCredentials> (
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): AuthData<U> & MethodActions<UnrefData<AuthData<U>>> => {
@@ -170,6 +171,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
       loading.value = false
 
       return {
+        ...data,
         user: data.user,
         error: data.error,
         token: data.token,
@@ -199,7 +201,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
    * @param credentials
    * @returns
    */
-  const logout = <T = unknown>(
+  const logout = <T = unknown> (
     options: AuthOptions = getAuthConfig(),
     credentials?: T
   ): BaseData & MethodActions<UnrefData<BaseData>> => {
@@ -259,7 +261,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
    * @param credentials
    * @returns
    */
-  const forgot = <T = unknown>(
+  const forgot = <T = unknown> (
     credentials?: T,
     options: AuthOptions = getAuthConfig()
   ): ForgotData & MethodActions<UnrefData<ForgotData>> => {
@@ -312,7 +314,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
    * @param credentials
    * @returns
    */
-  const reset = <U = AU, T = unknown>(
+  const reset = <U = AU, T = unknown> (
     credentials: T,
     options: AuthOptions<U> = getAuthConfig()
   ): UserData<U> & MethodActions<UnrefData<UserData<U>>> => {
@@ -354,7 +356,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
    * @param credentials
    * @returns
    */
-  const loadUserFromStorage = <U = AU, T = unknown>(
+  const loadUserFromStorage = <U = AU, T = unknown> (
     options: AuthOptions<U> = getAuthConfig(),
     credentials?: T,
     auto?: boolean
