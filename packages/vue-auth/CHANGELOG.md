@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.13.6...@toneflix/vue-auth@1.14.0) (2025-05-09)
+
+### Features
+
+- Allow adding extra returning extra response data from login and registration methods. ([d5c7b33](https://github.com/toneflix/vue-component-pack/commit/d5c7b3373dd57896d61e8380002444e8c0fa9646))
+
 ## [1.13.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.13.5...@toneflix/vue-auth@1.13.6) (2025-05-06)
 
 **Note:** Version bump only for package @toneflix/vue-auth
