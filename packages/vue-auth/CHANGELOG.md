@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.14.0...@toneflix/vue-auth@1.15.0) (2025-05-10)
+
+### Features
+
+- Pass full response data to useInlineAuth register and login endpoints. ([92ecd0c](https://github.com/toneflix/vue-component-pack/commit/92ecd0c3b51aaf398b69f15970067aea4cfbae25))
+
 # [1.14.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.13.6...@toneflix/vue-auth@1.14.0) (2025-05-09)
 
 ### Features
