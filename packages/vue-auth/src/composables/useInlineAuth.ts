@@ -22,6 +22,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
   }
 
   interface BaseData {
+    [key: string | symbol]: any // eslint-disable-line
     error?: Ref<BaseError | undefined>
     loading: Ref<boolean>
     message: Ref<string | undefined>
