@@ -45,7 +45,7 @@ jobs:
         run: pnpm whoami
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build for publishing
         run: pnpm build
