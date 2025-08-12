@@ -183,7 +183,7 @@ doneBus.on(({ key, value }) => {
 
 // Fetch data on mount
 onMounted(async () => {
-  if (Object.values(localParams).length <= 0) {
+  if (Object.values(localParams).length <= 0 || props.immediate === true) {
     await fetchPlaces()
   }
 })
