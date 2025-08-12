@@ -20,6 +20,7 @@ export interface BaseProps {
   optionValue?: string | undefined
   allowedList?: string | undefined
   bannedList?: string | undefined
+  immediate?: boolean | undefined
 }
 
 /* eslint-disable @typescript-eslint/no-empty-object-type */
