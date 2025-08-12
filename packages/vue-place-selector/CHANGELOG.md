@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.7.1...@toneflix/vue-place-selector@1.8.0) (2025-08-12)
+
+### Features
+
+- add immediate prop ([060047f](https://github.com/toneflix/vue-component-pack/commit/060047ff00dcdb2072d799070635517af2a7dc46))
+- ensure data is loaded immediately if required ([4a7c896](https://github.com/toneflix/vue-component-pack/commit/4a7c8965b52c8a7ba28b9cfe0589b5a230ada75c))
+
 ## [1.7.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.7.0...@toneflix/vue-place-selector@1.7.1) (2025-04-11)
 
 **Note:** Version bump only for package @toneflix/vue-place-selector
