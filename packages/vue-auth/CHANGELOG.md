@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.17.2...@toneflix/vue-auth@1.18.0) (2025-09-06)
+
+### Features
+
+- copy global d.ts files to dist during build ([5e739b4](https://github.com/toneflix/vue-component-pack/commit/5e739b4d143693dfa7e5eb85fa13ba222bf1c3c6))
+- expose $patch to middlewares. ([f689e47](https://github.com/toneflix/vue-component-pack/commit/f689e47e10af981a94fb2618ed66e2bd511bfe36))
+
 ## [1.17.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.17.1...@toneflix/vue-auth@1.17.2) (2025-09-06)
 
 **Note:** Version bump only for package @toneflix/vue-auth
