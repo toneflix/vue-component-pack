@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/paystack-inline",
-  "version": "1.10.2",
+  "version": "1.10.3",
   "description": "Paystack Inline component for Vue 3.",
   "style": "dist/style.css",
   "main": "dist/index.cjs",
@@ -31,11 +31,11 @@
   },
   "devDependencies": {
     "@toneflix/vue-shared": "workspace:^",
-    "vite-plugin-dts": "^4.5.4",
     "@types/paystack__inline-js": "^1.0.2",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/runtime-core": "^3.5.11",
     "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.5.4",
     "vitepress": "^1.4.0",
     "vue": "^3.5.11"
   },
