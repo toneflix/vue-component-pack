@@ -1,3 +1,4 @@
+import { viteStaticCopy as copy } from 'vite-plugin-static-copy'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import vue from '@vitejs/plugin-vue'
@@ -15,7 +16,7 @@ export default defineConfig({
           entryFileNames: '[name].mjs',
           preserveModules: false,
           exports: 'named',
-          dir: './dist'
+          dir: './dist',
         },
         {
           format: 'cjs',
@@ -31,5 +32,16 @@ export default defineConfig({
       name: 'index'
     }
   },
-  plugins: [vue(), dts({ rollupTypes: true })]
+  plugins: [
+    vue(),
+    dts({ rollupTypes: true }),
+    copy({
+      targets: [
+        {
+          src: 'global.d.ts',
+          dest: './',
+        },
+      ],
+    }),
+  ]
 })

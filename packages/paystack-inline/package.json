@@ -19,6 +19,9 @@
     "build": "vite build",
     "watch": "vite build --watch"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

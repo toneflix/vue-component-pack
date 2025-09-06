@@ -1,3 +1,4 @@
+import { viteStaticCopy as copy } from 'vite-plugin-static-copy'
 import { defineConfig } from 'vite'
 // import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
@@ -45,5 +46,16 @@ export default defineConfig({
       }
     }
   },
-  plugins: [vue(), dts({ rollupTypes: true })]
+  plugins: [
+    vue(),
+    dts({ rollupTypes: true }),
+    copy({
+      targets: [
+        {
+          src: 'types/components.d.ts',
+          dest: './',
+        },
+      ],
+    }),
+  ]
 })
