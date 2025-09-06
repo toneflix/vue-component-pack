@@ -2,7 +2,7 @@ import 'pinia'
 
 import type { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import type { ComputedRef, Ref, UnwrapRef } from 'vue'
-import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
+import type { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
 import type { PiniaPlugin, StoreDefinition } from 'pinia'
 
 import type { useAuthStore } from './stores/vue-auth'
@@ -92,7 +92,8 @@ export interface Middleware<U = unknown & AuthUser> {
      */
     next: NavigationGuardNext,
     /**
-     * The `context` Object, contains `user`, `token`, `isAuthenticated`, `$subscribe` and the `$onAction` property
+     * The `context` Object, contains `user`, `token`, `isAuthenticated`
+     * `$patch`, `$router`, `$subscribe` and the `$onAction` property
      */
     context: {
       /**
@@ -115,6 +116,10 @@ export interface Middleware<U = unknown & AuthUser> {
        * Setups a callback to be called every time an action is about to get invoked
        */
       $onAction: AuthStoreActionCallback
+      /**
+       * Router instance.
+       */
+      $router: Router
       /**
        * Applies a state patch to current state. Allows passing nested values
        */

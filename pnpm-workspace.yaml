@@ -8,7 +8,7 @@ packages:
   # - '!packages/vue-auth'
   - '!packages/vue-forms'
   - '!packages/vue-dataviewer'
-  # - '!packages/paystack-inline'
+  - '!packages/paystack-inline'
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild

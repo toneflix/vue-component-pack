@@ -1,14 +1,14 @@
 import { App, Ref, ref, toValue } from 'vue'
-import {
+import type {
   AuthOptions,
-  AuthStorePatch,
   AuthStoreActionCallback,
+  AuthStorePatch,
   AuthStoreSubscribeCallback,
   AuthUser,
   BaseError,
   StorageOptions
 } from '../types'
-import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
+import type { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
 import { createPinia, getActivePinia } from 'pinia'
 
 /**
@@ -85,6 +85,7 @@ export function runMiddlewares<U = AuthUser>(
     isAuthenticated: boolean
     $subscribe: AuthStoreSubscribeCallback
     $onAction: AuthStoreActionCallback
+    $router: Router
     $patch: AuthStorePatch
   }
 ) {

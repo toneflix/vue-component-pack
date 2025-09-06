@@ -70,6 +70,7 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
               isAuthenticated: store.isAuthenticated,
               $subscribe: store.$subscribe,
               $onAction: store.$onAction,
+              $router: router,
               $patch: store.$patch
             })
           } else {
