@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.11.1...@toneflix/paystack-inline@1.11.2) (2025-09-06)
+
+**Note:** Version bump only for package @toneflix/paystack-inline
+
 ## [1.11.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.11.0...@toneflix/paystack-inline@1.11.1) (2025-09-06)
 
 **Note:** Version bump only for package @toneflix/paystack-inline

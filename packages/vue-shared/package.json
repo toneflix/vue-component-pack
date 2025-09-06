@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/vue-shared",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Toneflix Vue Shared Package",
   "type": "module",
   "homepage": "https://github.com/toneflix/vue-component-pack",
