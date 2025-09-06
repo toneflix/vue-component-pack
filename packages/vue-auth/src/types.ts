@@ -108,13 +108,17 @@ export interface Middleware<U = unknown & AuthUser> {
        */
       isAuthenticated: boolean
       /**
-       * The subscribe callback for the auth store
+       * Setups a callback to be called whenever the state changes. It also returns a function to remove the callback
        */
       $subscribe: AuthStoreSubscribeCallback
       /**
-       * The callback for subscribing to actions on the auth store
+       * Setups a callback to be called every time an action is about to get invoked
        */
       $onAction: AuthStoreActionCallback
+      /**
+       * Applies a state patch to current state. Allows passing nested values
+       */
+      $patch: AuthStorePatch
     },
     /**
      * The current router instance
