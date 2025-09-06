@@ -52,7 +52,7 @@ export default defineConfig({
     copy({
       targets: [
         {
-          src: 'types/components.d.ts',
+          src: './src/global.d.ts',
           dest: './'
         }
       ]

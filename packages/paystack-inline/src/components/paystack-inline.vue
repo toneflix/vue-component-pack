@@ -21,7 +21,7 @@ import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import PaystackPop from '@paystack/inline-js'
 
-import { PaystackInlineProps } from '../../types/types'
+import { PaystackInlineProps } from '../types'
 import '../styles/main.scss'
 
 const emit = defineEmits<{

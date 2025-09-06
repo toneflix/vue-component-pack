@@ -1,4 +1,4 @@
-import type { GlobalComponentConstructor, PaystackInlineProps } from './types'
+import type { GlobalComponentConstructor, PaystackInlineProps } from '.'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
@@ -12,14 +12,14 @@ declare module '@vue/runtime-core' {
          * Emitted when the payment has been verified successfully
          */
         onVerified?:
-          | ((response: { message?: string | undefined; status: boolean }) => void)
-          | undefined
+        | ((response: { message?: string | undefined; status: boolean }) => void)
+        | undefined
         /**
          * Emitted when the payment was successfull
          */
         onSuccess?:
-          | ((response: { message?: string | undefined; status: boolean }) => void)
-          | undefined
+        | ((response: { message?: string | undefined; status: boolean }) => void)
+        | undefined
         /**
          * Emitted when the payment is canceled
          */
@@ -36,12 +36,12 @@ declare module '@vue/runtime-core' {
          * Emitted when the payment initialization is successfull
          */
         onInitialized?:
-          | ((data: {
-              reference: string
-              authorization_url?: string | undefined
-              message?: string | undefined
-            }) => void)
-          | undefined
+        | ((data: {
+          reference: string
+          authorization_url?: string | undefined
+          message?: string | undefined
+        }) => void)
+        | undefined
       },
       {
         /**
@@ -52,4 +52,4 @@ declare module '@vue/runtime-core' {
     >
   }
 }
-export {}
+export { }

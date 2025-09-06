@@ -1,4 +1,4 @@
-import { AuthUser } from './src/types'
+import { AuthUser } from '.'
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
@@ -7,4 +7,4 @@ declare module '@vue/runtime-core' {
   }
 }
 
-export {}
+export { }
