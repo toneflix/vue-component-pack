@@ -16,7 +16,7 @@ export default defineConfig({
           entryFileNames: '[name].mjs',
           preserveModules: false,
           exports: 'named',
-          dir: './dist',
+          dir: './dist'
         },
         {
           format: 'cjs',
@@ -39,9 +39,9 @@ export default defineConfig({
       targets: [
         {
           src: 'global.d.ts',
-          dest: './',
-        },
-      ],
-    }),
+          dest: './'
+        }
+      ]
+    })
   ]
 })

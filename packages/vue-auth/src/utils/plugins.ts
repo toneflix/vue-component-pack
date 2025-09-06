@@ -1,6 +1,7 @@
 import { App, Ref, ref, toValue } from 'vue'
 import {
   AuthOptions,
+  AuthStorePatch,
   AuthStoreActionCallback,
   AuthStoreSubscribeCallback,
   AuthUser,
@@ -84,6 +85,7 @@ export function runMiddlewares<U = AuthUser>(
     isAuthenticated: boolean
     $subscribe: AuthStoreSubscribeCallback
     $onAction: AuthStoreActionCallback
+    $patch: AuthStorePatch
   }
 ) {
   const executeMiddleware = (index: number) => {

@@ -75,6 +75,7 @@ export interface ResponseError {
 
 export type AuthStoreSubscribeCallback = ReturnType<typeof useAuthStore>['$subscribe']
 export type AuthStoreActionCallback = ReturnType<typeof useAuthStore>['$onAction']
+export type AuthStorePatch = ReturnType<typeof useAuthStore>['$patch']
 
 export interface Middleware<U = unknown & AuthUser> {
   (

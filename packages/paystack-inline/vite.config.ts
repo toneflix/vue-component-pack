@@ -53,9 +53,9 @@ export default defineConfig({
       targets: [
         {
           src: 'types/components.d.ts',
-          dest: './',
-        },
-      ],
-    }),
+          dest: './'
+        }
+      ]
+    })
   ]
 })
