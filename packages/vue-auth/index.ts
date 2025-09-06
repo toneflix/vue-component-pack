@@ -68,7 +68,8 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
               user: store.user as never,
               token: store.token,
               isAuthenticated: store.isAuthenticated,
-              $subscribe: store.$subscribe
+              $subscribe: store.$subscribe,
+              $onAction: store.$onAction,
             })
           } else {
             next()
