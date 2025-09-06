@@ -41,6 +41,7 @@ export interface ResponseError {
 }
 
 export type AuthStoreSubscribeCallback = ReturnType<typeof useAuthStore>['$subscribe']
+export type AuthStoreActionCallback = ReturnType<typeof useAuthStore>['$onAction']
 
 export interface Middleware<U = unknown & AuthUser> {
   (
@@ -76,6 +77,10 @@ export interface Middleware<U = unknown & AuthUser> {
        * The subscribe callback for the auth store
        */
       $subscribe: AuthStoreSubscribeCallback
+      /**
+       * The callback for subscribing to actions on the auth store
+       */
+      $onAction: AuthStoreActionCallback
     },
     /**
      * The current router instance
