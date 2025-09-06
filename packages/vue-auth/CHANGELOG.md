@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.15.2...@toneflix/vue-auth@1.16.0) (2025-09-06)
+
+### Features
+
+- allow subscribing to action in plugins ([a52fba2](https://github.com/toneflix/vue-component-pack/commit/a52fba291d63fb336f1192a34abc28f518f48e93))
+- pass onAction to the runMiddlewareHandler ([ebc9bb8](https://github.com/toneflix/vue-component-pack/commit/ebc9bb83321e78b8b16b8ec65aa1cf7b910a6f0c))
+
 ## [1.15.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.15.1...@toneflix/vue-auth@1.15.2) (2025-08-12)
 
 **Note:** Version bump only for package @toneflix/vue-auth
