@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.8.0...@toneflix/vue-place-selector@1.8.1) (2025-09-06)
+
+**Note:** Version bump only for package @toneflix/vue-place-selector
+
 # [1.8.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.7.1...@toneflix/vue-place-selector@1.8.0) (2025-08-12)
 
 ### Features
