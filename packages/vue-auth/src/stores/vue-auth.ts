@@ -64,6 +64,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
           user.value = usr
           token.value = tkn
           globalThis.localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
+          sessionExpired.value = false
 
           return { ...rest, user: usr, token: tkn, message }
         } catch (error) {
@@ -107,6 +108,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
           user.value = usr
           token.value = tkn
           globalThis.localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
+          sessionExpired.value = false
 
           return { ...rest, user: usr, token: tkn, message }
         } catch (error) {

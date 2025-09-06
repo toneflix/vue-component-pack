@@ -58,7 +58,7 @@ export interface Middleware<U = unknown & AuthUser> {
      */
     next: NavigationGuardNext,
     /**
-     * The `context` Object, contains `user`, `token`, `isAuthenticated` and the `$subscribe` property
+     * The `context` Object, contains `user`, `token`, `isAuthenticated`, `$subscribe` and the `$onAction` property
      */
     context: {
       /**

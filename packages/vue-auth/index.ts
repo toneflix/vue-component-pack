@@ -69,7 +69,7 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
               token: store.token,
               isAuthenticated: store.isAuthenticated,
               $subscribe: store.$subscribe,
-              $onAction: store.$onAction,
+              $onAction: store.$onAction
             })
           } else {
             next()
