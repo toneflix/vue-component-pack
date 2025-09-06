@@ -35,7 +35,7 @@ You can make OTP Input available throughout your Vue project.
 **main.js or main.ts**
 
 ```js:line-numbers{1,4}
-import '@toneflix/paystack-inline/dist/lib/style.css';
+import '@toneflix/paystack-inline/dist/style.css';
 import { createApp } from 'vue';
 import App from './app.vue';
 import PaystackInline from '@toneflix/paystack-inline';
@@ -53,7 +53,7 @@ You can also import the component in your Vue component.
 
 ```vue:line-numbers{2,3}
 <script setup>
-import '@toneflix/paystack-inline/dist/lib/style.css';
+import '@toneflix/paystack-inline/dist/style.css';
 import { PaystackInline } from '@toneflix/paystack-inline';
 </script>
 ```
@@ -64,7 +64,7 @@ import { PaystackInline } from '@toneflix/paystack-inline';
 
 ```vue:line-numbers{2,3}
 <script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 </script>
 
@@ -90,7 +90,7 @@ Before we can load the Paystack pop up, we need to initialize the payment reques
 
 ```vue:line-numbers{2,3}
 <script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 </script>
 
@@ -126,7 +126,7 @@ To verify a payment, simply set the value of the `reference` model attribute and
 
 ```vue:line-numbers{2,3}
 <script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 import { ref } from 'vue'
 
@@ -167,7 +167,7 @@ const verify = () => {
 
 ```vue:line-numbers{2,3}
 <script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 </script>
 

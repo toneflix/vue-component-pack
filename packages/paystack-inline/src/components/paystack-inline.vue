@@ -20,6 +20,7 @@
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import PaystackPop from '@paystack/inline-js'
+
 import { PaystackInlineProps } from '../../types/types'
 import '../styles/main.scss'
 
@@ -52,7 +53,7 @@ const props = withDefaults(defineProps<PaystackInlineProps>(), {
   initializeCallback() {
     return new Promise<{
       reference: string
-      access_code?: string
+      access_code?: string | undefined
       authorization_url?: string | undefined
       message: string
     }>((resolve) =>
@@ -125,7 +126,7 @@ const initializeNewPayment = async () => {
   }
 }
 
-const paystackInline = (reference?: string, accessCode?: string) => {
+const paystackInline = (reference?: string, accessCode?: string): unknown => {
   const callbacks: Pick<
     Parameters<typeof paystack['newTransaction']>['0'],
     'onSuccess' | 'onCancel' | 'onError' | 'onLoad'

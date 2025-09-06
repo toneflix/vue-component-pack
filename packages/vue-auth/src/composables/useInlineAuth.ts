@@ -1,10 +1,15 @@
-import {
+import type {
+  AuthData,
   AuthOptions,
   AuthUser,
+  BaseData,
   BaseError,
+  ForgotData,
   LoginCredentials,
+  MethodActions,
   RegisterCredentials,
-  StorageOptions
+  StorageOptions,
+  UserData
 } from '../types'
 import { Ref, UnwrapRef, ref } from 'vue'
 
@@ -19,32 +24,6 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
 
   type UnrefData<X> = {
     [K in keyof X]: UnwrapRef<X[K]>
-  }
-
-  interface BaseData {
-    [key: string | symbol]: any // eslint-disable-line
-    error?: Ref<BaseError | undefined>
-    loading: Ref<boolean>
-    message: Ref<string | undefined>
-  }
-
-  interface UserData<U> extends BaseData {
-    user: Ref<U | undefined>
-  }
-
-  interface AuthData<U = AU> extends UserData<U> {
-    token: Ref<string | undefined>
-  }
-
-  interface ForgotData extends BaseData {
-    countdown: Ref<number>
-    timeout: Ref<number | undefined>
-  }
-
-  interface MethodActions<X> {
-    send: () => Promise<X>
-    onError: (callback: (error: BaseError) => void) => void
-    onSuccess: (callback: (data: X) => void) => void
   }
 
   /**
@@ -269,7 +248,7 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
     const error = ref<BaseError>()
     const loading = ref<boolean>(false)
     const message = ref<string>()
-    const timeout = ref<number>()
+    const timeout = ref<number | undefined>()
     const countdown = ref<number>(0)
 
     const action = async (): Promise<UnrefData<ForgotData>> => {

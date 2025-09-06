@@ -1,9 +1,9 @@
 import { App, Plugin } from 'vue'
-import { initPinia, runMiddlewares } from './src/utils/plugins'
+import { initPinia, runMiddlewares } from './utils/plugins'
 
-import { AuthOptions } from './src/types'
-import { setAuthConfig } from './src/utils/config'
-import { useAuthStore } from './src/stores/vue-auth'
+import { AuthOptions } from './types'
+import { setAuthConfig } from './utils/config'
+import { useAuthStore } from './stores/vue-auth'
 
 // Define the plugin with the correct signature
 export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
@@ -89,9 +89,9 @@ export const authPlugin = <U = unknown>(options: AuthOptions<U>) => {
 
 // export default AuthPlugin;
 
-export * from './src/composables/useInlineAuth'
-export * from './src/composables/useAuth'
-export * from './src/utils/middlewares'
-export * from './src/utils/plugins'
-export * from './src/types'
-export { useAuthStore } from './src/stores/vue-auth'
+export * from './composables/useInlineAuth'
+export * from './composables/useAuth'
+export * from './utils/middlewares'
+export * from './utils/plugins'
+export * from './types'
+export { useAuthStore } from './stores/vue-auth'

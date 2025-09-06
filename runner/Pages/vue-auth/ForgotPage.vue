@@ -9,8 +9,8 @@ const form = reactive({ email: 'test@example.com' })
 
 const data = ref({ countdown: ref(0), timeout: 0 } as {
   countdown: Ref<number>
-  timeout?: number
-  error?: BaseError
+  timeout?: number | undefined
+  error?: BaseError | undefined
 })
 
 const handleLogin = async () => {

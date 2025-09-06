@@ -1,5 +1,6 @@
 import type { AllowedComponentProps, ComponentCustomProps, VNodeProps } from 'vue'
 
+import type PopupTransaction from 'paystack__inline-js'
 import { RouteLocationRaw } from 'vue-router'
 
 type PublicProps = VNodeProps & AllowedComponentProps & ComponentCustomProps
@@ -72,13 +73,13 @@ export type PaystackInlineProps = {
   initializeCallback?: () =>
     | Promise<
         | {
-            authorization_url?: string
+            authorization_url?: string | undefined
             access_code?: string | undefined
             reference: string // Required in this shape
             message?: string | undefined
           }
         | {
-            authorization_url?: string
+            authorization_url?: string | undefined
             access_code: string // Required in this shape
             reference?: string | undefined
             message?: string | undefined
@@ -87,3 +88,5 @@ export type PaystackInlineProps = {
       >
     | undefined
 }
+
+export type { PopupTransaction }

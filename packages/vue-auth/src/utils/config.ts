@@ -5,7 +5,7 @@ export let authConfig: AuthOptions<any>
 
 export const url = (endpoint?: keyof typeof authConfig.endpoints) => {
   if (!endpoint || !authConfig.endpoints[endpoint]) {
-    throw new Error(`You have not defined a ${endpoint} endpoint.`)
+    throw new Error(`You have not defined a ${String(endpoint)} endpoint.`)
   }
 
   const path = authConfig.endpoints[endpoint]

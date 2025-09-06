@@ -1,6 +1,7 @@
 import {
   AuthOptions,
   AuthResponse,
+  AuthStoreDefinition,
   AuthUser,
   BaseError,
   DefinitelyAuthResponse,
@@ -20,7 +21,7 @@ axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8
 axios.defaults.headers.common['Accept'] = 'application/json'
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
-export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
+export function createVueAuthStore<UA = unknown>(options?: StorageOptions): AuthStoreDefinition {
   const storageOptions = Object.fromEntries(
     Object.entries(options ?? {}).filter(([key]) => !['plugins', 'skipInit'].includes(key))
   )
@@ -346,7 +347,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions) {
       }
     },
     storageOptions as never
-  )
+  ) as unknown as AuthStoreDefinition
 }
 
 // export const useAuthStore = createVueAuthStore()

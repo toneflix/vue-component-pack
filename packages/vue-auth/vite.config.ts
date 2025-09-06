@@ -1,34 +1,35 @@
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   build: {
-    outDir: 'es',
     minify: true,
     emptyOutDir: true,
     rollupOptions: {
       external: ['vue', 'axios', 'pinia', 'vue-router'],
-      input: ['index.ts'],
+      input: ['src/index.ts'],
       output: [
         {
           format: 'es',
           entryFileNames: '[name].mjs',
-          preserveModules: true,
+          preserveModules: false,
           exports: 'named',
-          dir: './dist/es'
+          dir: './dist'
         },
         {
           format: 'cjs',
           entryFileNames: '[name].cjs',
-          preserveModules: true,
+          preserveModules: false,
           exports: 'named',
-          dir: './dist/lib'
+          dir: './dist'
         }
       ]
     },
     lib: {
-      entry: './index.ts'
+      entry: './src/index.ts',
+      name: 'index'
     }
   },
-  plugins: [vue()]
+  plugins: [vue(), dts({ rollupTypes: true })]
 })

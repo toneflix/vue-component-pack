@@ -1,39 +1,41 @@
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
+// import { resolve } from 'path'
+import dts from 'vite-plugin-dts'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@types/paystack__inline-js': resolve(__dirname, 'types/paystack__inline-js')
-    }
-  },
+  // resolve: {
+  //   alias: {
+  //     '@types/paystack__inline-js': resolve(__dirname, 'types/paystack__inline-js')
+  //   }
+  // },
   build: {
-    outDir: 'es',
+    // outDir: 'es',
     minify: true,
     emptyOutDir: true,
     rollupOptions: {
-      external: ['vue', 'vue-router', '@paystack/inline-js', '@types/paystack__inline-js'],
-      input: ['index.ts'],
+      external: ['vue', 'vue-router', '@paystack/inline-js'],
+      input: ['src/index.ts'],
       output: [
         {
           format: 'es',
           entryFileNames: '[name].mjs',
-          preserveModules: true,
+          preserveModules: false,
           exports: 'named',
-          dir: './dist/es'
+          dir: './dist'
         },
         {
           format: 'cjs',
           entryFileNames: '[name].cjs',
-          preserveModules: true,
+          preserveModules: false,
           exports: 'named',
-          dir: './dist/lib'
+          dir: './dist'
         }
       ]
     },
     lib: {
-      entry: './index.ts'
+      entry: './src/index.ts',
+      name: 'index'
     }
   },
   css: {
@@ -43,5 +45,5 @@ export default defineConfig({
       }
     }
   },
-  plugins: [vue()]
+  plugins: [vue(), dts({ rollupTypes: true })]
 })

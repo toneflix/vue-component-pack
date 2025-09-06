@@ -33,7 +33,7 @@ You can make Paystack Inline available throughout your Vue project.
 **main.js or main.ts**
 
 ```js
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { createApp } from 'vue'
 import App from './app.vue'
 import PaystackInline from '@toneflix/paystack-inline'
@@ -51,7 +51,7 @@ You can also import the component in your Vue component.
 
 ```vue
 <script setup>
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 </script>
 ```
@@ -62,7 +62,7 @@ import { PaystackInline } from '@toneflix/paystack-inline'
 
 ```vue
 <script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 import { ref } from 'vue'
 
@@ -91,7 +91,7 @@ To verify a payment, simply set the value of the `reference` model attribute and
 
 ```vue
 <script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 import { ref } from 'vue'
 
@@ -133,7 +133,7 @@ const verify = () => {
 
 ```vue
 <script setup lang="ts">
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { PaystackInline } from '@toneflix/paystack-inline'
 import { ref } from 'vue'
 

@@ -2,7 +2,6 @@
   "extends": "@toneflix/vue-shared",
   "include": ["./**/*.d.ts", "./**/*", "src"],
   "compilerOptions": {
-    "esModuleInterop": true,
     "skipLibCheck": true,
     "baseUrl": ".",
     "outDir": "dist",

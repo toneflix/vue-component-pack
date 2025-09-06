@@ -15,4 +15,9 @@ const withInstall = <T>(comp: T) => {
 }
 
 export const PaystackInline = withInstall(_PaystackInline)
-export default PaystackInline
+
+export default {
+  install: (app: App): void => {
+    app.use(PaystackInline)
+  }
+}

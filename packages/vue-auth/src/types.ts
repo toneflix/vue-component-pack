@@ -1,16 +1,49 @@
 import 'pinia'
 
-import { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
+import type { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
+import type { ComputedRef, Ref, UnwrapRef } from 'vue'
 import { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
+import type { PiniaPlugin, StoreDefinition } from 'pinia'
 
-import { PiniaPlugin } from 'pinia'
-import { useAuthStore } from './stores/vue-auth'
+import type { useAuthStore } from './stores/vue-auth'
+
+export type UnrefData<X> = {
+  [K in keyof X]: UnwrapRef<X[K]>
+}
 
 export interface AuthUser {
   id: number
   email: string
   token?: string
   roles?: string
+}
+export interface AuthData<U> extends UserData<U> {
+  token: Ref<string | undefined>
+}
+
+export interface UserData<U> extends BaseData {
+  user: Ref<U | undefined>
+}
+
+export interface AuthData<U> extends UserData<U> {
+  token: Ref<string | undefined>
+}
+
+export interface ForgotData extends BaseData {
+  countdown: Ref<number>
+  timeout: Ref<number | undefined>
+}
+export interface MethodActions<X> {
+  send: () => Promise<X>
+  onError: (callback: (error: BaseError) => void) => void
+  onSuccess: (callback: (data: X) => void) => void
+}
+
+export interface BaseData {
+  [key: string | symbol]: any // eslint-disable-line
+  error?: Ref<BaseError | undefined>
+  loading: Ref<boolean>
+  message: Ref<string | undefined>
 }
 
 export interface AuthResponse<U = AuthUser> {
@@ -260,3 +293,127 @@ export interface AuthOptions<U = AuthUser> {
    */
   middlewares?: Array<Middleware<U>>
 }
+
+export type AuthStoreDefinition<UA = unknown> = StoreDefinition<
+  'vue-auth',
+  {
+    user: Ref<UA>
+    token: Ref<string | undefined>
+    sessionExpired: Ref<boolean>
+  },
+  {
+    isAuthenticated: ComputedRef<boolean>
+  },
+  {
+    /**
+     * Attempt to do a login
+     *
+     * @param credentials
+     * @param options
+     * @returns
+     */
+    login<U = UA, T = LoginCredentials>(
+      credentials: T,
+      options: AuthOptions<U>
+    ): Promise<DefinitelyAuthResponse<U>>
+
+    /**
+     * Attempt to create a new user account
+     *
+     * @param credentials
+     * @param options
+     * @returns
+     */
+    register<U = UA, T = RegisterCredentials>(
+      credentials: T,
+      options: AuthOptions<U>
+    ): Promise<DefinitelyAuthResponse<U>>
+
+    /**
+     * Attempt to log the user out
+     *
+     * @param options
+     * @param credentials
+     * @returns
+     */
+    logout<T = unknown>(
+      options: AuthOptions,
+      credentials?: T
+    ): Promise<
+      | {
+          error?: BaseError
+          message?: string
+        }
+      | undefined
+    >
+
+    /**
+     * Clear the current authentication without making any server request.
+     *
+     * @param options
+     * @returns
+     */
+    clearAuth<U>(options: AuthOptions<U>): void
+
+    /**
+     * Reset the current auth session
+     *
+     * Will call `clearAuth` and set `sessionExpired` to true
+     *
+     * @param options
+     * @returns
+     */
+    resetSession<U>(options: AuthOptions<U>): void
+
+    /**
+     * Request for a password reset token
+     *
+     * @param options
+     * @param credentials
+     * @returns
+     */
+    forgot<T = unknown>(
+      credentials?: T,
+      options?: AuthOptions
+    ): Promise<{
+      countdown: Ref<number>
+      timeout?: number | undefined
+      error?: BaseError | undefined
+      message?: string | undefined
+    }>
+
+    /**
+     * Attempt to reset the user's password
+     *
+     * @param credentials
+     * @param options
+     * @returns
+     */
+    reset<U = UA, T = unknown>(
+      credentials: T,
+      options: AuthOptions<U>
+    ): Promise<{
+      user: U
+      error?: BaseError | undefined
+      message?: string | undefined
+    }>
+
+    /**
+     * Get the token from storage and populate the store
+     * If the token is available, also get the user from the API
+     *
+     * @param options
+     * @param credentials
+     * @returns
+     */
+    loadUserFromStorage<U = UA, T = unknown>(
+      options: AuthOptions<U>,
+      credentials?: T,
+      auto?: boolean
+    ): Promise<{
+      user: U
+      error?: BaseError | undefined
+      message?: string | undefined
+    }>
+  }
+>
