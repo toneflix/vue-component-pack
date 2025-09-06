@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.18.2...@toneflix/vue-auth@1.19.0) (2025-09-06)
+
+### Features
+
+- add router instance to plugins. ([9d86ddd](https://github.com/toneflix/vue-component-pack/commit/9d86dddbd60d5146bb0862b60b1da2b8effa012f))
+
 ## [1.18.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.18.1...@toneflix/vue-auth@1.18.2) (2025-09-06)
 
 ### Bug Fixes
