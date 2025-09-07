@@ -81,7 +81,7 @@ import {
   CustomInputEvent,
   CustomFocusEvent,
   CustomKeyboardEvent
-} from '../../types'
+} from '../types'
 import '../styles/main.scss'
 import { watch } from 'vue'
 import { ref, onBeforeUpdate } from 'vue'

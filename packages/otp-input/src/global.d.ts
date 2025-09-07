@@ -1,4 +1,4 @@
-import type { GlobalComponentConstructor, OtpInputType } from './types'
+import type { GlobalComponentConstructor, OtpInputType } from '.'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -31,4 +31,4 @@ declare module '@vue/runtime-core' {
     >
   }
 }
-export {}
+export { }

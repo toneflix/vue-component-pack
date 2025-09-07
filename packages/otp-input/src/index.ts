@@ -4,8 +4,8 @@ import _OtpInput from './components/otp-input.vue'
 
 type SFCWithInstall<T> = T & Plugin
 
-const withInstall = <T>(comp: T) => {
-  ;(comp as SFCWithInstall<T>).install = (app: App) => {
+const withInstall = <T> (comp: T) => {
+  ; (comp as SFCWithInstall<T>).install = (app: App) => {
     /* eslint-disable @typescript-eslint/no-explicit-any */
     const name = (comp as any).name
     // register component
@@ -15,4 +15,10 @@ const withInstall = <T>(comp: T) => {
 }
 
 export const OtpInput = withInstall(_OtpInput)
-export default OtpInput
+export * from './types'
+
+export default {
+  install: (app: App): void => {
+    app.use(OtpInput)
+  }
+}
