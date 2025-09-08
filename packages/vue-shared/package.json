@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/vue-shared",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Toneflix Vue Shared Package",
   "type": "module",
   "homepage": "http://greysoft.toneflix.net",

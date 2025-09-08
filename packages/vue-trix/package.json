@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/vue-trix",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Simple and lightweight Trix rich-text editor for Vue.js.",
   "style": "dist/lib/style.css",
   "main": "dist/lib/index.cjs",
