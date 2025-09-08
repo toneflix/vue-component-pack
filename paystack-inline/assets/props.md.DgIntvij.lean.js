@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,af as l}from"./chunks/framework.DjEodvrA.js";const g=JSON.parse('{"title":"Props","description":"","frontmatter":{},"headers":[],"relativePath":"props.md","filePath":"props.md"}'),t={name:"props.md"};function p(e,s,h,k,r,E){return n(),a("div",null,[...s[0]||(s[0]=[l("",33)])])}const c=i(t,[["render",p]]);export{g as __pageData,c as default};

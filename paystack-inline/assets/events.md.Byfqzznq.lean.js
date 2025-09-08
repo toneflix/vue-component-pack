@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,af as l}from"./chunks/framework.DjEodvrA.js";const g=JSON.parse('{"title":"Events","description":"","frontmatter":{},"headers":[],"relativePath":"events.md","filePath":"events.md"}'),p={name:"events.md"};function h(t,s,k,e,E,r){return n(),a("div",null,[...s[0]||(s[0]=[l("",23)])])}const y=i(p,[["render",h]]);export{g as __pageData,y as default};

@@ -1,0 +1,11 @@
+node_modules/
+.nx/cache
+.nx/workspace-data
+
+.nx/cache/
+.yarn
+.DS_Store
+*/**/dist
+*/**/.vitepress/dist
+*/**/.vitepress/cache
+/documentations
