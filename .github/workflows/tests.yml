@@ -20,23 +20,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
-
       - name: Set Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'pnpm'
-
       - name: Install dependencies
         run: pnpm install
-
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        with:
-          build: pnpm run build
-          start: pnpm start
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
