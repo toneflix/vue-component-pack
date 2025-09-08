@@ -6,13 +6,13 @@
 Simple Paystack Inline component for Vue 3
 
 <p align="center">
-    <img width="200" src="https://toneflix.github.io/vue-component-pack/paystack-inline/images/banner.png" alt="Flickity">
+    <img width="200" src="http://greysoft.toneflix.net/paystack-inline/images/banner.png" alt="Flickity">
     <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
 </p>
 
 ## Documentation
 
-Read the full documentation here: [https://toneflix.github.io/vue-component-pack/paystack-inline](https://toneflix.github.io/vue-component-pack/paystack-inline/)
+Read the full documentation here: [http://greysoft.toneflix.net/paystack-inline](http://greysoft.toneflix.net/paystack-inline/)
 
 ## Installation
 

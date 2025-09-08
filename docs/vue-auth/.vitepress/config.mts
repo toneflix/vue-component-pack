@@ -3,10 +3,10 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Vue Authenticator",
-  base: "/vue-component-pack/vue-auth",
+  base: "/vue-auth",
   description: "Advanced authentication plugin for Vue 3.",
   head: [
-    ['link', { rel: 'icon', href: '/vue-component-pack/vue-auth/images/banner.png' }],
+    ['link', { rel: 'icon', href: '/vue-auth/images/banner.png' }],
     ['meta', {
       name: 'author',
       content: 'Toneflix Code.',

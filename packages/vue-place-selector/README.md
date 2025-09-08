@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/@toneflix/vue-place-selector.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-place-selector)
 [![npm](https://img.shields.io/npm/dt/@toneflix/vue-place-selector.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-place-selector)
 
-Country State City Selector component for Vue3. - See a live demo [here](https://toneflix.github.io/vue-component-pack/vue-place-selector/demo.html).
+Country State City Selector component for Vue3. - See a live demo [here](http://greysoft.toneflix.net/vue-place-selector/demo.html).
 
 <p align="center"> 
     <img width="200" src="https://github.com/user-attachments/assets/151cda20-bd08-49ce-9cf6-3f14d599993a" alt="Place Selector"> 
@@ -11,7 +11,7 @@ Country State City Selector component for Vue3. - See a live demo [here](https:/
 
 ## Documentation
 
-Read the full documentation [here](https://toneflix.github.io/vue-component-pack/vue-place-selector/)
+Read the full documentation [here](http://greysoft.toneflix.net/vue-place-selector/)
 
 ## Installation
 

@@ -7,7 +7,7 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "type": "module",
-  "homepage": "https://toneflix.github.io/vue-component-pack/otp-input",
+  "homepage": "https://http://greysoft.toneflix.net/otp-input",
   "repository": {
     "url": "https://github.com/toneflix/vue-component-pack"
   },

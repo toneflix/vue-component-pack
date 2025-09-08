@@ -6,7 +6,7 @@
   "main": "dist/lib/index.cjs",
   "module": "dist/es/index.mjs",
   "type": "module",
-  "homepage": "https://toneflix.github.io/vue-component-pack/vue-trix",
+  "homepage": "http://greysoft.toneflix.net/vue-trix",
   "repository": {
     "url": "https://github.com/toneflix/vue-component-pack"
   },

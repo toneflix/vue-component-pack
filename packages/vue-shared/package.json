@@ -3,7 +3,7 @@
   "version": "0.1.8",
   "description": "Toneflix Vue Shared Package",
   "type": "module",
-  "homepage": "https://github.com/toneflix/vue-component-pack",
+  "homepage": "http://greysoft.toneflix.net",
   "repository": {
     "url": "https://github.com/toneflix/vue-component-pack"
   }

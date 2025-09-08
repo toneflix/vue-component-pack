@@ -3,16 +3,16 @@
 [![npm](https://img.shields.io/npm/v/@toneflix/vue-dataviewer.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-dataviewer)
 [![npm](https://img.shields.io/npm/dt/@toneflix/vue-dataviewer.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/vue-dataviewer)
 
-Quickly view data from an object with little to no tinkering on vue 3. - See a live demo [here](https://toneflix.github.io/vue-component-pack/vue-dataviewer/demo.html).
+Quickly view data from an object with little to no tinkering on vue 3. - See a live demo [here](http://greysoft.toneflix.net/vue-dataviewer/demo.html).
 
 <!-- <p align="center">
-    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-dataviewer/images/banner.png" alt="Vue Dataviewer">
+    <img width="200" src="http://greysoft.toneflix.net/images/banner.png" alt="Vue Dataviewer">
     <img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">
 </p> -->
 
 ## Documentation
 
-Read the full documentation [here](https://toneflix.github.io/vue-component-pack/vue-dataviewer/)
+Read the full documentation [here](http://greysoft.toneflix.net/vue-dataviewer/)
 
 ## Installation
 

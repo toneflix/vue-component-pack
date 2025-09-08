@@ -3,10 +3,10 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Vue Trix",
-  base: "/vue-component-pack/vue-trix",
+  base: "/vue-trix",
   description: "Vue Trix documentation",
   head: [
-    ['link', { rel: 'icon', href: '/vue-component-pack/vue-trix/images/banner.png' }],
+    ['link', { rel: 'icon', href: '/vue-trix/images/banner.png' }],
     ['meta', {
       name: 'author',
       content: 'Toneflix Code.',

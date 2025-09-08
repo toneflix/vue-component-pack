@@ -6,13 +6,13 @@
 Simple and lightweight Trix rich-text editor for Vue.js. - See a live demo [here](https://toneflix.github.io/vue-component-pack/vue-trix/demo.html).
 
 <p align="center">
-    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-trix/images/banner.png" alt="Vue Trix">
+    <img width="200" src="http://greysoft.toneflix.net/vue-trix/images/banner.png" alt="Vue Trix">
     <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
 </p>
 
 ## Documentation
 
-Read the full documentation [here](https://toneflix.github.io/vue-component-pack/vue-trix/)
+Read the full documentation [here](http://greysoft.toneflix.net/vue-trix/)
 
 ## Features
 

@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
   "type": "module",
-  "homepage": "https://toneflix.github.io/vue-component-pack/paystack-inline",
+  "homepage": "http://greysoft.toneflix.net/paystack-inline",
   "repository": {
     "url": "https://github.com/toneflix/vue-component-pack"
   },

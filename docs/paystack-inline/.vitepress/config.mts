@@ -3,10 +3,10 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Vue Paystack Inline",
-  base: "/vue-component-pack/paystack-inline",
+  base: "/paystack-inline",
   description: "Vue Paystack Inline documentation",
   head: [
-    ['link', { rel: 'icon', href: '/vue-component-pack/paystack-inline/images/banner.png' }],
+    ['link', { rel: 'icon', href: '/paystack-inline/images/banner.png' }],
     ['meta', {
       name: 'author',
       content: 'Toneflix Code.',

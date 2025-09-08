@@ -3,16 +3,16 @@
 [![npm](https://img.shields.io/npm/v/@toneflix/otp-input.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/otp-input)
 [![npm](https://img.shields.io/npm/dt/@toneflix/otp-input.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/otp-input)
 
-Simple customizable OTP input for Vue 3. - See a live demo [here](https://toneflix.github.io/vue-component-pack/otp-input/demo.html).
+Simple customizable OTP input for Vue 3. - See a live demo [here](http://greysoft.toneflix.net/otp-input/demo.html).
 
 <p align="center">
-    <img width="200" src="https://toneflix.github.io/vue-component-pack/otp-input/images/banner.png" alt="Flickity">
+    <img width="200" src="http://greysoft.toneflix.net/otp-input/images/banner.png" alt="OTP INPUT">
     <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
 </p>
 
 ## Documentation
 
-Read the full documentation [here](https://toneflix.github.io/vue-component-pack/otp-input/)
+Read the full documentation [here](http://greysoft.toneflix.net/otp-input/)
 
 ## Installation
 

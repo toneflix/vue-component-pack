@@ -3,10 +3,10 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Vue OTP Input",
-  base: "/vue-component-pack/otp-input",
+  base: "/otp-input",
   description: "Vue OTP Input documentation",
   head: [
-    ['link', { rel: 'icon', href: '/vue-component-pack/otp-input/images/banner.png' }],
+    ['link', { rel: 'icon', href: '/otp-input/images/banner.png' }],
     ['meta', {
       name: 'author',
       content: 'Toneflix Code.',

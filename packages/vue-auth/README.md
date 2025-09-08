@@ -6,13 +6,13 @@
 Advanced authentication plugin for Vue 3.
 
 <p align="center">
-    <img width="200" src="https://toneflix.github.io/vue-component-pack/vue-auth/images/banner.png" alt="Flickity">
+    <img width="200" src="http://greysoft.toneflix.net/vue-auth/images/banner.png" alt="Flickity">
     <!--<img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">-->
 </p>
 
 ## Documentation
 
-Read the full documentation here: [https://toneflix.github.io/vue-component-pack/vue-auth](https://toneflix.github.io/vue-component-pack/vue-auth/)
+Read the full documentation here: [http://greysoft.toneflix.net/vue-auth](http://greysoft.toneflix.net/vue-auth/)
 
 ## Installation
 
