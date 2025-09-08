@@ -1,4 +1,4 @@
-# Vue OTP Input 
+# Vue OTP Input
 
 [![npm](https://img.shields.io/npm/v/@toneflix/otp-input.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/otp-input)
 [![npm](https://img.shields.io/npm/dt/@toneflix/otp-input.svg?style=flat-square)](https://www.npmjs.com/package/@toneflix/otp-input)
@@ -33,14 +33,14 @@ You can make OTP Input available throughout your Vue project.
 **main.js or main.ts**
 
 ```js
-import '@toneflix/otp-input/dist/lib/style.css';
-import { createApp } from 'vue';
-import App from './app.vue';
-import OtpInput from '@toneflix/otp-input';
+import '@toneflix/otp-input/dist/style.css'
+import { createApp } from 'vue'
+import App from './app.vue'
+import OtpInput from '@toneflix/otp-input'
 
-const app = createApp(App);
-app.use(OtpInput);
-app.mount('#app');
+const app = createApp(App)
+app.use(OtpInput)
+app.mount('#app')
 ```
 
 ### Local Registration
@@ -51,8 +51,8 @@ You can also import the component in your Vue component.
 
 ```vue
 <script setup>
-import '@toneflix/otp-input/dist/lib/style.css';
-import { OtpInput } from '@toneflix/otp-input';
+import '@toneflix/otp-input/dist/style.css'
+import { OtpInput } from '@toneflix/otp-input'
 </script>
 ```
 
@@ -62,11 +62,11 @@ import { OtpInput } from '@toneflix/otp-input';
 
 ```vue
 <script setup lang="ts">
-import '@toneflix/otp-input/dist/lib/style.css';
-import { OtpInput } from '@toneflix/otp-input';
-import { ref } from 'vue';
+import '@toneflix/otp-input/dist/style.css'
+import { OtpInput } from '@toneflix/otp-input'
+import { ref } from 'vue'
 
-const otp = ref<string>('');
+const otp = ref<string>('')
 </script>
 
 <template>

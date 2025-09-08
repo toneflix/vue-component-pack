@@ -35,7 +35,7 @@ You can make OTP Input available throughout your Vue project.
 **main.js or main.ts**
 
 ```js:line-numbers{1,4}
-import '@toneflix/otp-input/dist/lib/style.css';
+import '@toneflix/otp-input/dist/style.css';
 import { createApp } from 'vue';
 import App from './app.vue';
 import OtpInput from '@toneflix/otp-input';
@@ -53,7 +53,7 @@ You can also import the component in your Vue component.
 
 ```vue:line-numbers{2,3}
 <script setup>
-import '@toneflix/otp-input/dist/lib/style.css';
+import '@toneflix/otp-input/dist/style.css';
 import { OtpInput } from '@toneflix/otp-input';
 </script>
 ```
@@ -64,7 +64,7 @@ import { OtpInput } from '@toneflix/otp-input';
 
 ```vue:line-numbers{2,3}
 <script setup lang="ts">
-import '@toneflix/otp-input/dist/lib/style.css';
+import '@toneflix/otp-input/dist/style.css';
 import { OtpInput } from '@toneflix/otp-input';
 import { ref } from 'vue';
 
