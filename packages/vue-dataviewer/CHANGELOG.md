@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.29.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.28.1...@toneflix/vue-dataviewer@1.29.0) (2025-09-08)
+
+### Features
+
+- update package.json ([f900c15](https://github.com/toneflix/vue-component-pack/commit/f900c1577c75e551848c27caceadb3a4ef9bedfd))
+
 ## [1.28.1](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-dataviewer@1.28.0...@toneflix/vue-dataviewer@1.28.1) (2025-04-04)
 
 ### Bug Fixes
