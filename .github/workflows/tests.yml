@@ -46,8 +46,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: pnpm run build
-          start: ''
-          config-file: cypress.config.js
+          start: '' 
           command: npx cypress run --component
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
