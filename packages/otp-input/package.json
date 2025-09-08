@@ -1,6 +1,6 @@
 {
   "name": "@toneflix/otp-input",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Simple customizable OTP input for Vue 3.",
   "style": "dist/style.css",
   "main": "dist/index.cjs",
@@ -26,10 +26,10 @@
     "vue": "^3.1"
   },
   "devDependencies": {
-    "vite-plugin-dts": "^4.5.4",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/runtime-core": "^3.5.11",
     "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.5.4",
     "vitepress": "^1.4.0",
     "vue": "^3.5.11"
   },
