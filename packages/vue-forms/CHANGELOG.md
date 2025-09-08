@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.10](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.9...@toneflix/vue-forms@1.12.10) (2025-09-08)
+
+**Note:** Version bump only for package @toneflix/vue-forms
+
 ## [1.12.9](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-forms@1.12.8...@toneflix/vue-forms@1.12.9) (2025-04-04)
 
 ### Bug Fixes
