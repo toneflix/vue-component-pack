@@ -13,6 +13,6 @@
     "docs:deploy": "../../deploy.sh vue-auth"
   },
   "devDependencies": {
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.4"
   }
 }

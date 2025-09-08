@@ -1,64 +1,64 @@
 <template>
   <div class="container">
     <div>
-    <PaystackInline
-      dont-verify
-      :amount="1000"
-      :customer="{
-        email: 'john@example.com'
-      }"
-      :public-key="pKey"
-      @ready="state.ready = true"
-      @success="
-        (e) => {
-          state.success = e
-          reference = e.reference
-        }
-      "
-      @verified="state.verified = $event"
-      @canceled="state.canceled = $event"
-      @destroyed="state.destroyed = true"
-      @error="state.error = $event"
-      @initialized="state.initialized = $event"
-    >
-      <template #default="{ initialize, loading }">
-        <button class="pay-button" :disabled="loading" @click="initialize()">
-          {{ !loading ? 'Pay Now' : '' }}
-          <div class="spinner" v-if="loading"></div>
-        </button>
-      </template>
-    </PaystackInline>
-    <PaystackInline
-      hidden
-      :customer="{
-        email: 'john@example.com'
-      }"
-      :amount="1000"
-      :public-key="pKey"
-      :reference="reference"
-      @success="state.success = $event"
-      @verified="state.verified = $event"
-      @canceled="state.canceled = $event"
-      @error="state.error = $event"
-    />
+      <PaystackInline
+        dont-verify
+        :amount="1000"
+        :customer="{
+          email: 'john@example.com'
+        }"
+        :public-key="pKey"
+        @ready="state.ready = true"
+        @success="
+          (e) => {
+            state.success = e
+            reference = e.reference
+          }
+        "
+        @verified="state.verified = $event"
+        @canceled="state.canceled = $event"
+        @destroyed="state.destroyed = true"
+        @error="state.error = $event"
+        @initialized="state.initialized = $event"
+      >
+        <template #default="{ initialize, loading }">
+          <button class="pay-button" :disabled="loading" @click="initialize()">
+            {{ !loading ? 'Pay Now' : '' }}
+            <div class="spinner" v-if="loading"></div>
+          </button>
+        </template>
+      </PaystackInline>
+      <PaystackInline
+        hidden
+        :customer="{
+          email: 'john@example.com'
+        }"
+        :amount="1000"
+        :public-key="pKey"
+        :reference="reference"
+        @success="state.success = $event"
+        @verified="state.verified = $event"
+        @canceled="state.canceled = $event"
+        @error="state.error = $event"
+      />
 
-    <pre class="state">
+      <pre class="state">
       <code>
         {{ state }}
       </code>
     </pre>
 
-    <div>
-      <label>Public Key</label>
-      <input v-model="pKey" placeholder="Public Key" />
+      <div>
+        <label>Public Key</label>
+        <input v-model="pKey" placeholder="Public Key" />
+      </div>
     </div>
   </div>
-</div>
 </template>
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { PaystackInline } from '@toneflix/paystack-inline'
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 
 const pKey = ref(localStorage.getItem('pKey') || 'pk_test_TYooMQauvdEDq54NiTphI7jx')
 const reference = ref<string>()
@@ -70,7 +70,7 @@ const state = ref<{
   canceled: { reference: string }
   destroyed: boolean
   error: { message: string; reference?: string }
-  initialized: { reference: string; authorization_url?: string; message?: string }
+  initialized: { reference?: string; authorization_url?: string; message?: string }
 }>({
   ready: false,
   success: { message: '', reference: '' },
@@ -87,7 +87,7 @@ watch(pKey, (pKey) => {
 </script>
 
 <style lang="scss" scoped>
-input { 
+input {
   padding: 5px;
   margin-top: 10px;
   border-radius: 4px;

@@ -13,9 +13,9 @@
     "docs:deploy": "../../deploy.sh vue-trix"
   },
   "devDependencies": {
-    "vitepress": "^1.5.0"
+    "vitepress": "^1.6.4"
   },
   "dependencies": {
-    "@toneflix/vue-trix": "^1.5.1"
+    "@toneflix/vue-trix": "^1.5.2"
   }
 }

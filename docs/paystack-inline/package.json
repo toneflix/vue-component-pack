@@ -13,9 +13,9 @@
     "docs:deploy": "../../deploy.sh paystack-inline"
   },
   "devDependencies": {
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.4"
   },
   "dependencies": {
-    "@toneflix/paystack-inline": "^1.7.0"
+    "@toneflix/paystack-inline": "^1.11.2"
   }
 }

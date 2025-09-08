@@ -57,7 +57,7 @@
 </template>
 <script setup lang="ts">
 import { PaystackInline } from '@toneflix/paystack-inline'
-import '@toneflix/paystack-inline/dist/lib/style.css'
+import '@toneflix/paystack-inline/dist/style.css'
 import { reactive, ref, watch } from 'vue'
 
 const pKey = ref(localStorage.getItem('pKey') || 'pk_test_TYooMQauvdEDq54NiTphI7jx')
