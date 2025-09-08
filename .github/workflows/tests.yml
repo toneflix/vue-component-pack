@@ -38,3 +38,5 @@ jobs:
         with:
           build: pnpm run build
           start: pnpm start
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
