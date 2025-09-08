@@ -2,13 +2,13 @@ packages:
   - packages/*
   # - runner
   - '!package-template'
-  # - '!packages/vue-place-selector'
-  # - '!packages/otp-input'
-  # - '!packages/vue-trix'
-  # - '!packages/vue-auth'
+  - '!packages/vue-place-selector'
+  - '!packages/otp-input'
+  - '!packages/vue-trix'
+  - '!packages/vue-auth'
   # - '!packages/vue-forms'
-  # - '!packages/vue-dataviewer'
-  # - '!packages/paystack-inline'
+  - '!packages/vue-dataviewer'
+  - '!packages/paystack-inline'
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
