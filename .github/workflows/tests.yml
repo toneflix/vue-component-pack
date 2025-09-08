@@ -17,8 +17,6 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      GITHUB_TOKEN: ${{ secrets.TONEFLIX_RELEASE_TOKEN }}
     steps:
       - name: Checkout
       - uses: actions/checkout@v4
@@ -40,3 +38,5 @@ jobs:
         with:
           build: pnpm run build
           start: pnpm start
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
