@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.6.5...@toneflix/otp-input@1.6.6) (2026-08-05)
+
+### Bug Fixes
+
+- restore package versions reverted by the peerDependencies bump ([820b573](https://github.com/toneflix/vue-component-pack/commit/820b5731f4107049fdb5e6669a32b16d5ea7ecce))
+
 ## [1.6.5](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.6.4...@toneflix/otp-input@1.6.5) (2026-08-05)
 
 ### Bug Fixes

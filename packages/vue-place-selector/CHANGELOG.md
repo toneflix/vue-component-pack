@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.5](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.8.4...@toneflix/vue-place-selector@1.8.5) (2026-08-05)
+
+### Bug Fixes
+
+- restore package versions reverted by the peerDependencies bump ([820b573](https://github.com/toneflix/vue-component-pack/commit/820b5731f4107049fdb5e6669a32b16d5ea7ecce))
+
 ## [1.8.4](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-place-selector@1.8.3...@toneflix/vue-place-selector@1.8.4) (2026-08-05)
 
 **Note:** Version bump only for package @toneflix/vue-place-selector
