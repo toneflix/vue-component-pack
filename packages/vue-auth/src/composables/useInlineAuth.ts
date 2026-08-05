@@ -13,7 +13,7 @@ import type {
 } from '../types'
 import { Ref, UnwrapRef, ref } from 'vue'
 
-import { createCountdown } from '../utils/plugins'
+import { createStoppableCountdown } from '../utils/plugins'
 import { createVueAuthStore } from '../stores/vue-auth'
 import { getAuthConfig } from '../utils/config'
 import { storeToRefs } from 'pinia'
@@ -251,6 +251,11 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
     const timeout = ref<number | undefined>()
     const countdown = ref<number>(0)
 
+    // Each `send()` starts a fresh countdown. Without cancelling the previous
+    // one, a "resend" left both intervals running against the same ref and the
+    // timer ticked down two (then three, then four) seconds per second.
+    let stopCountdown: (() => void) | undefined
+
     const action = async (): Promise<UnrefData<ForgotData>> => {
       loading.value = true
 
@@ -260,9 +265,10 @@ export const useInlineAuth = <AU = AuthUser>(storageOptions?: StorageOptions) =>
       timeout.value = data.timeout
       loading.value = false
 
-      createCountdown(timeout, (val) => {
+      stopCountdown?.()
+      stopCountdown = createStoppableCountdown(timeout, (val) => {
         countdown.value = val
-      })
+      }).stop
 
       return {
         error: data.error,

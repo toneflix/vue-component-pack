@@ -9,7 +9,39 @@ import { RouteLocationNormalizedGeneric, RouteLocationRaw, Router } from 'vue-ro
 
 import { Middleware } from '../types'
 
-const sameObj = (obj1: unknown, obj2: unknown) => JSON.stringify(obj1) === JSON.stringify(obj2)
+type QueryLike = Record<string, unknown> | undefined
+
+/**
+ * Compare two route queries by content rather than by serialization.
+ *
+ * `JSON.stringify` is key-order sensitive, so `?a=1&b=2` and `?b=2&a=1` — the
+ * same query as far as the router is concerned — used to compare as different.
+ */
+const sameQuery = (a: QueryLike, b: QueryLike) => {
+  const keysA = Object.keys(a ?? {})
+  const keysB = Object.keys(b ?? {})
+
+  if (keysA.length !== keysB.length) {
+    return false
+  }
+
+  return keysA.every((key) => {
+    const valueA = a?.[key]
+    const valueB = b?.[key]
+
+    if (Array.isArray(valueA) || Array.isArray(valueB)) {
+      const arrayA = Array.isArray(valueA) ? valueA : [valueA]
+      const arrayB = Array.isArray(valueB) ? valueB : [valueB]
+
+      return (
+        arrayA.length === arrayB.length &&
+        arrayA.every((item, i) => String(item) === String(arrayB[i]))
+      )
+    }
+
+    return String(valueA) === String(valueB)
+  })
+}
 
 export const isCurrent = (
   to: RouteLocationNormalizedGeneric,
@@ -24,7 +56,7 @@ export const isCurrent = (
 
     return typeof route === 'string'
       ? to.path === route
-      : to.path === route.path && sameObj(to.query, route.query)
+      : to.path === route.path && sameQuery(to.query, route.query)
   } catch {
     return false
   }
@@ -77,6 +109,9 @@ export const guestMiddleware = <U = unknown>(redirectRoute: RouteLocationRaw): M
  *
  * Redirects user to specified route if user fails role check.
  *
+ * A user carrying no roles at all fails the check: on a route gated by
+ * `metaKey`, having nothing is not the same as having permission.
+ *
  * @param redirectRoute If the user fails the check, they will be redirected here.
  * @param roles The roles required to pass this check
  * @param roleKey The key in the user object the holds the user's current role
@@ -90,17 +125,26 @@ export const roleMiddleware = <U = unknown>(
   metaKey: string = 'requiresAdmin'
 ): Middleware<U> => {
   return (to, _, next, context, router) => {
-    if (!context.user[roleKey]) {
+    // Not a gated route — nothing to enforce.
+    if (!to.meta[metaKey]) {
       return next()
     }
 
-    const userRoles = Array.isArray(context.user[roleKey])
-      ? context.user[roleKey]
-      : [String(context.user[roleKey])]
+    const rawRoles = context.user?.[roleKey]
+
+    // Accept an array, a single role, or a delimited string ("admin, editor"),
+    // which previously compared as one unsplittable role and never matched.
+    const userRoles = Array.isArray(rawRoles)
+      ? rawRoles.map((role) => String(role).trim())
+      : String(rawRoles ?? '')
+          .split(',')
+          .map((role) => role.trim())
+          .filter(Boolean)
+
     const reqRoles = typeof roles === 'string' ? [roles] : roles
     const hasRoles = userRoles.some((e) => reqRoles.includes(e))
 
-    if (!hasRoles && !isCurrent(to, redirectRoute, router) && to.meta[metaKey]) {
+    if (!hasRoles && !isCurrent(to, redirectRoute, router)) {
       return next(redirectRoute)
     }
 

@@ -2,7 +2,12 @@ import 'pinia'
 
 import type { AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import type { ComputedRef, Ref, UnwrapRef } from 'vue'
-import type { NavigationGuardNext, RouteLocationNormalized, Router } from 'vue-router'
+import type {
+  NavigationGuardNext,
+  RouteLocationNormalized,
+  RouteLocationRaw,
+  Router
+} from 'vue-router'
 import type { PiniaPlugin, StoreDefinition } from 'pinia'
 
 import type { useAuthStore } from './stores/vue-auth'
@@ -23,10 +28,6 @@ export interface AuthData<U> extends UserData<U> {
 
 export interface UserData<U> extends BaseData {
   user: Ref<U | undefined>
-}
-
-export interface AuthData<U> extends UserData<U> {
-  token: Ref<string | undefined>
 }
 
 export interface ForgotData extends BaseData {
@@ -66,8 +67,9 @@ export interface BaseError extends Error {
 }
 
 export interface ResponseError {
-  status: number
+  status?: number
   response: {
+    status?: number
     data: BaseError
     [key: string]: unknown
   }
@@ -76,6 +78,52 @@ export interface ResponseError {
 export type AuthStoreSubscribeCallback = ReturnType<typeof useAuthStore>['$subscribe']
 export type AuthStoreActionCallback = ReturnType<typeof useAuthStore>['$onAction']
 export type AuthStorePatch = ReturnType<typeof useAuthStore>['$patch']
+
+/**
+ * The `context` Object passed to every middleware, contains `user`, `token`,
+ * `isAuthenticated`, `$patch`, `$router`, `$subscribe` and the `$onAction` property
+ */
+export interface MiddlewareContext<U = AuthUser> {
+  /**
+   * The currently authenticated user
+   */
+  user: U
+  /**
+   * The current authentication token
+   */
+  token?: string | undefined
+  /**
+   * Determines if the user is currently authenticated
+   */
+  isAuthenticated: boolean
+  /**
+   * Setups a callback to be called whenever the state changes. It also returns a function to remove the callback
+   */
+  $subscribe: AuthStoreSubscribeCallback
+  /**
+   * Setups a callback to be called every time an action is about to get invoked
+   */
+  $onAction: AuthStoreActionCallback
+  /**
+   * Router instance.
+   */
+  $router: Router
+  /**
+   * Applies a state patch to current state. Allows passing nested values
+   */
+  $patch: AuthStorePatch
+}
+
+/**
+ * What a middleware may hand back instead of (or as well as) calling `next()`.
+ *
+ * Mirrors vue-router's own navigation guard semantics:
+ * - `undefined` / `void` — allow the navigation, continue to the next middleware
+ * - `false` — abort the navigation
+ * - a route location — redirect there
+ * - an `Error` — abort and pass the error to `router.onError`
+ */
+export type MiddlewareResult = void | undefined | boolean | RouteLocationRaw | Error
 
 export interface Middleware<U = unknown & AuthUser> {
   (
@@ -89,47 +137,21 @@ export interface Middleware<U = unknown & AuthUser> {
     from: RouteLocationNormalized,
     /**
      * next() navigation callback.
+     *
+     * Optional — a middleware may return (or resolve to) a `MiddlewareResult`
+     * instead, exactly like a vue-router navigation guard.
      */
     next: NavigationGuardNext,
     /**
      * The `context` Object, contains `user`, `token`, `isAuthenticated`
      * `$patch`, `$router`, `$subscribe` and the `$onAction` property
      */
-    context: {
-      /**
-       * The currently authenticated user
-       */
-      user: U
-      /**
-       * The current authentication token
-       */
-      token?: string | undefined
-      /**
-       * Determines if the user is currently authenticated
-       */
-      isAuthenticated: boolean
-      /**
-       * Setups a callback to be called whenever the state changes. It also returns a function to remove the callback
-       */
-      $subscribe: AuthStoreSubscribeCallback
-      /**
-       * Setups a callback to be called every time an action is about to get invoked
-       */
-      $onAction: AuthStoreActionCallback
-      /**
-       * Router instance.
-       */
-      $router: Router
-      /**
-       * Applies a state patch to current state. Allows passing nested values
-       */
-      $patch: AuthStorePatch
-    },
+    context: MiddlewareContext<U>,
     /**
      * The current router instance
      */
     router?: Router
-  ): void
+  ): MiddlewareResult | Promise<MiddlewareResult>
 }
 
 export interface LoginCredentials {
@@ -407,6 +429,18 @@ export type AuthStoreDefinition<UA = unknown> = StoreDefinition<
       error?: BaseError | undefined
       message?: string | undefined
     }>
+
+    /**
+     * Synchronously restore the token from storage into the store.
+     *
+     * Runs at plugin install time, before any navigation guard is registered, so
+     * the very first navigation sees the correct `isAuthenticated` value instead
+     * of racing the async profile refresh.
+     *
+     * @param options
+     * @returns The restored token, if any.
+     */
+    restoreToken<U>(options?: AuthOptions<U>): string | undefined
 
     /**
      * Get the token from storage and populate the store

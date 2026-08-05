@@ -13,20 +13,29 @@ import {
 import { Ref, ref, computed, toValue } from 'vue'
 import { getAuthConfig, buildHeaders, url } from '../utils/config'
 
-import axios from 'axios'
 import { defineStore } from 'pinia'
 import { createCountdown } from '../utils/plugins'
+import { http } from '../utils/http'
+import { storage } from '../utils/storage'
 
-axios.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8'
-axios.defaults.headers.common['Accept'] = 'application/json'
-axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+/**
+ * Pinia caches stores by id, so only the first `defineStore('vue-auth', ...)`
+ * ever takes effect. Memoizing the definition makes that explicit and stops us
+ * rebuilding the setup closure on every `useAuth()` / `useInlineAuth()` call —
+ * previously once per component, per render-setup.
+ */
+let storeDefinition: AuthStoreDefinition | undefined
 
 export function createVueAuthStore<UA = unknown>(options?: StorageOptions): AuthStoreDefinition {
+  if (storeDefinition) {
+    return storeDefinition
+  }
+
   const storageOptions = Object.fromEntries(
     Object.entries(options ?? {}).filter(([key]) => !['plugins', 'skipInit'].includes(key))
   )
 
-  return defineStore(
+  storeDefinition = defineStore(
     'vue-auth',
     () => {
       const user = ref<UA>({} as UA)
@@ -47,7 +56,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
       ): Promise<DefinitelyAuthResponse<U>> => {
         const endpoint = url('login')
         try {
-          const { data } = await axios.post<AuthResponse<U>>(
+          const { data } = await http.post<AuthResponse<U>>(
             endpoint,
             toValue(credentials),
             options.axiosConfig
@@ -64,7 +73,12 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
 
           user.value = usr
           token.value = tkn
-          globalThis.localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
+          // Persist the *transformed* token — `data.token` is the raw response and
+          // is undefined whenever `transformResponse` reads the token from
+          // elsewhere in the payload, which used to store the string "undefined".
+          if (tkn) {
+            storage.set(options.storageKey ?? 'auth_token', tkn)
+          }
           sessionExpired.value = false
 
           return { ...rest, user: usr, token: tkn, message }
@@ -91,7 +105,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
       ): Promise<DefinitelyAuthResponse<U>> => {
         const endpoint = url('register')
         try {
-          const { data } = await axios.post<AuthResponse<U>>(
+          const { data } = await http.post<AuthResponse<U>>(
             endpoint,
             toValue(credentials),
             options.axiosConfig
@@ -108,7 +122,9 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
 
           user.value = usr
           token.value = tkn
-          globalThis.localStorage.setItem(options.storageKey ?? 'auth_token', data.token)
+          if (tkn) {
+            storage.set(options.storageKey ?? 'auth_token', tkn)
+          }
           sessionExpired.value = false
 
           return { ...rest, user: usr, token: tkn, message }
@@ -143,15 +159,18 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
 
         const endpoint = url('logout')
         try {
-          await axios.post(endpoint, toValue(credentials), {
+          await http.post(endpoint, toValue(credentials), {
             headers: { ...headers },
             ...options.axiosConfig
           })
-
-          clearAuth(options)
         } catch (error) {
           const { response } = <ResponseError>error
           return { error: response?.data ?? error ?? {}, message: response?.data?.message }
+        } finally {
+          // Clear locally regardless of the server's answer. A logout that failed
+          // because the token had already expired used to leave the client in a
+          // logged-in UI with credentials the server no longer honours.
+          clearAuth(options)
         }
       }
 
@@ -164,7 +183,23 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
       const clearAuth = <U>(options: AuthOptions<U> = getAuthConfig()): void => {
         user.value = {} as AuthUser
         token.value = undefined
-        globalThis.localStorage.removeItem(options.storageKey ?? 'auth_token')
+        storage.remove(options.storageKey ?? 'auth_token')
+      }
+
+      /**
+       * Synchronously restore the token from storage into the store.
+       *
+       * @param options
+       * @returns
+       */
+      const restoreToken = <U>(options: AuthOptions<U> = getAuthConfig()): string | undefined => {
+        const stored = storage.get(options.storageKey ?? 'auth_token')
+
+        if (stored) {
+          token.value = stored
+        }
+
+        return token.value
       }
 
       /**
@@ -202,7 +237,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
 
         const endpoint = url('forgot')
         try {
-          const { data } = await axios.post<M>(endpoint, toValue(credentials), {
+          const { data } = await http.post<M>(endpoint, toValue(credentials), {
             headers: { ...headers },
             ...options.axiosConfig
           })
@@ -241,7 +276,7 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
       }> => {
         const endpoint = url('reset')
         try {
-          const { data } = await axios.post<AuthResponse<U>>(
+          const { data } = await http.post<AuthResponse<U>>(
             endpoint,
             toValue(credentials),
             options.axiosConfig
@@ -279,22 +314,25 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
         error?: BaseError | undefined
         message?: string | undefined
       }> => {
-        const tkn =
-          globalThis.localStorage.getItem(options.storageKey ?? 'auth_token') ?? token.value
-
-        const headers = await buildHeaders(
-          options as unknown as AuthOptions,
-          user.value,
-          token.value
-        )
+        const tkn = storage.get(options.storageKey ?? 'auth_token') ?? token.value
 
         if (tkn && options.endpoints.profile) {
+          // Publish the token *before* building headers. Building them first meant
+          // `buildHeaders` saw `token.value === undefined` on every cold load, so
+          // the profile request went out unauthenticated, came back 401, and the
+          // handler below cleared a perfectly valid session.
           token.value = tkn
 
           if (!auto || !options.disableAutoRefresh) {
+            const headers = await buildHeaders(
+              options as unknown as AuthOptions,
+              user.value,
+              token.value
+            )
+
             const endpoint = url('profile')
             try {
-              const { data } = await axios.get<AuthResponse<U>>(endpoint, {
+              const { data } = await http.get<AuthResponse<U>>(endpoint, {
                 headers: { ...headers },
                 params: { ...toValue(credentials) },
                 ...options.axiosConfig
@@ -309,7 +347,9 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
               return { user: usr, message }
             } catch (error) {
               const { response, status } = <ResponseError>error
-              if (status === 401) {
+              // `error.status` only exists on axios >= 1.8; `response.status` is
+              // where the code has always lived, so check both.
+              if ((response?.status ?? status) === 401) {
                 sessionExpired.value = true
                 clearAuth(options)
               }
@@ -343,11 +383,14 @@ export function createVueAuthStore<UA = unknown>(options?: StorageOptions): Auth
         register,
         clearAuth,
         resetSession,
+        restoreToken,
         loadUserFromStorage
       }
     },
     storageOptions as never
   ) as unknown as AuthStoreDefinition
+
+  return storeDefinition
 }
 
 // export const useAuthStore = createVueAuthStore()
