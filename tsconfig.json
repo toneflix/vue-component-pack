@@ -1,7 +1,4 @@
 {
   "extends": "@toneflix/vue-shared",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
   "exclude": ["documentations/**/*"]
 }
