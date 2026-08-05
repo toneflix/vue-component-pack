@@ -3,8 +3,7 @@
   "include": ["./**/*.d.ts", "./**/*", "src"],
   "compilerOptions": {
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "outDir": "dist",
+    "outDir": "./dist",
     "paths": {
       "src/*": ["./src/*"]
     }
