@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.5](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.6.4...@toneflix/otp-input@1.6.5) (2026-08-05)
+
+### Bug Fixes
+
+- dedupe vue across the workspace to fix cypress component tests ([4756c7d](https://github.com/toneflix/vue-component-pack/commit/4756c7d693943ea4fbc5b7fed5ed2788831d4735))
+
 ## [1.6.4](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.6.3...@toneflix/otp-input@1.6.4) (2025-09-08)
 
 **Note:** Version bump only for package @toneflix/otp-input

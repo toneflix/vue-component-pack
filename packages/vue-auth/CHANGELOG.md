@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.19.2...@toneflix/vue-auth@1.20.0) (2026-08-05)
+
+### Bug Fixes
+
+- dedupe vue across the workspace to fix cypress component tests ([4756c7d](https://github.com/toneflix/vue-component-pack/commit/4756c7d693943ea4fbc5b7fed5ed2788831d4735))
+
+### Features
+
+- **vue-auth:** support async middlewares and fix guard lifecycle ([3b7f695](https://github.com/toneflix/vue-component-pack/commit/3b7f6958ffed0fb28556fa7c8130cac65714c21d))
+
 ## [1.20.0] - Unreleased
 
 ### Features

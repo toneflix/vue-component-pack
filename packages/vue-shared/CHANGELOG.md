@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.14](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-shared@0.1.13...@toneflix/vue-shared@0.1.14) (2026-08-05)
+
+### Bug Fixes
+
+- dedupe vue across the workspace to fix cypress component tests ([4756c7d](https://github.com/toneflix/vue-component-pack/commit/4756c7d693943ea4fbc5b7fed5ed2788831d4735))
+
 ## [0.1.13](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-shared@0.1.12...@toneflix/vue-shared@0.1.13) (2025-09-08)
 
 **Note:** Version bump only for package @toneflix/vue-shared
