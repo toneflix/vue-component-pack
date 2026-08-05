@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [Unreleased]
+
+### Bug Fixes
+
+- **Fixed the failing Cypress component tests.** The workspace installed two copies of Vue (the root resolved `3.5.13` while `packages/*` resolved `3.5.21`), so component tests loaded the mount adapter against one Vue runtime and the component under test against the other. `currentRenderingInstance` was null inside the second copy and every mount failed in `renderSlot` with `TypeError: Cannot read properties of null (reading 'ce')`. Vue is now pinned to a single version via `pnpm.overrides`, and the root Vite config sets `resolve.dedupe: ['vue']` as a safeguard.
+
 ## [1.0.21](https://github.com/toneflix/vue-component-pack/compare/1.0.20...1.0.21) (2024-10-24)
 
 **Note:** Version bump only for package @toneflix/vue-components

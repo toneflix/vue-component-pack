@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.0] - Unreleased
+
+### Features
+
+- Middlewares now follow vue-router's navigation guard contract. A middleware may call `next(...)` **or** return the equivalent value (`undefined` to allow, `false` to abort, a route location to redirect, an `Error` to fail), and may do either asynchronously. `runMiddlewares` waits for a returned promise to settle before continuing the chain.
+- `Middleware` gained a proper return type (`MiddlewareResult | Promise<MiddlewareResult>`), so async middlewares are visible to the type system instead of silently type-checking against `void`.
+- Added the exported `MiddlewareContext<U>` type, replacing the context shape that was duplicated inline between `types.ts` and `plugins.ts`.
+- Added `restoreToken()` to the auth store — a synchronous token restore used at install time.
+- Requests now go through an exported `http` axios instance, so consumers can attach interceptors without touching global axios.
+- Added `createStoppableCountdown()`, which returns the countdown ref plus a `stop` handle and disposes with the surrounding effect scope.
+
+### Bug Fixes
+
+- **Fixed `Error: Middleware at index N did not call next()`.** The runner checked `nextCalled` synchronously, immediately after invoking the middleware, so any middleware resolving on a later tick (an `await`, a `.then()`, a callback) threw even though it did call `next()`. The error no longer exists.
+- **`next(false)` no longer allows the navigation it was meant to abort.** The runner tested `nextArg` for truthiness, so `false` was read as "continue" and the chain ran on to allow the navigation.
+- vue-router's `next` is now invoked exactly once per navigation. Calling `next()` twice no longer re-runs the rest of the chain, and a late `next()` from a middleware that already redirected is dropped.
+- Errors thrown by a middleware (or rejections from an async one) are forwarded to `router.onError` instead of escaping the guard and leaving the navigation hung.
+- **Fixed a subscription leak in the router guard.** `store.$subscribe` was called inside `beforeResolve`, adding one permanent subscriber per navigation, each holding a `next` from a navigation that had already finished. A single session reset fired `resetHandler` once for every route the user had ever visited.
+- **Fixed spurious logouts on cold load.** `buildHeaders` ran before `token.value` was assigned, so the profile request went out unauthenticated, returned 401, and cleared a valid session.
+- **Fixed the auth state race at startup.** The token is now restored synchronously before the navigation guard is registered, so the first navigation no longer bounces a signed-in user to the login page.
+- 401 detection now reads `response.status` as well as `error.status`; the latter only exists on axios >= 1.8.
+- `login`/`register` persist the transformed token rather than the raw `data.token`, which stored the string `"undefined"` for anyone using `transformResponse`.
+- `logout` clears local auth even when the request fails, instead of stranding the user in a logged-in UI with a token the server no longer honours.
+- **`roleMiddleware` no longer fails open** — a user with no roles at all previously passed every route gated by `metaKey`. It also now splits comma-delimited role strings, which never matched before.
+- `isCurrent` compares route queries by content instead of `JSON.stringify`, which was key-order sensitive.
+- All `localStorage` access is SSR-safe and degrades to "no token" when storage is unavailable.
+- `deepMerge` iterates own keys only and skips `__proto__`/`constructor`/`prototype`.
+- The auth store definition is memoized instead of being rebuilt on every `useAuth()` / `useInlineAuth()` call.
+- `useInlineAuth().forgot` cancels the previous countdown before starting a new one; repeated sends used to stack intervals and tick down several seconds per second.
+- Removed a duplicate `AuthData` interface declaration.
+
+### BREAKING CHANGES
+
+- `next(false)` now aborts a navigation. Code that (unknowingly) relied on the previous behaviour to proceed will see navigations stop.
+- `roleMiddleware` denies users whose role key is empty, `null`, or missing on a route gated by `metaKey`. Give such users an explicit role if they should pass.
+- vue-auth no longer mutates `axios.defaults.headers.common`. If you relied on that side effect for your own requests, set those headers yourself or use the exported `http` instance.
+- Failed logout requests now clear local authentication.
+- Route guards run on `beforeEach` rather than `beforeResolve`, so auth redirects fire before lazy route components are fetched.
+
 ## [1.19.2](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-auth@1.19.1...@toneflix/vue-auth@1.19.2) (2025-09-08)
 
 **Note:** Version bump only for package @toneflix/vue-auth

@@ -9,3 +9,4 @@ node_modules/
 */**/.vitepress/dist
 */**/.vitepress/cache
 /documentations
+cypress/screenshots/**/*.png

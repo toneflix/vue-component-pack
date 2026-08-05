@@ -27,14 +27,23 @@ export const loadAuthConfig = async (): Promise<AuthOptions<any>> => {
 export function deepMerge<T extends AuthOptions<AuthUser>>(a: T, b: Partial<T>): T {
   const out = { ...a } as any
 
-  for (const key in b) {
+  for (const key of Object.keys(b ?? {}) as Array<keyof T & string>) {
+    // Own keys only, and never a prototype-bearing one — a config file (or any
+    // JSON that reaches here) carrying `__proto__` would otherwise write straight
+    // onto Object.prototype.
+    if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+      continue
+    }
+
     if (
       typeof b[key] === 'object' &&
       b[key] !== null &&
       !Array.isArray(b[key]) &&
-      typeof out[key] === 'object'
+      typeof out[key] === 'object' &&
+      out[key] !== null &&
+      !Array.isArray(out[key])
     ) {
-      out[key] = deepMerge(out[key], b[key])
+      out[key] = deepMerge(out[key], b[key] as any)
     } else {
       out[key] = b[key]
     }

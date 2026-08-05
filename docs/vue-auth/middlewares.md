@@ -40,25 +40,59 @@ const auth = authPlugin({
 Each middleware function should have the following signature:
 
 ```ts
-(to, from, next, context) => void
+(to, from, next, context) => MiddlewareResult | Promise<MiddlewareResult>
 ```
 
 - `to` (RouteLocationNormalized): The target route the user is navigating to.
 - `from` (RouteLocationNormalized): The route the user is navigating from.
-- `next` (NavigationGuardNext): A function that must be called to proceed with navigation. This function accepts optional parameters to control navigation (e.g., redirect to another route).
-- `context` (`{ user: U; token?: string; isAuthenticated: boolean; $subscribe: AuthStoreSubscribeCallback }`): Contextual information about the user’s state, including:
+- `next` (NavigationGuardNext): A function to control navigation. This function accepts optional parameters to control navigation (e.g., redirect to another route).
+- `context` (`MiddlewareContext<U>`): Contextual information about the user’s state, including:
   - `user`: The current user object.
   - `token`: The authentication token, if available.
   - `isAuthenticated`: Boolean flag indicating if the user is authenticated.
   - `$subscribe`: The subscribe callback for the auth store.
+  - `$onAction`: The action callback for the auth store.
+  - `$patch`: Applies a state patch to the auth store.
+  - `$router`: The router instance.
 
-### Calling `next()`
+### Controlling navigation
 
-`next()` is critical for middleware execution. Each middleware must call `next()` to proceed. Failing to call `next()` will prevent navigation and raise an error.
+Middlewares follow the same contract as vue-router's own navigation guards. You can either call `next(...)` or **return** the equivalent value — whichever reads better:
 
-- Allow navigation: `next()`
-- Redirect to another route: `next({ name: 'route-name' })`
-- Cancel navigation with an error: `next(new Error('Error message'))`
+| Intent | Call | Or return |
+| --- | --- | --- |
+| Allow, run the next middleware | `next()` | `undefined` (or nothing) |
+| Redirect | `next({ name: 'login' })` | `{ name: 'login' }` |
+| Abort the navigation | `next(false)` | `false` |
+| Abort with an error | `next(new Error('...'))` | `throw new Error('...')` |
+
+Returning or redirecting short-circuits the chain — the remaining middlewares do not run.
+
+::: tip
+A middleware that neither calls `next()` nor returns a value allows the navigation, matching vue-router. Calling `next()` more than once is harmless; only the first call counts.
+:::
+
+### Async middlewares
+
+Middlewares may be `async`, and may call `next()` after an `await`, inside a `.then()`, or from any callback:
+
+```ts:line-numbers
+middlewares: [
+  async (to, from, next, { token }) => {
+    if (!to.meta.requiresSubscription) return next()
+
+    const { active } = await fetchSubscription(token)
+
+    return active ? next() : next({ name: 'billing' })
+  }
+]
+```
+
+The chain waits for each middleware to settle before moving on, so ordering is preserved across a mix of sync and async middlewares. A rejected promise aborts the navigation and forwards the error to `router.onError`.
+
+::: warning Changed in 1.20.0
+Earlier versions checked for `next()` synchronously, immediately after invoking the middleware, and threw `Middleware at index N did not call next()` whenever a middleware resolved on a later tick. Async middlewares now work as expected and that error no longer exists. Two related fixes ship with it: `next(false)` correctly aborts a navigation (it was previously read as "continue", allowing the navigation the middleware tried to cancel), and a middleware that calls `next()` twice no longer re-runs the rest of the chain.
+:::
 
 ## Example Usage
 
@@ -113,11 +147,18 @@ middlewares: [
 
 ## Error Handling
 
-If a middleware does not call `next()`, an error will be raised to alert the developer. This ensures that navigation will not silently fail.
+An error thrown from a middleware — or a rejected promise returned by an async one — aborts the navigation and is forwarded to vue-router, where you can handle it centrally:
+
+```ts:line-numbers
+router.onError((error) => {
+  console.error('Navigation blocked:', error)
+})
+```
 
 ### Additional Notes
 
 - Ordering: Middlewares are executed in the order they are defined. Make sure to arrange them logically.
+- `runMiddlewares` guarantees vue-router's `next` is invoked exactly once per navigation, regardless of how many middlewares call their own `next()` or how late they do it.
 - Redirects: If a middleware calls `next()` with a redirect parameter, subsequent middlewares are skipped. The navigation will redirect immediately.
 
 ## Putting It All Together
@@ -252,8 +293,14 @@ middlewares: [
 
 **Behavior**:
 
-- Checks if the user has one or more required roles to access a specific route.
+- Routes not carrying the `metaKey` meta field are left alone.
+- On a gated route, checks whether the user has one or more of the required roles.
 - If the user does not possess the necessary roles, they are redirected to the specified `redirectRoute`.
+- `roleKey` may hold an array (`['admin', 'editor']`), a single role (`'admin'`), or a comma-delimited string (`'admin, editor'`).
+
+::: warning Changed in 1.20.0
+A user whose `roleKey` is empty, `null`, or missing entirely is now **denied** on a gated route. Previously the check returned early and let them through — a user with no roles at all passed every `requiresAdmin` route. If you were relying on the old behaviour to let role-less users into gated routes, give them an explicit role instead.
+:::
 
 **Usage**:
 
