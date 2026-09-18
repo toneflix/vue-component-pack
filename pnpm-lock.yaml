@@ -182,8 +182,8 @@ importers:
   packages/vue-dataviewer:
     dependencies:
       '@toneflix/vue-forms':
-        specifier: ^1.12.10
-        version: 1.12.10(vue@3.5.43(typescript@6.0.3))
+        specifier: workspace:^
+        version: link:../vue-forms
       date-fns:
         specifier: ^4.4.0
         version: 4.4.0
@@ -1422,11 +1422,6 @@ packages:
   '@simple-libs/stream-utils@2.0.0':
     resolution: {integrity: sha512-fCTuZK4QBa+39Oz9l4OGfJfz+GpwCp3AqO7Zch3to99xHPgstVsRFpeQ8LNd2o1Gv8raL2mCFwiaHh7bFSp5DQ==}
     engines: {node: '>=22'}
-
-  '@toneflix/vue-forms@1.12.10':
-    resolution: {integrity: sha512-3cr22R8LY+RAPEQvW4o8FBaC0Hbg+gyrNfgrQeD5Qh2o0tDmSJ0nM8Kh2RYlSbm0UUwzhsGIs427luS5MTTMNA==}
-    peerDependencies:
-      vue: ^3.5.43
 
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
@@ -5642,10 +5637,6 @@ snapshots:
       semver: 7.8.5
 
   '@simple-libs/stream-utils@2.0.0': {}
-
-  '@toneflix/vue-forms@1.12.10(vue@3.5.43(typescript@6.0.3))':
-    dependencies:
-      vue: 3.5.43(typescript@6.0.3)
 
   '@tufjs/canonical-json@2.0.0': {}
 
