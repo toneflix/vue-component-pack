@@ -32,16 +32,9 @@ export default defineConfig({
       name: 'index'
     }
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern' // or "modern-compiler", "legacy"
-      }
-    }
-  },
   plugins: [
     vue(),
-    dts({ rollupTypes: true }),
+    dts({ bundleTypes: true, processor: 'vue' }),
     copy({
       targets: [
         {

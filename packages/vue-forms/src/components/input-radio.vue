@@ -73,19 +73,19 @@ const parseValue = (value: boolean | string | number): boolean => {
     value === 'true'
       ? true
       : value === 'false'
-      ? false
-      : !isNaN(Number(value))
-      ? Number(value)
-      : value
+        ? false
+        : !isNaN(Number(value))
+          ? Number(value)
+          : value
 
   const mData =
     mValue === 'true'
       ? true
       : mValue === 'false'
-      ? false
-      : !isNaN(Number(mValue))
-      ? Number(mValue)
-      : mValue
+        ? false
+        : !isNaN(Number(mValue))
+          ? Number(mValue)
+          : mValue
 
   return data === mData
 }

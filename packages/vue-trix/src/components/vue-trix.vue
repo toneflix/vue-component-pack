@@ -11,18 +11,24 @@
       @trix-change="handleContentChange"
       @trix-initialize="handleInitialize"
       @trix-file-accept="(e: File) => emit('file-accept', e)"
-      @trix-attachment-add="(e: any) => emit(
-        'attachment-add', 
-        e.attachment.attachment, 
-        e.attachment.attachmentManager, 
-        e.attachment.file
-      )"
-      @trix-attachment-remove="(e: any) => emit(
-        'attachment-add', 
-        e.attachment.attachment, 
-        e.attachment.attachmentManager, 
-        e.attachment.file
-      )"
+      @trix-attachment-add="
+        (e: any) =>
+          emit(
+            'attachment-add',
+            e.attachment.attachment,
+            e.attachment.attachmentManager,
+            e.attachment.file
+          )
+      "
+      @trix-attachment-remove="
+        (e: any) =>
+          emit(
+            'attachment-add',
+            e.attachment.attachment,
+            e.attachment.attachmentManager,
+            e.attachment.file
+          )
+      "
       @trix-selection-change="(e: any) => emit('selection-change', e)"
       @trix-before-initialize="(e: any) => emit('before-initialize', e)"
     />

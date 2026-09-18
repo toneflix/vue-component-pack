@@ -25,15 +25,15 @@
     "vue": "^3.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.1.4",
-    "@vue/runtime-core": "^3.5.11",
-    "vite": "^5.4.8",
-    "vitepress": "^1.4.0",
-    "vue": "^3.5.11"
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vue/runtime-core": "^3.5.43",
+    "vite": "^8.3.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.43"
   },
   "nx": {},
   "dependencies": {
-    "@vueuse/core": "^12.4.0",
-    "axios": "^1.7.7"
+    "@vueuse/core": "^15.0.0",
+    "axios": "^1.20.0"
   }
 }

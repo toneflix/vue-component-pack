@@ -54,7 +54,7 @@ const isPublished = (name, version) => {
     // Anything else — auth, network, a registry outage — must not be read as
     // "needs publishing", or we would attempt a duplicate publish and fail on
     // something that had nothing to do with this package.
-    throw new Error(`could not query the registry for ${name}@${version}\n${stderr.trim()}`)
+    throw new Error(`could not query the registry for ${name}@${version}\n${stderr.trim()}`, { cause: error })
   }
 }
 

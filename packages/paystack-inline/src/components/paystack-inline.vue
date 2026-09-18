@@ -128,7 +128,7 @@ const initializeNewPayment = async () => {
 
 const paystackInline = (reference?: string, accessCode?: string): unknown => {
   const callbacks: Pick<
-    Parameters<typeof paystack['newTransaction']>['0'],
+    Parameters<(typeof paystack)['newTransaction']>['0'],
     'onSuccess' | 'onCancel' | 'onError' | 'onLoad'
   > = {
     onSuccess(data) {

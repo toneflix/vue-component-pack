@@ -301,8 +301,9 @@ export interface BaseProps {
   showGroupLabels?: boolean
 }
 
-export interface VueFormProps<X = { [key: FormField['name']]: FormField['value'] }>
-  extends BaseProps {
+export interface VueFormProps<
+  X = { [key: FormField['name']]: FormField['value'] }
+> extends BaseProps {
   /**
    * The available form fields
    */

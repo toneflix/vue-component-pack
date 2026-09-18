@@ -43,7 +43,7 @@ const emit = defineEmits<{
 // Props and defaults
 const props = withDefaults(defineProps<BaseProps>(), {
   type: 'country',
-  params: () => ({} as Params),
+  params: () => ({}) as Params,
   busKey: 'locationSelector',
   baseUrl: '/v1',
   optionValue: 'id'

@@ -8,7 +8,7 @@
       '--ci-text-color': textColor ?? primaryColor,
       '--ci-font-family': fontFamily,
       '--ci-border-width': borderSize,
-      '--ci-border-radius': rounded || borderRadius ? borderRadius ?? '5px' : undefined,
+      '--ci-border-radius': rounded || borderRadius ? (borderRadius ?? '5px') : undefined,
       '--ci-color-primary': primaryColor,
       '--ci-color-secondary': secondaryColor,
       '--ci-text-color-active': textColorActive ?? secondaryColor,
@@ -22,19 +22,11 @@
     <div class="code-input font-alatsi no-border" :class="[parseBorders(), 'position-' + position]">
       <template v-for="(v, index) in inputValues">
         <input
-          class="
-            text-center
-            transition-all
-            border-none
-            rounded-lg
-            outline-none
-            w-14
-            h-14
-            focus:outline-none focus:ring-0
-          "
-          type="number"
-          pattern="[0-9]"
-          maxlength="1"
+          class="text-center transition-all border-none rounded-lg outline-none w-14 h-14 focus:outline-none focus:ring-0"
+          type="text"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          :autocomplete="index === 0 ? 'one-time-code' : 'off'"
           :class="[
             inputClass,
             {
@@ -53,11 +45,10 @@
           :key="index"
           :ref="
             (el: unknown) => {
-              if (el) inputsRef[index + 1] = el as HtmlInput;
+              if (el) inputsRef[index + 1] = el as HtmlInput
             }
           "
           :required="required === true"
-          :readonly="index > 0 && inputValues[index - 1] === ''"
           :disabled="disabled === true"
           @input="(e: unknown) => onValueChange(e as CustomInputEvent, index)"
           @focus="(e: unknown) => onFocus(e as CustomFocusEvent, index)"

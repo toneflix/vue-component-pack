@@ -34,7 +34,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    dts({ rollupTypes: true }),
+    dts({ bundleTypes: true, processor: 'vue' }),
     copy({
       targets: [
         {

@@ -57,17 +57,18 @@ defineOptions({
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 defineSlots<
-  ComponentSlots & FormSlots & {
-    /**
-     * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
-     */
-    default: (scope: {
-      toggleDialog: (data?: any, mode?: MainProps['mode']) => void,
-      viewData: MainProps['data'];
-      viewMode: MainProps['mode'];
-      saving: boolean;
-    }) => VNode[]
-  }
+  ComponentSlots &
+    FormSlots & {
+      /**
+       * Default slot can be used as label, unless 'label' prop is specified; Suggestion: string
+       */
+      default: (scope: {
+        toggleDialog: (data?: any, mode?: MainProps['mode']) => void
+        viewData: MainProps['data']
+        viewMode: MainProps['mode']
+        saving: boolean
+      }) => VNode[]
+    }
 >()
 
 defineEmits<{

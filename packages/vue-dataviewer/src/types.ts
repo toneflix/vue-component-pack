@@ -184,8 +184,9 @@ export interface MainProps {
 export type FormSlotName = keyof FormSlots
 
 export type FormSlots = {
-  [K in keyof Omit<VueFormSlots, 'prepend' | 'default' | 'actions'> as `form-${string &
-    K}`]: VueFormSlots[K]
+  [
+    K in keyof Omit<VueFormSlots, 'prepend' | 'default' | 'actions'> as `form-${string & K}`
+  ]: VueFormSlots[K]
 }
 
 export type SlotName = keyof Omit<ComponentSlots, 'default' | 'header' | 'image'>

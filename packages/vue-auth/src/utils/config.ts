@@ -44,6 +44,6 @@ export const buildHeaders = async <U extends AuthUser = AuthUser>(
   return options.setAuthHeaders
     ? await options.setAuthHeaders({ user, token: token })
     : options.getAuthHeaders
-    ? await options.getAuthHeaders({ user, token: token })
-    : {}
+      ? await options.getAuthHeaders({ user, token: token })
+      : {}
 }

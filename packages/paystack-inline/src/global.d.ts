@@ -12,14 +12,12 @@ declare module '@vue/runtime-core' {
          * Emitted when the payment has been verified successfully
          */
         onVerified?:
-          | ((response: { message?: string | undefined; status: boolean }) => void)
-          | undefined
+          ((response: { message?: string | undefined; status: boolean }) => void) | undefined
         /**
          * Emitted when the payment was successfull
          */
         onSuccess?:
-          | ((response: { message?: string | undefined; status: boolean }) => void)
-          | undefined
+          ((response: { message?: string | undefined; status: boolean }) => void) | undefined
         /**
          * Emitted when the payment is canceled
          */
