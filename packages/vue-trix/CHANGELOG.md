@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.8](https://github.com/toneflix/vue-component-pack/compare/%40toneflix%2Fvue-trix%401.5.7...%40toneflix%2Fvue-trix%401.5.8) (2026-09-18)
+
+**Note:** Version bump only for package @toneflix/vue-trix
+
 ## [1.5.7](https://github.com/toneflix/vue-component-pack/compare/%40toneflix%2Fvue-trix%401.5.6...%40toneflix%2Fvue-trix%401.5.7) (2026-09-18)
 
 **Note:** Version bump only for package @toneflix/vue-trix

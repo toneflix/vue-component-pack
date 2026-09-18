@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.5](https://github.com/toneflix/vue-component-pack/compare/%40toneflix%2Fpaystack-inline%401.11.4...%40toneflix%2Fpaystack-inline%401.11.5) (2026-09-18)
+
+### Bug Fixes
+
+- dedupe vue across the workspace to fix cypress component tests ([4756c7d](https://github.com/toneflix/vue-component-pack/commit/4756c7d693943ea4fbc5b7fed5ed2788831d4735))
+- remove baseUrl from tsconfig.json files in otp-input, paystack-inline, and runner ([c8a487b](https://github.com/toneflix/vue-component-pack/commit/c8a487b454a0d144697009dc7fed25efa8761cf7))
+
 ## [1.11.4](https://github.com/toneflix/vue-component-pack/compare/@toneflix/paystack-inline@1.11.3...@toneflix/paystack-inline@1.11.4) (2025-09-08)
 
 **Note:** Version bump only for package @toneflix/paystack-inline

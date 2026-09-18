@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.8](https://github.com/toneflix/vue-component-pack/compare/%40toneflix%2Fotp-input%401.6.7...%40toneflix%2Fotp-input%401.6.8) (2026-09-18)
+
+### Bug Fixes
+
+- correct homepage URL in package.json for otp-input ([9f73b3a](https://github.com/toneflix/vue-component-pack/commit/9f73b3adb4afa8bb8eae1d8a49a602c514c16021))
+
 ## [1.6.7](https://github.com/toneflix/vue-component-pack/compare/%40toneflix%2Fotp-input%401.6.6...%40toneflix%2Fotp-input%401.6.7) (2026-09-18)
 
 ### Bug Fixes
