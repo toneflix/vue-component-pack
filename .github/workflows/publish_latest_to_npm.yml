@@ -44,6 +44,11 @@ jobs:
       - name: Test NPM Authentication
         run: pnpm whoami
 
+      - name: Configure git identity
+        run: |
+          git config user.name "Github Workflow (on behalf of ${{ github.actor }})"
+          git config user.email "users.noreply.github.com"
+
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
@@ -53,8 +58,16 @@ jobs:
       - name: Format build
         run: pnpm fmt
 
-      - name: Version & Publish
+      - name: Commit release prep back to main
         run: |
-          git config user.name "Github Workflow (on behalf of ${{ github.actor }})"
-          git config user.email "users.noreply.github.com"
-          pnpm run ci:publish:latest
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Working tree clean, nothing to sync."
+            exit 0
+          fi
+          git status --short
+          git commit -m "chore: sync lockfile and formatting ahead of release [skip ci]"
+          git push origin HEAD:main
+
+      - name: Version & Publish
+        run: pnpm run ci:publish:latest

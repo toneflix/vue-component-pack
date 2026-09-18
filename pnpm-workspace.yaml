@@ -5,9 +5,9 @@ packages:
   # - '!packages/otp-input'
   # - '!packages/vue-trix'
   # - '!packages/vue-auth'
-  - '!packages/vue-forms'
-  - '!packages/vue-dataviewer'
-  - '!packages/paystack-inline'
+  # - '!packages/vue-forms'
+  # - '!packages/vue-dataviewer'
+  # - '!packages/paystack-inline'
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
