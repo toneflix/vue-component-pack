@@ -4,7 +4,6 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
     "outDir": "./dist",
     "paths": {
       "src/*": ["./src/*"]
