@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.7](https://github.com/toneflix/vue-component-pack/compare/%40toneflix%2Fotp-input%401.6.6...%40toneflix%2Fotp-input%401.6.7) (2026-09-18)
+
+### Bug Fixes
+
+- remove baseUrl from tsconfig.json files in otp-input, paystack-inline, and runner ([c8a487b](https://github.com/toneflix/vue-component-pack/commit/c8a487b454a0d144697009dc7fed25efa8761cf7))
+
 ## [1.6.6](https://github.com/toneflix/vue-component-pack/compare/@toneflix/otp-input@1.6.5...@toneflix/otp-input@1.6.6) (2026-08-05)
 
 ### Bug Fixes

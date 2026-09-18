@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.16](https://github.com/toneflix/vue-component-pack/compare/%40toneflix%2Fvue-shared%400.1.15...%40toneflix%2Fvue-shared%400.1.16) (2026-09-18)
+
+**Note:** Version bump only for package @toneflix/vue-shared
+
 ## [0.1.15](https://github.com/toneflix/vue-component-pack/compare/@toneflix/vue-shared@0.1.14...@toneflix/vue-shared@0.1.15) (2026-08-05)
 
 **Note:** Version bump only for package @toneflix/vue-shared
